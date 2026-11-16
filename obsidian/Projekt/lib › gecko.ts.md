@@ -2,8 +2,8 @@
 pfad: "lib/gecko.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 52
-beschreibung: "Der Gecko: kleines Gimmick ohne Text. Aus der letzten Antwort wird nur abgeleitet, wohin er krabbelt und welche Farbe er hat (feste Regeln, keine KI)."
+zeilen: 86
+beschreibung: "Der Gecko: kleines Gimmick. Aus der letzten Antwort wird nach festen Regeln (keine KI) abgeleitet, wohin er sich setzt und ob es Fehler oder Hinweise gibt (dann wird er orange bzw. rot)."
 tags:
   - "projekt"
   - "projekt/helfer"
@@ -11,11 +11,11 @@ tags:
 
 # lib/gecko.ts
 
-**Pfad:** `lib/gecko.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 52
+**Pfad:** `lib/gecko.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 86
 
 ## Kurzbeschreibung
 
-Der Gecko: kleines Gimmick ohne Text. Aus der letzten Antwort wird nur abgeleitet, wohin er krabbelt und welche Farbe er hat (feste Regeln, keine KI).
+Der Gecko: kleines Gimmick. Aus der letzten Antwort wird nach festen Regeln (keine KI) abgeleitet, wohin er sich setzt und ob es Fehler oder Hinweise gibt (dann wird er orange bzw. rot).
 
 ## Importiert (lokal)
 
@@ -24,7 +24,7 @@ Der Gecko: kleines Gimmick ohne Text. Aus der letzten Antwort wird nur abgeleite
 
 ## Stellt bereit
 
-`GeckoSignal`, `komplexitaet`, `geckoSignal`
+`GeckoProblem`, `GeckoSignal`, `komplexitaet`, `geckoProbleme`, `geckoSignal`
 
 ## Wird verwendet von
 

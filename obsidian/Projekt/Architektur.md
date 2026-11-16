@@ -1,6 +1,6 @@
 ---
 dateien: 31
-zeilen: 5566
+zeilen: 5664
 tags:
   - "projekt"
   - "uebersicht"
@@ -205,6 +205,6 @@ flowchart LR
 
 ## Zahlen
 
-- 31 Quelldateien mit zusammen 5566 Zeilen
+- 31 Quelldateien mit zusammen 5664 Zeilen
 - 44 lokale Importe
 - Erfasst werden die Ordner `app/`, `components/`, `lib/`, `scripts/`, `tests/` (ohne node_modules, .next, data/quellen)

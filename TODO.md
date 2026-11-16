@@ -32,7 +32,7 @@
 - [ ] Erläuterungen für die übrigen BauGB-Paragraphen (§§ 39–250)
 - [ ] Fachliche Prüfung der Erläuterungen anhand von `data/erlaeuterungen/PRUEFHINWEISE.md`, danach Status „geprüft“
 - [x] Lageskizze in der Ortsauskunft: Standort, Umkreis 50 m, B-Plan-Umring, Denkmalflächen – der Gecko krabbelt darüber und steckt Fähnchen
-- [x] Gecko als kleines Gimmick: minimalistische Silhouette, streift wie ein echter Gecko über die Seite (Stop-and-go, bevorzugt an Kanten, flüchtet vor dem Mauszeiger), läuft zu neuen Antworten bzw. zur Erläuterung schwieriger Paragraphen, nimmt bei Denkmalen Tarnfarbe an; blockiert nichts, abschaltbar
+- [x] Gecko als Gimmick: Silhouette sitzt an den Kanten (Stammplatz unten rechts an der Auskunftsfläche), setzt sich an neue Antworten, rollt sich beim Darüberfahren ein; bei Fehlern rot, bei Hinweisen orange – beim Darüberfahren zeigt er die Meldungen; abschaltbar
 - [ ] Optional: echter Kartenhintergrund (z. B. Stadtkarte Oldenburg) unter der Lageskizze
 - [ ] Stichwortverzeichnis erweitern, mehr Testfälle (Ziel: 50)
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)

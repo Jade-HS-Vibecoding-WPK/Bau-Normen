@@ -55,10 +55,10 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
   const signal = useMemo<GeckoSignal>(
     () =>
       laedt
-        ? { modus: "sucht", farbe: "gruen", nonce: -zaehler.current }
+        ? { modus: "sucht", probleme: [], nonce: -zaehler.current }
         : letzteAntwort
           ? geckoSignal(letzteAntwort.antworten, String(letzteAntwort.id), letzteAntwort.id)
-          : { modus: "ruhe", farbe: "gruen", nonce: 0 },
+          : { modus: "ruhe", probleme: [], nonce: 0 },
     [laedt, letzteAntwort],
   );
 
@@ -255,7 +255,15 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 </div>
               ) : (
                 <div key={e.id} className="antworten" ref={i === verlauf.length - 1 ? letzteRef : undefined}>
-                  {e.antworten?.map((a, j) => <AntwortAnzeige key={j} a={a} frage={frage} obsidianPfad={obsidianPfad} kartenId={`${e.id}-${j}`} />)}
+                  {e.antworten?.map((a, j) =>
+                    a.art === "norm" || a.art === "ort" ? (
+                      <AntwortAnzeige key={j} a={a} frage={frage} obsidianPfad={obsidianPfad} kartenId={`${e.id}-${j}`} />
+                    ) : (
+                      <div key={j} id={`karte-${e.id}-${j}`}>
+                        <AntwortAnzeige a={a} frage={frage} obsidianPfad={obsidianPfad} kartenId={`${e.id}-${j}`} />
+                      </div>
+                    ),
+                  )}
                 </div>
               ),
             )}
