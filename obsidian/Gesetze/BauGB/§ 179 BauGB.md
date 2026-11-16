@@ -1,0 +1,45 @@
+---
+gesetz: "BauGB"
+paragraph: "§ 179"
+titel: "Rückbau- und Entsiegelungsgebot"
+stand: "zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226"
+quelle: "https://www.gesetze-im-internet.de/bbaug/__179.html"
+weggefallen: false
+gliederung:
+  - "Zweites Kapitel – Besonderes Städtebaurecht"
+  - "Sechster Teil – Erhaltungssatzung und städtebauliche Gebote"
+  - "Zweiter Abschnitt – Städtebauliche Gebote"
+tags:
+  - "gesetz/baugb"
+  - "paragraph"
+---
+
+# § 179 BauGB – Rückbau- und Entsiegelungsgebot
+
+BauGB › Zweites Kapitel – Besonderes Städtebaurecht › Sechster Teil – Erhaltungssatzung und städtebauliche Gebote › [[Gesetze/BauGB/Gliederung/BauGB Kap. 2 Teil 6 Abschn. 2 – Städtebauliche Gebote.md|Zweiter Abschnitt – Städtebauliche Gebote]]
+
+## Originaltext
+
+(1) Die Gemeinde kann den Eigentümer verpflichten zu dulden, dass eine bauliche Anlage ganz oder teilweise beseitigt wird, wenn sie  
+    1\. den Festsetzungen eines Bebauungsplans nicht entspricht und ihnen nicht angepasst werden kann oder  
+    2\. Missstände oder Mängel im Sinne des § 177 Absatz 2 und 3 Satz 1 aufweist, die auch durch eine Modernisierung oder Instandsetzung nicht behoben werden können.  
+Satz 1 Nummer 1 gilt entsprechend für die sonstige Wiedernutzbarmachung von dauerhaft nicht mehr genutzten Flächen, bei denen der durch Bebauung oder Versiegelung beeinträchtigte Boden in seiner Leistungsfähigkeit erhalten oder wiederhergestellt werden soll; die sonstige Wiedernutzbarmachung steht der Beseitigung nach Satz 1 gleich. Diejenigen, für die ein Recht an dem Grundstück oder an einem das Grundstück belastenden Recht im Grundbuch eingetragen oder durch Eintragung gesichert ist, das nicht zur Nutzung berechtigt, sollen von dem Bescheid benachrichtigt werden, wenn sie von der Beseitigung betroffen werden. Unberührt bleibt das Recht des Eigentümers, die Beseitigung selbst vorzunehmen.
+
+(2) Der Bescheid darf bei Wohnraum nur vollzogen werden, wenn im Zeitpunkt der Beseitigung angemessener Ersatzwohnraum für die Bewohner unter zumutbaren Bedingungen zur Verfügung steht. Strebt der Inhaber von Raum, der überwiegend gewerblichen oder beruflichen Zwecken dient (Geschäftsraum), eine anderweitige Unterbringung an, soll der Bescheid nur vollzogen werden, wenn im Zeitpunkt der Beseitigung anderer geeigneter Geschäftsraum unter zumutbaren Bedingungen zur Verfügung steht.
+
+(3) Entstehen dem Eigentümer, Mieter, Pächter oder sonstigen Nutzungsberechtigten durch die Beseitigung Vermögensnachteile, hat die Gemeinde angemessene Entschädigung in Geld zu leisten. Der Eigentümer kann anstelle der Entschädigung nach Satz 1 von der Gemeinde die Übernahme des Grundstücks verlangen, wenn es ihm mit Rücksicht auf das Rückbau- oder Entsiegelungsgebot wirtschaftlich nicht mehr zuzumuten ist, das Grundstück zu behalten. § 43 Absatz 1, 2, 4 und 5 sowie § 44 Absatz 3 und 4 sind entsprechend anzuwenden.
+
+(4) Im Falle des Absatzes 1 Satz 1 Nummer 2 sind die Beseitigungskosten vom Eigentümer bis zur Höhe der ihm durch die Beseitigung entstehenden Vermögensvorteile zu tragen. Der Kostenerstattungsbetrag kann durch Bescheid geltend gemacht werden, sobald die bauliche Anlage ganz oder teilweise beseitigt ist. Der Betrag ruht als öffentliche Last auf dem Grundstück.
+
+## Verweist auf
+
+- [[§ 177 BauGB]] – Modernisierungs- und Instandsetzungsgebot
+- [[§ 43 BauGB]] – Entschädigung und Verfahren
+- [[§ 44 BauGB]] – Entschädigungspflichtige, Fälligkeit und Erlöschen der Entschädigungsansprüche
+
+## Quelle
+
+- Amtliche Fassung: [§ 179 BauGB auf www.gesetze-im-internet.de](https://www.gesetze-im-internet.de/bbaug/__179.html)
+- Stand: zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226
+- Abgerufen: 2026-11-16
+- Daten: `data/gesetze/baugb.json`

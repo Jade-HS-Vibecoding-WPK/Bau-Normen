@@ -1,0 +1,58 @@
+---
+gesetz: "BauGB"
+paragraph: "§ 176"
+titel: "Baugebot"
+stand: "zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226"
+quelle: "https://www.gesetze-im-internet.de/bbaug/__176.html"
+weggefallen: false
+gliederung:
+  - "Zweites Kapitel – Besonderes Städtebaurecht"
+  - "Sechster Teil – Erhaltungssatzung und städtebauliche Gebote"
+  - "Zweiter Abschnitt – Städtebauliche Gebote"
+tags:
+  - "gesetz/baugb"
+  - "paragraph"
+---
+
+# § 176 BauGB – Baugebot
+
+BauGB › Zweites Kapitel – Besonderes Städtebaurecht › Sechster Teil – Erhaltungssatzung und städtebauliche Gebote › [[Gesetze/BauGB/Gliederung/BauGB Kap. 2 Teil 6 Abschn. 2 – Städtebauliche Gebote.md|Zweiter Abschnitt – Städtebauliche Gebote]]
+
+## Originaltext
+
+(1) Im Geltungsbereich eines Bebauungsplans kann die Gemeinde den Eigentümer durch Bescheid verpflichten, innerhalb einer zu bestimmenden angemessenen Frist  
+    1\. sein Grundstück entsprechend den Festsetzungen des Bebauungsplans zu bebauen,  
+    2\. ein vorhandenes Gebäude oder eine vorhandene sonstige bauliche Anlage den Festsetzungen des Bebauungsplans anzupassen oder  
+    3\. sein Grundstück mit einer oder mehreren Wohneinheiten zu bebauen, wenn in dem Bebauungsplan Wohnnutzungen zugelassen sind und wenn es sich um ein nach § 201a bestimmtes Gebiet mit einem angespannten Wohnungsmarkt handelt. Dabei kann die Gemeinde auch ein den Festsetzungen des Bebauungsplans entsprechendes Maß der Nutzung anordnen.  
+Die Wirksamkeit eines nach Satz 1 Nummer 3 erlassenen Baugebots wird durch das Ende der Geltungsdauer der Rechtsverordnung nach § 201a nicht berührt.
+
+(2) Das Baugebot kann außerhalb der in Absatz 1 bezeichneten Gebiete, aber innerhalb im Zusammenhang bebauter Ortsteile angeordnet werden, um unbebaute oder geringfügig bebaute Grundstücke entsprechend den baurechtlichen Vorschriften zu nutzen oder einer baulichen Nutzung zuzuführen, insbesondere zur Schließung von Baulücken.
+
+(3) Die Gemeinde hat von dem Baugebot abzusehen, wenn die Durchführung des Vorhabens aus wirtschaftlichen Gründen einem Eigentümer nicht zuzumuten ist. Die Gemeinde hat weiter bis zum 23. Juni 2026 von dem Baugebot abzusehen, wenn ein Eigentümer im Falle des Absatzes 1 Satz 1 Nummer 3 glaubhaft macht, dass ihm die Durchführung des Vorhabens aus Gründen des Erhalts der Entscheidungsbefugnis über die Nutzung des Grundstücks für seinen Ehegatten oder eine in gerader Linie verwandte Person nicht zuzumuten ist. Die Regelung ist zu evaluieren.
+
+(4) Der Eigentümer kann von der Gemeinde die Übernahme des Grundstücks verlangen, wenn er glaubhaft macht, dass ihm die Durchführung des Vorhabens aus wirtschaftlichen Gründen nicht zuzumuten ist. In diesem Fall kann die Gemeinde das Grundstück zugunsten einer kommunalen Wohnungsbaugesellschaft übernehmen, wenn diese innerhalb angemessener Frist in der Lage ist, das Baugebot zu erfüllen und sich hierzu verpflichtet. § 43 Absatz 1, 4 und 5 sowie § 44 Absatz 3 und 4 sind entsprechend anzuwenden.
+
+(5) Ist die Durchführung eines Baugebots nur möglich, wenn zuvor eine bauliche Anlage oder Teile davon beseitigt werden, ist der Eigentümer mit dem Baugebot auch zur Beseitigung verpflichtet. § 179 Absatz 2 und 3 Satz 1, § 43 Absatz 2 und 5 sowie § 44 Absatz 3 und 4 sind entsprechend anzuwenden.
+
+(6) Ist für ein Grundstück eine andere als bauliche Nutzung festgesetzt, sind die Absätze 1 und 3 bis 5 entsprechend anzuwenden.
+
+(7) Mit dem Baugebot kann die Verpflichtung verbunden werden, innerhalb einer zu bestimmenden angemessenen Frist den für eine bauliche Nutzung des Grundstücks erforderlichen Antrag auf Erteilung einer bauaufsichtlichen Genehmigung zu stellen.
+
+(8) Kommt der Eigentümer der Verpflichtung nach Absatz 7 auch nach Vollstreckungsmaßnahmen auf Grund landesrechtlicher Vorschriften nicht nach, kann das Enteignungsverfahren nach § 85 Absatz 1 Nummer 5 auch vor Ablauf der Frist nach Absatz 1 eingeleitet werden.
+
+(9) In dem Enteignungsverfahren ist davon auszugehen, dass die Voraussetzungen des Baugebots vorliegen; die Vorschriften über die Zulässigkeit der Enteignung bleiben unberührt. Bei der Bemessung der Entschädigung bleiben Werterhöhungen unberücksichtigt, die nach Unanfechtbarkeit des Baugebots eingetreten sind, es sei denn, dass der Eigentümer die Werterhöhungen durch eigene Aufwendungen zulässigerweise bewirkt hat.
+
+## Verweist auf
+
+- [[§ 201a BauGB]] – Verordnungsermächtigung zur Bestimmung von Gebieten mit einem angespannten Wohnungsmarkt
+- [[§ 43 BauGB]] – Entschädigung und Verfahren
+- [[§ 44 BauGB]] – Entschädigungspflichtige, Fälligkeit und Erlöschen der Entschädigungsansprüche
+- [[§ 179 BauGB]] – Rückbau- und Entsiegelungsgebot
+- [[§ 85 BauGB]] – Enteignungszweck
+
+## Quelle
+
+- Amtliche Fassung: [§ 176 BauGB auf www.gesetze-im-internet.de](https://www.gesetze-im-internet.de/bbaug/__176.html)
+- Stand: zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226
+- Abgerufen: 2026-11-16
+- Daten: `data/gesetze/baugb.json`

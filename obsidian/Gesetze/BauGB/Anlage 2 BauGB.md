@@ -1,0 +1,60 @@
+---
+gesetz: "BauGB"
+paragraph: "Anlage 2"
+titel: "(zu § 13a Absatz 1 Satz 2 Nummer 2)"
+stand: "zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226"
+quelle: "https://www.gesetze-im-internet.de/bbaug/anlage_2.html"
+weggefallen: false
+gliederung:
+  - "Viertes Kapitel – Überleitungs- und Schlussvorschriften"
+  - "Zweiter Teil – Schlussvorschriften"
+tags:
+  - "gesetz/baugb"
+  - "anlage"
+---
+
+# Anlage 2 BauGB – (zu § 13a Absatz 1 Satz 2 Nummer 2)
+
+BauGB › Viertes Kapitel – Überleitungs- und Schlussvorschriften › [[Gesetze/BauGB/Gliederung/BauGB Kap. 4 Teil 2 – Schlussvorschriften.md|Zweiter Teil – Schlussvorschriften]]
+
+## Originaltext
+
+(Fundstelle: BGBl. I 2017, 3722)
+
+Nachstehende Kriterien sind anzuwenden, soweit auf Anlage 2 Bezug genommen wird.
+
+| | |
+|---|---|
+| 1. | Merkmale des Bebauungsplans, insbesondere in Bezug auf |
+| 1.1 | das Ausmaß, in dem der Bebauungsplan einen Rahmen im Sinne des § 35 Absatz 3 des Gesetzes über die Umweltverträglichkeitsprüfung setzt; |
+| 1.2 | das Ausmaß, in dem der Bebauungsplan andere Pläne und Programme beeinflusst; |
+| 1.3 | die Bedeutung des Bebauungsplans für die Einbeziehung umweltbezogener, einschließlich gesundheitsbezogener Erwägungen, insbesondere im Hinblick auf die Förderung der nachhaltigen Entwicklung; |
+| 1.4 | die für den Bebauungsplan relevanten umweltbezogenen, einschließlich gesundheitsbezogener Probleme; |
+| 1.5 | die Bedeutung des Bebauungsplans für die Durchführung nationaler und europäischer Umweltvorschriften. |
+| 2. | Merkmale der möglichen Auswirkungen und der voraussichtlich betroffenen Gebiete, insbesondere in Bezug auf |
+| 2.1 | die Wahrscheinlichkeit, Dauer, Häufigkeit und Umkehrbarkeit der Auswirkungen; |
+| 2.2 | den kumulativen und grenzüberschreitenden Charakter der Auswirkungen; |
+| 2.3 | die Risiken für die Umwelt, einschließlich der menschlichen Gesundheit (zum Beispiel bei Unfällen); |
+| 2.4 | den Umfang und die räumliche Ausdehnung der Auswirkungen; |
+| 2.5 | die Bedeutung und die Sensibilität des voraussichtlich betroffenen Gebiets auf Grund der besonderen natürlichen Merkmale, des kulturellen Erbes, der Intensität der Bodennutzung des Gebiets jeweils unter Berücksichtigung der Überschreitung von Umweltqualitätsnormen und Grenzwerten; |
+| 2.6 | folgende Gebiete: |
+| 2.6.1 | Natura 2000-Gebiete nach § 7 Absatz 1 Nummer 8 des Bundesnaturschutzgesetzes, |
+| 2.6.2 | Naturschutzgebiete gemäß § 23 des Bundesnaturschutzgesetzes, soweit nicht bereits von Nummer 2.6.1 erfasst, |
+| 2.6.3 | Nationalparke gemäß § 24 des Bundesnaturschutzgesetzes, soweit nicht bereits von Nummer 2.6.1 erfasst, |
+| 2.6.4 | Biosphärenreservate und Landschaftsschutzgebiete gemäß den §§ 25 und 26 des Bundesnaturschutzgesetzes, |
+| 2.6.5 | gesetzlich geschützte Biotope gemäß § 30 des Bundesnaturschutzgesetzes, |
+| 2.6.6 | Wasserschutzgebiete gemäß § 51 des Wasserhaushaltsgesetzes, Heilquellenschutzgebiete gemäß § 53 Absatz 4 des Wasserhaushaltsgesetzes sowie Überschwemmungsgebiete gemäß § 76 des Wasserhaushaltsgesetzes, |
+| 2.6.7 | Gebiete, in denen die in Rechtsakten der Europäischen Union festgelegten Umweltqualitätsnormen bereits überschritten sind, |
+| 2.6.8 | Gebiete mit hoher Bevölkerungsdichte, insbesondere Zentrale Orte im Sinne des § 2 Absatz 2 Nummer 2 des Raumordnungsgesetzes, |
+| 2.6.9 | in amtlichen Listen oder Karten verzeichnete Denkmäler, Denkmalensembles, Bodendenkmäler oder Gebiete, die von der durch die Länder bestimmten Denkmalschutzbehörde als archäologisch bedeutende Landschaften eingestuft worden sind. |
+
+## Verweist auf
+
+*Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Quelle
+
+- Amtliche Fassung: [Anlage 2 BauGB auf www.gesetze-im-internet.de](https://www.gesetze-im-internet.de/bbaug/anlage_2.html)
+- Stand: zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226
+- Abgerufen: 2026-11-16
+- Daten: `data/gesetze/baugb.json`

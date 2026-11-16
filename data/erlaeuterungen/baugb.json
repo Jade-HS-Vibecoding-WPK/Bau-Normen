@@ -1,0 +1,24 @@
+{
+  "30": {
+    "kurz": "Gibt es für Ihr Grundstück einen Bebauungsplan, entscheidet dieser Plan, was gebaut werden darf – vorausgesetzt, die Erschließung ist gesichert.",
+    "punkte": [
+      { "titel": "Abs. 1 – qualifizierter Bebauungsplan", "text": "Enthält der B-Plan mindestens Festsetzungen zu Art und Maß der baulichen Nutzung, zu den überbaubaren Grundstücksflächen und zu den örtlichen Verkehrsflächen, ist ein Vorhaben zulässig, wenn es diesen Festsetzungen nicht widerspricht und die Erschließung gesichert ist." },
+      { "titel": "Abs. 2 – vorhabenbezogener Bebauungsplan", "text": "Bei einem vorhabenbezogenen B-Plan nach § 12 (meist für ein konkretes Projekt eines Investors) gilt dasselbe: Das Vorhaben darf dem Plan nicht widersprechen, die Erschließung muss gesichert sein." },
+      { "titel": "Abs. 3 – einfacher Bebauungsplan", "text": "Fehlt eine der Mindestfestsetzungen, spricht man vom einfachen B-Plan. Was er regelt, gilt; für alles andere wird ergänzend nach § 34 (Innenbereich) oder § 35 (Außenbereich) beurteilt." }
+    ],
+    "praxis": "Erster Schritt bei jedem Projekt: prüfen, ob ein B-Plan gilt und ob er qualifiziert oder einfach ist. Abweichungen von Festsetzungen sind nur über Ausnahmen oder Befreiungen nach § 31 möglich.",
+    "status": "entwurf"
+  },
+  "34": {
+    "kurz": "Regelt, wann Sie innerhalb eines bebauten Ortsteils ohne Bebauungsplan bauen dürfen: Ihr Vorhaben muss sich in die nähere Umgebung einfügen und erschlossen sein.",
+    "punkte": [
+      { "titel": "Abs. 1 – Grundregel „Einfügen“", "text": "Zulässig ist, was sich nach Art und Maß der baulichen Nutzung, Bauweise und überbauter Grundstücksfläche in die Eigenart der näheren Umgebung einfügt. Die Erschließung muss gesichert sein, gesunde Wohn- und Arbeitsverhältnisse müssen gewahrt bleiben und das Ortsbild darf nicht beeinträchtigt werden." },
+      { "titel": "Abs. 2 – „faktisches Baugebiet“", "text": "Entspricht die Umgebung einem Baugebiet der Baunutzungsverordnung (z. B. allgemeines Wohngebiet), richtet sich die zulässige Nutzungsart allein nach dieser Gebietsart. Für Ausnahmen und Befreiungen gilt § 31 entsprechend." },
+      { "titel": "Abs. 3 – Schutz zentraler Versorgungsbereiche", "text": "Ein Vorhaben darf keine schädlichen Auswirkungen auf zentrale Versorgungsbereiche (z. B. Innenstadt, Stadtteilzentren) haben – relevant vor allem für Einzelhandel." },
+      { "titel": "Abs. 3a und 3b – Abweichen vom Einfügen", "text": "Im Einzelfall kann vom Einfügen abgewichen werden, etwa für die Erweiterung bestehender Gewerbe- und Handwerksbetriebe, für neue Wohnungen in bestehenden Gebäuden oder die Umnutzung zu Wohnzwecken – wenn das städtebaulich vertretbar und mit öffentlichen Belangen sowie Nachbarinteressen vereinbar ist. Mit Zustimmung der Gemeinde ist das auch für die Errichtung von Wohngebäuden möglich (Abs. 3b)." },
+      { "titel": "Abs. 4 bis 6 – Satzungen der Gemeinde", "text": "Die Gemeinde kann per Satzung festlegen, wo der Innenbereich beginnt und endet (Klarstellungssatzung), bebaute Bereiche im Außenbereich zum Innenbereich erklären (Entwicklungssatzung) oder einzelne Außenbereichsflächen einbeziehen (Ergänzungssatzung). Abs. 5 und 6 regeln Voraussetzungen und Verfahren." }
+    ],
+    "praxis": "Typisch für Baulücken und Bestandsgebiete ohne B-Plan. Maßstab ist die tatsächlich vorhandene Bebauung in der näheren Umgebung. Bei Unsicherheit schafft eine Bauvoranfrage bei der Bauaufsicht Klarheit, bevor teuer geplant wird.",
+    "status": "entwurf"
+  }
+}

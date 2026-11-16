@@ -1,0 +1,1520 @@
+{
+ "id": "ndschg",
+ "kurz": "NDSchG",
+ "titel": "Niedersächsisches Denkmalschutzgesetz",
+ "ebene": "Niedersachsen",
+ "stand": "Zuletzt geändert durch Artikel 3 des Gesetzes vom 12. Dezember 2023 (Nds. GVBl. S. 289)",
+ "gueltigAb": "2023-12-20",
+ "ausfertigung": "Vom 30. Mai 1978 (Nds. GVBl. S. 517 - VORIS 22510 01 00 00 000 -)",
+ "schlussformel": "Hannover, den 30. Mai 1978\nDer Niedersächsische Ministerpräsident\nAlbrecht\nDer Niedersächsische Minister für Wissenschaft und Kunst\nPestel",
+ "quelle": {
+  "name": "Niedersächsisches Vorschrifteninformationssystem (NI-VORIS) – voris.wolterskluwer-online.de",
+  "url": "https://voris.wolterskluwer-online.de/browse/document/b053748c-c363-37c6-b26f-3d52606c6272",
+  "fassung": "ab 20.12.2023 (aktuelle Fassung)",
+  "abgerufen": "2026-11-16"
+ },
+ "normen": [
+  {
+   "id": "1",
+   "bez": "§ 1",
+   "titel": "Grundsatz",
+   "gliederung": [
+    "Erster Teil – Allgemeine Vorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Kulturdenkmale sind zu schützen, zu pflegen und wissenschaftlich zu erforschen. Im Rahmen des Zumutbaren sollen sie der Öffentlichkeit zugänglich gemacht werden."
+     ]
+    }
+   ],
+   "text": "Kulturdenkmale sind zu schützen, zu pflegen und wissenschaftlich zu erforschen. Im Rahmen des Zumutbaren sollen sie der Öffentlichkeit zugänglich gemacht werden.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/1279c952-bc43-39be-86f1-729a5389fceb",
+   "verweise": []
+  },
+  {
+   "id": "2",
+   "bez": "§ 2",
+   "titel": "Denkmalschutz und Denkmalpflege als öffentliche Aufgaben",
+   "gliederung": [
+    "Erster Teil – Allgemeine Vorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Aufgabe des Landes ist es, für den Schutz, die Pflege und die wissenschaftliche Erforschung der Kulturdenkmale zu sorgen. Bei der Wahrnehmung von Denkmalschutz und Denkmalpflege wirken das Land, die Gemeinden, Landkreise und sonstigen Kommunalverbände sowie die in der Denkmalpflege tätigen Einrichtungen und Vereinigungen und die Eigentümer und Besitzer von Kulturdenkmalen zusammen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Dem Land sowie den Gemeinden, Landkreisen und sonstigen Kommunalverbänden obliegt die besondere Pflicht, die ihnen gehörenden und die von ihnen genutzten Kulturdenkmale zu pflegen und sie im Rahmen des Möglichen der Öffentlichkeit zugänglich zu machen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) In öffentlichen Planungen und bei öffentlichen Baumaßnahmen sind die Belange des Denkmalschutzes und der Denkmalpflege sowie die Anforderungen des UNESCO-Übereinkommens zum Schutz des Kultur- und Naturerbes der Welt vom 16. November 1972 (BGBl. 1977 II S. 213) rechtzeitig und so zu berücksichtigen, dass die Kulturdenkmale und das Kulturerbe im Sinne des Übereinkommens erhalten werden und ihre Umgebung angemessen gestaltet wird, soweit nicht andere öffentliche Belange überwiegen."
+     ]
+    }
+   ],
+   "text": "(1) Aufgabe des Landes ist es, für den Schutz, die Pflege und die wissenschaftliche Erforschung der Kulturdenkmale zu sorgen. Bei der Wahrnehmung von Denkmalschutz und Denkmalpflege wirken das Land, die Gemeinden, Landkreise und sonstigen Kommunalverbände sowie die in der Denkmalpflege tätigen Einrichtungen und Vereinigungen und die Eigentümer und Besitzer von Kulturdenkmalen zusammen.\n(2) Dem Land sowie den Gemeinden, Landkreisen und sonstigen Kommunalverbänden obliegt die besondere Pflicht, die ihnen gehörenden und die von ihnen genutzten Kulturdenkmale zu pflegen und sie im Rahmen des Möglichen der Öffentlichkeit zugänglich zu machen.\n(3) In öffentlichen Planungen und bei öffentlichen Baumaßnahmen sind die Belange des Denkmalschutzes und der Denkmalpflege sowie die Anforderungen des UNESCO-Übereinkommens zum Schutz des Kultur- und Naturerbes der Welt vom 16. November 1972 (BGBl. 1977 II S. 213) rechtzeitig und so zu berücksichtigen, dass die Kulturdenkmale und das Kulturerbe im Sinne des Übereinkommens erhalten werden und ihre Umgebung angemessen gestaltet wird, soweit nicht andere öffentliche Belange überwiegen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/085fe517-0ab5-3bd8-a1ae-1c7edfad730c",
+   "verweise": []
+  },
+  {
+   "id": "3",
+   "bez": "§ 3",
+   "titel": "Begriffsbestimmungen",
+   "gliederung": [
+    "Erster Teil – Allgemeine Vorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Kulturdenkmale im Sinne dieses Gesetzes sind Baudenkmale, Bodendenkmale, bewegliche Denkmale und Denkmale der Erdgeschichte."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Baudenkmale sind bauliche Anlagen (§ 2 Abs. 1 der Niedersächsischen Bauordnung), Teile baulicher Anlagen, Grünanlagen und Friedhofsanlagen, an deren Erhaltung wegen ihrer geschichtlichen, künstlerischen, wissenschaftlichen oder städtebaulichen Bedeutung ein öffentliches Interesse besteht."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Baudenkmal ist auch eine Gruppe baulicher Anlagen, die aus den in Absatz 2 genannten Gründen erhaltenswert ist, unabhängig davon, ob die einzelnen baulichen Anlagen für sich Baudenkmale sind. Pflanzen, Frei- und Wasserflächen in der Umgebung eines Baudenkmals und Zubehör eines Baudenkmals gelten als Teile des Baudenkmals, wenn sie mit diesem eine Einheit bilden, die aus den in Absatz 2 genannten Gründen erhaltenswert ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Bodendenkmale sind mit dem Boden verbundene oder im Boden verborgene Sachen, Sachgesamtheiten und Spuren von Sachen, die von Menschen geschaffen oder bearbeitet wurden oder Aufschluss über menschliches Leben in vergangener Zeit geben und aus den in Absatz 2 genannten Gründen erhaltenswert sind, sofern sie nicht Baudenkmale sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Bewegliche Denkmale sind bewegliche Sachen und Sachgesamtheiten, die von Menschen geschaffen oder bearbeitet wurden oder Aufschluss über menschliches Leben in vergangener Zeit geben und die aus den in Absatz 2 genannten Gründen erhaltenswert sind, sofern sie nicht Bodendenkmale sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Denkmale der Erdgeschichte sind Überreste oder Spuren, die Aufschluss über die Entwicklung tierischen oder pflanzlichen Lebens in vergangenen Erdperioden oder die Entwicklung der Erde geben und an deren Erhaltung aufgrund ihrer herausragenden wissenschaftlichen Bedeutung ein öffentliches Interesse besteht."
+     ]
+    }
+   ],
+   "text": "(1) Kulturdenkmale im Sinne dieses Gesetzes sind Baudenkmale, Bodendenkmale, bewegliche Denkmale und Denkmale der Erdgeschichte.\n(2) Baudenkmale sind bauliche Anlagen (§ 2 Abs. 1 der Niedersächsischen Bauordnung), Teile baulicher Anlagen, Grünanlagen und Friedhofsanlagen, an deren Erhaltung wegen ihrer geschichtlichen, künstlerischen, wissenschaftlichen oder städtebaulichen Bedeutung ein öffentliches Interesse besteht.\n(3) Baudenkmal ist auch eine Gruppe baulicher Anlagen, die aus den in Absatz 2 genannten Gründen erhaltenswert ist, unabhängig davon, ob die einzelnen baulichen Anlagen für sich Baudenkmale sind. Pflanzen, Frei- und Wasserflächen in der Umgebung eines Baudenkmals und Zubehör eines Baudenkmals gelten als Teile des Baudenkmals, wenn sie mit diesem eine Einheit bilden, die aus den in Absatz 2 genannten Gründen erhaltenswert ist.\n(4) Bodendenkmale sind mit dem Boden verbundene oder im Boden verborgene Sachen, Sachgesamtheiten und Spuren von Sachen, die von Menschen geschaffen oder bearbeitet wurden oder Aufschluss über menschliches Leben in vergangener Zeit geben und aus den in Absatz 2 genannten Gründen erhaltenswert sind, sofern sie nicht Baudenkmale sind.\n(5) Bewegliche Denkmale sind bewegliche Sachen und Sachgesamtheiten, die von Menschen geschaffen oder bearbeitet wurden oder Aufschluss über menschliches Leben in vergangener Zeit geben und die aus den in Absatz 2 genannten Gründen erhaltenswert sind, sofern sie nicht Bodendenkmale sind.\n(6) Denkmale der Erdgeschichte sind Überreste oder Spuren, die Aufschluss über die Entwicklung tierischen oder pflanzlichen Lebens in vergangenen Erdperioden oder die Entwicklung der Erde geben und an deren Erhaltung aufgrund ihrer herausragenden wissenschaftlichen Bedeutung ein öffentliches Interesse besteht.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/e0662cb4-24bc-3363-8680-593537d8b9d8",
+   "verweise": []
+  },
+  {
+   "id": "4",
+   "bez": "§ 4",
+   "titel": "Verzeichnis der Kulturdenkmale",
+   "gliederung": [
+    "Erster Teil – Allgemeine Vorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Kulturdenkmale sind in ein Verzeichnis einzutragen, das durch das Landesamt für Denkmalpflege aufzustellen und fortzuführen ist. Bewegliche Denkmale werden in das Verzeichnis nur eingetragen, wenn ihre besondere Bedeutung es erfordert, sie dem Schutz dieses Gesetzes zu unterstellen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die unteren Denkmalschutzbehörden und die Gemeinden führen für ihr Gebiet Auszüge aus dem Verzeichnis. Jedermann kann Einblick in das Verzeichnis und die Auszüge nehmen. Eintragungen über bewegliche Denkmale und über Zubehör von Baudenkmalen dürfen nur die Eigentümer und die sonstigen dinglich Berechtigten sowie die von ihnen ermächtigten Personen einsehen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Eine Eintragung ist im Verzeichnis zu löschen, wenn ihre Voraussetzungen entfallen sind. Ist die Eigenschaft als Baudenkmal nach Absatz 5 durch Verwaltungsakt festgestellt worden, so ist die Eintragung zu löschen, wenn der Verwaltungsakt unanfechtbar aufgehoben worden ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Vor der Eintragung eines Baudenkmals, eines Bodendenkmals oder eines unbeweglichen Denkmals der Erdgeschichte in das Verzeichnis ist die Gemeinde zu hören, auf deren Gebiet sich das Denkmal befindet. Die Gemeinde teilt dem Landesamt für Denkmalpflege Namen und Anschrift des Eigentümers des Denkmals nach Satz 1 mit. Das Landesamt für Denkmalpflege hört vor der Eintragung eines Baudenkmals dessen Eigentümer. Das Landesamt für Denkmalpflege unterrichtet die untere Denkmalschutzbehörde, die Gemeinde und den Eigentümer unverzüglich über die Neueintragung oder Löschung des Baudenkmals im Verzeichnis. Das Landesamt für Denkmalpflege unterrichtet die untere Denkmalschutzbehörde über die beabsichtigte Eintragung eines beweglichen Denkmals."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Ist ein Baudenkmal nach dem 30. September 2011 in das Verzeichnis eingetragen worden, so hat das Landesamt für Denkmalpflege auf Antrag des Eigentümers durch Verwaltungsakt die Eigenschaft als Baudenkmal festzustellen."
+     ]
+    }
+   ],
+   "text": "(1) Die Kulturdenkmale sind in ein Verzeichnis einzutragen, das durch das Landesamt für Denkmalpflege aufzustellen und fortzuführen ist. Bewegliche Denkmale werden in das Verzeichnis nur eingetragen, wenn ihre besondere Bedeutung es erfordert, sie dem Schutz dieses Gesetzes zu unterstellen.\n(2) Die unteren Denkmalschutzbehörden und die Gemeinden führen für ihr Gebiet Auszüge aus dem Verzeichnis. Jedermann kann Einblick in das Verzeichnis und die Auszüge nehmen. Eintragungen über bewegliche Denkmale und über Zubehör von Baudenkmalen dürfen nur die Eigentümer und die sonstigen dinglich Berechtigten sowie die von ihnen ermächtigten Personen einsehen.\n(3) Eine Eintragung ist im Verzeichnis zu löschen, wenn ihre Voraussetzungen entfallen sind. Ist die Eigenschaft als Baudenkmal nach Absatz 5 durch Verwaltungsakt festgestellt worden, so ist die Eintragung zu löschen, wenn der Verwaltungsakt unanfechtbar aufgehoben worden ist.\n(4) Vor der Eintragung eines Baudenkmals, eines Bodendenkmals oder eines unbeweglichen Denkmals der Erdgeschichte in das Verzeichnis ist die Gemeinde zu hören, auf deren Gebiet sich das Denkmal befindet. Die Gemeinde teilt dem Landesamt für Denkmalpflege Namen und Anschrift des Eigentümers des Denkmals nach Satz 1 mit. Das Landesamt für Denkmalpflege hört vor der Eintragung eines Baudenkmals dessen Eigentümer. Das Landesamt für Denkmalpflege unterrichtet die untere Denkmalschutzbehörde, die Gemeinde und den Eigentümer unverzüglich über die Neueintragung oder Löschung des Baudenkmals im Verzeichnis. Das Landesamt für Denkmalpflege unterrichtet die untere Denkmalschutzbehörde über die beabsichtigte Eintragung eines beweglichen Denkmals.\n(5) Ist ein Baudenkmal nach dem 30. September 2011 in das Verzeichnis eingetragen worden, so hat das Landesamt für Denkmalpflege auf Antrag des Eigentümers durch Verwaltungsakt die Eigenschaft als Baudenkmal festzustellen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/50becb8f-fd9a-31e2-9591-b2a9e099f40f",
+   "verweise": []
+  },
+  {
+   "id": "5",
+   "bez": "§ 5",
+   "titel": "Wirkung der Eintragungen in das Verzeichnis",
+   "gliederung": [
+    "Erster Teil – Allgemeine Vorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Anwendbarkeit der Schutzvorschriften dieses Gesetzes ist nicht davon abhängig, dass Kulturdenkmale in das Verzeichnis nach § 4 eingetragen sind. Die §§ 6, 10 und 11 gelten jedoch für bewegliche Denkmale nur, wenn sie in das Verzeichnis eingetragen sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ist die Denkmalschutzbehörde nach § 4 Abs. 4 Satz 5 über die beabsichtigte Eintragung eines beweglichen Denkmals in das Verzeichnis der Kulturdenkmale unterrichtet worden, so kann sie gegenüber dem Eigentümer anordnen, dass das Denkmal vorläufig als eingetragen gilt. Absatz 1 Satz 2 gilt entsprechend. Die Anordnung wird unwirksam, wenn die Eintragung nicht innerhalb von sechs Monaten vorgenommen worden ist. Bei Vorliegen eines wichtigen Grundes kann diese Frist um bis zu drei Monate verlängert werden. Klagen gegen die Anordnung nach Satz 1 haben keine aufschiebende Wirkung."
+     ]
+    }
+   ],
+   "text": "(1) Die Anwendbarkeit der Schutzvorschriften dieses Gesetzes ist nicht davon abhängig, dass Kulturdenkmale in das Verzeichnis nach § 4 eingetragen sind. Die §§ 6, 10 und 11 gelten jedoch für bewegliche Denkmale nur, wenn sie in das Verzeichnis eingetragen sind.\n(2) Ist die Denkmalschutzbehörde nach § 4 Abs. 4 Satz 5 über die beabsichtigte Eintragung eines beweglichen Denkmals in das Verzeichnis der Kulturdenkmale unterrichtet worden, so kann sie gegenüber dem Eigentümer anordnen, dass das Denkmal vorläufig als eingetragen gilt. Absatz 1 Satz 2 gilt entsprechend. Die Anordnung wird unwirksam, wenn die Eintragung nicht innerhalb von sechs Monaten vorgenommen worden ist. Bei Vorliegen eines wichtigen Grundes kann diese Frist um bis zu drei Monate verlängert werden. Klagen gegen die Anordnung nach Satz 1 haben keine aufschiebende Wirkung.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a2f22bbc-57a6-3d4d-80a8-8754a57d13c1",
+   "verweise": [
+    "4",
+    "6",
+    "10",
+    "11"
+   ]
+  },
+  {
+   "id": "6",
+   "bez": "§ 6",
+   "titel": "Pflicht zur Erhaltung",
+   "gliederung": [
+    "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Kulturdenkmale sind in Stand zu halten, zu pflegen, vor Gefährdung zu schützen und, wenn nötig, instandzusetzen. Verpflichtet sind der Eigentümer oder Erbbauberechtigte und der Nießbraucher; neben ihnen ist verpflichtet, wer die tatsächliche Gewalt über das Kulturdenkmal ausübt. Die Verpflichteten oder die von ihnen Beauftragten haben die erforderlichen Arbeiten fachgerecht durchzuführen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Kulturdenkmale dürfen nicht zerstört, gefährdet oder so verändert oder von ihrem Platz entfernt werden, dass ihr Denkmalwert beeinträchtigt wird."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Soll ein Kulturdenkmal ganz oder teilweise zerstört werden, so ist der Veranlasser der Zerstörung im Rahmen des Zumutbaren zur fachgerechten Untersuchung, Bergung und Dokumentation des Kulturdenkmals verpflichtet. Satz 1 gilt unabhängig davon, ob die Zerstörung einer Genehmigung nach diesem Gesetz bedarf. § 10 Abs. 3 Sätze 2 und 3, § 12 Abs. 2 Sätze 2 bis 4 sowie § 13 Abs. 2 Sätze 2 und 3 bleiben unberührt."
+     ]
+    }
+   ],
+   "text": "(1) Kulturdenkmale sind in Stand zu halten, zu pflegen, vor Gefährdung zu schützen und, wenn nötig, instandzusetzen. Verpflichtet sind der Eigentümer oder Erbbauberechtigte und der Nießbraucher; neben ihnen ist verpflichtet, wer die tatsächliche Gewalt über das Kulturdenkmal ausübt. Die Verpflichteten oder die von ihnen Beauftragten haben die erforderlichen Arbeiten fachgerecht durchzuführen.\n(2) Kulturdenkmale dürfen nicht zerstört, gefährdet oder so verändert oder von ihrem Platz entfernt werden, dass ihr Denkmalwert beeinträchtigt wird.\n(3) Soll ein Kulturdenkmal ganz oder teilweise zerstört werden, so ist der Veranlasser der Zerstörung im Rahmen des Zumutbaren zur fachgerechten Untersuchung, Bergung und Dokumentation des Kulturdenkmals verpflichtet. Satz 1 gilt unabhängig davon, ob die Zerstörung einer Genehmigung nach diesem Gesetz bedarf. § 10 Abs. 3 Sätze 2 und 3, § 12 Abs. 2 Sätze 2 bis 4 sowie § 13 Abs. 2 Sätze 2 und 3 bleiben unberührt.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/0b0aa533-8617-3144-b82e-eb1b0bebf025",
+   "verweise": [
+    "10",
+    "12",
+    "13"
+   ]
+  },
+  {
+   "id": "7",
+   "bez": "§ 7",
+   "titel": "Grenzen der Erhaltungspflicht",
+   "gliederung": [
+    "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Erhaltungsmaßnahmen können nicht verlangt werden, soweit die Erhaltung den Verpflichteten wirtschaftlich unzumutbar belastet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ein Eingriff in ein Kulturdenkmal ist zu genehmigen, soweit",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "der Eingriff aus wissenschaftlichen Gründen im öffentlichen Interesse liegt,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "ein öffentliches Interesse anderer Art, zum Beispiel",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "die nachhaltige energetische Verbesserung des Kulturdenkmals,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "eine Maßnahme zur Verbesserung des Hochwasserschutzes oder"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "die Berücksichtigung der Belange von alten Menschen und Menschen mit Behinderungen,"
+             ]
+            }
+           ]
+          },
+          "das Interesse an der unveränderten Erhaltung des Kulturdenkmals überwiegt und den Eingriff zwingend verlangt,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "das öffentliche Interesse an der Errichtung von Anlagen zur Nutzung von erneuerbaren Energien das Interesse an der unveränderten Erhaltung des Kulturdenkmals überwiegt,"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "das öffentliche Interesse an Maßnahmen zur Anpassung an die Folgen des Klimawandels das Interesse an der unveränderten Erhaltung des Kulturdenkmals überwiegt oder"
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "die unveränderte Erhaltung den Verpflichteten wirtschaftlich unzumutbar belastet."
+         ]
+        }
+       ]
+      },
+      "Das öffentliche Interesse an der Errichtung von Anlagen zur Nutzung von erneuerbaren Energien nach Satz 1 Nr. 3 oder an Maßnahmen zur Anpassung an die Folgen des Klimawandels nach Satz 1 Nr. 4 überwiegt in der Regel, wenn der Eingriff in das äußere Erscheinungsbild reversibel ist und in die denkmalwerte Substanz nur geringfügig eingegriffen wird."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Unzumutbar ist eine wirtschaftliche Belastung insbesondere, soweit die Kosten der Erhaltung und Bewirtschaftung nicht durch die Erträge oder den Gebrauchswert des Kulturdenkmals aufgewogen werden können. Kann der Verpflichtete Zuwendungen aus öffentlichen oder privaten Mitteln oder steuerliche Vorteile in Anspruch nehmen, so sind diese anzurechnen. Der Verpflichtete kann sich nicht auf die Belastung durch erhöhte Erhaltungskosten berufen, die dadurch verursacht wurden, dass Erhaltungsmaßnahmen diesem Gesetz oder sonstigem öffentlichem Recht zuwider unterblieben sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Absatz 1 und Absatz 2 Satz 1 Nr. 5 gelten nicht für das Land, die Gemeinden, die Landkreise und die sonstigen Kommunalverbände. Sie sind zu Erhaltungsmaßnahmen im Rahmen ihrer finanziellen Leistungsfähigkeit verpflichtet."
+     ]
+    }
+   ],
+   "text": "(1) Erhaltungsmaßnahmen können nicht verlangt werden, soweit die Erhaltung den Verpflichteten wirtschaftlich unzumutbar belastet.\n(2) Ein Eingriff in ein Kulturdenkmal ist zu genehmigen, soweit\n1. der Eingriff aus wissenschaftlichen Gründen im öffentlichen Interesse liegt,\n2. ein öffentliches Interesse anderer Art, zum Beispiel\na) die nachhaltige energetische Verbesserung des Kulturdenkmals,\nb) eine Maßnahme zur Verbesserung des Hochwasserschutzes oder\nc) die Berücksichtigung der Belange von alten Menschen und Menschen mit Behinderungen,\ndas Interesse an der unveränderten Erhaltung des Kulturdenkmals überwiegt und den Eingriff zwingend verlangt,\n3. das öffentliche Interesse an der Errichtung von Anlagen zur Nutzung von erneuerbaren Energien das Interesse an der unveränderten Erhaltung des Kulturdenkmals überwiegt,\n4. das öffentliche Interesse an Maßnahmen zur Anpassung an die Folgen des Klimawandels das Interesse an der unveränderten Erhaltung des Kulturdenkmals überwiegt oder\n5. die unveränderte Erhaltung den Verpflichteten wirtschaftlich unzumutbar belastet.\nDas öffentliche Interesse an der Errichtung von Anlagen zur Nutzung von erneuerbaren Energien nach Satz 1 Nr. 3 oder an Maßnahmen zur Anpassung an die Folgen des Klimawandels nach Satz 1 Nr. 4 überwiegt in der Regel, wenn der Eingriff in das äußere Erscheinungsbild reversibel ist und in die denkmalwerte Substanz nur geringfügig eingegriffen wird.\n(3) Unzumutbar ist eine wirtschaftliche Belastung insbesondere, soweit die Kosten der Erhaltung und Bewirtschaftung nicht durch die Erträge oder den Gebrauchswert des Kulturdenkmals aufgewogen werden können. Kann der Verpflichtete Zuwendungen aus öffentlichen oder privaten Mitteln oder steuerliche Vorteile in Anspruch nehmen, so sind diese anzurechnen. Der Verpflichtete kann sich nicht auf die Belastung durch erhöhte Erhaltungskosten berufen, die dadurch verursacht wurden, dass Erhaltungsmaßnahmen diesem Gesetz oder sonstigem öffentlichem Recht zuwider unterblieben sind.\n(4) Absatz 1 und Absatz 2 Satz 1 Nr. 5 gelten nicht für das Land, die Gemeinden, die Landkreise und die sonstigen Kommunalverbände. Sie sind zu Erhaltungsmaßnahmen im Rahmen ihrer finanziellen Leistungsfähigkeit verpflichtet.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/f8a522d1-c90a-3d4b-9155-63af8932f611",
+   "verweise": []
+  },
+  {
+   "id": "8",
+   "bez": "§ 8",
+   "titel": "Anlagen in der Umgebung von Baudenkmalen",
+   "gliederung": [
+    "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "In der Umgebung eines Baudenkmals dürfen Anlagen nicht errichtet, geändert oder beseitigt werden, wenn dadurch das Erscheinungsbild des Baudenkmals beeinträchtigt wird. Bauliche Anlagen in der Umgebung eines Baudenkmals sind auch so zu gestalten und in Stand zu halten, dass eine solche Beeinträchtigung nicht eintritt. § 7 gilt entsprechend."
+     ]
+    }
+   ],
+   "text": "In der Umgebung eines Baudenkmals dürfen Anlagen nicht errichtet, geändert oder beseitigt werden, wenn dadurch das Erscheinungsbild des Baudenkmals beeinträchtigt wird. Bauliche Anlagen in der Umgebung eines Baudenkmals sind auch so zu gestalten und in Stand zu halten, dass eine solche Beeinträchtigung nicht eintritt. § 7 gilt entsprechend.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a42f0a6e-b8c3-3208-9227-f2d1f9d30dbd",
+   "verweise": [
+    "7"
+   ]
+  },
+  {
+   "id": "9",
+   "bez": "§ 9",
+   "titel": "Nutzung von Baudenkmalen",
+   "gliederung": [
+    "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Für Baudenkmale ist eine Nutzung anzustreben, die ihre Erhaltung auf Dauer gewährleistet. Das Land, die Gemeinden, die Landkreise und die sonstigen Kommunalverbände sollen die Eigentümer und sonstigen Nutzungsberechtigten hierbei unterstützen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ein Eingriff in ein Baudenkmal, der dessen Nutzbarkeit nachhaltig verbessert, kann auch dann genehmigt werden, wenn er den Denkmalwert wegen des Einsatzes zeitgemäßer Materialien oder neuer Modernisierungstechniken nur geringfügig beeinträchtigt."
+     ]
+    }
+   ],
+   "text": "(1) Für Baudenkmale ist eine Nutzung anzustreben, die ihre Erhaltung auf Dauer gewährleistet. Das Land, die Gemeinden, die Landkreise und die sonstigen Kommunalverbände sollen die Eigentümer und sonstigen Nutzungsberechtigten hierbei unterstützen.\n(2) Ein Eingriff in ein Baudenkmal, der dessen Nutzbarkeit nachhaltig verbessert, kann auch dann genehmigt werden, wenn er den Denkmalwert wegen des Einsatzes zeitgemäßer Materialien oder neuer Modernisierungstechniken nur geringfügig beeinträchtigt.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/71bdb5d8-9cef-3e69-8a57-d23e00be5092",
+   "verweise": []
+  },
+  {
+   "id": "10",
+   "bez": "§ 10",
+   "titel": "Genehmigungspflichtige Maßnahmen",
+   "gliederung": [
+    "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Einer Genehmigung der Denkmalschutzbehörde bedarf, wer",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "ein Kulturdenkmal zerstören, verändern, instandsetzen oder wiederherstellen,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "ein Kulturdenkmal oder einen in § 3 Abs. 3 genannten Teil eines Baudenkmals von seinem Standort entfernen oder mit Aufschriften oder Werbeeinrichtungen versehen,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "die Nutzung eines Baudenkmals ändern oder"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "in der Umgebung eines Baudenkmals Anlagen, die das Erscheinungsbild des Denkmals beeinflussen, errichten, ändern oder beseitigen"
+         ]
+        }
+       ]
+      },
+      "will."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Instandsetzungsarbeiten bedürfen keiner Genehmigung nach Absatz 1, wenn sie sich nur auf Teile des Kulturdenkmals auswirken, die für seinen Denkmalwert ohne Bedeutung sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen würde. Die Genehmigung kann unter Bedingungen oder mit Auflagen erteilt werden, soweit dies erforderlich ist, um die Einhaltung dieses Gesetzes zu sichern. Insbesondere kann verlangt werden, dass ein bestimmter Sachverständiger die Arbeiten leitet, dass ein Baudenkmal an anderer Stelle wieder aufgebaut wird oder dass bestimmte Bauteile erhalten bleiben oder in einer anderen baulichen Anlage wieder verwendet werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Ist für eine Maßnahme eine Baugenehmigung oder eine die Baugenehmigung einschließende oder ersetzende behördliche Entscheidung erforderlich, so umfasst diese die Genehmigung nach Absatz 1. Absatz 3 gilt entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Maßnahmen nach Absatz 1 bedürfen keiner Genehmigung der Denkmalschutzbehörde, wenn sie an Kulturdenkmalen im Eigentum oder im Besitz des Bundes oder des Landes ausgeführt werden sollen und die Leitung der Entwurfsarbeiten und die Bauüberwachung dem Staatlichen Baumanagement Niedersachsen übertragen sind. Maßnahmen nach Absatz 1, die durch die Klosterkammer Hannover an Kulturdenkmalen im Eigentum oder Besitz einer von ihr verwalteten Stiftung ausgeführt werden, bedürfen ebenfalls keiner Genehmigung der Denkmalschutzbehörde. Maßnahmen nach den Sätzen 1 und 2 sind dem Landesamt für Denkmalpflege mit Planungsbeginn anzuzeigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Bei Maßnahmen nach Absatz 1 an Kulturdenkmalen im Eigentum oder Besitz des Bundes oder des Landes, die nicht durch das Staatliche Baumanagement Niedersachsen betreut werden, ist der an die Denkmalschutzbehörde gerichtete Antrag auf Genehmigung zeitgleich auch dem Landesamt für Denkmalpflege zu übermitteln."
+     ]
+    }
+   ],
+   "text": "(1) Einer Genehmigung der Denkmalschutzbehörde bedarf, wer\n1. ein Kulturdenkmal zerstören, verändern, instandsetzen oder wiederherstellen,\n2. ein Kulturdenkmal oder einen in § 3 Abs. 3 genannten Teil eines Baudenkmals von seinem Standort entfernen oder mit Aufschriften oder Werbeeinrichtungen versehen,\n3. die Nutzung eines Baudenkmals ändern oder\n4. in der Umgebung eines Baudenkmals Anlagen, die das Erscheinungsbild des Denkmals beeinflussen, errichten, ändern oder beseitigen\nwill.\n(2) Instandsetzungsarbeiten bedürfen keiner Genehmigung nach Absatz 1, wenn sie sich nur auf Teile des Kulturdenkmals auswirken, die für seinen Denkmalwert ohne Bedeutung sind.\n(3) Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen würde. Die Genehmigung kann unter Bedingungen oder mit Auflagen erteilt werden, soweit dies erforderlich ist, um die Einhaltung dieses Gesetzes zu sichern. Insbesondere kann verlangt werden, dass ein bestimmter Sachverständiger die Arbeiten leitet, dass ein Baudenkmal an anderer Stelle wieder aufgebaut wird oder dass bestimmte Bauteile erhalten bleiben oder in einer anderen baulichen Anlage wieder verwendet werden.\n(4) Ist für eine Maßnahme eine Baugenehmigung oder eine die Baugenehmigung einschließende oder ersetzende behördliche Entscheidung erforderlich, so umfasst diese die Genehmigung nach Absatz 1. Absatz 3 gilt entsprechend.\n(5) Maßnahmen nach Absatz 1 bedürfen keiner Genehmigung der Denkmalschutzbehörde, wenn sie an Kulturdenkmalen im Eigentum oder im Besitz des Bundes oder des Landes ausgeführt werden sollen und die Leitung der Entwurfsarbeiten und die Bauüberwachung dem Staatlichen Baumanagement Niedersachsen übertragen sind. Maßnahmen nach Absatz 1, die durch die Klosterkammer Hannover an Kulturdenkmalen im Eigentum oder Besitz einer von ihr verwalteten Stiftung ausgeführt werden, bedürfen ebenfalls keiner Genehmigung der Denkmalschutzbehörde. Maßnahmen nach den Sätzen 1 und 2 sind dem Landesamt für Denkmalpflege mit Planungsbeginn anzuzeigen.\n(6) Bei Maßnahmen nach Absatz 1 an Kulturdenkmalen im Eigentum oder Besitz des Bundes oder des Landes, die nicht durch das Staatliche Baumanagement Niedersachsen betreut werden, ist der an die Denkmalschutzbehörde gerichtete Antrag auf Genehmigung zeitgleich auch dem Landesamt für Denkmalpflege zu übermitteln.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/34b7e40b-88a5-3327-87d2-06ca46f244b6",
+   "verweise": [
+    "3"
+   ]
+  },
+  {
+   "id": "11",
+   "bez": "§ 11",
+   "titel": "Anzeigepflicht",
+   "gliederung": [
+    "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wird ein eingetragenes bewegliches Denkmal veräußert, so haben der frühere und der neue Eigentümer den Eigentumswechsel unverzüglich der Denkmalschutzbehörde anzuzeigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Sind Instandsetzungsarbeiten zur Erhaltung eines Kulturdenkmals notwendig oder droht ihm sonst eine Gefahr, so haben die Erhaltungspflichtigen, wenn sie die Arbeiten nicht ausführen oder die Gefahr nicht abwenden, dies unverzüglich der Denkmalschutzbehörde anzuzeigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die Anzeige eines Pflichtigen befreit die anderen."
+     ]
+    }
+   ],
+   "text": "(1) Wird ein eingetragenes bewegliches Denkmal veräußert, so haben der frühere und der neue Eigentümer den Eigentumswechsel unverzüglich der Denkmalschutzbehörde anzuzeigen.\n(2) Sind Instandsetzungsarbeiten zur Erhaltung eines Kulturdenkmals notwendig oder droht ihm sonst eine Gefahr, so haben die Erhaltungspflichtigen, wenn sie die Arbeiten nicht ausführen oder die Gefahr nicht abwenden, dies unverzüglich der Denkmalschutzbehörde anzuzeigen.\n(3) Die Anzeige eines Pflichtigen befreit die anderen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/166f20eb-ee7e-3717-af07-352cb34945a5",
+   "verweise": []
+  },
+  {
+   "id": "12",
+   "bez": "§ 12",
+   "titel": "Ausgrabungen",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wer nach Kulturdenkmalen graben, Kulturdenkmale aus einem Gewässer bergen oder mit technischen Hilfsmitteln nach Kulturdenkmalen suchen will, bedarf einer Genehmigung der Denkmalschutzbehörde. Ausgenommen sind Nachforschungen, die unter der Verantwortung einer staatlichen Denkmalbehörde stattfinden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen oder Forschungsvorhaben des Landes beeinträchtigen würde. Die Genehmigung kann unter Bedingungen und mit Auflagen erteilt werden. Insbesondere können Bestimmungen über die Suche, die Planung und Ausführung der Grabung, die Behandlung und Sicherung der Bodenfunde, die Dokumentation der Grabungsbefunde, die Berichterstattung und die abschließende Herrichtung der Grabungsstätte getroffen werden. Es kann auch verlangt werden, dass ein bestimmter Sachverständiger die Arbeiten leitet."
+     ]
+    }
+   ],
+   "text": "(1) Wer nach Kulturdenkmalen graben, Kulturdenkmale aus einem Gewässer bergen oder mit technischen Hilfsmitteln nach Kulturdenkmalen suchen will, bedarf einer Genehmigung der Denkmalschutzbehörde. Ausgenommen sind Nachforschungen, die unter der Verantwortung einer staatlichen Denkmalbehörde stattfinden.\n(2) Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen oder Forschungsvorhaben des Landes beeinträchtigen würde. Die Genehmigung kann unter Bedingungen und mit Auflagen erteilt werden. Insbesondere können Bestimmungen über die Suche, die Planung und Ausführung der Grabung, die Behandlung und Sicherung der Bodenfunde, die Dokumentation der Grabungsbefunde, die Berichterstattung und die abschließende Herrichtung der Grabungsstätte getroffen werden. Es kann auch verlangt werden, dass ein bestimmter Sachverständiger die Arbeiten leitet.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/5bb383df-fd89-3520-80dd-2302e2b467e9",
+   "verweise": []
+  },
+  {
+   "id": "13",
+   "bez": "§ 13",
+   "titel": "Erdarbeiten",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wer Nachforschungen oder Erdarbeiten an einer Stelle vornehmen will, von der er weiß oder vermutet oder den Umständen nach annehmen muss, dass sich dort Kulturdenkmale befinden, bedarf einer Genehmigung der Denkmalschutzbehörde."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen würde. Die Genehmigung kann unter Bedingungen und mit Auflagen erteilt werden, soweit dies erforderlich ist, um die Einhaltung dieses Gesetzes zu sichern. § 12 Abs. 2 Satz 3 und 4 und § 10 Abs. 4 gelten entsprechend."
+     ]
+    }
+   ],
+   "text": "(1) Wer Nachforschungen oder Erdarbeiten an einer Stelle vornehmen will, von der er weiß oder vermutet oder den Umständen nach annehmen muss, dass sich dort Kulturdenkmale befinden, bedarf einer Genehmigung der Denkmalschutzbehörde.\n(2) Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen würde. Die Genehmigung kann unter Bedingungen und mit Auflagen erteilt werden, soweit dies erforderlich ist, um die Einhaltung dieses Gesetzes zu sichern. § 12 Abs. 2 Satz 3 und 4 und § 10 Abs. 4 gelten entsprechend.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/130a5428-d383-3b6b-ac3b-e1b5c94370a3",
+   "verweise": [
+    "12",
+    "10"
+   ]
+  },
+  {
+   "id": "14",
+   "bez": "§ 14",
+   "titel": "Bodenfunde",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wer in der Erde oder im Wasser Sachen oder Spuren findet, bei denen Anlass zu der Annahme gegeben ist, dass sie Kulturdenkmale sind (Bodenfunde), hat dies unverzüglich einer Denkmalbehörde, der Gemeinde oder einem Beauftragten für die archäologische Denkmalpflege (§ 22) anzuzeigen. Anzeigepflichtig sind auch der Leiter und der Unternehmer der Arbeiten, die zu dem Bodenfund geführt haben, sowie der Eigentümer und der Besitzer des Grundstücks. Die Anzeige eines Pflichtigen befreit die übrigen. Nimmt der Finder an den Arbeiten, die zu dem Bodenfund geführt haben, auf Grund eines Arbeitsverhältnisses teil, so wird er durch Anzeige an den Leiter oder den Unternehmer der Arbeiten befreit."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Der Bodenfund und die Fundstelle sind bis zum Ablauf von vier Werktagen nach der Anzeige unverändert zu lassen und vor Gefahren für die Erhaltung des Bodenfundes zu schützen, wenn nicht die Denkmalschutzbehörde vorher die Fortsetzung der Arbeiten gestattet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die zuständige staatliche Denkmalbehörde und ihre Beauftragten sind berechtigt, den Bodenfund zu bergen und die notwendigen Maßnahmen zur Klärung der Fundumstände sowie zur Sicherung weiterer auf dem Grundstück vorhandener Bodenfunde durchzuführen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Die Absätze 2 und 3 gelten nicht bei genehmigten Ausgrabungen (§ 12) und bei Arbeiten, die unter Verantwortung einer staatlichen Denkmalbehörde stattfinden. Die Denkmalschutzbehörde kann jedoch durch Auflagen in der Grabungsgenehmigung die Vorschriften für anwendbar erklären."
+     ]
+    }
+   ],
+   "text": "(1) Wer in der Erde oder im Wasser Sachen oder Spuren findet, bei denen Anlass zu der Annahme gegeben ist, dass sie Kulturdenkmale sind (Bodenfunde), hat dies unverzüglich einer Denkmalbehörde, der Gemeinde oder einem Beauftragten für die archäologische Denkmalpflege (§ 22) anzuzeigen. Anzeigepflichtig sind auch der Leiter und der Unternehmer der Arbeiten, die zu dem Bodenfund geführt haben, sowie der Eigentümer und der Besitzer des Grundstücks. Die Anzeige eines Pflichtigen befreit die übrigen. Nimmt der Finder an den Arbeiten, die zu dem Bodenfund geführt haben, auf Grund eines Arbeitsverhältnisses teil, so wird er durch Anzeige an den Leiter oder den Unternehmer der Arbeiten befreit.\n(2) Der Bodenfund und die Fundstelle sind bis zum Ablauf von vier Werktagen nach der Anzeige unverändert zu lassen und vor Gefahren für die Erhaltung des Bodenfundes zu schützen, wenn nicht die Denkmalschutzbehörde vorher die Fortsetzung der Arbeiten gestattet.\n(3) Die zuständige staatliche Denkmalbehörde und ihre Beauftragten sind berechtigt, den Bodenfund zu bergen und die notwendigen Maßnahmen zur Klärung der Fundumstände sowie zur Sicherung weiterer auf dem Grundstück vorhandener Bodenfunde durchzuführen.\n(4) Die Absätze 2 und 3 gelten nicht bei genehmigten Ausgrabungen (§ 12) und bei Arbeiten, die unter Verantwortung einer staatlichen Denkmalbehörde stattfinden. Die Denkmalschutzbehörde kann jedoch durch Auflagen in der Grabungsgenehmigung die Vorschriften für anwendbar erklären.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/ca34e333-06a4-3d68-a2a0-e60704f18343",
+   "verweise": [
+    "22",
+    "12"
+   ]
+  },
+  {
+   "id": "15",
+   "bez": "§ 15",
+   "titel": "Vorübergehende Überlassung von Bodenfunden",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Eigentümer und Besitzer eines Bodenfundes sind verpflichtet, den Bodenfund auf Verlangen der zuständigen Denkmalschutzbehörde dieser oder einer von ihr benannten Stelle für längstens zwölf Monate zur wissenschaftlichen Auswertung, Konservierung oder Dokumentation zu überlassen. Reicht der Zeitraum zur Erfüllung der in Satz 1 genannten Zwecke im Einzelfall nicht aus, so kann er von der zuständigen Denkmalschutzbehörde angemessen verlängert werden."
+     ]
+    }
+   ],
+   "text": "Eigentümer und Besitzer eines Bodenfundes sind verpflichtet, den Bodenfund auf Verlangen der zuständigen Denkmalschutzbehörde dieser oder einer von ihr benannten Stelle für längstens zwölf Monate zur wissenschaftlichen Auswertung, Konservierung oder Dokumentation zu überlassen. Reicht der Zeitraum zur Erfüllung der in Satz 1 genannten Zwecke im Einzelfall nicht aus, so kann er von der zuständigen Denkmalschutzbehörde angemessen verlängert werden.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/4a6e13b8-764b-32a0-b893-f5e373112910",
+   "verweise": []
+  },
+  {
+   "id": "16",
+   "bez": "§ 16",
+   "titel": "Grabungsschutzgebiete",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Das Landesamt für Denkmalpflege kann durch Verordnung abgegrenzte Flächen, in denen Kulturdenkmale von herausragender landes- oder kulturgeschichtlicher Bedeutung vorhanden sind oder vermutet werden, befristet oder unbefristet zu Grabungsschutzgebieten erklären."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) In Grabungsschutzgebieten bedürfen alle Arbeiten, die Kulturdenkmale zutagefördern oder gefährden können, einer Genehmigung der Denkmalschutzbehörde. § 13 Abs. 2 gilt entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Wird durch die Versagung einer nach Absatz 2 Satz 1 erforderlichen Genehmigung die bisherige ordnungsgemäße land- oder forstwirtschaftliche Nutzung eines Grundstücks beschränkt, so hat das Land für die Dauer der Nutzungsbeschränkung für die dadurch verursachten wirtschaftlichen Nachteile einen angemessenen Ausgleich in Geld zu leisten, sofern nicht eine Ausgleichspflicht nach § 29 besteht. Der Ausgleich bemisst sich nach den durchschnittlichen Ertragseinbußen, gemessen an den Erträgen und Aufwendungen der bisherigen ordnungsgemäßen land- oder forstwirtschaftlichen Nutzung. Ersparte Aufwendungen sind anzurechnen. Über den Ausgleich entscheidet die für die Genehmigung zuständige Denkmalschutzbehörde nach Zustimmung der obersten Denkmalschutzbehörde."
+     ]
+    }
+   ],
+   "text": "(1) Das Landesamt für Denkmalpflege kann durch Verordnung abgegrenzte Flächen, in denen Kulturdenkmale von herausragender landes- oder kulturgeschichtlicher Bedeutung vorhanden sind oder vermutet werden, befristet oder unbefristet zu Grabungsschutzgebieten erklären.\n(2) In Grabungsschutzgebieten bedürfen alle Arbeiten, die Kulturdenkmale zutagefördern oder gefährden können, einer Genehmigung der Denkmalschutzbehörde. § 13 Abs. 2 gilt entsprechend.\n(3) Wird durch die Versagung einer nach Absatz 2 Satz 1 erforderlichen Genehmigung die bisherige ordnungsgemäße land- oder forstwirtschaftliche Nutzung eines Grundstücks beschränkt, so hat das Land für die Dauer der Nutzungsbeschränkung für die dadurch verursachten wirtschaftlichen Nachteile einen angemessenen Ausgleich in Geld zu leisten, sofern nicht eine Ausgleichspflicht nach § 29 besteht. Der Ausgleich bemisst sich nach den durchschnittlichen Ertragseinbußen, gemessen an den Erträgen und Aufwendungen der bisherigen ordnungsgemäßen land- oder forstwirtschaftlichen Nutzung. Ersparte Aufwendungen sind anzurechnen. Über den Ausgleich entscheidet die für die Genehmigung zuständige Denkmalschutzbehörde nach Zustimmung der obersten Denkmalschutzbehörde.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/dc12c8de-c45f-3a75-9681-4ae3aba7e862",
+   "verweise": [
+    "13",
+    "29"
+   ]
+  },
+  {
+   "id": "17",
+   "bez": "§ 17",
+   "titel": "Beschränkung der wirtschaftlichen Nutzung von Grundstücken",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die untere Denkmalschutzbehörde kann die wirtschaftliche Nutzung eines Grundstücks oder eines Grundstücksteils beschränken, in dem sich ein Kulturdenkmal befindet."
+     ]
+    }
+   ],
+   "text": "Die untere Denkmalschutzbehörde kann die wirtschaftliche Nutzung eines Grundstücks oder eines Grundstücksteils beschränken, in dem sich ein Kulturdenkmal befindet.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/f8dce44a-51a9-3752-a6a6-e2408146dace",
+   "verweise": []
+  },
+  {
+   "id": "18",
+   "bez": "§ 18",
+   "titel": "Schatzregal",
+   "gliederung": [
+    "Dritter Teil – Ausgrabungen und Bodenfunde"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Bewegliche Denkmale gemäß § 3 Abs. 5, die herrenlos oder so lange verborgen gewesen sind, dass ihr Eigentümer nicht mehr zu ermitteln ist, werden mit der Entdeckung Eigentum des Landes Niedersachsen, wenn sie bei staatlichen Nachforschungen oder in Grabungsschutzgebieten gemäß § 16 entdeckt werden oder wenn sie einen hervorragenden wissenschaftlichen Wert besitzen. Der Finder soll im Rahmen der verfügbaren Mittel des Landeshaushalts eine Belohnung erhalten. Über die Höhe entscheidet das Landesamt für Denkmalpflege unter Berücksichtigung der Umstände des Einzelfalls. Das Land kann sein Eigentum an dem beweglichen Denkmal auf den Eigentümer des Grundstücks übertragen, auf dem der Fund erfolgt ist."
+     ]
+    }
+   ],
+   "text": "Bewegliche Denkmale gemäß § 3 Abs. 5, die herrenlos oder so lange verborgen gewesen sind, dass ihr Eigentümer nicht mehr zu ermitteln ist, werden mit der Entdeckung Eigentum des Landes Niedersachsen, wenn sie bei staatlichen Nachforschungen oder in Grabungsschutzgebieten gemäß § 16 entdeckt werden oder wenn sie einen hervorragenden wissenschaftlichen Wert besitzen. Der Finder soll im Rahmen der verfügbaren Mittel des Landeshaushalts eine Belohnung erhalten. Über die Höhe entscheidet das Landesamt für Denkmalpflege unter Berücksichtigung der Umstände des Einzelfalls. Das Land kann sein Eigentum an dem beweglichen Denkmal auf den Eigentümer des Grundstücks übertragen, auf dem der Fund erfolgt ist.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a96c726a-baae-3b43-a95e-819e99b6b081",
+   "verweise": [
+    "3",
+    "16"
+   ]
+  },
+  {
+   "id": "19",
+   "bez": "§ 19",
+   "titel": "Denkmalschutzbehörden",
+   "gliederung": [
+    "Vierter Teil – Denkmalbehörden"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Gemeinden, denen die Aufgaben der unteren Bauaufsichtsbehörde obliegen, im Übrigen die Landkreise, nehmen die Aufgaben der unteren Denkmalschutzbehörde wahr. Oberste Denkmalschutzbehörde ist das Fachministerium."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Aufgaben der unteren Denkmalschutzbehörden gehören zum übertragenen Wirkungskreis."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die oberste Denkmalschutzbehörde übt die Fachaufsicht über die unteren Denkmalschutzbehörden aus."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Die oberste Denkmalschutzbehörde kann anstelle einer unteren Denkmalschutzbehörde tätig werden oder anordnen, dass das Landesamt für Denkmalpflege an Stelle einer unteren Denkmalschutzbehörde tätig wird, wenn diese eine Weisung nicht innerhalb einer bestimmten Frist befolgt oder wenn Gefahr im Verzuge ist. Es hat die zuständige Denkmalschutzbehörde unverzüglich über die getroffene Maßnahme zu unterrichten."
+     ]
+    }
+   ],
+   "text": "(1) Die Gemeinden, denen die Aufgaben der unteren Bauaufsichtsbehörde obliegen, im Übrigen die Landkreise, nehmen die Aufgaben der unteren Denkmalschutzbehörde wahr. Oberste Denkmalschutzbehörde ist das Fachministerium.\n(2) Die Aufgaben der unteren Denkmalschutzbehörden gehören zum übertragenen Wirkungskreis.\n(3) Die oberste Denkmalschutzbehörde übt die Fachaufsicht über die unteren Denkmalschutzbehörden aus.\n(4) Die oberste Denkmalschutzbehörde kann anstelle einer unteren Denkmalschutzbehörde tätig werden oder anordnen, dass das Landesamt für Denkmalpflege an Stelle einer unteren Denkmalschutzbehörde tätig wird, wenn diese eine Weisung nicht innerhalb einer bestimmten Frist befolgt oder wenn Gefahr im Verzuge ist. Es hat die zuständige Denkmalschutzbehörde unverzüglich über die getroffene Maßnahme zu unterrichten.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a8457a16-187a-39e7-a828-4d84df1ff27d",
+   "verweise": []
+  },
+  {
+   "id": "20",
+   "bez": "§ 20",
+   "titel": "Zuständigkeit der Denkmalschutzbehörden",
+   "gliederung": [
+    "Vierter Teil – Denkmalbehörden"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Soweit nicht durch Gesetz oder auf Grund eines Gesetzes etwas anderes bestimmt ist, sind die unteren Denkmalschutzbehörden zuständig. Betrifft die Durchführung dieses Gesetzes den Bereich einer Bundeswasserstraße oder des Küstengewässers, so ist abweichend von Satz 1 die oberste Denkmalschutzbehörde zuständig. Für Maßnahmen im Bereich des Küstengewässers ist das Einvernehmen mit der obersten Naturschutzbehörde erforderlich."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die unteren Denkmalschutzbehörden stellen in Angelegenheiten auf dem Gebiet der Bodendenkmalpflege unverzüglich das Benehmen mit dem Landesamt für Denkmalpflege her. Die oberste Denkmalschutzbehörde befreit eine untere Denkmalschutzbehörde, die in ausreichendem Maß mit archäologischen Fachkräften besetzt ist, von dem Erfordernis der Herstellung des Benehmens. Archäologische Fachkräfte sind Personen, die nachgewiesen haben, dass sie durch ihre Ausbildung oder durch archäologische Tätigkeiten hinreichende Fachkenntnisse auf dem Gebiet der Bodendenkmalpflege erworben haben. Eine untere Denkmalschutzbehörde, die von dem Erfordernis der Herstellung des Benehmens befreit worden ist, hat der obersten Denkmalschutzbehörde Veränderungen in der Besetzung mit archäologischen Fachkräften unverzüglich mitzuteilen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die örtliche Zuständigkeit richtet sich bei beweglichen Bodenfunden nach dem Fundort. Bei Gefahr im Verzuge kann auch die Denkmalschutzbehörde Anordnungen erlassen, in deren Bezirk sich der Gegenstand befindet. Die zuständige Denkmalschutzbehörde ist unverzüglich zu unterrichten."
+     ]
+    }
+   ],
+   "text": "(1) Soweit nicht durch Gesetz oder auf Grund eines Gesetzes etwas anderes bestimmt ist, sind die unteren Denkmalschutzbehörden zuständig. Betrifft die Durchführung dieses Gesetzes den Bereich einer Bundeswasserstraße oder des Küstengewässers, so ist abweichend von Satz 1 die oberste Denkmalschutzbehörde zuständig. Für Maßnahmen im Bereich des Küstengewässers ist das Einvernehmen mit der obersten Naturschutzbehörde erforderlich.\n(2) Die unteren Denkmalschutzbehörden stellen in Angelegenheiten auf dem Gebiet der Bodendenkmalpflege unverzüglich das Benehmen mit dem Landesamt für Denkmalpflege her. Die oberste Denkmalschutzbehörde befreit eine untere Denkmalschutzbehörde, die in ausreichendem Maß mit archäologischen Fachkräften besetzt ist, von dem Erfordernis der Herstellung des Benehmens. Archäologische Fachkräfte sind Personen, die nachgewiesen haben, dass sie durch ihre Ausbildung oder durch archäologische Tätigkeiten hinreichende Fachkenntnisse auf dem Gebiet der Bodendenkmalpflege erworben haben. Eine untere Denkmalschutzbehörde, die von dem Erfordernis der Herstellung des Benehmens befreit worden ist, hat der obersten Denkmalschutzbehörde Veränderungen in der Besetzung mit archäologischen Fachkräften unverzüglich mitzuteilen.\n(3) Die örtliche Zuständigkeit richtet sich bei beweglichen Bodenfunden nach dem Fundort. Bei Gefahr im Verzuge kann auch die Denkmalschutzbehörde Anordnungen erlassen, in deren Bezirk sich der Gegenstand befindet. Die zuständige Denkmalschutzbehörde ist unverzüglich zu unterrichten.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/0a22bc44-7bf4-3eff-84f0-f4499355df14",
+   "verweise": []
+  },
+  {
+   "id": "21",
+   "bez": "§ 21",
+   "titel": "Landesamt für Denkmalpflege",
+   "gliederung": [
+    "Vierter Teil – Denkmalbehörden"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Das Landesamt für Denkmalpflege wirkt als staatliche Denkmalfachbehörde bei der Ausführung dieses Gesetzes mit. Es hat insbesondere die Aufgaben,",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "die Denkmalschutz-, Bau- und Planungsbehörden, Kirchen und andere, insbesondere Eigentümer und Besitzer von Kulturdenkmalen, fachlich zu beraten,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Kulturdenkmale zu erfassen, zu erforschen, zu dokumentieren und die Ergebnisse zu veröffentlichen sowie das Verzeichnis nach § 4 Abs. 1 aufzustellen und fortzuführen,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Restaurierungen und Grabungen durchzuführen,"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "wissenschaftliche Grundlagen für die Denkmalpflege zu schaffen,"
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "zentrale Fachbibliotheken und Archive zu unterhalten."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die unteren Denkmalschutzbehörden stellen bei allen Maßnahmen, die für das Kulturerbe im Sinne des UNESCO-Übereinkommens zum Schutz des Kultur- und Naturerbes der Welt von nicht nur unerheblicher Bedeutung sind, das Benehmen mit dem Landesamt für Denkmalpflege her."
+     ]
+    }
+   ],
+   "text": "(1) Das Landesamt für Denkmalpflege wirkt als staatliche Denkmalfachbehörde bei der Ausführung dieses Gesetzes mit. Es hat insbesondere die Aufgaben,\n1. die Denkmalschutz-, Bau- und Planungsbehörden, Kirchen und andere, insbesondere Eigentümer und Besitzer von Kulturdenkmalen, fachlich zu beraten,\n2. Kulturdenkmale zu erfassen, zu erforschen, zu dokumentieren und die Ergebnisse zu veröffentlichen sowie das Verzeichnis nach § 4 Abs. 1 aufzustellen und fortzuführen,\n3. Restaurierungen und Grabungen durchzuführen,\n4. wissenschaftliche Grundlagen für die Denkmalpflege zu schaffen,\n5. zentrale Fachbibliotheken und Archive zu unterhalten.\n(2) Die unteren Denkmalschutzbehörden stellen bei allen Maßnahmen, die für das Kulturerbe im Sinne des UNESCO-Übereinkommens zum Schutz des Kultur- und Naturerbes der Welt von nicht nur unerheblicher Bedeutung sind, das Benehmen mit dem Landesamt für Denkmalpflege her.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/220b632b-e6f2-3a74-b459-eb3d4efc514e",
+   "verweise": [
+    "4"
+   ]
+  },
+  {
+   "id": "22",
+   "bez": "§ 22",
+   "titel": "Beauftragte für die Denkmalpflege",
+   "gliederung": [
+    "Vierter Teil – Denkmalbehörden"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die untere Denkmalschutzbehörde kann Beauftragte für die Bau- und Kunstdenkmalpflege und Beauftragte für die archäologische Denkmalpflege bestellen. Sie bestellt die Beauftragten im Einvernehmen mit dem Landesamt für Denkmalpflege. Die Beauftragten sind ehrenamtlich tätig."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Beauftragten beraten und unterstützen die Denkmalschutzbehörden in allen Angelegenheiten des Denkmalschutzes und der Denkmalpflege."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Das Land ersetzt den Beauftragten die Kosten, die ihnen durch ihre Tätigkeit entstehen. Die oberste Denkmalschutzbehörde wird ermächtigt, durch Verordnung nähere Vorschriften zu erlassen."
+     ]
+    }
+   ],
+   "text": "(1) Die untere Denkmalschutzbehörde kann Beauftragte für die Bau- und Kunstdenkmalpflege und Beauftragte für die archäologische Denkmalpflege bestellen. Sie bestellt die Beauftragten im Einvernehmen mit dem Landesamt für Denkmalpflege. Die Beauftragten sind ehrenamtlich tätig.\n(2) Die Beauftragten beraten und unterstützen die Denkmalschutzbehörden in allen Angelegenheiten des Denkmalschutzes und der Denkmalpflege.\n(3) Das Land ersetzt den Beauftragten die Kosten, die ihnen durch ihre Tätigkeit entstehen. Die oberste Denkmalschutzbehörde wird ermächtigt, durch Verordnung nähere Vorschriften zu erlassen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/0cbaaea6-637b-32f6-b528-5535e72c5c52",
+   "verweise": []
+  },
+  {
+   "id": "22a",
+   "bez": "§ 22a",
+   "titel": "Beratende Kommissionen",
+   "gliederung": [
+    "Vierter Teil – Denkmalbehörden"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die oberste Denkmalschutzbehörde kann für den Bereich der Bau- und Kunstdenkmalpflege eine Landeskommission für Denkmalpflege und für den Bereich der Bodendenkmalpflege eine Archäologische Kommission jeweils mit beratender Funktion für die oberste Denkmalschutzbehörde und die Denkmalfachbehörde berufen."
+     ]
+    }
+   ],
+   "text": "Die oberste Denkmalschutzbehörde kann für den Bereich der Bau- und Kunstdenkmalpflege eine Landeskommission für Denkmalpflege und für den Bereich der Bodendenkmalpflege eine Archäologische Kommission jeweils mit beratender Funktion für die oberste Denkmalschutzbehörde und die Denkmalfachbehörde berufen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a53571db-6467-34b6-b7ac-be6492b0aae4",
+   "verweise": []
+  },
+  {
+   "id": "23",
+   "bez": "§ 23",
+   "titel": "Anordnungen der Denkmalschutzbehörden",
+   "gliederung": [
+    "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Denkmalschutzbehörden treffen nach pflichtgemäßem Ermessen die Anordnungen, die erforderlich sind, um die Einhaltung der §§ 6 bis 17, 25, 27 und 28 sicherzustellen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Wird ein Baudenkmal dadurch, dass es nicht genutzt wird, oder durch die Art seiner Nutzung gefährdet, so kann die Denkmalschutzbehörde anordnen, dass ein nach § 6 Abs. 1 Verpflichteter das Baudenkmal in bestimmter ihm zumutbarer Weise nutzt. Dem Verpflichteten ist auf Antrag zu gestatten, das Baudenkmal in einer angebotenen anderen Weise zu nutzen, wenn seine Erhaltung dadurch hinreichend gewährleistet und die Nutzung mit dem öffentlichen Recht vereinbar ist."
+     ]
+    }
+   ],
+   "text": "(1) Die Denkmalschutzbehörden treffen nach pflichtgemäßem Ermessen die Anordnungen, die erforderlich sind, um die Einhaltung der §§ 6 bis 17, 25, 27 und 28 sicherzustellen.\n(2) Wird ein Baudenkmal dadurch, dass es nicht genutzt wird, oder durch die Art seiner Nutzung gefährdet, so kann die Denkmalschutzbehörde anordnen, dass ein nach § 6 Abs. 1 Verpflichteter das Baudenkmal in bestimmter ihm zumutbarer Weise nutzt. Dem Verpflichteten ist auf Antrag zu gestatten, das Baudenkmal in einer angebotenen anderen Weise zu nutzen, wenn seine Erhaltung dadurch hinreichend gewährleistet und die Nutzung mit dem öffentlichen Recht vereinbar ist.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/6516eda2-353e-3b27-bbc9-80cdfd690897",
+   "verweise": [
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "25",
+    "27",
+    "28"
+   ]
+  },
+  {
+   "id": "24",
+   "bez": "§ 24",
+   "titel": "Genehmigungsverfahren",
+   "gliederung": [
+    "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Der Antrag auf eine Genehmigung nach diesem Gesetz ist mit den zur Beurteilung erforderlichen Unterlagen der Denkmalschutzbehörde schriftlich oder elektronisch zu übermitteln. Nimmt der Landkreis die Aufgaben der Denkmalschutzbehörde wahr, so hat er den Antrag unverzüglich an die Gemeinde zu übermitteln. Die Gemeinde hat im Fall des Satzes 2 ihre Stellungnahme unverzüglich der Denkmalschutzbehörde zu übermitteln."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Eine Genehmigung nach diesem Gesetz erlischt, wenn nicht innerhalb von zwei Jahren nach ihrer Erteilung mit der Ausführung der Maßnahme begonnen oder wenn die Ausführung zwei Jahre unterbrochen worden ist. Die Denkmalschutzbehörde kann die Frist verlängern. In den Fällen des § 10 Abs. 4 richtet sich die Geltungsdauer nach den Vorschriften über die Baugenehmigung oder die sonstige Entscheidung, die die Genehmigung nach diesem Gesetz umfasst."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Für Genehmigungen nach diesem Gesetz werden keine Gebühren und Auslagen erhoben. Die Vorschriften über die Kosten der Baugenehmigungen und der sonstigen Entscheidungen, die Genehmigungen nach diesem Gesetz umfassen, bleiben unberührt."
+     ]
+    }
+   ],
+   "text": "(1) Der Antrag auf eine Genehmigung nach diesem Gesetz ist mit den zur Beurteilung erforderlichen Unterlagen der Denkmalschutzbehörde schriftlich oder elektronisch zu übermitteln. Nimmt der Landkreis die Aufgaben der Denkmalschutzbehörde wahr, so hat er den Antrag unverzüglich an die Gemeinde zu übermitteln. Die Gemeinde hat im Fall des Satzes 2 ihre Stellungnahme unverzüglich der Denkmalschutzbehörde zu übermitteln.\n(2) Eine Genehmigung nach diesem Gesetz erlischt, wenn nicht innerhalb von zwei Jahren nach ihrer Erteilung mit der Ausführung der Maßnahme begonnen oder wenn die Ausführung zwei Jahre unterbrochen worden ist. Die Denkmalschutzbehörde kann die Frist verlängern. In den Fällen des § 10 Abs. 4 richtet sich die Geltungsdauer nach den Vorschriften über die Baugenehmigung oder die sonstige Entscheidung, die die Genehmigung nach diesem Gesetz umfasst.\n(3) Für Genehmigungen nach diesem Gesetz werden keine Gebühren und Auslagen erhoben. Die Vorschriften über die Kosten der Baugenehmigungen und der sonstigen Entscheidungen, die Genehmigungen nach diesem Gesetz umfassen, bleiben unberührt.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/35754d21-216c-3c49-a418-15217a7db05a",
+   "verweise": [
+    "10"
+   ]
+  },
+  {
+   "id": "25",
+   "bez": "§ 25",
+   "titel": "Wiederherstellung des ursprünglichen Zustands",
+   "gliederung": [
+    "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wer diesem Gesetz zuwider in ein Kulturdenkmal oder in dessen Umgebung eingreift, hat auf Verlangen der Denkmalschutzbehörde den bisherigen Zustand wiederherzustellen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Wer widerrechtlich ein Kulturdenkmal vorsätzlich oder fahrlässig beschädigt oder zerstört, ist auf Verlangen der Denkmalschutzbehörde verpflichtet, das Zerstörte nach ihren Anweisungen zu rekonstruieren."
+     ]
+    }
+   ],
+   "text": "(1) Wer diesem Gesetz zuwider in ein Kulturdenkmal oder in dessen Umgebung eingreift, hat auf Verlangen der Denkmalschutzbehörde den bisherigen Zustand wiederherzustellen.\n(2) Wer widerrechtlich ein Kulturdenkmal vorsätzlich oder fahrlässig beschädigt oder zerstört, ist auf Verlangen der Denkmalschutzbehörde verpflichtet, das Zerstörte nach ihren Anweisungen zu rekonstruieren.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/c6d31b67-d830-3248-ba85-e0a94d7da5fc",
+   "verweise": []
+  },
+  {
+   "id": "26",
+   "bez": "§ 26",
+   "titel": "Zusammenwirken der Denkmalbehörden",
+   "gliederung": [
+    "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die Denkmalschutzbehörden werden vom Landesamt für Denkmalpflege bei der Erledigung ihrer Aufgaben unterstützt und beraten. Sie haben dem Landesamt die Genehmigungsanträge für Maßnahmen von besonderer Bedeutung rechtzeitig anzuzeigen und in dem erforderlichen Umfang Auskunft und Akteneinsicht zu gewähren."
+     ]
+    }
+   ],
+   "text": "Die Denkmalschutzbehörden werden vom Landesamt für Denkmalpflege bei der Erledigung ihrer Aufgaben unterstützt und beraten. Sie haben dem Landesamt die Genehmigungsanträge für Maßnahmen von besonderer Bedeutung rechtzeitig anzuzeigen und in dem erforderlichen Umfang Auskunft und Akteneinsicht zu gewähren.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a11fde13-c423-3ca4-bbc1-8654ef514ff3",
+   "verweise": []
+  },
+  {
+   "id": "27",
+   "bez": "§ 27",
+   "titel": "Duldungs- und Auskunftspflichten",
+   "gliederung": [
+    "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Bedienstete und Beauftragte der Denkmalbehörden dürfen nach vorheriger Benachrichtigung Grundstücke, zur Abwehr einer dringenden Gefahr für ein Kulturdenkmal auch Wohnungen, betreten, soweit es zur Durchführung dieses Gesetzes notwendig ist. Sie dürfen Kulturdenkmale besichtigen und die notwendigen wissenschaftlichen Erfassungsmaßnahmen, insbesondere zur Inventarisation, durchführen. Das Grundrecht der Unverletzlichkeit der Wohnung (Artikel 13 des Grundgesetzes) wird insoweit eingeschränkt."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Eigentümer und Besitzer von Kulturdenkmalen haben den Denkmalbehörden sowie ihren Beauftragten die zum Vollzug dieses Gesetzes erforderlichen Auskünfte zu erteilen."
+     ]
+    }
+   ],
+   "text": "(1) Bedienstete und Beauftragte der Denkmalbehörden dürfen nach vorheriger Benachrichtigung Grundstücke, zur Abwehr einer dringenden Gefahr für ein Kulturdenkmal auch Wohnungen, betreten, soweit es zur Durchführung dieses Gesetzes notwendig ist. Sie dürfen Kulturdenkmale besichtigen und die notwendigen wissenschaftlichen Erfassungsmaßnahmen, insbesondere zur Inventarisation, durchführen. Das Grundrecht der Unverletzlichkeit der Wohnung (Artikel 13 des Grundgesetzes) wird insoweit eingeschränkt.\n(2) Eigentümer und Besitzer von Kulturdenkmalen haben den Denkmalbehörden sowie ihren Beauftragten die zum Vollzug dieses Gesetzes erforderlichen Auskünfte zu erteilen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/6c676b38-ced2-3076-a41d-2e14dff6fb7d",
+   "verweise": []
+  },
+  {
+   "id": "28",
+   "bez": "§ 28",
+   "titel": "Kennzeichnung von Kulturdenkmalen",
+   "gliederung": [
+    "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Denkmalschutzbehörde kann Eigentümer und Besitzer von Bodendenkmalen und nicht genutzten Baudenkmalen verpflichten, die Anbringung von Hinweisschildern zu dulden, die die Bedeutung des Denkmals erläutern und auf seinen gesetzlichen Schutz hinweisen. Die Schilder sind so anzubringen, dass sie die zulässige Bewirtschaftung des Grundstücks nicht erschweren."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Eigentümer können Baudenkmale und Bodendenkmale mit einer von der obersten Denkmalschutzbehörde herausgegebenen Denkmalschutzplakette kennzeichnen, um auf den gesetzlichen Schutz des Denkmals hinzuweisen."
+     ]
+    }
+   ],
+   "text": "(1) Die Denkmalschutzbehörde kann Eigentümer und Besitzer von Bodendenkmalen und nicht genutzten Baudenkmalen verpflichten, die Anbringung von Hinweisschildern zu dulden, die die Bedeutung des Denkmals erläutern und auf seinen gesetzlichen Schutz hinweisen. Die Schilder sind so anzubringen, dass sie die zulässige Bewirtschaftung des Grundstücks nicht erschweren.\n(2) Eigentümer können Baudenkmale und Bodendenkmale mit einer von der obersten Denkmalschutzbehörde herausgegebenen Denkmalschutzplakette kennzeichnen, um auf den gesetzlichen Schutz des Denkmals hinzuweisen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/e6a02b3a-194f-33cf-b42d-cb88b8da2a58",
+   "verweise": []
+  },
+  {
+   "id": "29",
+   "bez": "§ 29",
+   "titel": "Ausgleich",
+   "gliederung": [
+    "Sechster Teil – Ausgleich und Enteignung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Soweit Anordnungen aufgrund dieses Gesetzes im Einzelfall zu einer unzumutbaren Belastung des Eigentums führen, hat das Land einen angemessenen Ausgleich in Geld zu gewähren, sofern und soweit die Belastung nicht in anderer Weise ausgeglichen werden kann. Für die Bemessung des Ausgleichs sind die Regelungen des Niedersächsischen Enteignungsgesetzes über die Entschädigung entsprechend anzuwenden. Die Gemeinden und Landkreise sollen zu dem Ausgleichsaufwand beitragen, wenn und soweit durch die die Belastung auslösende Anordnung auch ihre örtlichen Belange begünstigt werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Über den Ausgleich entscheidet die für die Anordnung zuständige Denkmalschutzbehörde nach Zustimmung der obersten Denkmalschutzbehörde zumindest dem Grunde nach zugleich mit der Anordnung, die die Belastung auslöst."
+     ]
+    }
+   ],
+   "text": "(1) Soweit Anordnungen aufgrund dieses Gesetzes im Einzelfall zu einer unzumutbaren Belastung des Eigentums führen, hat das Land einen angemessenen Ausgleich in Geld zu gewähren, sofern und soweit die Belastung nicht in anderer Weise ausgeglichen werden kann. Für die Bemessung des Ausgleichs sind die Regelungen des Niedersächsischen Enteignungsgesetzes über die Entschädigung entsprechend anzuwenden. Die Gemeinden und Landkreise sollen zu dem Ausgleichsaufwand beitragen, wenn und soweit durch die die Belastung auslösende Anordnung auch ihre örtlichen Belange begünstigt werden.\n(2) Über den Ausgleich entscheidet die für die Anordnung zuständige Denkmalschutzbehörde nach Zustimmung der obersten Denkmalschutzbehörde zumindest dem Grunde nach zugleich mit der Anordnung, die die Belastung auslöst.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/b57d9186-43de-3fa7-8d94-f42d30a509a1",
+   "verweise": []
+  },
+  {
+   "id": "30",
+   "bez": "§ 30",
+   "titel": "Zulässigkeit der Enteignung",
+   "gliederung": [
+    "Sechster Teil – Ausgleich und Enteignung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Eine Enteignung ist zulässig, soweit sie erforderlich ist, damit",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "ein Kulturdenkmal in seinem Bestand oder Erscheinungsbild erhalten bleibt,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Kulturdenkmale ausgegraben oder wissenschaftlich untersucht werden können,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "in einem Grabungsschutzgebiet planmäßige Nachforschungen betrieben werden können."
+         ]
+        }
+       ]
+      },
+      "Die Enteignung kann auf Zubehör, das mit der Hauptsache eine Einheit von Denkmalwert bildet, ausgedehnt werden. Enteignungsmaßnahmen können zeitlich begrenzt werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ein beweglicher Bodenfund (§ 14 Abs. 1) kann enteignet werden, wenn",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Tatsachen vorliegen, nach denen zu befürchten ist, dass er wesentlich verschlechtert wird,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "nicht auf andere Weise sichergestellt werden kann, dass er für die Allgemeinheit zugänglich ist, und hieran ein erhebliches Interesse besteht oder"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "nicht auf andere Weise sichergestellt werden kann, dass er für die wissenschaftliche Forschung zur Verfügung gehalten wird."
+         ]
+        }
+       ]
+      },
+      "Der Enteignungsantrag kann innerhalb eines Jahres gestellt werden, nachdem der Bodenfund angezeigt oder bei Arbeiten nach § 14 Abs. 3 entdeckt worden ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die Enteignung nach den Absätzen 1 und 2 ist zu Gunsten des Landes oder einer anderen juristischen Person des öffentlichen Rechts zulässig. Zu Gunsten einer juristischen Person des Privatrechts ist die Enteignung zulässig, wenn der Enteignungszweck zu den satzungsmäßigen Aufgaben der juristischen Person gehört und seine Erfüllung im Einzelfall gesichert erscheint."
+     ]
+    }
+   ],
+   "text": "(1) Eine Enteignung ist zulässig, soweit sie erforderlich ist, damit\n1. ein Kulturdenkmal in seinem Bestand oder Erscheinungsbild erhalten bleibt,\n2. Kulturdenkmale ausgegraben oder wissenschaftlich untersucht werden können,\n3. in einem Grabungsschutzgebiet planmäßige Nachforschungen betrieben werden können.\nDie Enteignung kann auf Zubehör, das mit der Hauptsache eine Einheit von Denkmalwert bildet, ausgedehnt werden. Enteignungsmaßnahmen können zeitlich begrenzt werden.\n(2) Ein beweglicher Bodenfund (§ 14 Abs. 1) kann enteignet werden, wenn\n1. Tatsachen vorliegen, nach denen zu befürchten ist, dass er wesentlich verschlechtert wird,\n2. nicht auf andere Weise sichergestellt werden kann, dass er für die Allgemeinheit zugänglich ist, und hieran ein erhebliches Interesse besteht oder\n3. nicht auf andere Weise sichergestellt werden kann, dass er für die wissenschaftliche Forschung zur Verfügung gehalten wird.\nDer Enteignungsantrag kann innerhalb eines Jahres gestellt werden, nachdem der Bodenfund angezeigt oder bei Arbeiten nach § 14 Abs. 3 entdeckt worden ist.\n(3) Die Enteignung nach den Absätzen 1 und 2 ist zu Gunsten des Landes oder einer anderen juristischen Person des öffentlichen Rechts zulässig. Zu Gunsten einer juristischen Person des Privatrechts ist die Enteignung zulässig, wenn der Enteignungszweck zu den satzungsmäßigen Aufgaben der juristischen Person gehört und seine Erfüllung im Einzelfall gesichert erscheint.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/a81f8ffb-92bc-36ca-b0da-293cfaab1e27",
+   "verweise": [
+    "14"
+   ]
+  },
+  {
+   "id": "31",
+   "bez": "§ 31",
+   "titel": "Anwendung des Niedersächsischen Enteignungsgesetzes",
+   "gliederung": [
+    "Sechster Teil – Ausgleich und Enteignung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Für die Enteignung und Entschädigung, auch bei beweglichen Sachen, gelten die Vorschriften des Niedersächsischen Enteignungsgesetzes, soweit nicht in diesem Gesetz etwas anderes bestimmt ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ist Gegenstand der Enteignung eine bewegliche Sache und soll nach dem Enteignungsbeschluss die Sache herausgegeben werden, so ist im Enteignungsbeschluss auch anzuordnen, an wen die Sache mit dem Eintritt der Rechtsänderung herauszugeben ist. Die Ausführungsanordnung (§ 36 NEG) kann in diesem Falle schon vor der Zahlung der Entschädigung erlassen werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Ist zur Erhaltung oder wissenschaftlichen Auswertung eines beweglichen Denkmals oder eines beweglichen Bodenfundes (§ 14 Abs. 1) die sofortige Herausgabe dringend geboten, so kann die Enteignungsbehörde im Beschluss über die vorzeitige Besitzeinweisung den Eigentümer oder Besitzer verpflichten, die Sache an einen bestimmten Empfänger herauszugeben. § 35 Abs. 1 Satz 6 NEG findet keine Anwendung."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Sofern die Enteignung andere als die in § 3 NEG genannten Gegenstände betrifft, ist § 43 NEG nicht anzuwenden. In diesen Fällen kann die Entscheidung der Enteignungsbehörde über die Höhe der Entschädigung innerhalb eines Monats nach Zustellung durch Klage vor dem ordentlichen Gericht angefochten werden."
+     ]
+    }
+   ],
+   "text": "(1) Für die Enteignung und Entschädigung, auch bei beweglichen Sachen, gelten die Vorschriften des Niedersächsischen Enteignungsgesetzes, soweit nicht in diesem Gesetz etwas anderes bestimmt ist.\n(2) Ist Gegenstand der Enteignung eine bewegliche Sache und soll nach dem Enteignungsbeschluss die Sache herausgegeben werden, so ist im Enteignungsbeschluss auch anzuordnen, an wen die Sache mit dem Eintritt der Rechtsänderung herauszugeben ist. Die Ausführungsanordnung (§ 36 NEG) kann in diesem Falle schon vor der Zahlung der Entschädigung erlassen werden.\n(3) Ist zur Erhaltung oder wissenschaftlichen Auswertung eines beweglichen Denkmals oder eines beweglichen Bodenfundes (§ 14 Abs. 1) die sofortige Herausgabe dringend geboten, so kann die Enteignungsbehörde im Beschluss über die vorzeitige Besitzeinweisung den Eigentümer oder Besitzer verpflichten, die Sache an einen bestimmten Empfänger herauszugeben. § 35 Abs. 1 Satz 6 NEG findet keine Anwendung.\n(4) Sofern die Enteignung andere als die in § 3 NEG genannten Gegenstände betrifft, ist § 43 NEG nicht anzuwenden. In diesen Fällen kann die Entscheidung der Enteignungsbehörde über die Höhe der Entschädigung innerhalb eines Monats nach Zustellung durch Klage vor dem ordentlichen Gericht angefochten werden.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/66275c23-04a5-3aa3-b2b9-c0b734e0ea72",
+   "verweise": [
+    "14"
+   ]
+  },
+  {
+   "id": "32",
+   "bez": "§ 32",
+   "titel": "Zuschussmittel des Landes",
+   "gliederung": [
+    "Siebenter Teil – Zuschussmittel des Landes, Steuerbefreiung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Das Land trägt, unbeschadet bestehender Verpflichtungen, zu den Kosten der Erhaltung und Instandsetzung von Kulturdenkmalen nach Maßgabe der im Haushaltsplan bereitgestellten Mittel bei. Zuschüsse des Landes können insbesondere mit der Auflage verbunden werden, ein Kulturdenkmal im Rahmen des Zumutbaren der Öffentlichkeit zugänglich zu machen oder Hinweisschilder anzubringen."
+     ]
+    }
+   ],
+   "text": "Das Land trägt, unbeschadet bestehender Verpflichtungen, zu den Kosten der Erhaltung und Instandsetzung von Kulturdenkmalen nach Maßgabe der im Haushaltsplan bereitgestellten Mittel bei. Zuschüsse des Landes können insbesondere mit der Auflage verbunden werden, ein Kulturdenkmal im Rahmen des Zumutbaren der Öffentlichkeit zugänglich zu machen oder Hinweisschilder anzubringen.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/946a9eb7-70bd-3f96-a9dc-7294ba744d42",
+   "verweise": []
+  },
+  {
+   "id": "33",
+   "bez": "§ 33",
+   "titel": "",
+   "gliederung": [
+    "Siebenter Teil – Zuschussmittel des Landes, Steuerbefreiung"
+   ],
+   "weggefallen": true,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(weggefallen)"
+     ]
+    }
+   ],
+   "text": "(weggefallen)",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/b2422155-9271-33bc-a197-f0c7a5a3f120",
+   "verweise": []
+  },
+  {
+   "id": "34",
+   "bez": "§ 34",
+   "titel": "Zerstörung eines Kulturdenkmals",
+   "gliederung": [
+    "Achter Teil – Straftaten und Ordnungswidrigkeiten"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wer ohne die nach § 10 erforderliche Genehmigung und ohne Vorliegen der Voraussetzungen des § 7 ein Kulturdenkmal oder einen wesentlichen Teil eines Kulturdenkmals zerstört, wird mit Freiheitsstrafe bis zu zwei Jahren oder mit Geldstrafe bestraft."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Reste eines Kulturdenkmals, das durch eine Tat nach Absatz 1 zerstört worden ist, können eingezogen werden."
+     ]
+    }
+   ],
+   "text": "(1) Wer ohne die nach § 10 erforderliche Genehmigung und ohne Vorliegen der Voraussetzungen des § 7 ein Kulturdenkmal oder einen wesentlichen Teil eines Kulturdenkmals zerstört, wird mit Freiheitsstrafe bis zu zwei Jahren oder mit Geldstrafe bestraft.\n(2) Reste eines Kulturdenkmals, das durch eine Tat nach Absatz 1 zerstört worden ist, können eingezogen werden.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/55452238-129d-3b39-bb11-030a8cd22f1c",
+   "verweise": [
+    "10",
+    "7"
+   ]
+  },
+  {
+   "id": "35",
+   "bez": "§ 35",
+   "titel": "Ordnungswidrigkeiten",
+   "gliederung": [
+    "Achter Teil – Straftaten und Ordnungswidrigkeiten"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Ordnungswidrig handelt, wer vorsätzlich oder fahrlässig",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "eine nach § 11 oder § 14 Abs. 1 erforderliche Anzeige nicht unverzüglich erstattet,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Maßnahmen, die nach § 10 Abs. 1, § 12 Abs. 1, § 13 Abs. 1 oder § 16 Abs. 2 der Genehmigung bedürfen, ohne Genehmigung oder abweichend von ihr durchführt oder durchführen lässt,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Auflagen nach § 10 Abs. 3, § 12 Abs. 2 oder § 13 Abs. 2 nicht erfüllt,"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "gefundene Gegenstände und die Fundstelle nicht gemäß § 14 Abs. 2 unverändert lässt."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ordnungswidrig handelt, wer wider besseres Wissen unrichtige Angaben macht oder unrichtige Pläne oder Unterlagen vorlegt, um einen Verwaltungsakt nach diesem Gesetz zu erwirken oder zu verhindern."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die Ordnungswidrigkeiten können mit Geldbußen bis zu 250.000 Euro geahndet werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Es können eingezogen werden:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Reste eines Kulturdenkmals, das durch eine ordnungswidrige Handlung zerstört worden ist,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Gegenstände, die durch ordnungswidrige Handlungen unter Verletzung des § 12 Abs. 1, § 13 Abs. 1, § 14 Abs. 1 und 2 oder § 16 Abs. 2 erlangt worden sind."
+         ]
+        }
+       ]
+      },
+      "§ 23 des Gesetzes über Ordnungswidrigkeiten ist anzuwenden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Die Verfolgung der Ordnungswidrigkeit verjährt in fünf Jahren."
+     ]
+    }
+   ],
+   "text": "(1) Ordnungswidrig handelt, wer vorsätzlich oder fahrlässig\n1. eine nach § 11 oder § 14 Abs. 1 erforderliche Anzeige nicht unverzüglich erstattet,\n2. Maßnahmen, die nach § 10 Abs. 1, § 12 Abs. 1, § 13 Abs. 1 oder § 16 Abs. 2 der Genehmigung bedürfen, ohne Genehmigung oder abweichend von ihr durchführt oder durchführen lässt,\n3. Auflagen nach § 10 Abs. 3, § 12 Abs. 2 oder § 13 Abs. 2 nicht erfüllt,\n4. gefundene Gegenstände und die Fundstelle nicht gemäß § 14 Abs. 2 unverändert lässt.\n(2) Ordnungswidrig handelt, wer wider besseres Wissen unrichtige Angaben macht oder unrichtige Pläne oder Unterlagen vorlegt, um einen Verwaltungsakt nach diesem Gesetz zu erwirken oder zu verhindern.\n(3) Die Ordnungswidrigkeiten können mit Geldbußen bis zu 250.000 Euro geahndet werden.\n(4) Es können eingezogen werden:\n1. Reste eines Kulturdenkmals, das durch eine ordnungswidrige Handlung zerstört worden ist,\n2. Gegenstände, die durch ordnungswidrige Handlungen unter Verletzung des § 12 Abs. 1, § 13 Abs. 1, § 14 Abs. 1 und 2 oder § 16 Abs. 2 erlangt worden sind.\n§ 23 des Gesetzes über Ordnungswidrigkeiten ist anzuwenden.\n(5) Die Verfolgung der Ordnungswidrigkeit verjährt in fünf Jahren.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/156fbacc-548c-3111-898b-c18100e013f4",
+   "verweise": [
+    "11",
+    "14",
+    "10",
+    "12",
+    "13",
+    "16"
+   ]
+  },
+  {
+   "id": "36",
+   "bez": "§ 36",
+   "titel": "Kirchliche Kulturdenkmale",
+   "gliederung": [
+    "Neunter Teil – Schluss- und Übergangsvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die Verträge des Landes Niedersachsen mit den Evangelischen Landeskirchen in Niedersachsen vom 19. März 1955 (Nieders. GVBl. Sb. I S. 369) und vom 4. März 1965 (Nieders. GVBl. 1966 S. 4), das Konkordat zwischen dem Heiligen Stuhle und dem Lande Niedersachsen vom 26. Februar 1965 (Nieders. GVBl. S. 192), zuletzt geändert durch Vertrag vom 29. Oktober 1993 (Nds. GVBl. 1994 S. 304), sowie die zur Ausführung dieser Verträge geschlossenen Vereinbarungen bleiben unberührt."
+     ]
+    }
+   ],
+   "text": "Die Verträge des Landes Niedersachsen mit den Evangelischen Landeskirchen in Niedersachsen vom 19. März 1955 (Nieders. GVBl. Sb. I S. 369) und vom 4. März 1965 (Nieders. GVBl. 1966 S. 4), das Konkordat zwischen dem Heiligen Stuhle und dem Lande Niedersachsen vom 26. Februar 1965 (Nieders. GVBl. S. 192), zuletzt geändert durch Vertrag vom 29. Oktober 1993 (Nds. GVBl. 1994 S. 304), sowie die zur Ausführung dieser Verträge geschlossenen Vereinbarungen bleiben unberührt.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/e0ac388a-3f99-36b7-a153-eff503ffcec4",
+   "verweise": []
+  },
+  {
+   "id": "37",
+   "bez": "§ 37",
+   "titel": "Finanzausgleich",
+   "gliederung": [
+    "Neunter Teil – Schluss- und Übergangsvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die Verwaltungskosten, die den Landkreisen und Gemeinden durch die Ausführung dieses Gesetzes entstehen, werden im Rahmen des kommunalen Finanzausgleichs gedeckt."
+     ]
+    }
+   ],
+   "text": "Die Verwaltungskosten, die den Landkreisen und Gemeinden durch die Ausführung dieses Gesetzes entstehen, werden im Rahmen des kommunalen Finanzausgleichs gedeckt.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/62528167-360e-3418-90a0-3d224a2a2a7b",
+   "verweise": []
+  },
+  {
+   "id": "38",
+   "bez": "§ 38",
+   "titel": "Änderung der Niedersächsischen Bauordnung",
+   "gliederung": [
+    "Neunter Teil – Schluss- und Übergangsvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "hinweis",
+     "v": "Änderung hier nicht wiedergegeben."
+    }
+   ],
+   "text": "Änderung hier nicht wiedergegeben.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/bc8c2508-e389-3b76-a232-4c3fd02b7967",
+   "verweise": []
+  },
+  {
+   "id": "39",
+   "bez": "§ 39",
+   "titel": "Aufhebung von Vorschriften",
+   "gliederung": [
+    "Neunter Teil – Schluss- und Übergangsvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Folgende Vorschriften treten außer Kraft, soweit sie nicht bereits aufgehoben worden sind:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Bekanntmachung des Staatsministeriums, betreffend die Vornahme von Ausgrabungen etc. bei den unter Aufsicht der Forstbehörden stehenden Steindenkmälern des Altertums vom 14. März 1881 (Nieders. GVBl. Sb. III S. 136), geändert durch Artikel 34 des Ersten Anpassungsgesetzes vom 24. Juni 1970 (Nieders. GVBl. S. 237),"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Gesetz gegen die Verunstaltung von Stadt und Land vom 1. Februar 1911 (Nieders. GVBl. Sb. III S. 86), geändert durch § 101 Abs. 1 Nr. 28 der Niedersächsischen Bauordnung vom 23. Juli 1973 (Nieders. GVBl. S. 259),"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Denkmalschutzgesetz für das Großherzogtum Oldenburg vom 18. Mai 1911 (Nieders. GVBl. Sb. III S. 136), zuletzt geändert durch § 101 Abs. 1 Nr. 18 der Niedersächsischen Bauordnung vom 23. Juli 1973 (Nieders. GVBl. S. 259),"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Ausgrabungsgesetz vom 26. März 1914 (Nieders. GVBl. Sb. III S. 134), zuletzt geändert durch Artikel 26 des Zweiten Anpassungsgesetzes vom 2. Dezember 1974 (Nieders. GVBl. S. 535),"
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "Heimatschutzgesetz vom 17. September 1934 (Nieders. GVBl. Sb. II S. 415), zuletzt geändert durch § 101 Abs. 1 Nr. 19 der Niedersächsischen Bauordnung vom 23. Juli 1973 (Nieders. GVBl. S. 259),"
+         ]
+        },
+        {
+         "dt": "6.",
+         "c": [
+          "Verordnung zum Schutze des heimischen Kulturgutes vom 23. März 1944 (Nieders. GVBl. Sb. 11 S. 413), zuletzt geändert durch Artikel 27 des Zweiten Anpassungsgesetzes vom 2. Dezember 1974 (Nieders. GVBl. S. 535)."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "text": "Folgende Vorschriften treten außer Kraft, soweit sie nicht bereits aufgehoben worden sind:\n1. Bekanntmachung des Staatsministeriums, betreffend die Vornahme von Ausgrabungen etc. bei den unter Aufsicht der Forstbehörden stehenden Steindenkmälern des Altertums vom 14. März 1881 (Nieders. GVBl. Sb. III S. 136), geändert durch Artikel 34 des Ersten Anpassungsgesetzes vom 24. Juni 1970 (Nieders. GVBl. S. 237),\n2. Gesetz gegen die Verunstaltung von Stadt und Land vom 1. Februar 1911 (Nieders. GVBl. Sb. III S. 86), geändert durch § 101 Abs. 1 Nr. 28 der Niedersächsischen Bauordnung vom 23. Juli 1973 (Nieders. GVBl. S. 259),\n3. Denkmalschutzgesetz für das Großherzogtum Oldenburg vom 18. Mai 1911 (Nieders. GVBl. Sb. III S. 136), zuletzt geändert durch § 101 Abs. 1 Nr. 18 der Niedersächsischen Bauordnung vom 23. Juli 1973 (Nieders. GVBl. S. 259),\n4. Ausgrabungsgesetz vom 26. März 1914 (Nieders. GVBl. Sb. III S. 134), zuletzt geändert durch Artikel 26 des Zweiten Anpassungsgesetzes vom 2. Dezember 1974 (Nieders. GVBl. S. 535),\n5. Heimatschutzgesetz vom 17. September 1934 (Nieders. GVBl. Sb. II S. 415), zuletzt geändert durch § 101 Abs. 1 Nr. 19 der Niedersächsischen Bauordnung vom 23. Juli 1973 (Nieders. GVBl. S. 259),\n6. Verordnung zum Schutze des heimischen Kulturgutes vom 23. März 1944 (Nieders. GVBl. Sb. 11 S. 413), zuletzt geändert durch Artikel 27 des Zweiten Anpassungsgesetzes vom 2. Dezember 1974 (Nieders. GVBl. S. 535).",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/59012cfc-01f3-38a3-9e1b-12a19a786a5c",
+   "verweise": []
+  },
+  {
+   "id": "40",
+   "bez": "§ 40",
+   "titel": "Übergangsvorschrift",
+   "gliederung": [
+    "Neunter Teil – Schluss- und Übergangsvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Das Verzeichnis der Baudenkmale nach § 94 der Niedersächsischen Bauordnung und die Denkmalliste nach § 5 des Denkmalschutzgesetzes für das Großherzogtum Oldenburg sind mit allen Eintragungen Bestandteile des Verzeichnisses der Kulturdenkmale nach § 4 dieses Gesetzes."
+     ]
+    }
+   ],
+   "text": "Das Verzeichnis der Baudenkmale nach § 94 der Niedersächsischen Bauordnung und die Denkmalliste nach § 5 des Denkmalschutzgesetzes für das Großherzogtum Oldenburg sind mit allen Eintragungen Bestandteile des Verzeichnisses der Kulturdenkmale nach § 4 dieses Gesetzes.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/f1351f79-35d1-3ed3-8a6c-607bc2c9f13e",
+   "verweise": [
+    "4"
+   ]
+  },
+  {
+   "id": "41",
+   "bez": "§ 41",
+   "titel": "Inkrafttreten",
+   "gliederung": [
+    "Neunter Teil – Schluss- und Übergangsvorschriften"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Dieses Gesetz tritt am 1. April 1979 in Kraft."
+     ]
+    }
+   ],
+   "text": "Dieses Gesetz tritt am 1. April 1979 in Kraft.",
+   "url": "https://voris.wolterskluwer-online.de/browse/document/58a7632e-c7d2-3a53-93ee-0f4fa3660795",
+   "verweise": []
+  }
+ ]
+}

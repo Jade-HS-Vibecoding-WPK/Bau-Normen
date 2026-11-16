@@ -1,0 +1,38 @@
+---
+gesetz: "BauGB"
+paragraph: "§ 204"
+titel: "Gemeinsamer Flächennutzungsplan, Bauleitplanung bei Bildung von Planungsverbänden und bei Gebiets- oder Bestandsänderung"
+stand: "zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226"
+quelle: "https://www.gesetze-im-internet.de/bbaug/__204.html"
+weggefallen: false
+gliederung:
+  - "Drittes Kapitel – Sonstige Vorschriften"
+  - "Zweiter Teil – Allgemeine Vorschriften; Zuständigkeiten; Verwaltungsverfahren; Planerhaltung"
+  - "Zweiter Abschnitt – Zuständigkeiten"
+tags:
+  - "gesetz/baugb"
+  - "paragraph"
+---
+
+# § 204 BauGB – Gemeinsamer Flächennutzungsplan, Bauleitplanung bei Bildung von Planungsverbänden und bei Gebiets- oder Bestandsänderung
+
+BauGB › Drittes Kapitel – Sonstige Vorschriften › Zweiter Teil – Allgemeine Vorschriften; Zuständigkeiten; Verwaltungsverfahren; Planerhaltung › [[Gesetze/BauGB/Gliederung/BauGB Kap. 3 Teil 2 Abschn. 2 – Zuständigkeiten.md|Zweiter Abschnitt – Zuständigkeiten]]
+
+## Originaltext
+
+(1) Benachbarte Gemeinden sollen einen gemeinsamen Flächennutzungsplan aufstellen, wenn ihre städtebauliche Entwicklung wesentlich durch gemeinsame Voraussetzungen und Bedürfnisse bestimmt wird oder ein gemeinsamer Flächennutzungsplan einen gerechten Ausgleich der verschiedenen Belange ermöglicht. Ein gemeinsamer Flächennutzungsplan soll insbesondere aufgestellt werden, wenn die Ziele der Raumordnung, die Umsetzung eines Wärmeplans oder mehrerer Wärmepläne sowie Einrichtungen und Anlagen des öffentlichen Verkehrs, sonstige Erschließungsanlagen oder Gemeinbedarfs- oder sonstige Folgeeinrichtungen eine gemeinsame Planung erfordern. Der gemeinsame Flächennutzungsplan kann von den beteiligten Gemeinden nur gemeinsam aufgehoben, geändert oder ergänzt werden; die Gemeinden können vereinbaren, dass sich die Bindung nur auf bestimmte räumliche oder sachliche Teilbereiche erstreckt. Ist eine gemeinsame Planung nur für räumliche oder sachliche Teilbereiche erforderlich, genügt anstelle eines gemeinsamen Flächennutzungsplans eine Vereinbarung der beteiligten Gemeinden über bestimmte Darstellungen in ihren Flächennutzungsplänen. Sind die Voraussetzungen für eine gemeinsame Planung nach Satz 1 und 4 entfallen oder ist ihr Zweck erreicht, können die beteiligten Gemeinden den Flächennutzungsplan für ihr Gemeindegebiet ändern oder ergänzen; vor Einleitung des Bauleitplanverfahrens ist die Zustimmung der höheren Verwaltungsbehörde erforderlich.
+
+(2) Werden Gemeinden in ihrem Gebiet oder Bestand geändert oder geht die Zuständigkeit zur Aufstellung von Flächennutzungsplänen auf Verbände oder sonstige kommunale Körperschaften über, gelten unbeschadet abweichender landesrechtlicher Regelungen bestehende Flächennutzungspläne fort. Dies gilt auch für räumliche und sachliche Teile der Flächennutzungspläne. Die Befugnis und die Pflicht der Gemeinde, eines Verbands oder einer sonstigen Körperschaft, fortgeltende Flächennutzungspläne aufzuheben oder für das neue Gemeindegebiet zu ergänzen oder durch einen neuen Flächennutzungsplan zu ersetzen, bleiben unberührt.
+
+(3) Verfahren zur Aufstellung, Änderung, Ergänzung oder Aufhebung von Bebauungsplänen können nach einer Gebiets- oder Bestandsänderung in ihrem jeweiligen Stand fortgeführt werden. Satz 1 gilt entsprechend bei Bildung von Planungsverbänden und für Zusammenschlüsse nach § 205 Absatz 6. Die höhere Verwaltungsbehörde kann verlangen, dass bestimmte Verfahrensabschnitte wiederholt werden.
+
+## Verweist auf
+
+- [[§ 205 BauGB]] – Planungsverbände
+
+## Quelle
+
+- Amtliche Fassung: [§ 204 BauGB auf www.gesetze-im-internet.de](https://www.gesetze-im-internet.de/bbaug/__204.html)
+- Stand: zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226
+- Abgerufen: 2026-11-16
+- Daten: `data/gesetze/baugb.json`

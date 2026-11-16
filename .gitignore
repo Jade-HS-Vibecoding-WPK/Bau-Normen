@@ -1,0 +1,26 @@
+# Abhängigkeiten & Build
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Geheimnisse – API-Keys gehören NIE ins Repo
+.env
+.env*.local
+
+# Rohdownloads (die entpackten Quell-XML-Dateien werden versioniert)
+data/quellen/**/*.zip
+# NI-VORIS (Wolters Kluwer) behält sich Text- und Data-Mining vor (§ 44b Abs. 3 UrhG).
+# Der Gesetzestext selbst ist gemeinfrei (§ 5 UrhG) und liegt in data/gesetze/ndschg.json –
+# die Roh-HTML-Seiten mit Verlags-Markup veröffentlichen wir nicht.
+data/quellen/ndschg/
+
+# Obsidian: persönliche Arbeitsbereich-Einstellungen nicht versionieren, nur die Graph-Farben
+obsidian/.obsidian/*
+!obsidian/.obsidian/graph.json
+obsidian/.trash/
+
+# System
+.DS_Store
+Thumbs.db

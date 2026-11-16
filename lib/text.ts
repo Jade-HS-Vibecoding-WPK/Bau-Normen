@@ -1,0 +1,35 @@
+// Hilfsfunktionen für Text (auch im Browser nutzbar).
+import type { TextKnoten } from "./typen";
+
+/** Wandelt den Strukturbaum zurück in reinen Text, z. B. zum Kopieren. */
+export function alsText(nodes: TextKnoten[]): string {
+  let out = "";
+  for (const n of nodes) {
+    if (typeof n === "string") out += n;
+    else if (n.t === "p") out += (out && !out.endsWith("\n") ? "\n" : "") + alsText(n.c) + "\n";
+    else if (n.t === "br") out += "\n";
+    else if (n.t === "dl") {
+      for (const it of n.items) out += "\n" + it.dt + " " + alsText(it.c);
+      out += "\n";
+    } else if (n.t === "table") out += n.rows.map((r) => r.join(" | ")).join("\n") + "\n";
+    else if (n.t === "pre" || n.t === "hinweis") out += n.v + "\n";
+    else if ("c" in n) out += alsText(n.c);
+  }
+  return out.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+const MONATE = ["januar", "februar", "märz", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "dezember"];
+
+/**
+ * Datum der letzten Änderung aus der Standangabe:
+ *  "zuletzt geändert durch Art. 8 Abs. 2 G v. 23.7.2026 I Nr. 226"           -> "23.07.2026"
+ *  "Zuletzt geändert durch Artikel 3 des Gesetzes vom 12. Dezember 2023 (…)" -> "12.12.2023"
+ */
+export function standDatum(stand: string): string | null {
+  const m = stand.match(/v\.\s*(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+  if (m) return `${m[1].padStart(2, "0")}.${m[2].padStart(2, "0")}.${m[3]}`;
+  const w = stand.match(/vom\s+(\d{1,2})\.\s*([A-Za-zäÄ]+)\s+(\d{4})/);
+  const monat = w ? MONATE.indexOf(w[2].toLowerCase()) + 1 : 0;
+  if (w && monat) return `${w[1].padStart(2, "0")}.${String(monat).padStart(2, "0")}.${w[3]}`;
+  return null;
+}
