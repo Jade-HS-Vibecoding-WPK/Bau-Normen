@@ -49,7 +49,7 @@ Exportiert Gesetze und Projektdateien als Obsidian-Vault in den Ordner obsidian/
 
 ## Daten
 
-- **liest** `data/erlaeuterungen/*.json` → Erläuterungen zu [[BauGB]]
+- **liest** `data/erlaeuterungen/*.json` → Erläuterungen zu [[BauGB]], [[NDSchG]]
 - **liest** `data/gesetze/*` → [[BauGB]], [[NDSchG]]
 
 ## Externe Pakete

@@ -2,7 +2,7 @@
 pfad: "app/globals.css"
 bereich: "Oberfläche"
 sprache: "CSS"
-zeilen: 304
+zeilen: 332
 beschreibung: "Bau-Normen-KI – Gestaltung Leitidee: technische Zeichnung / Planunterlage. Ruhiges Papierweiß, dunkles Tannengrün, feine Linien, Schriftfeld-Kopf wie auf Bauplänen, Mono-Schrift für Nummern und Metadaten, Serifenschrift für den Gesetzestext."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # app/globals.css
 
-**Pfad:** `app/globals.css` · **Bereich:** Oberfläche · **Sprache:** CSS · **Zeilen:** 304
+**Pfad:** `app/globals.css` · **Bereich:** Oberfläche · **Sprache:** CSS · **Zeilen:** 332
 
 ## Kurzbeschreibung
 

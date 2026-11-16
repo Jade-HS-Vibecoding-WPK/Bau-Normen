@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/c6d31b67-d830-324
 weggefallen: false
 gliederung:
   - "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -25,6 +26,19 @@ NDSchG › [[NDSchG Teil 5 – Maßnahmen des Denkmalschutzes, Verfahrensvorschr
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Wer rechtswidrig in ein Kulturdenkmal oder seine Umgebung eingreift, muss auf Verlangen der Behörde den bisherigen Zustand wiederherstellen; wer ein Kulturdenkmal widerrechtlich und vorsätzlich oder fahrlässig beschädigt oder zerstört, muss das Zerstörte auf Verlangen nach Anweisung der Behörde rekonstruieren.
+>
+> **Abs. 1 – Wiederherstellung des bisherigen Zustands:** Wer entgegen dem Denkmalschutzgesetz in ein Kulturdenkmal oder in dessen Umgebung eingreift, muss auf Verlangen der Denkmalschutzbehörde den bisherigen Zustand wiederherstellen. Anders als Abs. 2 nennt dieser Absatz keine Voraussetzung wie Vorsatz oder Fahrlässigkeit.
+>
+> **Abs. 2 – Rekonstruktion:** Wer ein Kulturdenkmal widerrechtlich und vorsätzlich (bewusst und gewollt) oder fahrlässig (aus mangelnder Sorgfalt) beschädigt oder zerstört, muss auf Verlangen der Denkmalschutzbehörde das Zerstörte nach deren Anweisungen rekonstruieren, also nachbilden.
+>
+> **Praxis:** Eingriffe ohne die erforderliche Genehmigung können aufwendige Folgen haben: Die Behörde kann verlangen, den alten Zustand wiederherzustellen oder Zerstörtes nach ihren Vorgaben zu rekonstruieren. Das gilt nicht nur für Eingriffe am Denkmal selbst, sondern auch für unzulässige Eingriffe in seine Umgebung.
 
 ## Quelle
 

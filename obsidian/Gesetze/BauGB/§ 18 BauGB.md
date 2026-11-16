@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Zweiter Teil – Sicherung der Bauleitplanung"
   - "Erster Abschnitt – Veränderungssperre und Zurückstellung von Baugesuchen"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -35,6 +36,21 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Zweiter Teil – Si
 - [[§ 40 BauGB]] – Entschädigung in Geld oder durch Übernahme
 - [[§ 41 BauGB]] – Entschädigung bei Begründung von Geh-, Fahr- und Leitungsrechten und bei Bindungen für Bepflanzungen
 - [[§ 16 BauGB]] – Beschluss über die Veränderungssperre
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Gibt Betroffenen einen Anspruch auf angemessene Entschädigung in Geld für ihre Vermögensnachteile, wenn eine Veränderungssperre länger als vier Jahre dauert. Zahlungspflichtig ist die Gemeinde.
+>
+> **Abs. 1 – Voraussetzung und Bemessung:** Dauert die Sperre länger als vier Jahre – gerechnet ab ihrem Beginn oder ab der ersten Zurückstellung eines Bauantrags nach § 15 Abs. 1 –, ist den Betroffenen für die dadurch entstandenen Vermögensnachteile eine angemessene Entschädigung in Geld zu leisten. Dafür gelten die Entschädigungsvorschriften im Zweiten Abschnitt des Fünften Teils (Enteignung) sowie § 121 (Kosten) entsprechend. Zugrunde gelegt wird der Grundstückswert, der nach den Vorschriften des Zweiten Abschnitts des Dritten Teils (Entschädigung) zu entschädigen wäre.
+>
+> **Abs. 2 – Zahlungspflicht und Verfahren:** Zur Entschädigung verpflichtet ist die Gemeinde. Der Berechtigte kann sie verlangen, sobald die Vermögensnachteile eingetreten sind, und macht den Anspruch fällig (also zahlbar), indem er die Entschädigung schriftlich bei der Gemeinde beantragt. Kommt keine Einigung zustande, entscheidet die höhere Verwaltungsbehörde; für ihren Festsetzungsbescheid gilt § 122 (vollstreckbarer Titel) entsprechend.
+>
+> **Abs. 3 – Erlöschen und Hinweispflicht:** Für das Erlöschen des Anspruchs gilt § 44 Abs. 4: Der Anspruch erlischt, wenn seine Fälligkeit nicht innerhalb von drei Jahren nach Ablauf des Kalenderjahres herbeigeführt wird, in dem die Vermögensnachteile eingetreten sind. Sichert die Sperre eine Festsetzung nach § 40 Abs. 1 (zum Beispiel Flächen für Gemeinbedarf, Verkehrs- oder Grünflächen) oder § 41 Abs. 1 (Flächen für Geh-, Fahr- und Leitungsrechte), beginnt diese Frist frühestens mit der Rechtsverbindlichkeit des B-Plans. In der Bekanntmachung der Sperre nach § 16 Abs. 2 ist auf Abs. 2 Satz 2 und 3 hinzuweisen.
+>
+> **Praxis:** Die Entschädigung greift erst bei Sperren, die länger als vier Jahre dauern. Entscheidend ist der schriftliche Antrag bei der Gemeinde: Erst er macht den Anspruch fällig, und er muss rechtzeitig gestellt werden, damit der Anspruch nicht nach § 44 Abs. 4 erlischt.
 
 ## Quelle
 

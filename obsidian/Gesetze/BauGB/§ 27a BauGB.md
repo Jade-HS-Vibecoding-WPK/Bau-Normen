@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Zweiter Teil – Sicherung der Bauleitplanung"
   - "Dritter Abschnitt – Gesetzliche Vorkaufsrechte der Gemeinde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -34,6 +35,23 @@ In den Fällen der Nummer 1 hat die Gemeinde bei der Ausübung des Vorkaufsrecht
 - [[§ 24 BauGB]] – Allgemeines Vorkaufsrecht
 - [[§ 28 BauGB]] – Verfahren und Entschädigung
 - [[§ 102 BauGB]] – Rückenteignung
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Die Gemeinde kann ihr Vorkaufsrecht auch zugunsten eines Dritten ausüben. Der Kaufvertrag kommt dann direkt zwischen dem Dritten und dem Verkäufer zustande; die Gemeinde haftet daneben mit.
+>
+> **Abs. 1 Satz 1 Nr. 1 und Satz 2 – Ausübung zugunsten eines Dritten:** Die Gemeinde kann das Vorkaufsrecht zugunsten eines Dritten ausüben, wenn dieser das Grundstück innerhalb angemessener Frist für den mit dem Vorkaufsrecht verfolgten Zweck verwenden kann und sich dazu verpflichtet. Die Gemeinde muss dabei die Frist bezeichnen, in der das Grundstück für den vorgesehenen Zweck zu verwenden ist.
+>
+> **Abs. 1 Satz 1 Nr. 2 – Ausübung zugunsten von Trägern:** Das Vorkaufsrecht nach § 24 Abs. 1 Satz 1 Nr. 1 kann sie zugunsten eines öffentlichen Bedarfs- oder Erschließungsträgers ausüben, das Vorkaufsrecht nach § 24 Abs. 1 Satz 1 Nr. 3 zugunsten eines Sanierungs- oder Entwicklungsträgers – jeweils nur, wenn der Träger einverstanden ist.
+>
+> **Abs. 2 – Kaufvertrag und Haftung der Gemeinde:** Mit der Ausübung kommt der Kaufvertrag zwischen dem Begünstigten und dem Verkäufer zustande. Die Gemeinde haftet für die Verpflichtungen aus dem Kaufvertrag neben dem Begünstigten als Gesamtschuldnerin; der Verkäufer kann sich also an beide halten.
+>
+> **Abs. 3 – Kaufpreis, Verfahren und Rückübertragung:** Für den vom Begünstigten zu zahlenden Betrag und das Verfahren gilt § 28 Abs. 2 bis 4 entsprechend. Erfüllt ein nach Abs. 1 Satz 1 Nr. 1 begünstigter Dritter seine Verwendungspflicht nicht, soll die Gemeinde in entsprechender Anwendung des § 102 verlangen, dass das Grundstück auf sie oder auf einen Übernahmewilligen übertragen wird, der den Zweck innerhalb angemessener Frist verwirklichen kann und sich dazu verpflichtet; für Entschädigung und Verfahren gelten die Vorschriften des Fünften Teils über die Rückenteignung entsprechend. Die Haftung der Gemeinde nach § 28 Abs. 3 Satz 7 (Zahlung des Unterschieds zwischen vereinbartem Kaufpreis und Verkehrswert an den Verkäufer) bleibt unberührt.
+>
+> **Praxis:** Wer nach Abs. 1 Satz 1 Nr. 1 begünstigt wird, erwirbt das Grundstück mit der Pflicht, es innerhalb der von der Gemeinde bezeichneten Frist für den vorgesehenen Zweck zu verwenden. Wird diese Pflicht nicht erfüllt, soll die Gemeinde die Übertragung des Grundstücks auf sich oder einen Übernahmewilligen verlangen.
 
 ## Quelle
 

@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/0a22bc44-7bf4-3ef
 weggefallen: false
 gliederung:
   - "Vierter Teil – Denkmalbehörden"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -27,6 +28,21 @@ NDSchG › [[NDSchG Teil 4 – Denkmalbehörden|Vierter Teil – Denkmalbehörde
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Bestimmt, welche Denkmalschutzbehörde im Einzelfall zuständig ist, und regelt die Beteiligung des Landesamts für Denkmalpflege in der Bodendenkmalpflege. Grundsätzlich sind die unteren Denkmalschutzbehörden zuständig.
+>
+> **Abs. 1 – Grundsatz und Ausnahme:** Zuständig sind die unteren Denkmalschutzbehörden, soweit nicht durch Gesetz oder auf Grund eines Gesetzes etwas anderes bestimmt ist. Betrifft die Durchführung des Gesetzes den Bereich einer Bundeswasserstraße oder des Küstengewässers, ist stattdessen die oberste Denkmalschutzbehörde zuständig. Für Maßnahmen im Küstengewässer braucht sie das Einvernehmen, also die Zustimmung, der obersten Naturschutzbehörde.
+>
+> **Abs. 2 – Beteiligung des Landesamts in der Bodendenkmalpflege:** In Angelegenheiten der Bodendenkmalpflege müssen die unteren Denkmalschutzbehörden unverzüglich das Benehmen mit dem Landesamt für Denkmalpflege herstellen, es also beteiligen und ihm Gelegenheit zur Stellungnahme geben (anders als beim Einvernehmen ist keine Zustimmung nötig). Ist eine untere Behörde in ausreichendem Maß mit archäologischen Fachkräften besetzt – Personen, die durch Ausbildung oder archäologische Tätigkeit nachweislich hinreichende Fachkenntnisse in der Bodendenkmalpflege erworben haben –, befreit die oberste Denkmalschutzbehörde sie von dieser Pflicht. Eine befreite Behörde muss Veränderungen bei der Besetzung mit archäologischen Fachkräften unverzüglich der obersten Denkmalschutzbehörde mitteilen.
+>
+> **Abs. 3 – Bewegliche Bodenfunde:** Bei beweglichen Bodenfunden richtet sich die örtliche Zuständigkeit nach dem Fundort. Bei Gefahr im Verzug darf auch die Denkmalschutzbehörde Anordnungen erlassen, in deren Bezirk sich der Gegenstand befindet; die zuständige Denkmalschutzbehörde ist dann unverzüglich zu unterrichten.
+>
+> **Praxis:** Grundsätzlich ist die untere Denkmalschutzbehörde zuständig. Bei Vorhaben, die die Bodendenkmalpflege betreffen, wird zusätzlich das Landesamt für Denkmalpflege beteiligt, sofern die untere Behörde nicht von dieser Pflicht befreit ist. Im Bereich von Bundeswasserstraßen und im Küstengewässer ist die oberste Denkmalschutzbehörde zuständig.
 
 ## Quelle
 

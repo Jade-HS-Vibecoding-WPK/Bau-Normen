@@ -2,7 +2,7 @@
 pfad: "app/page.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 9
+zeilen: 14
 tags:
   - "projekt"
   - "projekt/oberflaeche"
@@ -10,7 +10,7 @@ tags:
 
 # app/page.tsx
 
-**Pfad:** `app/page.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 9
+**Pfad:** `app/page.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 14
 
 ## Kurzbeschreibung
 
@@ -22,3 +22,7 @@ tags:
 ## Stellt bereit
 
 `dynamic`, `Startseite`
+
+## Externe Pakete
+
+`node:fs`, `node:path`

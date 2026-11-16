@@ -20,8 +20,8 @@ tags:
 - **Fassung:** ab 20.12.2023 (aktuelle Fassung)
 - **Quelle:** [Niedersächsisches Vorschrifteninformationssystem (NI-VORIS) – voris.wolterskluwer-online.de](https://voris.wolterskluwer-online.de/browse/document/b053748c-c363-37c6-b26f-3d52606c6272)
 - **Abgerufen:** 2026-11-16
-- **Daten:** `data/gesetze/ndschg.json`
-- **Umfang:** 42 Vorschriften, davon 1 weggefallen
+- **Daten:** `data/gesetze/ndschg.json`, Erläuterungen: `data/erlaeuterungen/ndschg.json`
+- **Umfang:** 42 Vorschriften, davon 1 weggefallen; 41 mit Erläuterung (Entwurf, keine Rechtsberatung)
 
 ## Inhalt
 

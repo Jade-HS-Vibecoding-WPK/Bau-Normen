@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/66275c23-04a5-3aa
 weggefallen: false
 gliederung:
   - "Sechster Teil – Ausgleich und Enteignung"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -29,6 +30,23 @@ NDSchG › [[NDSchG Teil 6 – Ausgleich und Enteignung|Sechster Teil – Ausgle
 ## Verweist auf
 
 - [[§ 14 NDSchG]] – Bodenfunde
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Verweist für Enteignung und Entschädigung auf das Niedersächsische Enteignungsgesetz (NEG) und enthält Sonderregeln, vor allem für bewegliche Sachen wie bewegliche Denkmale und Bodenfunde.
+>
+> **Abs. 1 – Geltung des NEG:** Für Enteignung und Entschädigung gelten – auch bei beweglichen Sachen – die Vorschriften des Niedersächsischen Enteignungsgesetzes, soweit das Denkmalschutzgesetz nichts anderes bestimmt.
+>
+> **Abs. 2 – Herausgabe beweglicher Sachen:** Wird eine bewegliche Sache enteignet und soll sie nach dem Enteignungsbeschluss herausgegeben werden, muss der Beschluss auch festlegen, an wen sie mit Eintritt der Rechtsänderung herauszugeben ist. Die Ausführungsanordnung (§ 36 NEG) kann in diesem Fall schon vor Zahlung der Entschädigung erlassen werden.
+>
+> **Abs. 3 – Sofortige Herausgabe:** Ist die sofortige Herausgabe eines beweglichen Denkmals oder eines beweglichen Bodenfundes (§ 14 Abs. 1) zu dessen Erhaltung oder wissenschaftlicher Auswertung dringend geboten, kann die Enteignungsbehörde im Beschluss über die vorzeitige Besitzeinweisung (Besitzübertragung vor Abschluss des Enteignungsverfahrens) den Eigentümer oder Besitzer verpflichten, die Sache an einen bestimmten Empfänger herauszugeben. § 35 Abs. 1 Satz 6 NEG ist dabei nicht anzuwenden.
+>
+> **Abs. 4 – Klage gegen die Entschädigungshöhe:** Betrifft die Enteignung andere Gegenstände als die in § 3 NEG genannten, ist § 43 NEG nicht anzuwenden. In diesen Fällen kann die Entscheidung der Enteignungsbehörde über die Höhe der Entschädigung innerhalb eines Monats nach Zustellung durch Klage vor dem ordentlichen Gericht (Zivilgericht) angefochten werden.
+>
+> **Praxis:** Für Enteignungen nach dem Denkmalschutzgesetz gilt grundsätzlich das NEG; Abs. 2 und 3 enthalten Sonderregeln für bewegliche Sachen, Abs. 4 für den Rechtsweg zur Entschädigungshöhe. In den Fällen von Abs. 4 ist die Klagefrist von einem Monat ab Zustellung zu beachten.
 
 ## Quelle
 

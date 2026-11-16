@@ -27,5 +27,5 @@ Gemeinsamer, vorsichtiger Abruf externer Dienste: Zeitlimit, Zwischenspeicher, k
 
 ## Wird verwendet von
 
-`lib/ort/bplan.ts`, `lib/ort/denkmal.ts`, `lib/ort/standort.ts`  
+`lib/ort/bplan-dokumente.ts`, `lib/ort/bplan.ts`, `lib/ort/denkmal.ts`, `lib/ort/standort.ts`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*

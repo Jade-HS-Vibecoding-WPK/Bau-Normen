@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/35754d21-216c-3c4
 weggefallen: false
 gliederung:
   - "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -27,6 +28,21 @@ NDSchG › [[NDSchG Teil 5 – Maßnahmen des Denkmalschutzes, Verfahrensvorschr
 ## Verweist auf
 
 - [[§ 10 NDSchG]] – Genehmigungspflichtige Maßnahmen
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt das Verfahren für Genehmigungen nach dem Denkmalschutzgesetz: Antrag, Geltungsdauer und Kostenfreiheit. Wichtig für alle, die eine denkmalrechtliche Genehmigung brauchen.
+>
+> **Abs. 1 – Antrag:** Der Antrag ist mit den zur Beurteilung erforderlichen Unterlagen schriftlich oder elektronisch an die Denkmalschutzbehörde zu übermitteln. Ist der Landkreis Denkmalschutzbehörde, leitet er den Antrag unverzüglich an die Gemeinde weiter; die Gemeinde übermittelt ihre Stellungnahme unverzüglich an die Denkmalschutzbehörde.
+>
+> **Abs. 2 – Erlöschen der Genehmigung:** Die Genehmigung erlischt, wenn nicht innerhalb von zwei Jahren nach ihrer Erteilung mit der Ausführung begonnen wird oder wenn die Ausführung zwei Jahre lang unterbrochen war; die Denkmalschutzbehörde kann diese Frist verlängern. Ist die denkmalrechtliche Genehmigung nach § 10 Abs. 4 in einer Baugenehmigung oder einer sonstigen Entscheidung enthalten, richtet sich die Geltungsdauer nach den Vorschriften über diese Baugenehmigung oder sonstige Entscheidung.
+>
+> **Abs. 3 – Keine Gebühren:** Für Genehmigungen nach dem Denkmalschutzgesetz werden weder Gebühren noch Auslagen erhoben. Die Kostenvorschriften für Baugenehmigungen und sonstige Entscheidungen, die eine denkmalrechtliche Genehmigung mit umfassen, gelten aber unverändert weiter.
+>
+> **Praxis:** Ist ohnehin eine Baugenehmigung nötig, ist die denkmalrechtliche Genehmigung darin enthalten (§ 10 Abs. 4); Geltungsdauer und Kosten der Baugenehmigung richten sich dann nach den dafür geltenden Vorschriften. Eine eigenständige denkmalrechtliche Genehmigung ist kostenfrei, erlischt aber, wenn nicht innerhalb von zwei Jahren mit der Ausführung begonnen wird oder die Ausführung zwei Jahre unterbrochen ist – bei absehbaren Verzögerungen ist eine Verlängerung frühzeitig mit der Behörde zu klären.
 
 ## Quelle
 

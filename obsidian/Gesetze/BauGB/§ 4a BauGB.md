@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Erster Abschnitt – Allgemeine Vorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -36,6 +37,29 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 
 - [[§ 3 BauGB]] – Beteiligung der Öffentlichkeit
 - [[§ 4 BauGB]] – Beteiligung der Behörden
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Enthält gemeinsame Regeln für die Beteiligung von Öffentlichkeit und Behörden: Zweck der Beteiligung, gleichzeitige Durchführung, erneute Beteiligung nach Änderungen des Entwurfs, grenzüberschreitende Beteiligung, Umgang mit verspäteten Stellungnahmen und Digitalisierung.
+>
+> **Abs. 1 – Zweck der Beteiligung:** Die Beteiligung von Öffentlichkeit und Behörden dient insbesondere der vollständigen Ermittlung und zutreffenden Bewertung der von der Planung berührten Belange sowie der Information der Öffentlichkeit.
+>
+> **Abs. 2 – Gleichzeitige Durchführung:** Die frühzeitige Unterrichtung der Öffentlichkeit (§ 3 Abs. 1) kann gleichzeitig mit der Unterrichtung der Behörden (§ 4 Abs. 1) erfolgen. Ebenso kann die Veröffentlichung im Internet (§ 3 Abs. 2) gleichzeitig mit der Einholung der Behördenstellungnahmen (§ 4 Abs. 2) durchgeführt werden.
+>
+> **Abs. 3 – Erneute Beteiligung nach Änderungen:** Wird der Planentwurf nach der Beteiligung gemäß § 3 Abs. 2 oder § 4 Abs. 2 geändert oder ergänzt, muss er erneut nach § 3 Abs. 2 im Internet veröffentlicht werden, und die Stellungnahmen sind erneut einzuholen – es sei denn, die Änderung oder Ergänzung führt offensichtlich nicht dazu, dass Belange erstmals oder stärker berührt werden. Bei einer erneuten Veröffentlichung ist Gelegenheit zur Stellungnahme in Bezug auf die Änderung oder Ergänzung und ihre möglichen Auswirkungen zu geben; darauf ist in der erneuten Bekanntmachung nach § 3 Abs. 2 Satz 4 hinzuweisen.
+>
+> **Abs. 3 – Verkürzte und beschränkte Wiederholung:** Die Veröffentlichungsfrist im Internet und die Frist zur Stellungnahme sollen dabei angemessen verkürzt werden. Werden die Grundzüge der Planung (das planerische Grundkonzept) durch die Änderung oder Ergänzung nicht berührt, soll die Einholung der Stellungnahmen auf die betroffene Öffentlichkeit und die berührten Behörden und sonstigen Träger öffentlicher Belange beschränkt werden – es sei denn, diese Beschränkung führt nach Einschätzung der Gemeinde zu einer längeren Verfahrensdauer.
+>
+> **Abs. 4 – Grenzüberschreitende Beteiligung:** Kann ein Bauleitplan erhebliche Auswirkungen auf Nachbarstaaten haben, sind deren Gemeinden und Behörden nach den Grundsätzen der Gegenseitigkeit und Gleichwertigkeit zu unterrichten. Kann er erhebliche Umweltauswirkungen auf einen anderen Staat haben, ist dieser abweichend davon nach dem Gesetz über die Umweltverträglichkeitsprüfung zu beteiligen; für die Stellungnahmen von Öffentlichkeit und Behörden dieses Staates, einschließlich der Folgen nicht rechtzeitig abgegebener Stellungnahmen, gelten jedoch die Vorschriften des Baugesetzbuchs entsprechend. Ist eine solche grenzüberschreitende Beteiligung erforderlich, ist in der Bekanntmachung nach § 3 Abs. 2 Satz 4 darauf hinzuweisen.
+>
+> **Abs. 5 – Verspätete Stellungnahmen:** Nicht rechtzeitig abgegebene Stellungnahmen können bei der Beschlussfassung über den Bauleitplan unberücksichtigt bleiben – aber nur, wenn die Gemeinde ihren Inhalt nicht kannte und nicht hätte kennen müssen und der Inhalt für die Rechtmäßigkeit des Plans nicht von Bedeutung ist. Für Stellungnahmen aus der Öffentlichkeitsbeteiligung gilt das nur, wenn in der Bekanntmachung nach § 3 Abs. 2 Satz 4 darauf hingewiesen worden ist.
+>
+> **Abs. 6 – Digitalisierung des Verfahrens:** Im Übrigen richtet sich die Digitalisierung des Bauleitplanverfahrens nach den Beschlüssen des IT-Planungsrats zu IT-Interoperabilitäts- und IT-Sicherheitsstandards sowie nach den Vorgaben des Online-Zugangsgesetzes, soweit diese für die Gemeinden verbindlich sind.
+>
+> **Praxis:** Wird ein Planentwurf nach der Beteiligung geändert oder ergänzt, kann eine erneute – unter Umständen verkürzte und auf die Betroffenen beschränkte – Beteiligung nötig werden, was den Zeitplan beeinflusst. Verspätete Stellungnahmen können nur unberücksichtigt bleiben, wenn alle Voraussetzungen von Abs. 5 erfüllt sind; unter anderem darf die Gemeinde ihren Inhalt weder gekannt haben noch hätte kennen müssen.
 
 ## Quelle
 

@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/6c676b38-ced2-307
 weggefallen: false
 gliederung:
   - "Fünfter Teil – Maßnahmen des Denkmalschutzes, Verfahrensvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -25,6 +26,19 @@ NDSchG › [[NDSchG Teil 5 – Maßnahmen des Denkmalschutzes, Verfahrensvorschr
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt, wann Bedienstete und Beauftragte der Denkmalbehörden Grundstücke und Wohnungen betreten dürfen und welche Auskünfte Eigentümer und Besitzer von Kulturdenkmalen geben müssen.
+>
+> **Abs. 1 – Betreten, Besichtigen, Erfassen:** Bedienstete und Beauftragte der Denkmalbehörden dürfen nach vorheriger Benachrichtigung Grundstücke betreten, soweit das zur Durchführung des Gesetzes notwendig ist – Wohnungen allerdings nur zur Abwehr einer dringenden Gefahr für ein Kulturdenkmal. Sie dürfen Kulturdenkmale besichtigen und die notwendigen wissenschaftlichen Erfassungsmaßnahmen durchführen, insbesondere zur Inventarisation (systematische Erfassung des Denkmalbestands). Das Grundrecht der Unverletzlichkeit der Wohnung (Art. 13 Grundgesetz) wird insoweit eingeschränkt.
+>
+> **Abs. 2 – Auskunftspflicht:** Eigentümer und Besitzer von Kulturdenkmalen müssen den Denkmalbehörden und deren Beauftragten die Auskünfte erteilen, die für den Vollzug des Gesetzes erforderlich sind.
+>
+> **Praxis:** Nach vorheriger Benachrichtigung dürfen Denkmalbehörden Grundstücke betreten sowie Kulturdenkmale besichtigen und wissenschaftlich erfassen – das ist zu dulden. Wohnungen sind besonders geschützt und dürfen nur zur Abwehr einer dringenden Gefahr für ein Kulturdenkmal betreten werden.
 
 ## Quelle
 

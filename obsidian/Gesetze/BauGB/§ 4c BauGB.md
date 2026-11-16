@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Erster Abschnitt – Allgemeine Vorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -26,6 +27,19 @@ Die Gemeinden überwachen die erheblichen Umweltauswirkungen, die auf Grund der 
 
 - [[§ 1a BauGB]] – Ergänzende Vorschriften zum Umweltschutz
 - [[§ 4 BauGB]] – Beteiligung der Behörden
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Die Gemeinden müssen die erheblichen Umweltauswirkungen überwachen, die bei der Durchführung ihrer Bauleitpläne eintreten (sogenanntes Monitoring). So sollen vor allem unvorhergesehene nachteilige Folgen früh erkannt werden, damit rechtzeitig Abhilfe möglich ist.
+>
+> **Satz 1 – Überwachungspflicht:** Die Gemeinden überwachen die erheblichen Umweltauswirkungen, die aufgrund der Durchführung der Bauleitpläne eintreten – insbesondere, um unvorhergesehene nachteilige Auswirkungen frühzeitig zu ermitteln und in der Lage zu sein, geeignete Maßnahmen zur Abhilfe zu ergreifen. Überwacht wird auch die Durchführung der Ausgleichsdarstellungen und -festsetzungen nach § 1a Abs. 3 Satz 2 und der Ausgleichsmaßnahmen nach § 1a Abs. 3 Satz 4, also des vertraglich vereinbarten oder sonstigen Ausgleichs.
+>
+> **Satz 2 – Grundlagen der Überwachung:** Dabei nutzen die Gemeinden die Überwachungsmaßnahmen, die im Umweltbericht nach Nummer 3 Buchst. b der Anlage 1 zum Baugesetzbuch angegeben sind, sowie die Informationen der Behörden nach § 4 Abs. 3 über erhebliche, insbesondere unvorhergesehene nachteilige Umweltauswirkungen.
+>
+> **Praxis:** Die vorgesehenen Überwachungsmaßnahmen stehen bereits im Umweltbericht. Auch nach Abschluss des Planverfahrens überwacht die Gemeinde, ob Ausgleichsflächen und -maßnahmen – auch vertraglich vereinbarte – tatsächlich umgesetzt werden.
 
 ## Quelle
 

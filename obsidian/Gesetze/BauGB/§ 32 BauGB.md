@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -25,6 +26,19 @@ Sind überbaute Flächen in dem Bebauungsplan als Baugrundstücke für den Gemei
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Sichert künftige öffentliche Flächen: Ist ein bereits bebautes Grundstück im Bebauungsplan als Gemeinbedarfs-, Verkehrs-, Versorgungs- oder Grünfläche festgesetzt, sind wertsteigernde Änderungen nur eingeschränkt zulässig.
+>
+> **Satz 1 – Zustimmung oder Verzicht auf Ersatz der Werterhöhung:** Auf überbauten Flächen, die im Bebauungsplan als Baugrundstücke für den Gemeinbedarf oder als Verkehrs-, Versorgungs- oder Grünflächen festgesetzt sind, dürfen Vorhaben, die eine wertsteigernde Änderung baulicher Anlagen zur Folge haben, nur zugelassen und Befreiungen nur erteilt werden, wenn eine von zwei Bedingungen erfüllt ist: Der Bedarfs- oder Erschließungsträger stimmt zu, oder der Eigentümer verzichtet schriftlich für sich und seine Rechtsnachfolger auf Ersatz der Werterhöhung für den Fall, dass der Bebauungsplan durchgeführt wird.
+>
+> **Satz 2 – Auch plankonforme Gebäudeteile:** Das gilt auch für Teile einer baulichen Anlage, die dem Bebauungsplan nicht widersprechen, wenn sie für sich allein nicht wirtschaftlich verwertbar sind oder wenn bei der Enteignung die Übernahme der restlichen überbauten Flächen verlangt werden kann.
+>
+> **Praxis:** Für Eigentümer solcher Grundstücke bedeutet das: Ohne Zustimmung des Bedarfs- oder Erschließungsträgers werden wertsteigernde Änderungen nur zugelassen, wenn schriftlich auf den Ersatz der Werterhöhung verzichtet wird. Nach einem solchen Verzicht wird die Werterhöhung bei Durchführung des Bebauungsplans nicht ersetzt.
 
 ## Quelle
 

@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -37,6 +38,21 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 - [[§ 4a BauGB]] – Gemeinsame Vorschriften zur Beteiligung
 - [[§ 13 BauGB]] – Vereinfachtes Verfahren
 - [[§ 13a BauGB]] – Bebauungspläne der Innenentwicklung
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Ermöglicht Bauvorhaben, bevor ein Bebauungsplan in Kraft ist – wenn das Planverfahren weit genug fortgeschritten ist und das Vorhaben zum künftigen Plan passt (sogenannte Planreife).
+>
+> **Abs. 1 – Zulässigkeit bei Planreife:** Ist ein Beschluss über die Aufstellung eines Bebauungsplans gefasst, ist ein Vorhaben zulässig, wenn alle vier Voraussetzungen erfüllt sind: Die Öffentlichkeits- und Behördenbeteiligung nach § 3 Abs. 2, § 4 Abs. 2 und § 4a Abs. 2 bis 4 ist durchgeführt (Nr. 1), es ist anzunehmen, dass das Vorhaben den künftigen Festsetzungen nicht entgegensteht (Nr. 2), der Antragsteller erkennt diese Festsetzungen für sich und seine Rechtsnachfolger schriftlich an (Nr. 3) und die Erschließung ist gesichert (Nr. 4).
+>
+> **Abs. 2 – Zulassung vor erneuter Beteiligung:** In den Fällen des § 4a Abs. 3 Satz 1 – also bei einer erneuten Öffentlichkeits- und Behördenbeteiligung nach Änderung oder Ergänzung des Planentwurfs – kann ein Vorhaben schon vor dieser erneuten Beteiligung zugelassen werden. Voraussetzung ist, dass sich die Änderung oder Ergänzung nicht auf das Vorhaben auswirkt und die Voraussetzungen von Abs. 1 Nr. 2 bis 4 erfüllt sind.
+>
+> **Abs. 3 – Verfahren nach § 13 oder § 13a:** Wird ein Verfahren nach § 13 (vereinfachtes Verfahren) oder nach § 13a (Bebauungspläne der Innenentwicklung) durchgeführt, kann ein Vorhaben schon vor der Öffentlichkeits- und Behördenbeteiligung zugelassen werden, wenn die Voraussetzungen von Abs. 1 Nr. 2 bis 4 erfüllt sind. Vor Erteilung der Genehmigung müssen die betroffene Öffentlichkeit sowie die berührten Behörden und sonstigen Träger öffentlicher Belange Gelegenheit zur Stellungnahme innerhalb angemessener Frist erhalten, soweit sie diese nicht schon zuvor hatten.
+>
+> **Praxis:** Für Bauherren in Gebieten, für die gerade ein Bebauungsplan aufgestellt wird, eröffnet § 33 eine Genehmigung schon vor Inkrafttreten des Plans. Dafür müssen die künftigen Festsetzungen schriftlich anerkannt werden – auch mit Wirkung für Rechtsnachfolger.
 
 ## Quelle
 

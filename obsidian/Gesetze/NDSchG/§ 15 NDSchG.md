@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/4a6e13b8-764b-32a
 weggefallen: false
 gliederung:
   - "Dritter Teil – Ausgrabungen und Bodenfunde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -23,6 +24,19 @@ Eigentümer und Besitzer eines Bodenfundes sind verpflichtet, den Bodenfund auf 
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Auf Verlangen der zuständigen Denkmalschutzbehörde müssen Eigentümer und Besitzer einen Bodenfund für höchstens zwölf Monate zur wissenschaftlichen Auswertung, Konservierung oder Dokumentation überlassen. Im Einzelfall kann die Behörde diesen Zeitraum angemessen verlängern.
+>
+> **Satz 1 – Überlassung auf Verlangen:** Eigentümer und Besitzer eines Bodenfundes müssen ihn auf Verlangen der zuständigen Denkmalschutzbehörde dieser oder einer von ihr benannten Stelle überlassen. Die Überlassung dauert längstens zwölf Monate und dient der wissenschaftlichen Auswertung, der Konservierung oder der Dokumentation.
+>
+> **Satz 2 – Verlängerung im Einzelfall:** Reicht der Zeitraum im Einzelfall für diese Zwecke nicht aus, kann die zuständige Denkmalschutzbehörde ihn angemessen verlängern. Eine feste Höchstdauer für die Verlängerung nennt die Vorschrift nicht.
+>
+> **Praxis:** Wird ein Bodenfund gemacht, kann die zuständige Denkmalschutzbehörde von Eigentümer und Besitzer des Fundes verlangen, ihn vorübergehend zu überlassen. § 15 regelt nur diese vorübergehende Überlassung; Fragen des Eigentums an Funden regelt diese Vorschrift nicht.
 
 ## Quelle
 

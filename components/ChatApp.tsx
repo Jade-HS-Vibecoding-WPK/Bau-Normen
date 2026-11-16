@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { standDatum } from "@/lib/text";
 import type { Antwort, GesetzInfo } from "@/lib/typen";
 import { NormKarte, OrtKarte } from "./Karten";
+import { ObsidianKnopf } from "./Obsidian";
 import { Logo } from "./Symbole";
 
 interface Eintrag {
@@ -18,7 +19,7 @@ type Anfrage = { text: string } | { adresse: { strasse: string; hausnummer: stri
 
 const uhrzeit = () => new Date().toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
 
-export default function ChatApp({ gesetze }: { gesetze: GesetzInfo[] }) {
+export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo[]; obsidianPfad: string | null }) {
   const [verlauf, setVerlauf] = useState<Eintrag[]>([]);
   const [eingabe, setEingabe] = useState("");
   const [laedt, setLaedt] = useState(false);
@@ -75,6 +76,7 @@ export default function ChatApp({ gesetze }: { gesetze: GesetzInfo[] }) {
               </span>
             ))}
             <span className="tag-prototyp">Prototyp</span>
+            <ObsidianKnopf vaultPfad={obsidianPfad} />
           </div>
         </div>
         <div className="massband" aria-hidden="true" />
@@ -217,7 +219,7 @@ export default function ChatApp({ gesetze }: { gesetze: GesetzInfo[] }) {
                 </div>
               ) : (
                 <div key={e.id} className="antworten" ref={i === verlauf.length - 1 ? letzteRef : undefined}>
-                  {e.antworten?.map((a, j) => <AntwortAnzeige key={j} a={a} frage={frage} />)}
+                  {e.antworten?.map((a, j) => <AntwortAnzeige key={j} a={a} frage={frage} obsidianPfad={obsidianPfad} />)}
                 </div>
               ),
             )}
@@ -261,10 +263,10 @@ export default function ChatApp({ gesetze }: { gesetze: GesetzInfo[] }) {
   );
 }
 
-function AntwortAnzeige({ a, frage }: { a: Antwort; frage: (t: string) => void }) {
+function AntwortAnzeige({ a, frage, obsidianPfad }: { a: Antwort; frage: (t: string) => void; obsidianPfad: string | null }) {
   switch (a.art) {
     case "norm":
-      return <NormKarte a={a.ansicht} frage={frage} />;
+      return <NormKarte a={a.ansicht} frage={frage} obsidianPfad={obsidianPfad} />;
     case "ort":
       return <OrtKarte o={a.ort} frage={frage} />;
     case "text":

@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/34b7e40b-88a5-332
 weggefallen: false
 gliederung:
   - "Zweiter Teil – Erhaltung von Kulturdenkmalen"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -38,6 +39,27 @@ will.
 ## Verweist auf
 
 - [[§ 3 NDSchG]] – Begriffsbestimmungen
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Zentrale Vorschrift für Arbeiten am Denkmal und in seiner Umgebung: Zerstören, Verändern, Instandsetzen, Wiederherstellen, Versetzen, Aufschriften und Werbeeinrichtungen, Nutzungsänderungen sowie Anlagen in der Umgebung eines Baudenkmals, die sein Erscheinungsbild beeinflussen, brauchen grundsätzlich eine denkmalrechtliche Genehmigung. Ist eine Baugenehmigung erforderlich, schließt diese die denkmalrechtliche Genehmigung ein.
+>
+> **Abs. 1 – Genehmigungspflichtige Maßnahmen:** Eine Genehmigung der Denkmalschutzbehörde braucht, wer (1) ein Kulturdenkmal zerstören, verändern, instandsetzen oder wiederherstellen, (2) ein Kulturdenkmal oder einen in § 3 Abs. 3 genannten Teil eines Baudenkmals von seinem Standort entfernen oder mit Aufschriften oder Werbeeinrichtungen versehen, (3) die Nutzung eines Baudenkmals ändern oder (4) in der Umgebung eines Baudenkmals Anlagen, die das Erscheinungsbild des Denkmals beeinflussen, errichten, ändern oder beseitigen will. Bei Nr. 4 genügt nach dem Wortlaut, dass die Anlage das Erscheinungsbild beeinflusst; ob sie es beeinträchtigt, spielt erst bei der Entscheidung über die Genehmigung eine Rolle.
+>
+> **Abs. 2 – Ausnahme für Instandsetzung unbedeutender Teile:** Instandsetzungsarbeiten brauchen keine Genehmigung, wenn sie sich nur auf Teile des Kulturdenkmals auswirken, die für seinen Denkmalwert ohne Bedeutung sind. Die Ausnahme gilt nur für Instandsetzungen, nicht für die übrigen Maßnahmen nach Abs. 1.
+>
+> **Abs. 3 – Versagung, Bedingungen und Auflagen:** Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen würde. Sie kann unter Bedingungen oder mit Auflagen (zusätzlichen Pflichten) erteilt werden, soweit das nötig ist, um die Einhaltung des Gesetzes zu sichern. Insbesondere kann verlangt werden, dass ein bestimmter Sachverständiger die Arbeiten leitet, dass ein Baudenkmal an anderer Stelle wieder aufgebaut wird oder dass bestimmte Bauteile erhalten bleiben oder in einer anderen baulichen Anlage wiederverwendet werden.
+>
+> **Abs. 4 – Baugenehmigung schließt Denkmalgenehmigung ein:** Ist für eine Maßnahme eine Baugenehmigung erforderlich oder eine behördliche Entscheidung, die die Baugenehmigung einschließt oder ersetzt, dann umfasst diese die denkmalrechtliche Genehmigung nach Abs. 1. Abs. 3 gilt entsprechend: Auch diese Entscheidung ist zu versagen, soweit die Maßnahme gegen das Denkmalschutzgesetz verstoßen würde, und sie kann entsprechende Bedingungen und Auflagen enthalten.
+>
+> **Abs. 5 – Ausnahmen für Bund, Land und Klosterkammer:** Keine Genehmigung der Denkmalschutzbehörde brauchen Maßnahmen an Kulturdenkmalen im Eigentum oder Besitz des Bundes oder des Landes, wenn die Leitung der Entwurfsarbeiten und die Bauüberwachung dem Staatlichen Baumanagement Niedersachsen übertragen sind. Dasselbe gilt für Maßnahmen der Klosterkammer Hannover an Kulturdenkmalen im Eigentum oder Besitz einer von ihr verwalteten Stiftung. Diese Maßnahmen sind dem Landesamt für Denkmalpflege mit Planungsbeginn anzuzeigen.
+>
+> **Abs. 6 – Beteiligung des Landesamts:** Werden Maßnahmen an Kulturdenkmalen im Eigentum oder Besitz des Bundes oder des Landes nicht durch das Staatliche Baumanagement Niedersachsen betreut, ist der Genehmigungsantrag an die Denkmalschutzbehörde zeitgleich auch dem Landesamt für Denkmalpflege zu übermitteln.
+>
+> **Praxis:** Vor jeder Arbeit an einem Kulturdenkmal – auch vor Reparaturen und Nutzungsänderungen – und vor Vorhaben in der Umgebung eines Baudenkmals ist die Genehmigungspflicht zu prüfen. Ist ohnehin eine Baugenehmigung nötig, ist die denkmalrechtliche Genehmigung darin enthalten; sonst braucht es eine eigene Genehmigung der Denkmalschutzbehörde, soweit keine Ausnahme nach Abs. 2 oder 5 greift. Mögliche Auflagen, etwa die Leitung durch einen bestimmten Sachverständigen oder der Erhalt bestimmter Bauteile, sollten in Zeit- und Kostenplanung berücksichtigt werden.
 
 ## Quelle
 

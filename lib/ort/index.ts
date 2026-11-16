@@ -6,6 +6,7 @@
 import { alleGesetze } from "../gesetze";
 import type { NormRef, OrtAnsicht } from "../typen";
 import { BPLAN_QUELLE, BPLAN_VIEWER, bplaeneAmPunkt } from "./bplan";
+import { planDokumente, weiterePlaene } from "./bplan-dokumente";
 import { DENKMAL_QUELLE, DENKMAL_VIEWER, denkmaleImUmkreis } from "./denkmal";
 import { findeStandort } from "./standort";
 
@@ -45,7 +46,12 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
     };
   }
 
-  const [bp, dm] = await Promise.all([bplaeneAmPunkt(standort.lat, standort.lon), denkmaleImUmkreis(standort.lat, standort.lon, RADIUS_M)]);
+  const [bp, dm, dokumente, weitere] = await Promise.all([
+    bplaeneAmPunkt(standort.lat, standort.lon),
+    denkmaleImUmkreis(standort.lat, standort.lon, RADIUS_M),
+    planDokumente(standort.lat, standort.lon),
+    weiterePlaene(standort.lat, standort.lon),
+  ]);
 
   if (!standort.hausnummerGefunden) {
     einordnung.push({
@@ -69,7 +75,8 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
       ton: "achtung",
     });
   } else if (bp.plaene.length) {
-    bplan = { status: "gefunden", plaene: bp.plaene, quelle: BPLAN_QUELLE };
+    const mitDokumenten = bp.plaene.map((p) => ({ ...p, dokumente: dokumente?.get(p.nummer) ?? [] }));
+    bplan = { status: "gefunden", plaene: mitDokumenten, weitere, dokumenteAbrufbar: dokumente !== null, quelle: BPLAN_QUELLE };
     const vhb = bp.plaene.some((p) => p.vorhabenbezogen);
     const liste = bp.plaene.map((p) => `Nr. ${p.nummer} „${p.name}“`).join(", ");
     einordnung.push({
@@ -85,7 +92,7 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
       ton: "info",
     });
   } else {
-    bplan = { status: "keiner", plaene: [], quelle: BPLAN_QUELLE };
+    bplan = { status: "keiner", plaene: [], weitere, dokumenteAbrufbar: dokumente !== null, quelle: BPLAN_QUELLE };
     einordnung.push({
       thema: "Bauplanungsrecht",
       titel: "Kein rechtsverbindlicher Bebauungsplan verzeichnet",
@@ -95,6 +102,54 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
       paragraphen: refs("baugb", ["34", "35"]),
       ton: "info",
     });
+  }
+
+  // --- Laufende Planungen und Sicherungsinstrumente (Kartenportal der Stadt) ---
+  if (weitere === null) {
+    einordnung.push({
+      thema: "Bauplanungsrecht",
+      titel: "Laufende Verfahren nicht abrufbar",
+      text: "Ob für den Standort ein Bebauungsplan in Aufstellung ist oder eine Veränderungssperre gilt, konnte nicht abgefragt werden. Bitte im Kartenportal der Stadt Oldenburg prüfen.",
+      paragraphen: [],
+      ton: "achtung",
+    });
+  } else {
+    const liste = (art: string) =>
+      weitere
+        .filter((w) => w.art === art)
+        .map((w) => [w.nummer && `Nr. ${w.nummer}`, w.name && `„${w.name}“`, w.hinweis && `(${w.hinweis})`].filter(Boolean).join(" "))
+        .join(", ");
+    if (weitere.some((w) => w.art === "veraenderungssperre")) {
+      einordnung.push({
+        thema: "Bauplanungsrecht",
+        titel: "Veränderungssperre verzeichnet",
+        text:
+          `Im Kartenportal der Stadt ist für den Standort eine Veränderungssperre verzeichnet: ${liste("veraenderungssperre")}. ` +
+          "Eine Veränderungssperre kann insbesondere bestimmen, dass Vorhaben im Sinne des § 29 BauGB nicht durchgeführt und bauliche Anlagen nicht beseitigt werden dürfen. Ausnahmen sind möglich, wenn überwiegende öffentliche Belange nicht entgegenstehen (§ 14 Abs. 2 BauGB).",
+        paragraphen: refs("baugb", ["14", "16", "17"]),
+        ton: "achtung",
+      });
+    }
+    if (weitere.some((w) => w.art === "in-aufstellung")) {
+      einordnung.push({
+        thema: "Bauplanungsrecht",
+        titel: "Bebauungsplan in Aufstellung",
+        text:
+          `Im Kartenportal der Stadt ist für den Standort ein Bebauungsplan in Aufstellung verzeichnet: ${liste("in-aufstellung")}. ` +
+          "Während der Planaufstellung kann ein Vorhaben unter den Voraussetzungen des § 33 BauGB zulässig sein. Die Gemeinde kann die Planung durch eine Veränderungssperre (§ 14 BauGB) oder die Zurückstellung von Baugesuchen (§ 15 BauGB) sichern.",
+        paragraphen: refs("baugb", ["33", "14", "15"]),
+        ton: "achtung",
+      });
+    }
+    if (weitere.some((w) => w.art === "unwirksam")) {
+      einordnung.push({
+        thema: "Bauplanungsrecht",
+        titel: "Für unwirksam erklärter Bebauungsplan",
+        text: `Im Kartenportal der Stadt ist für den Standort ein Bebauungsplan als „unwirksam durch OVG“ geführt: ${liste("unwirksam")}. Welche Rechtslage stattdessen gilt, sollte beim Stadtplanungsamt geklärt werden.`,
+        paragraphen: [],
+        ton: "achtung",
+      });
+    }
   }
 
   // --- Denkmalrecht ---

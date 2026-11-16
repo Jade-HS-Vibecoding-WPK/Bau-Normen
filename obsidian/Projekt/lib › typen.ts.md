@@ -2,7 +2,7 @@
 pfad: "lib/typen.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 100
+zeilen: 115
 beschreibung: "Gemeinsame Datentypen für Server und Oberfläche."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/typen.ts
 
-**Pfad:** `lib/typen.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 100
+**Pfad:** `lib/typen.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 115
 
 ## Kurzbeschreibung
 

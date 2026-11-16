@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -35,6 +36,19 @@ Auf Planfeststellungsverfahren und sonstige Verfahren mit den Rechtswirkungen de
 - [[§ 36a BauGB]] – Zustimmung der Gemeinde
 - [[§ 37 BauGB]] – Bauliche Maßnahmen des Bundes und der Länder
 - [[§ 7 BauGB]] – Anpassung an den Flächennutzungsplan
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Für Planfeststellungsverfahren bei Vorhaben von überörtlicher Bedeutung und für bestimmte Verfahren bei öffentlich zugänglichen Abfallbeseitigungsanlagen gelten die Zulässigkeitsregeln der §§ 29 bis 37 nicht – vorausgesetzt, die Gemeinde wird beteiligt. Städtebauliche Belange sind trotzdem zu berücksichtigen.
+>
+> **Satz 1 – Vorrang der Fachplanung:** Auf Planfeststellungsverfahren (förmliche Zulassungsverfahren nach Fachgesetzen) und sonstige Verfahren mit den Rechtswirkungen der Planfeststellung für Vorhaben von überörtlicher Bedeutung sind die §§ 29 bis 37 nicht anzuwenden, wenn die Gemeinde beteiligt wird. Dasselbe gilt für die Verfahren, die nach dem Bundes-Immissionsschutzgesetz für die Errichtung und den Betrieb öffentlich zugänglicher Abfallbeseitigungsanlagen gelten. Städtebauliche Belange sind dabei zu berücksichtigen.
+>
+> **Satz 2 und 3 – Bindung an den Flächennutzungsplan und Kostenersatz:** Eine Bindung nach § 7 bleibt bestehen; danach müssen beteiligte öffentliche Planungsträger ihre Planungen dem Flächennutzungsplan anpassen, soweit sie ihm nicht widersprochen haben. § 37 Abs. 3 ist anzuwenden: Aufwendungen der Gemeinde für Entschädigungen nach diesem Gesetzbuch und Kosten für einen deswegen aufzustellenden, zu ändernden, zu ergänzenden oder aufzuhebenden Bebauungsplan sind vom Träger der Maßnahmen zu ersetzen.
+>
+> **Praxis:** Bei Fachplanungen von überörtlicher Bedeutung wird die planungsrechtliche Zulässigkeit nicht nach den §§ 29 bis 37 geprüft. Die Gemeinde muss jedoch beteiligt werden, städtebauliche Belange sind zu berücksichtigen, und der Träger muss der Gemeinde dadurch entstehende Entschädigungs- und Planungskosten ersetzen.
 
 ## Quelle
 

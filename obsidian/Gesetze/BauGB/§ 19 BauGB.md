@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Zweiter Teil – Sicherung der Bauleitplanung"
   - "Zweiter Abschnitt – Teilung von Grundstücken; Gebiete mit Fremdenverkehrsfunktionen"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -27,6 +28,19 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Zweiter Teil – Si
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Definiert, was rechtlich als Teilung eines Grundstücks gilt, und verbietet Teilungen im Geltungsbereich eines Bebauungsplans, die zu planwidrigen Verhältnissen führen.
+>
+> **Abs. 1 – Begriff der Teilung:** Eine Teilung ist die Erklärung des Eigentümers – gegenüber dem Grundbuchamt abgegeben oder auf andere Weise erkennbar gemacht –, dass ein Grundstücksteil im Grundbuch abgeschrieben (also aus dem bisherigen Grundstück herausgelöst) und als selbständiges Grundstück oder zusammen mit anderen Grundstücken oder Teilen anderer Grundstücke eingetragen werden soll.
+>
+> **Abs. 2 – keine planwidrigen Verhältnisse:** Im Geltungsbereich eines B-Plans dürfen durch die Teilung keine Verhältnisse entstehen, die den Festsetzungen des Plans widersprechen.
+>
+> **Praxis:** Vor einer Grundstücksteilung im B-Plan-Gebiet ist zu prüfen, ob die neuen Grundstücke und die vorhandene Bebauung weiterhin zu den Festsetzungen passen – etwa zu festgesetzten Mindestmaßen für Baugrundstücke oder zu den überbaubaren Grundstücksflächen.
 
 ## Quelle
 

@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Zweiter Teil – Sicherung der Bauleitplanung"
   - "Dritter Abschnitt – Gesetzliche Vorkaufsrechte der Gemeinde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -32,6 +33,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Zweiter Teil – Si
 - [[§ 177 BauGB]] – Modernisierungs- und Instandsetzungsgebot
 - [[§ 24 BauGB]] – Allgemeines Vorkaufsrecht
 - [[§ 45 BauGB]] – Zweck und Anwendungsbereich
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Der Käufer kann verhindern, dass die Gemeinde ihr Vorkaufsrecht ausübt (Abwendung), wenn er sich rechtzeitig verpflichtet, das Grundstück entsprechend den baurechtlichen Vorgaben oder den Zielen der städtebaulichen Maßnahme zu nutzen oder vorhandene Missstände zu beseitigen.
+>
+> **Abs. 1 Satz 1 – Abwendung durch Nutzungsverpflichtung:** Der Käufer kann die Ausübung abwenden, wenn die Verwendung des Grundstücks nach den baurechtlichen Vorschriften oder den Zielen und Zwecken der städtebaulichen Maßnahme bestimmt oder mit ausreichender Sicherheit bestimmbar ist, er in der Lage ist, das Grundstück binnen angemessener Frist entsprechend zu nutzen, und er sich dazu vor Ablauf der Frist nach § 28 Abs. 2 Satz 1 verpflichtet. Das ist die Frist, in der die Gemeinde das Vorkaufsrecht ausüben kann (drei Monate nach Mitteilung des Kaufvertrags).
+>
+> **Abs. 1 Satz 2 – Abwendung durch Beseitigung von Missständen:** Weist eine bauliche Anlage auf dem Grundstück Missstände oder Mängel im Sinne des § 177 Abs. 2 und 3 Satz 1 auf, kann der Käufer die Ausübung abwenden, wenn er diese binnen angemessener Frist beseitigen kann und sich vor Ablauf der Frist nach § 28 Abs. 2 Satz 1 zur Beseitigung verpflichtet.
+>
+> **Abs. 1 Satz 3 – Fristverlängerung:** Auf Antrag des Käufers muss die Gemeinde die Frist nach § 28 Abs. 2 Satz 1 um zwei Monate verlängern, wenn er vor Ablauf dieser Frist glaubhaft macht, dass er die Voraussetzungen nach Satz 1 oder 2 erfüllen kann.
+>
+> **Abs. 2 – Kein Abwendungsrecht:** Eine Abwendung ist nicht möglich beim Vorkaufsrecht nach § 24 Abs. 1 Satz 1 Nr. 1 (im Bebauungsplan festgesetzte Flächen für öffentliche Zwecke oder für Ausgleich) und in einem Umlegungsgebiet, wenn das Grundstück für Zwecke der Umlegung (§ 45) benötigt wird.
+>
+> **Praxis:** Für Käufer ist die Abwendung ein Weg, den Erwerb trotz bestehenden Vorkaufsrechts zu behalten. Entscheidend ist, die Verpflichtung vor Ablauf der Ausübungsfrist zu erklären und – wenn mehr Zeit nötig ist – rechtzeitig die Verlängerung um zwei Monate zu beantragen und die Voraussetzungen glaubhaft zu machen.
 
 ## Quelle
 

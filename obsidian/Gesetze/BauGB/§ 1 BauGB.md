@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Erster Abschnitt – Allgemeine Vorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -71,6 +72,35 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Die Grundvorschrift der Bauleitplanung legt fest, wozu Flächennutzungs- und Bebauungspläne dienen, wann eine Gemeinde sie aufstellen muss und welche Ziele und Belange dabei zu berücksichtigen und gerecht gegeneinander abzuwägen sind. Wichtig für Gemeinden, Planende und alle, deren Grundstücke von einer Planung berührt sind.
+>
+> **Abs. 1 – Aufgabe der Bauleitplanung:** Bauleitplanung soll die bauliche und sonstige Nutzung der Grundstücke in der Gemeinde vorbereiten und leiten – nach den Regeln des Baugesetzbuchs.
+>
+> **Abs. 2 – Zwei Arten von Bauleitplänen:** Bauleitpläne sind der Flächennutzungsplan (F-Plan) als vorbereitender Bauleitplan und der Bebauungsplan (B-Plan) als verbindlicher Bauleitplan.
+>
+> **Abs. 3 – Planungspflicht, aber kein Anspruch auf Planung:** Die Gemeinde muss Bauleitpläne aufstellen, sobald und soweit das für die städtebauliche Entwicklung und Ordnung erforderlich ist; das kann insbesondere bei der Ausweisung von Flächen für den Wohnungsbau in Betracht kommen. Einen Anspruch darauf, dass ein Bauleitplan oder eine städtebauliche Satzung aufgestellt wird, hat niemand – und ein solcher Anspruch kann auch nicht durch einen Vertrag begründet werden.
+>
+> **Abs. 4 – Anpassung an die Raumordnung:** Bauleitpläne müssen an die Ziele der Raumordnung angepasst werden. Gemeint sind die verbindlichen Vorgaben der übergeordneten, überörtlichen Raumplanung.
+>
+> **Abs. 5 – Leitziele: nachhaltige Entwicklung, Klima, Baukultur:** Bauleitpläne sollen eine nachhaltige städtebauliche Entwicklung gewährleisten, die soziale, wirtschaftliche und umweltschützende Anforderungen – auch in Verantwortung gegenüber künftigen Generationen – in Einklang bringt, sowie eine sozialgerechte, dem Wohl der Allgemeinheit dienende Bodennutzung, die die Wohnbedürfnisse der Bevölkerung berücksichtigt. Sie sollen außerdem beitragen zu einer menschenwürdigen Umwelt, zum Schutz und zur Entwicklung der natürlichen Lebensgrundlagen, zu Klimaschutz und Klimaanpassung (insbesondere auch in der Stadtentwicklung), zu einer treibhausgasneutralen Wärme- und Energieversorgung von Gebäuden zur Erfüllung der Klimaschutzziele des Bundes-Klimaschutzgesetzes sowie zur baukulturellen Erhaltung und Entwicklung der städtebaulichen Gestalt und des Orts- und Landschaftsbildes. Dazu soll die städtebauliche Entwicklung vorrangig durch Maßnahmen der Innenentwicklung erfolgen, also im bereits bebauten Bereich.
+>
+> **Abs. 6 Nr. 1 bis 6 – Belange: Menschen, Wohnen, Soziales, Ortsbild:** Bei der Aufstellung sind insbesondere – die Liste ist also nicht abschließend – zu berücksichtigen: gesunde Wohn- und Arbeitsverhältnisse und die Sicherheit der Wohn- und Arbeitsbevölkerung (Nr. 1); die Wohnbedürfnisse der Bevölkerung, auch von Familien mit mehreren Kindern, sozial stabile Bewohnerstrukturen, die Eigentumsbildung weiter Kreise der Bevölkerung, kostensparendes Bauen und die Bevölkerungsentwicklung (Nr. 2); soziale und kulturelle Bedürfnisse, insbesondere von Familien, jungen, alten und behinderten Menschen, unterschiedliche Auswirkungen auf Frauen und Männer sowie Bildung, Sport, Freizeit und Erholung (Nr. 3). Ebenso: Erhaltung, Erneuerung, Fortentwicklung, Anpassung und Umbau vorhandener Ortsteile sowie Erhaltung und Entwicklung zentraler Versorgungsbereiche (Nr. 4); Baukultur, Denkmalschutz und Denkmalpflege, erhaltenswerte Ortsteile, Straßen und Plätze von geschichtlicher, künstlerischer oder städtebaulicher Bedeutung und die Gestaltung des Orts- und Landschaftsbildes (Nr. 5); die von Kirchen und Religionsgesellschaften des öffentlichen Rechts festgestellten Erfordernisse für Gottesdienst und Seelsorge (Nr. 6).
+>
+> **Abs. 6 Nr. 7 – Belange des Umweltschutzes:** Zu berücksichtigen sind die Belange des Umweltschutzes einschließlich Naturschutz und Landschaftspflege, insbesondere: Auswirkungen auf Tiere, Pflanzen, Fläche, Boden, Wasser, Luft, Klima und ihr Wirkungsgefüge sowie auf Landschaft und biologische Vielfalt (a); Erhaltungsziele und Schutzzweck der Natura 2000-Gebiete, also der europäischen Schutzgebiete im Sinne des Bundesnaturschutzgesetzes (b); umweltbezogene Auswirkungen auf den Menschen, seine Gesundheit und die Bevölkerung insgesamt sowie auf Kulturgüter und sonstige Sachgüter (c, d); Vermeidung von Emissionen und sachgerechter Umgang mit Abfällen und Abwässern (e); Nutzung erneuerbarer Energien, insbesondere auch bei der Wärmeversorgung von Gebäuden, sowie sparsame und effiziente Energienutzung (f). Ferner: Darstellungen von Landschaftsplänen und sonstigen Plänen, insbesondere des Wasser-, Abfall- und Immissionsschutzrechts, Darstellungen in Wärmeplänen sowie Entscheidungen über die Ausweisung als Gebiet zum Neu- oder Ausbau von Wärmenetzen oder als Wasserstoffnetzausbaugebiet nach § 26 des Wärmeplanungsgesetzes (g); die Erhaltung der bestmöglichen Luftqualität in Gebieten, in denen die per Rechtsverordnung zur Erfüllung von EU-Rechtsakten festgelegten Immissionsgrenzwerte nicht überschritten werden (h); Wechselwirkungen zwischen den Belangen a bis d (i). Schließlich die Auswirkungen auf die Belange a bis d und i, die wegen der Anfälligkeit der nach dem Bebauungsplan zulässigen Vorhaben für schwere Unfälle oder Katastrophen zu erwarten sind; § 50 Satz 1 des Bundes-Immissionsschutzgesetzes bleibt davon unberührt (j).
+>
+> **Abs. 6 Nr. 8 bis 14 – Belange: Wirtschaft, Verkehr, Sicherheit, Grün:** Weiter zu berücksichtigen sind die Belange der Wirtschaft – auch ihrer mittelständischen Struktur im Interesse einer verbrauchernahen Versorgung, einschließlich Bestands- und Entwicklungsinteressen –, der Land- und Forstwirtschaft, der Erhaltung, Sicherung und Schaffung von Arbeitsplätzen, des Post- und Telekommunikationswesens (insbesondere Mobilfunkausbau), der Versorgung, insbesondere mit Energie und Wasser, einschließlich Versorgungssicherheit, und der Sicherung von Rohstoffvorkommen (Nr. 8). Hinzu kommen Personen- und Güterverkehr und Mobilität, mit besonderem Blick auf eine städtebauliche Entwicklung, die Verkehr vermeidet und verringert, einschließlich der Bestands- und Entwicklungsinteressen bei Verkehrsanlagen sowie der Belange des öffentlichen Personennahverkehrs, des Verkehrs mit elektrisch betriebenen Kraftfahrzeugen und des nicht motorisierten Verkehrs (Nr. 9); Verteidigung, Zivilschutz und zivile Anschlussnutzung von Militärliegenschaften (Nr. 10); Ergebnisse eines von der Gemeinde beschlossenen städtebaulichen Entwicklungskonzepts oder einer sonstigen von ihr beschlossenen städtebaulichen Planung (Nr. 11). Schließlich: Küsten- oder Hochwasserschutz und Hochwasservorsorge, insbesondere Vermeidung und Verringerung von Hochwasserschäden (Nr. 12); Belange von Flüchtlingen oder Asylbegehrenden und ihrer Unterbringung (Nr. 13); ausreichende Versorgung mit Grün- und Freiflächen (Nr. 14).
+>
+> **Abs. 7 – Gerechte Abwägung:** Die öffentlichen und privaten Belange sind gegeneinander und untereinander gerecht abzuwägen. Die Gemeinde muss die berührten Interessen also gewichten und zu einem gerechten Ausgleich bringen; private Belange gehören ausdrücklich dazu.
+>
+> **Abs. 8 – Änderung, Ergänzung, Aufhebung:** Die Vorschriften des Baugesetzbuchs über die Aufstellung von Bauleitplänen gelten auch für deren Änderung, Ergänzung und Aufhebung.
+>
+> **Praxis:** Einen neuen oder geänderten Bebauungsplan für ein Vorhaben kann niemand erzwingen: Es besteht kein Anspruch auf die Planung, auch nicht über einen Vertrag mit der Gemeinde (Abs. 3). Die Gemeinde entscheidet nach gerechter Abwägung aller Belange (Abs. 7); der Katalog in Abs. 6 zeigt, welche Themen dabei insbesondere zu berücksichtigen sind.
 
 ## Quelle
 

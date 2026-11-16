@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -31,6 +32,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 - [[§ 31 BauGB]] – Ausnahmen und Befreiungen
 - [[§ 34 BauGB]] – Zulässigkeit von Vorhaben innerhalb der im Zusammenhang bebauten Ortsteile
 - [[§ 36 BauGB]] – Einvernehmen der Gemeinde und Zustimmung der höheren Verwaltungsbehörde
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Befreiungen zugunsten des Wohnungsbaus nach § 31 Abs. 3 und Vorhaben nach § 34 Abs. 3b sind nur mit Zustimmung der Gemeinde zulässig. Maßstab sind die Vorstellungen der Gemeinde von der städtebaulichen Entwicklung und Ordnung.
+>
+> **Abs. 1 Satz 1 und 2 – Zustimmungspflicht und Maßstab:** Vorhaben nach § 31 Abs. 3 und § 34 Abs. 3b sind nur mit Zustimmung der Gemeinde zulässig – auch dann, wenn die Gemeinde selbst die zuständige Bauaufsichtsbehörde ist. Die Gemeinde erteilt die Zustimmung, wenn das Vorhaben mit ihren Vorstellungen von der städtebaulichen Entwicklung und Ordnung vereinbar ist.
+>
+> **Abs. 1 Satz 3 und 4 – Bedingungen und Zustimmungsfiktion:** Die Gemeinde kann ihre Zustimmung unter der Bedingung erteilen, dass sich der Vorhabenträger verpflichtet, bestimmte städtebauliche Anforderungen einzuhalten. Die Zustimmung gilt als erteilt, wenn die Gemeinde sie nicht binnen drei Monaten nach Eingang des Ersuchens der Genehmigungsbehörde verweigert; schreibt das Landesrecht die Einreichung des Antrags bei der Gemeinde vor, steht diese dem Ersuchen gleich (§ 36 Abs. 2 Satz 2 zweiter Halbsatz entsprechend).
+>
+> **Abs. 2 – Beteiligung der Öffentlichkeit:** Die Gemeinde kann der betroffenen Öffentlichkeit vor ihrer Entscheidung Gelegenheit zur Stellungnahme zum Antrag geben, innerhalb angemessener Frist von höchstens einem Monat. Die dreimonatige Entscheidungsfrist verlängert sich dann um die Dauer dieser Stellungnahmefrist.
+>
+> **Abs. 3 – Rechtsschutz:** Die Entscheidung der Gemeinde über die Zustimmung kann nur im Rahmen des Rechtsbehelfsverfahrens gegen die Zulassungsentscheidung über das Vorhaben überprüft werden, nicht gesondert.
+>
+> **Praxis:** Anders als beim Einvernehmen nach § 36 ist Maßstab hier, ob das Vorhaben zu den Vorstellungen der Gemeinde von der städtebaulichen Entwicklung und Ordnung passt. Eine frühe Abstimmung mit der Gemeinde ist daher sinnvoll; sie kann ihre Zustimmung an städtebauliche Verpflichtungen des Vorhabenträgers knüpfen.
 
 ## Quelle
 

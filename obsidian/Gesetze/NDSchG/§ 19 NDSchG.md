@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/a8457a16-187a-39e
 weggefallen: false
 gliederung:
   - "Vierter Teil – Denkmalbehörden"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -29,6 +30,23 @@ NDSchG › [[NDSchG Teil 4 – Denkmalbehörden|Vierter Teil – Denkmalbehörde
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Legt fest, welche Behörden Denkmalschutzbehörden sind: Untere Denkmalschutzbehörden sind bestimmte Gemeinden oder die Landkreise, oberste Denkmalschutzbehörde ist das Fachministerium. Wichtig, um den richtigen Ansprechpartner zu finden.
+>
+> **Abs. 1 – Untere und oberste Denkmalschutzbehörde:** Untere Denkmalschutzbehörde ist eine Gemeinde, wenn sie auch die Aufgaben der unteren Bauaufsichtsbehörde wahrnimmt; im Übrigen ist es der Landkreis. Oberste Denkmalschutzbehörde ist das zuständige Fachministerium.
+>
+> **Abs. 2 – Übertragener Wirkungskreis:** Gemeinden und Landkreise erledigen die Aufgaben der unteren Denkmalschutzbehörde im übertragenen Wirkungskreis. Das heißt: Es handelt sich um staatliche Aufgaben, die ihnen übertragen wurden, nicht um eigene Selbstverwaltungsangelegenheiten.
+>
+> **Abs. 3 – Fachaufsicht:** Die oberste Denkmalschutzbehörde führt die Fachaufsicht über die unteren Denkmalschutzbehörden. Sie kann also prüfen, ob diese ihre Aufgaben rechtmäßig und zweckmäßig erfüllen, und ihnen Weisungen erteilen.
+>
+> **Abs. 4 – Handeln anstelle der unteren Behörde:** Befolgt eine untere Denkmalschutzbehörde eine Weisung nicht innerhalb einer bestimmten Frist oder ist Gefahr im Verzug (ohne sofortiges Handeln droht ein Schaden), kann die oberste Denkmalschutzbehörde selbst an ihrer Stelle tätig werden oder anordnen, dass das Landesamt für Denkmalpflege an ihrer Stelle tätig wird. Die zuständige Denkmalschutzbehörde ist über die getroffene Maßnahme unverzüglich zu unterrichten.
+>
+> **Praxis:** Ansprechpartner vor Ort ist die untere Denkmalschutzbehörde: in Gemeinden, die selbst untere Bauaufsichtsbehörde sind, bei der Gemeinde, sonst beim Landkreis. Sie handelt dabei unter der Fachaufsicht des Ministeriums.
 
 ## Quelle
 

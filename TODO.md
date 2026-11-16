@@ -25,8 +25,12 @@
 - [x] Obsidian-Export (`npm run obsidian`): 428 Notizen – Paragraphen (Wortlaut per Selbsttest geprüft), Gliederung als Baum, Projektdateien mit Abhängigkeiten; Ordner `obsidian/` als Vault öffnen
 
 ## Tag 2 – 17.11.
-- [ ] Dauerhaftes Prüfprogramm: jeden gespeicherten Paragraphen gegen die amtliche Einzelseite vergleichen (BauGB + NDSchG)
-- [ ] Erläuterungen für alle Paragraphen (fest gespeichert, zur Laufzeit keine KI) – *wartet auf Entscheidung, siehe unten*
+- [x] Dauerhaftes Prüfprogramm `node scripts/wortlaut-pruefen.mjs`: BauGB 297/297 Zeichen für Zeichen identisch mit den amtlichen Einzelseiten (16.11.2026); NDSchG beim Import gegen NI-VORIS geprüft
+- [x] B-Plan-Dokumente (Planzeichnung, Begründung als PDF) in der Ortsauskunft verlinkt, dazu Pläne in Aufstellung, Veränderungssperren, unwirksame Pläne
+- [x] Obsidian-Button im Kopf + „Notiz öffnen“ je Paragraph
+- [x] Erläuterungen fest gespeichert (zur Laufzeit keine KI): BauGB §§ 1–38 (47) und NDSchG komplett (41), Status „Entwurf“, automatisch geprüft (`node scripts/erlaeuterungen-pruefen.mjs`)
+- [ ] Erläuterungen für die übrigen BauGB-Paragraphen (§§ 39–250)
+- [ ] Fachliche Prüfung der Erläuterungen anhand von `data/erlaeuterungen/PRUEFHINWEISE.md`, danach Status „geprüft“
 - [ ] Kartenausschnitt in der Ortsauskunft: Standort, B-Plan-Umring, Denkmalflächen
 - [ ] Stichwortverzeichnis erweitern, mehr Testfälle (Ziel: 50)
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)
@@ -57,5 +61,4 @@
 - [ ] NDSchG-Novelle (liegt beim Landtag) einpflegen, sobald verkündet
 
 ## Offene Fragen
-- Erläuterungen: Dürfen sie während der Entwicklung (mit KI) geschrieben und dann **fest gespeichert** werden – die App selbst braucht dafür keine KI? Oder sollen sie komplett auf „nach den 4 Tagen“?
 - Rohdaten NI-VORIS: Der Anbieter behält sich Text- und Data-Mining vor. Der Gesetzestext selbst ist gemeinfrei (§ 5 UrhG); die Roh-HTML-Seiten werden deshalb nicht ins Repo übernommen. Für eine kommerzielle Nutzung erneut prüfen.

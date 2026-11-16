@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Dritter Abschnitt – Verbindlicher Bauleitplan (Bebauungsplan)"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -31,6 +32,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Der Bebauungsplan enthält die rechtsverbindlichen Festsetzungen für die städtebauliche Ordnung. Er ist grundsätzlich aus dem Flächennutzungsplan zu entwickeln; die Vorschrift regelt auch Sonderfälle (Bebauungsplan ohne Flächennutzungsplan, Parallelverfahren, vorzeitiger Bebauungsplan).
+>
+> **Abs. 1 – Rechtsverbindliche Festsetzungen:** Der Bebauungsplan enthält die rechtsverbindlichen Festsetzungen für die städtebauliche Ordnung. Er bildet die Grundlage für weitere Maßnahmen, die zum Vollzug des Baugesetzbuchs erforderlich sind.
+>
+> **Abs. 2 – Entwicklungsgebot:** Bebauungspläne sind aus dem Flächennutzungsplan zu entwickeln (Entwicklungsgebot). Ein Flächennutzungsplan ist nicht erforderlich, wenn der Bebauungsplan ausreicht, um die städtebauliche Entwicklung zu ordnen (sogenannter selbständiger Bebauungsplan).
+>
+> **Abs. 3 – Parallelverfahren:** Wird ein Bebauungsplan aufgestellt, geändert, ergänzt oder aufgehoben, kann gleichzeitig auch der Flächennutzungsplan aufgestellt, geändert oder ergänzt werden (Parallelverfahren). Der Bebauungsplan kann vor dem Flächennutzungsplan bekannt gemacht werden, wenn nach dem Stand der Planungsarbeiten anzunehmen ist, dass er aus den künftigen Darstellungen des Flächennutzungsplans entwickelt sein wird.
+>
+> **Abs. 4 – Vorzeitiger Bebauungsplan:** Ein Bebauungsplan kann aufgestellt, geändert, ergänzt oder aufgehoben werden, bevor der Flächennutzungsplan aufgestellt ist, wenn dringende Gründe es erfordern und der Bebauungsplan der beabsichtigten städtebaulichen Entwicklung des Gemeindegebiets nicht entgegenstehen wird (vorzeitiger Bebauungsplan). Gilt bei Gebiets- oder Bestandsänderungen von Gemeinden oder anderen Veränderungen der Zuständigkeit für die Aufstellung von Flächennutzungsplänen ein Flächennutzungsplan fort, kann ein vorzeitiger Bebauungsplan auch aufgestellt werden, bevor der Flächennutzungsplan ergänzt oder geändert ist.
+>
+> **Praxis:** Was ein Bebauungsplan festsetzen soll, muss sich grundsätzlich aus dem Flächennutzungsplan entwickeln lassen. Ist das nicht der Fall oder fehlt ein Flächennutzungsplan, nennt § 8 als Wege die gleichzeitige Aufstellung oder Änderung des Flächennutzungsplans im Parallelverfahren (Abs. 3), den vorzeitigen Bebauungsplan bei dringenden Gründen (Abs. 4) und – wenn der Bebauungsplan zur Ordnung der städtebaulichen Entwicklung ausreicht – den Verzicht auf einen Flächennutzungsplan (Abs. 2).
 
 ## Quelle
 

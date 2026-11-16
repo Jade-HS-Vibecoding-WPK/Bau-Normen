@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -32,6 +33,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 
 - [[§ 14 BauGB]] – Veränderungssperre
 - [[§ 36 BauGB]] – Einvernehmen der Gemeinde und Zustimmung der höheren Verwaltungsbehörde
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Sonderregeln für bauliche Anlagen des Bundes und der Länder: Erfordert ihre besondere öffentliche Zweckbestimmung Abweichungen vom Baugesetzbuch oder kommt das Einvernehmen der Gemeinde nicht zustande, entscheidet die höhere Verwaltungsbehörde.
+>
+> **Abs. 1 – Entscheidung der höheren Verwaltungsbehörde:** Macht die besondere öffentliche Zweckbestimmung baulicher Anlagen des Bundes oder eines Landes ein Abweichen von den Vorschriften dieses Gesetzbuchs oder den darauf beruhenden Vorschriften erforderlich, oder wurde das Einvernehmen mit der Gemeinde nach § 14 oder § 36 nicht erreicht, entscheidet die höhere Verwaltungsbehörde.
+>
+> **Abs. 2 – Verteidigung, Bundespolizei, Bevölkerungsschutz:** Bei Vorhaben für dienstliche Zwecke der Bundeswehr oder der verbündeten Streitkräfte – einschließlich der Herstellung und Lagerung von Produkten zur Landesverteidigung –, für dienstliche Zwecke der Bundespolizei oder für den zivilen Bevölkerungsschutz entscheidet die höhere Verwaltungsbehörde über die Abweichung nach Anhörung der Gemeinde; die Anhörung entfällt, wenn die Gemeinde bereits zuvor beteiligt war. Versagt die höhere Verwaltungsbehörde ihre Zustimmung oder widerspricht die Gemeinde, entscheidet das zuständige Bundesministerium im Einvernehmen mit den beteiligten Bundesministerien und im Benehmen mit der zuständigen obersten Landesbehörde (also nach deren Anhörung, ohne an ihre Zustimmung gebunden zu sein).
+>
+> **Abs. 3 – Kostenersatz für die Gemeinde:** Entstehen der Gemeinde durch Maßnahmen nach Abs. 1 und 2 Aufwendungen für Entschädigungen nach diesem Gesetzbuch, muss der Träger der Maßnahmen sie ersetzen. Muss deswegen ein Bebauungsplan aufgestellt, geändert, ergänzt oder aufgehoben werden, sind auch die dadurch entstandenen Kosten zu ersetzen.
+>
+> **Abs. 4 – Grundstücke nach dem Landbeschaffungsgesetz:** Sollen bauliche Anlagen auf Grundstücken errichtet werden, die nach dem Landbeschaffungsgesetz beschafft werden, sind alle nach Abs. 1 und 2 zulässigen Einwendungen der Gemeinde oder der höheren Verwaltungsbehörde im Verfahren nach § 1 Abs. 2 des Landbeschaffungsgesetzes abschließend zu erörtern. Ein Verfahren nach Abs. 2 ist dann nicht nötig.
+>
+> **Praxis:** Bei Bauvorhaben für Bund oder Länder kann ein fehlendes Einvernehmen der Gemeinde überwunden werden: Dann entscheidet die höhere Verwaltungsbehörde, bei Vorhaben nach Abs. 2 im Streitfall das zuständige Bundesministerium. Die Gemeinde bekommt dadurch entstehende Entschädigungs- und Planungskosten vom Träger ersetzt.
 
 ## Quelle
 

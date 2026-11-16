@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/e0ac388a-3f99-36b
 weggefallen: false
 gliederung:
   - "Neunter Teil – Schluss- und Übergangsvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -23,6 +24,17 @@ Die Verträge des Landes Niedersachsen mit den Evangelischen Landeskirchen in Ni
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Stellt klar, dass die Verträge des Landes mit den Evangelischen Landeskirchen, das Konkordat mit dem Heiligen Stuhl und die dazu geschlossenen Ausführungsvereinbarungen vom Denkmalschutzgesetz unberührt bleiben.
+>
+> **Regelung – Kirchenverträge bleiben unberührt:** Die Verträge des Landes Niedersachsen mit den Evangelischen Landeskirchen in Niedersachsen von 1955 und 1965, das Konkordat mit dem Heiligen Stuhl von 1965 (zuletzt geändert 1993) und die zu ihrer Ausführung geschlossenen Vereinbarungen bleiben unberührt. Das Denkmalschutzgesetz ändert an ihnen nichts.
+>
+> **Praxis:** Bei kirchlichen Kulturdenkmalen können neben dem Denkmalschutzgesetz diese Verträge und Vereinbarungen von Bedeutung sein. Ihr Inhalt ist hier nicht wiedergegeben.
 
 ## Quelle
 

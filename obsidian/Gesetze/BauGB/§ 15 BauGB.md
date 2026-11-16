@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Zweiter Teil – Sicherung der Bauleitplanung"
   - "Erster Abschnitt – Veränderungssperre und Zurückstellung von Baugesuchen"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -31,6 +32,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Zweiter Teil – Si
 - [[§ 14 BauGB]] – Veränderungssperre
 - [[§ 144 BauGB]] – Genehmigungspflichtige Vorhaben und Rechtsvorgänge
 - [[§ 35 BauGB]] – Bauen im Außenbereich
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Ermöglicht es der Gemeinde, die Entscheidung über einen Bauantrag vorübergehend aussetzen zu lassen, wenn das Vorhaben eine laufende Planung gefährden würde. Betrifft Bauherren, deren Vorhaben in einem Gebiet liegt, für das die Gemeinde gerade plant.
+>
+> **Abs. 1 – Zurückstellung bis zu zwölf Monate:** Hat die Gemeinde keine Veränderungssperre nach § 14 beschlossen, obwohl die Voraussetzungen vorliegen, oder ist eine beschlossene Sperre noch nicht in Kraft, muss die Baugenehmigungsbehörde auf Antrag der Gemeinde die Entscheidung über ein Vorhaben im Einzelfall für bis zu zwölf Monate aussetzen. Voraussetzung ist die Befürchtung, dass das Vorhaben die Durchführung der Planung unmöglich machen oder wesentlich erschweren würde. Gibt es kein Baugenehmigungsverfahren, wird auf Antrag der Gemeinde stattdessen eine vorläufige Untersagung innerhalb einer landesrechtlich festgesetzten Frist ausgesprochen; sie steht der Zurückstellung gleich.
+>
+> **Abs. 2 – Sanierungsgebiete und Entwicklungsbereiche:** Besteht in einem förmlich festgelegten Sanierungsgebiet oder städtebaulichen Entwicklungsbereich eine Genehmigungspflicht nach § 144 Abs. 1, sind die Vorschriften über die Zurückstellung nicht anzuwenden. Mit der förmlichen Festlegung des Sanierungsgebiets oder Entwicklungsbereichs wird ein Bescheid über die Zurückstellung nach Abs. 1 unwirksam.
+>
+> **Abs. 3 Satz 1 – Außenbereichsvorhaben und Flächennutzungsplan:** Für privilegierte Außenbereichsvorhaben nach § 35 Abs. 1 Nr. 2 bis 6 muss die Baugenehmigungsbehörde auf Antrag der Gemeinde die Entscheidung für längstens ein Jahr nach Zustellung der Zurückstellung aussetzen. Voraussetzung ist, dass die Gemeinde beschlossen hat, einen Flächennutzungsplan aufzustellen, zu ändern oder zu ergänzen, mit dem die Rechtswirkungen des § 35 Abs. 3 Satz 3 erreicht werden sollen (durch eine Ausweisung an anderer Stelle stehen solchen Vorhaben dann in der Regel öffentliche Belange entgegen), und dass zu befürchten ist, dass das Vorhaben die Planung unmöglich macht oder wesentlich erschwert.
+>
+> **Abs. 3 Satz 2 bis 4 – Fristen:** Die Zeit vom Eingang des Bauantrags bis zur Zustellung der Zurückstellung wird auf das Jahr nicht angerechnet, soweit sie für die Bearbeitung erforderlich war. Die Gemeinde kann den Antrag nur innerhalb von sechs Monaten stellen, nachdem sie in einem Verwaltungsverfahren förmlich von dem Vorhaben Kenntnis erhalten hat. Wenn besondere Umstände es erfordern, kann die Entscheidung auf Antrag der Gemeinde um höchstens ein weiteres Jahr ausgesetzt werden.
+>
+> **Praxis:** Bauherren müssen damit rechnen, dass ihr Antrag bis zu zwölf Monate ruht, wenn die Gemeinde für das Gebiet plant und zu befürchten ist, dass das Vorhaben die Planung vereitelt oder wesentlich erschwert. Für privilegierte Außenbereichsvorhaben gelten die besonderen Fristen des Abs. 3, einschließlich der Sechs-Monats-Frist für den Antrag der Gemeinde.
 
 ## Quelle
 

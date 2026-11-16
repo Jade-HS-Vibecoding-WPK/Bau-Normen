@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/f8dce44a-51a9-375
 weggefallen: false
 gliederung:
   - "Dritter Teil – Ausgrabungen und Bodenfunde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -23,6 +24,17 @@ Die untere Denkmalschutzbehörde kann die wirtschaftliche Nutzung eines Grundst�
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Die untere Denkmalschutzbehörde kann die wirtschaftliche Nutzung eines Grundstücks oder Grundstücksteils beschränken, wenn sich darin ein Kulturdenkmal befindet.
+>
+> **Befugnis der unteren Denkmalschutzbehörde:** Befindet sich in einem Grundstück oder einem Grundstücksteil ein Kulturdenkmal, darf die untere Denkmalschutzbehörde dessen wirtschaftliche Nutzung beschränken. Es handelt sich um eine Kann-Vorschrift, die Behörde entscheidet also nach Ermessen. Welche Beschränkungen im Einzelnen in Betracht kommen, nennt die Vorschrift nicht.
+>
+> **Praxis:** Die Vorschrift steht im Teil „Ausgrabungen und Bodenfunde“ des Gesetzes. Für Grundstücke mit Kulturdenkmalen bedeutet sie, dass die wirtschaftliche Nutzung behördlich eingeschränkt werden kann; ob und welcher Ausgleich dafür in Betracht kommt, regelt § 17 selbst nicht.
 
 ## Quelle
 

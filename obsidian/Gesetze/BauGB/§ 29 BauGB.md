@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -27,6 +28,19 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 ## Verweist auf
 
 - [[§ 30 BauGB]] – Zulässigkeit von Vorhaben im Geltungsbereich eines Bebauungsplans
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Legt fest, für welche Vorhaben die bauplanungsrechtlichen Zulässigkeitsregeln der §§ 30 bis 37 gelten. Das Bauordnungsrecht und andere öffentlich-rechtliche Vorschriften gelten daneben weiter.
+>
+> **Abs. 1 – Was ein Vorhaben ist:** Die §§ 30 bis 37 gelten für Vorhaben, die die Errichtung, Änderung oder Nutzungsänderung baulicher Anlagen zum Inhalt haben – auch die Nutzungsänderung einer baulichen Anlage ist also ein Vorhaben in diesem Sinne. Außerdem gelten sie für Aufschüttungen und Abgrabungen größeren Umfangs sowie für Ausschachtungen und Ablagerungen einschließlich Lagerstätten.
+>
+> **Abs. 2 – Andere Vorschriften gelten weiter:** Die Vorschriften des Bauordnungsrechts und andere öffentlich-rechtliche Vorschriften bleiben unberührt. Ein Vorhaben muss diese also zusätzlich einhalten.
+>
+> **Praxis:** § 29 ist der Einstieg in die planungsrechtliche Prüfung: Liegt ein Vorhaben in diesem Sinne vor, richtet sich seine Zulässigkeit nach den §§ 30 bis 37. Ob es daneben nach Bauordnungsrecht oder anderen öffentlich-rechtlichen Vorschriften zulässig ist, ist gesondert zu prüfen.
 
 ## Quelle
 

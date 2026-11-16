@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Dritter Abschnitt – Verbindlicher Bauleitplan (Bebauungsplan)"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -27,6 +28,19 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Verlangt, dass einem in Kraft getretenen Bebauungsplan eine zusammenfassende Erklärung beigefügt wird, und sieht vor, dass der Plan ergänzend im Internet zugänglich sein soll.
+>
+> **Abs. 1 – zusammenfassende Erklärung:** Dem in Kraft getretenen B-Plan ist eine Erklärung beizufügen, die darlegt, wie die Umweltbelange und die Ergebnisse der Beteiligung von Öffentlichkeit und Behörden im Plan berücksichtigt wurden. Sie nennt außerdem die Gründe, warum der Plan nach Abwägung mit den geprüften, in Betracht kommenden anderen Planungsmöglichkeiten gewählt wurde.
+>
+> **Abs. 2 – Veröffentlichung im Internet:** Der in Kraft getretene Plan soll mit Begründung und zusammenfassender Erklärung ergänzend auch ins Internet gestellt und über ein zentrales Internetportal des Landes zugänglich gemacht werden.
+>
+> **Praxis:** Die zusammenfassende Erklärung hilft zu verstehen, warum ein Plan so und nicht anders gefasst wurde – nützlich, wenn man Festsetzungen für das eigene Vorhaben nachvollziehen will. Die Internet-Veröffentlichung ist als „Soll“-Regel formuliert und kommt ergänzend hinzu.
 
 ## Quelle
 

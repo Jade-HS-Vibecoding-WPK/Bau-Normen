@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/5bb383df-fd89-352
 weggefallen: false
 gliederung:
   - "Dritter Teil – Ausgrabungen und Bodenfunde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -25,6 +26,19 @@ NDSchG › [[NDSchG Teil 3 – Ausgrabungen und Bodenfunde|Dritter Teil – Ausg
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Wer nach Kulturdenkmalen graben, Kulturdenkmale aus einem Gewässer bergen oder mit technischen Hilfsmitteln nach ihnen suchen will, braucht eine Genehmigung der Denkmalschutzbehörde. Ausgenommen sind Nachforschungen unter der Verantwortung einer staatlichen Denkmalbehörde.
+>
+> **Abs. 1 – Genehmigungspflicht für Grabung und Suche:** Eine Genehmigung der Denkmalschutzbehörde braucht, wer nach Kulturdenkmalen graben, Kulturdenkmale aus einem Gewässer bergen oder mit technischen Hilfsmitteln nach Kulturdenkmalen suchen will. Keine Genehmigung brauchen Nachforschungen, die unter der Verantwortung einer staatlichen Denkmalbehörde stattfinden.
+>
+> **Abs. 2 – Versagung, Bedingungen und Auflagen:** Die Genehmigung ist zu versagen, soweit die Maßnahme gegen dieses Gesetz verstoßen oder Forschungsvorhaben des Landes beeinträchtigen würde. Sie kann unter Bedingungen und mit Auflagen erteilt werden, insbesondere zur Suche, zur Planung und Ausführung der Grabung, zur Behandlung und Sicherung der Bodenfunde, zur Dokumentation der Grabungsbefunde, zur Berichterstattung und zur abschließenden Herrichtung der Grabungsstätte. Außerdem kann verlangt werden, dass ein bestimmter Sachverständiger die Arbeiten leitet.
+>
+> **Praxis:** § 12 betrifft die gezielte Suche nach Kulturdenkmalen – durch Graben, durch Bergen aus Gewässern oder mit technischen Hilfsmitteln. Wer so etwas plant, braucht vorher die Genehmigung, sofern die Nachforschung nicht unter der Verantwortung einer staatlichen Denkmalbehörde stattfindet; die Genehmigung kann Vorgaben zu Ablauf, Dokumentation, Berichten und Herrichtung der Grabungsstätte enthalten.
 
 ## Quelle
 

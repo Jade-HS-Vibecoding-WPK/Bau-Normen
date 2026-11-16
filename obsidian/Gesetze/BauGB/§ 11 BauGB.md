@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Vierter Abschnitt – Zusammenarbeit mit Privaten; vereinfachtes Verfahren"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -37,6 +38,29 @@ Die Gemeinde kann städtebauliche Verträge auch mit einer juristischen Person a
 ## Verweist auf
 
 - [[§ 1a BauGB]] – Ergänzende Vorschriften zum Umweltschutz
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Erlaubt der Gemeinde, städtebauliche Verträge zu schließen – etwa über die Übernahme von Planungs-, Erschließungs- und Folgekosten oder die Sicherung von Planungszielen. Wichtig für alle, die als Vertragspartner der Gemeinde ein Bauprojekt vorbereiten oder umsetzen.
+>
+> **Abs. 1 Satz 1 und Nr. 1 – Vorbereitung und Durchführung durch den Vertragspartner:** Die Gemeinde kann städtebauliche Verträge schließen; die Aufzählung möglicher Inhalte ist nicht abschließend („insbesondere“). Nach Nr. 1 kann der Vertragspartner städtebauliche Maßnahmen auf eigene Kosten vorbereiten oder durchführen, zum Beispiel die Neuordnung der Grundstücksverhältnisse, die Bodensanierung, die Erschließung mit beitragsfähigen wie nicht beitragsfähigen Erschließungsanlagen sowie die Ausarbeitung der städtebaulichen Planungen und, falls erforderlich, des Umweltberichts. Die Verantwortung der Gemeinde für das gesetzlich vorgesehene Planaufstellungsverfahren bleibt dabei unberührt.
+>
+> **Abs. 1 Nr. 2 – Sicherung der Planungsziele:** Vereinbart werden kann auch, die Ziele der Bauleitplanung zu fördern und zu sichern, insbesondere: die Grundstücksnutzung (auch befristet oder unter einer Bedingung), die Durchführung des Ausgleichs für Eingriffe in Natur und Landschaft (§ 1a Abs. 3), die Berücksichtigung baukultureller Belange, die Deckung des Wohnbedarfs von Bevölkerungsgruppen mit besonderen Wohnraumversorgungsproblemen sowie der Erwerb angemessenen Wohnraums durch einkommensschwächere und weniger begüterte Personen der örtlichen Bevölkerung.
+>
+> **Abs. 1 Nr. 3 – Übernahme von Kosten:** Der Vertragspartner kann Kosten oder sonstige Aufwendungen übernehmen, die der Gemeinde für städtebauliche Maßnahmen entstehen oder bereits entstanden sind, wenn sie Voraussetzung oder Folge des geplanten Vorhabens sind. Dazu gehört auch die Bereitstellung von Grundstücken.
+>
+> **Abs. 1 Nr. 4 und 5 – Energie:** Entsprechend den Zielen und Zwecken der städtebaulichen Planung können außerdem die Errichtung und Nutzung von Anlagen zur Erzeugung, Verteilung, Nutzung oder Speicherung von Strom, Wärme oder Kälte aus erneuerbaren Energien oder Kraft-Wärme-Kopplung (Nr. 4) sowie Anforderungen an die energetische Qualität von Gebäuden (Nr. 5) vereinbart werden.
+>
+> **Abs. 1 letzter Satz – Verträge mit Beteiligungen der Gemeinde:** Die Gemeinde kann städtebauliche Verträge auch mit einer juristischen Person schließen, an der sie selbst beteiligt ist.
+>
+> **Abs. 2 – Angemessenheit und Koppelungsverbot:** Die vereinbarten Leistungen müssen nach den gesamten Umständen angemessen sein. Unzulässig ist es, eine Leistung des Vertragspartners zu vereinbaren, wenn er auf die Gegenleistung auch ohne sie einen Anspruch hätte. Trägt oder übernimmt der Vertragspartner Kosten, muss sich die Gemeinde nicht selbst daran beteiligen – die Angemessenheit muss aber trotzdem gewahrt sein.
+>
+> **Abs. 3 und 4 – Schriftform, andere Verträge:** Ein städtebaulicher Vertrag muss schriftlich geschlossen werden, soweit Rechtsvorschriften keine andere Form vorschreiben. Die Zulässigkeit anderer städtebaulicher Verträge wird durch § 11 nicht berührt.
+>
+> **Praxis:** Städtebauliche Verträge kommen in Betracht, wenn ein Vertragspartner Planung, Erschließung oder Folgekosten übernimmt. Entscheidend sind die Grenzen aus Abs. 2: Die Leistungen müssen angemessen sein und dürfen nicht für etwas verlangt werden, worauf ohnehin ein Anspruch besteht. Die Verantwortung für das Planverfahren bleibt bei der Gemeinde (Abs. 1 Nr. 1).
 
 ## Quelle
 

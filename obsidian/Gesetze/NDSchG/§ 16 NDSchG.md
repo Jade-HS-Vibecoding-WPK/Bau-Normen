@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/dc12c8de-c45f-3a7
 weggefallen: false
 gliederung:
   - "Dritter Teil – Ausgrabungen und Bodenfunde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -28,6 +29,21 @@ NDSchG › [[NDSchG Teil 3 – Ausgrabungen und Bodenfunde|Dritter Teil – Ausg
 
 - [[§ 13 NDSchG]] – Erdarbeiten
 - [[§ 29 NDSchG]] – Ausgleich
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Das Landesamt für Denkmalpflege kann Flächen, auf denen Kulturdenkmale von herausragender landes- oder kulturgeschichtlicher Bedeutung vorhanden sind oder vermutet werden, per Verordnung zu Grabungsschutzgebieten erklären. Dort brauchen alle Arbeiten, die Kulturdenkmale zutage fördern oder gefährden können, eine Genehmigung.
+>
+> **Abs. 1 – Ausweisung von Grabungsschutzgebieten:** Das Landesamt für Denkmalpflege kann abgegrenzte Flächen durch Verordnung (allgemein verbindliche Regelung) befristet oder unbefristet zu Grabungsschutzgebieten erklären. Voraussetzung ist, dass dort Kulturdenkmale von herausragender landes- oder kulturgeschichtlicher Bedeutung vorhanden sind oder vermutet werden.
+>
+> **Abs. 2 – Genehmigungspflicht im Gebiet:** In Grabungsschutzgebieten brauchen alle Arbeiten, die Kulturdenkmale zutage fördern oder gefährden können, eine Genehmigung der Denkmalschutzbehörde. Für die Entscheidung gilt § 13 Abs. 2 entsprechend: Die Genehmigung ist zu versagen, soweit die Arbeiten gegen das Gesetz verstoßen würden, und kann unter Bedingungen und mit Auflagen erteilt werden, soweit das zur Einhaltung des Gesetzes erforderlich ist. Über § 13 Abs. 2 gelten auch die dort genannten Regeln zu Grabungsbestimmungen, zur Leitung durch einen Sachverständigen und zur Einbeziehung in eine Baugenehmigung sinngemäß.
+>
+> **Abs. 3 – Geldausgleich für Land- und Forstwirtschaft:** Wird durch die Versagung einer solchen Genehmigung die bisherige ordnungsgemäße land- oder forstwirtschaftliche Nutzung eines Grundstücks beschränkt, muss das Land für die Dauer der Beschränkung einen angemessenen Ausgleich in Geld für die dadurch verursachten wirtschaftlichen Nachteile leisten – sofern nicht eine Ausgleichspflicht nach § 29 besteht. Maßstab sind die durchschnittlichen Ertragseinbußen, gemessen an Erträgen und Aufwendungen der bisherigen Nutzung; ersparte Aufwendungen werden angerechnet. Über den Ausgleich entscheidet die für die Genehmigung zuständige Denkmalschutzbehörde nach Zustimmung der obersten Denkmalschutzbehörde.
+>
+> **Praxis:** Liegt ein Grundstück in einem Grabungsschutzgebiet, ist für alle Arbeiten, die Kulturdenkmale zutage fördern oder gefährden können, vorher eine Genehmigung nötig – ob die Fläche betroffen ist, ergibt sich aus der jeweiligen Verordnung des Landesamts. Der Geldausgleich nach Abs. 3 betrifft nur Beschränkungen der bisherigen ordnungsgemäßen land- oder forstwirtschaftlichen Nutzung; besteht eine Ausgleichspflicht nach § 29, geht diese vor.
 
 ## Quelle
 

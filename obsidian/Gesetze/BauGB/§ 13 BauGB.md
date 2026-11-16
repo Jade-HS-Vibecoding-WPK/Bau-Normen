@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Vierter Abschnitt – Zusammenarbeit mit Privaten; vereinfachtes Verfahren"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -45,6 +46,23 @@ Wird nach Satz 1 Nummer 2 die betroffene Öffentlichkeit beteiligt, gilt die Hin
 - [[§ 6a BauGB]] – Zusammenfassende Erklärung zum Flächennutzungsplan; Einstellen in das Internet
 - [[§ 10a BauGB]] – Zusammenfassende Erklärung zum Bebauungsplan; Einstellen in das Internet
 - [[§ 4c BauGB]] – Überwachung
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Ermöglicht der Gemeinde in bestimmten Fällen ein vereinfachtes Planverfahren ohne Umweltprüfung – etwa wenn eine Planänderung die Grundzüge der Planung nicht berührt –, sofern bestimmte Umweltrisiken ausgeschlossen sind.
+>
+> **Abs. 1 – Anwendungsfälle:** Das vereinfachte Verfahren kommt in drei Fällen in Betracht: bei Änderung oder Ergänzung eines Bauleitplans, die die Grundzüge der Planung (das planerische Grundkonzept) nicht berührt; bei Aufstellung eines B-Plans in einem Gebiet nach § 34, wenn sich der aus der Eigenart der näheren Umgebung ergebende Zulässigkeitsmaßstab nicht wesentlich ändert; oder wenn der B-Plan nur Festsetzungen nach § 9 Abs. 2a oder 2b enthält.
+>
+> **Abs. 1 Nr. 1 bis 3 – zusätzliche Bedingungen:** Zusätzlich müssen alle drei Bedingungen erfüllt sein: Der Plan darf nicht die Zulässigkeit von Vorhaben vorbereiten oder begründen, die einer Pflicht zur Umweltverträglichkeitsprüfung (UVP) nach Anlage 1 zum Gesetz über die Umweltverträglichkeitsprüfung oder nach Landesrecht unterliegen. Außerdem darf es weder Anhaltspunkte für eine Beeinträchtigung der Erhaltungsziele und des Schutzzwecks von Natura 2000-Gebieten (§ 1 Abs. 6 Nr. 7 Buchst. b) geben noch Anhaltspunkte dafür, dass Pflichten zur Vermeidung oder Begrenzung der Auswirkungen schwerer Unfälle nach § 50 Satz 1 des Bundes-Immissionsschutzgesetzes zu beachten sind.
+>
+> **Abs. 2 – Erleichterungen bei der Beteiligung:** Die frühzeitige Unterrichtung und Erörterung nach § 3 Abs. 1 und § 4 Abs. 1 kann entfallen. Die Gemeinde kann der betroffenen Öffentlichkeit sowie den berührten Behörden und sonstigen Trägern öffentlicher Belange (Stellen, die öffentliche Aufgaben wahrnehmen) Gelegenheit zur Stellungnahme in angemessener Frist geben – oder wahlweise die Internet-Veröffentlichung nach § 3 Abs. 2 bzw. die Behördenbeteiligung nach § 4 Abs. 2 durchführen. Wird die betroffene Öffentlichkeit direkt beteiligt, gelten die Hinweispflichten aus § 3 Abs. 2 Satz 4 zweiter Halbsatz entsprechend (zum Beispiel, dass nicht fristgerecht abgegebene Stellungnahmen unberücksichtigt bleiben können).
+>
+> **Abs. 3 – keine Umweltprüfung:** Im vereinfachten Verfahren entfallen die Umweltprüfung (§ 2 Abs. 4), der Umweltbericht (§ 2a), die Angabe nach § 3 Abs. 2 Satz 4, welche Arten umweltbezogener Informationen verfügbar sind, und die zusammenfassende Erklärung (§ 6a Abs. 1, § 10a Abs. 1); die Überwachung nach § 4c ist nicht anzuwenden. Bei der Beteiligung der Öffentlichkeit nach Abs. 2 Nr. 2 ist darauf hinzuweisen, dass keine Umweltprüfung durchgeführt wird.
+>
+> **Praxis:** Das vereinfachte Verfahren spart Verfahrensschritte, etwa bei Planänderungen, die die Grundzüge der Planung nicht berühren. Ob es angewendet wird, entscheidet die Gemeinde („kann“); es scheidet aus, sobald eine der Bedingungen aus Abs. 1 Nr. 1 bis 3 nicht erfüllt ist.
 
 ## Quelle
 

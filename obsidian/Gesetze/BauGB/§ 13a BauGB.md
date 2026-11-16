@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Vierter Abschnitt – Zusammenarbeit mit Privaten; vereinfachtes Verfahren"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -45,6 +46,27 @@ Die Bekanntmachung nach Satz 1 kann mit der ortsüblichen Bekanntmachung nach §
 - [[§ 13 BauGB]] – Vereinfachtes Verfahren
 - [[§ 1a BauGB]] – Ergänzende Vorschriften zum Umweltschutz
 - [[§ 3 BauGB]] – Beteiligung der Öffentlichkeit
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Erlaubt ein beschleunigtes Verfahren für Bebauungspläne der Innenentwicklung – etwa zur Wiedernutzbarmachung von Flächen oder zur Nachverdichtung. Es gelten Größengrenzen für die Grundfläche und mehrere Ausschlussgründe.
+>
+> **Abs. 1 Satz 1 und 2 – Anwendungsbereich und Größengrenzen:** Ein B-Plan für die Wiedernutzbarmachung von Flächen, die Nachverdichtung oder andere Maßnahmen der Innenentwicklung kann im beschleunigten Verfahren aufgestellt werden. Maßgeblich ist die festgesetzte zulässige Grundfläche im Sinne von § 19 Abs. 2 der Baunutzungsverordnung (vereinfacht: die Fläche, die von baulichen Anlagen überdeckt werden darf) oder die festgesetzte Größe der Grundfläche: Bei weniger als 20 000 Quadratmetern ist das Verfahren möglich, wobei die Grundflächen mehrerer Pläne in engem sachlichen, räumlichen und zeitlichen Zusammenhang zusammengerechnet werden (Nr. 1). Bei 20 000 bis unter 70 000 Quadratmetern ist es nur möglich, wenn eine überschlägige Vorprüfung des Einzelfalls anhand der Kriterien der Anlage 2 zum Baugesetzbuch ergibt, dass der Plan voraussichtlich keine erheblichen, in der Abwägung zu berücksichtigenden Umweltauswirkungen hat; die berührten Behörden und Träger öffentlicher Belange sind an dieser Vorprüfung zu beteiligen (Nr. 2).
+>
+> **Abs. 1 Satz 3 bis 5 – Ersatzmaßstab und Ausschlussgründe:** Setzt der Plan weder eine zulässige Grundfläche noch eine Größe der Grundfläche fest, zählt die Fläche, die bei seiner Durchführung voraussichtlich versiegelt wird. Ausgeschlossen ist das beschleunigte Verfahren, wenn der Plan die Zulässigkeit von Vorhaben begründet, die nach dem Gesetz über die Umweltverträglichkeitsprüfung oder nach Landesrecht UVP-pflichtig sind. Ebenso ausgeschlossen ist es bei Anhaltspunkten für eine Beeinträchtigung der Erhaltungsziele und des Schutzzwecks von Natura 2000-Gebieten (§ 1 Abs. 6 Nr. 7 Buchst. b) oder dafür, dass Pflichten zur Vermeidung oder Begrenzung der Auswirkungen schwerer Unfälle nach § 50 Satz 1 des Bundes-Immissionsschutzgesetzes zu beachten sind.
+>
+> **Abs. 2 Nr. 1 und 2 – Verfahrenserleichterungen, Abweichen vom Flächennutzungsplan:** Im beschleunigten Verfahren gelten die Regeln des vereinfachten Verfahrens nach § 13 Abs. 2 und Abs. 3 Satz 1 entsprechend – unter anderem entfällt damit die Umweltprüfung (Nr. 1). Ein B-Plan, der vom Flächennutzungsplan abweicht, darf schon aufgestellt werden, bevor dieser geändert oder ergänzt ist, wenn die geordnete städtebauliche Entwicklung des Gemeindegebiets nicht beeinträchtigt wird; der Flächennutzungsplan ist im Wege der Berichtigung anzupassen (Nr. 2).
+>
+> **Abs. 2 Nr. 3 und 4 – Abwägung und Ausgleich:** In der Abwägung soll dem Bedarf an Investitionen zur Erhaltung, Sicherung und Schaffung von Arbeitsplätzen, zur Versorgung der Bevölkerung mit Wohnraum oder zur Verwirklichung von Infrastrukturvorhaben angemessen Rechnung getragen werden (Nr. 3). Bei Plänen nach Abs. 1 Satz 2 Nr. 1 (unter 20 000 Quadratmeter) gelten die zu erwartenden Eingriffe als bereits vor der planerischen Entscheidung erfolgt oder zulässig im Sinne von § 1a Abs. 3 Satz 6 – ein Ausgleich ist danach insoweit nicht erforderlich (Nr. 4).
+>
+> **Abs. 3 – Bekanntmachung:** Ortsüblich bekannt zu machen ist, dass der Plan im beschleunigten Verfahren ohne Umweltprüfung nach § 2 Abs. 4 aufgestellt werden soll – bei Plänen nach Abs. 1 Satz 2 Nr. 2 mit den dafür wesentlichen Gründen. Findet keine frühzeitige Unterrichtung und Erörterung nach § 3 Abs. 1 statt, ist außerdem bekannt zu machen, wo sich die Öffentlichkeit über die allgemeinen Ziele und Zwecke sowie die wesentlichen Auswirkungen der Planung informieren kann und dass sie sich innerhalb einer bestimmten Frist äußern kann. Die Bekanntmachung kann mit der des Aufstellungsbeschlusses (§ 2 Abs. 1 Satz 2) verbunden werden; bei Plänen nach Abs. 1 Satz 2 Nr. 2 erfolgt sie erst nach Abschluss der Vorprüfung des Einzelfalls.
+>
+> **Abs. 4 – Änderung, Ergänzung und Aufhebung:** Die Regeln der Abs. 1 bis 3 gelten entsprechend, wenn ein B-Plan geändert, ergänzt oder aufgehoben wird.
+>
+> **Praxis:** Für Nachverdichtung oder die Wiedernutzbarmachung von Flächen im Bestand kann ein B-Plan im beschleunigten Verfahren zügiger zustande kommen: keine Umweltprüfung, Abweichung vom Flächennutzungsplan möglich und bei weniger als 20 000 Quadratmetern Grundfläche insoweit kein Ausgleich nach § 1a Abs. 3 erforderlich. Ob das Verfahren gewählt wird, entscheidet die Gemeinde; Größengrenzen und Ausschlussgründe nach Abs. 1 müssen eingehalten sein.
 
 ## Quelle
 

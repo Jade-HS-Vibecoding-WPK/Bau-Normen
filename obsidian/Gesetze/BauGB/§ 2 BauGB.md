@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Erster Abschnitt – Allgemeine Vorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -32,6 +33,25 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 
 - [[§ 1 BauGB]] – Aufgabe, Begriff und Grundsätze der Bauleitplanung
 - [[§ 1a BauGB]] – Ergänzende Vorschriften zum Umweltschutz
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt die Grundlagen des Planverfahrens: Die Gemeinde stellt ihre Bauleitpläne in eigener Verantwortung auf, stimmt sie mit Nachbargemeinden ab, ermittelt und bewertet alle für die Abwägung wichtigen Belange und führt eine Umweltprüfung mit Umweltbericht durch.
+>
+> **Abs. 1 – Eigenverantwortung der Gemeinde, Aufstellungsbeschluss:** Die Gemeinde stellt ihre Bauleitpläne in eigener Verantwortung auf. Der Beschluss, einen Bauleitplan aufzustellen (Aufstellungsbeschluss), ist ortsüblich bekannt zu machen – also auf dem Weg, den die Gemeinde für ihre öffentlichen Bekanntmachungen üblicherweise nutzt.
+>
+> **Abs. 2 – Abstimmung mit Nachbargemeinden:** Die Bauleitpläne benachbarter Gemeinden sind aufeinander abzustimmen. Dabei kann sich eine Gemeinde auch auf die Funktionen berufen, die ihr durch Ziele der Raumordnung zugewiesen sind, sowie auf Auswirkungen auf ihre zentralen Versorgungsbereiche.
+>
+> **Abs. 3 – Ermitteln und Bewerten der Belange:** Alle Belange, die für die Abwägung von Bedeutung sind (das sogenannte Abwägungsmaterial), müssen ermittelt und bewertet werden.
+>
+> **Abs. 4 – Umweltprüfung und Umweltbericht:** Für die Umweltbelange nach § 1 Abs. 6 Nr. 7 und § 1a wird eine Umweltprüfung durchgeführt: Die voraussichtlichen erheblichen Umweltauswirkungen werden ermittelt und in einem Umweltbericht beschrieben und bewertet; dabei ist die Anlage 1 zum Baugesetzbuch anzuwenden. Die Gemeinde legt für jeden Bauleitplan fest, in welchem Umfang und Detaillierungsgrad die Belange für die Abwägung ermittelt werden müssen. Das Ergebnis der Umweltprüfung ist in der Abwägung zu berücksichtigen.
+>
+> **Abs. 4 – Prüftiefe und Nutzung vorhandener Prüfungen:** Verlangt werden kann nur, was nach gegenwärtigem Wissensstand und allgemein anerkannten Prüfmethoden sowie nach Inhalt und Detaillierungsgrad des Plans angemessen ist. Wurde für das Plangebiet oder Teile davon bereits in einem Raumordnungs-, Flächennutzungs- oder Bebauungsplanverfahren eine Umweltprüfung durchgeführt, soll sich die Umweltprüfung in einem später oder gleichzeitig durchgeführten Bauleitplanverfahren auf zusätzliche oder andere erhebliche Umweltauswirkungen beschränken. Liegen Landschaftspläne oder sonstige Pläne nach § 1 Abs. 6 Nr. 7 Buchst. g vor, sind deren Bestandsaufnahmen und Bewertungen heranzuziehen.
+>
+> **Praxis:** Mit dem ortsüblich bekannt gemachten Aufstellungsbeschluss wird öffentlich, dass die Gemeinde für ein Gebiet einen Bauleitplan aufstellen will. Wie umfangreich und detailliert die Umweltprüfung ausfällt, legt die Gemeinde für jeden Plan fest. Wurde für das Gebiet schon eine Umweltprüfung durchgeführt, soll sich die neue Prüfung auf zusätzliche oder andere erhebliche Auswirkungen beschränken; vorhandene Landschaftspläne sind heranzuziehen.
 
 ## Quelle
 

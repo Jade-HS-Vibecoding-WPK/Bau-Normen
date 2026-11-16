@@ -20,7 +20,7 @@ tags:
 - **Quelle:** [Bundesministerium der Justiz / juris – gesetze-im-internet.de](https://www.gesetze-im-internet.de/bbaug/)
 - **Abgerufen:** 2026-11-16
 - **Daten:** `data/gesetze/baugb.json`, Erläuterungen: `data/erlaeuterungen/baugb.json`
-- **Umfang:** 297 Vorschriften, davon 6 weggefallen; 2 mit Erläuterung (Entwurf, keine Rechtsberatung)
+- **Umfang:** 297 Vorschriften, davon 6 weggefallen; 47 mit Erläuterung (Entwurf, keine Rechtsberatung)
 
 ## Inhalt
 

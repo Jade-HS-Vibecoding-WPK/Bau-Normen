@@ -75,7 +75,22 @@ export interface OrtAnsicht {
     | { status: "ok"; adresse: string; lat: number; lon: number; hausnummerGefunden: boolean; quelle: string }
     | { status: "nicht-gefunden" | "fehler"; hinweis: string };
   bplan:
-    | { status: "gefunden" | "keiner"; plaene: { nummer: string; name: string; rechtsverbindlichSeit?: string; baunvo?: string; vorhabenbezogen: boolean; verfahren?: string }[]; quelle: string }
+    | {
+        status: "gefunden" | "keiner";
+        plaene: {
+          nummer: string;
+          name: string;
+          rechtsverbindlichSeit?: string;
+          baunvo?: string;
+          vorhabenbezogen: boolean;
+          verfahren?: string;
+          dokumente?: { art: string; name: string; url: string; groesseMB: number }[];
+        }[];
+        /** Pläne in Aufstellung, Veränderungssperren, unwirksame Pläne am Standort (null = nicht abrufbar) */
+        weitere: { art: "in-aufstellung" | "veraenderungssperre" | "unwirksam"; nummer: string; name: string; hinweis?: string }[] | null;
+        dokumenteAbrufbar: boolean;
+        quelle: string;
+      }
     | { status: "fehler"; hinweis: string; quelle: string };
   denkmal:
     | {

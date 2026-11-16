@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -34,6 +35,25 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 - [[§ 14 BauGB]] – Veränderungssperre
 - [[§ 36 BauGB]] – Einvernehmen der Gemeinde und Zustimmung der höheren Verwaltungsbehörde
 - [[§ 37 BauGB]] – Bauliche Maßnahmen des Bundes und der Länder
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Erleichtert im Außenbereich Vorhaben zur Herstellung oder Lagerung von Produkten zur Landesverteidigung, deren Erforderlichkeit das Bundesministerium der Verteidigung bestätigt hat. Sie sind zulässig, wenn öffentliche Belange nicht entgegenstehen und die Erschließung gesichert ist.
+>
+> **Abs. 1 Satz 1 – Zulässigkeit im Außenbereich:** Vorhaben zur Herstellung oder Lagerung von Produkten zur Landesverteidigung, insbesondere von Munition, Sprengstoffen und deren Vorprodukten, sind im Außenbereich zulässig – auch wenn sie nicht unter § 35 Abs. 1 Nr. 4 fallen –, wenn öffentliche Belange nicht entgegenstehen und die Erschließung gesichert ist. Voraussetzung ist, dass das Bundesministerium der Verteidigung durch eine Erklärung bestätigt, dass das Vorhaben für die Einsatzfähigkeit und Versorgungssicherheit der Bundeswehr erforderlich ist.
+>
+> **Abs. 1 Satz 2 und 3 – Erklärung und Ausführung:** Die Erklärung des Ministeriums ist unanfechtbar, und auf ihre Abgabe besteht kein Anspruch. § 35 Abs. 5 Satz 1 bis 3 ist anzuwenden – also die Regeln zur flächensparenden, den Außenbereich schonenden Ausführung, zur Rückbauverpflichtung und zu deren Sicherstellung.
+>
+> **Abs. 2 – Zuständigkeit und Entscheidung im Streitfall:** Über die Zulässigkeit entscheidet die höhere Verwaltungsbehörde im Einvernehmen mit der Gemeinde. Lehnt die höhere Verwaltungsbehörde ab oder versagt die Gemeinde das nach Satz 1 oder nach § 14 Abs. 2 Satz 1 erforderliche Einvernehmen, entscheidet das Bundesministerium der Verteidigung im Benehmen mit der zuständigen obersten Landesbehörde; die Gemeinde ist anzuhören, wenn sie nicht bereits zuvor beteiligt war. Die Ersetzung eines rechtswidrig versagten Einvernehmens nach § 36 Abs. 2 Satz 3 findet keine Anwendung.
+>
+> **Abs. 3 – Kostenersatz:** § 37 Abs. 3 gilt entsprechend: Aufwendungen der Gemeinde für Entschädigungen nach diesem Gesetzbuch sowie Kosten für einen deswegen aufzustellenden, zu ändernden, zu ergänzenden oder aufzuhebenden Bebauungsplan sind vom Träger der Maßnahmen zu ersetzen.
+>
+> **Abs. 4 – Änderung und Erweiterung im neuen Bebauungsplangebiet:** Abs. 1 bis 3 gelten auch für die Änderung oder Erweiterung solcher Vorhaben, für die im bisherigen Außenbereich ein Bebauungsplan aufgestellt wurde. Dabei kann zugleich von Festsetzungen dieses Bebauungsplans befreit werden.
+>
+> **Praxis:** Für Vorhaben zur Herstellung oder Lagerung von Verteidigungsprodukten ist die Erklärung des Bundesministeriums der Verteidigung entscheidend: Ohne sie greift § 37a nicht, und ein Anspruch auf die Erklärung besteht nicht. Versagt die Gemeinde ihr Einvernehmen, entscheidet das Bundesministerium der Verteidigung.
 
 ## Quelle
 

@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Dritter Teil – Regelung der baulichen und sonstigen Nutzung; Entschädigung"
   - "Erster Abschnitt – Zulässigkeit von Vorhaben"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -34,6 +35,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 - [[§ 30 BauGB]] – Zulässigkeit von Vorhaben im Geltungsbereich eines Bebauungsplans
 - [[§ 14 BauGB]] – Veränderungssperre
 - [[§ 15 BauGB]] – Zurückstellung von Baugesuchen
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Über Ausnahmen und Befreiungen sowie über viele Vorhaben ohne qualifizierten Bebauungsplan entscheidet die Baugenehmigungsbehörde nur im Einvernehmen (mit Zustimmung) der Gemeinde. Die Gemeinde darf es nur aus den im Gesetz genannten Gründen verweigern; verweigert sie es nicht binnen zwei Monaten, gilt es als erteilt.
+>
+> **Abs. 1 Satz 1 und 2 – Wann das Einvernehmen nötig ist:** Über Vorhaben nach § 31 Abs. 1 und 2 (Ausnahmen und Befreiungen), § 33 (Planaufstellung), § 34 Abs. 1, 2 und 3a (im Zusammenhang bebaute Ortsteile) sowie § 35 (Außenbereich) entscheidet die Baugenehmigungsbehörde im bauaufsichtlichen Verfahren im Einvernehmen mit der Gemeinde. Das gilt auch, wenn in einem anderen Verfahren über die Zulässigkeit nach diesen Vorschriften entschieden wird – nicht aber für Vorhaben der in § 29 Abs. 1 bezeichneten Art, die der Bergaufsicht unterliegen.
+>
+> **Abs. 1 Satz 3 – Vorhaben im qualifizierten Bebauungsplan:** Für Vorhaben, deren Zulässigkeit sich nach § 30 Abs. 1 richtet, sieht Satz 1 kein Einvernehmen vor. Die Länder müssen aber sicherstellen, dass die Gemeinde rechtzeitig vor Ausführung des Vorhabens über Maßnahmen zur Sicherung der Bauleitplanung nach den §§ 14 und 15 (Veränderungssperre, Zurückstellung von Baugesuchen) entscheiden kann.
+>
+> **Abs. 1 Satz 4 – Zustimmung der höheren Verwaltungsbehörde:** Für Vorhaben nach § 35 Abs. 2 und 4 kann die Landesregierung durch Rechtsverordnung allgemein oder für bestimmte Fälle festlegen, dass zusätzlich die Zustimmung der höheren Verwaltungsbehörde erforderlich ist.
+>
+> **Abs. 2 – Versagungsgründe, Fiktion und Ersetzung:** Einvernehmen und Zustimmung dürfen nur aus Gründen versagt werden, die sich aus § 31 Abs. 1 und 2, den §§ 33, 34 Abs. 1, 2 und 3a sowie aus § 35 ergeben. Sie gelten als erteilt, wenn sie nicht binnen zwei Monaten nach Eingang des Ersuchens der Genehmigungsbehörde verweigert werden; muss der Antrag nach Landesrecht bei der Gemeinde eingereicht werden, steht diese Einreichung dem Ersuchen gleich. Ein rechtswidrig versagtes Einvernehmen der Gemeinde kann die nach Landesrecht zuständige Behörde ersetzen.
+>
+> **Praxis:** In den in Abs. 1 genannten Fällen ist das Einvernehmen der Gemeinde ein eigener Schritt im Genehmigungsverfahren. Verweigert die Gemeinde es nicht binnen zwei Monaten, gilt es als erteilt; ein rechtswidrig verweigertes Einvernehmen kann die nach Landesrecht zuständige Behörde ersetzen.
 
 ## Fußnoten der amtlichen Fassung
 

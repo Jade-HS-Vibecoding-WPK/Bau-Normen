@@ -4,6 +4,7 @@ import { useState } from "react";
 import { alsText, standDatum } from "@/lib/text";
 import type { NormAnsicht, NormRef, OrtAnsicht } from "@/lib/typen";
 import Normtext from "./Normtext";
+import { obsidianLink, useLokal } from "./Obsidian";
 import { SymbolDenkmal, SymbolPin, SymbolPlan } from "./Symbole";
 
 type Frage = (text: string) => void;
@@ -45,8 +46,9 @@ function TeilKopf({ nr, titel, zusatz, warn }: { nr: string; titel: string; zusa
   );
 }
 
-export function NormKarte({ a, frage }: { a: NormAnsicht; frage: Frage }) {
+export function NormKarte({ a, frage, obsidianPfad }: { a: NormAnsicht; frage: Frage; obsidianPfad?: string | null }) {
   const [offen, setOffen] = useState(false);
+  const lokal = useLokal();
   const [kopiert, setKopiert] = useState(false);
   const { norm, gesetz, erlaeuterung } = a;
   const lang = norm.inhalt.length > 4 || JSON.stringify(norm.inhalt).length > 2500;
@@ -100,6 +102,14 @@ export function NormKarte({ a, frage }: { a: NormAnsicht; frage: Frage }) {
               <button onClick={kopieren}>{kopiert ? "kopiert ✓" : "kopieren"}</button>
             </dd>
           </div>
+          {obsidianPfad && lokal && (
+            <div>
+              <dt>Obsidian</dt>
+              <dd>
+                <a href={obsidianLink(obsidianPfad, `Gesetze/${gesetz.kurz}/${norm.bez} ${gesetz.kurz}.md`)}>Notiz öffnen</a>
+              </dd>
+            </div>
+          )}
         </dl>
       </header>
 
@@ -259,7 +269,7 @@ export function OrtKarte({ o, frage }: { o: OrtAnsicht; frage: Frage }) {
           {o.bplan.status === "keiner" && <p className="kachel-wert">Kein rechtsverbindlicher Bebauungsplan verzeichnet</p>}
           {o.bplan.status === "gefunden" &&
             o.bplan.plaene.map((p) => (
-              <div key={p.nummer}>
+              <div key={p.nummer} className="plan">
                 <p className="kachel-wert">
                   Nr. {p.nummer} – {p.name}
                 </p>
@@ -269,8 +279,41 @@ export function OrtKarte({ o, frage }: { o: OrtAnsicht; frage: Frage }) {
                   {p.vorhabenbezogen && <> · vorhabenbezogen</>}
                   {p.verfahren && <> · {p.verfahren}</>}
                 </p>
+                {p.dokumente && p.dokumente.length > 0 ? (
+                  <ul className="dokumente">
+                    {p.dokumente.map((d) => (
+                      <li key={d.url}>
+                        <a href={d.url} target="_blank" rel="noreferrer" title={d.name}>
+                          {d.art} ↗
+                        </a>
+                        <span className="mono">
+                          {" "}
+                          {d.name} · {d.groesseMB.toLocaleString("de-DE")} MB
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="kachel-sub">
+                    {o.bplan.status === "gefunden" && !o.bplan.dokumenteAbrufbar
+                      ? "Plan-Dokumente derzeit nicht abrufbar – bitte im Kartenportal öffnen."
+                      : "Keine Plan-Dokumente online verfügbar – erhältlich beim Stadtplanungsamt."}
+                  </p>
+                )}
               </div>
             ))}
+          {o.bplan.status !== "fehler" && o.bplan.weitere && o.bplan.weitere.length > 0 && (
+            <ul className="weitere">
+              {o.bplan.weitere.map((w, i) => (
+                <li key={i}>
+                  <span className={`status ${w.art === "in-aufstellung" ? "status-neutral" : "status-ocker"}`}>
+                    {w.art === "in-aufstellung" ? "in Aufstellung" : w.art === "veraenderungssperre" ? "Veränderungssperre" : "unwirksam (OVG)"}
+                  </span>{" "}
+                  {[w.nummer && `Nr. ${w.nummer}`, w.name, w.hinweis && `(${w.hinweis})`].filter(Boolean).join(" – ")}
+                </li>
+              ))}
+            </ul>
+          )}
           <p className="kachel-quelle">{o.bplan.quelle}</p>
         </div>
 

@@ -2,7 +2,7 @@
 pfad: "lib/ort/index.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 196
+zeilen: 251
 beschreibung: "Ortsauskunft: Adresse -> Standort -> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen) -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/ort/index.ts
 
-**Pfad:** `lib/ort/index.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 196
+**Pfad:** `lib/ort/index.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 251
 
 ## Kurzbeschreibung
 
@@ -31,6 +31,7 @@ Ortsauskunft: Adresse -\> Standort -\> B-Plan (Stadt Oldenburg) + Denkmale (Denk
 - [[Projekt/lib › gesetze.ts.md|lib/gesetze.ts]]
 - [[Projekt/lib › typen.ts.md|lib/typen.ts]] – nur Typen
 - [[Projekt/lib › ort › bplan.ts.md|lib/ort/bplan.ts]]
+- [[Projekt/lib › ort › bplan-dokumente.ts.md|lib/ort/bplan-dokumente.ts]]
 - [[Projekt/lib › ort › denkmal.ts.md|lib/ort/denkmal.ts]]
 - [[Projekt/lib › ort › standort.ts.md|lib/ort/standort.ts]]
 

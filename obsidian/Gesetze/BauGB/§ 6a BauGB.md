@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Zweiter Abschnitt – Vorbereitender Bauleitplan (Flächennutzungsplan)"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -27,6 +28,19 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Dem wirksamen Flächennutzungsplan ist eine zusammenfassende Erklärung beizufügen, die zeigt, wie Umweltbelange und Beteiligungsergebnisse berücksichtigt wurden und warum die gewählte Planung anderen geprüften Möglichkeiten vorgezogen wurde. Plan und Unterlagen sollen zudem im Internet zugänglich sein.
+>
+> **Abs. 1 – Zusammenfassende Erklärung:** Dem wirksamen Flächennutzungsplan ist eine zusammenfassende Erklärung beizufügen. Sie beschreibt, wie die Umweltbelange und die Ergebnisse der Öffentlichkeits- und Behördenbeteiligung im Plan berücksichtigt wurden und aus welchen Gründen der Plan nach Abwägung mit den geprüften, in Betracht kommenden anderweitigen Planungsmöglichkeiten gewählt wurde.
+>
+> **Abs. 2 – Veröffentlichung im Internet:** Der wirksame Flächennutzungsplan soll mit der Begründung und der zusammenfassenden Erklärung ergänzend auch ins Internet eingestellt und über ein zentrales Internetportal des Landes zugänglich gemacht werden.
+>
+> **Praxis:** Die zusammenfassende Erklärung macht nachvollziehbar, warum sich die Gemeinde für diese Planung entschieden hat und wie Umweltbelange und Beteiligungsergebnisse eingeflossen sind. Plan und Unterlagen sollen zusätzlich online und über ein Landesportal abrufbar sein – das erleichtert die Recherche zu Flächen und Projekten.
 
 ## Quelle
 

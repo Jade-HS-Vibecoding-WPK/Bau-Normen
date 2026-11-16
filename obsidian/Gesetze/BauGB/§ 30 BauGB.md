@@ -37,15 +37,15 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Dritter Teil – Re
 > [!warning] Erläuterung – Entwurf, keine Rechtsberatung
 > *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
 >
-> **Kurz:** Gibt es für Ihr Grundstück einen Bebauungsplan, entscheidet dieser Plan, was gebaut werden darf – vorausgesetzt, die Erschließung ist gesichert.
+> **Kurz:** Gilt für ein Grundstück ein Bebauungsplan, entscheidet dieser Plan, was gebaut werden darf – vorausgesetzt, die Erschließung ist gesichert.
 >
 > **Abs. 1 – qualifizierter Bebauungsplan:** Enthält der B-Plan mindestens Festsetzungen zu Art und Maß der baulichen Nutzung, zu den überbaubaren Grundstücksflächen und zu den örtlichen Verkehrsflächen, ist ein Vorhaben zulässig, wenn es diesen Festsetzungen nicht widerspricht und die Erschließung gesichert ist.
 >
-> **Abs. 2 – vorhabenbezogener Bebauungsplan:** Bei einem vorhabenbezogenen B-Plan nach § 12 (meist für ein konkretes Projekt eines Investors) gilt dasselbe: Das Vorhaben darf dem Plan nicht widersprechen, die Erschließung muss gesichert sein.
+> **Abs. 2 – vorhabenbezogener Bebauungsplan:** Bei einem vorhabenbezogenen B-Plan nach § 12 gilt dasselbe: Das Vorhaben darf dem Plan nicht widersprechen, die Erschließung muss gesichert sein.
 >
 > **Abs. 3 – einfacher Bebauungsplan:** Fehlt eine der Mindestfestsetzungen, spricht man vom einfachen B-Plan. Was er regelt, gilt; für alles andere wird ergänzend nach § 34 (Innenbereich) oder § 35 (Außenbereich) beurteilt.
 >
-> **Praxis:** Erster Schritt bei jedem Projekt: prüfen, ob ein B-Plan gilt und ob er qualifiziert oder einfach ist. Abweichungen von Festsetzungen sind nur über Ausnahmen oder Befreiungen nach § 31 möglich.
+> **Praxis:** Erster Schritt bei jedem Projekt: prüfen, ob ein B-Plan gilt und ob er qualifiziert oder einfach ist. Abweichungen von den Festsetzungen sind nur über Ausnahmen oder Befreiungen möglich – sie sind im selben Abschnitt des Gesetzes geregelt.
 
 ## Quelle
 

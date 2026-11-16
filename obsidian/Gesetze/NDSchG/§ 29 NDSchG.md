@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/b57d9186-43de-3fa
 weggefallen: false
 gliederung:
   - "Sechster Teil – Ausgleich und Enteignung"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -25,6 +26,19 @@ NDSchG › [[NDSchG Teil 6 – Ausgleich und Enteignung|Sechster Teil – Ausgle
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Schützt Eigentümer, wenn eine Anordnung nach dem Denkmalschutzgesetz ihr Eigentum im Einzelfall unzumutbar belastet: Dann gewährt das Land einen angemessenen Ausgleich in Geld, sofern die Belastung nicht anders ausgeglichen werden kann.
+>
+> **Abs. 1 – Ausgleich in Geld:** Führen Anordnungen aufgrund des Denkmalschutzgesetzes im Einzelfall zu einer unzumutbaren Belastung des Eigentums, muss das Land einen angemessenen Ausgleich in Geld gewähren – aber nur, sofern und soweit die Belastung nicht auf andere Weise ausgeglichen werden kann. Für die Bemessung gelten die Entschädigungsregeln des Niedersächsischen Enteignungsgesetzes entsprechend. Gemeinden und Landkreise sollen zum Ausgleich beitragen, wenn und soweit die belastende Anordnung auch ihre örtlichen Belange begünstigt.
+>
+> **Abs. 2 – Entscheidung über den Ausgleich:** Über den Ausgleich entscheidet die Denkmalschutzbehörde, die für die belastende Anordnung zuständig ist, nach Zustimmung der obersten Denkmalschutzbehörde. Die Entscheidung fällt zumindest dem Grunde nach – also darüber, ob ein Ausgleich gewährt wird – zugleich mit der Anordnung, die die Belastung auslöst.
+>
+> **Praxis:** Ein Geldausgleich kommt nur in Betracht, wenn eine Anordnung im Einzelfall unzumutbar belastet und die Belastung nicht anders ausgeglichen werden kann. Ob ausgeglichen wird, entscheidet die Behörde – zumindest dem Grunde nach – zusammen mit der belastenden Anordnung, nicht erst im Nachhinein.
 
 ## Quelle
 

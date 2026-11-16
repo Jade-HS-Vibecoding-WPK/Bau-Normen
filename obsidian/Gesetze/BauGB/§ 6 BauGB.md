@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Zweiter Abschnitt – Vorbereitender Bauleitplan (Flächennutzungsplan)"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -35,6 +36,27 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 ## Verweist auf
 
 - [[§ 6a BauGB]] – Zusammenfassende Erklärung zum Flächennutzungsplan; Einstellen in das Internet
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Der Flächennutzungsplan braucht die Genehmigung der höheren Verwaltungsbehörde und wird erst mit der ortsüblichen Bekanntmachung der Genehmigung wirksam. Die Vorschrift regelt Prüfmaßstab, Entscheidungsfrist, Bekanntmachung und Einsichtsrecht.
+>
+> **Abs. 1 – Genehmigungspflicht:** Der Flächennutzungsplan bedarf der Genehmigung der höheren Verwaltungsbehörde, also einer der Gemeinde übergeordneten Behörde.
+>
+> **Abs. 2 – Gründe für eine Versagung:** Die Genehmigung darf nur versagt werden, wenn der Plan nicht ordnungsgemäß zustande gekommen ist oder dem Baugesetzbuch, den auf seiner Grundlage erlassenen oder sonstigen Rechtsvorschriften widerspricht. Die Behörde prüft also die Rechtmäßigkeit des Plans.
+>
+> **Abs. 3 – Ausnahme von Teilen des Plans:** Lassen sich Versagungsgründe nicht ausräumen, kann die höhere Verwaltungsbehörde räumliche oder sachliche Teile des Flächennutzungsplans von der Genehmigung ausnehmen.
+>
+> **Abs. 4 – Entscheidungsfrist und Genehmigungsfiktion:** Über die Genehmigung ist binnen eines Monats zu entscheiden; räumliche und sachliche Teile des Plans können vorweg genehmigt werden. Aus wichtigen Gründen kann die zuständige übergeordnete Behörde die Frist auf Antrag der Genehmigungsbehörde verlängern, in der Regel jedoch nur bis zu drei Monaten; die Gemeinde ist über die Verlängerung zu informieren. Wird die Genehmigung nicht innerhalb der Frist unter Angabe von Gründen abgelehnt, gilt sie als erteilt (Genehmigungsfiktion).
+>
+> **Abs. 5 – Bekanntmachung, Wirksamkeit und Einsicht:** Die Erteilung der Genehmigung ist ortsüblich bekannt zu machen; mit dieser Bekanntmachung wird der Flächennutzungsplan wirksam. Jeder kann den Plan, die Begründung und die zusammenfassende Erklärung nach § 6a Abs. 1 einsehen und Auskunft über deren Inhalt verlangen.
+>
+> **Abs. 6 – Neubekanntmachung:** Beschließt die Gemeinde eine Änderung oder Ergänzung des Flächennutzungsplans, kann sie zugleich bestimmen, dass der Plan in der Fassung, die er durch die Änderung oder Ergänzung erhalten hat, neu bekannt zu machen ist.
+>
+> **Praxis:** Für die Zeitplanung wichtig: Wirksam wird der Flächennutzungsplan erst mit der Bekanntmachung der Genehmigung. Lehnt die Behörde nicht innerhalb der – gegebenenfalls verlängerten – Frist unter Angabe von Gründen ab, gilt die Genehmigung als erteilt. Plan, Begründung und zusammenfassende Erklärung kann jeder einsehen.
 
 ## Quelle
 

@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Vierter Abschnitt – Zusammenarbeit mit Privaten; vereinfachtes Verfahren"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -112,6 +113,29 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 - [[§ 135c BauGB]] – Satzungsrecht
 - [[§ 85 BauGB]] – Enteignungszweck
 - [[§ 13 BauGB]] – Vereinfachtes Verfahren
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt den vorhabenbezogenen Bebauungsplan: Ein Vorhabenträger stimmt ein konkretes Projekt samt Erschließung mit der Gemeinde ab und verpflichtet sich vertraglich, es innerhalb einer Frist umzusetzen und die Planungs- und Erschließungskosten ganz oder teilweise zu tragen.
+>
+> **Abs. 1 – Voraussetzungen und Durchführungsvertrag:** Die Gemeinde kann die Zulässigkeit von Vorhaben durch einen vorhabenbezogenen B-Plan bestimmen, wenn der Vorhabenträger (wer das Projekt umsetzen will) auf Grundlage eines mit der Gemeinde abgestimmten Plans für Vorhaben und Erschließung (Vorhaben- und Erschließungsplan) zur Durchführung bereit und in der Lage ist. Außerdem muss er sich vor dem Satzungsbeschluss nach § 10 Abs. 1 in einem Durchführungsvertrag verpflichten, das Vorhaben innerhalb einer bestimmten Frist durchzuführen und die Planungs- und Erschließungskosten ganz oder teilweise zu tragen. Die Begründung des Planentwurfs muss die Angaben nach § 2a enthalten; für eine grenzüberschreitende Beteiligung ist eine Übersetzung vorzulegen, soweit das Gesetz über die Umweltverträglichkeitsprüfung dies verlangt.
+>
+> **Abs. 2 – Antrag auf Einleitung, Untersuchungsrahmen:** Beantragt der Vorhabenträger die Einleitung des Planverfahrens, muss die Gemeinde darüber nach pflichtgemäßem Ermessen entscheiden – sie hat einen Entscheidungsspielraum, muss ihn aber sachgerecht nutzen. Auf Antrag des Vorhabenträgers oder wenn die Gemeinde es nach Einleitung des Verfahrens für erforderlich hält, informiert sie ihn über den voraussichtlich erforderlichen Untersuchungsrahmen der Umweltprüfung (§ 2 Abs. 4) und beteiligt dabei die Behörden nach § 4 Abs. 1.
+>
+> **Abs. 3 – Bestandteil des Plans, gelockerte Bindungen:** Der Vorhaben- und Erschließungsplan wird Bestandteil des vorhabenbezogenen B-Plans. In seinem Bereich ist die Gemeinde nicht an die Festsetzungen nach § 9 und an die auf Grund von § 9a erlassene Verordnung gebunden, und die §§ 14 bis 18, 22 bis 28, 39 bis 79 und 127 bis 135c gelten dort nicht – darunter die Vorschriften über Veränderungssperre und Zurückstellung, Vorkaufsrechte, Entschädigung, Umlegung und Erschließungsbeiträge. Trifft der Plan auch dort Festsetzungen nach § 9 für öffentliche Zwecke, kann insoweit nach § 85 Abs. 1 Nr. 1 enteignet werden.
+>
+> **Abs. 3a – Bindung an den Durchführungsvertrag:** Setzt der Plan für den Bereich des Vorhaben- und Erschließungsplans eine Nutzung allgemein fest – etwa durch ein Baugebiet nach der Baunutzungsverordnung –, muss er in entsprechender Anwendung von § 9 Abs. 2 zusätzlich festsetzen, dass nur die Vorhaben zulässig sind, zu denen sich der Vorhabenträger im Durchführungsvertrag verpflichtet hat. Der Durchführungsvertrag darf geändert oder ein neuer abgeschlossen werden.
+>
+> **Abs. 4 und 5 – weitere Flächen, Wechsel des Vorhabenträgers:** Einzelne Flächen außerhalb des Vorhaben- und Erschließungsplans können in den vorhabenbezogenen B-Plan einbezogen werden. Ein Wechsel des Vorhabenträgers braucht die Zustimmung der Gemeinde; sie darf nur verweigert werden, wenn Tatsachen die Annahme rechtfertigen, dass die Durchführung innerhalb der Frist nach Abs. 1 gefährdet ist.
+>
+> **Abs. 6 – Aufhebung bei Nichtdurchführung:** Wird der Vorhaben- und Erschließungsplan nicht innerhalb der Frist durchgeführt, soll die Gemeinde den B-Plan aufheben. Der Vorhabenträger kann aus der Aufhebung keine Ansprüche gegen die Gemeinde geltend machen. Für die Aufhebung kann das vereinfachte Verfahren nach § 13 angewendet werden.
+>
+> **Abs. 7 – Wohnen in Erholungssondergebieten:** Soll in bisherigen Erholungssondergebieten nach § 10 der Baunutzungsverordnung auch Wohnnutzung zugelassen werden, kann die Gemeinde nach den Abs. 1 bis 6 einen vorhabenbezogenen B-Plan aufstellen, der insbesondere die Zulässigkeit baulicher Anlagen zu Wohnzwecken in diesen Gebieten regelt.
+>
+> **Praxis:** Der vorhabenbezogene B-Plan ist auf ein konkretes Projekt zugeschnitten. Kern ist der Durchführungsvertrag: Frist und Kostenübernahme müssen vor dem Satzungsbeschluss vereinbart sein. Wird nicht fristgerecht gebaut, soll der Plan aufgehoben werden, ohne dass der Vorhabenträger daraus Ansprüche gegen die Gemeinde hat; ein Trägerwechsel braucht die Zustimmung der Gemeinde.
 
 ## Quelle
 

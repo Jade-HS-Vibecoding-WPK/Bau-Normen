@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/62528167-360e-341
 weggefallen: false
 gliederung:
   - "Neunter Teil – Schluss- und Übergangsvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -23,6 +24,17 @@ Die Verwaltungskosten, die den Landkreisen und Gemeinden durch die Ausführung d
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt, wie die Verwaltungskosten der Landkreise und Gemeinden für die Ausführung des Denkmalschutzgesetzes gedeckt werden: über den kommunalen Finanzausgleich.
+>
+> **Regelung – Deckung der Verwaltungskosten:** Die Verwaltungskosten, die Landkreisen und Gemeinden durch die Ausführung des Gesetzes entstehen, werden im Rahmen des kommunalen Finanzausgleichs gedeckt, also über das System, mit dem das Land Finanzmittel an die Kommunen verteilt.
+>
+> **Praxis:** Für Bauherren und Eigentümer hat die Vorschrift keine unmittelbare Bedeutung; sie betrifft die Finanzierung zwischen Land und Kommunen.
 
 ## Quelle
 

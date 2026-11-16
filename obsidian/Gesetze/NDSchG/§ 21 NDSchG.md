@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/220b632b-e6f2-3a7
 weggefallen: false
 gliederung:
   - "Vierter Teil – Denkmalbehörden"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -30,6 +31,19 @@ NDSchG › [[NDSchG Teil 4 – Denkmalbehörden|Vierter Teil – Denkmalbehörde
 ## Verweist auf
 
 - [[§ 4 NDSchG]] – Verzeichnis der Kulturdenkmale
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Beschreibt das Landesamt für Denkmalpflege als staatliche Denkmalfachbehörde und zählt seine wichtigsten Aufgaben auf – von der fachlichen Beratung bis zum Führen des Verzeichnisses der Kulturdenkmale. Relevant für Eigentümer, Planer und Behörden.
+>
+> **Abs. 1 – Aufgaben des Landesamts:** Das Landesamt wirkt als staatliche Denkmalfachbehörde bei der Ausführung des Gesetzes mit. Zu seinen Aufgaben gehören insbesondere: Denkmalschutz-, Bau- und Planungsbehörden, Kirchen und andere – vor allem Eigentümer und Besitzer von Kulturdenkmalen – fachlich beraten; Kulturdenkmale erfassen, erforschen, dokumentieren und die Ergebnisse veröffentlichen sowie das Verzeichnis nach § 4 Abs. 1 aufstellen und fortführen; Restaurierungen und Grabungen durchführen; wissenschaftliche Grundlagen für die Denkmalpflege schaffen; zentrale Fachbibliotheken und Archive unterhalten. Die Aufzählung ist nicht abschließend („insbesondere“).
+>
+> **Abs. 2 – Beteiligung beim UNESCO-Kulturerbe:** Bei allen Maßnahmen, die für das Kulturerbe im Sinne des UNESCO-Übereinkommens zum Schutz des Kultur- und Naturerbes der Welt von nicht nur unerheblicher Bedeutung sind, müssen die unteren Denkmalschutzbehörden das Benehmen mit dem Landesamt herstellen, es also beteiligen und anhören.
+>
+> **Praxis:** Eigentümer und Besitzer von Kulturdenkmalen sind ausdrücklich als Empfänger der fachlichen Beratung durch das Landesamt genannt – das kann vor allem bei Sanierungs- und Umbauplanungen hilfreich sein. Bei Vorhaben, die für Kulturerbe im Sinne des UNESCO-Übereinkommens mehr als unerheblich sind, wird das Landesamt von der unteren Denkmalschutzbehörde beteiligt.
 
 ## Quelle
 

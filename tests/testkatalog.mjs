@@ -4,7 +4,8 @@
 // Erwartung je Antwort: [art, detail, gesetz]
 //   norm:    detail = "§ 34", gesetz = "baugb"
 //   treffer: detail = Paragraph, der unter den Treffern sein muss
-//   ort:     detail = "bplan-status/denkmal-status" (z. B. "gefunden/keiner"), "*" = egal
+//   ort:     detail = "bplan-status/denkmal-status" (z. B. "gefunden/keiner"), "*" = egal,
+//            "gefunden+dok" = B-Plan gefunden UND Planzeichnung als PDF verlinkt
 // Hinweis: Die Orts-Fälle fragen echte Dienste ab (Stadt Oldenburg, Denkmalatlas, OpenStreetMap).
 const BASIS = process.argv[2] ?? "http://localhost:3000";
 
@@ -39,7 +40,7 @@ const FAELLE = [
   { frage: "xyzqv", erwartet: [["fehler"]] },
 
   // Ortsauskunft (live)
-  { frage: "Kärntner Straße 10", erwartet: [["ort", "gefunden/*"]] },
+  { frage: "Kärntner Straße 10", erwartet: [["ort", "gefunden+dok/*"]] }, // B-Plan 117 II mit Planzeichnung als PDF
   { frage: "Gartenstraße 5", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Ich habe ein Grundstück an der Gartenstraße 5, dort steht ein Denkmal", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Fantasiestraße 999", erwartet: [["ort", "standort-fehlt"]] },
@@ -58,9 +59,11 @@ function passt(a, [art, detail, gesetz]) {
   if (a.art === "treffer" && detail && !a.treffer.some((t) => t.bez === detail)) return false;
   if (a.art === "ort" && detail) {
     if (detail === "standort-fehlt") return a.ort.standort.status !== "ok";
-    const [b, d] = detail.split("/");
+    const [bRoh, d] = detail.split("/");
+    const [b, mitDok] = bRoh.split("+");
     if (a.ort.standort.status !== "ok") return false;
     if (b !== "*" && a.ort.bplan.status !== b) return false;
+    if (mitDok && !(a.ort.bplan.plaene ?? []).some((p) => (p.dokumente ?? []).some((x) => x.art === "Planzeichnung"))) return false;
     if (d !== "*" && a.ort.denkmal.status !== d) return false;
   }
   return true;

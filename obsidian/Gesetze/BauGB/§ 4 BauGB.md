@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Erster Abschnitt – Allgemeine Vorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -30,6 +31,23 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 
 - [[§ 3 BauGB]] – Beteiligung der Öffentlichkeit
 - [[§ 2 BauGB]] – Aufstellung der Bauleitpläne
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt, wie Behörden und sonstige Träger öffentlicher Belange an der Bauleitplanung beteiligt werden: zuerst frühzeitig zu Zielen und voraussichtlichen Auswirkungen der Planung sowie zum Umfang der Umweltprüfung, danach mit Stellungnahmen zum Planentwurf und zur Begründung.
+>
+> **Abs. 1 – Frühzeitige Beteiligung der Behörden:** Behörden und sonstige Träger öffentlicher Belange – also Stellen, die öffentliche Aufgaben wahrnehmen –, deren Aufgabenbereich durch die Planung berührt werden kann, sind entsprechend den Regeln für die frühzeitige Unterrichtung der Öffentlichkeit (§ 3 Abs. 1 Satz 1 Halbsatz 1) zu unterrichten. Sie sind zur Äußerung aufzufordern, auch zum erforderlichen Umfang und Detaillierungsgrad der Umweltprüfung nach § 2 Abs. 4. Anschließend folgt das Verfahren nach Abs. 2, auch wenn die Äußerung zu einer Änderung der Planung führt.
+>
+> **Abs. 2 – Stellungnahmen zum Planentwurf und Fristen:** Die Gemeinde holt die Stellungnahmen dieser Behörden und Träger zum Planentwurf und zur Begründung ein. Die Bereitstellung der Unterlagen und die Mitteilung darüber sollen elektronisch erfolgen, ebenso sollen die Stellungnahmen elektronisch übermittelt werden. Die Stellungnahmen sind innerhalb eines Monats abzugeben, wobei die Frist 30 Tage nicht unterschreiten darf; bei Vorliegen eines wichtigen Grundes soll die Gemeinde die Frist angemessen verlängern.
+>
+> **Abs. 2 – Inhalt der Stellungnahmen:** Die Behörden und Träger sollen sich in ihren Stellungnahmen auf ihren Aufgabenbereich beschränken. Sie müssen außerdem über eigene beabsichtigte oder bereits eingeleitete Planungen und sonstige Maßnahmen samt deren zeitlichem Ablauf informieren, soweit diese für die städtebauliche Entwicklung und Ordnung des Gebiets bedeutsam sein können. Verfügen sie über Informationen, die für die Ermittlung und Bewertung des Abwägungsmaterials zweckdienlich sind, müssen sie diese der Gemeinde zur Verfügung stellen.
+>
+> **Abs. 3 – Hinweise nach Abschluss des Verfahrens:** Nach Abschluss des Aufstellungsverfahrens unterrichten die Behörden die Gemeinde, sofern nach ihren Erkenntnissen die Durchführung des Bauleitplans erhebliche, insbesondere unvorhergesehene nachteilige Auswirkungen auf die Umwelt hat.
+>
+> **Praxis:** Für ein Planverfahren bedeutet das grundsätzlich zwei Beteiligungsrunden der Behörden und Träger öffentlicher Belange: frühzeitig zu Zielen, Auswirkungen und Umfang der Umweltprüfung, später zum konkreten Entwurf mit Begründung. Die Frist für Stellungnahmen (ein Monat, mindestens 30 Tage) ist im Zeitplan zu berücksichtigen; Unterlagen und Stellungnahmen sollen elektronisch ausgetauscht werden.
 
 ## Quelle
 

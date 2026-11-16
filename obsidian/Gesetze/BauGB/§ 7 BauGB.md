@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Zweiter Abschnitt – Vorbereitender Bauleitplan (Flächennutzungsplan)"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -28,6 +29,21 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 - [[§ 13 BauGB]] – Vereinfachtes Verfahren
 - [[§ 37 BauGB]] – Bauliche Maßnahmen des Bundes und der Länder
 - [[§ 38 BauGB]] – Bauliche Maßnahmen von überörtlicher Bedeutung auf Grund von Planfeststellungsverfahren; öffentlich zugängliche Abfallbeseitigungsanlagen
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Öffentliche Planungsträger, die am Verfahren beteiligt wurden, müssen ihre eigenen Planungen an den Flächennutzungsplan anpassen, soweit sie ihm nicht widersprochen haben. Die Vorschrift regelt außerdem den nachträglichen Widerspruch bei geänderter Sachlage und die Kosten einer abweichenden Planung.
+>
+> **Satz 1 und 2 – Anpassungspflicht und Widerspruch:** Öffentliche Planungsträger – also öffentliche Stellen mit eigenen Planungen –, die nach § 4 (Beteiligung der Behörden) oder § 13 (vereinfachtes Verfahren) beteiligt worden sind, müssen ihre Planungen dem Flächennutzungsplan anpassen, soweit sie diesem Plan nicht widersprochen haben. Der Widerspruch ist bis zum Beschluss der Gemeinde einzulegen.
+>
+> **Satz 3 bis 5 – Geänderte Sachlage und nachträglicher Widerspruch:** Macht eine Veränderung der Sachlage eine abweichende Planung erforderlich, muss sich der Planungsträger unverzüglich mit der Gemeinde ins Benehmen setzen, sich also mit ihr in Verbindung setzen und beraten. Wird kein Einvernehmen (Einigung) erreicht, kann er nachträglich widersprechen. Dieser Widerspruch ist nur zulässig, wenn die Belange, die er für die abweichende Planung geltend macht, die städtebaulichen Belange aus dem Flächennutzungsplan nicht nur unwesentlich überwiegen.
+>
+> **Satz 6 – Kosten bei abweichender Planung:** Kommt es zu einer abweichenden Planung, ist § 37 Abs. 3 entsprechend anzuwenden auf die Aufwendungen und Kosten, die durch die Änderung oder Ergänzung des Flächennutzungsplans entstehen oder dadurch, dass ein aus ihm entwickelter Bebauungsplan geändert, ergänzt oder aufgehoben werden musste. Entsprechend § 37 Abs. 3 sind diese Aufwendungen und Kosten der Gemeinde vom Träger der abweichenden Planung zu ersetzen. § 38 Satz 3 bleibt unberührt.
+>
+> **Praxis:** Für Behörden und andere öffentliche Planungsträger ist die Beteiligung am Flächennutzungsplan folgenreich: Wer nicht rechtzeitig widerspricht, muss seine Planungen anpassen. Weicht ein Planungsträger später wegen geänderter Sachlage ab, kann er verpflichtet sein, der Gemeinde die Aufwendungen und Kosten der dadurch nötigen Planänderungen zu ersetzen.
 
 ## Quelle
 

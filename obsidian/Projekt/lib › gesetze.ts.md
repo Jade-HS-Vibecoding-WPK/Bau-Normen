@@ -23,7 +23,7 @@ Die "Bibliothek": lädt die importierten Gesetze und beantwortet Abrufe. Wichtig
 
 ## Daten
 
-- **liest** `data/erlaeuterungen/*.json` → Erläuterungen zu [[BauGB]]
+- **liest** `data/erlaeuterungen/*.json` → Erläuterungen zu [[BauGB]], [[NDSchG]]
 - **liest** `data/gesetze/*` → [[BauGB]], [[NDSchG]]
 - **liest** `data/stichworte.json`
 

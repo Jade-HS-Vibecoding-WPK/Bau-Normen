@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/58a7632e-c7d2-3a5
 weggefallen: false
 gliederung:
   - "Neunter Teil – Schluss- und Übergangsvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -23,6 +24,17 @@ Dieses Gesetz tritt am 1. April 1979 in Kraft.
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Bestimmt, wann das Niedersächsische Denkmalschutzgesetz in Kraft getreten ist: am 1. April 1979.
+>
+> **Regelung – Inkrafttreten:** Das Gesetz ist am 1. April 1979 in Kraft getreten.
+>
+> **Praxis:** Das Datum hat für die Praxis vor allem historische Bedeutung; anzuwenden ist das Gesetz in seiner jeweils geltenden Fassung.
 
 ## Quelle
 

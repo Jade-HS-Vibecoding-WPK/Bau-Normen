@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Zweiter Teil – Sicherung der Bauleitplanung"
   - "Dritter Abschnitt – Gesetzliche Vorkaufsrechte der Gemeinde"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -33,6 +34,23 @@ Die Ausübung des Vorkaufsrechts ist ausgeschlossen, wenn
 
 - [[§ 38 BauGB]] – Bauliche Maßnahmen von überörtlicher Bedeutung auf Grund von Planfeststellungsverfahren; öffentlich zugängliche Abfallbeseitigungsanlagen
 - [[§ 177 BauGB]] – Modernisierungs- und Instandsetzungsgebot
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Nennt die Fälle, in denen die Gemeinde ein Vorkaufsrecht nicht ausüben darf – zum Beispiel beim Verkauf an den Ehegatten oder bestimmte Verwandte oder wenn das Grundstück bereits plangemäß bebaut und genutzt wird und keine Missstände aufweist.
+>
+> **Nr. 1 – Verkauf an Ehegatten und Verwandte:** Die Ausübung ist ausgeschlossen, wenn der Eigentümer an seinen Ehegatten verkauft oder an eine Person, die mit ihm in gerader Linie verwandt oder verschwägert oder in der Seitenlinie bis zum dritten Grad verwandt ist. In gerader Linie verwandt sind Personen, die voneinander abstammen.
+>
+> **Nr. 2 – Kauf für bestimmte öffentliche oder kirchliche Zwecke:** Ausgeschlossen ist sie auch, wenn ein öffentlicher Bedarfsträger das Grundstück für Zwecke der Landesverteidigung, der Bundespolizei, der Zollverwaltung, der Polizei oder des Zivilschutzes kauft (Buchstabe a) oder wenn Kirchen und Religionsgesellschaften des öffentlichen Rechts es für Zwecke des Gottesdienstes oder der Seelsorge kaufen (Buchstabe b).
+>
+> **Nr. 3 – Vorhaben mit Planfeststellung:** Ebenso, wenn auf dem Grundstück Vorhaben errichtet werden sollen, für die ein in § 38 genanntes Verfahren – etwa ein Planfeststellungsverfahren – eingeleitet oder durchgeführt worden ist.
+>
+> **Nr. 4 – Plangemäß bebaute und genutzte Grundstücke:** Ebenso, wenn das Grundstück entsprechend den Festsetzungen des Bebauungsplans oder den Zielen und Zwecken der städtebaulichen Maßnahme bebaut ist und genutzt wird und eine darauf errichtete bauliche Anlage keine Missstände oder Mängel im Sinne des § 177 Abs. 2 und 3 Satz 1 aufweist. Diese Bedingungen müssen zusammen vorliegen.
+>
+> **Praxis:** Bei Verkäufen an den Ehegatten oder die genannten Verwandten sowie bei Käufen durch die genannten öffentlichen oder kirchlichen Käufer für die genannten Zwecke kann die Gemeinde ihr Vorkaufsrecht nicht ausüben. Bei bebauten Grundstücken kommt es nach Nr. 4 darauf an, dass Bebauung und Nutzung den Festsetzungen oder Maßnahmezielen entsprechen und die Gebäude keine Missstände oder Mängel aufweisen.
 
 ## Quelle
 

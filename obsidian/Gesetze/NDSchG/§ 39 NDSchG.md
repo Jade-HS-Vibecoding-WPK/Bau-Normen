@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/59012cfc-01f3-38a
 weggefallen: false
 gliederung:
   - "Neunter Teil – Schluss- und Übergangsvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -29,6 +30,17 @@ Folgende Vorschriften treten außer Kraft, soweit sie nicht bereits aufgehoben w
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Hebt mehrere ältere Vorschriften zu Denkmalschutz, Ausgrabungen, Heimatschutz und Verunstaltungsschutz auf, soweit sie nicht schon vorher aufgehoben waren.
+>
+> **Regelung – Aufgehobene Vorschriften:** Außer Kraft treten, soweit nicht bereits aufgehoben: die Bekanntmachung von 1881 zu Ausgrabungen an Steindenkmälern des Altertums unter Aufsicht der Forstbehörden, das Gesetz gegen die Verunstaltung von Stadt und Land von 1911, das Denkmalschutzgesetz für das Großherzogtum Oldenburg von 1911, das Ausgrabungsgesetz von 1914, das Heimatschutzgesetz von 1934 und die Verordnung zum Schutze des heimischen Kulturgutes von 1944.
+>
+> **Praxis:** Die genannten Vorschriften gelten nicht mehr; maßgeblich ist das Niedersächsische Denkmalschutzgesetz. Die Vorschrift hat heute vor allem historische Bedeutung.
 
 ## Quelle
 

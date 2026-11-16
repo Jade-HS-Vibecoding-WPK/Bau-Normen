@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/bc8c2508-e389-3b7
 weggefallen: false
 gliederung:
   - "Neunter Teil – Schluss- und Übergangsvorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -23,6 +24,17 @@ NDSchG › [[NDSchG Teil 9 – Schluss- und Übergangsvorschriften|Neunter Teil 
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Änderungsvorschrift: Dieser Paragraph betrifft laut Überschrift eine Änderung der Niedersächsischen Bauordnung, also eines anderen Gesetzes.
+>
+> **Inhalt – Änderung eines anderen Gesetzes:** Der Wortlaut der Änderung ist im gespeicherten Text nicht wiedergegeben. Was im Einzelnen geändert wurde, wird deshalb hier nicht erläutert.
+>
+> **Praxis:** Für die Anwendung des Denkmalschutzgesetzes ergibt sich aus diesem Paragraphen keine eigene Regel. Was in der Bauordnung gilt, ist der Bauordnung selbst zu entnehmen.
 
 ## Quelle
 

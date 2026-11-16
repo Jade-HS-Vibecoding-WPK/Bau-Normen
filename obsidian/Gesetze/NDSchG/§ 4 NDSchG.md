@@ -7,6 +7,7 @@ quelle: "https://voris.wolterskluwer-online.de/browse/document/50becb8f-fd9a-31e
 weggefallen: false
 gliederung:
   - "Erster Teil – Allgemeine Vorschriften"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/ndschg"
   - "paragraph"
@@ -31,6 +32,25 @@ NDSchG › [[NDSchG Teil 1 – Allgemeine Vorschriften|Erster Teil – Allgemein
 ## Verweist auf
 
 *Keine Verweise auf andere Vorschriften dieses Gesetzes erkannt.*
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Regelt das Verzeichnis der Kulturdenkmale: Das Landesamt für Denkmalpflege führt es, grundsätzlich darf jeder Einsicht nehmen, und vor bestimmten Eintragungen werden Gemeinde und Eigentümer beteiligt. Eigentümer von Baudenkmalen, die nach dem 30. September 2011 eingetragen wurden, können die Denkmaleigenschaft per Bescheid feststellen lassen.
+>
+> **Abs. 1 – Verzeichnis beim Landesamt:** Kulturdenkmale sind in ein Verzeichnis einzutragen, das das Landesamt für Denkmalpflege aufstellt und fortführt. Bewegliche Denkmale werden nur eingetragen, wenn ihre besondere Bedeutung es erfordert, sie dem Schutz des Gesetzes zu unterstellen.
+>
+> **Abs. 2 – Auszüge und Einsichtsrecht:** Die unteren Denkmalschutzbehörden und die Gemeinden führen für ihr Gebiet Auszüge aus dem Verzeichnis. Jeder darf das Verzeichnis und die Auszüge einsehen. Ausnahme: Eintragungen zu beweglichen Denkmalen und zum Zubehör von Baudenkmalen dürfen nur die Eigentümer, sonstige dinglich Berechtigte (Inhaber eines Rechts an der Sache selbst) und von ihnen ermächtigte Personen einsehen.
+>
+> **Abs. 3 – Löschung:** Eine Eintragung ist zu löschen, wenn ihre Voraussetzungen entfallen sind. Wurde die Eigenschaft als Baudenkmal nach Abs. 5 durch Verwaltungsakt (behördlichen Bescheid) festgestellt, ist die Eintragung zu löschen, wenn dieser Verwaltungsakt unanfechtbar, also endgültig, aufgehoben worden ist.
+>
+> **Abs. 4 – Anhörung und Information:** Vor der Eintragung eines Baudenkmals, eines Bodendenkmals oder eines unbeweglichen Denkmals der Erdgeschichte wird die Gemeinde angehört, in deren Gebiet es liegt; sie teilt dem Landesamt Name und Anschrift des Eigentümers mit. Vor der Eintragung eines Baudenkmals hört das Landesamt zusätzlich den Eigentümer an und informiert nach einer Neueintragung oder Löschung eines Baudenkmals unverzüglich (ohne schuldhaftes Zögern) die untere Denkmalschutzbehörde, die Gemeinde und den Eigentümer. Über die beabsichtigte Eintragung eines beweglichen Denkmals unterrichtet das Landesamt die untere Denkmalschutzbehörde.
+>
+> **Abs. 5 – Feststellung der Denkmaleigenschaft auf Antrag:** Wurde ein Baudenkmal nach dem 30. September 2011 in das Verzeichnis eingetragen, muss das Landesamt auf Antrag des Eigentümers die Eigenschaft als Baudenkmal durch Verwaltungsakt feststellen. Für Eintragungen bis einschließlich 30. September 2011 sieht Abs. 5 dieses Antragsrecht nicht vor.
+>
+> **Praxis:** Vor Kauf, Umbau oder Abbruch eines Gebäudes lohnt ein Blick in das Verzeichnis oder in den Auszug bei der unteren Denkmalschutzbehörde oder der Gemeinde. Ein fehlender Eintrag ist allerdings kein sicherer Beleg dafür, dass kein Denkmal vorliegt; welche Wirkung die Eintragung hat, regelt das Gesetz gesondert.
 
 ## Quelle
 

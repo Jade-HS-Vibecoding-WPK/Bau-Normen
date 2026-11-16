@@ -9,6 +9,7 @@ gliederung:
   - "Erstes Kapitel – Allgemeines Städtebaurecht"
   - "Erster Teil – Bauleitplanung"
   - "Zweiter Abschnitt – Vorbereitender Bauleitplan (Flächennutzungsplan)"
+erlaeuterung: "entwurf"
 tags:
   - "gesetz/baugb"
   - "paragraph"
@@ -63,6 +64,33 @@ BauGB › Erstes Kapitel – Allgemeines Städtebaurecht › Erster Teil – Bau
 - [[§ 249 BauGB]] – Sonderregelungen für Windenergieanlagen an Land
 - [[§ 249c BauGB]] – Beschleunigungsgebiete für die Windenergie an Land
 - [[§ 2a BauGB]] – Begründung zum Bauleitplanentwurf, Umweltbericht
+
+## Erläuterung
+
+> [!warning] Erläuterung – Entwurf, keine Rechtsberatung
+> *Ungeprüfter Entwurf einer Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*
+>
+> **Kurz:** Bestimmt den Inhalt des Flächennutzungsplans: Er stellt für das ganze Gemeindegebiet in den Grundzügen dar, wie der Boden nach der beabsichtigten städtebaulichen Entwicklung genutzt werden soll. Wichtig als früher Anhaltspunkt dafür, welche Nutzung die Gemeinde für eine Fläche vorsieht.
+>
+> **Abs. 1 – Grundsatz und Ausnahmen:** Der Flächennutzungsplan stellt für das ganze Gemeindegebiet die Art der Bodennutzung in den Grundzügen dar, die sich aus der beabsichtigten städtebaulichen Entwicklung nach den voraussehbaren Bedürfnissen der Gemeinde ergibt. Flächen und sonstige Darstellungen können ausgenommen werden, wenn die Grundzüge dadurch nicht berührt werden und die Gemeinde die Darstellung später vornehmen will; die Gründe dafür sind in der Begründung darzulegen.
+>
+> **Abs. 2 Nr. 1 und 2 – Bauflächen und Ausstattung des Gemeindegebiets:** Dargestellt werden können insbesondere – die Aufzählung ist nicht abschließend – die für die Bebauung vorgesehenen Flächen nach der allgemeinen Art ihrer baulichen Nutzung (Bauflächen), nach der besonderen Art ihrer baulichen Nutzung (Baugebiete) sowie nach dem allgemeinen Maß der baulichen Nutzung; Bauflächen, für die keine zentrale Abwasserbeseitigung vorgesehen ist, sind zu kennzeichnen (Nr. 1). Außerdem die Ausstattung des Gemeindegebiets (Nr. 2) mit Anlagen und Einrichtungen zur Versorgung mit Gütern und Dienstleistungen des öffentlichen und privaten Bereichs, insbesondere Gemeinbedarfseinrichtungen wie Schulen und Kirchen, Gebäuden und Einrichtungen für kirchliche, soziale, gesundheitliche und kulturelle Zwecke sowie Flächen für Sport- und Spielanlagen (Buchst. a); mit Anlagen, Einrichtungen und Maßnahmen, die dem Klimawandel entgegenwirken, insbesondere zur dezentralen und zentralen Erzeugung, Verteilung, Nutzung oder Speicherung von Strom, Wärme oder Kälte aus erneuerbaren Energien oder Kraft-Wärme-Kopplung (Buchst. b); mit Anlagen, Einrichtungen und Maßnahmen zur Anpassung an den Klimawandel (Buchst. c) und mit zentralen Versorgungsbereichen (Buchst. d).
+>
+> **Abs. 2 Nr. 3 bis 10 – Weitere darstellbare Flächen:** Ebenso können dargestellt werden: Flächen für den überörtlichen Verkehr und die örtlichen Hauptverkehrszüge (Nr. 3); Flächen für Versorgungsanlagen, Abfallentsorgung, Abwasserbeseitigung und Ablagerungen sowie für Hauptversorgungs- und Hauptabwasserleitungen (Nr. 4); Grünflächen wie Parkanlagen, Naturerfahrungsräume, Dauerkleingärten, Sport-, Spiel-, Zelt- und Badeplätze und Friedhöfe (Nr. 5); Flächen zur Gewährleistung eines natürlichen Klimaschutzes (Nr. 5a); Flächen für Nutzungsbeschränkungen oder Vorkehrungen zum Schutz gegen schädliche Umwelteinwirkungen im Sinne des Bundes-Immissionsschutzgesetzes (Nr. 6). Ferner Wasserflächen, Häfen und für die Wasserwirtschaft vorgesehene Flächen sowie Flächen, die für den Hochwasserschutz und die Regelung des Wasserabflusses freizuhalten sind (Nr. 7); Flächen für Aufschüttungen, Abgrabungen oder die Gewinnung von Steinen, Erden und anderen Bodenschätzen (Nr. 8); Flächen für die Landwirtschaft und Wald (Nr. 9); Flächen für Maßnahmen zum Schutz, zur Pflege und zur Entwicklung von Boden, Natur und Landschaft (Nr. 10).
+>
+> **Abs. 2a – Zuordnung von Ausgleichsflächen:** Flächen zum Ausgleich im Sinne des § 1a Abs. 3 können im Flächennutzungsplan ganz oder teilweise den Flächen zugeordnet werden, auf denen Eingriffe in Natur und Landschaft zu erwarten sind. So wird erkennbar, welche Ausgleichsfläche zu welchem Eingriffsbereich gehört.
+>
+> **Abs. 2b – Sachliche Teilflächennutzungspläne:** Für die Zwecke des § 35 Abs. 3 Satz 3, des § 249 Abs. 2 und des § 249c Abs. 1 können sachliche Teilflächennutzungspläne aufgestellt werden – also Flächennutzungspläne, die sich auf ein bestimmtes Sachthema beschränken; die genannten Vorschriften betreffen die Steuerung bestimmter Außenbereichsvorhaben durch Ausweisung an anderer Stelle sowie die Windenergie an Land. Solche Pläne können auch nur für Teile des Gemeindegebiets aufgestellt werden.
+>
+> **Abs. 3 – Kennzeichnungen:** Im Flächennutzungsplan sollen gekennzeichnet werden: Flächen, bei deren Bebauung besondere bauliche Vorkehrungen gegen äußere Einwirkungen oder besondere bauliche Sicherungsmaßnahmen gegen Naturgewalten erforderlich sind (Nr. 1); Flächen, unter denen der Bergbau umgeht oder die für den Abbau von Mineralien bestimmt sind (Nr. 2); für bauliche Nutzungen vorgesehene Flächen, deren Böden erheblich mit umweltgefährdenden Stoffen belastet sind (Nr. 3).
+>
+> **Abs. 4 – Nachrichtliche Übernahme und Vermerke:** Planungen und sonstige Nutzungsregelungen, die nach anderen gesetzlichen Vorschriften festgesetzt sind, sowie nach Landesrecht denkmalgeschützte Mehrheiten von baulichen Anlagen (also Gruppen von Anlagen) sollen nachrichtlich übernommen werden – das heißt, sie werden zur Information in den Plan aufgenommen, ohne dass der Flächennutzungsplan sie selbst regelt. Sind solche Festsetzungen erst in Aussicht genommen, sollen sie im Flächennutzungsplan vermerkt werden.
+>
+> **Abs. 4a – Hochwasserbezogene Gebiete:** Festgesetzte Überschwemmungsgebiete (§ 76 Abs. 2), Risikogebiete außerhalb von Überschwemmungsgebieten (§ 78b Abs. 1) und Hochwasserentstehungsgebiete (§ 78d Abs. 1) – jeweils nach dem Wasserhaushaltsgesetz – sollen nachrichtlich übernommen werden. Noch nicht festgesetzte Überschwemmungsgebiete (§ 76 Abs. 3) und als Risikogebiete nach § 73 Abs. 1 Satz 1 des Wasserhaushaltsgesetzes bestimmte Gebiete sollen im Flächennutzungsplan vermerkt werden.
+>
+> **Abs. 5 – Begründung:** Dem Flächennutzungsplan ist eine Begründung mit den Angaben nach § 2a beizufügen.
+>
+> **Praxis:** Der Flächennutzungsplan zeigt, welche Nutzung die Gemeinde für eine Fläche vorsieht, etwa Baufläche, Grünfläche oder Fläche für die Landwirtschaft. Kennzeichnungen (z. B. belastete Böden, Bergbau) und nachrichtliche Übernahmen (z. B. Überschwemmungsgebiete, denkmalgeschützte Anlagengruppen) geben frühe Hinweise auf Risiken und Einschränkungen einer Fläche.
 
 ## Quelle
 
