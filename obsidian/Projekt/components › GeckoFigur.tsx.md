@@ -3,7 +3,7 @@ pfad: "components/GeckoFigur.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
 zeilen: 37
-beschreibung: "Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über \"currentColor\". Koordinatensystem 0 0 60 100. Beine, Rumpf und Schwanz sind getrennt, damit sie sich beim Laufen bewegen."
+beschreibung: "Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über \"currentColor\" – für die Lageskizze. Koordinatensystem 0 0 60 100. Beine, Rumpf und Schwanz sind getrennt, damit sie sich beim Laufen bewegen."
 tags:
   - "projekt"
   - "projekt/oberflaeche"
@@ -15,7 +15,7 @@ tags:
 
 ## Kurzbeschreibung
 
-Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über "currentColor". Koordinatensystem 0 0 60 100. Beine, Rumpf und Schwanz sind getrennt, damit sie sich beim Laufen bewegen.
+Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über "currentColor" – für die Lageskizze. Koordinatensystem 0 0 60 100. Beine, Rumpf und Schwanz sind getrennt, damit sie sich beim Laufen bewegen.
 
 ## Importiert (lokal)
 
@@ -27,5 +27,5 @@ Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über "
 
 ## Wird verwendet von
 
-`components/Gecko.tsx`, `components/Lageskizze.tsx`  
+`components/Lageskizze.tsx`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*

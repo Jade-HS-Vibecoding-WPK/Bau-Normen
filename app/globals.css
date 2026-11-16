@@ -342,22 +342,20 @@ code { font-family: var(--font-mono), monospace; font-size: 0.92em; }
   --gecko-warnung: #e0761b;
   --gecko-fehler: #c0392b;
 }
-.gecko {
-  position: fixed; left: 0; top: 0; z-index: 30; opacity: 0; cursor: default;
-  color: var(--gecko); transition: color 1s, opacity .6s; will-change: transform;
-}
-.gecko.warnung { color: var(--gecko-warnung); cursor: help; }
-.gecko.fehler { color: var(--gecko-fehler); cursor: help; }
-.gecko svg { display: block; overflow: visible; filter: drop-shadow(0 1px 0 rgba(20, 42, 28, .2)); transition: transform .35s cubic-bezier(.3, 1.4, .5, 1); }
-.gecko.warnung svg, .gecko.fehler svg { animation: gk-puls 2.2s ease-in-out infinite; }
+/* Bühne über der ganzen Seite – lässt alle Klicks durch, nur der Gecko selbst reagiert */
+.gecko-buehne { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 30; pointer-events: none; overflow: visible; }
+.gecko-tier { color: var(--gecko); transition: color 1s; filter: drop-shadow(0 1px 0 rgba(20, 42, 28, .22)); }
+.gecko-tier.warnung { color: var(--gecko-warnung); }
+.gecko-tier.fehler { color: var(--gecko-fehler); }
+.gecko-tier.warnung, .gecko-tier.fehler { animation: gk-puls 2.2s ease-in-out infinite; }
 @keyframes gk-puls { 0%, 100% { filter: drop-shadow(0 0 0 transparent); } 50% { filter: drop-shadow(0 0 5px currentColor); } }
-/* Einrollen beim Darüberfahren: Beine einziehen, Schwanz um den Körper legen */
-.gk-bein, .gk-schwanz { transition: transform .35s ease; }
-.gecko.eingerollt svg { transform: scale(.85) rotate(12deg); }
-.gecko.eingerollt .gk-bein { transform: scale(.35); }
-.gecko.eingerollt .gk-schwanz { transform: rotate(-160deg) scale(.95); }
-/* Warten während einer Abfrage: Schwanz wippt */
-.gecko.wartet .gk-schwanz { animation: gk-zucken .9s ease-in-out infinite; }
+.gecko-rumpf, .gecko-ballen { fill: currentColor; pointer-events: visiblePainted; }
+.gecko-beine { fill: none; stroke: currentColor; stroke-width: 3.3; stroke-linecap: round; stroke-linejoin: round; pointer-events: visibleStroke; }
+.gecko-zehen { fill: none; stroke: currentColor; stroke-width: 1.45; stroke-linecap: round; }
+.gecko-augen { fill: rgba(10, 22, 14, .55); }
+.gecko-treffer { fill: transparent; pointer-events: all; }
+.gecko-tier.warnung .gecko-treffer, .gecko-tier.fehler .gecko-treffer, .gecko-tier.warnung .gecko-rumpf, .gecko-tier.fehler .gecko-rumpf { cursor: help; }
+@media print { .gecko-buehne { display: none; } }
 /* Meldungsliste beim Darüberfahren */
 .gecko-tipp {
   position: fixed; z-index: 31; background: var(--surface); border: 1px solid var(--line-strong); border-left: 3px solid var(--gecko-warnung);
@@ -390,8 +388,7 @@ code { font-family: var(--font-mono), monospace; font-size: 0.92em; }
 @keyframes gk-schlaengeln { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
 @keyframes gk-zucken { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(14deg); } 65% { transform: rotate(-10deg); } }
 .link-knopf { background: none; border: 0; padding: 0; cursor: pointer; color: var(--g700); font-size: 12.5px; text-decoration: underline; text-underline-offset: 2px; }
-@media print { .gecko { display: none; } }
-@media (prefers-reduced-motion: reduce) { .gecko *, .sk-gecko * { animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .gecko-tier, .sk-gecko * { animation: none !important; } }
 
 /* Ziel, auf das der Gecko zeigt, kurz hervorheben (wird derzeit nicht genutzt, bleibt für spätere Hinweise) */
 .aufleuchten { animation: aufleuchten 1.8s ease-out; }

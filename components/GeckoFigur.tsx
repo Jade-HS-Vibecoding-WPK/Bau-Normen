@@ -1,13 +1,13 @@
-// Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über "currentColor".
+// Minimalistische Gecko-Silhouette (Draufsicht, Kopf nach oben), einfarbig über "currentColor" – für die Lageskizze.
 // Koordinatensystem 0 0 60 100. Beine, Rumpf und Schwanz sind getrennt, damit sie sich beim Laufen bewegen.
 export function GeckoFigur() {
   return (
     <g className="gk">
       <g className="gk-schwanz">
-        <path d="M30 61 C30 70, 30.5 76, 32.5 82" strokeWidth="5.6" />
-        <path d="M32.5 82 C35 89, 41 93, 45.5 89.5" strokeWidth="3.6" />
-        <path d="M45.5 89.5 C49 86, 47.5 80.5, 43.5 81.5" strokeWidth="2.2" />
-        <path d="M43.5 81.5 C41.6 82, 41.2 84.4, 42.6 85.4" strokeWidth="1.4" />
+        {/* langer, gerader, spitz zulaufender Schwanz – wie beim echten Gecko */}
+        <path d="M30 61 C30 66, 30.3 71, 30.6 76" strokeWidth="5.4" />
+        <path d="M30.6 76 C30.9 82, 30.8 87, 30.3 91" strokeWidth="3.4" />
+        <path d="M30.3 91 C29.9 94.5, 29.6 96.8, 29.3 98.6" strokeWidth="1.6" />
       </g>
       <Bein klasse="gk-vl" d="M25.5 26 L19 24.5 L15.5 17.5" fuss={[15.5, 17.5]} zehen={[[11.2, 14.3], [13.2, 11.9], [16.4, 11.8], [19, 13.8]]} />
       <Bein klasse="gk-vr" d="M34.5 26 L41 24.5 L44.5 17.5" fuss={[44.5, 17.5]} zehen={[[48.8, 14.3], [46.8, 11.9], [43.6, 11.8], [41, 13.8]]} />
