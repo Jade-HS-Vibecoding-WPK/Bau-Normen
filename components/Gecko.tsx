@@ -6,8 +6,9 @@
 //  - aufgesetzte Füße bleiben am Boden kleben, der Körper zieht darüber hinweg
 //  - der Rumpf knickt im Takt abwechselnd zur Seite ein, der Schwanz schwingt als Welle nach
 // Verhalten auf der Seite:
-//  - Stammplatz unten rechts an der Kante der Auskunftsfläche, klebt beim Scrollen fest
-//  - setzt sich an neue Antworten, macht selten einen Ausflug an eine andere Kante
+//  - läuft quer über den Bildschirm von Kasten zu Kasten und bleibt jeweils am rechten Rand stehen
+//    (Körpermitte auf der Kante, Blickrichtung = Laufrichtung); klebt dort beim Scrollen fest
+//  - setzt sich an neue Antworten; muss er umkehren, wendet er auf der Stelle (nie rückwärts)
 //  - beim Darüberfahren rollt er sich ein (Körper als C, Schwanz drumherum, Beine angezogen)
 //  - bei Fehlern rot, bei Hinweisen orange; beim Darüberfahren zeigt er die Meldungen
 // Alles folgt festen Regeln – keine KI.
@@ -75,41 +76,51 @@ const BEINE: BeinBau[] = [
 interface Platz {
   x: number;
   y: number;
-  winkel: number;
 }
 type Anker = () => Platz | null;
-const rect = (sel: string) => document.querySelector(sel)?.getBoundingClientRect() ?? null;
 
-// Plätze an Kanten (Körpermitte auf der Kante, Blick parallel zur Kante)
-const HEIM: Anker = () => {
-  const r = rect(".arbeitsbereich");
-  if (!r) return null;
-  return { x: r.right, y: Math.min(window.innerHeight - 90, r.bottom - 100), winkel: -90 }; // über der Eingabezeile
-};
-const MASSBAND: Anker = () => {
-  const r = rect(".massband");
-  if (!r || r.bottom < 0) return null;
-  return { x: Math.min(r.right - 160, window.innerWidth - 170), y: r.top + 5, winkel: 180 };
-};
-const SEITENBLOCK: Anker = () => {
-  const r = rect(".leiste .block");
-  if (!r || r.top < 0 || r.bottom > window.innerHeight) return null;
-  return { x: r.right, y: r.top + Math.min(80, r.height / 2), winkel: 90 };
-};
-const AN_ELEMENT =
-  (id: string): Anker =>
+// Kästen, an deren rechtem Rand der Gecko stehen bleibt
+const KAESTEN = ".leiste .block, .arbeitsbereich, .verlauf .dokument, .verlauf .meldung";
+
+/** Platz am rechten Rand eines Kastens; `anteil` = Höhe im sichtbaren Teil (0 = oben, 1 = unten). */
+const AM_RAND =
+  (el: Element, anteil: number): Anker =>
   () => {
-    const el = document.getElementById(id);
-    if (!el) return null;
-    // Ziel selbst – oder, wenn es (noch) nicht im Bild ist, die sichtbare Kante der ganzen Antwortkarte
-    for (const kandidat of [el, el.closest(".dokument")]) {
-      if (!kandidat) continue;
-      const r = kandidat.getBoundingClientRect();
-      const y = Math.max(r.top + 50, 80);
-      if (y <= Math.min(r.bottom - 30, window.innerHeight - 90)) return { x: r.right, y, winkel: -90 };
-    }
-    return null;
+    if (!el.isConnected) return null;
+    const r = el.getBoundingClientRect();
+    const oben = Math.max(r.top + 28, 110);
+    const unten = Math.min(r.bottom - 28, window.innerHeight - 70);
+    if (unten - oben < 16 || r.right > window.innerWidth - 12 || r.right < 30) return null;
+    return { x: r.right, y: oben + (unten - oben) * anteil };
   };
+const HEIM: Anker = () => {
+  const el = document.querySelector(".arbeitsbereich");
+  return el ? AM_RAND(el, 0.85)() : null;
+};
+/** Zufälliger Platz an einem anderen Kasten – bevorzugt weiter weg, damit er quer über den Bildschirm läuft */
+function anderenPlatz(von: V, ausser: Element | null): { anker: Anker; el: Element } | null {
+  const kandidaten = [...document.querySelectorAll(KAESTEN)]
+    .filter((el) => el !== ausser)
+    .flatMap((el) => {
+      const anker = AM_RAND(el, zufall(0.15, 0.85));
+      const q = anker();
+      return q ? [{ el, anker, d: laenge(minus(v(q.x, q.y), von)) }] : [];
+    });
+  const weit = kandidaten.filter((k) => k.d > 180);
+  const auswahl = weit.length ? weit : kandidaten;
+  return auswahl.length ? auswahl[Math.floor(Math.random() * auswahl.length)] : null;
+}
+/** Platz an einer neuen Antwort (oder, wenn das Ziel nicht im Bild ist, an der ganzen Antwortkarte) */
+const AN_ANTWORT = (id: string): { anker: Anker; el: Element } | null => {
+  const el = document.getElementById(id);
+  if (!el) return null;
+  for (const k of [el, el.closest(".dokument")]) {
+    if (!k) continue;
+    const anker = AM_RAND(k, 0.25);
+    if (anker()) return { anker, el: k };
+  }
+  return null;
+};
 
 /** Catmull-Rom-Spline durch geschlossene Punktliste -> glatter SVG-Pfad */
 function glatterPfad(p: V[]): string {
@@ -152,40 +163,56 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
     const ruhig = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
     // ---------- Zustand ----------
-    const start = HEIM() ?? { x: window.innerWidth - 40, y: window.innerHeight - 120, winkel: -90 };
-    let kopf = plus(v(start.x, start.y), mal(richtung(start.winkel), S[MITTE]));
-    let w = start.winkel; // Blickrichtung des Kopfes
+    const start = HEIM() ?? { x: window.innerWidth - 40, y: window.innerHeight - 120 };
+    let w = -90; // Blickrichtung des Kopfes
+    let kopf = plus(v(start.x, start.y), mal(richtung(w), S[MITTE]));
     // Spur der Kopfpositionen (neueste zuerst) – der Körper folgt ihr wie auf Schienen
     let spur: V[] = [kopf, minus(kopf, mal(richtung(w), S[N - 1] + 30))];
     let phi = 0; // Schrittphase
     let geht = false;
     let modus: "sitzt" | "laeuft" = "sitzt";
     let anker: Anker = HEIM;
+    let ankerEl: Element | null = document.querySelector(".arbeitsbereich");
     let ankerVorher: V | null = v(start.x, start.y);
-    let zielStufe: 0 | 1 = 1; // 0 = Anlaufpunkt hinter dem Platz, 1 = Platz selbst
-    let bis = performance.now() + zufall(45000, 90000);
-    let tempo = 70;
+    let reiseWinkel = w; // Laufrichtung der aktuellen Strecke (so steht er am Ziel)
+    let bis = performance.now() + zufall(6000, 12000);
+    let sitzDauer = 10000; // wie lange er am nächsten Rand bleibt (zählt ab dem Ankommen)
+    const tempo = 80;
     let e = 0; // 0 = normal, 1 = eingerollt
     let kopfDreh = 0;
     let kopfDrehZiel = 0;
-    let kopfNaechst = performance.now() + zufall(10000, 25000); // nächste (seltene) Kopfbewegung im Sitzen
-    let schwanzRolle = 1; // 0 = gerade, 1 = am Stammplatz leicht eingerollt (er startet dort)
+    let kopfNaechst = performance.now() + zufall(3000, 6000);
+    let schwanzRolle = 1; // 0 = gerade, 1 = im Stehen leicht eingerollt
     let ruhe = 1; // 0 = läuft, 1 = steht – im Stehen gehen Beine und Rumpf einmal sanft in die Ruhepose
     let drehRest = 0; // noch auszuführende Körperdrehung im Stehen (Grad)
     let drehNaechst = performance.now() + zufall(15000, 30000);
-    let drehVersatz = 0; // aktuelle Abweichung von der Ausrichtung am Platz (Grad)
+    let drehVersatz = 0;
 
     const verschiebe = (d: V) => {
       kopf = plus(kopf, d);
-      spur = spur.map((p) => plus(p, d));
+      spur = spur.map((q) => plus(q, d));
     };
-    const geheZu = (a: Anker, sitzen: number) => {
-      if (!a()) return;
-      anker = a;
+    /** ganze Figur um die Körpermitte drehen (Wenden auf der Stelle, kleines Drehen im Stehen) */
+    const rotiere = (grad: number) => {
+      const c = mitte.current;
+      const cs = Math.cos(grad * RAD);
+      const sn = Math.sin(grad * RAD);
+      const um = (q: V) => v(c.x + (q.x - c.x) * cs - (q.y - c.y) * sn, c.y + (q.x - c.x) * sn + (q.y - c.y) * cs);
+      kopf = um(kopf);
+      spur = spur.map(um);
+      w += grad;
+    };
+    const geheZu = (ziel: { anker: Anker; el: Element | null } | null, sitzen: number) => {
+      const q = ziel?.anker();
+      if (!ziel || !q) return false;
+      anker = ziel.anker;
+      ankerEl = ziel.el;
       modus = "laeuft";
-      zielStufe = 0;
-      ankerVorher = null;
-      bis = performance.now() + sitzen;
+      ankerVorher = v(q.x, q.y);
+      reiseWinkel = winkelVon(minus(v(q.x, q.y), mitte.current));
+      sitzDauer = sitzen;
+      bis = Infinity;
+      return true;
     };
 
     /** Winkel der Spur an Bogenlänge s (Blickrichtung) */
@@ -212,7 +239,7 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
     };
 
     // Ziel aus einer neuen Antwort: kurz warten, bis sie ins Bild gescrollt ist (höchstens ein paar Sekunden)
-    let wartendesZiel: { anker: Anker; ab: number; bis: number } | null = null;
+    let wartendesZiel: { id: string; ab: number; bis: number } | null = null;
     let letzte = performance.now();
     let frame = 0;
 
@@ -224,94 +251,84 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       // ---------- Signale aus der App ----------
       if (neu.current) {
         neu.current = false;
-        wartendesZiel = sig.modus === "neu" && sig.ziel && !ruhig ? { anker: AN_ELEMENT(sig.ziel), ab: t + 700, bis: t + 4500 } : null;
+        wartendesZiel = sig.modus === "neu" && sig.ziel && !ruhig ? { id: sig.ziel, ab: t + 700, bis: t + 4500 } : null;
       }
       if (wartendesZiel && t >= wartendesZiel.ab && !halten.current) {
-        if (wartendesZiel.anker()) {
-          geheZu(wartendesZiel.anker, zufall(12000, 18000));
-          wartendesZiel = null;
-        } else if (t > wartendesZiel.bis) wartendesZiel = null;
+        if (geheZu(AN_ANTWORT(wartendesZiel.id), zufall(12000, 18000))) wartendesZiel = null;
+        else if (t > wartendesZiel.bis) wartendesZiel = null;
       }
 
       // ---------- Ziel und Bewegung ----------
-      let platz = anker();
-      if (!platz) {
-        anker = HEIM;
-        platz = HEIM();
-        if (modus === "sitzt") {
-          modus = "laeuft";
-          zielStufe = 0;
-        }
-      }
       e += ((halten.current ? 1 : 0) - e) * Math.min(1, dt * 7);
       geht = false;
+      let platz = anker();
+      if (!platz && !halten.current) {
+        // Kasten verschwunden oder aus dem Bild gescrollt -> anderen Rand suchen
+        if (!geheZu(anderenPlatz(mitte.current, ankerEl), zufall(7000, 16000))) geheZu({ anker: HEIM, el: document.querySelector(".arbeitsbereich") }, zufall(7000, 16000));
+        platz = anker();
+      }
 
-      if (platz) {
-        const kopfZiel = plus(v(platz.x, platz.y), mal(richtung(platz.winkel), S[MITTE]));
+      if (platz && !halten.current) {
         if (modus === "sitzt") {
-          // am Platz kleben (folgt dem Scrollen)
+          // am Rand kleben (folgt dem Scrollen)
           const jetzt = v(platz.x, platz.y);
           if (ankerVorher) {
             const d = minus(jetzt, ankerVorher);
             if (Math.abs(d.x) + Math.abs(d.y) > 0.01) verschiebe(d);
-          } else verschiebe(minus(kopfZiel, kopf));
+          }
           ankerVorher = jetzt;
-          if (!halten.current && !ruhig) {
-            const daheim = anker === HEIM;
+          if (!ruhig) {
             if (sig.modus === "sucht") kopfDrehZiel = 14 * Math.sin(t / 900); // schaut sich langsam um
             else if (t > kopfNaechst) {
-              // ruhig umschauen: Kopf zur Seite drehen, eine Weile halten, wieder geradeaus
-              kopfDrehZiel = kopfDrehZiel === 0 ? (Math.random() < 0.5 ? -1 : 1) * (daheim ? zufall(12, 26) : zufall(8, 16)) : 0;
-              kopfNaechst = t + (kopfDrehZiel === 0 ? (daheim ? zufall(3000, 7000) : zufall(6000, 14000)) : zufall(1800, 3500));
+              // umschauen: Kopf deutlich zur Seite drehen, eine Weile halten, wieder geradeaus
+              kopfDrehZiel = kopfDrehZiel === 0 ? (Math.random() < 0.5 ? -1 : 1) * zufall(10, 24) : 0;
+              kopfNaechst = t + (kopfDrehZiel === 0 ? zufall(3000, 7000) : zufall(1800, 3500));
             }
             if (t > drehNaechst && drehRest === 0) {
               // ab und zu den ganzen Körper ein wenig drehen – und beim nächsten Mal wieder zurück
               drehRest = drehVersatz !== 0 ? -drehVersatz : (Math.random() < 0.5 ? -1 : 1) * zufall(6, 12);
               drehNaechst = t + zufall(15000, 30000);
             }
-            if (t > bis) {
-              if (anker !== HEIM) geheZu(HEIM, zufall(45000, 90000));
-              else {
-                const ausflug = Math.random() < 0.5 ? MASSBAND : SEITENBLOCK;
-                if (ausflug()) geheZu(ausflug, zufall(15000, 30000));
-                else bis = t + zufall(45000, 90000);
-              }
-            }
+            // nach einer Weile zum nächsten Kasten – quer über den Bildschirm
+            if (t > bis && !geheZu(anderenPlatz(mitte.current, ankerEl), zufall(7000, 16000))) bis = t + 5000;
           }
-        } else if (!halten.current && !ruhig) {
+        } else if (!ruhig) {
           kopfDrehZiel = 0;
-          const anlauf = minus(kopfZiel, mal(richtung(platz.winkel), 30));
-          // nah am Platz: Anlaufpunkt überspringen
-          if (zielStufe === 0 && laenge(minus(kopfZiel, kopf)) < 36) zielStufe = 1;
-          const ziel = zielStufe === 0 ? anlauf : kopfZiel;
+          // Körpermitte soll auf der Kante landen: Kopf steht dann ein Stück weiter in Laufrichtung
+          const ziel = plus(v(platz.x, platz.y), mal(richtung(reiseWinkel), S[MITTE]));
+          ankerVorher = v(platz.x, platz.y);
           const d = minus(ziel, kopf);
           const abst = laenge(d);
-          if (zielStufe === 0 && abst < 10) zielStufe = 1;
-          else if (zielStufe === 1 && abst < 3) {
-            // angekommen: Rest ohne Schritt angleichen und einfach stehen bleiben
+          if (abst < 3) {
+            // angekommen: einfach stehen bleiben
             verschiebe(d);
             modus = "sitzt";
-            ankerVorher = v(platz.x, platz.y);
+            bis = t + sitzDauer;
             drehVersatz = 0;
             drehRest = 0;
             kopfNaechst = t + zufall(2500, 5000);
             drehNaechst = t + zufall(15000, 30000);
           } else {
             const soll = winkelVon(d);
-            // nahe am Ziel schneller einlenken und direkt hinlaufen – sonst kreist er um den Punkt
-            const nah = abst < 18;
-            w = drehe(w, soll, (abst < 45 ? 420 : 220) * dt);
-            const faktor = !nah && Math.abs(diff(w, soll)) > 60 ? 0.35 : 1;
-            const schritt = Math.min(abst, tempo * dt * faktor);
-            kopf = plus(kopf, mal(nah ? norm(d) : richtung(w), schritt));
-            phi += (schritt / SCHRITT) * Math.PI;
+            const abw = diff(w, soll);
+            // erst auf der Stelle zum Ziel drehen, dann geradeaus laufen – so landet die Körpermitte genau auf der Kante
+            if (Math.abs(abw) > 20) {
+              const dreh = Math.sign(abw) * Math.min(Math.abs(abw), 160 * dt);
+              rotiere(dreh);
+              phi += (Math.abs(dreh) / 30) * Math.PI; // Beine trippeln beim Wenden mit
+            } else {
+              w = drehe(w, soll, 120 * dt);
+              const schritt = Math.min(abst, tempo * dt);
+              kopf = plus(kopf, mal(richtung(w), schritt));
+              phi += (schritt / SCHRITT) * Math.PI;
+            }
             geht = true;
           }
         }
       }
       if (ruhig && platz && modus !== "sitzt") {
         // reduzierte Bewegung: ohne Laufen direkt an den Platz
-        verschiebe(minus(plus(v(platz.x, platz.y), mal(richtung(platz.winkel), S[MITTE])), kopf));
+        verschiebe(minus(plus(v(platz.x, platz.y), mal(richtung(reiseWinkel), S[MITTE])), kopf));
         modus = "sitzt";
         ankerVorher = v(platz.x, platz.y);
       }
@@ -331,8 +348,8 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       // ---------- Skelett ----------
       kopfDreh += (kopfDrehZiel * (1 - e) - kopfDreh) * Math.min(1, dt * 2.5);
       if (Math.abs(kopfDrehZiel * (1 - e) - kopfDreh) < 0.05) kopfDreh = kopfDrehZiel * (1 - e);
-      // Am Stammplatz rollt sich die Schwanzspitze langsam ein
-      const sollRolle = modus === "sitzt" && anker === HEIM && !halten.current ? 1 : 0;
+      // Im Stehen rollt sich die Schwanzspitze langsam ein
+      const sollRolle = modus === "sitzt" && !halten.current ? 1 : 0;
       schwanzRolle += (sollRolle - schwanzRolle) * Math.min(1, dt * 1.6);
       if (Math.abs(sollRolle - schwanzRolle) < 0.003) schwanzRolle = sollRolle;
       ruhe += ((geht ? 0 : 1) - ruhe) * Math.min(1, dt * (geht ? 12 : 5));
@@ -340,13 +357,7 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       // Langsame Körperdrehung im Stehen: ganze Figur um die Körpermitte drehen
       if (drehRest !== 0 && modus === "sitzt" && !halten.current) {
         const schrittDreh = Math.sign(drehRest) * Math.min(Math.abs(drehRest), 14 * dt);
-        const c = mitte.current;
-        const cs = Math.cos(schrittDreh * RAD);
-        const sn = Math.sin(schrittDreh * RAD);
-        const um = (q: V) => v(c.x + (q.x - c.x) * cs - (q.y - c.y) * sn, c.y + (q.x - c.x) * sn + (q.y - c.y) * cs);
-        kopf = um(kopf);
-        spur = spur.map(um);
-        w += schrittDreh;
+        rotiere(schrittDreh);
         drehRest -= schrittDreh;
         drehVersatz += schrittDreh;
         if (Math.abs(drehRest) < 0.01) drehRest = 0;

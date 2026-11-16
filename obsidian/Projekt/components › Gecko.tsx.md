@@ -2,7 +2,7 @@
 pfad: "components/Gecko.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 514
+zeilen: 525
 beschreibung: "Der Gecko – als bewegliches Skelett gezeichnet (Kopf, Rumpf, Becken, Schwanzglieder, vier Beine)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # components/Gecko.tsx
 
-**Pfad:** `components/Gecko.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 514
+**Pfad:** `components/Gecko.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 525
 
 ## Kurzbeschreibung
 
@@ -26,8 +26,9 @@ Der Gecko – als bewegliches Skelett gezeichnet (Kopf, Rumpf, Becken, Schwanzgl
 >  - aufgesetzte Füße bleiben am Boden kleben, der Körper zieht darüber hinweg
 >  - der Rumpf knickt im Takt abwechselnd zur Seite ein, der Schwanz schwingt als Welle nach
 > Verhalten auf der Seite:
->  - Stammplatz unten rechts an der Kante der Auskunftsfläche, klebt beim Scrollen fest
->  - setzt sich an neue Antworten, macht selten einen Ausflug an eine andere Kante
+>  - läuft quer über den Bildschirm von Kasten zu Kasten und bleibt jeweils am rechten Rand stehen
+>    (Körpermitte auf der Kante, Blickrichtung = Laufrichtung); klebt dort beim Scrollen fest
+>  - setzt sich an neue Antworten; muss er umkehren, wendet er auf der Stelle (nie rückwärts)
 >  - beim Darüberfahren rollt er sich ein (Körper als C, Schwanz drumherum, Beine angezogen)
 >  - bei Fehlern rot, bei Hinweisen orange; beim Darüberfahren zeigt er die Meldungen
 > Alles folgt festen Regeln – keine KI.

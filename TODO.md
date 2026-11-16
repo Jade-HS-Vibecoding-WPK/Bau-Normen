@@ -32,7 +32,7 @@
 - [ ] Erläuterungen für die übrigen BauGB-Paragraphen (§§ 39–250)
 - [ ] Fachliche Prüfung der Erläuterungen anhand von `data/erlaeuterungen/PRUEFHINWEISE.md`, danach Status „geprüft“
 - [x] Lageskizze in der Ortsauskunft: Standort, Umkreis 50 m, B-Plan-Umring, Denkmalflächen – der Gecko krabbelt darüber und steckt Fähnchen
-- [x] Gecko als Gimmick: bewegliche Wirbelkette mit fest geknickten Beinen (vorne nach vorn, hinten nach hinten, Drehpunkt am Körper), diagonale Beinpaare, Rumpf knickt im Takt ein; beim Anhalten einmal sanft in die Ruhepose, dann still (gelegentlich umschauen/leicht drehen); am Stammplatz unten rechts mit eingerolltem Schwanz; rollt sich beim Darüberfahren ein; bei Fehlern rot, bei Hinweisen orange mit Meldungsliste; abschaltbar
+- [x] Gecko als Gimmick: bewegliche Wirbelkette mit fest geknickten Beinen (Drehpunkt am Körper), diagonale Beinpaare, Rumpf knickt im Takt ein; läuft quer über den Bildschirm von Kasten zu Kasten und bleibt jeweils am rechten Rand stehen (Körpermitte auf der Kante), wendet auf der Stelle statt rückwärts zu laufen; im Stehen ruhig mit eingerolltem Schwanz, schaut sich um; setzt sich an neue Antworten; rollt sich beim Darüberfahren ein; bei Fehlern rot, bei Hinweisen orange mit Meldungsliste; abschaltbar
 - [ ] Optional: echter Kartenhintergrund (z. B. Stadtkarte Oldenburg) unter der Lageskizze
 - [ ] Stichwortverzeichnis erweitern, mehr Testfälle (Ziel: 50)
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)
