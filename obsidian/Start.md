@@ -36,7 +36,7 @@ In das Suchfeld der Graph-Ansicht eingeben:
 ## Was steht wo?
 
 - `Gesetze/` – 339 Paragraph- und Anlagen-Notizen, 62 Gliederungsnotizen, 2 Übersichten
-- `Projekt/` – 27 Notizen zu Quelldateien und die Notiz [[Architektur]]
+- `Projekt/` – 31 Notizen zu Quelldateien und die Notiz [[Architektur]]
 
 ## Aktualisieren
 

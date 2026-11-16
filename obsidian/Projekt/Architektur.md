@@ -1,6 +1,6 @@
 ---
-dateien: 27
-zeilen: 4889
+dateien: 31
+zeilen: 5566
 tags:
   - "projekt"
   - "uebersicht"
@@ -26,9 +26,9 @@ Die App beantwortet Fragen zum Bau- und Denkmalrecht. Den Gesetzestext erfindet 
 5. **Schnittstelle** nimmt die Frage aus dem Browser per HTTP entgegen und reicht sie an den Lotsen weiter.  
    Dateien: [[Projekt/app › api › frage › route.ts.md|app/api/frage/route.ts]]
 6. **Oberfläche** zeigt im Browser den Chat und die Paragraphen-Karten. Der Gesetzestext wird dort nur dargestellt, nicht verändert.  
-   Dateien: [[Projekt/app › globals.css.md|app/globals.css]], [[Projekt/app › layout.tsx.md|app/layout.tsx]], [[Projekt/app › page.tsx.md|app/page.tsx]], [[Projekt/components › ChatApp.tsx.md|components/ChatApp.tsx]], [[Projekt/components › Karten.tsx.md|components/Karten.tsx]], [[Projekt/components › Normtext.tsx.md|components/Normtext.tsx]], [[Projekt/components › Obsidian.tsx.md|components/Obsidian.tsx]], [[Projekt/components › Symbole.tsx.md|components/Symbole.tsx]]
+   Dateien: [[Projekt/app › globals.css.md|app/globals.css]], [[Projekt/app › layout.tsx.md|app/layout.tsx]], [[Projekt/app › page.tsx.md|app/page.tsx]], [[Projekt/components › ChatApp.tsx.md|components/ChatApp.tsx]], [[Projekt/components › Gecko.tsx.md|components/Gecko.tsx]], [[Projekt/components › GeckoFigur.tsx.md|components/GeckoFigur.tsx]], [[Projekt/components › Karten.tsx.md|components/Karten.tsx]], [[Projekt/components › Lageskizze.tsx.md|components/Lageskizze.tsx]], [[Projekt/components › Normtext.tsx.md|components/Normtext.tsx]], [[Projekt/components › Obsidian.tsx.md|components/Obsidian.tsx]], [[Projekt/components › Symbole.tsx.md|components/Symbole.tsx]]
 7. **Helfer** sind gemeinsame Bausteine im Ordner `lib/`, z. B. Datentypen und Textfunktionen, die mehrere Teile nutzen.  
-   Dateien: [[Projekt/lib › text.ts.md|lib/text.ts]], [[Projekt/lib › typen.ts.md|lib/typen.ts]]
+   Dateien: [[Projekt/lib › gecko.ts.md|lib/gecko.ts]], [[Projekt/lib › text.ts.md|lib/text.ts]], [[Projekt/lib › typen.ts.md|lib/typen.ts]]
 8. **Tests** schicken typische Fragen an die laufende App und prüfen die Antworten.  
    Dateien: [[Projekt/tests › testkatalog.mjs.md|tests/testkatalog.mjs]]
 9. **Export (Obsidian)** erzeugt diesen Obsidian-Vault aus den Gesetzesdaten und dem Quellcode.  
@@ -49,8 +49,8 @@ flowchart LR
   B2["Lotse (1)"]
   B3["Ortsauskunft (7)"]
   B4["Schnittstelle (1)"]
-  B5["Oberfläche (8)"]
-  B6["Helfer (2)"]
+  B5["Oberfläche (11)"]
+  B6["Helfer (3)"]
   B7["Tests (1)"]
   B8["Export (Obsidian) (1)"]
   D0[("data/erlaeuterungen")]
@@ -89,26 +89,26 @@ Durchgezogene Pfeile: Import · gestrichelt: nur Typen bzw. Datenzugriff · dick
 ```mermaid
 flowchart LR
   subgraph SB0["Importskripte"]
-    F20["scripts/erlaeuterungen-pruefen.mjs"]
-    F22["scripts/import-baugb.mjs"]
-    F23["scripts/import-ndschg.mjs"]
-    F24["scripts/lib/verweise.mjs"]
-    F25["scripts/wortlaut-pruefen.mjs"]
+    F24["scripts/erlaeuterungen-pruefen.mjs"]
+    F26["scripts/import-baugb.mjs"]
+    F27["scripts/import-ndschg.mjs"]
+    F28["scripts/lib/verweise.mjs"]
+    F29["scripts/wortlaut-pruefen.mjs"]
   end
   subgraph SB1["Bibliothek"]
-    F9["lib/gesetze.ts"]
+    F13["lib/gesetze.ts"]
   end
   subgraph SB2["Lotse"]
-    F19["lib/verstehen.ts"]
+    F23["lib/verstehen.ts"]
   end
   subgraph SB3["Ortsauskunft"]
-    F10["lib/ort/abruf.ts"]
-    F11["lib/ort/bplan-dokumente.ts"]
-    F12["lib/ort/bplan.ts"]
-    F13["lib/ort/denkmal.ts"]
-    F14["lib/ort/geo.ts"]
-    F15["lib/ort/index.ts"]
-    F16["lib/ort/standort.ts"]
+    F14["lib/ort/abruf.ts"]
+    F15["lib/ort/bplan-dokumente.ts"]
+    F16["lib/ort/bplan.ts"]
+    F17["lib/ort/denkmal.ts"]
+    F18["lib/ort/geo.ts"]
+    F19["lib/ort/index.ts"]
+    F20["lib/ort/standort.ts"]
   end
   subgraph SB4["Schnittstelle"]
     F0["app/api/frage/route.ts"]
@@ -118,20 +118,24 @@ flowchart LR
     F2["app/layout.tsx"]
     F3["app/page.tsx"]
     F4["components/ChatApp.tsx"]
-    F5["components/Karten.tsx"]
-    F6["components/Normtext.tsx"]
-    F7["components/Obsidian.tsx"]
-    F8["components/Symbole.tsx"]
+    F5["components/Gecko.tsx"]
+    F6["components/GeckoFigur.tsx"]
+    F7["components/Karten.tsx"]
+    F8["components/Lageskizze.tsx"]
+    F9["components/Normtext.tsx"]
+    F10["components/Obsidian.tsx"]
+    F11["components/Symbole.tsx"]
   end
   subgraph SB6["Helfer"]
-    F17["lib/text.ts"]
-    F18["lib/typen.ts"]
+    F12["lib/gecko.ts"]
+    F21["lib/text.ts"]
+    F22["lib/typen.ts"]
   end
   subgraph SB7["Tests"]
-    F26["tests/testkatalog.mjs"]
+    F30["tests/testkatalog.mjs"]
   end
   subgraph SB8["Export (Obsidian)"]
-    F21["scripts/export-obsidian.mjs"]
+    F25["scripts/export-obsidian.mjs"]
   end
   subgraph SD["Daten"]
     D0[("data/erlaeuterungen")]
@@ -139,58 +143,68 @@ flowchart LR
     D2[("data/stichworte.json")]
     D3[("data/quellen")]
   end
-  F0 --> F15
   F0 --> F19
+  F0 --> F23
   F2 --> F1
   F3 --> F4
-  F3 --> F9
-  F4 --> F17
-  F4 -.-> F18
-  F4 --> F5
+  F3 --> F13
+  F4 --> F12
+  F4 --> F21
+  F4 -.-> F22
   F4 --> F7
-  F4 --> F8
+  F4 --> F5
+  F4 --> F10
+  F4 --> F11
   F4 ==>|HTTP| F0
-  F5 --> F17
-  F5 -.-> F18
+  F5 -.-> F12
   F5 --> F6
-  F5 --> F7
-  F5 --> F8
-  F6 -.-> F18
-  F9 -.-> F18
-  F9 -.->|liest| D0
-  F9 -.->|liest| D1
-  F9 -.->|liest| D2
-  F11 --> F10
-  F12 --> F10
-  F13 --> F10
-  F13 --> F14
-  F15 --> F9
-  F15 -.-> F18
-  F15 --> F12
-  F15 --> F11
-  F15 --> F13
-  F15 --> F16
-  F16 --> F10
-  F17 -.-> F18
-  F19 --> F9
+  F7 --> F21
+  F7 -.-> F22
+  F7 --> F9
+  F7 --> F8
+  F7 --> F10
+  F7 --> F11
+  F8 -.-> F22
+  F8 --> F6
+  F9 -.-> F22
+  F12 --> F21
+  F12 -.-> F22
+  F13 -.-> F22
+  F13 -.->|liest| D0
+  F13 -.->|liest| D1
+  F13 -.->|liest| D2
+  F15 --> F14
+  F16 --> F14
+  F16 --> F18
+  F17 --> F14
+  F17 --> F18
+  F19 --> F13
+  F19 -.-> F22
+  F19 --> F16
   F19 --> F15
-  F19 -.-> F18
-  F20 -.->|liest und schreibt| D0
-  F20 -.->|liest| D1
-  F21 -.->|liest| D0
-  F21 -.->|liest| D1
-  F22 --> F24
-  F22 -.->|schreibt| D1
-  F22 -.->|liest und schreibt| D3
-  F23 --> F24
-  F23 -.->|liest und schreibt| D3
-  F23 -.->|schreibt| D1
+  F19 --> F17
+  F19 --> F20
+  F20 --> F14
+  F21 -.-> F22
+  F23 --> F13
+  F23 --> F19
+  F23 -.-> F22
+  F24 -.->|liest und schreibt| D0
+  F24 -.->|liest| D1
+  F25 -.->|liest| D0
   F25 -.->|liest| D1
-  F26 ==>|HTTP| F0
+  F26 --> F28
+  F26 -.->|schreibt| D1
+  F26 -.->|liest und schreibt| D3
+  F27 --> F28
+  F27 -.->|liest und schreibt| D3
+  F27 -.->|schreibt| D1
+  F29 -.->|liest| D1
+  F30 ==>|HTTP| F0
 ```
 
 ## Zahlen
 
-- 27 Quelldateien mit zusammen 4889 Zeilen
-- 34 lokale Importe
+- 31 Quelldateien mit zusammen 5566 Zeilen
+- 44 lokale Importe
 - Erfasst werden die Ordner `app/`, `components/`, `lib/`, `scripts/`, `tests/` (ohne node_modules, .next, data/quellen)

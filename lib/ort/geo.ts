@@ -52,6 +52,27 @@ export function distanzMeter(a: Punkt, b: Punkt): number {
   return Math.hypot((a[0] - b[0]) * kx, (a[1] - b[1]) * 110540);
 }
 
+/**
+ * Wandelt Polygon-Ringe (lon/lat) in lokale Meter um den Standort um (x = Osten, y = Norden),
+ * vereinfacht lange Ringe und rundet auf 10 cm – für die schematische Lageskizze.
+ */
+export function inMeter(ursprung: Punkt, ringe: Ring[], maxPunkte = 120): [number, number][][] {
+  const kx = 111320 * Math.cos((ursprung[1] * Math.PI) / 180);
+  const ky = 110540;
+  return ringe.map((ring) => {
+    const schritt = Math.max(1, Math.ceil(ring.length / maxPunkte));
+    const auswahl = ring.filter((_, i) => i % schritt === 0 || i === ring.length - 1);
+    return auswahl.map(([lon, lat]) => [Math.round((lon - ursprung[0]) * kx * 10) / 10, Math.round((lat - ursprung[1]) * ky * 10) / 10] as [number, number]);
+  });
+}
+
+/** Äußere Ringe eines GeoJSON-Polygons/-MultiPolygons. */
+export function aussenRinge(geom: { type: string; coordinates: unknown }): Ring[] {
+  if (geom.type === "Polygon") return [(geom.coordinates as Ring[])[0]];
+  if (geom.type === "MultiPolygon") return (geom.coordinates as Ring[][]).map((p) => p[0]);
+  return [];
+}
+
 /** Begrenzungsrechteck (lon/lat) für einen Umkreis in Metern. */
 export function bbox([lon, lat]: Punkt, radiusM: number): [number, number, number, number] {
   const dLat = radiusM / 110540;

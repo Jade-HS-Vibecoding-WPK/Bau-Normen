@@ -1,6 +1,7 @@
 // Bebauungspläne der Stadt Oldenburg: welcher rechtsverbindliche B-Plan gilt an einem Punkt?
 // Dienst: Open Data Stadt Oldenburg – "Umringe rechtsverbindlicher Bebauungspläne" (ArcGIS FeatureServer).
 import { DienstFehler, holeJson } from "./abruf";
+import { inMeter } from "./geo";
 
 const DIENST = "https://services5.arcgis.com/kqBnwL0FsBhsJf2P/arcgis/rest/services/Umringe_Bplan/FeatureServer/0/query";
 export const BPLAN_QUELLE = "Stadt Oldenburg – Umringe rechtsverbindlicher Bebauungspläne (Open Data)";
@@ -13,10 +14,12 @@ export interface BPlan {
   baunvo?: string;
   vorhabenbezogen: boolean;
   verfahren?: string;
+  /** Planumring in Metern relativ zum Standort – für die Lageskizze */
+  umriss: [number, number][][];
 }
 
 interface Antwort {
-  features?: { attributes: Record<string, string | number | null> }[];
+  features?: { attributes: Record<string, string | number | null>; geometry?: { rings: [number, number][][] } }[];
   error?: { message: string };
 }
 
@@ -34,19 +37,23 @@ export async function bplaeneAmPunkt(lat: number, lon: number): Promise<{ status
     inSR: "4326",
     spatialRel: "esriSpatialRelIntersects",
     outFields: "Planverfahren,Name,BauNVO,rechtsverbindlich,Verfahren,Art",
-    returnGeometry: "false",
+    returnGeometry: "true",
+    outSR: "4326",
+    maxAllowableOffset: "0.00001",
+    geometryPrecision: "6",
     f: "json",
   });
   try {
     const a = await holeJson<Antwort>(`${DIENST}?${params}`);
     if (a.error || !a.features) return { status: "fehler", hinweis: `B-Plan-Dienst meldet einen Fehler${a.error ? `: ${a.error.message}` : ""}.` };
-    const plaene = a.features.map(({ attributes: x }) => ({
+    const plaene = a.features.map(({ attributes: x, geometry }) => ({
       nummer: String(x.Planverfahren ?? "").trim(),
       name: String(x.Name ?? "").trim(),
       rechtsverbindlichSeit: datum(x.rechtsverbindlich),
       baunvo: x.BauNVO ? String(x.BauNVO) : undefined,
       vorhabenbezogen: /vhb/i.test(String(x.Planverfahren ?? "")),
       verfahren: typeof x.Verfahren === "number" ? VERFAHREN[x.Verfahren] : undefined,
+      umriss: geometry?.rings ? inMeter([lon, lat], geometry.rings, 300) : [],
     }));
     return { status: "ok", plaene };
   } catch (e) {

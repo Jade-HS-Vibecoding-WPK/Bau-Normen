@@ -27,5 +27,5 @@ Hilfsfunktionen für Text (auch im Browser nutzbar).
 
 ## Wird verwendet von
 
-`components/ChatApp.tsx`, `components/Karten.tsx`  
+`components/ChatApp.tsx`, `components/Karten.tsx`, `lib/gecko.ts`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*

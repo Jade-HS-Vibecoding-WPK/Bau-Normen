@@ -2,7 +2,7 @@
 pfad: "components/Karten.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 392
+zeilen: 398
 beschreibung: "Antwort-Karten im \"Schriftfeld\"-Stil: Paragraph (NormKarte) und Ortsauskunft (OrtKarte)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # components/Karten.tsx
 
-**Pfad:** `components/Karten.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 392
+**Pfad:** `components/Karten.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 398
 
 ## Kurzbeschreibung
 
@@ -22,6 +22,7 @@ Antwort-Karten im "Schriftfeld"-Stil: Paragraph (NormKarte) und Ortsauskunft (Or
 - [[Projekt/lib › text.ts.md|lib/text.ts]]
 - [[Projekt/lib › typen.ts.md|lib/typen.ts]] – nur Typen
 - [[Projekt/components › Normtext.tsx.md|components/Normtext.tsx]]
+- [[Projekt/components › Lageskizze.tsx.md|components/Lageskizze.tsx]]
 - [[Projekt/components › Obsidian.tsx.md|components/Obsidian.tsx]]
 - [[Projekt/components › Symbole.tsx.md|components/Symbole.tsx]]
 

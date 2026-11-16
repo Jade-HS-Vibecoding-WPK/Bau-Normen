@@ -1,7 +1,7 @@
 // Kulturdenkmale in Niedersachsen am Standort und in der Umgebung.
 // Dienst: Denkmalatlas Niedersachsen (NLD), OGC API Features "denkmale/v1", Sammlung "protectedsite".
 import { DienstFehler, holeJson } from "./abruf";
-import { abstandMeter, bbox, punktInGeometrie, type Punkt } from "./geo";
+import { abstandMeter, aussenRinge, bbox, inMeter, punktInGeometrie, type Punkt } from "./geo";
 
 const DIENST = "https://geodatendienste.denkmalatlas.niedersachsen.de/xtraserver-webapi/denkmale/v1/collections/protectedsite/items";
 export const DENKMAL_QUELLE = "Denkmalatlas Niedersachsen – Niedersächsisches Landesamt für Denkmalpflege";
@@ -16,6 +16,8 @@ export interface Denkmal {
   gruppe: boolean;
   entfernungM: number; // 0 = Standort liegt in der Denkmalfläche
   link?: string;
+  /** Umriss in Metern relativ zum Standort (x Osten, y Norden) – für die Lageskizze */
+  umriss: [number, number][][];
 }
 
 interface Antwort {
@@ -47,6 +49,7 @@ export async function denkmaleImUmkreis(
           gruppe: /gruppe/i.test(`${x.ausweisung ?? ""} ${x.fachbereich ?? ""}`),
           entfernungM: Math.round(abstandMeter(p, f.geometry!)),
           link: x.inspireId?.startsWith("https://denkmalatlas.niedersachsen.de/") ? x.inspireId : undefined,
+          umriss: inMeter(p, aussenRinge(f.geometry!)),
           _drin: punktInGeometrie(p, f.geometry!),
         };
       })

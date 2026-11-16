@@ -31,7 +31,9 @@
 - [x] Erläuterungen fest gespeichert (zur Laufzeit keine KI): BauGB §§ 1–38 (47) und NDSchG komplett (41), Status „Entwurf“, automatisch geprüft (`node scripts/erlaeuterungen-pruefen.mjs`)
 - [ ] Erläuterungen für die übrigen BauGB-Paragraphen (§§ 39–250)
 - [ ] Fachliche Prüfung der Erläuterungen anhand von `data/erlaeuterungen/PRUEFHINWEISE.md`, danach Status „geprüft“
-- [ ] Kartenausschnitt in der Ortsauskunft: Standort, B-Plan-Umring, Denkmalflächen
+- [x] Lageskizze in der Ortsauskunft: Standort, Umkreis 50 m, B-Plan-Umring, Denkmalflächen – der Gecko krabbelt darüber und steckt Fähnchen
+- [x] Gecko als kleines Gimmick: minimalistische Silhouette, streift wie ein echter Gecko über die Seite (Stop-and-go, bevorzugt an Kanten, flüchtet vor dem Mauszeiger), läuft zu neuen Antworten bzw. zur Erläuterung schwieriger Paragraphen, nimmt bei Denkmalen Tarnfarbe an; blockiert nichts, abschaltbar
+- [ ] Optional: echter Kartenhintergrund (z. B. Stadtkarte Oldenburg) unter der Lageskizze
 - [ ] Stichwortverzeichnis erweitern, mehr Testfälle (Ziel: 50)
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)
 

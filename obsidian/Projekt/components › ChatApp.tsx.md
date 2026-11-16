@@ -2,7 +2,7 @@
 pfad: "components/ChatApp.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 327
+zeilen: 364
 beschreibung: "Oberfläche: Kopf, Seitenleiste mit festen Formularen (Ortsauskunft, Paragraph) und der Auskunfts-Verlauf (Chat)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # components/ChatApp.tsx
 
-**Pfad:** `components/ChatApp.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 327
+**Pfad:** `components/ChatApp.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 364
 
 ## Kurzbeschreibung
 
@@ -19,9 +19,11 @@ Oberfläche: Kopf, Seitenleiste mit festen Formularen (Ortsauskunft, Paragraph) 
 
 ## Importiert (lokal)
 
+- [[Projekt/lib › gecko.ts.md|lib/gecko.ts]]
 - [[Projekt/lib › text.ts.md|lib/text.ts]]
 - [[Projekt/lib › typen.ts.md|lib/typen.ts]] – nur Typen
 - [[Projekt/components › Karten.tsx.md|components/Karten.tsx]]
+- [[Projekt/components › Gecko.tsx.md|components/Gecko.tsx]]
 - [[Projekt/components › Obsidian.tsx.md|components/Obsidian.tsx]]
 - [[Projekt/components › Symbole.tsx.md|components/Symbole.tsx]]
 

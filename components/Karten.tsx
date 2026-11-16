@@ -4,6 +4,7 @@ import { useState } from "react";
 import { alsText, standDatum } from "@/lib/text";
 import type { NormAnsicht, NormRef, OrtAnsicht } from "@/lib/typen";
 import Normtext from "./Normtext";
+import Lageskizze from "./Lageskizze";
 import { obsidianLink, useLokal } from "./Obsidian";
 import { SymbolDenkmal, SymbolPin, SymbolPlan } from "./Symbole";
 
@@ -46,7 +47,7 @@ function TeilKopf({ nr, titel, zusatz, warn }: { nr: string; titel: string; zusa
   );
 }
 
-export function NormKarte({ a, frage, obsidianPfad }: { a: NormAnsicht; frage: Frage; obsidianPfad?: string | null }) {
+export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht; frage: Frage; obsidianPfad?: string | null; kartenId: string }) {
   const [offen, setOffen] = useState(false);
   const lokal = useLokal();
   const [kopiert, setKopiert] = useState(false);
@@ -68,7 +69,7 @@ export function NormKarte({ a, frage, obsidianPfad }: { a: NormAnsicht; frage: F
   }
 
   return (
-    <article className="dokument">
+    <article className="dokument" id={`karte-${kartenId}`}>
       <header className="schriftfeld">
         <div className="sf-haupt">
           <div className="sf-para">{nummer}</div>
@@ -126,7 +127,7 @@ export function NormKarte({ a, frage, obsidianPfad }: { a: NormAnsicht; frage: F
         )}
       </section>
 
-      <section className="teil">
+      <section className="teil" id={`erl-${kartenId}`}>
         <TeilKopf nr="02" titel="Erläuterung" zusatz="Orientierung, keine Rechtsberatung – maßgeblich ist der Originaltext" warn />
         {erlaeuterung ? (
           <>
@@ -202,7 +203,7 @@ const DENKMAL_STATUS = {
   fehler: ["keine Aussage", "status-signal"],
 } as const;
 
-export function OrtKarte({ o, frage }: { o: OrtAnsicht; frage: Frage }) {
+export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; kartenId: string }) {
   const [alleDenkmale, setAlleDenkmale] = useState(false);
 
   if (o.standort.status !== "ok") {
@@ -224,7 +225,7 @@ export function OrtKarte({ o, frage }: { o: OrtAnsicht; frage: Frage }) {
   const karte = `https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lon}#map=19/${s.lat}/${s.lon}`;
 
   return (
-    <article className="dokument">
+    <article className="dokument" id={`karte-${kartenId}`}>
       <header className="schriftfeld">
         <div className="sf-haupt">
           <div className="sf-symbol">
@@ -360,7 +361,12 @@ export function OrtKarte({ o, frage }: { o: OrtAnsicht; frage: Frage }) {
       </div>
 
       <section className="teil">
-        <TeilKopf nr="01" titel="Einordnung" zusatz="feste Regeln, keine Rechtsberatung" warn />
+        <TeilKopf nr="01" titel="Lageskizze" zusatz="der Gecko markiert Denkmale mit Fähnchen" />
+        <Lageskizze o={o} id={`skizze-${kartenId}`} />
+      </section>
+
+      <section className="teil">
+        <TeilKopf nr="02" titel="Einordnung" zusatz="feste Regeln, keine Rechtsberatung" warn />
         <ul className="einordnung">
           {o.einordnung.map((e, i) => (
             <li key={i} className={`ton-${e.ton}`}>
@@ -374,7 +380,7 @@ export function OrtKarte({ o, frage }: { o: OrtAnsicht; frage: Frage }) {
       </section>
 
       <section className="teil">
-        <TeilKopf nr="02" titel="Weiterführend" />
+        <TeilKopf nr="03" titel="Weiterführend" />
         <div className="links">
           {o.links.map((l) => (
             <a key={l.url} className="knopf knopf-zweit knopf-klein" href={l.url} target="_blank" rel="noreferrer">

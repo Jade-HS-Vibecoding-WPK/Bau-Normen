@@ -2,7 +2,7 @@
 pfad: "lib/ort/denkmal.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 61
+zeilen: 64
 beschreibung: "Kulturdenkmale in Niedersachsen am Standort und in der Umgebung. Dienst: Denkmalatlas Niedersachsen (NLD), OGC API Features \"denkmale/v1\", Sammlung \"protectedsite\"."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/ort/denkmal.ts
 
-**Pfad:** `lib/ort/denkmal.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 61
+**Pfad:** `lib/ort/denkmal.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 64
 
 ## Kurzbeschreibung
 

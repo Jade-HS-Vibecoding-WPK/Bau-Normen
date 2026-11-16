@@ -2,7 +2,7 @@
 pfad: "lib/ort/geo.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 61
+zeilen: 82
 beschreibung: "Kleine Geometrie-Helfer (ohne externe Bibliothek). Koordinaten immer als [Längengrad, Breitengrad] wie in GeoJSON."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/ort/geo.ts
 
-**Pfad:** `lib/ort/geo.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 61
+**Pfad:** `lib/ort/geo.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 82
 
 ## Kurzbeschreibung
 
@@ -23,9 +23,9 @@ Kleine Geometrie-Helfer (ohne externe Bibliothek). Koordinaten immer als \[Läng
 
 ## Stellt bereit
 
-`Punkt`, `punktInGeometrie`, `abstandMeter`, `distanzMeter`, `bbox`
+`Punkt`, `punktInGeometrie`, `abstandMeter`, `distanzMeter`, `inMeter`, `aussenRinge`, `bbox`
 
 ## Wird verwendet von
 
-`lib/ort/denkmal.ts`  
+`lib/ort/bplan.ts`, `lib/ort/denkmal.ts`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*

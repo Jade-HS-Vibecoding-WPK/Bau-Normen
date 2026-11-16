@@ -85,6 +85,8 @@ export interface OrtAnsicht {
           vorhabenbezogen: boolean;
           verfahren?: string;
           dokumente?: { art: string; name: string; url: string; groesseMB: number }[];
+          /** Planumring in Metern relativ zum Standort (x Osten, y Norden) */
+          umriss: [number, number][][];
         }[];
         /** Pläne in Aufstellung, Veränderungssperren, unwirksame Pläne am Standort (null = nicht abrufbar) */
         weitere: { art: "in-aufstellung" | "veraenderungssperre" | "unwirksam"; nummer: string; name: string; hinweis?: string }[] | null;
@@ -95,7 +97,19 @@ export interface OrtAnsicht {
   denkmal:
     | {
         status: "am-standort" | "umgebung" | "keiner";
-        denkmale: { name: string; anschrift?: string; ausweisung: string; objekttyp?: string; beschreibung?: string; gruppe: boolean; entfernungM: number; amStandort: boolean; link?: string }[];
+        denkmale: {
+          name: string;
+          anschrift?: string;
+          ausweisung: string;
+          objekttyp?: string;
+          beschreibung?: string;
+          gruppe: boolean;
+          entfernungM: number;
+          amStandort: boolean;
+          link?: string;
+          /** Umriss in Metern relativ zum Standort (x Osten, y Norden) */
+          umriss: [number, number][][];
+        }[];
         radiusM: number;
         quelle: string;
       }

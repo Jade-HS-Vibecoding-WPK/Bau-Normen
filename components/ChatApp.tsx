@@ -1,9 +1,11 @@
 "use client";
 // Oberfläche: Kopf, Seitenleiste mit festen Formularen (Ortsauskunft, Paragraph) und der Auskunfts-Verlauf (Chat).
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { type GeckoSignal, geckoSignal } from "@/lib/gecko";
 import { standDatum } from "@/lib/text";
 import type { Antwort, GesetzInfo } from "@/lib/typen";
 import { NormKarte, OrtKarte } from "./Karten";
+import Gecko from "./Gecko";
 import { ObsidianKnopf } from "./Obsidian";
 import { Logo } from "./Symbole";
 
@@ -30,6 +32,35 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
   const letzteRef = useRef<HTMLDivElement>(null);
   const strasseRef = useRef<HTMLInputElement>(null);
   const zaehler = useRef(1);
+  const [geckoAn, setGeckoAn] = useState(true);
+
+  // Gecko ein/aus merken (nur Komfort – funktioniert auch ohne Browser-Speicher)
+  useEffect(() => {
+    try {
+      if (localStorage.getItem("bnk-gecko") === "aus") setGeckoAn(false);
+    } catch {
+      /* kein Speicher verfügbar */
+    }
+  }, []);
+  const geckoSchalten = (an: boolean) => {
+    setGeckoAn(an);
+    try {
+      localStorage.setItem("bnk-gecko", an ? "an" : "aus");
+    } catch {
+      /* kein Speicher verfügbar */
+    }
+  };
+
+  const letzteAntwort = [...verlauf].reverse().find((e) => e.rolle === "lotse");
+  const signal = useMemo<GeckoSignal>(
+    () =>
+      laedt
+        ? { modus: "sucht", farbe: "gruen", nonce: -zaehler.current }
+        : letzteAntwort
+          ? geckoSignal(letzteAntwort.antworten, String(letzteAntwort.id), letzteAntwort.id)
+          : { modus: "ruhe", farbe: "gruen", nonce: 0 },
+    [laedt, letzteAntwort],
+  );
 
   // Neue Nachricht: an ihren Anfang scrollen, damit man oben mit dem Lesen beginnt.
   useEffect(() => {
@@ -177,6 +208,11 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 <strong>Verlässlichkeit:</strong> Gesetzestexte werden unverändert aus amtlichen Quellen angezeigt. Ortsauskünfte stammen live aus den Datendiensten der Stadt Oldenburg und des Landesamts für Denkmalpflege. Die
                 Auskunft ersetzt keine Rechtsberatung.
               </p>
+              <p>
+                <button className="link-knopf" onClick={() => geckoSchalten(!geckoAn)}>
+                  {geckoAn ? "Gecko ausblenden" : "Gecko einblenden"}
+                </button>
+              </p>
             </div>
           </section>
         </aside>
@@ -202,7 +238,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                   <button className="beispiel" onClick={() => strasseRef.current?.focus()}>
                     <span className="art">Ortsauskunft</span>
                     <span className="wert">Adresse prüfen</span>
-                    <span className="erkl">Straße und Hausnummer links eingeben</span>
+                    <span className="erkl">Straße und Hausnummer im Formular „Ortsauskunft“ eingeben</span>
                   </button>
                 </div>
                 <p className="leer-fuss">Im Eingabefeld unten funktionieren auch freie Formulierungen wie „Ich brauche Paragraph 5“, „§§ 30 und 31 BauGB“ oder eine Adresse.</p>
@@ -219,7 +255,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 </div>
               ) : (
                 <div key={e.id} className="antworten" ref={i === verlauf.length - 1 ? letzteRef : undefined}>
-                  {e.antworten?.map((a, j) => <AntwortAnzeige key={j} a={a} frage={frage} obsidianPfad={obsidianPfad} />)}
+                  {e.antworten?.map((a, j) => <AntwortAnzeige key={j} a={a} frage={frage} obsidianPfad={obsidianPfad} kartenId={`${e.id}-${j}`} />)}
                 </div>
               ),
             )}
@@ -259,16 +295,17 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
           </form>
         </main>
       </div>
+      {geckoAn && <Gecko signal={signal} />}
     </>
   );
 }
 
-function AntwortAnzeige({ a, frage, obsidianPfad }: { a: Antwort; frage: (t: string) => void; obsidianPfad: string | null }) {
+function AntwortAnzeige({ a, frage, obsidianPfad, kartenId }: { a: Antwort; frage: (t: string) => void; obsidianPfad: string | null; kartenId: string }) {
   switch (a.art) {
     case "norm":
-      return <NormKarte a={a.ansicht} frage={frage} obsidianPfad={obsidianPfad} />;
+      return <NormKarte a={a.ansicht} frage={frage} obsidianPfad={obsidianPfad} kartenId={kartenId} />;
     case "ort":
-      return <OrtKarte o={a.ort} frage={frage} />;
+      return <OrtKarte o={a.ort} frage={frage} kartenId={kartenId} />;
     case "text":
       return (
         <div className="meldung">

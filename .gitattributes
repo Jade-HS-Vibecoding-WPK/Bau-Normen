@@ -1,0 +1,6 @@
+# Einheitliche Zeilenenden (LF) auf allen Rechnern – vermeidet Schein-Änderungen unter Windows
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary

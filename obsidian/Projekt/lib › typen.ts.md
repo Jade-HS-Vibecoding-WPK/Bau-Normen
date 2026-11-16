@@ -2,7 +2,7 @@
 pfad: "lib/typen.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 115
+zeilen: 129
 beschreibung: "Gemeinsame Datentypen für Server und Oberfläche."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/typen.ts
 
-**Pfad:** `lib/typen.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 115
+**Pfad:** `lib/typen.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 129
 
 ## Kurzbeschreibung
 
@@ -27,5 +27,5 @@ Gemeinsame Datentypen für Server und Oberfläche.
 
 ## Wird verwendet von
 
-`components/ChatApp.tsx`, `components/Karten.tsx`, `components/Normtext.tsx`, `lib/gesetze.ts`, `lib/ort/index.ts`, `lib/text.ts`, `lib/verstehen.ts`  
+`components/ChatApp.tsx`, `components/Karten.tsx`, `components/Lageskizze.tsx`, `components/Normtext.tsx`, `lib/gecko.ts`, `lib/gesetze.ts`, `lib/ort/index.ts`, `lib/text.ts`, `lib/verstehen.ts`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*
