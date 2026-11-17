@@ -2,6 +2,7 @@
 // wohin er sich setzt und ob es Fehler oder Hinweise gibt (dann wird er orange bzw. rot).
 import { alsText } from "./text";
 import type { Antwort, TextKnoten } from "./typen";
+import { type Sprache, zweisprachig } from "./sprache";
 
 export interface GeckoProblem {
   stufe: "warnung" | "fehler";
@@ -40,7 +41,8 @@ export function komplexitaet(inhalt: TextKnoten[]) {
 }
 
 /** Sammelt Fehler (rot) und Hinweise (orange) aus den Antworten. */
-export function geckoProbleme(antworten: Antwort[]): GeckoProblem[] {
+export function geckoProbleme(antworten: Antwort[], sprache: Sprache = "de"): GeckoProblem[] {
+  const t = zweisprachig(sprache);
   const liste: GeckoProblem[] = [];
   for (const a of antworten) {
     switch (a.art) {
@@ -48,10 +50,10 @@ export function geckoProbleme(antworten: Antwort[]): GeckoProblem[] {
         liste.push({ stufe: "fehler", text: a.text });
         break;
       case "auswahl":
-        liste.push({ stufe: "warnung", text: "Paragraphennummer nicht eindeutig – bitte das Gesetz auswählen." });
+        liste.push({ stufe: "warnung", text: t("Paragraphennummer nicht eindeutig – bitte das Gesetz auswählen.", "Section number is ambiguous – please choose the act.") });
         break;
       case "treffer":
-        if (!a.treffer.some((t) => t.ausVerzeichnis)) liste.push({ stufe: "warnung", text: "Kein Stichwort aus dem Verzeichnis erkannt – die Treffer stammen aus der Volltextsuche." });
+        if (!a.treffer.some((t) => t.ausVerzeichnis)) liste.push({ stufe: "warnung", text: t("Kein Stichwort aus dem Verzeichnis erkannt – die Treffer stammen aus der Volltextsuche.", "No index term recognised – the results come from the full-text search.") });
         break;
       case "ort": {
         const o = a.ort;
@@ -59,11 +61,11 @@ export function geckoProbleme(antworten: Antwort[]): GeckoProblem[] {
           liste.push({ stufe: "fehler", text: o.standort.hinweis });
           break;
         }
-        if (!o.standort.hausnummerGefunden) liste.push({ stufe: "warnung", text: "Hausnummer nicht gefunden – die Abfrage nutzt einen Punkt auf der Straße." });
+        if (!o.standort.hausnummerGefunden) liste.push({ stufe: "warnung", text: t("Hausnummer nicht gefunden – die Abfrage nutzt einen Punkt auf der Straße.", "House number not found – the query uses a point on the street.") });
         if (o.bplan.status === "fehler") liste.push({ stufe: "fehler", text: o.bplan.hinweis });
         else {
-          if (!o.bplan.dokumenteAbrufbar) liste.push({ stufe: "warnung", text: "Plan-Dokumente (PDF) konnten nicht abgerufen werden." });
-          if (o.bplan.weitere === null) liste.push({ stufe: "warnung", text: "Laufende Verfahren (Aufstellung, Veränderungssperre) nicht abrufbar." });
+          if (!o.bplan.dokumenteAbrufbar) liste.push({ stufe: "warnung", text: t("Plan-Dokumente (PDF) konnten nicht abgerufen werden.", "Plan documents (PDF) could not be retrieved.") });
+          if (o.bplan.weitere === null) liste.push({ stufe: "warnung", text: t("Laufende Verfahren (Aufstellung, Veränderungssperre) nicht abrufbar.", "Ongoing procedures (plans in preparation, development freezes) not retrievable.") });
         }
         if (o.denkmal.status === "fehler") liste.push({ stufe: "fehler", text: o.denkmal.hinweis });
         break;
@@ -73,13 +75,30 @@ export function geckoProbleme(antworten: Antwort[]): GeckoProblem[] {
   return liste;
 }
 
-export function geckoSignal(antworten: Antwort[] | undefined, praefix: string, nonce: number): GeckoSignal {
+export function geckoSignal(antworten: Antwort[] | undefined, praefix: string, nonce: number, sprache: Sprache = "de"): GeckoSignal {
   const a = antworten?.[0];
   if (!a || !antworten) return { modus: "ruhe", probleme: [], nonce };
-  const probleme = geckoProbleme(antworten);
+  const probleme = geckoProbleme(antworten, sprache);
   let ziel = `karte-${praefix}-0`;
   if (a.art === "ort" && a.ort.standort.status === "ok") ziel = `skizze-${praefix}-0`;
   // Bei sehr verschachtelten Paragraphen setzt sich der Gecko an die verständliche Erläuterung.
   if (a.art === "norm" && !a.ansicht.norm.weggefallen && komplexitaet(a.ansicht.norm.inhalt).hoch) ziel = `erl-${praefix}-0`;
   return { modus: "neu", ziel, probleme, nonce };
+}
+
+/**
+ * Zusatzauftrag für den Gecko: in der Lageskizze die Fähnchen stecken.
+ * Die Lageskizze schickt ihn als Ereignis "gecko-fahnen" (window); der Gecko setzt `angenommen` auf true,
+ * läuft von Punkt zu Punkt und meldet jede gesteckte Fahne zurück. Danach macht er weiter wie bisher.
+ */
+export interface GeckoFahnenAuftrag {
+  /** id der Lageskizze – dort setzt sich der Gecko anschließend an den rechten Rand */
+  ziel: string;
+  /** Bildschirmposition je Fahne (in Steck-Reihenfolge); null = gerade nicht sichtbar */
+  punkte: (() => { x: number; y: number } | null)[];
+  /** Fahne Nummer k (in Steck-Reihenfolge) ist gesteckt */
+  gesetzt: (k: number) => void;
+  /** Auftrag endet vorzeitig: alle übrigen Fahnen sofort zeigen */
+  alleSetzen: () => void;
+  angenommen: boolean;
 }

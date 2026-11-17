@@ -11,9 +11,14 @@
 //  - setzt sich an neue Antworten; muss er umkehren, wendet er auf der Stelle (nie rückwärts)
 //  - beim Darüberfahren rollt er sich ein (Körper als C, Schwanz drumherum, Beine angezogen)
 //  - bei Fehlern rot, bei Hinweisen orange; beim Darüberfahren zeigt er die Meldungen
+//  - Zusatzauftrag: kommt eine Lageskizze ins Bild, läuft er hin und steckt die Fähnchen
+//    (Ereignis "gecko-fahnen"); danach setzt er sich an die Skizze und macht weiter wie oben
+//  - über Text wird er durchsichtiger, damit nichts verdeckt wird
+//  - "Gecko aus" (fest): sitzt still am Stammplatz und dient nur noch als Signal für Fehler und Hinweise
 // Alles folgt festen Regeln – keine KI.
 import { useEffect, useRef, useState } from "react";
-import type { GeckoSignal } from "@/lib/gecko";
+import type { GeckoFahnenAuftrag, GeckoSignal } from "@/lib/gecko";
+import { useT } from "./Einstellungen";
 
 type V = { x: number; y: number };
 const RAD = Math.PI / 180;
@@ -138,7 +143,34 @@ function glatterPfad(p: V[]): string {
   return d + "Z";
 }
 
-export default function Gecko({ signal }: { signal: GeckoSignal }) {
+/** Kästen mit Lesetext – läuft der Gecko darüber, wird er durchsichtiger (die Karte der Lageskizze zählt nicht). */
+const TEXTFLAECHEN = ".verlauf .dokument, .verlauf .meldung, .leiste .block, .anfrage-box, .leer, .gebiet";
+
+/**
+ * Was liegt an einem Bildschirmpunkt unter dem Gecko? "text" = eine Textzeile, "flaeche" = ein Kasten mit Lesetext,
+ * null = freier Hintergrund oder die Karte. Der Gecko selbst wird dabei übersprungen.
+ */
+function unterGecko(x: number, y: number, tier: Element | null): "text" | "flaeche" | null {
+  const el = document.elementsFromPoint(x, y).find((e) => !tier?.contains(e) && !e.classList.contains("gecko-buehne"));
+  if (!el || el.closest(".landschaft, .skizze svg, .karten-knoepfe")) return null;
+  for (const kind of el.childNodes) {
+    if (kind.nodeType !== Node.TEXT_NODE || !kind.textContent?.trim()) continue;
+    const r = document.createRange();
+    r.selectNodeContents(kind);
+    for (const k of r.getClientRects()) if (x >= k.left - 3 && x <= k.right + 3 && y >= k.top - 4 && y <= k.bottom + 4) return "text";
+  }
+  if ((el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) && el.value) return "text";
+  return el.closest(TEXTFLAECHEN) ? "flaeche" : null;
+}
+
+/**
+ * fest  = "Gecko aus": sitzt still an seinem Stammplatz (unten rechts am Auskunftsbereich), bewegt nur Kopf und Schwanz
+ *         und zeigt weiterhin Fehler und Hinweise an. Läuft nicht zu Antworten und steckt keine Fähnchen.
+ * ruhig = Animationen aus (Einstellung oder System): keine Bewegung von selbst.
+ */
+export default function Gecko({ signal, fest = false, ruhig: ruhigEinstellung = false }: { signal: GeckoSignal; fest?: boolean; ruhig?: boolean }) {
+  const t = useT();
+  const tierRef = useRef<SVGGElement>(null);
   const rumpfRef = useRef<SVGPathElement>(null);
   const beineRef = useRef<SVGPathElement>(null);
   const zehenRef = useRef<SVGPathElement>(null);
@@ -160,7 +192,9 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
   }, [signal]);
 
   useEffect(() => {
-    const ruhig = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    const ruhig = ruhigEinstellung || !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    let ueberText = false; // läuft gerade über Text -> durchsichtiger
+    let textPruefung = 0;
 
     // ---------- Zustand ----------
     const start = HEIM() ?? { x: window.innerWidth - 40, y: window.innerHeight - 120 };
@@ -215,6 +249,41 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       return true;
     };
 
+    // ---------- Zusatzauftrag: Fähnchen in der Lageskizze stecken ----------
+    // Kommt nur hinzu, wenn eine Lageskizze ins Bild kommt; ohne Auftrag bleibt alles wie bisher.
+    let auftrag: (GeckoFahnenAuftrag & { k: number }) | null = null;
+    let kopfZumZiel = false; // beim Stecken soll die Schnauze (nicht die Körpermitte) am Fahnenfuß ankommen
+    const auftragBeenden = (vorzeitig: boolean) => {
+      if (auftrag && vorzeitig) auftrag.alleSetzen();
+      auftrag = null;
+      kopfZumZiel = false;
+    };
+    const naechsteFahne = () => {
+      while (auftrag && auftrag.k < auftrag.punkte.length) {
+        if (geheZu({ anker: auftrag.punkte[auftrag.k], el: null }, 450)) {
+          kopfZumZiel = true;
+          return;
+        }
+        auftrag.gesetzt(auftrag.k); // gerade nicht im Bild: Fahne ohne Umweg stecken
+        auftrag.k++;
+      }
+      // alle gesteckt: an den rechten Rand der Skizze setzen – wie bei einer neuen Antwort
+      const ziel = auftrag?.ziel;
+      auftragBeenden(false);
+      if (!(ziel && geheZu(AN_ANTWORT(ziel), zufall(12000, 18000))) && !geheZu(anderenPlatz(mitte.current, null), zufall(7000, 16000))) {
+        geheZu({ anker: HEIM, el: document.querySelector(".arbeitsbereich") }, zufall(7000, 16000));
+      }
+    };
+    const fahnenAuftrag = (ev: Event) => {
+      const a = (ev as CustomEvent<GeckoFahnenAuftrag>).detail;
+      if (ruhig || fest || !a) return; // sitzt still / ohne Animationen: die Skizze zeigt die Fahnen selbst
+      auftragBeenden(true);
+      a.angenommen = true;
+      auftrag = Object.assign(a, { k: 0 });
+      naechsteFahne();
+    };
+    window.addEventListener("gecko-fahnen", fahnenAuftrag);
+
     /** Winkel der Spur an Bogenlänge s (Blickrichtung) */
     const spurWinkel = (s: number) => {
       let rest = s;
@@ -251,10 +320,12 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       // ---------- Signale aus der App ----------
       if (neu.current) {
         neu.current = false;
-        wartendesZiel = sig.modus === "neu" && sig.ziel && !ruhig ? { id: sig.ziel, ab: t + 700, bis: t + 4500 } : null;
+        if (sig.modus === "sucht") auftragBeenden(true); // neue Frage: übrige Fähnchen sofort zeigen
+        wartendesZiel = sig.modus === "neu" && sig.ziel && !ruhig && !fest ? { id: sig.ziel, ab: t + 700, bis: t + 4500 } : null;
       }
       if (wartendesZiel && t >= wartendesZiel.ab && !halten.current) {
-        if (geheZu(AN_ANTWORT(wartendesZiel.id), zufall(12000, 18000))) wartendesZiel = null;
+        if (auftrag) wartendesZiel = null; // Fähnchen zuerst – danach setzt er sich ohnehin an die Skizze
+        else if (geheZu(AN_ANTWORT(wartendesZiel.id), zufall(12000, 18000))) wartendesZiel = null;
         else if (t > wartendesZiel.bis) wartendesZiel = null;
       }
 
@@ -262,7 +333,9 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       e += ((halten.current ? 1 : 0) - e) * Math.min(1, dt * 7);
       geht = false;
       let platz = anker();
-      if (!platz && !halten.current) {
+      if (!platz && !halten.current && !fest) {
+        // Skizze beim Fähnchenstecken aus dem Bild gescrollt -> übrige Fahnen sofort zeigen
+        if (auftrag) auftragBeenden(true);
         // Kasten verschwunden oder aus dem Bild gescrollt -> anderen Rand suchen
         if (!geheZu(anderenPlatz(mitte.current, ankerEl), zufall(7000, 16000))) geheZu({ anker: HEIM, el: document.querySelector(".arbeitsbereich") }, zufall(7000, 16000));
         platz = anker();
@@ -284,30 +357,41 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
               kopfDrehZiel = kopfDrehZiel === 0 ? (Math.random() < 0.5 ? -1 : 1) * zufall(10, 24) : 0;
               kopfNaechst = t + (kopfDrehZiel === 0 ? zufall(3000, 7000) : zufall(1800, 3500));
             }
-            if (t > drehNaechst && drehRest === 0) {
+            if (t > drehNaechst && drehRest === 0 && !fest) {
               // ab und zu den ganzen Körper ein wenig drehen – und beim nächsten Mal wieder zurück
               drehRest = drehVersatz !== 0 ? -drehVersatz : (Math.random() < 0.5 ? -1 : 1) * zufall(6, 12);
               drehNaechst = t + zufall(15000, 30000);
             }
+            if (auftrag && kopfZumZiel) {
+              // Fahne gesteckt, kurz innehalten – dann zur nächsten
+              if (t > bis) {
+                auftrag.k++;
+                naechsteFahne();
+              }
+            }
             // nach einer Weile zum nächsten Kasten – quer über den Bildschirm
-            if (t > bis && !geheZu(anderenPlatz(mitte.current, ankerEl), zufall(7000, 16000))) bis = t + 5000;
+            else if (!fest && t > bis && !geheZu(anderenPlatz(mitte.current, ankerEl), zufall(7000, 16000))) bis = t + 5000;
           }
         } else if (!ruhig) {
           kopfDrehZiel = 0;
           // Körpermitte soll auf der Kante landen: Kopf steht dann ein Stück weiter in Laufrichtung
-          const ziel = plus(v(platz.x, platz.y), mal(richtung(reiseWinkel), S[MITTE]));
+          const ziel = kopfZumZiel ? v(platz.x, platz.y) : plus(v(platz.x, platz.y), mal(richtung(reiseWinkel), S[MITTE]));
           ankerVorher = v(platz.x, platz.y);
           const d = minus(ziel, kopf);
           const abst = laenge(d);
-          if (abst < 3) {
+          // Fähnchen dicht neben ihm (innerhalb seines Drehkreises): Beim Wenden um die Körpermitte könnte
+          // die Schnauze es nie anpeilen – dann steckt er es von dort aus, ohne sich im Kreis zu drehen.
+          const greifbar = kopfZumZiel && laenge(minus(ziel, mitte.current)) < S[MITTE] + 8 && Math.abs(diff(w, winkelVon(d))) > 20;
+          if (abst < 3 || greifbar) {
             // angekommen: einfach stehen bleiben
-            verschiebe(d);
+            if (abst < 3) verschiebe(d);
             modus = "sitzt";
             bis = t + sitzDauer;
             drehVersatz = 0;
             drehRest = 0;
             kopfNaechst = t + zufall(2500, 5000);
             drehNaechst = t + zufall(15000, 30000);
+            if (auftrag && kopfZumZiel) auftrag.gesetzt(auftrag.k); // Fähnchen stecken
           } else {
             const soll = winkelVon(d);
             const abw = diff(w, soll);
@@ -380,7 +464,9 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
         rolle += (ROLLE_HINTEN[k] ?? 32) * e - (j >= 7 ? 17 * schwanzRolle * (1 - e) : 0);
         // Schwanz schwingt beim Laufen als Welle nach (an den Schritt gekoppelt, im Stehen eingefroren)
         const welle = j >= 6 ? 9 * (1 - ruhe) * Math.sin(phi - (j - 5) * 0.8) * Math.min(1, (j - 5) / 3) : 0;
-        winkelSeg[j] += B * (BIEG_HINTEN[k] ?? 0) + welle * (1 - e) + rolle;
+        // sitzt still ("Gecko aus"): die Schwanzspitze bewegt sich ab und zu leicht
+        const wedel = fest && !ruhig && j >= 8 ? 4 * Math.sin(t / 900 - (j - 8) * 0.9) * Math.max(0, Math.sin(t / 5200)) : 0;
+        winkelSeg[j] += B * (BIEG_HINTEN[k] ?? 0) + (welle + wedel) * (1 - e) + rolle;
       }
       const p: V[] = new Array(N);
       p[MITTE] = spurPunkt(S[MITTE]);
@@ -448,15 +534,27 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       augenRef.current?.setAttribute("d", augen);
       trefferRef.current?.setAttribute("cx", f1(p[MITTE].x));
       trefferRef.current?.setAttribute("cy", f1(p[MITTE].y));
+      if (t > textPruefung) {
+        textPruefung = t + 160;
+        const tier = tierRef.current;
+        // im Sitzen nur, wenn er wirklich Text verdeckt; beim Laufen schon, sobald er über einen Textkasten zieht
+        const befund = [p[0], p[2], p[MITTE], p[6], p[8]].map((q) => unterGecko(q.x, q.y, tier));
+        const jetzt = !halten.current && (befund.includes("text") || (modus === "laeuft" && befund.filter((b) => b === "flaeche").length >= 2));
+        if (jetzt !== ueberText) {
+          ueberText = jetzt;
+          tier?.classList.toggle("ueber-text", jetzt);
+        }
+      }
 
       frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
     return () => {
       cancelAnimationFrame(frame);
-
+      window.removeEventListener("gecko-fahnen", fahnenAuftrag);
+      auftragBeenden(true); // Gecko ausgeblendet: Fähnchen trotzdem zeigen
     };
-  }, []);
+  }, [fest, ruhigEinstellung]);
 
   const rein = () => {
     clearTimeout(verlassen.current);
@@ -489,12 +587,13 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
     <>
       <svg className="gecko-buehne" aria-hidden={stufe ? undefined : true}>
         <g
+          ref={tierRef}
           className={`gecko-tier ${stufe} ${eingerollt ? "eingerollt" : ""}`}
           onMouseEnter={rein}
           onMouseLeave={raus}
           onClick={() => (eingerollt ? raus() : rein())}
           role={stufe ? "img" : undefined}
-          aria-label={stufe ? `Gecko: ${signal.probleme.length} ${signal.probleme.length === 1 ? "Meldung" : "Meldungen"}` : undefined}
+          aria-label={stufe ? `Gecko: ${signal.probleme.length} ${signal.probleme.length === 1 ? t("Meldung", "message") : t("Meldungen", "messages")}` : undefined}
         >
           <path ref={beineRef} className="gecko-beine" />
           <path ref={zehenRef} className="gecko-zehen" />
@@ -507,7 +606,7 @@ export default function Gecko({ signal }: { signal: GeckoSignal }) {
       {tipp && signal.probleme.length > 0 && (
         <div className={`gecko-tipp ${stufe}`} style={tippStil} onMouseEnter={rein} onMouseLeave={raus} role="status">
           <span className="gecko-tipp-kopf">
-            {signal.probleme.length} {signal.probleme.length === 1 ? "Meldung" : "Meldungen"} zur letzten Anfrage
+            {signal.probleme.length} {signal.probleme.length === 1 ? t("Meldung zur letzten Anfrage", "message on the last enquiry") : t("Meldungen zur letzten Anfrage", "messages on the last enquiry")}
           </span>
           <ul>
             {signal.probleme.map((p, i) => (

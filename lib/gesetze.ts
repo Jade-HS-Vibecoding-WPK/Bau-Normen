@@ -1,49 +1,44 @@
 // Die "Bibliothek": lädt die importierten Gesetze und beantwortet Abrufe.
 // Wichtig: Hier wird kein Text erzeugt – alles stammt 1:1 aus data/gesetze/*.json.
-import fs from "node:fs";
-import path from "node:path";
+// Woher die Dateien kommen, regelt die Datenquelle: auf dem Server das Dateisystem (lib/daten-server.ts),
+// in der statischen Online-Version (GitHub Pages) der Browser (lib/daten-browser.ts).
 import type { Erlaeuterung, Gesetz, GesetzInfo, Norm, NormAnsicht, NormRef } from "./typen";
 
-const DATEN = path.join(process.cwd(), "data");
-
-let cache: Map<string, Gesetz> | null = null;
-let cacheSchluessel = "";
-const erlCache = new Map<string, { mtime: number; daten: Record<string, Erlaeuterung> }>();
-
-/** Fingerabdruck der Datendateien – ändert sich nach einem neuen Import, dann wird neu geladen. */
-function datenSchluessel(dir: string): string {
-  if (!fs.existsSync(dir)) return "";
-  return fs
-    .readdirSync(dir)
-    .filter((d) => d.endsWith(".json"))
-    .map((d) => `${d}:${fs.statSync(path.join(dir, d)).mtimeMs}`)
-    .join("|");
+export interface Datenquelle {
+  /** Alle Gesetze. Dieselbe Liste (gleiche Referenz), solange sich nichts geändert hat. */
+  gesetze(): Gesetz[];
+  /** Fest gespeicherte Erläuterungen eines Gesetzes, nach Norm-ID. */
+  erlaeuterungen(gesetzId: string): Record<string, Erlaeuterung>;
+  /** Kuratiertes Stichwortverzeichnis (data/stichworte.json). */
+  stichworte(): Record<string, string[] | string>;
 }
 
+let quelle: Datenquelle | null = null;
+
+export function setzeDatenquelle(q: Datenquelle) {
+  quelle = q;
+}
+
+function daten(): Datenquelle {
+  if (!quelle) throw new Error("Keine Datenquelle gesetzt (lib/daten-server.ts oder lib/daten-browser.ts laden).");
+  return quelle;
+}
+
+let cache: Map<string, Gesetz> | null = null;
+let cacheVon: Gesetz[] | null = null;
+
 export function alleGesetze(): Map<string, Gesetz> {
-  const dir = path.join(DATEN, "gesetze");
-  const schluessel = datenSchluessel(dir);
-  if (cache && schluessel === cacheSchluessel) return cache;
-  const geladen: Gesetz[] = [];
-  for (const datei of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
-    if (!datei.endsWith(".json")) continue;
-    geladen.push(JSON.parse(fs.readFileSync(path.join(dir, datei), "utf8")) as Gesetz);
-  }
+  const liste = daten().gesetze();
+  if (cache && liste === cacheVon) return cache;
   // Feste Reihenfolge: Bundesrecht zuerst, dann Landesrecht
-  geladen.sort((a, b) => Number(b.ebene === "Bund") - Number(a.ebene === "Bund"));
-  cache = new Map(geladen.map((g) => [g.id, g]));
-  cacheSchluessel = schluessel;
+  const geordnet = [...liste].sort((a, b) => Number(b.ebene === "Bund") - Number(a.ebene === "Bund"));
+  cache = new Map(geordnet.map((g) => [g.id, g]));
+  cacheVon = liste;
   return cache;
 }
 
 function erlaeuterungen(gesetzId: string): Record<string, Erlaeuterung> {
-  const datei = path.join(DATEN, "erlaeuterungen", `${gesetzId}.json`);
-  const mtime = fs.existsSync(datei) ? fs.statSync(datei).mtimeMs : 0;
-  const c = erlCache.get(gesetzId);
-  if (c && c.mtime === mtime) return c.daten;
-  const daten = mtime ? JSON.parse(fs.readFileSync(datei, "utf8")) : {};
-  erlCache.set(gesetzId, { mtime, daten });
-  return daten;
+  return daten().erlaeuterungen(gesetzId);
 }
 
 export function gesetzInfo(g: Gesetz): GesetzInfo {
@@ -95,10 +90,11 @@ export function normAnsicht(gesetzId: string, normId: string): NormAnsicht | und
 
 // --- Stichwortverzeichnis (kuratiert, data/stichworte.json) ---
 let stichwortCache: { begriff: string; re: RegExp; ziele: string[] }[] | null = null;
+let stichwortVon: unknown = null;
 
 function stichwortListe() {
-  if (stichwortCache) return stichwortCache;
-  const roh = JSON.parse(fs.readFileSync(path.join(DATEN, "stichworte.json"), "utf8")) as Record<string, string[] | string>;
+  const roh = daten().stichworte();
+  if (stichwortCache && roh === stichwortVon) return stichwortCache;
   const liste: { begriff: string; re: RegExp; ziele: string[] }[] = [];
   for (const [schluessel, ziele] of Object.entries(roh)) {
     if (schluessel.startsWith("_") || !Array.isArray(ziele)) continue;
@@ -109,6 +105,7 @@ function stichwortListe() {
   }
   // Längere (spezifischere) Begriffe zuerst
   stichwortCache = liste.sort((a, b) => b.begriff.length - a.begriff.length);
+  stichwortVon = roh;
   return stichwortCache;
 }
 

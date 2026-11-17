@@ -1,12 +1,13 @@
-// Schlichte Linien-Symbole (SVG), angelehnt an Planzeichen.
+// Schlichte Linien-Symbole (SVG) im Stil der Linienkunst.
 type P = { size?: number; className?: string };
 
-export function Logo({ size = 34 }: P) {
+export function Logo({ size = 40 }: P) {
+  // Organische Fläche mit Paragraphenzeichen und feiner Höhenlinie
   return (
-    <svg width={size} height={size} viewBox="0 0 34 34" aria-hidden="true">
-      <rect x="1" y="1" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M6 15 L17 7 L28 15" fill="none" stroke="#9bc4a4" strokeWidth="2" strokeLinejoin="miter" />
-      <text x="17" y="28" textAnchor="middle" fontSize="14" fill="currentColor" style={{ fontFamily: "var(--font-serif), Georgia, serif" }}>
+    <svg width={size} height={size} viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M21 2.5C31 3 38.5 10 37.5 20.5S29 38 19 37.5 2 30 2.5 19.5 11 2 21 2.5Z" style={{ fill: "var(--logo-flaeche)" }} />
+      <path d="M20.5 6.5C28 7 33.5 12 33 20S27 33.5 19.5 33 6.5 27.5 7 19.5 13 6 20.5 6.5Z" fill="none" style={{ stroke: "var(--logo-linie)" }} strokeOpacity=".45" strokeWidth=".9" />
+      <text x="20" y="27" textAnchor="middle" fontSize="20" fontWeight="600" style={{ fill: "var(--logo-text)", fontFamily: "var(--font-display), Georgia, serif" }}>
         §
       </text>
     </svg>

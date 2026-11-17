@@ -5,6 +5,7 @@
 import { alleGesetze, normAnsicht, stichwortSuche, suche } from "./gesetze";
 import { ortsauskunft } from "./ort";
 import type { Antwort, NormRef } from "./typen";
+import { type Sprache, zweisprachig } from "./sprache";
 
 const GESETZ_MUSTER: { id: string; re: RegExp }[] = [
   { id: "baugb", re: /\b(baugb|baugesetzbuch|bbaug)\b/i },
@@ -19,7 +20,7 @@ export function erkenneGesetz(t: string): string | null {
 /** Findet Paragraphennummern wie "§ 34", "§§ 30, 34 und 35", "Paragraph 13a", "34 BauGB". */
 export function erkenneNummern(t: string): string[] {
   const nummern: string[] = [];
-  const schluessel = /(§§?|paragra(?:ph|f)(?:en|s)?|para\.)\s*/gi;
+  const schluessel = /(§§?|paragra(?:ph|f)(?:en|s)?|para\.|sections?|sec\.)\s*/gi;
   let m: RegExpExecArray | null;
   while ((m = schluessel.exec(t))) {
     let pos = m.index + m[0].length;
@@ -60,35 +61,40 @@ export function erkenneAdresse(t: string, nurMitEndung = false): { strasse: stri
   return { strasse, hausnummer: m[2] + (m[3] ? m[3].toLowerCase() : "") };
 }
 
-function normAntwort(gesetzId: string, nr: string): Antwort {
+function normAntwort(gesetzId: string, nr: string, sprache: Sprache): Antwort {
   const g = alleGesetze().get(gesetzId)!;
   const ansicht = normAnsicht(gesetzId, nr);
   if (ansicht) return { art: "norm", ansicht };
   const letzte = [...g.normen].reverse().find((n) => n.bez.startsWith("§"));
   return {
     art: "fehler",
-    text: `§ ${nr} gibt es im ${g.kurz} nicht. Das ${g.kurz} reicht von § 1 bis ${letzte?.bez ?? "?"}. Es wird kein Text angezeigt, statt zu raten.`,
+    text: zweisprachig(sprache)(
+      `§ ${nr} gibt es im ${g.kurz} nicht. Das ${g.kurz} reicht von § 1 bis ${letzte?.bez ?? "?"}. Es wird kein Text angezeigt, statt zu raten.`,
+      `There is no § ${nr} in the ${g.kurz}. The ${g.kurz} runs from § 1 to ${letzte?.bez ?? "?"}. No text is shown rather than guessing.`,
+    ),
   };
 }
 
-function paragraphAntwort(t: string, nummern: string[]): Antwort[] {
+function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Antwort[] {
+  const tx = zweisprachig(sprache);
   const gesetze = alleGesetze();
   const gesetzId = erkenneGesetz(t);
-  if (gesetzId && gesetze.has(gesetzId)) return nummern.slice(0, 3).map((nr) => normAntwort(gesetzId, nr));
+  const verfuegbar = [...gesetze.values()].map((g) => g.kurz).join(", ");
+  if (gesetzId && gesetze.has(gesetzId)) return nummern.slice(0, 3).map((nr) => normAntwort(gesetzId, nr, sprache));
   if (gesetzId && !gesetze.has(gesetzId)) {
-    return [{ art: "fehler", text: `Dieses Gesetz ist noch nicht in der Bibliothek. Verfügbar: ${[...gesetze.values()].map((g) => g.kurz).join(", ")}.` }];
+    return [{ art: "fehler", text: tx(`Dieses Gesetz ist noch nicht in der Bibliothek. Verfügbar: ${verfuegbar}.`, `This act is not in the library yet. Available: ${verfuegbar}.`) }];
   }
   const nr = nummern[0];
   const kandidaten = [...gesetze.values()].filter((g) => g.normen.some((n) => n.id === nr));
   // Nur ein Gesetz hat diesen Paragraphen -> eindeutig, keine Rückfrage nötig.
-  if (kandidaten.length === 1) return nummern.slice(0, 3).map((x) => normAntwort(kandidaten[0].id, x));
+  if (kandidaten.length === 1) return nummern.slice(0, 3).map((x) => normAntwort(kandidaten[0].id, x, sprache));
   if (kandidaten.length === 0) {
-    return [{ art: "fehler", text: `Einen § ${nr} gibt es in keinem der verfügbaren Gesetze (${[...gesetze.values()].map((g) => g.kurz).join(", ")}).` }];
+    return [{ art: "fehler", text: tx(`Einen § ${nr} gibt es in keinem der verfügbaren Gesetze (${verfuegbar}).`, `None of the available acts has a § ${nr} (${verfuegbar}).`) }];
   }
   return [
     {
       art: "auswahl",
-      frage: `§ ${nr} gibt es in mehreren Gesetzen. Welches ist gemeint?`,
+      frage: tx(`§ ${nr} gibt es in mehreren Gesetzen. Welches ist gemeint?`, `§ ${nr} exists in several acts. Which one do you mean?`),
       optionen: kandidaten.map((g) => {
         const n = g.normen.find((x) => x.id === nr)!;
         return { label: `§ ${nr} ${g.kurz} – ${n.titel}`, anfrage: `§ ${nr} ${g.kurz}` };
@@ -97,21 +103,22 @@ function paragraphAntwort(t: string, nummern: string[]): Antwort[] {
   ];
 }
 
-export async function beantworte(eingabe: string): Promise<Antwort[]> {
+export async function beantworte(eingabe: string, sprache: Sprache = "de"): Promise<Antwort[]> {
   const t = eingabe.trim();
+  const tx = zweisprachig(sprache);
   if (!t) return [];
 
   // 1) Adresse mit typischer Straßenendung ("…straße 5", "…weg 12") -> Ortsauskunft
   const adresse = erkenneAdresse(t, true);
-  if (adresse) return [{ art: "ort", ort: await ortsauskunft(adresse.strasse, adresse.hausnummer, t) }];
+  if (adresse) return [{ art: "ort", ort: await ortsauskunft(adresse.strasse, adresse.hausnummer, t, sprache) }];
 
   // 2) Paragraph-Abruf
   const nummern = erkenneNummern(t);
-  if (nummern.length) return paragraphAntwort(t, nummern);
+  if (nummern.length) return paragraphAntwort(t, nummern, sprache);
 
   // 3) Adressen ohne Endung ("Am Stadtmuseum 4")
   const adresse2 = erkenneAdresse(t);
-  if (adresse2) return [{ art: "ort", ort: await ortsauskunft(adresse2.strasse, adresse2.hausnummer, t) }];
+  if (adresse2) return [{ art: "ort", ort: await ortsauskunft(adresse2.strasse, adresse2.hausnummer, t, sprache) }];
 
   // 4) Stichworte: erst das kuratierte Verzeichnis, dann Volltextsuche
   const { refs, begriffe } = stichwortSuche(t);
@@ -122,8 +129,11 @@ export async function beantworte(eingabe: string): Promise<Antwort[]> {
       {
         art: "treffer",
         frage: begriffe.length
-          ? `Zu „${begriffe.slice(0, 3).join("“, „")}“ sind diese Vorschriften einschlägig:`
-          : "Kein Stichwort aus dem Verzeichnis erkannt. Diese Vorschriften enthalten Ihre Suchbegriffe:",
+          ? tx(`Zu „${begriffe.slice(0, 3).join("“, „")}“ sind diese Vorschriften einschlägig:`, `These provisions are relevant to “${begriffe.slice(0, 3).join("”, “")}”:`)
+          : tx(
+              "Kein Stichwort aus dem Verzeichnis erkannt. Diese Vorschriften enthalten Ihre Suchbegriffe:",
+              "No term from the index recognised. These provisions contain your search words (the search works with German terms):",
+            ),
         treffer: treffer.map((r, i) => ({ ...r, anfrage: `${r.bez} ${r.gesetz}`, ausVerzeichnis: i < refs.length })),
       },
     ];
@@ -131,7 +141,10 @@ export async function beantworte(eingabe: string): Promise<Antwort[]> {
   return [
     {
       art: "fehler",
-      text: "Dazu wurde nichts gefunden. Möglich sind: ein Paragraph („§ 34 BauGB“), ein Stichwort („Vorkaufsrecht“) oder eine Adresse in Oldenburg („Straße Hausnummer“).",
+      text: tx(
+        "Dazu wurde nichts gefunden. Möglich sind: ein Paragraph („§ 34 BauGB“), ein Stichwort („Vorkaufsrecht“) oder eine Adresse in Oldenburg („Straße Hausnummer“).",
+        "Nothing found. You can enter a section (“§ 34 BauGB”), a German keyword (“Vorkaufsrecht”) or an address in Oldenburg (“street house number”).",
+      ),
     },
   ];
 }

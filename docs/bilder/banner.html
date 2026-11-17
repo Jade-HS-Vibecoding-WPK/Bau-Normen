@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- Quelle der README-Grafik docs/bilder/banner.png (1280 × 400, im Browser mit 2-facher Auflösung aufgenommen). -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600&family=Fraunces:opsz,SOFT,wght@9..144,100,500;9..144,100,600&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: transparent; }
+  .banner { position: relative; width: 1280px; height: 400px; border-radius: 30px; overflow: hidden; background: linear-gradient(100deg, #eef8f3 0%, #eaf5f6 55%, #f1effa 100%); font-family: Figtree, sans-serif; color: #1c2a22; }
+  svg.deko { position: absolute; inset: 0; }
+  .text { position: absolute; left: 70px; top: 66px; width: 640px; }
+  .eyebrow { font-family: "DM Mono", monospace; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: #4d7858; }
+  h1 { font-family: Fraunces, serif; font-variation-settings: "SOFT" 100; font-weight: 600; font-size: 84px; line-height: 1; letter-spacing: -.025em; margin: 14px 0 18px; color: #1e3428; }
+  h1 em { font-style: italic; font-weight: 500; color: #4d7858; }
+  p { font-size: 21px; line-height: 1.45; margin: 0 0 24px; color: #48564d; }
+  .pillen { display: flex; gap: 10px; flex-wrap: wrap; }
+  .pillen span { font-size: 15px; font-weight: 600; padding: 8px 15px; border-radius: 999px; background: #fdfcf8; color: #294435; box-shadow: inset 0 0 0 1px rgba(42,69,54,.16); }
+  .pillen span:nth-child(1) { background: #d3eee1; box-shadow: none; }
+  .pillen span:nth-child(2) { background: #d7eef0; box-shadow: none; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <svg class="deko" viewBox="0 0 1280 400" fill="none">
+    <!-- weiche Flächen -->
+    <path d="M820-40C960-70 1180-30 1260 70 1330 160 1300 330 1180 380 1060 430 900 400 820 320 740 240 690 150 720 70 740 10 770-30 820-40Z" fill="#d3eee1"/>
+    <path d="M-60 300C20 250 140 270 180 340 210 390 180 440 110 460 30 480-80 450-100 390-110 350-90 320-60 300Z" fill="#e7e3f6" opacity=".9"/>
+    <circle cx="1150" cy="92" r="30" fill="#e7e3f6" stroke="#ada3d8" stroke-width="2"/>
+    <!-- Höhenlinien -->
+    <g transform="translate(1150 330) rotate(-14) scale(1.6)" stroke="#4d7858" stroke-opacity=".3" vector-effect="non-scaling-stroke">
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(9) scale(.84)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(18) scale(.68)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(27) scale(.52)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(36) scale(.36)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(45) scale(.2)" vector-effect="non-scaling-stroke"/>
+    </g>
+    <!-- fließende Linien -->
+    <g stroke="#4d7858" stroke-opacity=".22">
+      <path d="M-20 372C200 330 380 400 600 360S960 300 1300 340"/>
+      <path d="M-20 384C200 342 380 412 600 372S960 312 1300 352"/>
+      <path d="M-20 396C200 354 380 424 600 384S960 324 1300 364"/>
+    </g>
+    <!-- Linienzeichnung: Gelände, Haus, Pflanze, Baum -->
+    <g transform="translate(780 40) scale(1.25)">
+      <g stroke="#6c9570" stroke-width="1.3" stroke-linecap="round">
+        <path d="M18 196C70 176 110 206 160 191S252 166 302 186"/>
+        <path d="M30 210C80 193 120 220 170 205S256 183 296 199"/>
+        <path d="M46 223C92 209 132 231 182 219S256 201 286 212"/>
+      </g>
+      <path d="M238 147C216 147 209 124 221 111 227 96 249 94 258 108 272 116 266 146 238 147Z" fill="#d7eef0" stroke="#366150" stroke-width="1.6"/>
+      <g stroke="#1e3428" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M238 182V146M238 162L229 154M238 157L247 149"/>
+        <path d="M96 182H222"/>
+        <path d="M120 182V134L160 105 200 134V182"/>
+        <path d="M150 182V156H170V182"/>
+        <path d="M128 142H142V156H128Z"/>
+        <circle cx="182" cy="149" r="7"/>
+        <path d="M92 182C88 154 92 128 104 102"/>
+        <path d="M95 152C78 148 70 134 72 122 86 126 95 138 95 152ZM95 152L80 130"/>
+        <path d="M98 130C112 124 122 110 120 98 106 102 98 116 98 130ZM98 130L114 104"/>
+        <path d="M102 110C92 100 92 86 98 78 106 86 106 100 102 110ZM102 110L99 84"/>
+      </g>
+      <!-- Paragraphenzeichen auf dem Dach -->
+      <text x="160" y="128" text-anchor="middle" font-family="Fraunces, serif" font-size="20" font-weight="600" fill="#1e3428">§</text>
+    </g>
+    <!-- Gecko-Silhouette -->
+    <g transform="translate(1188 236) rotate(-38) scale(.92)" color="#45804f" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M30 61 C30 66, 30.3 71, 30.6 76" stroke-width="5.4"/>
+      <path d="M30.6 76 C33 82, 36 86, 40 88" stroke-width="3.4"/>
+      <path d="M40 88 C44 90, 47 89, 48.6 86.6" stroke-width="1.6"/>
+      <path d="M25.5 26 L19 24.5 L15.5 17.5" stroke-width="3.1"/>
+      <path d="M34.5 26 L41 24.5 L44.5 17.5" stroke-width="3.1"/>
+      <path d="M26.5 53 L19 55.5 L15 62.5" stroke-width="3.1"/>
+      <path d="M33.5 53 L41 55.5 L45 62.5" stroke-width="3.1"/>
+      <g stroke-width="1.3">
+        <path d="M15.5 17.5L11.2 14.3M15.5 17.5L13.2 11.9M15.5 17.5L16.4 11.8M15.5 17.5L19 13.8"/>
+        <path d="M44.5 17.5L48.8 14.3M44.5 17.5L46.8 11.9M44.5 17.5L43.6 11.8M44.5 17.5L41 13.8"/>
+        <path d="M15 62.5L10.4 63.4M15 62.5L10.9 67.2M15 62.5L14 69.6M15 62.5L17.6 67.6"/>
+        <path d="M45 62.5L49.6 63.4M45 62.5L49.1 67.2M45 62.5L46 69.6M45 62.5L42.4 67.6"/>
+      </g>
+      <path fill="currentColor" stroke="none" d="M30 2 C33.5 2, 36.5 5.5, 36.5 10 C36.5 14, 34.5 17, 33.2 19.5 C35.5 23, 36.8 28, 36.6 33 C36.4 39, 37 44, 36.2 49 C35.6 53, 34.6 56, 33.2 59 C32.6 61, 32.3 62.5, 32 64 L28 64 C27.7 62.5, 27.4 61, 26.8 59 C25.4 56, 24.4 53, 23.8 49 C23 44, 23.6 39, 23.4 33 C23.2 28, 24.5 23, 26.8 19.5 C25.5 17, 23.5 14, 23.5 10 C23.5 5.5, 26.5 2, 30 2 Z"/>
+    </g>
+  </svg>
+  <div class="text">
+    <div class="eyebrow">Baurecht im Wortlaut · Ortsauskunft Oldenburg</div>
+    <h1>Bau-Normen-<em>KI</em></h1>
+    <p>BauGB und Niedersächsisches Denkmalschutzgesetz 1:1 aus amtlichen Quellen – mit Erläuterung, Zusammenhängen und B-Plan- &amp; Denkmal-Auskunft.</p>
+    <div class="pillen"><span>Wortlaut 297/297 geprüft</span><span>Läuft ohne KI</span><span>B-Plan &amp; Denkmal live</span></div>
+  </div>
+</div>
+</body>
+</html>

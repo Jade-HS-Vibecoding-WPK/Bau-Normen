@@ -1,7 +1,8 @@
 // Adresse -> Koordinaten (Geokodierung) für die Stadt Oldenburg (Oldb).
 // Dienst: Nominatim / OpenStreetMap. Wir prüfen, ob Stadt und Hausnummer wirklich passen,
 // und sagen es offen, wenn nur die Straße gefunden wurde.
-import { DienstFehler, holeJson } from "./abruf";
+import { fehlerText, holeJson } from "./abruf";
+import { type Sprache, zweisprachig } from "../sprache";
 
 export interface Standort {
   status: "ok";
@@ -21,7 +22,7 @@ interface NominatimTreffer {
 
 const QUELLE = "OpenStreetMap / Nominatim";
 
-export async function findeStandort(strasse: string, hausnummer: string): Promise<Standort | { status: "nicht-gefunden" | "fehler"; hinweis: string }> {
+export async function findeStandort(strasse: string, hausnummer: string, sprache: Sprache = "de"): Promise<Standort | { status: "nicht-gefunden" | "fehler"; hinweis: string }> {
   const params = new URLSearchParams({
     format: "jsonv2",
     addressdetails: "1",
@@ -35,11 +36,17 @@ export async function findeStandort(strasse: string, hausnummer: string): Promis
   try {
     treffer = await holeJson<NominatimTreffer[]>(`https://nominatim.openstreetmap.org/search?${params}`);
   } catch (e) {
-    return { status: "fehler", hinweis: `Adresssuche nicht möglich: ${(e as DienstFehler).message}.` };
+    return { status: "fehler", hinweis: zweisprachig(sprache)(`Adresssuche nicht möglich: ${fehlerText(e, "de")}.`, `Address search not possible: ${fehlerText(e, "en")}.`) };
   }
   const inOldenburg = treffer.filter((t) => (t.address.city ?? t.address.town) === "Oldenburg" && t.address.state === "Niedersachsen");
   if (!inOldenburg.length) {
-    return { status: "nicht-gefunden", hinweis: `„${strasse} ${hausnummer}“ wurde in Oldenburg (Oldb) nicht gefunden. Bitte Straßennamen und Hausnummer prüfen.` };
+    return {
+      status: "nicht-gefunden",
+      hinweis: zweisprachig(sprache)(
+        `„${strasse} ${hausnummer}“ wurde in Oldenburg (Oldb) nicht gefunden. Bitte Straßennamen und Hausnummer prüfen.`,
+        `“${strasse} ${hausnummer}” was not found in Oldenburg (Oldb). Please check the street name and house number.`,
+      ),
+    };
   }
   const norm = (s?: string) => (s ?? "").toLowerCase().replace(/\s+/g, "");
   const genau = inOldenburg.find((t) => norm(t.address.house_number) === norm(hausnummer));

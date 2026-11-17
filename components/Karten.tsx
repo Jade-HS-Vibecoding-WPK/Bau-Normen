@@ -1,14 +1,17 @@
 "use client";
-// Antwort-Karten im "Schriftfeld"-Stil: Paragraph (NormKarte) und Ortsauskunft (OrtKarte).
+// Antwort-Karten: Paragraph (NormKarte), Ortsauskunft (OrtKarte) und die angeheftete Gebietsleiste (GebietsLeiste).
+// Oberflächentexte zweisprachig; Gesetzestext und Erläuterungen bleiben im deutschen Original.
 import { useState } from "react";
 import { alsText, standDatum } from "@/lib/text";
 import type { NormAnsicht, NormRef, OrtAnsicht } from "@/lib/typen";
+import { bewegungAus, useEinstellungen, useT } from "./Einstellungen";
 import Normtext from "./Normtext";
 import Lageskizze from "./Lageskizze";
 import { obsidianLink, useLokal } from "./Obsidian";
 import { SymbolDenkmal, SymbolPin, SymbolPlan } from "./Symbole";
 
 type Frage = (text: string) => void;
+type T = (de: string, en: string) => string;
 
 const host = (url: string) => {
   try {
@@ -18,7 +21,17 @@ const host = (url: string) => {
   }
 };
 
+/** Dokumentarten der Stadt Oldenburg (Datenbezeichnung) auf Englisch */
+const DOKUMENT_EN: Record<string, string> = {
+  Planzeichnung: "Plan drawing",
+  "Textliche Festsetzungen": "Written provisions",
+  Begründung: "Explanatory memorandum",
+  Umweltbericht: "Environmental report",
+  Dokument: "Document",
+};
+
 export function NormChips({ refs, frage, max = 12 }: { refs: NormRef[]; frage: Frage; max?: number }) {
+  const t = useT();
   const [alle, setAlle] = useState(false);
   const sichtbar = alle ? refs : refs.slice(0, max);
   return (
@@ -30,7 +43,7 @@ export function NormChips({ refs, frage, max = 12 }: { refs: NormRef[]; frage: F
       ))}
       {refs.length > max && !alle && (
         <button className="chip chip-mehr" onClick={() => setAlle(true)}>
-          +{refs.length - max} weitere
+          +{refs.length - max} {t("weitere", "more")}
         </button>
       )}
     </div>
@@ -48,6 +61,8 @@ function TeilKopf({ nr, titel, zusatz, warn }: { nr: string; titel: string; zusa
 }
 
 export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht; frage: Frage; obsidianPfad?: string | null; kartenId: string }) {
+  const t = useT();
+  const { e } = useEinstellungen();
   const [offen, setOffen] = useState(false);
   const lokal = useLokal();
   const [kopiert, setKopiert] = useState(false);
@@ -58,9 +73,9 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
   const abschnitt = norm.gliederung.at(-1)?.split(" – ")[1];
 
   async function kopieren() {
-    const t = `${norm.bez} ${gesetz.kurz} – ${norm.titel}\n\n${alsText(norm.inhalt)}\n\nQuelle: ${gesetz.quelleName}, ${norm.url}\nStand: ${gesetz.stand}`;
+    const text = `${norm.bez} ${gesetz.kurz} – ${norm.titel}\n\n${alsText(norm.inhalt)}\n\nQuelle: ${gesetz.quelleName}, ${norm.url}\nStand: ${gesetz.stand}`;
     try {
-      await navigator.clipboard.writeText(t);
+      await navigator.clipboard.writeText(text);
       setKopiert(true);
       setTimeout(() => setKopiert(false), 1800);
     } catch {
@@ -77,20 +92,20 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             <span className="sf-gesetz">
               {gesetz.kurz} · {gesetz.titel}
             </span>
-            <h2>{norm.titel || "(ohne Überschrift)"}</h2>
+            <h2 lang="de">{norm.titel || t("(ohne Überschrift)", "(no heading)")}</h2>
           </div>
         </div>
         <dl className="sf-felder">
           <div title={norm.gliederung.join(" › ")}>
-            <dt>Abschnitt</dt>
-            <dd>{abschnitt ?? "–"}</dd>
+            <dt>{t("Abschnitt", "Part")}</dt>
+            <dd lang="de">{abschnitt ?? "–"}</dd>
           </div>
           <div title={gesetz.stand}>
-            <dt>Stand</dt>
+            <dt>{t("Stand", "Version")}</dt>
             <dd className="mono">{datum ?? gesetz.stand}</dd>
           </div>
           <div>
-            <dt>Quelle</dt>
+            <dt>{t("Quelle", "Source")}</dt>
             <dd>
               <a href={norm.url} target="_blank" rel="noreferrer">
                 {host(norm.url)} ↗
@@ -98,16 +113,16 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             </dd>
           </div>
           <div>
-            <dt>Wortlaut</dt>
+            <dt>{t("Wortlaut", "Wording")}</dt>
             <dd>
-              <button onClick={kopieren}>{kopiert ? "kopiert ✓" : "kopieren"}</button>
+              <button onClick={kopieren}>{kopiert ? t("kopiert ✓", "copied ✓") : t("kopieren", "copy")}</button>
             </dd>
           </div>
           {obsidianPfad && lokal && (
             <div>
               <dt>Obsidian</dt>
               <dd>
-                <a href={obsidianLink(obsidianPfad, `Gesetze/${gesetz.kurz}/${norm.bez} ${gesetz.kurz}.md`)}>Notiz öffnen</a>
+                <a href={obsidianLink(obsidianPfad, `Gesetze/${gesetz.kurz}/${norm.bez} ${gesetz.kurz}.md`)}>{t("Notiz öffnen", "Open note")}</a>
               </dd>
             </div>
           )}
@@ -115,22 +130,32 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
       </header>
 
       <section className="teil">
-        <TeilKopf nr="01" titel="Originaltext" zusatz="amtlicher Wortlaut, unverändert übernommen" />
-        <div className={`original ${lang && !offen ? "eingeklappt" : ""}`}>
+        <TeilKopf
+          nr="01"
+          titel={t("Originaltext", "Original text")}
+          zusatz={t("amtlicher Wortlaut, unverändert übernommen", "official German wording, reproduced unchanged – only the German text is legally binding")}
+        />
+        <div className={`original ${lang && !offen ? "eingeklappt" : ""}`} lang="de">
           {norm.weggefallen ? <p className="weggefallen">(weggefallen)</p> : <Normtext inhalt={norm.inhalt} />}
           {norm.fussnoten && <p className="fussnote">{norm.fussnoten}</p>}
         </div>
         {lang && (
           <button className="knopf knopf-zweit knopf-klein aufklappen" onClick={() => setOffen(!offen)}>
-            {offen ? "Text einklappen" : "Vollständigen Text anzeigen"}
+            {offen ? t("Text einklappen", "Collapse text") : t("Vollständigen Text anzeigen", "Show full text")}
           </button>
         )}
       </section>
 
       <section className="teil" id={`erl-${kartenId}`}>
-        <TeilKopf nr="02" titel="Erläuterung" zusatz="Orientierung, keine Rechtsberatung – maßgeblich ist der Originaltext" warn />
+        <TeilKopf
+          nr="02"
+          titel={t("Erläuterung", "Explanation")}
+          zusatz={t("Orientierung, keine Rechtsberatung – maßgeblich ist der Originaltext", "guidance only, not legal advice – the original text prevails")}
+          warn
+        />
+        {e.sprache === "en" && erlaeuterung && <p className="nur-deutsch">Explanations are currently available in German only.</p>}
         {erlaeuterung ? (
-          <>
+          <div lang="de">
             <p className="erl-kurz">{erlaeuterung.kurz}</p>
             <ul className="erl-punkte">
               {erlaeuterung.punkte.map((p, i) => (
@@ -146,20 +171,20 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
                 {erlaeuterung.praxis}
               </p>
             )}
-            {erlaeuterung.status === "entwurf" && <p className="erl-status">Entwurf · fachliche Prüfung ausstehend</p>}
-          </>
+          </div>
         ) : (
-          <p className="leer-text">Für diesen Paragraphen liegt noch keine Erläuterung vor.</p>
+          <p className="leer-text">{t("Für diesen Paragraphen liegt noch keine Erläuterung vor.", "No explanation is available for this section yet.")}</p>
         )}
+        {erlaeuterung?.status === "entwurf" && <p className="erl-status">{t("Entwurf · fachliche Prüfung ausstehend", "Draft · expert review pending")}</p>}
       </section>
 
       <section className="teil">
-        <TeilKopf nr="03" titel="Zusammenhang" zusatz="aus den Verweisen im Gesetzestext ermittelt" />
+        <TeilKopf nr="03" titel={t("Zusammenhang", "Related provisions")} zusatz={t("aus den Verweisen im Gesetzestext ermittelt", "derived from the cross-references in the text")} />
         {a.verweistAuf.length || a.erwaehntIn.length || a.gleicherAbschnitt.length ? (
           <dl className="bezug">
             {a.verweistAuf.length > 0 && (
               <>
-                <dt>Verweist auf</dt>
+                <dt>{t("Verweist auf", "Refers to")}</dt>
                 <dd>
                   <NormChips refs={a.verweistAuf} frage={frage} />
                 </dd>
@@ -167,7 +192,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             )}
             {a.erwaehntIn.length > 0 && (
               <>
-                <dt>Wird erwähnt in</dt>
+                <dt>{t("Wird erwähnt in", "Referred to in")}</dt>
                 <dd>
                   <NormChips refs={a.erwaehntIn} frage={frage} max={10} />
                 </dd>
@@ -175,7 +200,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             )}
             {a.gleicherAbschnitt.length > 0 && (
               <>
-                <dt>Gleicher Abschnitt</dt>
+                <dt>{t("Gleicher Abschnitt", "Same part")}</dt>
                 <dd>
                   <NormChips refs={a.gleicherAbschnitt} frage={frage} max={10} />
                 </dd>
@@ -183,46 +208,54 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             )}
           </dl>
         ) : (
-          <p className="leer-text">Keine Verweise innerhalb des Gesetzes.</p>
+          <p className="leer-text">{t("Keine Verweise innerhalb des Gesetzes.", "No cross-references within the act.")}</p>
         )}
       </section>
     </article>
   );
 }
 
-const BPLAN_STATUS = {
-  gefunden: ["verzeichnet", "status-gruen"],
-  keiner: ["kein Plan", "status-neutral"],
-  fehler: ["keine Aussage", "status-signal"],
-} as const;
+// ---------- Ortsauskunft ----------
 
-const DENKMAL_STATUS = {
-  "am-standort": ["am Standort", "status-ocker"],
-  umgebung: ["in der Umgebung", "status-ocker"],
-  keiner: ["kein Eintrag", "status-neutral"],
-  fehler: ["keine Aussage", "status-signal"],
-} as const;
+const bplanStatus = (t: T) =>
+  ({
+    gefunden: [t("verzeichnet", "listed"), "status-gruen"],
+    keiner: [t("kein Plan", "no plan"), "status-neutral"],
+    fehler: [t("keine Aussage", "no statement"), "status-signal"],
+  }) as const;
+
+const denkmalStatus = (t: T) =>
+  ({
+    "am-standort": [t("am Standort", "at the location"), "status-ocker"],
+    umgebung: [t("in der Umgebung", "nearby"), "status-ocker"],
+    keiner: [t("kein Eintrag", "none listed"), "status-neutral"],
+    fehler: [t("keine Aussage", "no statement"), "status-signal"],
+  }) as const;
+
+const osmLink = (lat: number, lon: number) => `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=19/${lat}/${lon}`;
 
 export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; kartenId: string }) {
+  const t = useT();
+  const { e } = useEinstellungen();
   const [alleDenkmale, setAlleDenkmale] = useState(false);
 
   if (o.standort.status !== "ok") {
     return (
       <div className="meldung meldung-fehler">
         <p>
-          <strong>Ortsauskunft nicht möglich.</strong> {o.standort.hinweis}
+          <strong>{t("Ortsauskunft nicht möglich.", "Location check not possible.")}</strong> {o.standort.hinweis}
         </p>
-        <p>Die Ortsauskunft gilt derzeit für Adressen in der Stadt Oldenburg (Oldb).</p>
+        <p>{t("Die Ortsauskunft gilt derzeit für Adressen in der Stadt Oldenburg (Oldb).", "The location check currently covers addresses in the City of Oldenburg (Oldb).")}</p>
       </div>
     );
   }
 
   const s = o.standort;
-  const [bLabel, bKlasse] = BPLAN_STATUS[o.bplan.status];
-  const [dLabel, dKlasse] = DENKMAL_STATUS[o.denkmal.status];
+  const [bLabel, bKlasse] = bplanStatus(t)[o.bplan.status];
+  const [dLabel, dKlasse] = denkmalStatus(t)[o.denkmal.status];
   const denkmale = o.denkmal.status !== "fehler" ? o.denkmal.denkmale : [];
   const sichtbar = alleDenkmale ? denkmale : denkmale.slice(0, 4);
-  const karte = `https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lon}#map=19/${s.lat}/${s.lon}`;
+  const doku = (art: string) => (e.sprache === "en" ? (DOKUMENT_EN[art] ?? art) : art);
 
   return (
     <article className="dokument" id={`karte-${kartenId}`}>
@@ -232,26 +265,26 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             <SymbolPin />
           </div>
           <div className="sf-titel">
-            <span className="sf-gesetz">Ortsauskunft · Stadt Oldenburg (Oldb)</span>
+            <span className="sf-gesetz">{t("Ortsauskunft · Stadt Oldenburg (Oldb)", "Location check · City of Oldenburg (Oldb)")}</span>
             <h2>{s.adresse}</h2>
           </div>
         </div>
         <dl className="sf-felder">
           <div>
-            <dt>Koordinaten</dt>
+            <dt>{t("Koordinaten", "Coordinates")}</dt>
             <dd className="mono">
               {s.lat.toFixed(5)}, {s.lon.toFixed(5)}
             </dd>
           </div>
           <div>
-            <dt>Abgefragt</dt>
+            <dt>{t("Abgefragt", "Queried")}</dt>
             <dd className="mono">{o.abgefragtAm}</dd>
           </div>
           <div>
-            <dt>Lage prüfen</dt>
+            <dt>{t("Lage prüfen", "Check location")}</dt>
             <dd>
-              <a href={karte} target="_blank" rel="noreferrer">
-                Karte öffnen ↗
+              <a href={osmLink(s.lat, s.lon)} target="_blank" rel="noreferrer">
+                {t("Karte öffnen ↗", "Open map ↗")}
               </a>
             </dd>
           </div>
@@ -262,22 +295,26 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
         <div className="kachel">
           <div className="kachel-kopf">
             <span className="kachel-titel">
-              <SymbolPlan /> Bebauungsplan
+              <SymbolPlan /> {t("Bebauungsplan", "Development plan")}
             </span>
             <span className={`status ${bKlasse}`}>{bLabel}</span>
           </div>
           {o.bplan.status === "fehler" && <p className="kachel-sub">{o.bplan.hinweis}</p>}
-          {o.bplan.status === "keiner" && <p className="kachel-wert">Kein rechtsverbindlicher Bebauungsplan verzeichnet</p>}
+          {o.bplan.status === "keiner" && <p className="kachel-wert">{t("Kein rechtsverbindlicher Bebauungsplan verzeichnet", "No legally binding development plan listed")}</p>}
           {o.bplan.status === "gefunden" &&
             o.bplan.plaene.map((p) => (
               <div key={p.nummer} className="plan">
                 <p className="kachel-wert">
-                  Nr. {p.nummer} – {p.name}
+                  Nr. {p.nummer} – <span lang="de">{p.name}</span>
                 </p>
                 <p className="kachel-sub">
-                  {p.rechtsverbindlichSeit && <>rechtsverbindlich seit {p.rechtsverbindlichSeit}</>}
+                  {p.rechtsverbindlichSeit && (
+                    <>
+                      {t("rechtsverbindlich seit", "legally binding since")} {p.rechtsverbindlichSeit}
+                    </>
+                  )}
                   {p.baunvo && <> · BauNVO {p.baunvo}</>}
-                  {p.vorhabenbezogen && <> · vorhabenbezogen</>}
+                  {p.vorhabenbezogen && <> · {t("vorhabenbezogen", "project-related")}</>}
                   {p.verfahren && <> · {p.verfahren}</>}
                 </p>
                 {p.dokumente && p.dokumente.length > 0 ? (
@@ -285,11 +322,11 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
                     {p.dokumente.map((d) => (
                       <li key={d.url}>
                         <a href={d.url} target="_blank" rel="noreferrer" title={d.name}>
-                          {d.art} ↗
+                          {doku(d.art)} ↗
                         </a>
                         <span className="mono">
                           {" "}
-                          {d.name} · {d.groesseMB.toLocaleString("de-DE")} MB
+                          {d.name} · {d.groesseMB.toLocaleString(e.sprache === "en" ? "en-GB" : "de-DE")} MB
                         </span>
                       </li>
                     ))}
@@ -297,8 +334,8 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
                 ) : (
                   <p className="kachel-sub">
                     {o.bplan.status === "gefunden" && !o.bplan.dokumenteAbrufbar
-                      ? "Plan-Dokumente derzeit nicht abrufbar – bitte im Kartenportal öffnen."
-                      : "Keine Plan-Dokumente online verfügbar – erhältlich beim Stadtplanungsamt."}
+                      ? t("Plan-Dokumente derzeit nicht abrufbar – bitte im Kartenportal öffnen.", "Plan documents currently not retrievable – please open them in the map portal.")
+                      : t("Keine Plan-Dokumente online verfügbar – erhältlich beim Stadtplanungsamt.", "No plan documents online – available from the city planning office.")}
                   </p>
                 )}
               </div>
@@ -308,7 +345,11 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
               {o.bplan.weitere.map((w, i) => (
                 <li key={i}>
                   <span className={`status ${w.art === "in-aufstellung" ? "status-neutral" : "status-ocker"}`}>
-                    {w.art === "in-aufstellung" ? "in Aufstellung" : w.art === "veraenderungssperre" ? "Veränderungssperre" : "unwirksam (OVG)"}
+                    {w.art === "in-aufstellung"
+                      ? t("in Aufstellung", "in preparation")
+                      : w.art === "veraenderungssperre"
+                        ? t("Veränderungssperre", "development freeze")
+                        : t("unwirksam (OVG)", "invalid (court)")}
                   </span>{" "}
                   {[w.nummer && `Nr. ${w.nummer}`, w.name, w.hinweis && `(${w.hinweis})`].filter(Boolean).join(" – ")}
                 </li>
@@ -321,18 +362,22 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
         <div className="kachel">
           <div className="kachel-kopf">
             <span className="kachel-titel">
-              <SymbolDenkmal /> Denkmalschutz
+              <SymbolDenkmal /> {t("Denkmalschutz", "Monument protection")}
             </span>
             <span className={`status ${dKlasse}`}>{dLabel}</span>
           </div>
           {o.denkmal.status === "fehler" && <p className="kachel-sub">{o.denkmal.hinweis}</p>}
-          {o.denkmal.status === "keiner" && <p className="kachel-wert">Kein Kulturdenkmal im Umkreis von {o.denkmal.radiusM} m verzeichnet</p>}
+          {o.denkmal.status === "keiner" && (
+            <p className="kachel-wert">
+              {t(`Kein Kulturdenkmal im Umkreis von ${o.denkmal.radiusM} m verzeichnet`, `No cultural monument recorded within ${o.denkmal.radiusM} m`)}
+            </p>
+          )}
           {denkmale.length > 0 && (
             <ul className="dm-liste">
               {sichtbar.map((d, i) => (
                 <li key={i}>
-                  <span className={`dm-dist ${d.amStandort ? "hier" : ""}`}>{d.amStandort ? "hier" : `${d.entfernungM} m`}</span>
-                  <span>
+                  <span className={`dm-dist ${d.amStandort ? "hier" : ""}`}>{d.amStandort ? t("hier", "here") : `${d.entfernungM} m`}</span>
+                  <span lang="de">
                     <span className="dm-name">
                       {d.link ? (
                         <a href={d.link} target="_blank" rel="noreferrer">
@@ -353,7 +398,7 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
           )}
           {denkmale.length > 4 && !alleDenkmale && (
             <button className="chip chip-mehr" onClick={() => setAlleDenkmale(true)}>
-              +{denkmale.length - 4} weitere
+              +{denkmale.length - 4} {t("weitere", "more")}
             </button>
           )}
           <p className="kachel-quelle">{o.denkmal.quelle}</p>
@@ -361,26 +406,30 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
       </div>
 
       <section className="teil">
-        <TeilKopf nr="01" titel="Lageskizze" zusatz="der Gecko markiert Denkmale mit Fähnchen" />
+        <TeilKopf
+          nr="01"
+          titel={t("Lageskizze", "Site map")}
+          zusatz={t("der Gecko markiert Denkmale mit Fähnchen · Mausrad zoomt, Ziehen verschiebt", "the gecko marks monuments with flags · scroll to zoom, drag to pan")}
+        />
         <Lageskizze o={o} id={`skizze-${kartenId}`} />
       </section>
 
       <section className="teil">
-        <TeilKopf nr="02" titel="Einordnung" zusatz="feste Regeln, keine Rechtsberatung" warn />
+        <TeilKopf nr="02" titel={t("Einordnung", "Assessment")} zusatz={t("feste Regeln, keine Rechtsberatung", "fixed rules, not legal advice")} warn />
         <ul className="einordnung">
-          {o.einordnung.map((e, i) => (
-            <li key={i} className={`ton-${e.ton}`}>
-              <span className="ein-thema">{e.thema}</span>
-              <p className="ein-titel">{e.titel}</p>
-              <p className="ein-text">{e.text}</p>
-              {e.paragraphen.length > 0 && <NormChips refs={e.paragraphen} frage={frage} />}
+          {o.einordnung.map((x, i) => (
+            <li key={i} className={`ton-${x.ton}`}>
+              <span className="ein-thema">{x.thema}</span>
+              <p className="ein-titel">{x.titel}</p>
+              <p className="ein-text">{x.text}</p>
+              {x.paragraphen.length > 0 && <NormChips refs={x.paragraphen} frage={frage} />}
             </li>
           ))}
         </ul>
       </section>
 
       <section className="teil">
-        <TeilKopf nr="03" titel="Weiterführend" />
+        <TeilKopf nr="03" titel={t("Weiterführend", "Further information")} />
         <div className="links">
           {o.links.map((l) => (
             <a key={l.url} className="knopf knopf-zweit knopf-klein" href={l.url} target="_blank" rel="noreferrer">
@@ -390,8 +439,96 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
         </div>
       </section>
       <div className="fusszeile">
-        Automatische Auswertung amtlicher Datendienste ({s.quelle}, Stadt Oldenburg, Denkmalatlas Niedersachsen). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.
+        {t(
+          `Automatische Auswertung amtlicher Datendienste (${s.quelle}, Stadt Oldenburg, Denkmalatlas Niedersachsen). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.`,
+          `Automatic evaluation of official data services (${s.quelle}, City of Oldenburg, Lower Saxony monument atlas). Does not replace information from the building authority or the monument protection authority.`,
+        )}
       </div>
     </article>
+  );
+}
+
+/**
+ * Angeheftete Hauptinformationen zum zuletzt geprüften Gebiet – steht fest über dem Verlauf
+ * (scrollt nur mit der Seite), während die Details im Verlauf darunter beweglich bleiben.
+ */
+export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; kartenId: string; onSchliessen: () => void }) {
+  const t = useT();
+  if (o.standort.status !== "ok") return null;
+  const s = o.standort;
+  const [bLabel, bKlasse] = bplanStatus(t)[o.bplan.status];
+  const [dLabel, dKlasse] = denkmalStatus(t)[o.denkmal.status];
+  const plan = o.bplan.status === "gefunden" ? o.bplan.plaene[0] : undefined;
+  const zeichnung = plan?.dokumente?.find((d) => d.art === "Planzeichnung") ?? plan?.dokumente?.[0];
+  const denkmale = o.denkmal.status !== "fehler" ? o.denkmal.denkmale : [];
+  const naechstes = denkmale[0];
+  // nur den Verlauf scrollen (nicht die ganze Seite)
+  const zeige = (id: string) => {
+    const el = document.getElementById(id);
+    const v = el?.closest(".verlauf");
+    if (!el || !v) return;
+    v.scrollTo({ top: v.scrollTop + el.getBoundingClientRect().top - v.getBoundingClientRect().top - 12, behavior: bewegungAus() ? "auto" : "smooth" });
+  };
+
+  const bText =
+    o.bplan.status === "gefunden" && plan
+      ? `Nr. ${plan.nummer} – ${plan.name}${o.bplan.plaene.length > 1 ? ` (+${o.bplan.plaene.length - 1})` : ""}`
+      : o.bplan.status === "keiner"
+        ? t("kein rechtsverbindlicher Plan – § 34/35 BauGB", "no binding plan – § 34/35 BauGB")
+        : t("Dienst nicht erreichbar", "service unreachable");
+  const dText =
+    o.denkmal.status === "fehler"
+      ? t("Dienst nicht erreichbar", "service unreachable")
+      : naechstes
+        ? `${naechstes.amStandort ? t("hier", "here") : `${naechstes.entfernungM} m`}: ${naechstes.name}${denkmale.length > 1 ? ` (+${denkmale.length - 1})` : ""}`
+        : t(`keins im Umkreis von ${o.denkmal.radiusM} m`, `none within ${o.denkmal.radiusM} m`);
+
+  return (
+    <section className="gebiet" aria-label={t("Hauptinformationen zum Gebiet", "Key facts about the area")}>
+      <div className="gebiet-ort">
+        <span className="gebiet-symbol">
+          <SymbolPin size={20} />
+        </span>
+        <div>
+          <span className="eyebrow">{t("Gebiet", "Area")}</span>
+          <strong className="gebiet-adresse">{s.adresse}</strong>
+        </div>
+      </div>
+      <div className="gebiet-fakt">
+        <span className="gebiet-label">
+          <SymbolPlan /> {t("B-Plan", "Dev. plan")} <span className={`status ${bKlasse}`}>{bLabel}</span>
+        </span>
+        <span className="gebiet-wert" lang="de">
+          {bText}
+          {zeichnung && (
+            <>
+              {" · "}
+              <a href={zeichnung.url} target="_blank" rel="noreferrer">
+                {t("Planzeichnung ↗", "Plan drawing ↗")}
+              </a>
+            </>
+          )}
+        </span>
+      </div>
+      <div className="gebiet-fakt">
+        <span className="gebiet-label">
+          <SymbolDenkmal /> {t("Denkmal", "Monument")} <span className={`status ${dKlasse}`}>{dLabel}</span>
+        </span>
+        <span className="gebiet-wert" lang="de">
+          {dText}
+        </span>
+      </div>
+      <div className="gebiet-aktionen">
+        <button className="knopf knopf-zweit knopf-klein" onClick={() => zeige(`karte-${kartenId}`)}>
+          {t("Details", "Details")}
+        </button>
+        <button className="knopf knopf-zweit knopf-klein" onClick={() => zeige(`skizze-${kartenId}`)}>
+          {t("Karte", "Map")}
+        </button>
+        <button className="gebiet-zu" onClick={onSchliessen} aria-label={t("Leiste schließen", "Close bar")} title={t("Leiste schließen", "Close bar")}>
+          ×
+        </button>
+      </div>
+    </section>
   );
 }

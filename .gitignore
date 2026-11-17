@@ -2,6 +2,8 @@
 node_modules/
 .next/
 out/
+# Kopie der Daten für die statische Online-Version (wird von npm run build:pages erzeugt)
+public/daten/
 *.tsbuildinfo
 next-env.d.ts
 

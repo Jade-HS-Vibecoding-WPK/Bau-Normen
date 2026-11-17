@@ -3,6 +3,7 @@
 //  - Bebauungspläne in Aufstellung, Veränderungssperren und vom OVG für unwirksam erklärte Pläne am Standort
 // Alles ohne KI. Fällt der Dienst aus, fehlen nur diese Zusatzangaben – die Hauptauskunft bleibt bestehen.
 import { holeJson } from "./abruf";
+import { gebiet, type Sprache, zweisprachig } from "../sprache";
 
 const DIENST = "https://gis4ol.oldenburg.de/portal/sharing/servers/b0a09ae4c16f48e09d380fb5208427b3/rest/services/FD400/FD400_Bebauungsplanauskunft/MapServer";
 export const KARTENPORTAL_QUELLE = "Stadt Oldenburg – Bebauungsplanauskunft (Kartenportal Bauen & Wohnen)";
@@ -34,8 +35,8 @@ interface Anhaenge {
   error?: unknown;
 }
 
-const datum = (ms: unknown) =>
-  typeof ms === "number" ? new Date(ms).toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : undefined;
+const datum = (ms: unknown, sprache: Sprache = "de") =>
+  typeof ms === "number" ? new Date(ms).toLocaleDateString(gebiet(sprache), { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : undefined;
 
 function punktAbfrage(layer: number, lat: number, lon: number, felder = "*") {
   const p = new URLSearchParams({
@@ -93,7 +94,8 @@ export async function planDokumente(lat: number, lon: number): Promise<Map<strin
 }
 
 /** Pläne in Aufstellung, Veränderungssperren und unwirksame Pläne am Standort. null = Dienst nicht erreichbar. */
-export async function weiterePlaene(lat: number, lon: number): Promise<WeitererPlan[] | null> {
+export async function weiterePlaene(lat: number, lon: number, sprache: Sprache = "de"): Promise<WeitererPlan[] | null> {
+  const t = zweisprachig(sprache);
   try {
     const [auf, sperren, unwirksam] = await Promise.all([
       punktAbfrage(LAYER.inAufstellung, lat, lon),
@@ -109,13 +111,13 @@ export async function weiterePlaene(lat: number, lon: number): Promise<WeitererP
     });
     return [
       ...auf.features!.map((f) => {
-        const d = datum(f.attributes.Aufstellungsbeschluss_Rat_VA);
-        return plan("in-aufstellung", f.attributes, d ? `Aufstellungsbeschluss ${d}` : undefined);
+        const d = datum(f.attributes.Aufstellungsbeschluss_Rat_VA, sprache);
+        return plan("in-aufstellung", f.attributes, d ? t(`Aufstellungsbeschluss ${d}`, `decision to prepare ${d}`) : undefined);
       }),
       ...sperren.flatMap((s) =>
         s.features!.map((f) => {
-          const bis = datum(f.attributes["gültig_bis"]);
-          return plan("veraenderungssperre", f.attributes, bis ? `gültig bis ${bis}` : undefined);
+          const bis = datum(f.attributes["gültig_bis"], sprache);
+          return plan("veraenderungssperre", f.attributes, bis ? t(`gültig bis ${bis}`, `valid until ${bis}`) : undefined);
         }),
       ),
       ...unwirksam.features!.map((f) => plan("unwirksam", f.attributes)),

@@ -1,6 +1,7 @@
 // Kulturdenkmale in Niedersachsen am Standort und in der Umgebung.
 // Dienst: Denkmalatlas Niedersachsen (NLD), OGC API Features "denkmale/v1", Sammlung "protectedsite".
-import { DienstFehler, holeJson } from "./abruf";
+import { fehlerText, holeJson } from "./abruf";
+import { type Sprache, zweisprachig } from "../sprache";
 import { abstandMeter, aussenRinge, bbox, inMeter, punktInGeometrie, type Punkt } from "./geo";
 
 const DIENST = "https://geodatendienste.denkmalatlas.niedersachsen.de/xtraserver-webapi/denkmale/v1/collections/protectedsite/items";
@@ -28,13 +29,15 @@ export async function denkmaleImUmkreis(
   lat: number,
   lon: number,
   radiusM = 50,
+  sprache: Sprache = "de",
 ): Promise<{ status: "ok"; denkmale: Denkmal[] } | { status: "fehler"; hinweis: string }> {
+  const t = zweisprachig(sprache);
   const p: Punkt = [lon, lat];
   const [a, b, c, d] = bbox(p, radiusM + 10);
   const url = `${DIENST}?f=json&limit=200&bbox=${a.toFixed(6)},${b.toFixed(6)},${c.toFixed(6)},${d.toFixed(6)}`;
   try {
     const antwort = await holeJson<Antwort>(url, 12000);
-    if (!antwort.features) return { status: "fehler", hinweis: "Denkmal-Dienst lieferte keine auswertbaren Daten." };
+    if (!antwort.features) return { status: "fehler", hinweis: t("Denkmal-Dienst lieferte keine auswertbaren Daten.", "Monument service returned no usable data.") };
     const denkmale = antwort.features
       .filter((f) => f.geometry)
       .map((f) => {
@@ -58,6 +61,6 @@ export async function denkmaleImUmkreis(
       .map(({ _drin, ...rest }) => rest);
     return { status: "ok", denkmale };
   } catch (e) {
-    return { status: "fehler", hinweis: `Denkmal-Dienst nicht erreichbar: ${(e as DienstFehler).message}.` };
+    return { status: "fehler", hinweis: t(`Denkmal-Dienst nicht erreichbar: ${fehlerText(e, "de")}.`, `Monument service unreachable: ${fehlerText(e, "en")}.`) };
   }
 }
