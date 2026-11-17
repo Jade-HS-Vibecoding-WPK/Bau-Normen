@@ -2,8 +2,8 @@
 pfad: "lib/ort/index.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 316
-beschreibung: "Ortsauskunft: Adresse -> Standort -> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen) -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt."
+zeilen: 399
+beschreibung: "Ortsauskunft: Adresse in Deutschland -> Standort -> B-Plan (angebunden: Stadt Oldenburg) + Denkmale (angebunden: Denkmalatlas Niedersachsen) -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt. Wo kein Dienst angebunden ist, sagt die Auskunft das offen und nennt nur die bundesweit geltenden Regeln (BauGB) – niemals „kein B-Plan“ oder „kein Denkmal“."
 tags:
   - "projekt"
   - "projekt/ortsauskunft"
@@ -11,16 +11,18 @@ tags:
 
 # lib/ort/index.ts
 
-**Pfad:** `lib/ort/index.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 316
+**Pfad:** `lib/ort/index.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 399
 
 ## Kurzbeschreibung
 
-Ortsauskunft: Adresse -\> Standort -\> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen) -\> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt.
+Ortsauskunft: Adresse in Deutschland -\> Standort -\> B-Plan (angebunden: Stadt Oldenburg) + Denkmale (angebunden: Denkmalatlas Niedersachsen) -\> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt. Wo kein Dienst angebunden ist, sagt die Auskunft das offen und nennt nur die bundesweit geltenden Regeln (BauGB) – niemals „kein B-Plan“ oder „kein Denkmal“.
 
 > [!quote]- Kopfkommentar der Datei (vollständig)
 > ```text
-> Ortsauskunft: Adresse -> Standort -> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen)
-> -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt.
+> Ortsauskunft: Adresse in Deutschland -> Standort -> B-Plan (angebunden: Stadt Oldenburg) + Denkmale
+> (angebunden: Denkmalatlas Niedersachsen) -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind.
+> Keine KI beteiligt. Wo kein Dienst angebunden ist, sagt die Auskunft das offen und nennt nur die bundesweit
+> geltenden Regeln (BauGB) – niemals „kein B-Plan“ oder „kein Denkmal“.
 > 
 > Grundsatz: Wenn ein Dienst nicht antwortet, sagen wir "keine Aussage möglich" –
 > niemals "kein B-Plan" oder "kein Denkmal", nur weil eine Abfrage fehlgeschlagen ist.
@@ -39,7 +41,7 @@ Ortsauskunft: Adresse -\> Standort -\> B-Plan (Stadt Oldenburg) + Denkmale (Denk
 
 ## Stellt bereit
 
-`ortsauskunft`
+`ortsAntwort`
 
 ## Wird verwendet von
 

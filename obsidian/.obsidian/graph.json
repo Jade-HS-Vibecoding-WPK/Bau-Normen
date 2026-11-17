@@ -29,6 +29,13 @@
       }
     },
     {
+      "query": "tag:#gesetz/nbauo",
+      "color": {
+        "a": 1,
+        "rgb": 3115646
+      }
+    },
+    {
       "query": "tag:#gesetz/ndschg",
       "color": {
         "a": 1,

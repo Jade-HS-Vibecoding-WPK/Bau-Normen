@@ -2,7 +2,7 @@
 pfad: "scripts/import-ndschg.mjs"
 bereich: "Importskripte"
 sprache: "JavaScript (Node, ESM)"
-zeilen: 445
+zeilen: 137
 beschreibung: "Importiert das Niedersächsische Denkmalschutzgesetz (NDSchG) aus NI-VORIS, dem Niedersächsischen Vorschrifteninformationssystem (voris.wolterskluwer-online.de), und speichert es Paragraph für Paragraph als JSON – im selben Schema wie baugb.json."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # scripts/import-ndschg.mjs
 
-**Pfad:** `scripts/import-ndschg.mjs` · **Bereich:** Importskripte · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 445
+**Pfad:** `scripts/import-ndschg.mjs` · **Bereich:** Importskripte · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 137
 
 ## Kurzbeschreibung
 
@@ -37,6 +37,7 @@ Importiert das Niedersächsische Denkmalschutzgesetz (NDSchG) aus NI-VORIS, dem 
 >   2. Seite „Gesamte Quelle anzeigen“   -> enthält die ersten Paragraphen direkt …
 >   3. … die übrigen lädt die Seite per Drupal-AJAX nach (POST /browse/source/ajax/<id>).
 >      Diese Endpunkte rufen wir nacheinander mit kleinen Pausen ab.
+> Abruf und HTML-Umwandlung stehen in scripts/lib/voris.mjs (gemeinsam mit import-nbauo.mjs).
 > 
 > Rohdaten landen unter data/quellen/ndschg/ (dokument.html, quelle.html, nachgeladen.json).
 > 
@@ -47,14 +48,12 @@ Importiert das Niedersächsische Denkmalschutzgesetz (NDSchG) aus NI-VORIS, dem 
 ## Importiert (lokal)
 
 - [[Projekt/scripts › lib › verweise.mjs.md|scripts/lib/verweise.mjs]]
+- [[Projekt/scripts › lib › voris.mjs.md|scripts/lib/voris.mjs]]
 
 ## Daten
 
 - **schreibt** `data/gesetze/ndschg.json` → [[NDSchG]]
-- **schreibt** `data/quellen/ndschg/` → Rohquelle für [[NDSchG]]
-- **liest und schreibt** `data/quellen/ndschg/dokument.html` → Rohquelle für [[NDSchG]]
-- **liest und schreibt** `data/quellen/ndschg/nachgeladen.json` → Rohquelle für [[NDSchG]]
-- **liest und schreibt** `data/quellen/ndschg/quelle.html` → Rohquelle für [[NDSchG]]
+- **verwendet** `data/quellen/ndschg` → Rohquelle für [[NDSchG]]
 
 ## Stellt bereit
 
@@ -62,4 +61,4 @@ Importiert das Niedersächsische Denkmalschutzgesetz (NDSchG) aus NI-VORIS, dem 
 
 ## Externe Pakete
 
-`@xmldom/xmldom`, `node:fs`, `node:path`, `node:url`
+`node:fs`, `node:path`, `node:url`

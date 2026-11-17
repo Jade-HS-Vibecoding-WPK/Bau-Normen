@@ -3,7 +3,7 @@
 // und Stichworte (kuratiertes Verzeichnis + Volltextsuche).
 // Der Gesetzestext kommt immer unverändert aus der Bibliothek (lib/gesetze.ts).
 import { alleGesetze, normAnsicht, stichwortSuche, suche } from "./gesetze";
-import { ortsauskunft } from "./ort";
+import { ortsAntwort } from "./ort";
 import type { Antwort, NormRef } from "./typen";
 import { type Sprache, zweisprachig } from "./sprache";
 import { nummerText } from "./regelwerke";
@@ -58,7 +58,7 @@ export function erkenneNummern(t: string): string[] {
   }
   // "35 BauGB" ohne §-Zeichen – nur wenn kein § erkannt wurde und die Zahl kein Absatz/Satz/Nummer ist.
   if (!nummern.length) {
-    const nachgestellt = /(?<!(?:abs\.?|absatz|satz|nr\.?|nummer)\s*)\b(\d{1,3}[a-z]?)\s*(?:baugb|ndschg|mbo|vob\s*\/?\s*[ab])\b/gi;
+    const nachgestellt = /(?<!(?:abs\.?|absatz|satz|nr\.?|nummer)\s*)\b(\d{1,3}[a-z]?)\s*(?:baugb|ndschg|nbauo|mbo|vob\s*\/?\s*[ab])\b/gi;
     while ((m = nachgestellt.exec(t))) nummern.push(m[1].toLowerCase());
   }
   // "§ 3 VOB/A-EU" bzw. "VOB/A EU § 3" -> § 3 EU
@@ -76,18 +76,25 @@ const KEIN_STRASSENTEIL = new Set([
   "grundstück", "baugrundstück", "flurstück", "haus", "gebäude", "objekt", "adresse", "ortsauskunft", "prüfe", "prüfen", "bitte", "habe", "hab", "liegt", "steht",
 ]);
 
-export function erkenneAdresse(t: string, nurMitEndung = false): { strasse: string; hausnummer: string } | null {
+// Nach der Hausnummer: Postleitzahl und/oder Ort, z. B. ", 26122 Oldenburg", " 30159 Hannover", ", Frankfurt am Main"
+const ORTSNAME = "[A-ZÄÖÜ][\\wäöüß.()/-]*(?:\\s+(?:[A-ZÄÖÜ(][\\wäöüß.()/-]*|am|an|der|im|in|bei|ob|vor|a\\.|i\\.|v\\.|d\\.))*";
+const PLZ_ORT = new RegExp(`^\\s*,?\\s*(?:in\\s+)?(\\d{5})(?:\\s+(${ORTSNAME}))?|^\\s*(?:,|\\bin\\b)\\s*(${ORTSNAME})`);
+
+export function erkenneAdresse(t: string, nurMitEndung = false): { strasse: string; hausnummer: string; plz?: string; ort?: string } | null {
   const m = t.match(MIT_ENDUNG) ?? (nurMitEndung ? null : t.match(MIT_VORWORT));
   if (!m) return null;
   const woerter = m[1].trim().split(/\s+/);
   while (woerter.length > 1 && KEIN_STRASSENTEIL.has(woerter[0].toLowerCase())) woerter.shift();
   const strasse = woerter.join(" ").replace(/^./, (c) => c.toUpperCase());
-  return { strasse, hausnummer: m[2] + (m[3] ? m[3].toLowerCase() : "") };
+  const rest = t.slice((m.index ?? 0) + m[0].length).match(PLZ_ORT);
+  const plz = rest?.[1];
+  const ort = (rest?.[2] ?? rest?.[3])?.trim();
+  return { strasse, hausnummer: m[2] + (m[3] ? m[3].toLowerCase() : ""), ...(plz ? { plz } : {}), ...(ort ? { ort } : {}) };
 }
 
-function normAntwort(gesetzId: string, nr: string, sprache: Sprache): Antwort {
+async function normAntwort(gesetzId: string, nr: string, sprache: Sprache): Promise<Antwort> {
   const g = alleGesetze().get(gesetzId)!;
-  const ansicht = normAnsicht(gesetzId, nr);
+  const ansicht = await normAnsicht(gesetzId, nr);
   if (ansicht) return { art: "norm", ansicht };
   const tx = zweisprachig(sprache);
   const paragraphen = g.normen.filter((n) => n.bez.startsWith("§"));
@@ -104,10 +111,10 @@ function normAntwort(gesetzId: string, nr: string, sprache: Sprache): Antwort {
   };
 }
 
-function dinAntwort(nr: string, sprache: Sprache): Antwort {
+async function dinAntwort(nr: string, sprache: Sprache): Promise<Antwort> {
   const tx = zweisprachig(sprache);
   const vobc = alleGesetze().get("vobc");
-  if (vobc && vobc.normen.some((n) => n.id === nr)) return { art: "norm", ansicht: normAnsicht("vobc", nr)! };
+  if (vobc && vobc.normen.some((n) => n.id === nr)) return { art: "norm", ansicht: (await normAnsicht("vobc", nr))! };
   return {
     art: "fehler",
     text: tx(
@@ -117,7 +124,7 @@ function dinAntwort(nr: string, sprache: Sprache): Antwort {
   };
 }
 
-function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Antwort[] {
+async function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Promise<Antwort[]> {
   const tx = zweisprachig(sprache);
   const gesetze = alleGesetze();
   const gesetzId = erkenneGesetz(t);
@@ -137,7 +144,7 @@ function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Antwo
       },
     ];
   }
-  if (gesetzId === "nbauo") {
+  if (gesetzId === "nbauo" && !gesetze.has("nbauo")) {
     return [
       {
         art: "fehler",
@@ -148,7 +155,7 @@ function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Antwo
       },
     ];
   }
-  if (gesetzId && gesetzId !== "vob" && gesetze.has(gesetzId)) return nummern.slice(0, 3).map((nr) => normAntwort(gesetzId, nr, sprache));
+  if (gesetzId && gesetzId !== "vob" && gesetze.has(gesetzId)) return Promise.all(nummern.slice(0, 3).map((nr) => normAntwort(gesetzId, nr, sprache)));
   if (gesetzId && gesetzId !== "vob" && !gesetze.has(gesetzId)) {
     return [{ art: "fehler", text: tx(`Dieses Gesetz ist noch nicht in der Bibliothek. Verfügbar: ${verfuegbar}.`, `This act is not in the library yet. Available: ${verfuegbar}.`) }];
   }
@@ -156,7 +163,7 @@ function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Antwo
   // "§ 13 VOB" ohne Teil -> nur VOB/A und VOB/B kommen infrage
   const kandidaten = [...gesetze.values()].filter((g) => (gesetzId !== "vob" || g.id === "voba" || g.id === "vobb") && g.normen.some((n) => n.id === nr));
   // Nur ein Gesetz hat diesen Paragraphen -> eindeutig, keine Rückfrage nötig.
-  if (kandidaten.length === 1) return nummern.slice(0, 3).map((x) => normAntwort(kandidaten[0].id, x, sprache));
+  if (kandidaten.length === 1) return Promise.all(nummern.slice(0, 3).map((x) => normAntwort(kandidaten[0].id, x, sprache)));
   if (kandidaten.length === 0) {
     return [{ art: "fehler", text: tx(`Einen § ${nummerText(nr)} gibt es in keinem der verfügbaren Regelwerke (${verfuegbar}).`, `None of the available acts has a § ${nummerText(nr)} (${verfuegbar}).`) }];
   }
@@ -179,11 +186,11 @@ export async function beantworte(eingabe: string, sprache: Sprache = "de"): Prom
 
   // 1) Adresse mit typischer Straßenendung ("…straße 5", "…weg 12") -> Ortsauskunft
   const adresse = erkenneAdresse(t, true);
-  if (adresse) return [{ art: "ort", ort: await ortsauskunft(adresse.strasse, adresse.hausnummer, t, sprache) }];
+  if (adresse) return [await ortsAntwort(adresse, t, sprache)];
 
   // 2) ATV der VOB/C ("DIN 18353")
   const din = erkenneDin(t);
-  if (din.length) return din.slice(0, 3).map((nr) => dinAntwort(nr, sprache));
+  if (din.length) return Promise.all(din.slice(0, 3).map((nr) => dinAntwort(nr, sprache)));
 
   // 2b) Paragraph-Abruf
   const nummern = erkenneNummern(t);
@@ -191,11 +198,11 @@ export async function beantworte(eingabe: string, sprache: Sprache = "de"): Prom
 
   // 3) Adressen ohne Endung ("Am Stadtmuseum 4")
   const adresse2 = erkenneAdresse(t);
-  if (adresse2) return [{ art: "ort", ort: await ortsauskunft(adresse2.strasse, adresse2.hausnummer, t, sprache) }];
+  if (adresse2) return [await ortsAntwort(adresse2, t, sprache)];
 
   // 4) Stichworte: erst das kuratierte Verzeichnis, dann Volltextsuche
   const { refs, begriffe } = stichwortSuche(t);
-  const volltext = suche(t, 8).filter((r) => !refs.some((x) => x.gesetz === r.gesetz && x.id === r.id));
+  const volltext = (await suche(t, 8)).filter((r) => !refs.some((x) => x.gesetz === r.gesetz && x.id === r.id));
   const treffer: NormRef[] = [...refs, ...volltext].slice(0, 8);
   if (treffer.length) {
     return [
@@ -215,8 +222,8 @@ export async function beantworte(eingabe: string, sprache: Sprache = "de"): Prom
     {
       art: "fehler",
       text: tx(
-        "Dazu wurde nichts gefunden. Möglich sind: ein Paragraph („§ 34 BauGB“), ein Stichwort („Vorkaufsrecht“) oder eine Adresse in Oldenburg („Straße Hausnummer“).",
-        "Nothing found. You can enter a section (“§ 34 BauGB”), a German keyword (“Vorkaufsrecht”) or an address in Oldenburg (“street house number”).",
+        "Dazu wurde nichts gefunden. Möglich sind: ein Paragraph („§ 34 BauGB“), ein Stichwort („Vorkaufsrecht“) oder eine Adresse („Straße Hausnummer, PLZ Ort“).",
+        "Nothing found. You can enter a section (“§ 34 BauGB”), a German keyword (“Vorkaufsrecht”) or an address (“street house number, postcode town”).",
       ),
     },
   ];

@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- Quelle der README-Grafik docs/bilder/vorschau.png (1600 × 900, im Browser mit 2-facher Auflösung aufgenommen).
+     Zeigt drei echte Bildschirmfotos der App: hell (Ortsauskunft), dunkel (Paragraph) und Smartphone.
+     Die Fotos vorschau-hell.png, vorschau-dunkel.png und vorschau-mobil.png entstehen mit demselben Aufnahmeskript. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: transparent; }
+  .flaeche { position: relative; width: 1600px; height: 900px; border-radius: 34px; overflow: hidden; background: linear-gradient(115deg, #eaf6f0 0%, #e6f3f4 52%, #efedf9 100%); font-family: Figtree, sans-serif; }
+  svg.deko { position: absolute; inset: 0; }
+  .fenster { position: absolute; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 2px 4px rgba(20, 40, 30, .08), 0 34px 70px -28px rgba(20, 40, 30, .55); }
+  .fenster .leiste { height: 34px; display: flex; align-items: center; gap: 8px; padding: 0 16px; background: #f3f6f4; border-bottom: 1px solid rgba(30, 60, 45, .1); }
+  .fenster .leiste i { width: 11px; height: 11px; border-radius: 50%; background: #d9e2dd; }
+  .fenster .leiste span { margin-left: 14px; flex: 1; max-width: 420px; height: 20px; border-radius: 999px; background: #fff; box-shadow: inset 0 0 0 1px rgba(30, 60, 45, .1); font: 500 11px "DM Mono", monospace; color: #6a7c73; display: flex; align-items: center; padding-left: 12px; }
+  .fenster.dunkel { background: #0b1012; }
+  .fenster.dunkel .leiste { background: #1a2327; border-bottom-color: rgba(220, 240, 232, .1); }
+  .fenster.dunkel .leiste i { background: #34424a; }
+  .fenster.dunkel .leiste span { background: #0f1517; box-shadow: inset 0 0 0 1px rgba(220, 240, 232, .1); color: #9caba5; }
+  .fenster img { display: block; width: 100%; }
+  .hell { left: 56px; top: 54px; width: 1000px; }
+  .dunkel { left: 600px; top: 330px; width: 780px; }
+  .telefon { position: absolute; left: 1318px; top: 84px; width: 232px; padding: 30px 10px 16px; border-radius: 40px; background: #1d2a24; box-shadow: 0 2px 4px rgba(20, 40, 30, .1), 0 34px 70px -24px rgba(20, 40, 30, .6); }
+  .telefon img { display: block; width: 100%; border-radius: 22px; }
+  .telefon::before { content: ""; position: absolute; left: 50%; top: 10px; width: 64px; height: 12px; margin-left: -32px; border-radius: 999px; background: #33443c; }
+  .etikett { position: absolute; font: 500 13px "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #4d7858; background: rgba(255, 255, 255, .8); padding: 6px 12px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(42, 69, 54, .14); }
+</style>
+</head>
+<body>
+<div class="flaeche">
+  <svg class="deko" viewBox="0 0 1600 900" fill="none">
+    <path d="M1180-60C1330-90 1560-40 1640 70 1700 170 1660 330 1540 380 1420 430 1270 390 1190 310 1110 230 1070 140 1100 60 1120 0 1140-50 1180-60Z" fill="#d3eee1"/>
+    <path d="M-80 640C20 580 170 600 220 690 260 760 220 840 130 870 30 900-110 860-130 780-140 730-120 670-80 640Z" fill="#e7e3f6"/>
+    <g transform="translate(230 760) rotate(-14) scale(2)" stroke="#4d7858" stroke-opacity=".22">
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(9) scale(.84)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(18) scale(.68)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(27) scale(.52)" vector-effect="non-scaling-stroke"/>
+      <path d="M0-95C55-94 98-58 96 0S55 95-4 95-98 55-96-4-52-96 0-95Z" transform="rotate(36) scale(.36)" vector-effect="non-scaling-stroke"/>
+    </g>
+    <g stroke="#4d7858" stroke-opacity=".18">
+      <path d="M-20 842C260 800 480 870 760 830S1200 770 1620 810"/>
+      <path d="M-20 856C260 814 480 884 760 844S1200 784 1620 824"/>
+      <path d="M-20 870C260 828 480 898 760 858S1200 798 1620 838"/>
+    </g>
+  </svg>
+
+  <div class="fenster hell"><div class="leiste"><i></i><i></i><i></i><span>Ortsauskunft · Hell</span></div><img src="vorschau-hell.png" alt=""></div>
+  <div class="fenster dunkel"><div class="leiste"><i></i><i></i><i></i><span>Paragraph · Dunkel</span></div><img src="vorschau-dunkel.png" alt=""></div>
+  <div class="telefon"><img src="vorschau-mobil.png" alt=""></div>
+</div>
+</body>
+</html>

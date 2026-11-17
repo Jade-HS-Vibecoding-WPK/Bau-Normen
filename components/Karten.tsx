@@ -253,7 +253,12 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
         <p>
           <strong>{t("Ortsauskunft nicht möglich.", "Location check not possible.")}</strong> {o.standort.hinweis}
         </p>
-        <p>{t("Die Ortsauskunft gilt derzeit für Adressen in der Stadt Oldenburg (Oldb).", "The location check currently covers addresses in the City of Oldenburg (Oldb).")}</p>
+        <p>
+          {t(
+            "Die Ortsauskunft findet Adressen in ganz Deutschland – mit Postleitzahl wird die Suche eindeutig. Bebauungspläne sind für die Stadt Oldenburg angebunden, Denkmale für Niedersachsen.",
+            "The location check finds addresses anywhere in Germany – adding a postcode makes the search unambiguous. Development plans are connected for the City of Oldenburg, monuments for Lower Saxony.",
+          )}
+        </p>
       </div>
     );
   }
@@ -273,7 +278,9 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             <SymbolPin />
           </div>
           <div className="sf-titel">
-            <span className="sf-gesetz">{t("Ortsauskunft · Stadt Oldenburg (Oldb)", "Location check · City of Oldenburg (Oldb)")}</span>
+            <span className="sf-gesetz">
+              {t("Ortsauskunft", "Location check")} · {s.oldenburg ? t("Stadt Oldenburg (Oldb)", "City of Oldenburg (Oldb)") : [s.ort, s.land].filter(Boolean).join(", ")}
+            </span>
             <h2>{s.adresse}</h2>
           </div>
         </div>
@@ -448,8 +455,8 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
       </section>
       <div className="fusszeile">
         {t(
-          `Automatische Auswertung amtlicher Datendienste (${s.quelle}, Stadt Oldenburg, Denkmalatlas Niedersachsen). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.`,
-          `Automatic evaluation of official data services (${s.quelle}, City of Oldenburg, Lower Saxony monument atlas). Does not replace information from the building authority or the monument protection authority.`,
+          `Automatische Auswertung von Datendiensten (${[s.quelle, s.oldenburg && "Stadt Oldenburg", s.land === "Niedersachsen" && "Denkmalatlas Niedersachsen"].filter(Boolean).join(", ")}). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.`,
+          `Automatic evaluation of data services (${[s.quelle, s.oldenburg && "City of Oldenburg", s.land === "Niedersachsen" && "Lower Saxony monument atlas"].filter(Boolean).join(", ")}). Does not replace information from the building authority or the monument protection authority.`,
         )}
       </div>
     </article>
@@ -483,10 +490,14 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
       ? `Nr. ${plan.nummer} – ${plan.name}${o.bplan.plaene.length > 1 ? ` (+${o.bplan.plaene.length - 1})` : ""}`
       : o.bplan.status === "keiner"
         ? t("kein rechtsverbindlicher Plan – § 34/35 BauGB", "no binding plan – § 34/35 BauGB")
-        : t("Dienst nicht erreichbar", "service unreachable");
+        : o.bplan.status === "fehler" && o.bplan.nichtAngebunden
+          ? t("für diesen Ort nicht angebunden – § 30/34/35 BauGB", "not connected for this place – § 30/34/35 BauGB")
+          : t("Dienst nicht erreichbar", "service unreachable");
   const dText =
     o.denkmal.status === "fehler"
-      ? t("Dienst nicht erreichbar", "service unreachable")
+      ? o.denkmal.nichtAngebunden
+        ? t("Denkmaldaten bisher nur für Niedersachsen", "monument data so far only for Lower Saxony")
+        : t("Dienst nicht erreichbar", "service unreachable")
       : naechstes
         ? `${naechstes.amStandort ? t("hier", "here") : `${naechstes.entfernungM} m`}: ${naechstes.name}${denkmale.length > 1 ? ` (+${denkmale.length - 1})` : ""}`
         : t(`keins im Umkreis von ${o.denkmal.radiusM} m`, `none within ${o.denkmal.radiusM} m`);

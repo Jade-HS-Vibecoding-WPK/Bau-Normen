@@ -2,7 +2,7 @@
 pfad: "lib/verstehen.ts"
 bereich: "Lotse"
 sprache: "TypeScript"
-zeilen: 224
+zeilen: 231
 beschreibung: "Der \"Lotse\" – arbeitet regelbasiert, ganz ohne KI. Erkennt: Paragraph-Abrufe (\"§ 34 BauGB\", \"Paragraph 5\"), Adressen (\"Gartenstraße 5\") und Stichworte (kuratiertes Verzeichnis + Volltextsuche). Der Gesetzestext kommt immer unverändert aus der Bibliothek (lib/gesetze.ts)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/verstehen.ts
 
-**Pfad:** `lib/verstehen.ts` · **Bereich:** Lotse · **Sprache:** TypeScript · **Zeilen:** 224
+**Pfad:** `lib/verstehen.ts` · **Bereich:** Lotse · **Sprache:** TypeScript · **Zeilen:** 231
 
 ## Kurzbeschreibung
 

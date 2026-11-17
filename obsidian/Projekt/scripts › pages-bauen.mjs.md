@@ -2,7 +2,7 @@
 pfad: "scripts/pages-bauen.mjs"
 bereich: "Importskripte"
 sprache: "JavaScript (Node, ESM)"
-zeilen: 27
+zeilen: 60
 beschreibung: "Baut die statische Online-Version für GitHub Pages nach out/. Aufruf: npm run build:pages (optional: NEXT_PUBLIC_BASIS=/Repo-Name, Standard /Bau-Normen-KI)"
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # scripts/pages-bauen.mjs
 
-**Pfad:** `scripts/pages-bauen.mjs` · **Bereich:** Importskripte · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 27
+**Pfad:** `scripts/pages-bauen.mjs` · **Bereich:** Importskripte · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 60
 
 ## Kurzbeschreibung
 
@@ -22,8 +22,12 @@ Baut die statische Online-Version für GitHub Pages nach out/. Aufruf: npm run b
 > Baut die statische Online-Version für GitHub Pages nach out/.
 > Aufruf: npm run build:pages   (optional: NEXT_PUBLIC_BASIS=/Repo-Name, Standard /Bau-Normen-KI)
 > 
-> 1. Kopiert die Gesetzesdaten (data/gesetze, data/erlaeuterungen, data/stichworte.json) nach public/daten/,
->    damit der Browser sie laden kann.
+> 1. Bereitet die Daten für den Browser in kleinen Teilen vor (public/daten/), damit die Seite auch mit vielen
+>    Regelwerken schnell bleibt – der Browser lädt nur, was er gerade braucht (siehe lib/daten-browser.ts):
+>      index.json                    alle Regelwerke: Kopfdaten + je Vorschrift Bezeichnung, Titel, Gliederung, Verweise
+>      wortlaut/<gesetz>/<id>.json   Wortlaut (inhalt, fussnoten) je Vorschrift – unverändert aus data/gesetze
+>      suche.json                    Suchtexte in Kleinbuchstaben ("gesetz:id" -> text) für die Volltextsuche
+>      erlaeuterungen/, stichworte.json  wie in data/
 > 2. Baut Next.js im Modus "export" (siehe next.config.mjs) – ohne Server, ohne API-Route.
 > ```
 
@@ -33,10 +37,10 @@ Baut die statische Online-Version für GitHub Pages nach out/. Aufruf: npm run b
 
 ## Daten
 
-- **schreibt** `data/erlaeuterungen/` → Erläuterungen zu [[BauGB]], [[NDSchG]]
-- **schreibt** `data/gesetze/` → [[BauGB]], [[MBO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
+- **liest und schreibt** `data/erlaeuterungen/` → Erläuterungen zu [[BauGB]], [[NDSchG]]
+- **liest** `data/gesetze/*` → [[BauGB]], [[MBO]], [[NBauO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
 - **schreibt** `data/stichworte.json`
 
 ## Externe Pakete
 
-`node:child_process`, `node:fs`
+`node:child_process`, `node:fs`, `node:path`

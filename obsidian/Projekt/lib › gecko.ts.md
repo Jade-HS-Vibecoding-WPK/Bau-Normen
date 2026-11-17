@@ -2,7 +2,7 @@
 pfad: "lib/gecko.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 105
+zeilen: 106
 beschreibung: "Der Gecko: kleines Gimmick. Aus der letzten Antwort wird nach festen Regeln (keine KI) abgeleitet, wohin er sich setzt und ob es Fehler oder Hinweise gibt (dann wird er orange bzw. rot)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/gecko.ts
 
-**Pfad:** `lib/gecko.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 105
+**Pfad:** `lib/gecko.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 106
 
 ## Kurzbeschreibung
 

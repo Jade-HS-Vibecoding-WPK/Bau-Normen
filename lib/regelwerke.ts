@@ -46,10 +46,18 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     gruppe: GESETZE,
     kurztitel: { de: "Denkmalschutzgesetz (Nds.)", en: "Monument Protection Act" },
     wortlaut: AMTLICH,
+  },
+  nbauo: {
+    reihenfolge: 3,
+    art: "gesetz",
+    artText: { de: "Landesgesetz Niedersachsen", en: "Lower Saxony act" },
+    gruppe: GESETZE,
+    kurztitel: { de: "Bauordnung (Nds.)", en: "Building Code (Lower Saxony)" },
+    wortlaut: AMTLICH,
     imKopf: true,
   },
   mbo: {
-    reihenfolge: 3,
+    reihenfolge: 4,
     art: "muster",
     gruppe: MUSTER,
     kurztitel: { de: "Musterbauordnung", en: "Model Building Code" },
@@ -61,7 +69,7 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     wortlaut: { de: "Wortlaut der Musterbauordnung (DIBt), unverändert übernommen", en: "German wording of the model code (DIBt), reproduced unchanged" },
   },
   voba: {
-    reihenfolge: 4,
+    reihenfolge: 5,
     art: "vergabe",
     gruppe: VOB,
     kurztitel: { de: "Teil A – Vergabe", en: "Part A – Award of contracts" },
@@ -76,7 +84,7 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     },
   },
   vobb: {
-    reihenfolge: 5,
+    reihenfolge: 6,
     art: "vertrag",
     gruppe: VOB,
     kurztitel: { de: "Teil B – Vertragsbedingungen", en: "Part B – Contract terms" },
@@ -91,7 +99,7 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     },
   },
   vobc: {
-    reihenfolge: 6,
+    reihenfolge: 7,
     art: "technik",
     gruppe: VOB,
     kurztitel: { de: "Teil C – ATV (DIN-Normen)", en: "Part C – ATV (DIN standards)" },

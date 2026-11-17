@@ -2,7 +2,7 @@
 pfad: "lib/regelwerke.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 114
+zeilen: 122
 beschreibung: "Angaben ZU den Regelwerken, die nicht aus der Quelle stammen, sondern von uns: Reihenfolge, Art, ein kurzer Hinweis zur Verbindlichkeit und wie der Wortlaut zustande kommt. Der Text der Vorschriften selbst steht ausschließlich in data/gesetze/*.json."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/regelwerke.ts
 
-**Pfad:** `lib/regelwerke.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 114
+**Pfad:** `lib/regelwerke.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 122
 
 ## Kurzbeschreibung
 

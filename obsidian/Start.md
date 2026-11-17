@@ -15,6 +15,7 @@ Dieser Ordner ist ein **Obsidian-Vault**. Er zeigt die Gesetze Paragraph für Pa
 - <span style="color:#7d93ad">●</span> **grau-blau** – Gliederung (Kapitel, Teile, Abschnitte)
 - <span style="color:#4a9a5b">●</span> **grün** – BauGB – Paragraphen, Anlagen und Übersicht
 - <span style="color:#3f8fb5">●</span> **blau** – MBO – Paragraphen, Anlagen und Übersicht
+- <span style="color:#2f8a7e">●</span> **petrol** – NBauO – Paragraphen und Übersicht
 - <span style="color:#c8952c">●</span> **ocker** – NDSchG – Paragraphen und Übersicht
 - <span style="color:#8e6bb0">●</span> **violett** – VOB/A – Paragraphen und Übersicht
 - <span style="color:#c0504d">●</span> **rot** – VOB/B – Paragraphen und Übersicht
@@ -26,6 +27,7 @@ Dieser Ordner ist ein **Obsidian-Vault**. Er zeigt die Gesetze Paragraph für Pa
 
 - [[BauGB]] – Baugesetzbuch (Übersicht mit Inhaltsbaum)
 - [[MBO]] – Musterbauordnung (Übersicht mit Inhaltsbaum)
+- [[NBauO]] – Niedersächsische Bauordnung (Übersicht mit Inhaltsbaum)
 - [[NDSchG]] – Niedersächsisches Denkmalschutzgesetz (Übersicht mit Inhaltsbaum)
 - [[VOB-A]] – Vergabe- und Vertragsordnung für Bauleistungen Teil A (Übersicht mit Inhaltsbaum)
 - [[VOB-B]] – Vergabe- und Vertragsordnung für Bauleistungen Teil B (Übersicht mit Inhaltsbaum)
@@ -38,6 +40,7 @@ In das Suchfeld der Graph-Ansicht eingeben:
 
 - `tag:#gesetz/baugb` – nur BauGB
 - `tag:#gesetz/mbo` – nur MBO
+- `tag:#gesetz/nbauo` – nur NBauO
 - `tag:#gesetz/ndschg` – nur NDSchG
 - `tag:#gesetz/vob-a` – nur VOB/A
 - `tag:#gesetz/vob-b` – nur VOB/B
@@ -47,8 +50,8 @@ In das Suchfeld der Graph-Ansicht eingeben:
 
 ## Was steht wo?
 
-- `Gesetze/` – 675 Paragraph- und Anlagen-Notizen, 89 Gliederungsnotizen, 6 Übersichten
-- `Projekt/` – 43 Notizen zu Quelldateien und die Notiz [[Architektur]]
+- `Gesetze/` – 773 Paragraph- und Anlagen-Notizen, 101 Gliederungsnotizen, 7 Übersichten
+- `Projekt/` – 45 Notizen zu Quelldateien und die Notiz [[Architektur]]
 
 ## Aktualisieren
 

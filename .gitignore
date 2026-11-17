@@ -19,6 +19,7 @@ data/quellen/**/*.pdf
 # Der Gesetzestext selbst ist gemeinfrei (§ 5 UrhG) und liegt in data/gesetze/ndschg.json –
 # die Roh-HTML-Seiten mit Verlags-Markup veröffentlichen wir nicht.
 data/quellen/ndschg/
+data/quellen/nbauo/
 
 # Obsidian: persönliche Arbeitsbereich-Einstellungen nicht versionieren, nur die Graph-Farben
 obsidian/.obsidian/*

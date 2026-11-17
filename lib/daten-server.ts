@@ -9,6 +9,9 @@ const DATEN = path.join(process.cwd(), "data");
 
 let gesetze: Gesetz[] = [];
 let gesetzeSchluessel = "";
+// Ob sich Dateien geändert haben, wird höchstens alle 2 Sekunden geprüft (nicht bei jedem Zugriff)
+let geprueftUm = 0;
+const PRUEFABSTAND_MS = 2000;
 const erlCache = new Map<string, { mtime: number; daten: Record<string, Erlaeuterung> }>();
 let stichworte: { mtime: number; daten: Record<string, string[] | string> } | null = null;
 
@@ -26,6 +29,8 @@ function datenSchluessel(dir: string): string {
 
 export const serverDaten: Datenquelle = {
   gesetze() {
+    if (gesetze.length && Date.now() - geprueftUm < PRUEFABSTAND_MS) return gesetze;
+    geprueftUm = Date.now();
     const dir = path.join(DATEN, "gesetze");
     const schluessel = datenSchluessel(dir);
     if (schluessel === gesetzeSchluessel && gesetze.length) return gesetze;

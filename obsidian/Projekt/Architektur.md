@@ -1,6 +1,6 @@
 ---
-dateien: 43
-zeilen: 10232
+dateien: 45
+zeilen: 11145
 tags:
   - "projekt"
   - "uebersicht"
@@ -16,12 +16,12 @@ tags:
 Die App beantwortet Fragen zum Bau- und Denkmalrecht. Den Gesetzestext erfindet sie nie selbst: Er kommt immer wortwörtlich aus den amtlichen Quellen. So greifen die Teile ineinander:
 
 1. **Importskripte** holen die Gesetze von den amtlichen Seiten (gesetze-im-internet.de, NI-VORIS) und speichern den Wortlaut unverändert als JSON in `data/gesetze/`. Sie laufen nur bei Bedarf von Hand (`npm run import:all`).  
-   Dateien: [[Projekt/scripts › erlaeuterungen-pruefen.mjs.md|scripts/erlaeuterungen-pruefen.mjs]], [[Projekt/scripts › import-baugb.mjs.md|scripts/import-baugb.mjs]], [[Projekt/scripts › import-mbo.mjs.md|scripts/import-mbo.mjs]], [[Projekt/scripts › import-ndschg.mjs.md|scripts/import-ndschg.mjs]], [[Projekt/scripts › import-vob.mjs.md|scripts/import-vob.mjs]], [[Projekt/scripts › lib › verweise.mjs.md|scripts/lib/verweise.mjs]], [[Projekt/scripts › pages-bauen.mjs.md|scripts/pages-bauen.mjs]], [[Projekt/scripts › pages-vorschau.mjs.md|scripts/pages-vorschau.mjs]], [[Projekt/scripts › vobc-verzeichnis.mjs.md|scripts/vobc-verzeichnis.mjs]], [[Projekt/scripts › wortlaut-pruefen.mjs.md|scripts/wortlaut-pruefen.mjs]]
+   Dateien: [[Projekt/scripts › erlaeuterungen-pruefen.mjs.md|scripts/erlaeuterungen-pruefen.mjs]], [[Projekt/scripts › import-baugb.mjs.md|scripts/import-baugb.mjs]], [[Projekt/scripts › import-mbo.mjs.md|scripts/import-mbo.mjs]], [[Projekt/scripts › import-nbauo.mjs.md|scripts/import-nbauo.mjs]], [[Projekt/scripts › import-ndschg.mjs.md|scripts/import-ndschg.mjs]], [[Projekt/scripts › import-vob.mjs.md|scripts/import-vob.mjs]], [[Projekt/scripts › lib › verweise.mjs.md|scripts/lib/verweise.mjs]], [[Projekt/scripts › lib › voris.mjs.md|scripts/lib/voris.mjs]], [[Projekt/scripts › pages-bauen.mjs.md|scripts/pages-bauen.mjs]], [[Projekt/scripts › pages-vorschau.mjs.md|scripts/pages-vorschau.mjs]], [[Projekt/scripts › vobc-verzeichnis.mjs.md|scripts/vobc-verzeichnis.mjs]], [[Projekt/scripts › wortlaut-pruefen.mjs.md|scripts/wortlaut-pruefen.mjs]]
 2. **Bibliothek** lädt diese JSON-Dateien und liefert Paragraphen, Verweise und Suchtreffer. Sie erzeugt keinen eigenen Gesetzestext – alles kommt 1:1 aus den Daten.  
    Dateien: [[Projekt/lib › gesetze.ts.md|lib/gesetze.ts]]
 3. **Lotse** versteht die Frage (z. B. „§ 34 BauGB“ oder eine Adresse) und stellt die Antwort aus Bausteinen der Bibliothek zusammen.  
    Dateien: [[Projekt/lib › verstehen.ts.md|lib/verstehen.ts]]
-4. **Ortsauskunft** (Ordner `lib/ort/`): Adresse -\> Standort -\> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen) -\> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt.  
+4. **Ortsauskunft** (Ordner `lib/ort/`): Adresse in Deutschland -\> Standort -\> B-Plan (angebunden: Stadt Oldenburg) + Denkmale (angebunden: Denkmalatlas Niedersachsen) -\> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt. Wo kein Dienst angebunden ist, sagt die Auskunft das offen und nennt nur die bundesweit geltenden Regeln (BauGB) – niemals „kein B-Plan“ oder „kein Denkmal“.  
    Dateien: [[Projekt/lib › ort › abruf.ts.md|lib/ort/abruf.ts]], [[Projekt/lib › ort › bplan-dokumente.ts.md|lib/ort/bplan-dokumente.ts]], [[Projekt/lib › ort › bplan.ts.md|lib/ort/bplan.ts]], [[Projekt/lib › ort › denkmal.ts.md|lib/ort/denkmal.ts]], [[Projekt/lib › ort › geo.ts.md|lib/ort/geo.ts]], [[Projekt/lib › ort › index.ts.md|lib/ort/index.ts]], [[Projekt/lib › ort › standort.ts.md|lib/ort/standort.ts]]
 5. **Schnittstelle** nimmt die Frage aus dem Browser per HTTP entgegen und reicht sie an den Lotsen weiter.  
    Dateien: [[Projekt/app › api › frage › route.ts.md|app/api/frage/route.ts]]
@@ -36,7 +36,7 @@ Die App beantwortet Fragen zum Bau- und Denkmalrecht. Den Gesetzestext erfindet 
 
 **Ablauf einer Frage:** Chat in der Oberfläche → Schnittstelle (HTTP) → Lotse erkennt, was gemeint ist → Bibliothek liefert den Wortlaut aus `data/gesetze/` → Antwort erscheint als Karte im Chat.
 
-**Gesetze in den Daten:** [[BauGB]], [[MBO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
+**Gesetze in den Daten:** [[BauGB]], [[MBO]], [[NBauO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
 
 ## Zusammenspiel der Bereiche
 
@@ -44,7 +44,7 @@ Pfeile zeigen, wer wen nutzt (aus den Importen zusammengefasst) und wer welche D
 
 ```mermaid
 flowchart LR
-  B0["Importskripte (10)"]
+  B0["Importskripte (12)"]
   B1["Bibliothek (1)"]
   B2["Lotse (1)"]
   B3["Ortsauskunft (7)"]
@@ -79,7 +79,7 @@ flowchart LR
   D1 -->|"gelesen von"| B8
   B0 -->|"schreibt"| D1
   B0 -->|"schreibt"| D3
-  D3 -->|"gelesen von"| B0
+  D3 -->|"gelesen von, verwendet"| B0
   B0 -->|"schreibt"| D0
   B7 -->|"ruft auf (HTTP)"| B4
 ```
@@ -94,13 +94,15 @@ flowchart LR
     F31["scripts/erlaeuterungen-pruefen.mjs"]
     F33["scripts/import-baugb.mjs"]
     F34["scripts/import-mbo.mjs"]
-    F35["scripts/import-ndschg.mjs"]
-    F36["scripts/import-vob.mjs"]
-    F37["scripts/lib/verweise.mjs"]
-    F38["scripts/pages-bauen.mjs"]
-    F39["scripts/pages-vorschau.mjs"]
-    F40["scripts/vobc-verzeichnis.mjs"]
-    F41["scripts/wortlaut-pruefen.mjs"]
+    F35["scripts/import-nbauo.mjs"]
+    F36["scripts/import-ndschg.mjs"]
+    F37["scripts/import-vob.mjs"]
+    F38["scripts/lib/verweise.mjs"]
+    F39["scripts/lib/voris.mjs"]
+    F40["scripts/pages-bauen.mjs"]
+    F41["scripts/pages-vorschau.mjs"]
+    F42["scripts/vobc-verzeichnis.mjs"]
+    F43["scripts/wortlaut-pruefen.mjs"]
   end
   subgraph SB1["Bibliothek"]
     F17["lib/gesetze.ts"]
@@ -146,7 +148,7 @@ flowchart LR
     F30["lib/vorab.ts"]
   end
   subgraph SB7["Tests"]
-    F42["tests/testkatalog.mjs"]
+    F44["tests/testkatalog.mjs"]
   end
   subgraph SB8["Export (Obsidian)"]
     F32["scripts/export-obsidian.mjs"]
@@ -235,27 +237,32 @@ flowchart LR
   F31 -.->|liest| D1
   F32 -.->|liest| D2
   F32 -.->|liest| D1
-  F33 --> F37
+  F33 --> F38
   F33 -.->|schreibt| D1
   F33 -.->|liest und schreibt| D3
-  F34 --> F37
+  F34 --> F38
   F34 -.->|liest und schreibt| D3
   F34 -.->|schreibt| D1
-  F35 --> F37
+  F35 --> F38
+  F35 --> F39
   F35 -.->|liest und schreibt| D3
   F35 -.->|schreibt| D1
-  F36 -.->|schreibt| D3
+  F36 --> F38
+  F36 --> F39
+  F36 -.->|verwendet| D3
   F36 -.->|schreibt| D1
-  F38 -.->|schreibt| D1
-  F38 -.->|schreibt| D2
-  F38 -.->|schreibt| D0
-  F40 -.->|schreibt| D1
-  F41 -.->|liest| D1
-  F42 ==>|HTTP| F0
+  F37 -.->|schreibt| D3
+  F37 -.->|schreibt| D1
+  F40 -.->|liest| D1
+  F40 -.->|liest und schreibt| D2
+  F40 -.->|schreibt| D0
+  F42 -.->|schreibt| D1
+  F43 -.->|liest| D1
+  F44 ==>|HTTP| F0
 ```
 
 ## Zahlen
 
-- 43 Quelldateien mit zusammen 10232 Zeilen
-- 74 lokale Importe
+- 45 Quelldateien mit zusammen 11145 Zeilen
+- 77 lokale Importe
 - Erfasst werden die Ordner `app/`, `components/`, `lib/`, `scripts/`, `tests/` (ohne node_modules, .next, data/quellen)

@@ -2,7 +2,7 @@
 pfad: "lib/daten-server.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 57
+zeilen: 62
 beschreibung: "Datenquelle auf dem Server: liest data/*.json aus dem Dateisystem. Nach einem neuen Import (geänderte Dateien) wird automatisch neu geladen."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/daten-server.ts
 
-**Pfad:** `lib/daten-server.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 57
+**Pfad:** `lib/daten-server.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 62
 
 ## Kurzbeschreibung
 
@@ -24,7 +24,7 @@ Datenquelle auf dem Server: liest data/\*.json aus dem Dateisystem. Nach einem n
 
 ## Daten
 
-- **liest** `data/gesetze/*` → [[BauGB]], [[MBO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
+- **liest** `data/gesetze/*` → [[BauGB]], [[MBO]], [[NBauO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
 - **liest** `data/stichworte.json`
 
 ## Stellt bereit

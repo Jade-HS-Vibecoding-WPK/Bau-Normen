@@ -42,7 +42,7 @@ Prüft die fest gespeicherten Erläuterungen und führt neue Teil-Dateien zusamm
 - **liest** `data/erlaeuterungen/` → Erläuterungen zu [[BauGB]], [[NDSchG]]
 - **liest** `data/erlaeuterungen/_teile/*` → Erläuterungen zu [[BauGB]], [[NDSchG]]
 - **schreibt** `data/erlaeuterungen/*.json` → Erläuterungen zu [[BauGB]], [[NDSchG]]
-- **liest** `data/gesetze/*` → [[BauGB]], [[MBO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
+- **liest** `data/gesetze/*` → [[BauGB]], [[MBO]], [[NBauO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
 
 ## Externe Pakete
 

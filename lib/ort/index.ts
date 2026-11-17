@@ -1,16 +1,18 @@
-// Ortsauskunft: Adresse -> Standort -> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen)
-// -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt.
+// Ortsauskunft: Adresse in Deutschland -> Standort -> B-Plan (angebunden: Stadt Oldenburg) + Denkmale
+// (angebunden: Denkmalatlas Niedersachsen) -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind.
+// Keine KI beteiligt. Wo kein Dienst angebunden ist, sagt die Auskunft das offen und nennt nur die bundesweit
+// geltenden Regeln (BauGB) – niemals „kein B-Plan“ oder „kein Denkmal“.
 //
 // Grundsatz: Wenn ein Dienst nicht antwortet, sagen wir "keine Aussage möglich" –
 // niemals "kein B-Plan" oder "kein Denkmal", nur weil eine Abfrage fehlgeschlagen ist.
 // Alle Texte stehen zweisprachig (Deutsch/Englisch) nebeneinander; Paragraphen bleiben im deutschen Original.
 import { alleGesetze } from "../gesetze";
 import { gebiet, type Sprache, zweisprachig } from "../sprache";
-import type { NormRef, OrtAnsicht } from "../typen";
+import type { Antwort, NormRef, OrtAnsicht } from "../typen";
 import { BPLAN_QUELLE, BPLAN_VIEWER, bplaeneAmPunkt } from "./bplan";
 import { planDokumente, weiterePlaene } from "./bplan-dokumente";
 import { DENKMAL_QUELLE, DENKMAL_VIEWER, denkmaleImUmkreis } from "./denkmal";
-import { findeStandort } from "./standort";
+import { type AdressEingabe, findeStandort } from "./standort";
 
 const RADIUS_M = 50;
 
@@ -24,20 +26,35 @@ function refs(gesetzId: string, ids: string[]): NormRef[] {
 
 const norm = (s?: string) => (s ?? "").toLowerCase().replace(/str\./g, "straße").replace(/[\s-]+/g, "");
 
-export async function ortsauskunft(strasse: string, hausnummer: string, frage: string, sprache: Sprache = "de"): Promise<OrtAnsicht> {
+/** Ortsauskunft als Antwort – bei mehrdeutiger Adresse (Straße in mehreren Orten) als Rückfrage. */
+export async function ortsAntwort(e: AdressEingabe, frage: string, sprache: Sprache = "de"): Promise<Antwort> {
+  const standort = await findeStandort(e, sprache);
+  if (standort.status === "mehrdeutig") return { art: "auswahl", frage: standort.hinweis, optionen: standort.kandidaten };
+  return { art: "ort", ort: await ortsauskunft(e, standort, frage, sprache) };
+}
+
+async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnType<typeof findeStandort>>, { status: "mehrdeutig" }>, frage: string, sprache: Sprache): Promise<OrtAnsicht> {
+  const { strasse, hausnummer } = e;
   const t = zweisprachig(sprache);
   const nutzerNenntDenkmal = /denkmal|monument|listed/i.test(frage);
   const abgefragtAm = new Date().toLocaleString(gebiet(sprache), { timeZone: "Europe/Berlin", dateStyle: "medium", timeStyle: "short" });
-  const standort = await findeStandort(strasse, hausnummer, sprache);
+  const eingabe = [`${strasse} ${hausnummer}`, [e.plz, e.ort].filter(Boolean).join(" ")].filter(Boolean).join(", ");
   const einordnung: OrtAnsicht["einordnung"] = [];
+  const oldenburg = standort.status === "ok" && standort.oldenburg;
+  const inNds = standort.status === "ok" && standort.land === "Niedersachsen";
   const links: OrtAnsicht["links"] = [
-    { label: t("Kartenportal Bauen & Wohnen (Stadt Oldenburg)", "Map portal “Bauen & Wohnen” (City of Oldenburg)"), url: BPLAN_VIEWER },
-    { label: t("Pläne in Aufstellung (Beteiligungsportal)", "Plans in preparation (participation portal)"), url: "https://oldenburg.planungsbeteiligung.de/" },
-    { label: t("Denkmalatlas Niedersachsen", "Monument atlas of Lower Saxony"), url: DENKMAL_VIEWER },
+    ...(oldenburg
+      ? [
+          { label: t("Kartenportal Bauen & Wohnen (Stadt Oldenburg)", "Map portal “Bauen & Wohnen” (City of Oldenburg)"), url: BPLAN_VIEWER },
+          { label: t("Pläne in Aufstellung (Beteiligungsportal)", "Plans in preparation (participation portal)"), url: "https://oldenburg.planungsbeteiligung.de/" },
+        ]
+      : []),
+    ...(inNds ? [{ label: t("Denkmalatlas Niedersachsen", "Monument atlas of Lower Saxony"), url: DENKMAL_VIEWER }] : []),
   ];
   const THEMA = {
     standort: t("Standort", "Location"),
     planung: t("Bauplanungsrecht", "Planning law"),
+    ordnung: t("Bauordnungsrecht", "Building regulations"),
     denkmal: t("Denkmalrecht", "Monument protection law"),
     zusammen: t("Zusammenspiel", "Interplay"),
     allgemein: t("Allgemein", "General"),
@@ -46,7 +63,7 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
   if (standort.status !== "ok") {
     const hinweis = t("Nicht abgefragt – Standort unbekannt.", "Not queried – location unknown.");
     return {
-      eingabe: `${strasse} ${hausnummer}`,
+      eingabe,
       abgefragtAm,
       standort,
       bplan: { status: "fehler", hinweis, quelle: BPLAN_QUELLE },
@@ -57,12 +74,15 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
     };
   }
 
+  // Nur Dienste abfragen, die für den Standort angebunden sind: B-Pläne der Stadt Oldenburg, Denkmalatlas Niedersachsen
   const [bp, dm, dokumente, weitere] = await Promise.all([
-    bplaeneAmPunkt(standort.lat, standort.lon, sprache),
-    denkmaleImUmkreis(standort.lat, standort.lon, RADIUS_M, sprache),
-    planDokumente(standort.lat, standort.lon),
-    weiterePlaene(standort.lat, standort.lon, sprache),
+    oldenburg ? bplaeneAmPunkt(standort.lat, standort.lon, sprache) : null,
+    inNds ? denkmaleImUmkreis(standort.lat, standort.lon, RADIUS_M, sprache) : null,
+    oldenburg ? planDokumente(standort.lat, standort.lon) : null,
+    oldenburg ? weiterePlaene(standort.lat, standort.lon, sprache) : null,
   ]);
+  const ortText = standort.ort || t("diesen Ort", "this place");
+  const landText = standort.land || t("das jeweilige Bundesland", "the respective state");
 
   if (!standort.hausnummerGefunden) {
     einordnung.push({
@@ -79,7 +99,26 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
 
   // --- Bauplanungsrecht ---
   let bplan: OrtAnsicht["bplan"];
-  if (bp.status === "fehler") {
+  if (bp === null) {
+    bplan = {
+      status: "fehler",
+      hinweis: t(`Für ${ortText} ist noch kein Bebauungsplan-Dienst angebunden.`, `No development plan service is connected for ${ortText} yet.`),
+      quelle: t("nicht angebunden", "not connected"),
+      nichtAngebunden: true,
+    };
+    einordnung.push({
+      thema: THEMA.planung,
+      titel: t("Bebauungsplan: keine Aussage möglich", "Development plan: no statement possible"),
+      text: t(
+        `Die App kann Bebauungspläne bisher nur für die Stadt Oldenburg abfragen. Ob für den Standort in ${ortText} ein Bebauungsplan gilt, erfahren Sie bei der Gemeinde (Geoportal oder Stadtplanungsamt). ` +
+          "Gilt ein rechtsverbindlicher Bebauungsplan, ist ein Vorhaben nach § 30 BauGB zu beurteilen; sonst nach § 34 BauGB (im Zusammenhang bebauter Ortsteil) oder § 35 BauGB (Außenbereich).",
+        `So far the app can only query development plans for the City of Oldenburg. Whether a development plan applies at this location in ${ortText} can be found out from the municipality (geoportal or planning office). ` +
+          "If a legally binding development plan applies, a project is assessed under § 30 BauGB; otherwise under § 34 BauGB (built-up area) or § 35 BauGB (outer area).",
+      ),
+      paragraphen: refs("baugb", ["30", "34", "35"]),
+      ton: "achtung",
+    });
+  } else if (bp.status === "fehler") {
     bplan = { status: "fehler", hinweis: bp.hinweis, quelle: BPLAN_QUELLE };
     einordnung.push({
       thema: THEMA.planung,
@@ -128,8 +167,10 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
     });
   }
 
-  // --- Laufende Planungen und Sicherungsinstrumente (Kartenportal der Stadt) ---
-  if (weitere === null) {
+  // --- Laufende Planungen und Sicherungsinstrumente (Kartenportal der Stadt Oldenburg) ---
+  if (!oldenburg) {
+    // nicht angebunden – oben bereits gesagt
+  } else if (weitere === null) {
     einordnung.push({
       thema: THEMA.planung,
       titel: t("Laufende Verfahren nicht abrufbar", "Ongoing procedures not retrievable"),
@@ -190,7 +231,24 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
 
   // --- Denkmalrecht ---
   let denkmal: OrtAnsicht["denkmal"];
-  if (dm.status === "fehler") {
+  if (dm === null) {
+    denkmal = {
+      status: "fehler",
+      hinweis: t(`Für ${landText} ist noch kein Denkmal-Dienst angebunden.`, `No monument service is connected for ${landText} yet.`),
+      quelle: t("nicht angebunden", "not connected"),
+      nichtAngebunden: true,
+    };
+    einordnung.push({
+      thema: THEMA.denkmal,
+      titel: t("Denkmalschutz: keine Aussage möglich", "Monument protection: no statement possible"),
+      text: t(
+        `Denkmalschutz ist Landesrecht. Die App fragt bisher nur den Denkmalatlas Niedersachsen ab und enthält nur das niedersächsische Denkmalschutzgesetz. Ob am Standort oder in der Umgebung ein Kulturdenkmal besteht, klären Sie mit der unteren Denkmalschutzbehörde bzw. dem Landesamt für Denkmalpflege in ${landText}.`,
+        `Monument protection is state law. So far the app only queries the Lower Saxony monument atlas and only contains the Lower Saxony monument protection act. Please check with the local monument protection authority or the state heritage office in ${landText} whether there is a cultural monument at or near this location.`,
+      ),
+      paragraphen: [],
+      ton: "achtung",
+    });
+  } else if (dm.status === "fehler") {
     denkmal = { status: "fehler", hinweis: dm.hinweis, quelle: DENKMAL_QUELLE };
     einordnung.push({
       thema: THEMA.denkmal,
@@ -216,10 +274,10 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
         text: t(
           `Im Denkmalatlas verzeichnet: ${namen}. ` +
             "Wer ein Kulturdenkmal verändern, instandsetzen, wiederherstellen, entfernen oder seine Nutzung ändern will, braucht eine Genehmigung der Denkmalschutzbehörde (§ 10 Abs. 1 NDSchG). " +
-            "Für Baudenkmale besteht eine Erhaltungspflicht (§ 6 NDSchG). Zuständig ist die untere Denkmalschutzbehörde – in Oldenburg die Stadt (§§ 19, 20 NDSchG).",
+            `Für Baudenkmale besteht eine Erhaltungspflicht (§ 6 NDSchG). Zuständig ist die untere Denkmalschutzbehörde${oldenburg ? " – in Oldenburg die Stadt" : ""} (§§ 19, 20 NDSchG).`,
           `Recorded in the monument atlas: ${namen}. ` +
             "Anyone who wants to alter, repair, restore or remove a cultural monument, or change its use, needs a permit from the monument protection authority (§ 10(1) NDSchG). " +
-            "Listed buildings must be preserved (§ 6 NDSchG). The competent body is the local monument protection authority – in Oldenburg the city itself (§§ 19, 20 NDSchG).",
+            `Listed buildings must be preserved (§ 6 NDSchG). The competent body is the local monument protection authority${oldenburg ? " – in Oldenburg the city itself" : ""} (§§ 19, 20 NDSchG).`,
         ),
         paragraphen: refs("ndschg", ["3", "6", "10", "19", "20"]),
         ton: "achtung",
@@ -266,9 +324,9 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
         titel: t("Ihre Angabe: Denkmal auf dem Grundstück", "Your note: monument on the plot"),
         text: t(
           "Am Standort selbst ist im Denkmalatlas kein Denkmal verzeichnet. Ein Kulturdenkmal ist aber auch ohne Eintragung geschützt, wenn es die Merkmale des § 3 NDSchG erfüllt (§ 5 Abs. 1 NDSchG). " +
-            "Klären Sie den Status vor der Planung mit der unteren Denkmalschutzbehörde der Stadt Oldenburg.",
+            `Klären Sie den Status vor der Planung mit der unteren Denkmalschutzbehörde${oldenburg ? " der Stadt Oldenburg" : ""}.`,
           "The monument atlas records no monument at the location itself. However, a cultural monument is protected even without being listed if it meets the criteria of § 3 NDSchG (§ 5(1) NDSchG). " +
-            "Please clarify the status with the City of Oldenburg’s monument protection authority before planning.",
+            `Please clarify the status with the ${oldenburg ? "City of Oldenburg’s " : "local "}monument protection authority before planning.`,
         ),
         paragraphen: refs("ndschg", ["3", "5", "10"]),
         ton: "achtung",
@@ -300,7 +358,32 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
     }
   }
 
-  einordnung.push({
+  // --- Bauordnungsrecht: Landesrecht ---
+  if (inNds) {
+    einordnung.push({
+      thema: THEMA.ordnung,
+      titel: t("Bauordnungsrecht: Niedersächsische Bauordnung", "Building regulations: Lower Saxony building code"),
+      text: t(
+        "Ob ein Vorhaben eine Baugenehmigung braucht, regelt die NBauO: Genehmigungsvorbehalt (§ 59), verfahrensfreie Baumaßnahmen (§ 60 mit Anhang), sonstige genehmigungsfreie Baumaßnahmen (§ 62), vereinfachtes Verfahren (§ 63) und Baugenehmigungsverfahren (§ 64). Die Grenzabstände regelt § 5 NBauO.",
+        "Whether a project needs a building permit is governed by the NBauO: permit requirement (§ 59), procedure-free building work (§ 60 with annex), other permit-free building work (§ 62), simplified procedure (§ 63) and building permit procedure (§ 64). Distances to plot boundaries are governed by § 5 NBauO.",
+      ),
+      paragraphen: refs("nbauo", ["59", "60", "anhang", "62", "63", "64", "5"]),
+      ton: "info",
+    });
+  } else {
+    einordnung.push({
+      thema: THEMA.ordnung,
+      titel: t(`Bauordnungsrecht: Landesbauordnung ${landText}`, `Building regulations: building code of ${landText}`),
+      text: t(
+        `Genehmigungspflicht, Abstandsflächen und Bauausführung regelt die Bauordnung des Landes ${landText}. Sie ist noch nicht in der Bibliothek. Die Musterbauordnung zeigt den gemeinsamen Aufbau der Landesbauordnungen – Nummerierung und Inhalte weichen aber ab, verbindlich ist allein die Landesbauordnung.`,
+        `Permit requirements, distance areas and construction are governed by the building code of ${landText}. It is not in the library yet. The model building code shows the common structure of the state building codes – numbering and content differ, however; only the state building code is binding.`,
+      ),
+      paragraphen: refs("mbo", ["59", "61", "6"]),
+      ton: "neutral",
+    });
+  }
+
+  if (inNds) einordnung.push({
     thema: THEMA.allgemein,
     titel: t("Bei Erdarbeiten", "For earthworks"),
     text: t(
@@ -311,5 +394,5 @@ export async function ortsauskunft(strasse: string, hausnummer: string, frage: s
     ton: "neutral",
   });
 
-  return { eingabe: `${strasse} ${hausnummer}`, abgefragtAm, standort, bplan, denkmal, nutzerNenntDenkmal, einordnung, links };
+  return { eingabe, abgefragtAm, standort, bplan, denkmal, nutzerNenntDenkmal, einordnung, links };
 }

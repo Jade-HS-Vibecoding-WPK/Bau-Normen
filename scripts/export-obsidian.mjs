@@ -39,8 +39,8 @@ const SCHLANK = !OPTIONEN.has("--voller-pfad");
 // Farben der Graph-Ansicht. Reihenfolge = Priorität (die erste passende Gruppe färbt den Knoten).
 const FARBE_GLIEDERUNG = "#7d93ad"; // grau-blau
 const FARBE_PROJEKT = "#9a9a9a"; // grau
-const GESETZ_FARBEN = { baugb: "#4a9a5b" /* grün */, ndschg: "#c8952c" /* ocker */, mbo: "#3f8fb5" /* blau */, voba: "#8e6bb0" /* violett */, vobb: "#c0504d" /* rot */, vobc: "#b5651d" /* braun */ };
-const FARB_NAMEN = { baugb: "grün", ndschg: "ocker", mbo: "blau", voba: "violett", vobb: "rot", vobc: "braun" };
+const GESETZ_FARBEN = { baugb: "#4a9a5b" /* grün */, ndschg: "#c8952c" /* ocker */, nbauo: "#2f8a7e" /* petrol */, mbo: "#3f8fb5" /* blau */, voba: "#8e6bb0" /* violett */, vobb: "#c0504d" /* rot */, vobc: "#b5651d" /* braun */ };
+const FARB_NAMEN = { baugb: "grün", ndschg: "ocker", nbauo: "petrol", mbo: "blau", voba: "violett", vobb: "rot", vobc: "braun" };
 const ERSATZ_FARBEN = ["#8e6bb0", "#c0504d", "#3f8fb5", "#b5651d"];
 
 const toPosix = (p) => p.split(path.sep).join("/");
@@ -689,11 +689,14 @@ function selbsttest(paragraphNotizen) {
       continue;
     }
     try {
-      // Hochgestelltes (nur MBO: Satznummern, Fußnotenzeichen, m²/m³) steht im "text" der Quelle nicht bzw. als ²/³ –
-      // für den Vergleich fällt es auf beiden Seiten weg; alles andere wird Zeichen für Zeichen verglichen.
+      // Hochgestelltes (MBO, NBauO: Satznummern, Fußnotenzeichen, m²/m³) steht im "text" der Quelle nicht bzw. als ²/³.
+      // Ob davor ein Leerzeichen steht, ist je Quelle verschieden – bei diesen Vorschriften wird deshalb ohne Leerraum
+      // verglichen (jedes andere Zeichen weiterhin genau); alle übrigen Vorschriften wie bisher mit normalisiertem Leerraum.
       const ohneHoch = (s) => s.replace(/[²³]/g, "");
-      const ist = normWs(ohneHoch(markdownZuKlartext(m[1].replace(/<sup>[^<]*<\/sup>/g, ""))));
-      const soll = normWs(ohneHoch(n.text));
+      const mitSup = m[1].includes("<sup>");
+      const vergleich = (s) => (mitSup ? ohneHoch(s).replace(/\s+/g, "") : normWs(s));
+      const ist = vergleich(markdownZuKlartext(m[1].replace(/<sup>[^<]*<\/sup>/g, "")));
+      const soll = vergleich(n.text);
       if (ist !== soll) fehler.push(`${notiz.name}: Wortlaut weicht ab ${abweichung(ist, soll)}`);
       const h1 = notiz.inhalt.match(/\n# (.*)\n/);
       if (!h1 || normWs(zeileZuText(h1[1])) !== normWs(notiz.ueberschrift)) fehler.push(`${notiz.name}: Überschrift weicht ab`);
@@ -1488,7 +1491,7 @@ function main() {
   console.log(`  Gesamt     ${alle.length} Notizen`);
   const geprueft = paragraphNotizen.filter((x) => !x.gesetz?.nurVerzeichnis).length;
   const nurVerzeichnis = paragraphNotizen.length - geprueft;
-  console.log(`  Selbsttest Wortlaut: ${geprueft}/${geprueft} Vorschriften identisch mit "text" (nach Leerraum-Normalisierung, ohne Hochgestelltes), Gegenprobe bestanden${nurVerzeichnis ? `; ${nurVerzeichnis} Verzeichniseinträge ohne Wortlaut (VOB/C)` : ""}`);
+  console.log(`  Selbsttest Wortlaut: ${geprueft}/${geprueft} Vorschriften identisch mit "text" (nach Leerraum-Normalisierung; MBO und NBauO wegen der Satznummern ohne Leerraum), Gegenprobe bestanden${nurVerzeichnis ? `; ${nurVerzeichnis} Verzeichniseinträge ohne Wortlaut (VOB/C)` : ""}`);
   console.log(`  graph.json ${graphStatus}`);
   console.log(SCHLANK ? "  Brotkrumen: nur direkte Oberebene verlinkt (Baum)" : "  Brotkrumen: alle Ebenen verlinkt (--voller-pfad)");
 }

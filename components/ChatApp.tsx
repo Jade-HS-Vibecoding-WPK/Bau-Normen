@@ -20,7 +20,7 @@ interface Eintrag {
   antworten?: Antwort[];
 }
 
-type Anfrage = { text: string } | { adresse: { strasse: string; hausnummer: string } };
+type Anfrage = { text: string } | { adresse: { strasse: string; hausnummer: string; plz?: string; ort?: string } };
 
 /** Statische Online-Version (GitHub Pages) – wird beim Bauen festgelegt. */
 const STATISCH = process.env.NEXT_PUBLIC_STATISCH === "1";
@@ -33,6 +33,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
   const [laedt, setLaedt] = useState(false);
   const [strasse, setStrasse] = useState("");
   const [hausnummer, setHausnummer] = useState("");
+  const [plz, setPlz] = useState("");
+  const [ortName, setOrtName] = useState("");
   const [paraGesetz, setParaGesetz] = useState(gesetze[0]?.kurz ?? "BauGB");
   const [paraNr, setParaNr] = useState("");
   const [gebietZu, setGebietZu] = useState<number | null>(null);
@@ -73,6 +75,18 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
     v.scrollTo({ top: Math.max(0, ziel), behavior: bewegungAus() ? "auto" : "smooth" });
   }, [verlauf.length, laedt]);
 
+  // Online-Version: Lotse und Kurzfassung der Daten (klein) schon im Leerlauf vorladen – die erste Antwort kommt dann sofort
+  useEffect(() => {
+    if (!STATISCH) return;
+    const vorladen = () => void import("@/lib/daten-browser").then((m) => m.ladeDaten()).catch(() => {});
+    if ("requestIdleCallback" in window) {
+      const h = window.requestIdleCallback(vorladen, { timeout: 3000 });
+      return () => window.cancelIdleCallback(h);
+    }
+    const h = setTimeout(vorladen, 1500);
+    return () => clearTimeout(h);
+  }, []);
+
   async function senden(anfrage: Anfrage, anzeige: string) {
     if (laedt) return;
     setVerlauf((v) => [...v, { id: zaehler.current++, rolle: "nutzer", text: anzeige, zeit: uhrzeit() }]);
@@ -83,7 +97,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
       if (STATISCH) {
         // Online-Version ohne Server: derselbe Lotse läuft direkt im Browser.
         const { beantworteImBrowser } = await import("@/lib/daten-browser");
-        antworten = await beantworteImBrowser(mitSprache, gesetze.map((g) => g.id));
+        antworten = await beantworteImBrowser(mitSprache);
       } else {
         const res = await fetch("/api/frage", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(mitSprache) });
         antworten = ((await res.json()) as { antworten: Antwort[] }).antworten;
@@ -116,7 +130,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
             <Logo />
             <span>
               <span className="wortmarke">Bau-Normen-KI</span>
-              <span className="claim">{t("Baurecht im Wortlaut · Ortsauskunft Oldenburg", "Building law, word for word · Location check Oldenburg")}</span>
+              <span className="claim">{t("Baurecht im Wortlaut · Ortsauskunft Deutschland", "Building law, word for word · Location check Germany")}</span>
             </span>
           </a>
           <div className="kopf-meta">
@@ -140,7 +154,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
         <aside className="leiste">
           <section className="block">
             <h2 className="block-titel">
-              <span className="kennung">A</span> {t("Ortsauskunft Oldenburg", "Location check Oldenburg")}
+              <span className="kennung">A</span> {t("Ortsauskunft Deutschland", "Location check Germany")}
             </h2>
             <form
               className="block-inhalt"
@@ -148,7 +162,11 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 ev.preventDefault();
                 if (!strasse.trim() || !hausnummer.trim()) return;
                 setGebietZu(null);
-                senden({ adresse: { strasse: strasse.trim(), hausnummer: hausnummer.trim() } }, `${t("Ortsauskunft", "Location check")}: ${strasse.trim()} ${hausnummer.trim()}`);
+                const zusatz = [plz.trim(), ortName.trim()].filter(Boolean).join(" ");
+                senden(
+                  { adresse: { strasse: strasse.trim(), hausnummer: hausnummer.trim(), plz: plz.trim() || undefined, ort: ortName.trim() || undefined } },
+                  `${t("Ortsauskunft", "Location check")}: ${strasse.trim()} ${hausnummer.trim()}${zusatz ? `, ${zusatz}` : ""}`,
+                );
               }}
             >
               <div className="feldreihe">
@@ -161,13 +179,32 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                   <input id="hnr" value={hausnummer} onChange={(ev) => setHausnummer(ev.target.value)} autoComplete="off" />
                 </div>
               </div>
+              <div className="feldreihe plz-reihe">
+                <div className="feld">
+                  <label htmlFor="plz">{t("PLZ", "Postcode")}</label>
+                  <input
+                    id="plz"
+                    value={plz}
+                    onChange={(ev) => setPlz(ev.target.value.replace(/\D/g, "").slice(0, 5))}
+                    inputMode="numeric"
+                    pattern="\d{5}"
+                    placeholder={t("optional", "optional")}
+                    autoComplete="off"
+                    title={t("fünfstellige Postleitzahl (optional)", "five-digit postcode (optional)")}
+                  />
+                </div>
+                <div className="feld">
+                  <label htmlFor="ortname">{t("Ort", "Town")}</label>
+                  <input id="ortname" value={ortName} onChange={(ev) => setOrtName(ev.target.value)} placeholder={t("optional", "optional")} autoComplete="off" />
+                </div>
+              </div>
               <button className="knopf knopf-breit" type="submit" disabled={laedt || !strasse.trim() || !hausnummer.trim()}>
                 {t("Standort prüfen", "Check location")}
               </button>
               <p className="feld-hinweis">
                 {t(
-                  "Prüft Bebauungsplan (Stadt Oldenburg) und Denkmalschutz (Denkmalatlas Niedersachsen) und nennt die zu beachtenden Paragraphen.",
-                  "Checks the development plan (City of Oldenburg) and monument protection (Lower Saxony monument atlas) and lists the relevant sections.",
+                  "Findet jede Adresse in Deutschland und nennt die zu beachtenden Paragraphen. Bebauungspläne: Stadt Oldenburg, Denkmale: Niedersachsen – anderswo sagt die Auskunft offen, wozu sie keine Aussage machen kann. Ohne Postleitzahl wird zuerst in Oldenburg gesucht.",
+                  "Finds any address in Germany and lists the relevant sections. Development plans: City of Oldenburg, monuments: Lower Saxony – elsewhere the check says openly what it cannot assess. Without a postcode, Oldenburg is searched first.",
                 )}
               </p>
             </form>
@@ -256,8 +293,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               <p>
                 <strong>{t("Verlässlichkeit:", "Reliability:")}</strong>{" "}
                 {t(
-                  "Gesetze, Musterbauordnung und VOB werden unverändert im Wortlaut der Quelle angezeigt, die VOB/C nur als Verzeichnis. Ortsauskünfte stammen live aus den Datendiensten der Stadt Oldenburg und des Landesamts für Denkmalpflege. Die Auskunft ersetzt keine Rechtsberatung.",
-                  "Acts, the model building code and the VOB are shown unchanged in their source wording (in German); the VOB/C as an index only. Location checks come live from the data services of the City of Oldenburg and the Lower Saxony State Office for Heritage. This is not legal advice.",
+                  "Gesetze, Musterbauordnung und VOB werden unverändert im Wortlaut der Quelle angezeigt, die VOB/C nur als Verzeichnis. Ortsauskünfte stammen live aus OpenStreetMap, den Datendiensten der Stadt Oldenburg und dem Denkmalatlas Niedersachsen. Die Auskunft ersetzt keine Rechtsberatung.",
+                  "Acts, the model building code and the VOB are shown unchanged in their source wording (in German); the VOB/C as an index only. Location checks come live from OpenStreetMap, the data services of the City of Oldenburg and the Lower Saxony monument atlas. This is not legal advice.",
                 )}
               </p>
               {STATISCH && (
@@ -286,8 +323,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                     </h1>
                     <p>
                       {t(
-                        "Baugesetzbuch, Denkmalschutzgesetz, Musterbauordnung und VOB im Wortlaut, mit Erläuterung und Zusammenhängen – oder eine Ortsauskunft zu Bebauungsplan und Denkmalschutz für ein Grundstück in Oldenburg.",
-                        "German building law, monument protection law, the model building code and the VOB in their original wording, with explanations and related provisions – or a location check on development plans and monument protection for a plot in Oldenburg.",
+                        "Baugesetzbuch, Niedersächsische Bauordnung, Denkmalschutzgesetz, Musterbauordnung und VOB im Wortlaut, mit Erläuterung und Zusammenhängen – oder eine Ortsauskunft für ein Grundstück in Deutschland.",
+                        "German building law, the Lower Saxony building code, monument protection law, the model building code and the VOB in their original wording, with explanations and related provisions – or a location check for a plot anywhere in Germany.",
                       )}
                     </p>
                   </div>

@@ -66,7 +66,7 @@ Importiert die Vergabe- und Vertragsordnung für Bauleistungen – VOB/A (Abschn
 
 ## Daten
 
-- **schreibt** `data/gesetze/` → [[BauGB]], [[MBO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
+- **schreibt** `data/gesetze/` → [[BauGB]], [[MBO]], [[NBauO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
 - **schreibt** `data/gesetze/voba.json` → [[VOB-A]]
 - **schreibt** `data/gesetze/vobb.json` → [[VOB-B]]
 - **schreibt** `data/quellen/vob/`

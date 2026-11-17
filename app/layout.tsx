@@ -12,7 +12,7 @@ const serif = Source_Serif_4({ subsets: ["latin"], weight: ["400", "600"], varia
 
 export const metadata: Metadata = {
   title: "Bau-Normen-KI – Baurecht im Wortlaut",
-  description: "BauGB und Niedersächsisches Denkmalschutzgesetz im amtlichen Wortlaut, mit Ortsauskunft zu Bebauungsplan und Denkmalschutz in Oldenburg.",
+  description: "BauGB, Niedersächsische Bauordnung, Denkmalschutzgesetz, Musterbauordnung und VOB im Wortlaut – mit Ortsauskunft für Adressen in Deutschland.",
   // helles und dunkles Farbschema
   other: { "color-scheme": "light dark" },
 };

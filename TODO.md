@@ -53,6 +53,11 @@
 - [x] Lotse versteht „§ 6 MBO“, „§ 3a EU VOB/A“, „§ 3 VOB/A-EU“, „§ 13 VOB/B“, „§ 4 VOB“ (Rückfrage), „DIN 18353“; „NBauO“ wird als noch fehlend erkannt
 - [x] Stichwortverzeichnis um 58 Begriffsgruppen zu MBO und VOB erweitert; Testkatalog 47 Fragen
 - [ ] Erläuterungen für MBO und VOB
+- [x] NBauO (Fassung ab 01.07.2025) aus NI-VORIS im Wortlaut, Satznummern hochgestellt, Stichproben gegen die Druckansicht (`npm run import:nbauo`)
+- [x] Ortsauskunft Deutschland: Adressen bundesweit, mit Postleitzahl und Ort; bei mehrdeutiger Straße Rückfrage; B-Pläne (Oldenburg) und Denkmale (Niedersachsen) nur dort, sonst offen „keine Aussage“
+- [x] Dunkelmodus klarer: neutraler Graphit-Grund, frische Akzente, lesbare deaktivierte Knöpfe
+- [x] Schneller bei vielen Regelwerken: Online-Version lädt Index, Wortlaut, Erläuterungen und Suchtexte in Stufen; Server bereitet Ableitungen einmal vor
+- [x] README zeigt die Website gleich oben (Vorschaugrafik hell, dunkel, Smartphone)
 - [ ] Stichwortverzeichnis erweitern, mehr Testfälle
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)
 
@@ -65,7 +70,10 @@
 
 ## Tag 4 – 19.11. (Puffer)
 - [ ] Weitere Landes-Denkmalschutzgesetze – jedes Land einzeln mit Treueprüfung
-- [ ] NBauO (Niedersächsische Bauordnung) – wichtig: die MBO ist nur ein Muster, in Niedersachsen gilt die NBauO
+- [x] NBauO (Niedersächsische Bauordnung)
+- [ ] B-Plan-Dienste weiterer Städte (z. B. über XPlanung/Geoportale der Länder) und Denkmal-Dienste weiterer Länder anbinden
+- [ ] Landesbauordnungen weiterer Länder (z. B. BauO NRW, BayBO) – Ortsauskunft verweist bisher nur auf die MBO
+- [ ] Weitere frei verfügbare Regelwerke: BauNVO, PlanZV, GEG, HOAI, BGB-Bauvertragsrecht (§§ 650a ff.), NTVergG, DVO-NBauO
 - [ ] § 3a VOB/A: zusammengeführten Text fachlich gegenlesen lassen (die Bekanntmachung 2025 enthält nur Änderungsbefehle)
 - [ ] VOB/B: auf die Bundesanzeiger-Fassungen (2009/2012/2016) umstellen, sobald abrufbar (bisher konsolidierte Lesefassung der Fachinformation Bundesbau)
 

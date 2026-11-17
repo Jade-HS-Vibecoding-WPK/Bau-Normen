@@ -2,7 +2,7 @@
 pfad: "lib/anfrage.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 30
+zeilen: 33
 beschreibung: "Eine Anfrage bearbeiten – gemeinsam für den Server (app/api/frage) und die statische Online-Version."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/anfrage.ts
 
-**Pfad:** `lib/anfrage.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 30
+**Pfad:** `lib/anfrage.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 33
 
 ## Kurzbeschreibung
 

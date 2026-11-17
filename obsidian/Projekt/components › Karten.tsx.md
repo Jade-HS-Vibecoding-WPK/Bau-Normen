@@ -2,7 +2,7 @@
 pfad: "components/Karten.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 543
+zeilen: 554
 beschreibung: "Antwort-Karten: Paragraph (NormKarte), Ortsauskunft (OrtKarte) und die angeheftete Gebietsleiste (GebietsLeiste). Oberflächentexte zweisprachig; Gesetzestext und Erläuterungen bleiben im deutschen Original."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # components/Karten.tsx
 
-**Pfad:** `components/Karten.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 543
+**Pfad:** `components/Karten.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 554
 
 ## Kurzbeschreibung
 

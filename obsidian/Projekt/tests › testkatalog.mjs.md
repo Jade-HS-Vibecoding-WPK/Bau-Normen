@@ -2,7 +2,7 @@
 pfad: "tests/testkatalog.mjs"
 bereich: "Tests"
 sprache: "JavaScript (Node, ESM)"
-zeilen: 102
+zeilen: 113
 beschreibung: "Testkatalog: typische Fragen aus der Baupraxis und was die App antworten MUSS. Aufruf (Server muss laufen): node tests/testkatalog.mjs [http://localhost:3000]"
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # tests/testkatalog.mjs
 
-**Pfad:** `tests/testkatalog.mjs` · **Bereich:** Tests · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 102
+**Pfad:** `tests/testkatalog.mjs` · **Bereich:** Tests · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 113
 
 ## Kurzbeschreibung
 

@@ -2,7 +2,7 @@
 pfad: "components/ChatApp.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 452
+zeilen: 489
 beschreibung: "Oberfläche: Kopf (Sprache, Darstellung), Seitenleiste mit festen Formularen (Ortsauskunft, Paragraph), angeheftete Gebietsleiste und der Auskunfts-Verlauf (Chat)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # components/ChatApp.tsx
 
-**Pfad:** `components/ChatApp.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 452
+**Pfad:** `components/ChatApp.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 489
 
 ## Kurzbeschreibung
 

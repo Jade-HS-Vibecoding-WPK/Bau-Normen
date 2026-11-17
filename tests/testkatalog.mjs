@@ -31,7 +31,10 @@ const FAELLE = [
   // Musterbauordnung und VOB
   { frage: "§ 6 MBO", erwartet: [["norm", "§ 6", "mbo"]] },
   { frage: "Musterbauordnung § 61", erwartet: [["norm", "§ 61", "mbo"]] },
-  { frage: "§ 5 NBauO", erwartet: [["fehler"]] }, // Landesbauordnung noch nicht in der Bibliothek – nicht mit der MBO verwechseln
+  { frage: "§ 5 NBauO", erwartet: [["norm", "§ 5", "nbauo"]] },
+  { frage: "Niedersächsische Bauordnung § 60", erwartet: [["norm", "§ 60", "nbauo"]] },
+  { frage: "§ 70a NBauO", erwartet: [["norm", "§ 70a", "nbauo"]] },
+  { frage: "§ 89 NBauO", erwartet: [["fehler"]] },
   { frage: "§ 3a VOB/A", erwartet: [["norm", "§ 3a", "voba"]] },
   { frage: "§ 3a EU VOB/A", erwartet: [["norm", "§ 3a EU", "voba"]] },
   { frage: "§ 3 VOB/A-EU", erwartet: [["norm", "§ 3 EU", "voba"]] },
@@ -57,6 +60,7 @@ const FAELLE = [
   { frage: "Abnahme der Bauleistung", erwartet: [["treffer", "§ 12"]] },
   { frage: "Mängelansprüche", erwartet: [["treffer", "§ 13"]] },
   { frage: "Estricharbeiten", erwartet: [["treffer", "DIN 18353"]] },
+  { frage: "Bauvoranfrage", erwartet: [["treffer", "§ 73"]] },
   { frage: "xyzqv", erwartet: [["fehler"]] },
 
   // Ortsauskunft (live)
@@ -64,6 +68,11 @@ const FAELLE = [
   { frage: "Gartenstraße 5", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Ich habe ein Grundstück an der Gartenstraße 5, dort steht ein Denkmal", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Fantasiestraße 999", erwartet: [["ort", "standort-fehlt"]] },
+  // Ortsauskunft Deutschland: B-Pläne nur Oldenburg, Denkmale nur Niedersachsen – sonst „keine Aussage“ (fehler), nie „keiner“
+  { frage: "Gartenstraße 5, 26122 Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Bahnhofstraße 1, 30159 Hannover", erwartet: [["ort", "fehler/*"]] },
+  { frage: "Marienplatz 1, 80331 München", erwartet: [["ort", "fehler/fehler"]] },
+  { frage: "Königsallee 1", erwartet: [["auswahl"]] }, // gibt es in vielen Orten -> Rückfrage mit Postleitzahl
 ];
 
 function kurzform(a) {
@@ -96,6 +105,8 @@ for (const f of FAELLE) {
   const bestanden = antworten.length === f.erwartet.length && f.erwartet.every((e, i) => passt(antworten[i], e));
   if (bestanden) ok++;
   console.log(`${bestanden ? "OK  " : "FAIL"} ${f.frage}\n      -> ${antworten.map(kurzform).join(" | ")}`);
+  // Adresssuche (Nominatim): höchstens eine Anfrage pro Sekunde
+  if (antworten.some((a) => a.art === "ort" || a.art === "auswahl")) await new Promise((r) => setTimeout(r, 1100));
 }
 console.log(`\n${ok}/${FAELLE.length} bestanden`);
 process.exit(ok === FAELLE.length ? 0 : 1);

@@ -62,12 +62,13 @@ export function geckoProbleme(antworten: Antwort[], sprache: Sprache = "de"): Ge
           break;
         }
         if (!o.standort.hausnummerGefunden) liste.push({ stufe: "warnung", text: t("Hausnummer nicht gefunden – die Abfrage nutzt einen Punkt auf der Straße.", "House number not found – the query uses a point on the street.") });
-        if (o.bplan.status === "fehler") liste.push({ stufe: "fehler", text: o.bplan.hinweis });
+        // "nicht angebunden" ist kein Fehler, sondern ein Hinweis (orange); ein ausgefallener Dienst ist ein Fehler (rot)
+        if (o.bplan.status === "fehler") liste.push({ stufe: o.bplan.nichtAngebunden ? "warnung" : "fehler", text: o.bplan.hinweis });
         else {
           if (!o.bplan.dokumenteAbrufbar) liste.push({ stufe: "warnung", text: t("Plan-Dokumente (PDF) konnten nicht abgerufen werden.", "Plan documents (PDF) could not be retrieved.") });
           if (o.bplan.weitere === null) liste.push({ stufe: "warnung", text: t("Laufende Verfahren (Aufstellung, Veränderungssperre) nicht abrufbar.", "Ongoing procedures (plans in preparation, development freezes) not retrievable.") });
         }
-        if (o.denkmal.status === "fehler") liste.push({ stufe: "fehler", text: o.denkmal.hinweis });
+        if (o.denkmal.status === "fehler") liste.push({ stufe: o.denkmal.nichtAngebunden ? "warnung" : "fehler", text: o.denkmal.hinweis });
         break;
       }
     }

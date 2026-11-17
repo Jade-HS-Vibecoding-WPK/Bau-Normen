@@ -15,8 +15,10 @@ export interface Norm {
   titel: string;
   gliederung: string[];
   weggefallen: boolean;
-  inhalt: TextKnoten[];
-  text: string;
+  /** Wortlaut als Strukturbaum. Fehlt in der Kurzfassung der Online-Version (wird bei Bedarf nachgeladen). */
+  inhalt?: TextKnoten[];
+  /** Reiner Text (für die Suche). Fehlt in der Kurzfassung der Online-Version. */
+  text?: string;
   fussnoten?: string;
   url: string;
   verweise: string[];
@@ -74,7 +76,7 @@ export interface Erlaeuterung {
 
 export interface NormAnsicht {
   gesetz: GesetzInfo;
-  norm: Omit<Norm, "text" | "verweise">;
+  norm: Omit<Norm, "text" | "verweise" | "inhalt"> & { inhalt: TextKnoten[] };
   erlaeuterung?: Erlaeuterung;
   verweistAuf: NormRef[];
   erwaehntIn: NormRef[];
@@ -85,7 +87,20 @@ export interface OrtAnsicht {
   eingabe: string;
   abgefragtAm: string;
   standort:
-    | { status: "ok"; adresse: string; lat: number; lon: number; hausnummerGefunden: boolean; quelle: string }
+    | {
+        status: "ok";
+        adresse: string;
+        lat: number;
+        lon: number;
+        hausnummerGefunden: boolean;
+        quelle: string;
+        /** Gemeinde/Stadt, Postleitzahl und Bundesland laut Adressdaten */
+        ort: string;
+        plz?: string;
+        land: string;
+        /** Stadt Oldenburg (Oldb): dort sind die B-Plan-Dienste angebunden */
+        oldenburg: boolean;
+      }
     | { status: "nicht-gefunden" | "fehler"; hinweis: string };
   bplan:
     | {
@@ -106,7 +121,7 @@ export interface OrtAnsicht {
         dokumenteAbrufbar: boolean;
         quelle: string;
       }
-    | { status: "fehler"; hinweis: string; quelle: string };
+    | { status: "fehler"; hinweis: string; quelle: string; /** Für diesen Ort ist (noch) kein Dienst angebunden */ nichtAngebunden?: boolean };
   denkmal:
     | {
         status: "am-standort" | "umgebung" | "keiner";
@@ -126,7 +141,7 @@ export interface OrtAnsicht {
         radiusM: number;
         quelle: string;
       }
-    | { status: "fehler"; hinweis: string; quelle: string };
+    | { status: "fehler"; hinweis: string; quelle: string; /** Für diesen Ort ist (noch) kein Dienst angebunden */ nichtAngebunden?: boolean };
   nutzerNenntDenkmal: boolean;
   einordnung: { thema: string; titel: string; text: string; paragraphen: NormRef[]; ton: "info" | "achtung" | "neutral" }[];
   links: { label: string; url: string }[];
