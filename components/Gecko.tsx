@@ -343,13 +343,19 @@ export default function Gecko({ signal, fest = false, ruhig: ruhigEinstellung = 
 
       if (platz && !halten.current) {
         if (modus === "sitzt") {
-          // am Rand kleben (folgt dem Scrollen)
+          // Sein Platz bewegt sich (Scrollen, neue Antwort, Gebietsleiste): kleine Verschiebungen nimmt er mit,
+          // größere läuft er nach – so bewegt er sich nur in Blickrichtung und rutscht nie seitlich über den Bildschirm.
+          // "Sitzt still", ohne Animationen oder eingerollt bleibt er einfach an seinem Platz kleben.
           const jetzt = v(platz.x, platz.y);
+          let nachlaufen = false;
           if (ankerVorher) {
             const d = minus(jetzt, ankerVorher);
-            if (Math.abs(d.x) + Math.abs(d.y) > 0.01) verschiebe(d);
+            const weg = Math.abs(d.x) + Math.abs(d.y);
+            if (weg > 3 && !ruhig && !fest) nachlaufen = true;
+            else if (weg > 0.01) verschiebe(d);
           }
-          ankerVorher = jetzt;
+          if (nachlaufen) geheZu({ anker, el: ankerEl }, Math.max(2500, bis - t));
+          else ankerVorher = jetzt;
           if (!ruhig) {
             if (sig.modus === "sucht") kopfDrehZiel = 14 * Math.sin(t / 900); // schaut sich langsam um
             else if (t > kopfNaechst) {
@@ -417,8 +423,10 @@ export default function Gecko({ signal, fest = false, ruhig: ruhigEinstellung = 
         ankerVorher = v(platz.x, platz.y);
       }
 
-      // Spur fortschreiben
-      if (laenge(minus(kopf, spur[0])) > 1.5) spur.unshift(kopf);
+      // Spur fortschreiben: spur[0] ist immer der Kopf; ein neuer fester Punkt entsteht, sobald der Kopf 1,5 px
+      // vom letzten festen Punkt (spur[1]) entfernt ist. (Früher wurde mit dem Kopf des vorigen Bildes verglichen –
+      // bei 60 Bildern/s und 1,3 px je Bild kam dann nie ein Punkt hinzu und der Körper lief schräg zur Laufrichtung.)
+      if (spur.length < 2 || laenge(minus(kopf, spur[1])) > 1.5) spur.unshift(kopf);
       else spur[0] = kopf;
       let summe = 0;
       for (let i = 1; i < spur.length; i++) {

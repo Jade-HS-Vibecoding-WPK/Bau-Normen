@@ -316,7 +316,7 @@ Geänderte Paragraphen sollten danach auch inhaltlich mit ihrer Erläuterung abg
 ## Gestaltung
 
 <p align="center">
-  <img src="docs/bilder/banner.png" alt="Banner: Baurecht im Wortlaut, Ortsauskunft Oldenburg – Linienzeichnung mit Haus, Pflanze, Baum und Gecko" width="100%">
+  <img src="docs/bilder/banner.png" alt="Banner: Baurecht im Wortlaut, Ortsauskunft Deutschland – Linienzeichnung mit Nurdachhaus, Pflanze, Baum und Gecko" width="100%">
 </p>
 
 <p align="center">

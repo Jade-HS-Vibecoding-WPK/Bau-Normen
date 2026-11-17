@@ -88,10 +88,11 @@ export function LinienBild({ className }: { className?: string }) {
       <g className="lb-strich">
         <path d="M238 182V146M238 162L229 154M238 157L247 149" />
         <path d="M96 182H222" />
-        <path d="M120 182V134L160 105 200 134V182" />
-        <path d="M150 182V156H170V182" />
-        <path d="M128 142H142V156H128Z" />
-        <circle cx="182" cy="149" r="7" />
+        {/* Nurdachhaus: Dachflächen bis zum Boden, am First gekreuzt; innerer Giebel, Tür, dreieckiges Giebelfenster */}
+        <path d="M110 182L162 91M210 182L158 91" />
+        <path d="M124 182L160 119 196 182" />
+        <path d="M152 182V160H168V182" />
+        <path d="M151 149L160 133 169 149Z" />
         <path d="M92 182C88 154 92 128 104 102" />
         <path d="M95 152C78 148 70 134 72 122 86 126 95 138 95 152ZM95 152L80 130" />
         <path d="M98 130C112 124 122 110 120 98 106 102 98 116 98 130ZM98 130L114 104" />
