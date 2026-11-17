@@ -117,6 +117,23 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 ---
 
 ## Nach den 4 Tagen
+
+**Grundstücksanalyse mit eigenen Grundstücksgrenzen (nach der Demo – Wunsch aus dem Kreis der Testenden, 17.11.)**
+
+Ziel: Wer die Grenzen seines Flurstücks als Datei hat, bekommt eine genauere Ortsauskunft für die **Fläche** statt für den Adresspunkt – als Grundstücks-Steckbrief mit Fakten und offenen Punkten, **keine Kaufempfehlung** („lohnt sich der Kauf?“ beantwortet die App nicht: Kaufpreis, Bauzustand, Baulasten, Altlasten, Grundbuch fehlen, und ein Urteil widerspräche dem Grundsatz „feste Regeln, keine Beratung“).
+
+**Getrennt von der Hauptfunktion:** Gesetzestexte und Normen abrufen bleibt die Hauptfunktion und darf davon nicht berührt werden.
+- eigener Einstieg (z. B. Knopf „Grundstück analysieren“ bzw. eigenes Formular „D · Grundstück“), die Grundstücksanzeige erscheint **nur**, wenn Grenzen hochgeladen wurden
+- eigener Code-Bereich (z. B. `lib/grundstueck/`, `components/Grundstueck*.tsx`); Lotse, Bibliothek und Paragraphen-Abruf bleiben unverändert, die vorhandene Ortsauskunft wird nur mitbenutzt (Dienste, Gegenstücke), nicht umgebaut
+- Datei wird **nur im Browser** gelesen (nichts verlässt das Gerät, läuft auch auf GitHub Pages)
+
+Stufen:
+- [ ] **Stufe 1** (ca. 1,5–2 Tage): Upload GeoJSON, KML, Shapefile (ZIP); Koordinatensysteme UTM 32/33 (EPSG 25832/25833), ältere Gauß-Krüger-Daten über eine Bibliothek; Grundstück in der Lageskizze; B-Pläne mit Anteil an der Fläche, Denkmale auf dem Grundstück und bis 50 m um die **Grenze**; Grundstücksgröße. Vorher klären: welche Dateien (Format, Koordinatensystem) die Testenden tatsächlich haben.
+- [ ] **Stufe 2** (ca. 3–5 Tage): Festsetzungen (GRZ, GFZ, Geschosse, Bauweise) aus XPlanung-Diensten, wo vorhanden → z. B. zulässige Grundfläche = GRZ × Grundstücksfläche; setzt den BauNVO-Import voraus (§ 19). Heute liefern alle angebundenen Dienste nur Planumringe.
+- [ ] **Stufe 3** (Wochen): weitere Ebenen, soweit offen – Bodenrichtwerte (BORIS), Hochwassergefahr, Altlasten; je Land eigene Dienste wie bei B-Plänen und Denkmalen
+- [ ] Alternative für Käuferinnen/Käufer ohne GIS-Datei: Flurstück zur Adresse aus offenen ALKIS-Daten holen, wo ein Land sie anbietet (je Land prüfen)
+- [ ] DXF aus dem CAD erst später (enthält kein Koordinatensystem – muss abgefragt werden)
+
 **Funktionen, die eine KI brauchen** (API-Key nötig):
 - [ ] Freie Fragen verstehen („Was muss ich beachten, wenn ich neben einem Denkmal anbaue?“) – die KI wählt nur die Werkzeuge, der Gesetzestext kommt weiter aus der Bibliothek
 - [ ] Thematisch verwandte Paragraphen vorschlagen (als KI-Vorschlag gekennzeichnet)

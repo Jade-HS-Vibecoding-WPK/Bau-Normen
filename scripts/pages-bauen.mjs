@@ -1,5 +1,6 @@
 // Baut die statische Online-Version für GitHub Pages nach out/.
-// Aufruf: npm run build:pages   (optional: NEXT_PUBLIC_BASIS=/Repo-Name, Standard /Bau-Normen-KI)
+// Aufruf: npm run build:pages   (optional: NEXT_PUBLIC_BASIS=/Repo-Name, Standard /Bau-Normen; der Workflow
+//                                 .github/workflows/pages.yml setzt den Namen des Repositorys automatisch)
 //
 // 1. Bereitet die Daten für den Browser in kleinen Teilen vor (public/daten/), damit die Seite auch mit vielen
 //    Regelwerken schnell bleibt – der Browser lädt nur, was er gerade braucht (siehe lib/daten-browser.ts):
@@ -70,7 +71,7 @@ console.log(
   `Daten vorbereitet: katalog.json ${kb(katalogJson.length)} (${katalog.gesetze.length} Regelwerke) · je Gesetz: details ${kb(groesseDetails)}, suche ${kb(groesseSuche)} · ${dateien} Wortlaut-Dateien (${kb(groesseWortlaut)})`,
 );
 
-const env = { ...process.env, NEXT_PUBLIC_STATISCH: "1", NEXT_PUBLIC_BASIS: process.env.NEXT_PUBLIC_BASIS ?? "/Bau-Normen-KI" };
+const env = { ...process.env, NEXT_PUBLIC_STATISCH: "1", NEXT_PUBLIC_BASIS: process.env.NEXT_PUBLIC_BASIS ?? "/Bau-Normen" };
 console.log(`Baue statische Fassung für ${env.NEXT_PUBLIC_BASIS || "/"} …`);
 const r = spawnSync(process.execPath, ["node_modules/next/dist/bin/next", "build"], { stdio: "inherit", env });
 if (r.status !== 0) process.exit(r.status ?? 1);

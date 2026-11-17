@@ -1,10 +1,11 @@
-// Zeigt die statische Online-Version (out/) lokal so an, wie GitHub Pages sie ausliefert: unter /Bau-Normen-KI/.
-// Aufruf: npm run build:pages && npm run preview:pages   →  http://localhost:3100/Bau-Normen-KI/
+// Zeigt die statische Online-Version (out/) lokal so an, wie GitHub Pages sie ausliefert: unter /<Name des Repositorys>/
+// (Standard /Bau-Normen; auf GitHub setzt der Workflow den Namen automatisch).
+// Aufruf: npm run build:pages && npm run preview:pages   →  http://localhost:3100/Bau-Normen/
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { createServer } from "node:http";
 import path from "node:path";
 
-const BASIS = process.env.NEXT_PUBLIC_BASIS ?? "/Bau-Normen-KI";
+const BASIS = process.env.NEXT_PUBLIC_BASIS ?? "/Bau-Normen";
 const PORT = Number(process.env.PORT ?? 3100);
 const WURZEL = path.resolve("out");
 const TYPEN = {
