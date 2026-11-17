@@ -1,0 +1,1721 @@
+{
+ "id": "vobb",
+ "kurz": "VOB/B",
+ "titel": "Vergabe- und Vertragsordnung für Bauleistungen Teil B",
+ "ebene": "Vergabe- und Vertragsordnung",
+ "stand": "zuletzt geändert durch Bek. v. 7.1.2016 (BAnz AT 19.01.2016 B3, ber. BAnz AT 01.04.2016 B1); Fassung der Bek. v. 31.7.2009 (BAnz. Nr. 155a v. 15.10.2009, ber. BAnz. 2010 S. 940), geändert durch Bek. v. 26.6.2012 (BAnz AT 13.07.2012 B3)",
+ "quelle": {
+  "name": "Fachinformation Bundesbau (fib-bund.de) im Auftrag des BMWSB – VOB/B 2016, nichtamtliche Fassung",
+  "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf",
+  "fassung": "VOB/B Ausgabe 2016, bekanntgemacht im Bundesanzeiger BAnz AT 19.01.2016 B3 und BAnz AT 01.04.2016 B1 (nichtamtliche Lesefassung)",
+  "abgerufen": "2026-11-17"
+ },
+ "normen": [
+  {
+   "id": "1",
+   "bez": "§ 1",
+   "titel": "Art und Umfang der Leistung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die auszuführende Leistung wird nach Art und Umfang durch den Vertrag bestimmt. Als Bestandteil des Vertrags gelten auch die Allgemeinen Technischen Vertragsbedingungen für Bauleistungen (VOB/C)."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Bei Widersprüchen im Vertrag gelten nacheinander:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "die Leistungsbeschreibung,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "die Besonderen Vertragsbedingungen,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "etwaige Zusätzliche Vertragsbedingungen,"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "etwaige Zusätzliche Technische Vertragsbedingungen,"
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "die Allgemeinen Technischen Vertragsbedingungen für Bauleistungen,"
+         ]
+        },
+        {
+         "dt": "6.",
+         "c": [
+          "die Allgemeinen Vertragsbedingungen für die Ausführung von Bauleistungen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Änderungen des Bauentwurfs anzuordnen, bleibt dem Auftraggeber vorbehalten."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Nicht vereinbarte Leistungen, die zur Ausführung der vertraglichen Leistung erforderlich werden, hat der Auftragnehmer auf Verlangen des Auftraggebers mit auszuführen, außer wenn sein Betrieb auf derartige Leistungen nicht eingerichtet ist. Andere Leistungen können dem Auftragnehmer nur mit seiner Zustimmung übertragen werden."
+     ]
+    }
+   ],
+   "text": "(1) Die auszuführende Leistung wird nach Art und Umfang durch den Vertrag bestimmt. Als Bestandteil des Vertrags gelten auch die Allgemeinen Technischen Vertragsbedingungen für Bauleistungen (VOB/C).\n(2) Bei Widersprüchen im Vertrag gelten nacheinander:\n1. die Leistungsbeschreibung,\n2. die Besonderen Vertragsbedingungen,\n3. etwaige Zusätzliche Vertragsbedingungen,\n4. etwaige Zusätzliche Technische Vertragsbedingungen,\n5. die Allgemeinen Technischen Vertragsbedingungen für Bauleistungen,\n6. die Allgemeinen Vertragsbedingungen für die Ausführung von Bauleistungen.\n(3) Änderungen des Bauentwurfs anzuordnen, bleibt dem Auftraggeber vorbehalten.\n(4) Nicht vereinbarte Leistungen, die zur Ausführung der vertraglichen Leistung erforderlich werden, hat der Auftragnehmer auf Verlangen des Auftraggebers mit auszuführen, außer wenn sein Betrieb auf derartige Leistungen nicht eingerichtet ist. Andere Leistungen können dem Auftragnehmer nur mit seiner Zustimmung übertragen werden.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=2",
+   "verweise": []
+  },
+  {
+   "id": "2",
+   "bez": "§ 2",
+   "titel": "Vergütung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Durch die vereinbarten Preise werden alle Leistungen abgegolten, die nach der Leistungsbeschreibung, den Besonderen Vertragsbedingungen, den Zusätzlichen Vertragsbedingungen, den Zusätzlichen Technischen Vertragsbedingungen, den Allgemeinen Technischen Vertragsbedingungen für Bauleistungen und der gewerblichen Verkehrssitte zur vertraglichen Leistung gehören."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Vergütung wird nach den vertraglichen Einheitspreisen und den tatsächlich ausgeführten Leistungen berechnet, wenn keine andere Berechnungsart (z. B. durch Pauschalsumme, nach Stundenlohnsätzen, nach Selbstkosten) vereinbart ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Weicht die ausgeführte Menge der unter einem Einheitspreis erfassten Leistung oder Teilleistung um nicht mehr als 10 v. H. von dem im Vertrag vorgesehenen Umfang ab, so gilt der vertragliche Einheitspreis."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Für die über 10 v. H. hinausgehende Überschreitung des Mengenansatzes ist auf Verlangen ein neuer Preis unter Berücksichtigung der Mehr- oder Minderkosten zu vereinbaren."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Bei einer über 10 v. H. hinausgehenden Unterschreitung des Mengenansatzes ist auf Verlangen der Einheitspreis für die tatsächlich ausgeführte Menge der Leistung oder Teilleistung zu erhöhen, soweit der Auftragnehmer nicht durch Erhöhung der Mengen bei anderen Ordnungszahlen (Positionen) oder in anderer Weise einen Ausgleich erhält. Die Erhöhung des Einheitspreises soll im Wesentlichen dem Mehrbetrag entsprechen, der sich durch Verteilung der Baustelleneinrichtungs- und Baustellengemeinkosten und der Allgemeinen Geschäftskosten auf die verringerte Menge ergibt. Die Umsatzsteuer wird entsprechend dem neuen Preis vergütet."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Sind von der unter einem Einheitspreis erfassten Leistung oder Teilleistung andere Leistungen abhängig, für die eine Pauschalsumme vereinbart ist, so kann mit der Änderung des Einheitspreises auch eine angemessene Änderung der Pauschalsumme gefordert werden."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Werden im Vertrag ausbedungene Leistungen des Auftragnehmers vom Auftraggeber selbst übernommen (z. B. Lieferung von Bau-, Bauhilfs- und Betriebsstoffen), so gilt, wenn nichts anderes vereinbart wird, § 8 Absatz 1 Nummer 2 entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Werden durch Änderung des Bauentwurfs oder andere Anordnungen des Auftraggebers die Grundlagen des Preises für eine im Vertrag vorgesehene Leistung geändert, so ist ein neuer Preis unter Berücksichtigung der Mehr- oder Minderkosten zu vereinbaren. Die Vereinbarung soll vor der Ausführung getroffen werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Wird eine im Vertrag nicht vorgesehene Leistung gefordert, so hat der Auftragnehmer Anspruch auf besondere Vergütung. Er muss jedoch den Anspruch dem Auftraggeber ankündigen, bevor er mit der Ausführung der Leistung beginnt."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Die Vergütung bestimmt sich nach den Grundlagen der Preisermittlung für die vertragliche Leistung und den besonderen Kosten der geforderten Leistung. Sie ist möglichst vor Beginn der Ausführung zu vereinbaren."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Ist als Vergütung der Leistung eine Pauschalsumme vereinbart, so bleibt die Vergütung unverändert. Weicht jedoch die ausgeführte Leistung von der vertraglich vorgesehenen Leistung so erheblich ab, dass ein Festhalten an der Pauschalsumme nicht zumutbar ist (§ 313 BGB), so ist auf Verlangen ein Ausgleich unter Berücksichtigung der Mehr- oder Minderkosten zu gewähren. Für die Bemessung des Ausgleichs ist von den Grundlagen der Preisermittlung auszugehen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Die Regelungen der Absätze 4, 5 und 6 gelten auch bei Vereinbarung einer Pauschalsumme."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Wenn nichts anderes vereinbart ist, gelten die Nummern 1 und 2 auch für Pauschalsummen, die für Teile der Leistung vereinbart sind; Absatz 3 Nummer 4 bleibt unberührt."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(8)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Leistungen, die der Auftragnehmer ohne Auftrag oder unter eigenmächtiger Abweichung vom Auftrag ausführt, werden nicht vergütet. Der Auftragnehmer hat sie auf Verlangen innerhalb einer angemessenen Frist zu beseitigen; sonst kann es auf seine Kosten geschehen. Er haftet außerdem für andere Schäden, die dem Auftraggeber hieraus entstehen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Eine Vergütung steht dem Auftragnehmer jedoch zu, wenn der Auftraggeber solche Leistungen nachträglich anerkennt. Eine Vergütung steht ihm auch zu, wenn die Leistungen für die Erfüllung des Vertrags notwendig waren, dem mutmaßlichen Willen des Auftraggebers entsprachen und ihm unverzüglich angezeigt wurden. Soweit dem Auftragnehmer eine Vergütung zusteht, gelten die Berechnungsgrundlagen für geänderte oder zusätzliche Leistungen der Absätze 5 oder 6 entsprechend."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Die Vorschriften des BGB über die Geschäftsführung ohne Auftrag (§§ 677 ff. BGB) bleiben unberührt."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(9)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Verlangt der Auftraggeber Zeichnungen, Berechnungen oder andere Unterlagen, die der Auftragnehmer nach dem Vertrag, besonders den Technischen Vertragsbedingungen oder der gewerblichen Verkehrssitte, nicht zu beschaffen hat, so hat er sie zu vergüten."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Lässt er vom Auftragnehmer nicht aufgestellte technische Berechnungen durch den Auftragnehmer nachprüfen, so hat er die Kosten zu tragen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(10) Stundenlohnarbeiten werden nur vergütet, wenn sie als solche vor ihrem Beginn ausdrücklich vereinbart worden sind (§ 15)."
+     ]
+    }
+   ],
+   "text": "(1) Durch die vereinbarten Preise werden alle Leistungen abgegolten, die nach der Leistungsbeschreibung, den Besonderen Vertragsbedingungen, den Zusätzlichen Vertragsbedingungen, den Zusätzlichen Technischen Vertragsbedingungen, den Allgemeinen Technischen Vertragsbedingungen für Bauleistungen und der gewerblichen Verkehrssitte zur vertraglichen Leistung gehören.\n(2) Die Vergütung wird nach den vertraglichen Einheitspreisen und den tatsächlich ausgeführten Leistungen berechnet, wenn keine andere Berechnungsart (z. B. durch Pauschalsumme, nach Stundenlohnsätzen, nach Selbstkosten) vereinbart ist.\n(3)\n1. Weicht die ausgeführte Menge der unter einem Einheitspreis erfassten Leistung oder Teilleistung um nicht mehr als 10 v. H. von dem im Vertrag vorgesehenen Umfang ab, so gilt der vertragliche Einheitspreis.\n2. Für die über 10 v. H. hinausgehende Überschreitung des Mengenansatzes ist auf Verlangen ein neuer Preis unter Berücksichtigung der Mehr- oder Minderkosten zu vereinbaren.\n3. Bei einer über 10 v. H. hinausgehenden Unterschreitung des Mengenansatzes ist auf Verlangen der Einheitspreis für die tatsächlich ausgeführte Menge der Leistung oder Teilleistung zu erhöhen, soweit der Auftragnehmer nicht durch Erhöhung der Mengen bei anderen Ordnungszahlen (Positionen) oder in anderer Weise einen Ausgleich erhält. Die Erhöhung des Einheitspreises soll im Wesentlichen dem Mehrbetrag entsprechen, der sich durch Verteilung der Baustelleneinrichtungs- und Baustellengemeinkosten und der Allgemeinen Geschäftskosten auf die verringerte Menge ergibt. Die Umsatzsteuer wird entsprechend dem neuen Preis vergütet.\n4. Sind von der unter einem Einheitspreis erfassten Leistung oder Teilleistung andere Leistungen abhängig, für die eine Pauschalsumme vereinbart ist, so kann mit der Änderung des Einheitspreises auch eine angemessene Änderung der Pauschalsumme gefordert werden.\n(4) Werden im Vertrag ausbedungene Leistungen des Auftragnehmers vom Auftraggeber selbst übernommen (z. B. Lieferung von Bau-, Bauhilfs- und Betriebsstoffen), so gilt, wenn nichts anderes vereinbart wird, § 8 Absatz 1 Nummer 2 entsprechend.\n(5) Werden durch Änderung des Bauentwurfs oder andere Anordnungen des Auftraggebers die Grundlagen des Preises für eine im Vertrag vorgesehene Leistung geändert, so ist ein neuer Preis unter Berücksichtigung der Mehr- oder Minderkosten zu vereinbaren. Die Vereinbarung soll vor der Ausführung getroffen werden.\n(6)\n1. Wird eine im Vertrag nicht vorgesehene Leistung gefordert, so hat der Auftragnehmer Anspruch auf besondere Vergütung. Er muss jedoch den Anspruch dem Auftraggeber ankündigen, bevor er mit der Ausführung der Leistung beginnt.\n2. Die Vergütung bestimmt sich nach den Grundlagen der Preisermittlung für die vertragliche Leistung und den besonderen Kosten der geforderten Leistung. Sie ist möglichst vor Beginn der Ausführung zu vereinbaren.\n(7)\n1. Ist als Vergütung der Leistung eine Pauschalsumme vereinbart, so bleibt die Vergütung unverändert. Weicht jedoch die ausgeführte Leistung von der vertraglich vorgesehenen Leistung so erheblich ab, dass ein Festhalten an der Pauschalsumme nicht zumutbar ist (§ 313 BGB), so ist auf Verlangen ein Ausgleich unter Berücksichtigung der Mehr- oder Minderkosten zu gewähren. Für die Bemessung des Ausgleichs ist von den Grundlagen der Preisermittlung auszugehen.\n2. Die Regelungen der Absätze 4, 5 und 6 gelten auch bei Vereinbarung einer Pauschalsumme.\n3. Wenn nichts anderes vereinbart ist, gelten die Nummern 1 und 2 auch für Pauschalsummen, die für Teile der Leistung vereinbart sind; Absatz 3 Nummer 4 bleibt unberührt.\n(8)\n1. Leistungen, die der Auftragnehmer ohne Auftrag oder unter eigenmächtiger Abweichung vom Auftrag ausführt, werden nicht vergütet. Der Auftragnehmer hat sie auf Verlangen innerhalb einer angemessenen Frist zu beseitigen; sonst kann es auf seine Kosten geschehen. Er haftet außerdem für andere Schäden, die dem Auftraggeber hieraus entstehen.\n2. Eine Vergütung steht dem Auftragnehmer jedoch zu, wenn der Auftraggeber solche Leistungen nachträglich anerkennt. Eine Vergütung steht ihm auch zu, wenn die Leistungen für die Erfüllung des Vertrags notwendig waren, dem mutmaßlichen Willen des Auftraggebers entsprachen und ihm unverzüglich angezeigt wurden. Soweit dem Auftragnehmer eine Vergütung zusteht, gelten die Berechnungsgrundlagen für geänderte oder zusätzliche Leistungen der Absätze 5 oder 6 entsprechend.\n3. Die Vorschriften des BGB über die Geschäftsführung ohne Auftrag (§§ 677 ff. BGB) bleiben unberührt.\n(9)\n1. Verlangt der Auftraggeber Zeichnungen, Berechnungen oder andere Unterlagen, die der Auftragnehmer nach dem Vertrag, besonders den Technischen Vertragsbedingungen oder der gewerblichen Verkehrssitte, nicht zu beschaffen hat, so hat er sie zu vergüten.\n2. Lässt er vom Auftragnehmer nicht aufgestellte technische Berechnungen durch den Auftragnehmer nachprüfen, so hat er die Kosten zu tragen.\n(10) Stundenlohnarbeiten werden nur vergütet, wenn sie als solche vor ihrem Beginn ausdrücklich vereinbart worden sind (§ 15).",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=2",
+   "verweise": [
+    "8",
+    "15"
+   ]
+  },
+  {
+   "id": "3",
+   "bez": "§ 3",
+   "titel": "Ausführungsunterlagen",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die für die Ausführung nötigen Unterlagen sind dem Auftragnehmer unentgeltlich und rechtzeitig zu übergeben."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Das Abstecken der Hauptachsen der baulichen Anlagen, ebenso der Grenzen des Geländes, das dem Auftragnehmer zur Verfügung gestellt wird, und das Schaffen der notwendigen Höhenfestpunkte in unmittelbarer Nähe der baulichen Anlagen sind Sache des Auftraggebers."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die vom Auftraggeber zur Verfügung gestellten Geländeaufnahmen und Absteckungen und die übrigen für die Ausführung übergebenen Unterlagen sind für den Auftragnehmer maßgebend. Jedoch hat er sie, soweit es zur ordnungsgemäßen Vertragserfüllung gehört, auf etwaige Unstimmigkeiten zu überprüfen und den Auftraggeber auf entdeckte oder vermutete Mängel hinzuweisen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Vor Beginn der Arbeiten ist, soweit notwendig, der Zustand der Straßen und Geländeoberfläche, der Vorfluter und Vorflutleitungen, ferner der baulichen Anlagen im Baubereich in einer Niederschrift festzuhalten, die vom Auftraggeber und Auftragnehmer anzuerkennen ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Zeichnungen, Berechnungen, Nachprüfungen von Berechnungen oder andere Unterlagen, die der Auftragnehmer nach dem Vertrag, besonders den Technischen Vertragsbedingungen, oder der gewerblichen Verkehrssitte oder auf besonderes Verlangen des Auftraggebers (§ 2 Absatz 9) zu beschaffen hat, sind dem Auftraggeber nach Aufforderung rechtzeitig vorzulegen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Die in Absatz 5 genannten Unterlagen dürfen ohne Genehmigung ihres Urhebers nicht veröffentlicht, vervielfältigt, geändert oder für einen anderen als den vereinbarten Zweck benutzt werden."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "An DV-Programmen hat der Auftraggeber das Recht zur Nutzung mit den vereinbarten Leistungsmerkmalen in unveränderter Form auf den festgelegten Geräten. Der Auftraggeber darf zum Zwecke der Datensicherung zwei Kopien herstellen. Diese müssen alle Identifikationsmerkmale enthalten. Der Verbleib der Kopien ist auf Verlangen nachzuweisen."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Der Auftragnehmer bleibt unbeschadet des Nutzungsrechts des Auftraggebers zur Nutzung der Unterlagen und der DV-Programme berechtigt."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "text": "(1) Die für die Ausführung nötigen Unterlagen sind dem Auftragnehmer unentgeltlich und rechtzeitig zu übergeben.\n(2) Das Abstecken der Hauptachsen der baulichen Anlagen, ebenso der Grenzen des Geländes, das dem Auftragnehmer zur Verfügung gestellt wird, und das Schaffen der notwendigen Höhenfestpunkte in unmittelbarer Nähe der baulichen Anlagen sind Sache des Auftraggebers.\n(3) Die vom Auftraggeber zur Verfügung gestellten Geländeaufnahmen und Absteckungen und die übrigen für die Ausführung übergebenen Unterlagen sind für den Auftragnehmer maßgebend. Jedoch hat er sie, soweit es zur ordnungsgemäßen Vertragserfüllung gehört, auf etwaige Unstimmigkeiten zu überprüfen und den Auftraggeber auf entdeckte oder vermutete Mängel hinzuweisen.\n(4) Vor Beginn der Arbeiten ist, soweit notwendig, der Zustand der Straßen und Geländeoberfläche, der Vorfluter und Vorflutleitungen, ferner der baulichen Anlagen im Baubereich in einer Niederschrift festzuhalten, die vom Auftraggeber und Auftragnehmer anzuerkennen ist.\n(5) Zeichnungen, Berechnungen, Nachprüfungen von Berechnungen oder andere Unterlagen, die der Auftragnehmer nach dem Vertrag, besonders den Technischen Vertragsbedingungen, oder der gewerblichen Verkehrssitte oder auf besonderes Verlangen des Auftraggebers (§ 2 Absatz 9) zu beschaffen hat, sind dem Auftraggeber nach Aufforderung rechtzeitig vorzulegen.\n(6)\n1. Die in Absatz 5 genannten Unterlagen dürfen ohne Genehmigung ihres Urhebers nicht veröffentlicht, vervielfältigt, geändert oder für einen anderen als den vereinbarten Zweck benutzt werden.\n2. An DV-Programmen hat der Auftraggeber das Recht zur Nutzung mit den vereinbarten Leistungsmerkmalen in unveränderter Form auf den festgelegten Geräten. Der Auftraggeber darf zum Zwecke der Datensicherung zwei Kopien herstellen. Diese müssen alle Identifikationsmerkmale enthalten. Der Verbleib der Kopien ist auf Verlangen nachzuweisen.\n3. Der Auftragnehmer bleibt unbeschadet des Nutzungsrechts des Auftraggebers zur Nutzung der Unterlagen und der DV-Programme berechtigt.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=4",
+   "verweise": [
+    "2"
+   ]
+  },
+  {
+   "id": "4",
+   "bez": "§ 4",
+   "titel": "Ausführung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftraggeber hat für die Aufrechterhaltung der allgemeinen Ordnung auf der Baustelle zu sorgen und das Zusammenwirken der verschiedenen Unternehmer zu regeln. Er hat die erforderlichen öffentlich-rechtlichen Genehmigungen und Erlaubnisse — z. B. nach dem Baurecht, dem Straßenverkehrsrecht, dem Wasserrecht, dem Gewerberecht — herbeizuführen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Der Auftraggeber hat das Recht, die vertragsgemäße Ausführung der Leistung zu überwachen. Hierzu hat er Zutritt zu den Arbeitsplätzen, Werkstätten und Lagerräumen, wo die vertragliche Leistung oder Teile von ihr hergestellt oder die hierfür bestimmten Stoffe und Bauteile gelagert werden. Auf Verlangen sind ihm die Werkzeichnungen oder andere Ausführungsunterlagen sowie die Ergebnisse von Güteprüfungen zur Einsicht vorzulegen und die erforderlichen Auskünfte zu erteilen, wenn hierdurch keine Geschäftsgeheimnisse preisgegeben werden. Als Geschäftsgeheimnis bezeichnete Auskünfte und Unterlagen hat er vertraulich zu behandeln."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Der Auftraggeber ist befugt, unter Wahrung der dem Auftragnehmer zustehenden Leitung (Absatz 2) Anordnungen zu treffen, die zur vertragsgemäßen Ausführung der Leistung notwendig sind. Die Anordnungen sind grundsätzlich nur dem Auftragnehmer oder seinem für die Leitung der Ausführung bestellten Vertreter zu erteilen, außer wenn Gefahr im Verzug ist. Dem Auftraggeber ist mitzuteilen, wer jeweils als Vertreter des Auftragnehmers für die Leitung der Ausführung bestellt ist."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Hält der Auftragnehmer die Anordnungen des Auftraggebers für unberechtigt oder unzweckmäßig, so hat er seine Bedenken geltend zu machen, die Anordnungen jedoch auf Verlangen auszuführen, wenn nicht gesetzliche oder behördliche Bestimmungen entgegenstehen. Wenn dadurch eine ungerechtfertigte Erschwerung verursacht wird, hat der Auftraggeber die Mehrkosten zu tragen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftragnehmer hat die Leistung unter eigener Verantwortung nach dem Vertrag auszuführen. Dabei hat er die anerkannten Regeln der Technik und die gesetzlichen und behördlichen Bestimmungen zu beachten. Es ist seine Sache, die Ausführung seiner vertraglichen Leistung zu leiten und für Ordnung auf seiner Arbeitsstelle zu sorgen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Er ist für die Erfüllung der gesetzlichen, behördlichen und berufsgenossenschaftlichen Verpflichtungen gegenüber seinen Arbeitnehmern allein verantwortlich. Es ist ausschließlich seine Aufgabe, die Vereinbarungen und Maßnahmen zu treffen, die sein Verhältnis zu den Arbeitnehmern regeln."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Hat der Auftragnehmer Bedenken gegen die vorgesehene Art der Ausführung (auch wegen der Sicherung gegen Unfallgefahren), gegen die Güte der vom Auftraggeber gelieferten Stoffe oder Bauteile oder gegen die Leistungen anderer Unternehmer, so hat er sie dem Auftraggeber unverzüglich — möglichst schon vor Beginn der Arbeiten — schriftlich mitzuteilen; der Auftraggeber bleibt jedoch für seine Angaben, Anordnungen oder Lieferungen verantwortlich."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Der Auftraggeber hat, wenn nichts anderes vereinbart ist, dem Auftragnehmer unentgeltlich zur Benutzung oder Mitbenutzung zu überlassen:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "die notwendigen Lager- und Arbeitsplätze auf der Baustelle,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "vorhandene Zufahrtswege und Anschlussgleise,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "vorhandene Anschlüsse für Wasser und Energie. Die Kosten für den Verbrauch und den Messer oder Zähler trägt der Auftragnehmer, mehrere Auftragnehmer tragen sie anteilig."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Der Auftragnehmer hat die von ihm ausgeführten Leistungen und die ihm für die Ausführung übergebenen Gegenstände bis zur Abnahme vor Beschädigung und Diebstahl zu schützen. Auf Verlangen des Auftraggebers hat er sie vor Winterschäden und Grundwasser zu schützen, ferner Schnee und Eis zu beseitigen. Obliegt ihm die Verpflichtung nach Satz 2 nicht schon nach dem Vertrag, so regelt sich die Vergütung nach § 2 Absatz 6."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Stoffe oder Bauteile, die dem Vertrag oder den Proben nicht entsprechen, sind auf Anordnung des Auftraggebers innerhalb einer von ihm bestimmten Frist von der Baustelle zu entfernen. Geschieht es nicht, so können sie auf Kosten des Auftragnehmers entfernt oder für seine Rechnung veräußert werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) Leistungen, die schon während der Ausführung als mangelhaft oder vertragswidrig erkannt werden, hat der Auftragnehmer auf eigene Kosten durch mangelfreie zu ersetzen. Hat der Auftragnehmer den Mangel oder die Vertragswidrigkeit zu vertreten, so hat er auch den daraus entstehenden Schaden zu ersetzen. Kommt der Auftragnehmer der Pflicht zur Beseitigung des Mangels nicht nach, so kann ihm der Auftraggeber eine angemessene Frist zur Beseitigung des Mangels setzen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3)."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(8)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftragnehmer hat die Leistung im eigenen Betrieb auszuführen. Mit schriftlicher Zustimmung des Auftraggebers darf er sie an Nachunternehmer übertragen. Die Zustimmung ist nicht notwendig bei Leistungen, auf die der Betrieb des Auftragnehmers nicht eingerichtet ist. Erbringt der Auftragnehmer ohne schriftliche Zustimmung des Auftraggebers Leistungen nicht im eigenen Betrieb, obwohl sein Betrieb darauf eingerichtet ist, kann der Auftraggeber ihm eine angemessene Frist zur Aufnahme der Leistung im eigenen Betrieb setzen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3)."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Der Auftragnehmer hat bei der Weitervergabe von Bauleistungen an Nachunternehmer die Vergabe- und Vertragsordnung für Bauleistungen Teile B und C zugrunde zu legen."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Der Auftragnehmer hat dem Auftraggeber die Nachunternehmer und deren Nachunternehmer ohne Aufforderung spätestens bis zum Leistungsbeginn des Nachunternehmers mit Namen, gesetzlichen Vertretern und Kontaktdaten bekannt zu geben. Auf Verlangen des Auftraggebers hat der Auftragnehmer für seine Nachunternehmer Erklärungen und Nachweise zur Eignung vorzulegen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(9) Werden bei Ausführung der Leistung auf einem Grundstück Gegenstände von Altertums-, Kunst- oder wissenschaftlichem Wert entdeckt, so hat der Auftragnehmer vor jedem weiteren Aufdecken oder Ändern dem Auftraggeber den Fund anzuzeigen und ihm die Gegenstände nach näherer Weisung abzuliefern. Die Vergütung etwaiger Mehrkosten regelt sich nach § 2 Absatz 6. Die Rechte des Entdeckers (§ 984 BGB) hat der Auftraggeber."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(10) Der Zustand von Teilen der Leistung ist auf Verlangen gemeinsam von Auftraggeber und Auftragnehmer festzustellen, wenn diese Teile der Leistung durch die weitere Ausführung der Prüfung und Feststellung entzogen werden. Das Ergebnis ist schriftlich niederzulegen."
+     ]
+    }
+   ],
+   "text": "(1)\n1. Der Auftraggeber hat für die Aufrechterhaltung der allgemeinen Ordnung auf der Baustelle zu sorgen und das Zusammenwirken der verschiedenen Unternehmer zu regeln. Er hat die erforderlichen öffentlich-rechtlichen Genehmigungen und Erlaubnisse — z. B. nach dem Baurecht, dem Straßenverkehrsrecht, dem Wasserrecht, dem Gewerberecht — herbeizuführen.\n2. Der Auftraggeber hat das Recht, die vertragsgemäße Ausführung der Leistung zu überwachen. Hierzu hat er Zutritt zu den Arbeitsplätzen, Werkstätten und Lagerräumen, wo die vertragliche Leistung oder Teile von ihr hergestellt oder die hierfür bestimmten Stoffe und Bauteile gelagert werden. Auf Verlangen sind ihm die Werkzeichnungen oder andere Ausführungsunterlagen sowie die Ergebnisse von Güteprüfungen zur Einsicht vorzulegen und die erforderlichen Auskünfte zu erteilen, wenn hierdurch keine Geschäftsgeheimnisse preisgegeben werden. Als Geschäftsgeheimnis bezeichnete Auskünfte und Unterlagen hat er vertraulich zu behandeln.\n3. Der Auftraggeber ist befugt, unter Wahrung der dem Auftragnehmer zustehenden Leitung (Absatz 2) Anordnungen zu treffen, die zur vertragsgemäßen Ausführung der Leistung notwendig sind. Die Anordnungen sind grundsätzlich nur dem Auftragnehmer oder seinem für die Leitung der Ausführung bestellten Vertreter zu erteilen, außer wenn Gefahr im Verzug ist. Dem Auftraggeber ist mitzuteilen, wer jeweils als Vertreter des Auftragnehmers für die Leitung der Ausführung bestellt ist.\n4. Hält der Auftragnehmer die Anordnungen des Auftraggebers für unberechtigt oder unzweckmäßig, so hat er seine Bedenken geltend zu machen, die Anordnungen jedoch auf Verlangen auszuführen, wenn nicht gesetzliche oder behördliche Bestimmungen entgegenstehen. Wenn dadurch eine ungerechtfertigte Erschwerung verursacht wird, hat der Auftraggeber die Mehrkosten zu tragen.\n(2)\n1. Der Auftragnehmer hat die Leistung unter eigener Verantwortung nach dem Vertrag auszuführen. Dabei hat er die anerkannten Regeln der Technik und die gesetzlichen und behördlichen Bestimmungen zu beachten. Es ist seine Sache, die Ausführung seiner vertraglichen Leistung zu leiten und für Ordnung auf seiner Arbeitsstelle zu sorgen.\n2. Er ist für die Erfüllung der gesetzlichen, behördlichen und berufsgenossenschaftlichen Verpflichtungen gegenüber seinen Arbeitnehmern allein verantwortlich. Es ist ausschließlich seine Aufgabe, die Vereinbarungen und Maßnahmen zu treffen, die sein Verhältnis zu den Arbeitnehmern regeln.\n(3) Hat der Auftragnehmer Bedenken gegen die vorgesehene Art der Ausführung (auch wegen der Sicherung gegen Unfallgefahren), gegen die Güte der vom Auftraggeber gelieferten Stoffe oder Bauteile oder gegen die Leistungen anderer Unternehmer, so hat er sie dem Auftraggeber unverzüglich — möglichst schon vor Beginn der Arbeiten — schriftlich mitzuteilen; der Auftraggeber bleibt jedoch für seine Angaben, Anordnungen oder Lieferungen verantwortlich.\n(4) Der Auftraggeber hat, wenn nichts anderes vereinbart ist, dem Auftragnehmer unentgeltlich zur Benutzung oder Mitbenutzung zu überlassen:\n1. die notwendigen Lager- und Arbeitsplätze auf der Baustelle,\n2. vorhandene Zufahrtswege und Anschlussgleise,\n3. vorhandene Anschlüsse für Wasser und Energie. Die Kosten für den Verbrauch und den Messer oder Zähler trägt der Auftragnehmer, mehrere Auftragnehmer tragen sie anteilig.\n(5) Der Auftragnehmer hat die von ihm ausgeführten Leistungen und die ihm für die Ausführung übergebenen Gegenstände bis zur Abnahme vor Beschädigung und Diebstahl zu schützen. Auf Verlangen des Auftraggebers hat er sie vor Winterschäden und Grundwasser zu schützen, ferner Schnee und Eis zu beseitigen. Obliegt ihm die Verpflichtung nach Satz 2 nicht schon nach dem Vertrag, so regelt sich die Vergütung nach § 2 Absatz 6.\n(6) Stoffe oder Bauteile, die dem Vertrag oder den Proben nicht entsprechen, sind auf Anordnung des Auftraggebers innerhalb einer von ihm bestimmten Frist von der Baustelle zu entfernen. Geschieht es nicht, so können sie auf Kosten des Auftragnehmers entfernt oder für seine Rechnung veräußert werden.\n(7) Leistungen, die schon während der Ausführung als mangelhaft oder vertragswidrig erkannt werden, hat der Auftragnehmer auf eigene Kosten durch mangelfreie zu ersetzen. Hat der Auftragnehmer den Mangel oder die Vertragswidrigkeit zu vertreten, so hat er auch den daraus entstehenden Schaden zu ersetzen. Kommt der Auftragnehmer der Pflicht zur Beseitigung des Mangels nicht nach, so kann ihm der Auftraggeber eine angemessene Frist zur Beseitigung des Mangels setzen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3).\n(8)\n1. Der Auftragnehmer hat die Leistung im eigenen Betrieb auszuführen. Mit schriftlicher Zustimmung des Auftraggebers darf er sie an Nachunternehmer übertragen. Die Zustimmung ist nicht notwendig bei Leistungen, auf die der Betrieb des Auftragnehmers nicht eingerichtet ist. Erbringt der Auftragnehmer ohne schriftliche Zustimmung des Auftraggebers Leistungen nicht im eigenen Betrieb, obwohl sein Betrieb darauf eingerichtet ist, kann der Auftraggeber ihm eine angemessene Frist zur Aufnahme der Leistung im eigenen Betrieb setzen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3).\n2. Der Auftragnehmer hat bei der Weitervergabe von Bauleistungen an Nachunternehmer die Vergabe- und Vertragsordnung für Bauleistungen Teile B und C zugrunde zu legen.\n3. Der Auftragnehmer hat dem Auftraggeber die Nachunternehmer und deren Nachunternehmer ohne Aufforderung spätestens bis zum Leistungsbeginn des Nachunternehmers mit Namen, gesetzlichen Vertretern und Kontaktdaten bekannt zu geben. Auf Verlangen des Auftraggebers hat der Auftragnehmer für seine Nachunternehmer Erklärungen und Nachweise zur Eignung vorzulegen.\n(9) Werden bei Ausführung der Leistung auf einem Grundstück Gegenstände von Altertums-, Kunst- oder wissenschaftlichem Wert entdeckt, so hat der Auftragnehmer vor jedem weiteren Aufdecken oder Ändern dem Auftraggeber den Fund anzuzeigen und ihm die Gegenstände nach näherer Weisung abzuliefern. Die Vergütung etwaiger Mehrkosten regelt sich nach § 2 Absatz 6. Die Rechte des Entdeckers (§ 984 BGB) hat der Auftraggeber.\n(10) Der Zustand von Teilen der Leistung ist auf Verlangen gemeinsam von Auftraggeber und Auftragnehmer festzustellen, wenn diese Teile der Leistung durch die weitere Ausführung der Prüfung und Feststellung entzogen werden. Das Ergebnis ist schriftlich niederzulegen.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=5",
+   "verweise": [
+    "2",
+    "8"
+   ]
+  },
+  {
+   "id": "5",
+   "bez": "§ 5",
+   "titel": "Ausführungsfristen",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Ausführung ist nach den verbindlichen Fristen (Vertragsfristen) zu beginnen, angemessen zu fördern und zu vollenden. In einem Bauzeitenplan enthaltene Einzelfristen gelten nur dann als Vertragsfristen, wenn dies im Vertrag ausdrücklich vereinbart ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ist für den Beginn der Ausführung keine Frist vereinbart, so hat der Auftraggeber dem Auftragnehmer auf Verlangen Auskunft über den voraussichtlichen Beginn zu erteilen. Der Auftragnehmer hat innerhalb von 12 Werktagen nach Aufforderung zu beginnen. Der Beginn der Ausführung ist dem Auftraggeber anzuzeigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Wenn Arbeitskräfte, Geräte, Gerüste, Stoffe oder Bauteile so unzureichend sind, dass die Ausführungsfristen offenbar nicht eingehalten werden können, muss der Auftragnehmer auf Verlangen unverzüglich Abhilfe schaffen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Verzögert der Auftragnehmer den Beginn der Ausführung, gerät er mit der Vollendung in Verzug, oder kommt er der in Absatz 3 erwähnten Verpflichtung nicht nach, so kann der Auftraggeber bei Aufrechterhaltung des Vertrages Schadensersatz nach § 6 Absatz 6 verlangen oder dem Auftragnehmer eine angemessene Frist zur Vertragserfüllung setzen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3)."
+     ]
+    }
+   ],
+   "text": "(1) Die Ausführung ist nach den verbindlichen Fristen (Vertragsfristen) zu beginnen, angemessen zu fördern und zu vollenden. In einem Bauzeitenplan enthaltene Einzelfristen gelten nur dann als Vertragsfristen, wenn dies im Vertrag ausdrücklich vereinbart ist.\n(2) Ist für den Beginn der Ausführung keine Frist vereinbart, so hat der Auftraggeber dem Auftragnehmer auf Verlangen Auskunft über den voraussichtlichen Beginn zu erteilen. Der Auftragnehmer hat innerhalb von 12 Werktagen nach Aufforderung zu beginnen. Der Beginn der Ausführung ist dem Auftraggeber anzuzeigen.\n(3) Wenn Arbeitskräfte, Geräte, Gerüste, Stoffe oder Bauteile so unzureichend sind, dass die Ausführungsfristen offenbar nicht eingehalten werden können, muss der Auftragnehmer auf Verlangen unverzüglich Abhilfe schaffen.\n(4) Verzögert der Auftragnehmer den Beginn der Ausführung, gerät er mit der Vollendung in Verzug, oder kommt er der in Absatz 3 erwähnten Verpflichtung nicht nach, so kann der Auftraggeber bei Aufrechterhaltung des Vertrages Schadensersatz nach § 6 Absatz 6 verlangen oder dem Auftragnehmer eine angemessene Frist zur Vertragserfüllung setzen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3).",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=7",
+   "verweise": [
+    "6",
+    "8"
+   ]
+  },
+  {
+   "id": "6",
+   "bez": "§ 6",
+   "titel": "Behinderung und Unterbrechung der Ausführung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Glaubt sich der Auftragnehmer in der ordnungsgemäßen Ausführung der Leistung behindert, so hat er es dem Auftraggeber unverzüglich schriftlich anzuzeigen. Unterlässt er die Anzeige, so hat er nur dann Anspruch auf Berücksichtigung der hindernden Umstände, wenn dem Auftraggeber offenkundig die Tatsache und deren hindernde Wirkung bekannt waren."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Ausführungsfristen werden verlängert, soweit die Behinderung verursacht ist:",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "durch einen Umstand aus dem Risikobereich des Auftraggebers,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "durch Streik oder eine von der Berufsvertretung der Arbeitgeber angeordnete Aussperrung im Betrieb des Auftragnehmers oder in einem unmittelbar für ihn arbeitenden Betrieb,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "durch höhere Gewalt oder andere für den Auftragnehmer unabwendbare Umstände."
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Witterungseinflüsse während der Ausführungszeit, mit denen bei Abgabe des Angebots normalerweise gerechnet werden musste, gelten nicht als Behinderung."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Der Auftragnehmer hat alles zu tun, was ihm billigerweise zugemutet werden kann, um die Weiterführung der Arbeiten zu ermöglichen. Sobald die hindernden Umstände wegfallen, hat er ohne weiteres und unverzüglich die Arbeiten wieder aufzunehmen und den Auftraggeber davon zu benachrichtigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Die Fristverlängerung wird berechnet nach der Dauer der Behinderung mit einem Zuschlag für die Wiederaufnahme der Arbeiten und die etwaige Verschiebung in eine ungünstigere Jahreszeit."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Wird die Ausführung für voraussichtlich längere Dauer unterbrochen, ohne dass die Leistung dauernd unmöglich wird, so sind die ausgeführten Leistungen nach den Vertragspreisen abzurechnen und außerdem die Kosten zu vergüten, die dem Auftragnehmer bereits entstanden und in den Vertragspreisen des nicht ausgeführten Teils der Leistung enthalten sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Sind die hindernden Umstände von einem Vertragsteil zu vertreten, so hat der andere Teil Anspruch auf Ersatz des nachweislich entstandenen Schadens, des entgangenen Gewinns aber nur bei Vorsatz oder grober Fahrlässigkeit. Im Übrigen bleibt der Anspruch des Auftragnehmers auf angemessene Entschädigung nach § 642 BGB unberührt, sofern die Anzeige nach Absatz 1 Satz 1 erfolgt oder wenn Offenkundigkeit nach Absatz 1 Satz 2 gegeben ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) Dauert eine Unterbrechung länger als 3 Monate, so kann jeder Teil nach Ablauf dieser Zeit den Vertrag schriftlich kündigen. Die Abrechnung regelt sich nach den Absätzen 5 und 6; wenn der Auftragnehmer die Unterbrechung nicht zu vertreten hat, sind auch die Kosten der Baustellenräumung zu vergüten, soweit sie nicht in der Vergütung für die bereits ausgeführten Leistungen enthalten sind."
+     ]
+    }
+   ],
+   "text": "(1) Glaubt sich der Auftragnehmer in der ordnungsgemäßen Ausführung der Leistung behindert, so hat er es dem Auftraggeber unverzüglich schriftlich anzuzeigen. Unterlässt er die Anzeige, so hat er nur dann Anspruch auf Berücksichtigung der hindernden Umstände, wenn dem Auftraggeber offenkundig die Tatsache und deren hindernde Wirkung bekannt waren.\n(2)\n1. Ausführungsfristen werden verlängert, soweit die Behinderung verursacht ist:\na) durch einen Umstand aus dem Risikobereich des Auftraggebers,\nb) durch Streik oder eine von der Berufsvertretung der Arbeitgeber angeordnete Aussperrung im Betrieb des Auftragnehmers oder in einem unmittelbar für ihn arbeitenden Betrieb,\nc) durch höhere Gewalt oder andere für den Auftragnehmer unabwendbare Umstände.\n2. Witterungseinflüsse während der Ausführungszeit, mit denen bei Abgabe des Angebots normalerweise gerechnet werden musste, gelten nicht als Behinderung.\n(3) Der Auftragnehmer hat alles zu tun, was ihm billigerweise zugemutet werden kann, um die Weiterführung der Arbeiten zu ermöglichen. Sobald die hindernden Umstände wegfallen, hat er ohne weiteres und unverzüglich die Arbeiten wieder aufzunehmen und den Auftraggeber davon zu benachrichtigen.\n(4) Die Fristverlängerung wird berechnet nach der Dauer der Behinderung mit einem Zuschlag für die Wiederaufnahme der Arbeiten und die etwaige Verschiebung in eine ungünstigere Jahreszeit.\n(5) Wird die Ausführung für voraussichtlich längere Dauer unterbrochen, ohne dass die Leistung dauernd unmöglich wird, so sind die ausgeführten Leistungen nach den Vertragspreisen abzurechnen und außerdem die Kosten zu vergüten, die dem Auftragnehmer bereits entstanden und in den Vertragspreisen des nicht ausgeführten Teils der Leistung enthalten sind.\n(6) Sind die hindernden Umstände von einem Vertragsteil zu vertreten, so hat der andere Teil Anspruch auf Ersatz des nachweislich entstandenen Schadens, des entgangenen Gewinns aber nur bei Vorsatz oder grober Fahrlässigkeit. Im Übrigen bleibt der Anspruch des Auftragnehmers auf angemessene Entschädigung nach § 642 BGB unberührt, sofern die Anzeige nach Absatz 1 Satz 1 erfolgt oder wenn Offenkundigkeit nach Absatz 1 Satz 2 gegeben ist.\n(7) Dauert eine Unterbrechung länger als 3 Monate, so kann jeder Teil nach Ablauf dieser Zeit den Vertrag schriftlich kündigen. Die Abrechnung regelt sich nach den Absätzen 5 und 6; wenn der Auftragnehmer die Unterbrechung nicht zu vertreten hat, sind auch die Kosten der Baustellenräumung zu vergüten, soweit sie nicht in der Vergütung für die bereits ausgeführten Leistungen enthalten sind.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=7",
+   "verweise": []
+  },
+  {
+   "id": "7",
+   "bez": "§ 7",
+   "titel": "Verteilung der Gefahr",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wird die ganz oder teilweise ausgeführte Leistung vor der Abnahme durch höhere Gewalt, Krieg, Aufruhr oder andere objektiv unabwendbare vom Auftragnehmer nicht zu vertretende Umstände beschädigt oder zerstört, so hat dieser für die ausgeführten Teile der Leistung die Ansprüche nach § 6 Absatz 5; für andere Schäden besteht keine gegenseitige Ersatzpflicht."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Zu der ganz oder teilweise ausgeführten Leistung gehören alle mit der baulichen Anlage unmittelbar verbundenen, in ihre Substanz eingegangenen Leistungen, unabhängig von deren Fertigstellungsgrad."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Zu der ganz oder teilweise ausgeführten Leistung gehören nicht die noch nicht eingebauten Stoffe und Bauteile sowie die Baustelleneinrichtung und Absteckungen. Zu der ganz oder teilweise ausgeführten Leistung gehören ebenfalls nicht Hilfskonstruktionen und Gerüste, auch wenn diese als Besondere Leistung oder selbstständig vergeben sind."
+     ]
+    }
+   ],
+   "text": "(1) Wird die ganz oder teilweise ausgeführte Leistung vor der Abnahme durch höhere Gewalt, Krieg, Aufruhr oder andere objektiv unabwendbare vom Auftragnehmer nicht zu vertretende Umstände beschädigt oder zerstört, so hat dieser für die ausgeführten Teile der Leistung die Ansprüche nach § 6 Absatz 5; für andere Schäden besteht keine gegenseitige Ersatzpflicht.\n(2) Zu der ganz oder teilweise ausgeführten Leistung gehören alle mit der baulichen Anlage unmittelbar verbundenen, in ihre Substanz eingegangenen Leistungen, unabhängig von deren Fertigstellungsgrad.\n(3) Zu der ganz oder teilweise ausgeführten Leistung gehören nicht die noch nicht eingebauten Stoffe und Bauteile sowie die Baustelleneinrichtung und Absteckungen. Zu der ganz oder teilweise ausgeführten Leistung gehören ebenfalls nicht Hilfskonstruktionen und Gerüste, auch wenn diese als Besondere Leistung oder selbstständig vergeben sind.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=8",
+   "verweise": [
+    "6"
+   ]
+  },
+  {
+   "id": "8",
+   "bez": "§ 8",
+   "titel": "Kündigung durch den Auftraggeber",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftraggeber kann bis zur Vollendung der Leistung jederzeit den Vertrag kündigen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Dem Auftragnehmer steht die vereinbarte Vergütung zu. Er muss sich jedoch anrechnen lassen, was er infolge der Aufhebung des Vertrags an Kosten erspart oder durch anderweitige Verwendung seiner Arbeitskraft und seines Betriebs erwirbt oder zu erwerben böswillig unterlässt (§ 649 BGB)."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftraggeber kann den Vertrag kündigen, wenn der Auftragnehmer seine Zahlungen einstellt, von ihm oder zulässigerweise vom Auftraggeber oder einem anderen Gläubiger das Insolvenzverfahren (§§ 14 und 15 InsO) beziehungsweise ein vergleichbares gesetzliches Verfahren beantragt ist, ein solches Verfahren eröffnet wird oder dessen Eröffnung mangels Masse abgelehnt wird."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Die ausgeführten Leistungen sind nach § 6 Absatz 5 abzurechnen. Der Auftraggeber kann Schadensersatz wegen Nichterfüllung des Restes verlangen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftraggeber kann den Vertrag kündigen, wenn in den Fällen des § 4 Absatz 7 und 8 Nummer 1 und des § 5 Absatz 4 die gesetzte Frist fruchtlos abgelaufen ist. Die Kündigung kann auf einen in sich abgeschlossenen Teil der vertraglichen Leistung beschränkt werden."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Nach der Kündigung ist der Auftraggeber berechtigt, den noch nicht vollendeten Teil der Leistung zu Lasten des Auftragnehmers durch einen Dritten ausführen zu lassen, doch bleiben seine Ansprüche auf Ersatz des etwa entstehenden weiteren Schadens bestehen. Er ist auch berechtigt, auf die weitere Ausführung zu verzichten und Schadensersatz wegen Nichterfüllung zu verlangen, wenn die Ausführung aus den Gründen, die zur Kündigung geführt haben, für ihn kein Interesse mehr hat."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Für die Weiterführung der Arbeiten kann der Auftraggeber Geräte, Gerüste, auf der Baustelle vorhandene andere Einrichtungen und angelieferte Stoffe und Bauteile gegen angemessene Vergütung in Anspruch nehmen."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Der Auftraggeber hat dem Auftragnehmer eine Aufstellung über die entstandenen Mehrkosten und über seine anderen Ansprüche spätestens binnen 12 Werktagen nach Abrechnung mit dem Dritten zuzusenden."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Der Auftraggeber kann den Vertrag kündigen,",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "wenn der Auftragnehmer aus Anlass der Vergabe eine Abrede getroffen hatte, die eine unzulässige Wettbewerbsbeschränkung darstellt. Absatz 3 Nummer 1 Satz 2 und Nummer 2 bis 4 gilt entsprechend."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "sofern dieser im Anwendungsbereich des 4. Teils des GWB geschlossen wurde,",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "wenn der Auftragnehmer wegen eines zwingenden Ausschlussgrundes zum Zeitpunkt des Zuschlags nicht hätte beauftragt werden dürfen. Absatz 3 Nummer 1 Satz 2 und Nummer 2 bis 4 gilt entsprechend."
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "bei wesentlicher Änderung des Vertrages oder bei Feststellung einer schweren Verletzung der Verträge über die Europäische Union und die Arbeitsweise der Europäischen Union durch den Europäischen Gerichtshof. Die ausgeführten Leistungen sind nach § 6 Absatz 5 abzurechnen. Etwaige Schadensersatzansprüche der Parteien bleiben unberührt."
+             ]
+            }
+           ]
+          },
+          "Die Kündigung ist innerhalb von 12 Werktagen nach Bekanntwerden des Kündigungsgrundes auszusprechen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Sofern der Auftragnehmer die Leistung, ungeachtet des Anwendungsbereichs des 4. Teils des GWB, ganz oder teilweise an Nachunternehmer weitervergeben hat, steht auch ihm das Kündigungsrecht gemäß Absatz 4 Nummer 2 Buchstabe b zu, wenn der ihn als Auftragnehmer verpflichtende Vertrag (Hauptauftrag) gemäß Absatz 4 Nummer 2 Buchstabe b gekündigt wurde. Entsprechendes gilt für jeden Auftraggeber der Nachunternehmerkette, sofern sein jeweiliger Auftraggeber den Vertrag gemäß Satz 1 gekündigt hat."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Die Kündigung ist schriftlich zu erklären."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) Der Auftragnehmer kann Aufmaß und Abnahme der von ihm ausgeführten Leistungen alsbald nach der Kündigung verlangen; er hat unverzüglich eine prüfbare Rechnung über die ausgeführten Leistungen vorzulegen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(8) Eine wegen Verzugs verwirkte, nach Zeit bemessene Vertragsstrafe kann nur für die Zeit bis zum Tag der Kündigung des Vertrags gefordert werden."
+     ]
+    }
+   ],
+   "text": "(1)\n1. Der Auftraggeber kann bis zur Vollendung der Leistung jederzeit den Vertrag kündigen.\n2. Dem Auftragnehmer steht die vereinbarte Vergütung zu. Er muss sich jedoch anrechnen lassen, was er infolge der Aufhebung des Vertrags an Kosten erspart oder durch anderweitige Verwendung seiner Arbeitskraft und seines Betriebs erwirbt oder zu erwerben böswillig unterlässt (§ 649 BGB).\n(2)\n1. Der Auftraggeber kann den Vertrag kündigen, wenn der Auftragnehmer seine Zahlungen einstellt, von ihm oder zulässigerweise vom Auftraggeber oder einem anderen Gläubiger das Insolvenzverfahren (§§ 14 und 15 InsO) beziehungsweise ein vergleichbares gesetzliches Verfahren beantragt ist, ein solches Verfahren eröffnet wird oder dessen Eröffnung mangels Masse abgelehnt wird.\n2. Die ausgeführten Leistungen sind nach § 6 Absatz 5 abzurechnen. Der Auftraggeber kann Schadensersatz wegen Nichterfüllung des Restes verlangen.\n(3)\n1. Der Auftraggeber kann den Vertrag kündigen, wenn in den Fällen des § 4 Absatz 7 und 8 Nummer 1 und des § 5 Absatz 4 die gesetzte Frist fruchtlos abgelaufen ist. Die Kündigung kann auf einen in sich abgeschlossenen Teil der vertraglichen Leistung beschränkt werden.\n2. Nach der Kündigung ist der Auftraggeber berechtigt, den noch nicht vollendeten Teil der Leistung zu Lasten des Auftragnehmers durch einen Dritten ausführen zu lassen, doch bleiben seine Ansprüche auf Ersatz des etwa entstehenden weiteren Schadens bestehen. Er ist auch berechtigt, auf die weitere Ausführung zu verzichten und Schadensersatz wegen Nichterfüllung zu verlangen, wenn die Ausführung aus den Gründen, die zur Kündigung geführt haben, für ihn kein Interesse mehr hat.\n3. Für die Weiterführung der Arbeiten kann der Auftraggeber Geräte, Gerüste, auf der Baustelle vorhandene andere Einrichtungen und angelieferte Stoffe und Bauteile gegen angemessene Vergütung in Anspruch nehmen.\n4. Der Auftraggeber hat dem Auftragnehmer eine Aufstellung über die entstandenen Mehrkosten und über seine anderen Ansprüche spätestens binnen 12 Werktagen nach Abrechnung mit dem Dritten zuzusenden.\n(4) Der Auftraggeber kann den Vertrag kündigen,\n1. wenn der Auftragnehmer aus Anlass der Vergabe eine Abrede getroffen hatte, die eine unzulässige Wettbewerbsbeschränkung darstellt. Absatz 3 Nummer 1 Satz 2 und Nummer 2 bis 4 gilt entsprechend.\n2. sofern dieser im Anwendungsbereich des 4. Teils des GWB geschlossen wurde,\na) wenn der Auftragnehmer wegen eines zwingenden Ausschlussgrundes zum Zeitpunkt des Zuschlags nicht hätte beauftragt werden dürfen. Absatz 3 Nummer 1 Satz 2 und Nummer 2 bis 4 gilt entsprechend.\nb) bei wesentlicher Änderung des Vertrages oder bei Feststellung einer schweren Verletzung der Verträge über die Europäische Union und die Arbeitsweise der Europäischen Union durch den Europäischen Gerichtshof. Die ausgeführten Leistungen sind nach § 6 Absatz 5 abzurechnen. Etwaige Schadensersatzansprüche der Parteien bleiben unberührt.\nDie Kündigung ist innerhalb von 12 Werktagen nach Bekanntwerden des Kündigungsgrundes auszusprechen.\n(5) Sofern der Auftragnehmer die Leistung, ungeachtet des Anwendungsbereichs des 4. Teils des GWB, ganz oder teilweise an Nachunternehmer weitervergeben hat, steht auch ihm das Kündigungsrecht gemäß Absatz 4 Nummer 2 Buchstabe b zu, wenn der ihn als Auftragnehmer verpflichtende Vertrag (Hauptauftrag) gemäß Absatz 4 Nummer 2 Buchstabe b gekündigt wurde. Entsprechendes gilt für jeden Auftraggeber der Nachunternehmerkette, sofern sein jeweiliger Auftraggeber den Vertrag gemäß Satz 1 gekündigt hat.\n(6) Die Kündigung ist schriftlich zu erklären.\n(7) Der Auftragnehmer kann Aufmaß und Abnahme der von ihm ausgeführten Leistungen alsbald nach der Kündigung verlangen; er hat unverzüglich eine prüfbare Rechnung über die ausgeführten Leistungen vorzulegen.\n(8) Eine wegen Verzugs verwirkte, nach Zeit bemessene Vertragsstrafe kann nur für die Zeit bis zum Tag der Kündigung des Vertrags gefordert werden.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=8",
+   "verweise": [
+    "6",
+    "4",
+    "5"
+   ]
+  },
+  {
+   "id": "9",
+   "bez": "§ 9",
+   "titel": "Kündigung durch den Auftragnehmer",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Der Auftragnehmer kann den Vertrag kündigen:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "wenn der Auftraggeber eine ihm obliegende Handlung unterlässt und dadurch den Auftragnehmer außerstande setzt, die Leistung auszuführen (Annahmeverzug nach §§ 293 ff. BGB),"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "wenn der Auftraggeber eine fällige Zahlung nicht leistet oder sonst in Schuldnerverzug gerät."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Kündigung ist schriftlich zu erklären. Sie ist erst zulässig, wenn der Auftragnehmer dem Auftraggeber ohne Erfolg eine angemessene Frist zur Vertragserfüllung gesetzt und erklärt hat, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die bisherigen Leistungen sind nach den Vertragspreisen abzurechnen. Außerdem hat der Auftragnehmer Anspruch auf angemessene Entschädigung nach § 642 BGB; etwaige weitergehende Ansprüche des Auftragnehmers bleiben unberührt."
+     ]
+    }
+   ],
+   "text": "(1) Der Auftragnehmer kann den Vertrag kündigen:\n1. wenn der Auftraggeber eine ihm obliegende Handlung unterlässt und dadurch den Auftragnehmer außerstande setzt, die Leistung auszuführen (Annahmeverzug nach §§ 293 ff. BGB),\n2. wenn der Auftraggeber eine fällige Zahlung nicht leistet oder sonst in Schuldnerverzug gerät.\n(2) Die Kündigung ist schriftlich zu erklären. Sie ist erst zulässig, wenn der Auftragnehmer dem Auftraggeber ohne Erfolg eine angemessene Frist zur Vertragserfüllung gesetzt und erklärt hat, dass er nach fruchtlosem Ablauf der Frist den Vertrag kündigen werde.\n(3) Die bisherigen Leistungen sind nach den Vertragspreisen abzurechnen. Außerdem hat der Auftragnehmer Anspruch auf angemessene Entschädigung nach § 642 BGB; etwaige weitergehende Ansprüche des Auftragnehmers bleiben unberührt.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=10",
+   "verweise": []
+  },
+  {
+   "id": "10",
+   "bez": "§ 10",
+   "titel": "Haftung der Vertragsparteien",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Vertragsparteien haften einander für eigenes Verschulden sowie für das Verschulden ihrer gesetzlichen Vertreter und der Personen, deren sie sich zur Erfüllung ihrer Verbindlichkeiten bedienen (§§ 276, 278 BGB)."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Entsteht einem Dritten im Zusammenhang mit der Leistung ein Schaden, für den auf Grund gesetzlicher Haftpflichtbestimmungen beide Vertragsparteien haften, so gelten für den Ausgleich zwischen den Vertragsparteien die allgemeinen gesetzlichen Bestimmungen, soweit im Einzelfall nichts anderes vereinbart ist. Soweit der Schaden des Dritten nur die Folge einer Maßnahme ist, die der Auftraggeber in dieser Form angeordnet hat, trägt er den Schaden allein, wenn ihn der Auftragnehmer auf die mit der angeordneten Ausführung verbundene Gefahr nach § 4 Absatz 3 hingewiesen hat."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Der Auftragnehmer trägt den Schaden allein, soweit er ihn durch Versicherung seiner gesetzlichen Haftpflicht gedeckt hat oder durch eine solche zu tarifmäßigen, nicht auf außergewöhnliche Verhältnisse abgestellten Prämien und Prämienzuschlägen bei einem im Inland zum Geschäftsbetrieb zugelassenen Versicherer hätte decken können."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Ist der Auftragnehmer einem Dritten nach den §§ 823 ff. BGB zu Schadensersatz verpflichtet wegen unbefugten Betretens oder Beschädigung angrenzender Grundstücke, wegen Entnahme oder Auflagerung von Boden oder anderen Gegenständen außerhalb der vom Auftraggeber dazu angewiesenen Flächen oder wegen der Folgen eigenmächtiger Versperrung von Wegen oder Wasserläufen, so trägt er im Verhältnis zum Auftraggeber den Schaden allein."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Für die Verletzung gewerblicher Schutzrechte haftet im Verhältnis der Vertragsparteien zueinander der Auftragnehmer allein, wenn er selbst das geschützte Verfahren oder die Verwendung geschützter Gegenstände angeboten oder wenn der Auftraggeber die Verwendung vorgeschrieben und auf das Schutzrecht hingewiesen hat."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Ist eine Vertragspartei gegenüber der anderen nach den Absätzen 2, 3 oder 4 von der Ausgleichspflicht befreit, so gilt diese Befreiung auch zugunsten ihrer gesetzlichen Vertreter und Erfüllungsgehilfen, wenn sie nicht vorsätzlich oder grob fahrlässig gehandelt haben."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Soweit eine Vertragspartei von dem Dritten für einen Schaden in Anspruch genommen wird, den nach den Absätzen 2, 3 oder 4 die andere Vertragspartei zu tragen hat, kann sie verlangen, dass ihre Vertragspartei sie von der Verbindlichkeit gegenüber dem Dritten befreit. Sie darf den Anspruch des Dritten nicht anerkennen oder befriedigen, ohne der anderen Vertragspartei vorher Gelegenheit zur Äußerung gegeben zu haben."
+     ]
+    }
+   ],
+   "text": "(1) Die Vertragsparteien haften einander für eigenes Verschulden sowie für das Verschulden ihrer gesetzlichen Vertreter und der Personen, deren sie sich zur Erfüllung ihrer Verbindlichkeiten bedienen (§§ 276, 278 BGB).\n(2)\n1. Entsteht einem Dritten im Zusammenhang mit der Leistung ein Schaden, für den auf Grund gesetzlicher Haftpflichtbestimmungen beide Vertragsparteien haften, so gelten für den Ausgleich zwischen den Vertragsparteien die allgemeinen gesetzlichen Bestimmungen, soweit im Einzelfall nichts anderes vereinbart ist. Soweit der Schaden des Dritten nur die Folge einer Maßnahme ist, die der Auftraggeber in dieser Form angeordnet hat, trägt er den Schaden allein, wenn ihn der Auftragnehmer auf die mit der angeordneten Ausführung verbundene Gefahr nach § 4 Absatz 3 hingewiesen hat.\n2. Der Auftragnehmer trägt den Schaden allein, soweit er ihn durch Versicherung seiner gesetzlichen Haftpflicht gedeckt hat oder durch eine solche zu tarifmäßigen, nicht auf außergewöhnliche Verhältnisse abgestellten Prämien und Prämienzuschlägen bei einem im Inland zum Geschäftsbetrieb zugelassenen Versicherer hätte decken können.\n(3) Ist der Auftragnehmer einem Dritten nach den §§ 823 ff. BGB zu Schadensersatz verpflichtet wegen unbefugten Betretens oder Beschädigung angrenzender Grundstücke, wegen Entnahme oder Auflagerung von Boden oder anderen Gegenständen außerhalb der vom Auftraggeber dazu angewiesenen Flächen oder wegen der Folgen eigenmächtiger Versperrung von Wegen oder Wasserläufen, so trägt er im Verhältnis zum Auftraggeber den Schaden allein.\n(4) Für die Verletzung gewerblicher Schutzrechte haftet im Verhältnis der Vertragsparteien zueinander der Auftragnehmer allein, wenn er selbst das geschützte Verfahren oder die Verwendung geschützter Gegenstände angeboten oder wenn der Auftraggeber die Verwendung vorgeschrieben und auf das Schutzrecht hingewiesen hat.\n(5) Ist eine Vertragspartei gegenüber der anderen nach den Absätzen 2, 3 oder 4 von der Ausgleichspflicht befreit, so gilt diese Befreiung auch zugunsten ihrer gesetzlichen Vertreter und Erfüllungsgehilfen, wenn sie nicht vorsätzlich oder grob fahrlässig gehandelt haben.\n(6) Soweit eine Vertragspartei von dem Dritten für einen Schaden in Anspruch genommen wird, den nach den Absätzen 2, 3 oder 4 die andere Vertragspartei zu tragen hat, kann sie verlangen, dass ihre Vertragspartei sie von der Verbindlichkeit gegenüber dem Dritten befreit. Sie darf den Anspruch des Dritten nicht anerkennen oder befriedigen, ohne der anderen Vertragspartei vorher Gelegenheit zur Äußerung gegeben zu haben.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=10",
+   "verweise": [
+    "4"
+   ]
+  },
+  {
+   "id": "11",
+   "bez": "§ 11",
+   "titel": "Vertragsstrafe",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Wenn Vertragsstrafen vereinbart sind, gelten die §§ 339 bis 345 BGB."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Ist die Vertragsstrafe für den Fall vereinbart, dass der Auftragnehmer nicht in der vorgesehenen Frist erfüllt, so wird sie fällig, wenn der Auftragnehmer in Verzug gerät."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Ist die Vertragsstrafe nach Tagen bemessen, so zählen nur Werktage; ist sie nach Wochen bemessen, so wird jeder Werktag angefangener Wochen als 1/6 Woche gerechnet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Hat der Auftraggeber die Leistung abgenommen, so kann er die Strafe nur verlangen, wenn er dies bei der Abnahme vorbehalten hat."
+     ]
+    }
+   ],
+   "text": "(1) Wenn Vertragsstrafen vereinbart sind, gelten die §§ 339 bis 345 BGB.\n(2) Ist die Vertragsstrafe für den Fall vereinbart, dass der Auftragnehmer nicht in der vorgesehenen Frist erfüllt, so wird sie fällig, wenn der Auftragnehmer in Verzug gerät.\n(3) Ist die Vertragsstrafe nach Tagen bemessen, so zählen nur Werktage; ist sie nach Wochen bemessen, so wird jeder Werktag angefangener Wochen als 1/6 Woche gerechnet.\n(4) Hat der Auftraggeber die Leistung abgenommen, so kann er die Strafe nur verlangen, wenn er dies bei der Abnahme vorbehalten hat.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=11",
+   "verweise": []
+  },
+  {
+   "id": "12",
+   "bez": "§ 12",
+   "titel": "Abnahme",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Verlangt der Auftragnehmer nach der Fertigstellung — gegebenenfalls auch vor Ablauf der vereinbarten Ausführungsfrist — die Abnahme der Leistung, so hat sie der Auftraggeber binnen 12 Werktagen durchzuführen; eine andere Frist kann vereinbart werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Auf Verlangen sind in sich abgeschlossene Teile der Leistung besonders abzunehmen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Wegen wesentlicher Mängel kann die Abnahme bis zur Beseitigung verweigert werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Eine förmliche Abnahme hat stattzufinden, wenn eine Vertragspartei es verlangt. Jede Partei kann auf ihre Kosten einen Sachverständigen zuziehen. Der Befund ist in gemeinsamer Verhandlung schriftlich niederzulegen. In die Niederschrift sind etwaige Vorbehalte wegen bekannter Mängel und wegen Vertragsstrafen aufzunehmen, ebenso etwaige Einwendungen des Auftragnehmers. Jede Partei erhält eine Ausfertigung."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Die förmliche Abnahme kann in Abwesenheit des Auftragnehmers stattfinden, wenn der Termin vereinbart war oder der Auftraggeber mit genügender Frist dazu eingeladen hatte. Das Ergebnis der Abnahme ist dem Auftragnehmer alsbald mitzuteilen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Wird keine Abnahme verlangt, so gilt die Leistung als abgenommen mit Ablauf von 12 Werktagen nach schriftlicher Mitteilung über die Fertigstellung der Leistung."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Wird keine Abnahme verlangt und hat der Auftraggeber die Leistung oder einen Teil der Leistung in Benutzung genommen, so gilt die Abnahme nach Ablauf von 6 Werktagen nach Beginn der Benutzung als erfolgt, wenn nichts anderes vereinbart ist. Die Benutzung von Teilen einer baulichen Anlage zur Weiterführung der Arbeiten gilt nicht als Abnahme."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Vorbehalte wegen bekannter Mängel oder wegen Vertragsstrafen hat der Auftraggeber spätestens zu den in den Nummern 1 und 2 bezeichneten Zeitpunkten geltend zu machen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Mit der Abnahme geht die Gefahr auf den Auftraggeber über, soweit er sie nicht schon nach § 7 trägt."
+     ]
+    }
+   ],
+   "text": "(1) Verlangt der Auftragnehmer nach der Fertigstellung — gegebenenfalls auch vor Ablauf der vereinbarten Ausführungsfrist — die Abnahme der Leistung, so hat sie der Auftraggeber binnen 12 Werktagen durchzuführen; eine andere Frist kann vereinbart werden.\n(2) Auf Verlangen sind in sich abgeschlossene Teile der Leistung besonders abzunehmen.\n(3) Wegen wesentlicher Mängel kann die Abnahme bis zur Beseitigung verweigert werden.\n(4)\n1. Eine förmliche Abnahme hat stattzufinden, wenn eine Vertragspartei es verlangt. Jede Partei kann auf ihre Kosten einen Sachverständigen zuziehen. Der Befund ist in gemeinsamer Verhandlung schriftlich niederzulegen. In die Niederschrift sind etwaige Vorbehalte wegen bekannter Mängel und wegen Vertragsstrafen aufzunehmen, ebenso etwaige Einwendungen des Auftragnehmers. Jede Partei erhält eine Ausfertigung.\n2. Die förmliche Abnahme kann in Abwesenheit des Auftragnehmers stattfinden, wenn der Termin vereinbart war oder der Auftraggeber mit genügender Frist dazu eingeladen hatte. Das Ergebnis der Abnahme ist dem Auftragnehmer alsbald mitzuteilen.\n(5)\n1. Wird keine Abnahme verlangt, so gilt die Leistung als abgenommen mit Ablauf von 12 Werktagen nach schriftlicher Mitteilung über die Fertigstellung der Leistung.\n2. Wird keine Abnahme verlangt und hat der Auftraggeber die Leistung oder einen Teil der Leistung in Benutzung genommen, so gilt die Abnahme nach Ablauf von 6 Werktagen nach Beginn der Benutzung als erfolgt, wenn nichts anderes vereinbart ist. Die Benutzung von Teilen einer baulichen Anlage zur Weiterführung der Arbeiten gilt nicht als Abnahme.\n3. Vorbehalte wegen bekannter Mängel oder wegen Vertragsstrafen hat der Auftraggeber spätestens zu den in den Nummern 1 und 2 bezeichneten Zeitpunkten geltend zu machen.\n(6) Mit der Abnahme geht die Gefahr auf den Auftraggeber über, soweit er sie nicht schon nach § 7 trägt.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=11",
+   "verweise": [
+    "7"
+   ]
+  },
+  {
+   "id": "13",
+   "bez": "§ 13",
+   "titel": "Mängelansprüche",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Der Auftragnehmer hat dem Auftraggeber seine Leistung zum Zeitpunkt der Abnahme frei von Sachmängeln zu verschaffen. Die Leistung ist zur Zeit der Abnahme frei von Sachmängeln, wenn sie die vereinbarte Beschaffenheit hat und den anerkannten Regeln der Technik entspricht. Ist die Beschaffenheit nicht vereinbart, so ist die Leistung zur Zeit der Abnahme frei von Sachmängeln,",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "wenn sie sich für die nach dem Vertrag vorausgesetzte, sonst"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "für die gewöhnliche Verwendung eignet und eine Beschaffenheit aufweist, die bei Werken der gleichen Art üblich ist und die der Auftraggeber nach der Art der Leistung erwarten kann."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Bei Leistungen nach Probe gelten die Eigenschaften der Probe als vereinbarte Beschaffenheit, soweit nicht Abweichungen nach der Verkehrssitte als bedeutungslos anzusehen sind. Dies gilt auch für Proben, die erst nach Vertragsabschluss als solche anerkannt sind."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Ist ein Mangel zurückzuführen auf die Leistungsbeschreibung oder auf Anordnungen des Auftraggebers, auf die von diesem gelieferten oder vorgeschriebenen Stoffe oder Bauteile oder die Beschaffenheit der Vorleistung eines anderen Unternehmers, haftet der Auftragnehmer, es sei denn, er hat die ihm nach § 4 Absatz 3 obliegende Mitteilung gemacht."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Ist für Mängelansprüche keine Verjährungsfrist im Vertrag vereinbart, so beträgt sie für Bauwerke 4 Jahre, für andere Werke, deren Erfolg in der Herstellung, Wartung oder Veränderung einer Sache besteht, und für die vom Feuer berührten Teile von Feuerungsanlagen 2 Jahre. Abweichend von Satz 1 beträgt die Verjährungsfrist für feuerberührte und abgasdämmende Teile von industriellen Feuerungsanlagen 1 Jahr."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Ist für Teile von maschinellen und elektrotechnischen/elektronischen Anlagen, bei denen die Wartung Einfluss auf Sicherheit und Funktionsfähigkeit hat, nichts anderes vereinbart, beträgt für diese Anlagenteile die Verjährungsfrist für Mängelansprüche abweichend von Nummer 1 zwei Jahre, wenn der Auftraggeber sich dafür entschieden hat, dem Auftragnehmer die Wartung für die Dauer der Verjährungsfrist nicht zu übertragen; dies gilt auch, wenn für weitere Leistungen eine andere Verjährungsfrist vereinbart ist."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Die Frist beginnt mit der Abnahme der gesamten Leistung; nur für in sich abgeschlossene Teile der Leistung beginnt sie mit der Teilabnahme (§ 12 Absatz 2)."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftragnehmer ist verpflichtet, alle während der Verjährungsfrist hervortretenden Mängel, die auf vertragswidrige Leistung zurückzuführen sind, auf seine Kosten zu beseitigen, wenn es der Auftraggeber vor Ablauf der Frist schriftlich verlangt. Der Anspruch auf Beseitigung der gerügten Mängel verjährt in 2 Jahren, gerechnet vom Zugang des schriftlichen Verlangens an, jedoch nicht vor Ablauf der Regelfristen nach Absatz 4 oder der an ihrer Stelle vereinbarten Frist. Nach Abnahme der Mängelbeseitigungsleistung beginnt für diese Leistung eine Verjährungsfrist von 2 Jahren neu, die jedoch nicht vor Ablauf der Regelfristen nach Absatz 4 oder der an ihrer Stelle vereinbarten Frist endet."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Kommt der Auftragnehmer der Aufforderung zur Mängelbeseitigung in einer vom Auftraggeber gesetzten angemessenen Frist nicht nach, so kann der Auftraggeber die Mängel auf Kosten des Auftragnehmers beseitigen lassen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Ist die Beseitigung des Mangels für den Auftraggeber unzumutbar oder ist sie unmöglich oder würde sie einen unverhältnismäßig hohen Aufwand erfordern und wird sie deshalb vom Auftragnehmer verweigert, so kann der Auftraggeber durch Erklärung gegenüber dem Auftragnehmer die Vergütung mindern (§ 638 BGB)."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftragnehmer haftet bei schuldhaft verursachten Mängeln für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Bei vorsätzlich oder grob fahrlässig verursachten Mängeln haftet er für alle Schäden."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Im Übrigen ist dem Auftraggeber der Schaden an der baulichen Anlage zu ersetzen, zu deren Herstellung, Instandhaltung oder Änderung die Leistung dient, wenn ein wesentlicher Mangel vorliegt, der die Gebrauchsfähigkeit erheblich beeinträchtigt und auf ein Verschulden des Auftragnehmers zurückzuführen ist. Einen darüber hinausgehenden Schaden hat der Auftragnehmer nur dann zu ersetzen,",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "wenn der Mangel auf einem Verstoß gegen die anerkannten Regeln der Technik beruht,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "wenn der Mangel in dem Fehlen einer vertraglich vereinbarten Beschaffenheit besteht oder"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "soweit der Auftragnehmer den Schaden durch Versicherung seiner gesetzlichen Haftpflicht gedeckt hat oder durch eine solche zu tarifmäßigen, nicht auf außergewöhnliche Verhältnisse abgestellten Prämien und Prämienzuschlägen bei einem im Inland zum Geschäftsbetrieb zugelassenen Versicherer hätte decken können."
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Abweichend von Absatz 4 gelten die gesetzlichen Verjährungsfristen, soweit sich der Auftragnehmer nach Nummer 3 durch Versicherung geschützt hat oder hätte schützen können oder soweit ein besonderer Versicherungsschutz vereinbart ist."
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "Eine Einschränkung oder Erweiterung der Haftung kann in begründeten Sonderfällen vereinbart werden."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "text": "(1) Der Auftragnehmer hat dem Auftraggeber seine Leistung zum Zeitpunkt der Abnahme frei von Sachmängeln zu verschaffen. Die Leistung ist zur Zeit der Abnahme frei von Sachmängeln, wenn sie die vereinbarte Beschaffenheit hat und den anerkannten Regeln der Technik entspricht. Ist die Beschaffenheit nicht vereinbart, so ist die Leistung zur Zeit der Abnahme frei von Sachmängeln,\n1. wenn sie sich für die nach dem Vertrag vorausgesetzte, sonst\n2. für die gewöhnliche Verwendung eignet und eine Beschaffenheit aufweist, die bei Werken der gleichen Art üblich ist und die der Auftraggeber nach der Art der Leistung erwarten kann.\n(2) Bei Leistungen nach Probe gelten die Eigenschaften der Probe als vereinbarte Beschaffenheit, soweit nicht Abweichungen nach der Verkehrssitte als bedeutungslos anzusehen sind. Dies gilt auch für Proben, die erst nach Vertragsabschluss als solche anerkannt sind.\n(3) Ist ein Mangel zurückzuführen auf die Leistungsbeschreibung oder auf Anordnungen des Auftraggebers, auf die von diesem gelieferten oder vorgeschriebenen Stoffe oder Bauteile oder die Beschaffenheit der Vorleistung eines anderen Unternehmers, haftet der Auftragnehmer, es sei denn, er hat die ihm nach § 4 Absatz 3 obliegende Mitteilung gemacht.\n(4)\n1. Ist für Mängelansprüche keine Verjährungsfrist im Vertrag vereinbart, so beträgt sie für Bauwerke 4 Jahre, für andere Werke, deren Erfolg in der Herstellung, Wartung oder Veränderung einer Sache besteht, und für die vom Feuer berührten Teile von Feuerungsanlagen 2 Jahre. Abweichend von Satz 1 beträgt die Verjährungsfrist für feuerberührte und abgasdämmende Teile von industriellen Feuerungsanlagen 1 Jahr.\n2. Ist für Teile von maschinellen und elektrotechnischen/elektronischen Anlagen, bei denen die Wartung Einfluss auf Sicherheit und Funktionsfähigkeit hat, nichts anderes vereinbart, beträgt für diese Anlagenteile die Verjährungsfrist für Mängelansprüche abweichend von Nummer 1 zwei Jahre, wenn der Auftraggeber sich dafür entschieden hat, dem Auftragnehmer die Wartung für die Dauer der Verjährungsfrist nicht zu übertragen; dies gilt auch, wenn für weitere Leistungen eine andere Verjährungsfrist vereinbart ist.\n3. Die Frist beginnt mit der Abnahme der gesamten Leistung; nur für in sich abgeschlossene Teile der Leistung beginnt sie mit der Teilabnahme (§ 12 Absatz 2).\n(5)\n1. Der Auftragnehmer ist verpflichtet, alle während der Verjährungsfrist hervortretenden Mängel, die auf vertragswidrige Leistung zurückzuführen sind, auf seine Kosten zu beseitigen, wenn es der Auftraggeber vor Ablauf der Frist schriftlich verlangt. Der Anspruch auf Beseitigung der gerügten Mängel verjährt in 2 Jahren, gerechnet vom Zugang des schriftlichen Verlangens an, jedoch nicht vor Ablauf der Regelfristen nach Absatz 4 oder der an ihrer Stelle vereinbarten Frist. Nach Abnahme der Mängelbeseitigungsleistung beginnt für diese Leistung eine Verjährungsfrist von 2 Jahren neu, die jedoch nicht vor Ablauf der Regelfristen nach Absatz 4 oder der an ihrer Stelle vereinbarten Frist endet.\n2. Kommt der Auftragnehmer der Aufforderung zur Mängelbeseitigung in einer vom Auftraggeber gesetzten angemessenen Frist nicht nach, so kann der Auftraggeber die Mängel auf Kosten des Auftragnehmers beseitigen lassen.\n(6) Ist die Beseitigung des Mangels für den Auftraggeber unzumutbar oder ist sie unmöglich oder würde sie einen unverhältnismäßig hohen Aufwand erfordern und wird sie deshalb vom Auftragnehmer verweigert, so kann der Auftraggeber durch Erklärung gegenüber dem Auftragnehmer die Vergütung mindern (§ 638 BGB).\n(7)\n1. Der Auftragnehmer haftet bei schuldhaft verursachten Mängeln für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.\n2. Bei vorsätzlich oder grob fahrlässig verursachten Mängeln haftet er für alle Schäden.\n3. Im Übrigen ist dem Auftraggeber der Schaden an der baulichen Anlage zu ersetzen, zu deren Herstellung, Instandhaltung oder Änderung die Leistung dient, wenn ein wesentlicher Mangel vorliegt, der die Gebrauchsfähigkeit erheblich beeinträchtigt und auf ein Verschulden des Auftragnehmers zurückzuführen ist. Einen darüber hinausgehenden Schaden hat der Auftragnehmer nur dann zu ersetzen,\na) wenn der Mangel auf einem Verstoß gegen die anerkannten Regeln der Technik beruht,\nb) wenn der Mangel in dem Fehlen einer vertraglich vereinbarten Beschaffenheit besteht oder\nc) soweit der Auftragnehmer den Schaden durch Versicherung seiner gesetzlichen Haftpflicht gedeckt hat oder durch eine solche zu tarifmäßigen, nicht auf außergewöhnliche Verhältnisse abgestellten Prämien und Prämienzuschlägen bei einem im Inland zum Geschäftsbetrieb zugelassenen Versicherer hätte decken können.\n4. Abweichend von Absatz 4 gelten die gesetzlichen Verjährungsfristen, soweit sich der Auftragnehmer nach Nummer 3 durch Versicherung geschützt hat oder hätte schützen können oder soweit ein besonderer Versicherungsschutz vereinbart ist.\n5. Eine Einschränkung oder Erweiterung der Haftung kann in begründeten Sonderfällen vereinbart werden.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=12",
+   "verweise": [
+    "4",
+    "12"
+   ]
+  },
+  {
+   "id": "14",
+   "bez": "§ 14",
+   "titel": "Abrechnung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Der Auftragnehmer hat seine Leistungen prüfbar abzurechnen. Er hat die Rechnungen übersichtlich aufzustellen und dabei die Reihenfolge der Posten einzuhalten und die in den Vertragsbestandteilen enthaltenen Bezeichnungen zu verwenden. Die zum Nachweis von Art und Umfang der Leistung erforderlichen Mengenberechnungen, Zeichnungen und andere Belege sind beizufügen. Änderungen und Ergänzungen des Vertrags sind in der Rechnung besonders kenntlich zu machen; sie sind auf Verlangen getrennt abzurechnen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die für die Abrechnung notwendigen Feststellungen sind dem Fortgang der Leistung entsprechend möglichst gemeinsam vorzunehmen. Die Abrechnungsbestimmungen in den Technischen Vertragsbedingungen und den anderen Vertragsunterlagen sind zu beachten. Für Leistungen, die bei Weiterführung der Arbeiten nur schwer feststellbar sind, hat der Auftragnehmer rechtzeitig gemeinsame Feststellungen zu beantragen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die Schlussrechnung muss bei Leistungen mit einer vertraglichen Ausführungsfrist von höchstens 3 Monaten spätestens 12 Werktage nach Fertigstellung eingereicht werden, wenn nichts anderes vereinbart ist; diese Frist wird um je 6 Werktage für je weitere 3 Monate Ausführungsfrist verlängert."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Reicht der Auftragnehmer eine prüfbare Rechnung nicht ein, obwohl ihm der Auftraggeber dafür eine angemessene Frist gesetzt hat, so kann sie der Auftraggeber selbst auf Kosten des Auftragnehmers aufstellen."
+     ]
+    }
+   ],
+   "text": "(1) Der Auftragnehmer hat seine Leistungen prüfbar abzurechnen. Er hat die Rechnungen übersichtlich aufzustellen und dabei die Reihenfolge der Posten einzuhalten und die in den Vertragsbestandteilen enthaltenen Bezeichnungen zu verwenden. Die zum Nachweis von Art und Umfang der Leistung erforderlichen Mengenberechnungen, Zeichnungen und andere Belege sind beizufügen. Änderungen und Ergänzungen des Vertrags sind in der Rechnung besonders kenntlich zu machen; sie sind auf Verlangen getrennt abzurechnen.\n(2) Die für die Abrechnung notwendigen Feststellungen sind dem Fortgang der Leistung entsprechend möglichst gemeinsam vorzunehmen. Die Abrechnungsbestimmungen in den Technischen Vertragsbedingungen und den anderen Vertragsunterlagen sind zu beachten. Für Leistungen, die bei Weiterführung der Arbeiten nur schwer feststellbar sind, hat der Auftragnehmer rechtzeitig gemeinsame Feststellungen zu beantragen.\n(3) Die Schlussrechnung muss bei Leistungen mit einer vertraglichen Ausführungsfrist von höchstens 3 Monaten spätestens 12 Werktage nach Fertigstellung eingereicht werden, wenn nichts anderes vereinbart ist; diese Frist wird um je 6 Werktage für je weitere 3 Monate Ausführungsfrist verlängert.\n(4) Reicht der Auftragnehmer eine prüfbare Rechnung nicht ein, obwohl ihm der Auftraggeber dafür eine angemessene Frist gesetzt hat, so kann sie der Auftraggeber selbst auf Kosten des Auftragnehmers aufstellen.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=14",
+   "verweise": []
+  },
+  {
+   "id": "15",
+   "bez": "§ 15",
+   "titel": "Stundenlohnarbeiten",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Stundenlohnarbeiten werden nach den vertraglichen Vereinbarungen abgerechnet."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Soweit für die Vergütung keine Vereinbarungen getroffen worden sind, gilt die ortsübliche Vergütung. Ist diese nicht zu ermitteln, so werden die Aufwendungen des Auftragnehmers für Lohn- und Gehaltskosten der Baustelle, Lohn- und Gehaltsnebenkosten der Baustelle, Stoffkosten der Baustelle, Kosten der Einrichtungen, Geräte, Maschinen und maschinellen Anlagen der Baustelle, Fracht-, Fuhr- und Ladekosten, Sozialkassenbeiträge und Sonderkosten, die bei wirtschaftlicher Betriebsführung entstehen, mit angemessenen Zuschlägen für Gemeinkosten und Gewinn (einschließlich allgemeinem Unternehmerwagnis) zuzüglich Umsatzsteuer vergütet."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Verlangt der Auftraggeber, dass die Stundenlohnarbeiten durch einen Polier oder eine andere Aufsichtsperson beaufsichtigt werden, oder ist die Aufsicht nach den einschlägigen Unfallverhütungsvorschriften notwendig, so gilt Absatz 1 entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Dem Auftraggeber ist die Ausführung von Stundenlohnarbeiten vor Beginn anzuzeigen. Über die geleisteten Arbeitsstunden und den dabei erforderlichen, besonders zu vergütenden Aufwand für den Verbrauch von Stoffen, für Vorhaltung von Einrichtungen, Geräten, Maschinen und maschinellen Anlagen, für Frachten, Fuhr- und Ladeleistungen sowie etwaige Sonderkosten sind, wenn nichts anderes vereinbart ist, je nach der Verkehrssitte werktäglich oder wöchentlich Listen (Stundenlohnzettel) einzureichen. Der Auftraggeber hat die von ihm bescheinigten Stundenlohnzettel unverzüglich, spätestens jedoch innerhalb von 6 Werktagen nach Zugang, zurückzugeben. Dabei kann er Einwendungen auf den Stundenlohnzetteln oder gesondert schriftlich erheben. Nicht fristgemäß zurückgegebene Stundenlohnzettel gelten als anerkannt."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Stundenlohnrechnungen sind alsbald nach Abschluss der Stundenlohnarbeiten, längstens jedoch in Abständen von 4 Wochen, einzureichen. Für die Zahlung gilt § 16."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Wenn Stundenlohnarbeiten zwar vereinbart waren, über den Umfang der Stundenlohnleistungen aber mangels rechtzeitiger Vorlage der Stundenlohnzettel Zweifel bestehen, so kann der Auftraggeber verlangen, dass für die nachweisbar ausgeführten Leistungen eine Vergütung vereinbart wird, die nach Maßgabe von Absatz 1 Nummer 2 für einen wirtschaftlich vertretbaren Aufwand an Arbeitszeit und Verbrauch von Stoffen, für Vorhaltung von Einrichtungen, Geräten, Maschinen und maschinellen Anlagen, für Frachten, Fuhr- und Ladeleistungen sowie etwaige Sonderkosten ermittelt wird."
+     ]
+    }
+   ],
+   "text": "(1)\n1. Stundenlohnarbeiten werden nach den vertraglichen Vereinbarungen abgerechnet.\n2. Soweit für die Vergütung keine Vereinbarungen getroffen worden sind, gilt die ortsübliche Vergütung. Ist diese nicht zu ermitteln, so werden die Aufwendungen des Auftragnehmers für Lohn- und Gehaltskosten der Baustelle, Lohn- und Gehaltsnebenkosten der Baustelle, Stoffkosten der Baustelle, Kosten der Einrichtungen, Geräte, Maschinen und maschinellen Anlagen der Baustelle, Fracht-, Fuhr- und Ladekosten, Sozialkassenbeiträge und Sonderkosten, die bei wirtschaftlicher Betriebsführung entstehen, mit angemessenen Zuschlägen für Gemeinkosten und Gewinn (einschließlich allgemeinem Unternehmerwagnis) zuzüglich Umsatzsteuer vergütet.\n(2) Verlangt der Auftraggeber, dass die Stundenlohnarbeiten durch einen Polier oder eine andere Aufsichtsperson beaufsichtigt werden, oder ist die Aufsicht nach den einschlägigen Unfallverhütungsvorschriften notwendig, so gilt Absatz 1 entsprechend.\n(3) Dem Auftraggeber ist die Ausführung von Stundenlohnarbeiten vor Beginn anzuzeigen. Über die geleisteten Arbeitsstunden und den dabei erforderlichen, besonders zu vergütenden Aufwand für den Verbrauch von Stoffen, für Vorhaltung von Einrichtungen, Geräten, Maschinen und maschinellen Anlagen, für Frachten, Fuhr- und Ladeleistungen sowie etwaige Sonderkosten sind, wenn nichts anderes vereinbart ist, je nach der Verkehrssitte werktäglich oder wöchentlich Listen (Stundenlohnzettel) einzureichen. Der Auftraggeber hat die von ihm bescheinigten Stundenlohnzettel unverzüglich, spätestens jedoch innerhalb von 6 Werktagen nach Zugang, zurückzugeben. Dabei kann er Einwendungen auf den Stundenlohnzetteln oder gesondert schriftlich erheben. Nicht fristgemäß zurückgegebene Stundenlohnzettel gelten als anerkannt.\n(4) Stundenlohnrechnungen sind alsbald nach Abschluss der Stundenlohnarbeiten, längstens jedoch in Abständen von 4 Wochen, einzureichen. Für die Zahlung gilt § 16.\n(5) Wenn Stundenlohnarbeiten zwar vereinbart waren, über den Umfang der Stundenlohnleistungen aber mangels rechtzeitiger Vorlage der Stundenlohnzettel Zweifel bestehen, so kann der Auftraggeber verlangen, dass für die nachweisbar ausgeführten Leistungen eine Vergütung vereinbart wird, die nach Maßgabe von Absatz 1 Nummer 2 für einen wirtschaftlich vertretbaren Aufwand an Arbeitszeit und Verbrauch von Stoffen, für Vorhaltung von Einrichtungen, Geräten, Maschinen und maschinellen Anlagen, für Frachten, Fuhr- und Ladeleistungen sowie etwaige Sonderkosten ermittelt wird.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=14",
+   "verweise": [
+    "16"
+   ]
+  },
+  {
+   "id": "16",
+   "bez": "§ 16",
+   "titel": "Zahlung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Abschlagszahlungen sind auf Antrag in möglichst kurzen Zeitabständen oder zu den vereinbarten Zeitpunkten zu gewähren, und zwar in Höhe des Wertes der jeweils nachgewiesenen vertragsgemäßen Leistungen einschließlich des ausgewiesenen, darauf entfallenden Umsatzsteuerbetrages. Die Leistungen sind durch eine prüfbare Aufstellung nachzuweisen, die eine rasche und sichere Beurteilung der Leistungen ermöglichen muss. Als Leistungen gelten hierbei auch die für die geforderte Leistung eigens angefertigten und bereitgestellten Bauteile sowie die auf der Baustelle angelieferten Stoffe und Bauteile, wenn dem Auftraggeber nach seiner Wahl das Eigentum an ihnen übertragen ist oder entsprechende Sicherheit gegeben wird."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Gegenforderungen können einbehalten werden. Andere Einbehalte sind nur in den im Vertrag und in den gesetzlichen Bestimmungen vorgesehenen Fällen zulässig."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Ansprüche auf Abschlagszahlungen werden binnen 21 Tagen nach Zugang der Aufstellung fällig."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Die Abschlagszahlungen sind ohne Einfluss auf die Haftung des Auftragnehmers; sie gelten nicht als Abnahme von Teilen der Leistung."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Vorauszahlungen können auch nach Vertragsabschluss vereinbart werden; hierfür ist auf Verlangen des Auftraggebers ausreichende Sicherheit zu leisten. Diese Vorauszahlungen sind, sofern nichts anderes vereinbart wird, mit 3 v. H. über dem Basiszinssatz des § 247 BGB zu verzinsen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Vorauszahlungen sind auf die nächstfälligen Zahlungen anzurechnen, soweit damit Leistungen abzugelten sind, für welche die Vorauszahlungen gewährt worden sind."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Anspruch auf Schlusszahlung wird alsbald nach Prüfung und Feststellung fällig, spätestens innerhalb von 30 Tagen nach Zugang der Schlussrechnung. Die Frist verlängert sich auf höchstens 60 Tage, wenn sie aufgrund der besonderen Natur oder Merkmale der Vereinbarung sachlich gerechtfertigt ist und ausdrücklich vereinbart wurde. Werden Einwendungen gegen die Prüfbarkeit unter Angabe der Gründe nicht bis zum Ablauf der jeweiligen Frist erhoben, kann der Auftraggeber sich nicht mehr auf die fehlende Prüfbarkeit berufen. Die Prüfung der Schlussrechnung ist nach Möglichkeit zu beschleunigen. Verzögert sie sich, so ist das unbestrittene Guthaben als Abschlagszahlung sofort zu zahlen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Die vorbehaltlose Annahme der Schlusszahlung schließt Nachforderungen aus, wenn der Auftragnehmer über die Schlusszahlung schriftlich unterrichtet und auf die Ausschlusswirkung hingewiesen wurde."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Einer Schlusszahlung steht es gleich, wenn der Auftraggeber unter Hinweis auf geleistete Zahlungen weitere Zahlungen endgültig und schriftlich ablehnt."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Auch früher gestellte, aber unerledigte Forderungen werden ausgeschlossen, wenn sie nicht nochmals vorbehalten werden."
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "Ein Vorbehalt ist innerhalb von 28 Tagen nach Zugang der Mitteilung nach den Nummern 2 und 3 über die Schlusszahlung zu erklären. Er wird hinfällig, wenn nicht innerhalb von weiteren 28 Tagen — beginnend am Tag nach Ablauf der in Satz 1 genannten 28 Tage — eine prüfbare Rechnung über die vorbehaltenen Forderungen eingereicht oder, wenn das nicht möglich ist, der Vorbehalt eingehend begründet wird."
+         ]
+        },
+        {
+         "dt": "6.",
+         "c": [
+          "Die Ausschlussfristen gelten nicht für ein Verlangen nach Richtigstellung der Schlussrechnung und -zahlung wegen Aufmaß-, Rechen- und Übertragungsfehlern."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) In sich abgeschlossene Teile der Leistung können nach Teilabnahme ohne Rücksicht auf die Vollendung der übrigen Leistungen endgültig festgestellt und bezahlt werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Alle Zahlungen sind aufs Äußerste zu beschleunigen."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Nicht vereinbarte Skontoabzüge sind unzulässig."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Zahlt der Auftraggeber bei Fälligkeit nicht, so kann ihm der Auftragnehmer eine angemessene Nachfrist setzen. Zahlt er auch innerhalb der Nachfrist nicht, so hat der Auftragnehmer vom Ende der Nachfrist an Anspruch auf Zinsen in Höhe der in § 288 Absatz 2 BGB angegebenen Zinssätze, wenn er nicht einen höheren Verzugsschaden nachweist. Der Auftraggeber kommt jedoch, ohne dass es einer Nachfristsetzung bedarf, spätestens 30 Tage nach Zugang der Rechnung oder der Aufstellung bei Abschlagszahlungen in Zahlungsverzug, wenn der Auftragnehmer seine vertraglichen und gesetzlichen Verpflichtungen erfüllt und den fälligen Entgeltbetrag nicht rechtzeitig erhalten hat, es sei denn, der Auftraggeber ist für den Zahlungsverzug nicht verantwortlich. Die Frist verlängert sich auf höchstens 60 Tage, wenn sie aufgrund der besonderen Natur oder Merkmale der Vereinbarung sachlich gerechtfertigt ist und ausdrücklich vereinbart wurde."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Der Auftragnehmer darf die Arbeiten bei Zahlungsverzug bis zur Zahlung einstellen, sofern eine dem Auftraggeber zuvor gesetzte angemessene Frist erfolglos verstrichen ist."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Der Auftraggeber ist berechtigt, zur Erfüllung seiner Verpflichtungen aus den Absätzen 1 bis 5 Zahlungen an Gläubiger des Auftragnehmers zu leisten, soweit sie an der Ausführung der vertraglichen Leistung des Auftragnehmers aufgrund eines mit diesem abgeschlossenen Dienst- oder Werkvertrags beteiligt sind, wegen Zahlungsverzugs des Auftragnehmers die Fortsetzung ihrer Leistung zu Recht verweigern und die Direktzahlung die Fortsetzung der Leistung sicherstellen soll. Der Auftragnehmer ist verpflichtet, sich auf Verlangen des Auftraggebers innerhalb einer von diesem gesetzten Frist darüber zu erklären, ob und inwieweit er die Forderungen seiner Gläubiger anerkennt; wird diese Erklärung nicht rechtzeitig abgegeben, so gelten die Voraussetzungen für die Direktzahlung als anerkannt."
+     ]
+    }
+   ],
+   "text": "(1)\n1. Abschlagszahlungen sind auf Antrag in möglichst kurzen Zeitabständen oder zu den vereinbarten Zeitpunkten zu gewähren, und zwar in Höhe des Wertes der jeweils nachgewiesenen vertragsgemäßen Leistungen einschließlich des ausgewiesenen, darauf entfallenden Umsatzsteuerbetrages. Die Leistungen sind durch eine prüfbare Aufstellung nachzuweisen, die eine rasche und sichere Beurteilung der Leistungen ermöglichen muss. Als Leistungen gelten hierbei auch die für die geforderte Leistung eigens angefertigten und bereitgestellten Bauteile sowie die auf der Baustelle angelieferten Stoffe und Bauteile, wenn dem Auftraggeber nach seiner Wahl das Eigentum an ihnen übertragen ist oder entsprechende Sicherheit gegeben wird.\n2. Gegenforderungen können einbehalten werden. Andere Einbehalte sind nur in den im Vertrag und in den gesetzlichen Bestimmungen vorgesehenen Fällen zulässig.\n3. Ansprüche auf Abschlagszahlungen werden binnen 21 Tagen nach Zugang der Aufstellung fällig.\n4. Die Abschlagszahlungen sind ohne Einfluss auf die Haftung des Auftragnehmers; sie gelten nicht als Abnahme von Teilen der Leistung.\n(2)\n1. Vorauszahlungen können auch nach Vertragsabschluss vereinbart werden; hierfür ist auf Verlangen des Auftraggebers ausreichende Sicherheit zu leisten. Diese Vorauszahlungen sind, sofern nichts anderes vereinbart wird, mit 3 v. H. über dem Basiszinssatz des § 247 BGB zu verzinsen.\n2. Vorauszahlungen sind auf die nächstfälligen Zahlungen anzurechnen, soweit damit Leistungen abzugelten sind, für welche die Vorauszahlungen gewährt worden sind.\n(3)\n1. Der Anspruch auf Schlusszahlung wird alsbald nach Prüfung und Feststellung fällig, spätestens innerhalb von 30 Tagen nach Zugang der Schlussrechnung. Die Frist verlängert sich auf höchstens 60 Tage, wenn sie aufgrund der besonderen Natur oder Merkmale der Vereinbarung sachlich gerechtfertigt ist und ausdrücklich vereinbart wurde. Werden Einwendungen gegen die Prüfbarkeit unter Angabe der Gründe nicht bis zum Ablauf der jeweiligen Frist erhoben, kann der Auftraggeber sich nicht mehr auf die fehlende Prüfbarkeit berufen. Die Prüfung der Schlussrechnung ist nach Möglichkeit zu beschleunigen. Verzögert sie sich, so ist das unbestrittene Guthaben als Abschlagszahlung sofort zu zahlen.\n2. Die vorbehaltlose Annahme der Schlusszahlung schließt Nachforderungen aus, wenn der Auftragnehmer über die Schlusszahlung schriftlich unterrichtet und auf die Ausschlusswirkung hingewiesen wurde.\n3. Einer Schlusszahlung steht es gleich, wenn der Auftraggeber unter Hinweis auf geleistete Zahlungen weitere Zahlungen endgültig und schriftlich ablehnt.\n4. Auch früher gestellte, aber unerledigte Forderungen werden ausgeschlossen, wenn sie nicht nochmals vorbehalten werden.\n5. Ein Vorbehalt ist innerhalb von 28 Tagen nach Zugang der Mitteilung nach den Nummern 2 und 3 über die Schlusszahlung zu erklären. Er wird hinfällig, wenn nicht innerhalb von weiteren 28 Tagen — beginnend am Tag nach Ablauf der in Satz 1 genannten 28 Tage — eine prüfbare Rechnung über die vorbehaltenen Forderungen eingereicht oder, wenn das nicht möglich ist, der Vorbehalt eingehend begründet wird.\n6. Die Ausschlussfristen gelten nicht für ein Verlangen nach Richtigstellung der Schlussrechnung und -zahlung wegen Aufmaß-, Rechen- und Übertragungsfehlern.\n(4) In sich abgeschlossene Teile der Leistung können nach Teilabnahme ohne Rücksicht auf die Vollendung der übrigen Leistungen endgültig festgestellt und bezahlt werden.\n(5)\n1. Alle Zahlungen sind aufs Äußerste zu beschleunigen.\n2. Nicht vereinbarte Skontoabzüge sind unzulässig.\n3. Zahlt der Auftraggeber bei Fälligkeit nicht, so kann ihm der Auftragnehmer eine angemessene Nachfrist setzen. Zahlt er auch innerhalb der Nachfrist nicht, so hat der Auftragnehmer vom Ende der Nachfrist an Anspruch auf Zinsen in Höhe der in § 288 Absatz 2 BGB angegebenen Zinssätze, wenn er nicht einen höheren Verzugsschaden nachweist. Der Auftraggeber kommt jedoch, ohne dass es einer Nachfristsetzung bedarf, spätestens 30 Tage nach Zugang der Rechnung oder der Aufstellung bei Abschlagszahlungen in Zahlungsverzug, wenn der Auftragnehmer seine vertraglichen und gesetzlichen Verpflichtungen erfüllt und den fälligen Entgeltbetrag nicht rechtzeitig erhalten hat, es sei denn, der Auftraggeber ist für den Zahlungsverzug nicht verantwortlich. Die Frist verlängert sich auf höchstens 60 Tage, wenn sie aufgrund der besonderen Natur oder Merkmale der Vereinbarung sachlich gerechtfertigt ist und ausdrücklich vereinbart wurde.\n4. Der Auftragnehmer darf die Arbeiten bei Zahlungsverzug bis zur Zahlung einstellen, sofern eine dem Auftraggeber zuvor gesetzte angemessene Frist erfolglos verstrichen ist.\n(6) Der Auftraggeber ist berechtigt, zur Erfüllung seiner Verpflichtungen aus den Absätzen 1 bis 5 Zahlungen an Gläubiger des Auftragnehmers zu leisten, soweit sie an der Ausführung der vertraglichen Leistung des Auftragnehmers aufgrund eines mit diesem abgeschlossenen Dienst- oder Werkvertrags beteiligt sind, wegen Zahlungsverzugs des Auftragnehmers die Fortsetzung ihrer Leistung zu Recht verweigern und die Direktzahlung die Fortsetzung der Leistung sicherstellen soll. Der Auftragnehmer ist verpflichtet, sich auf Verlangen des Auftraggebers innerhalb einer von diesem gesetzten Frist darüber zu erklären, ob und inwieweit er die Forderungen seiner Gläubiger anerkennt; wird diese Erklärung nicht rechtzeitig abgegeben, so gelten die Voraussetzungen für die Direktzahlung als anerkannt.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=15",
+   "verweise": []
+  },
+  {
+   "id": "17",
+   "bez": "§ 17",
+   "titel": "Sicherheitsleistung",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Wenn Sicherheitsleistung vereinbart ist, gelten die §§ 232 bis 240 BGB, soweit sich aus den nachstehenden Bestimmungen nichts anderes ergibt."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Die Sicherheit dient dazu, die vertragsgemäße Ausführung der Leistung und die Mängelansprüche sicherzustellen."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Wenn im Vertrag nichts anderes vereinbart ist, kann Sicherheit durch Einbehalt oder Hinterlegung von Geld oder durch Bürgschaft eines Kreditinstituts oder Kreditversicherers geleistet werden, sofern das Kreditinstitut oder der Kreditversicherer",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "in der Europäischen Gemeinschaft oder"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "in einem Staat der Vertragsparteien des Abkommens über den Europäischen Wirtschaftsraum oder"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "in einem Staat der Vertragsparteien des WTO-Übereinkommens über das öffentliche Beschaffungswesen zugelassen ist."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Der Auftragnehmer hat die Wahl unter den verschiedenen Arten der Sicherheit; er kann eine Sicherheit durch eine andere ersetzen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Bei Sicherheitsleistung durch Bürgschaft ist Voraussetzung, dass der Auftraggeber den Bürgen als tauglich anerkannt hat. Die Bürgschaftserklärung ist schriftlich unter Verzicht auf die Einrede der Vorausklage abzugeben (§ 771 BGB); sie darf nicht auf bestimmte Zeit begrenzt und muss nach Vorschrift des Auftraggebers ausgestellt sein. Der Auftraggeber kann als Sicherheit keine Bürgschaft fordern, die den Bürgen zur Zahlung auf erstes Anfordern verpflichtet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Wird Sicherheit durch Hinterlegung von Geld geleistet, so hat der Auftragnehmer den Betrag bei einem zu vereinbarenden Geldinstitut auf ein Sperrkonto einzuzahlen, über das beide nur gemeinsam verfügen können („Und-Konto“). Etwaige Zinsen stehen dem Auftragnehmer zu."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Soll der Auftraggeber vereinbarungsgemäß die Sicherheit in Teilbeträgen von seinen Zahlungen einbehalten, so darf er jeweils die Zahlung um höchstens 10 v. H. kürzen, bis die vereinbarte Sicherheitssumme erreicht ist. Sofern Rechnungen ohne Umsatzsteuer gemäß § 13 b UStG gestellt werden, bleibt die Umsatzsteuer bei der Berechnung des Sicherheitseinbehalts unberücksichtigt. Den jeweils einbehaltenen Betrag hat er dem Auftragnehmer mitzuteilen und binnen 18 Werktagen nach dieser Mitteilung auf ein Sperrkonto bei dem vereinbarten Geldinstitut einzuzahlen. Gleichzeitig muss er veranlassen, dass dieses Geldinstitut den Auftragnehmer von der Einzahlung des Sicherheitsbetrags benachrichtigt. Absatz 5 gilt entsprechend."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Bei kleineren oder kurzfristigen Aufträgen ist es zulässig, dass der Auftraggeber den einbehaltenen Sicherheitsbetrag erst bei der Schlusszahlung auf ein Sperrkonto einzahlt."
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Zahlt der Auftraggeber den einbehaltenen Betrag nicht rechtzeitig ein, so kann ihm der Auftragnehmer hierfür eine angemessene Nachfrist setzen. Lässt der Auftraggeber auch diese verstreichen, so kann der Auftragnehmer die sofortige Auszahlung des einbehaltenen Betrags verlangen und braucht dann keine Sicherheit mehr zu leisten."
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Öffentliche Auftraggeber sind berechtigt, den als Sicherheit einbehaltenen Betrag auf eigenes Verwahrgeldkonto zu nehmen; der Betrag wird nicht verzinst."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) Der Auftragnehmer hat die Sicherheit binnen 18 Werktagen nach Vertragsabschluss zu leisten, wenn nichts anderes vereinbart ist. Soweit er diese Verpflichtung nicht erfüllt hat, ist der Auftraggeber berechtigt, vom Guthaben des Auftragnehmers einen Betrag in Höhe der vereinbarten Sicherheit einzubehalten. Im Übrigen gelten die Absätze 5 und 6 außer Nummer 1 Satz 1 entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(8)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Der Auftraggeber hat eine nicht verwertete Sicherheit für die Vertragserfüllung zum vereinbarten Zeitpunkt, spätestens nach Abnahme und Stellung der Sicherheit für Mängelansprüche zurückzugeben, es sei denn, dass Ansprüche des Auftraggebers, die nicht von der gestellten Sicherheit für Mängelansprüche umfasst sind, noch nicht erfüllt sind. Dann darf er für diese Vertragserfüllungsansprüche einen entsprechenden Teil der Sicherheit zurückhalten."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Der Auftraggeber hat eine nicht verwertete Sicherheit für Mängelansprüche nach Ablauf von 2 Jahren zurückzugeben, sofern kein anderer Rückgabezeitpunkt vereinbart worden ist. Soweit jedoch zu diesem Zeitpunkt seine geltend gemachten Ansprüche noch nicht erfüllt sind, darf er einen entsprechenden Teil der Sicherheit zurückhalten."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "text": "(1)\n1. Wenn Sicherheitsleistung vereinbart ist, gelten die §§ 232 bis 240 BGB, soweit sich aus den nachstehenden Bestimmungen nichts anderes ergibt.\n2. Die Sicherheit dient dazu, die vertragsgemäße Ausführung der Leistung und die Mängelansprüche sicherzustellen.\n(2) Wenn im Vertrag nichts anderes vereinbart ist, kann Sicherheit durch Einbehalt oder Hinterlegung von Geld oder durch Bürgschaft eines Kreditinstituts oder Kreditversicherers geleistet werden, sofern das Kreditinstitut oder der Kreditversicherer\n1. in der Europäischen Gemeinschaft oder\n2. in einem Staat der Vertragsparteien des Abkommens über den Europäischen Wirtschaftsraum oder\n3. in einem Staat der Vertragsparteien des WTO-Übereinkommens über das öffentliche Beschaffungswesen zugelassen ist.\n(3) Der Auftragnehmer hat die Wahl unter den verschiedenen Arten der Sicherheit; er kann eine Sicherheit durch eine andere ersetzen.\n(4) Bei Sicherheitsleistung durch Bürgschaft ist Voraussetzung, dass der Auftraggeber den Bürgen als tauglich anerkannt hat. Die Bürgschaftserklärung ist schriftlich unter Verzicht auf die Einrede der Vorausklage abzugeben (§ 771 BGB); sie darf nicht auf bestimmte Zeit begrenzt und muss nach Vorschrift des Auftraggebers ausgestellt sein. Der Auftraggeber kann als Sicherheit keine Bürgschaft fordern, die den Bürgen zur Zahlung auf erstes Anfordern verpflichtet.\n(5) Wird Sicherheit durch Hinterlegung von Geld geleistet, so hat der Auftragnehmer den Betrag bei einem zu vereinbarenden Geldinstitut auf ein Sperrkonto einzuzahlen, über das beide nur gemeinsam verfügen können („Und-Konto“). Etwaige Zinsen stehen dem Auftragnehmer zu.\n(6)\n1. Soll der Auftraggeber vereinbarungsgemäß die Sicherheit in Teilbeträgen von seinen Zahlungen einbehalten, so darf er jeweils die Zahlung um höchstens 10 v. H. kürzen, bis die vereinbarte Sicherheitssumme erreicht ist. Sofern Rechnungen ohne Umsatzsteuer gemäß § 13 b UStG gestellt werden, bleibt die Umsatzsteuer bei der Berechnung des Sicherheitseinbehalts unberücksichtigt. Den jeweils einbehaltenen Betrag hat er dem Auftragnehmer mitzuteilen und binnen 18 Werktagen nach dieser Mitteilung auf ein Sperrkonto bei dem vereinbarten Geldinstitut einzuzahlen. Gleichzeitig muss er veranlassen, dass dieses Geldinstitut den Auftragnehmer von der Einzahlung des Sicherheitsbetrags benachrichtigt. Absatz 5 gilt entsprechend.\n2. Bei kleineren oder kurzfristigen Aufträgen ist es zulässig, dass der Auftraggeber den einbehaltenen Sicherheitsbetrag erst bei der Schlusszahlung auf ein Sperrkonto einzahlt.\n3. Zahlt der Auftraggeber den einbehaltenen Betrag nicht rechtzeitig ein, so kann ihm der Auftragnehmer hierfür eine angemessene Nachfrist setzen. Lässt der Auftraggeber auch diese verstreichen, so kann der Auftragnehmer die sofortige Auszahlung des einbehaltenen Betrags verlangen und braucht dann keine Sicherheit mehr zu leisten.\n4. Öffentliche Auftraggeber sind berechtigt, den als Sicherheit einbehaltenen Betrag auf eigenes Verwahrgeldkonto zu nehmen; der Betrag wird nicht verzinst.\n(7) Der Auftragnehmer hat die Sicherheit binnen 18 Werktagen nach Vertragsabschluss zu leisten, wenn nichts anderes vereinbart ist. Soweit er diese Verpflichtung nicht erfüllt hat, ist der Auftraggeber berechtigt, vom Guthaben des Auftragnehmers einen Betrag in Höhe der vereinbarten Sicherheit einzubehalten. Im Übrigen gelten die Absätze 5 und 6 außer Nummer 1 Satz 1 entsprechend.\n(8)\n1. Der Auftraggeber hat eine nicht verwertete Sicherheit für die Vertragserfüllung zum vereinbarten Zeitpunkt, spätestens nach Abnahme und Stellung der Sicherheit für Mängelansprüche zurückzugeben, es sei denn, dass Ansprüche des Auftraggebers, die nicht von der gestellten Sicherheit für Mängelansprüche umfasst sind, noch nicht erfüllt sind. Dann darf er für diese Vertragserfüllungsansprüche einen entsprechenden Teil der Sicherheit zurückhalten.\n2. Der Auftraggeber hat eine nicht verwertete Sicherheit für Mängelansprüche nach Ablauf von 2 Jahren zurückzugeben, sofern kein anderer Rückgabezeitpunkt vereinbart worden ist. Soweit jedoch zu diesem Zeitpunkt seine geltend gemachten Ansprüche noch nicht erfüllt sind, darf er einen entsprechenden Teil der Sicherheit zurückhalten.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=17",
+   "verweise": []
+  },
+  {
+   "id": "18",
+   "bez": "§ 18",
+   "titel": "Streitigkeiten",
+   "gliederung": [],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Liegen die Voraussetzungen für eine Gerichtsstandvereinbarung nach § 38 der Zivilprozessordnung vor, richtet sich der Gerichtsstand für Streitigkeiten aus dem Vertrag nach dem Sitz der für die Prozessvertretung des Auftraggebers zuständigen Stelle, wenn nichts anderes vereinbart ist. Sie ist dem Auftragnehmer auf Verlangen mitzuteilen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2)",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Entstehen bei Verträgen mit Behörden Meinungsverschiedenheiten, so soll der Auftragnehmer zunächst die der auftraggebenden Stelle unmittelbar vorgesetzte Stelle anrufen. Diese soll dem Auftragnehmer Gelegenheit zur mündlichen Aussprache geben und ihn möglichst innerhalb von 2 Monaten nach der Anrufung schriftlich bescheiden und dabei auf die Rechtsfolgen des Satzes 3 hinweisen. Die Entscheidung gilt als anerkannt, wenn der Auftragnehmer nicht innerhalb von 3 Monaten nach Eingang des Bescheides schriftlich Einspruch beim Auftraggeber erhebt und dieser ihn auf die Ausschlussfrist hingewiesen hat."
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Mit dem Eingang des schriftlichen Antrages auf Durchführung eines Verfahrens nach Nummer 1 wird die Verjährung des in diesem Antrag geltend gemachten Anspruchs gehemmt. Wollen Auftraggeber oder Auftragnehmer das Verfahren nicht weiter betreiben, teilen sie dies dem jeweils anderen Teil schriftlich mit. Die Hemmung endet 3 Monate nach Zugang des schriftlichen Bescheides oder der Mitteilung nach Satz 2."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Daneben kann ein Verfahren zur Streitbeilegung vereinbart werden. Die Vereinbarung sollte mit Vertragsabschluss erfolgen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Bei Meinungsverschiedenheiten über die Eigenschaft von Stoffen und Bauteilen, für die allgemein gültige Prüfungsverfahren bestehen, und über die Zulässigkeit oder Zuverlässigkeit der bei der Prüfung verwendeten Maschinen oder angewendeten Prüfungsverfahren kann jede Vertragspartei nach vorheriger Benachrichtigung der anderen Vertragspartei die materialtechnische Untersuchung durch eine staatliche oder staatlich anerkannte Materialprüfungsstelle vornehmen lassen; deren Feststellungen sind verbindlich. Die Kosten trägt der unterliegende Teil."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Streitfälle berechtigen den Auftragnehmer nicht, die Arbeiten einzustellen."
+     ]
+    }
+   ],
+   "text": "(1) Liegen die Voraussetzungen für eine Gerichtsstandvereinbarung nach § 38 der Zivilprozessordnung vor, richtet sich der Gerichtsstand für Streitigkeiten aus dem Vertrag nach dem Sitz der für die Prozessvertretung des Auftraggebers zuständigen Stelle, wenn nichts anderes vereinbart ist. Sie ist dem Auftragnehmer auf Verlangen mitzuteilen.\n(2)\n1. Entstehen bei Verträgen mit Behörden Meinungsverschiedenheiten, so soll der Auftragnehmer zunächst die der auftraggebenden Stelle unmittelbar vorgesetzte Stelle anrufen. Diese soll dem Auftragnehmer Gelegenheit zur mündlichen Aussprache geben und ihn möglichst innerhalb von 2 Monaten nach der Anrufung schriftlich bescheiden und dabei auf die Rechtsfolgen des Satzes 3 hinweisen. Die Entscheidung gilt als anerkannt, wenn der Auftragnehmer nicht innerhalb von 3 Monaten nach Eingang des Bescheides schriftlich Einspruch beim Auftraggeber erhebt und dieser ihn auf die Ausschlussfrist hingewiesen hat.\n2. Mit dem Eingang des schriftlichen Antrages auf Durchführung eines Verfahrens nach Nummer 1 wird die Verjährung des in diesem Antrag geltend gemachten Anspruchs gehemmt. Wollen Auftraggeber oder Auftragnehmer das Verfahren nicht weiter betreiben, teilen sie dies dem jeweils anderen Teil schriftlich mit. Die Hemmung endet 3 Monate nach Zugang des schriftlichen Bescheides oder der Mitteilung nach Satz 2.\n(3) Daneben kann ein Verfahren zur Streitbeilegung vereinbart werden. Die Vereinbarung sollte mit Vertragsabschluss erfolgen.\n(4) Bei Meinungsverschiedenheiten über die Eigenschaft von Stoffen und Bauteilen, für die allgemein gültige Prüfungsverfahren bestehen, und über die Zulässigkeit oder Zuverlässigkeit der bei der Prüfung verwendeten Maschinen oder angewendeten Prüfungsverfahren kann jede Vertragspartei nach vorheriger Benachrichtigung der anderen Vertragspartei die materialtechnische Untersuchung durch eine staatliche oder staatlich anerkannte Materialprüfungsstelle vornehmen lassen; deren Feststellungen sind verbindlich. Die Kosten trägt der unterliegende Teil.\n(5) Streitfälle berechtigen den Auftragnehmer nicht, die Arbeiten einzustellen.",
+   "url": "https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf#page=18",
+   "verweise": []
+  }
+ ]
+}

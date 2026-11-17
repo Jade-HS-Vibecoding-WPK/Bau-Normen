@@ -1,0 +1,58 @@
+# Bundesanzeiger, BAnz AT 02.04.2025 B7 – Bekanntmachung der Änderung der VOB/A vom 11. März 2025 (Kopie des Bundesamts für Soziale Sicherung)
+# Quelle: https://www.bundesamtsozialesicherung.de/fileadmin/user_upload/BAnz_AT_02.04.2025_B7.pdf
+# PDF: banz-at-2025-04-02-b7.pdf, 282234 Bytes, SHA-256 f3b91964df818028108e05dceec4b06ec572f5ff589443edb41fe5d66eb7996b
+# Abgerufen: 2026-11-17
+# Textauszug von scripts/import-vob.mjs – bitte nicht von Hand ändern. Je Textzeile im PDF:
+#   Grundlinie y | linker Rand x0 | rechter Rand x1 | Schriftgröße (f = fett, t = teilweise fett) | Text
+#   (PDF-Punkte, Ursprung unten links). Hochgestellte Zeichen stehen als ^{…}.
+#   „gedreht:“ = Text, der nicht waagerecht steht (z. B. ein Wasserzeichen), wird nicht übernommen.
+=== Seite 1 ===
+ 815.0  338.0  472.2 16.0f | Bekanntmachung
+ 800.0  338.0  499.1 9.0  | Veröffentlicht am Mittwoch, 2. April 2025
+ 790.0  338.0  434.6 9.0  | BAnz AT 02.04.2025 B7
+ 777.0  338.0  390.5 9.0  | Seite 1 von 2
+ 701.0  240.2  355.1 14.0f | Bundesministerium
+ 684.2  157.2  438.1 14.0f | für Wohnen, Stadtentwicklung und Bauwesen
+ 650.5  254.9  340.3 10.0f | Bekanntmachung
+ 639.5  132.6  462.7 10.0f | der Änderung der Vergabe- und Vertragsordnung für Bauleistungen
+ 628.5  263.1  332.2 10.0f | Teil A (VOB/A)
+ 607.0  255.9  339.4 9.0f | Vom 11. März 2025
+ 585.6  127.6  467.7 9.0  | Die anliegenden vom Deutschen Vergabe- und Vertragsausschuss für Bauleistun-
+ 574.8  127.6  467.7 9.0  | gen (DVA) erarbeiteten Änderungen an der Vergabe- und Vertragsordnung für Bau-
+ 564.0  127.6  373.6 9.0  | leistungen Teil A (VOB/A) werden hiermit bekannt gegeben.
+ 550.0  127.6  467.7 9.0  | Im Abschnitt 1 der VOB/A in der Fassung der Bekanntmachung vom 31. Januar
+ 539.2  127.6  467.7 9.0  | 2019 (BAnz AT 19.02.2019 B2) werden bis zum 31. Dezember 2025 die Wert-
+ 528.4  127.6  399.2 9.0  | grenzen für Freihändige Vergaben und Direktaufträge angehoben.
+ 514.4  127.6  467.7 9.0  | Das Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen wird in
+ 503.6  127.6  467.7 9.0  | einem Erlass auf die aktuellen Änderungen der VOB/A Abschnitt 1 hinweisen.
+ 492.8  127.6  432.7 9.0  | Dieser Erlass wird im Gemeinsamen Ministerialblatt veröffentlicht werden.
+ 478.8  127.6  467.7 9.0  | Erläuterungen zu den Änderungen im Abschnitt 1 der VOB/A ergeben sich aus den
+ 468.0  127.6  224.2 9.0  | beigefügten Hinweisen.
+ 454.0  127.6  467.7 9.0  | Die VOB/A wird im Auftrag des DVA vom Deutschen Institut für Normung e. V. (DIN)
+ 443.2  127.6  250.1 9.0  | als DIN 1960 herausgegeben.
+ 421.8  127.6  234.6 9.0  | Berlin, den 11. März 2025
+ 411.0  127.6  204.1 9.0  | B II 1 – 70421/2#6
+ 394.9  258.2  337.1 9.0  | Bundesministerium
+ 384.1  203.1  392.2 9.0  | für Wohnen, Stadtentwicklung und Bauwesen
+ 367.9  276.1  319.2 9.0  | Im Auftrag
+ 357.2  264.9  330.4 9.0  | Heiko Roeder
+=== Seite 2 ===
+ 815.0  338.0  472.2 16.0f | Bekanntmachung
+ 800.0  338.0  499.1 9.0  | Veröffentlicht am Mittwoch, 2. April 2025
+ 790.0  338.0  434.6 9.0  | BAnz AT 02.04.2025 B7
+ 777.0  338.0  390.5 9.0  | Seite 2 von 2
+ 735.9  437.6  467.7 9.0f | Anlage
+ 713.4  156.4  438.9 9.0f | Vergabe- und Vertragsordnung für Bauleistungen Teil A (VOB/A)
+ 702.7  172.2  423.1 9.0f | Hinweise für die Änderungen in der VOB/A – 1. Abschnitt
+ 688.6  127.6  467.7 9.0  | Der Deutsche Vergabe- und Vertragsausschuss für Bauleistungen (DVA) hat die
+ 677.8  127.6  396.3 9.0  | folgenden Änderungen in der VOB/A – 1. Abschnitt beschlossen:
+ 663.9  127.7  364.9 9.0  | 1. In § 3a Absatz 2 Satz 1 wird die Fußnote 1 gestrichen.
+ 649.9  127.7  467.7 9.0  | 2. In § 3a Absatz 3 wird die Fußnote 2 zu Fußnote 1 und erhält folgenden Text:
+ 635.9  138.6  467.7 9.0  | „Für Bauleistungen kann befristet bis zum 31. Dezember 2025 eine Freihändige
+ 625.1  138.6  467.7 9.0  | Vergabe bis zu einem voraussichtlichen Auftragswert von 25 000 Euro ohne Um-
+ 614.3  138.6  223.9 9.0  | satzsteuer erfolgen.“
+ 600.3  127.7  385.4 9.0  | 3. Der § 3a Absatz 4 erhält die Fußnote 2 mit folgendem Text:
+ 586.3  138.6  467.7 9.0  | „Bauleistungen können befristet bis zum 31. Dezember 2025 nach Maßgabe des
+ 575.5  138.6  467.7 9.0  | § 3a Absatz 4 ohne die Durchführung eines Vergabeverfahrens (Direktauftrag)
+ 564.7  138.6  467.7 9.0  | bis zu einem voraussichtlichen Auftragswert von 15 000 Euro ohne Umsatz-
+ 553.9  138.6  245.4 9.0  | steuer beschafft werden.“

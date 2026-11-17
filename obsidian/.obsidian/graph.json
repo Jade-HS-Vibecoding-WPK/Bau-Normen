@@ -22,10 +22,38 @@
       }
     },
     {
+      "query": "tag:#gesetz/mbo",
+      "color": {
+        "a": 1,
+        "rgb": 4165557
+      }
+    },
+    {
       "query": "tag:#gesetz/ndschg",
       "color": {
         "a": 1,
         "rgb": 13145388
+      }
+    },
+    {
+      "query": "tag:#gesetz/vob-a",
+      "color": {
+        "a": 1,
+        "rgb": 9333680
+      }
+    },
+    {
+      "query": "tag:#gesetz/vob-b",
+      "color": {
+        "a": 1,
+        "rgb": 12603469
+      }
+    },
+    {
+      "query": "tag:#gesetz/vob-c",
+      "color": {
+        "a": 1,
+        "rgb": 11887901
       }
     },
     {

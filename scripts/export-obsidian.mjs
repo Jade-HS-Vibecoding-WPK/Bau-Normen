@@ -39,7 +39,8 @@ const SCHLANK = !OPTIONEN.has("--voller-pfad");
 // Farben der Graph-Ansicht. Reihenfolge = Priorität (die erste passende Gruppe färbt den Knoten).
 const FARBE_GLIEDERUNG = "#7d93ad"; // grau-blau
 const FARBE_PROJEKT = "#9a9a9a"; // grau
-const GESETZ_FARBEN = { baugb: "#4a9a5b" /* grün */, ndschg: "#c8952c" /* ocker */ };
+const GESETZ_FARBEN = { baugb: "#4a9a5b" /* grün */, ndschg: "#c8952c" /* ocker */, mbo: "#3f8fb5" /* blau */, voba: "#8e6bb0" /* violett */, vobb: "#c0504d" /* rot */, vobc: "#b5651d" /* braun */ };
+const FARB_NAMEN = { baugb: "grün", ndschg: "ocker", mbo: "blau", voba: "violett", vobb: "rot", vobc: "braun" };
 const ERSATZ_FARBEN = ["#8e6bb0", "#c0504d", "#3f8fb5", "#b5651d"];
 
 const toPosix = (p) => p.split(path.sep).join("/");
@@ -519,7 +520,8 @@ function erzeugeGesetzesNotizen(gesetze, namen) {
         brotkrumen(kette),
       ];
       if (n.weggefallen) teile.push("> [!info] Diese Vorschrift ist weggefallen.");
-      teile.push("## Originaltext");
+      // VOB/C: nur Verzeichnis (DIN-Normen) – kein Wortlaut, daher eigene Überschrift und kein Wortlaut-Selbsttest
+      teile.push(g.nurVerzeichnis ? "## Verzeichniseintrag" : "## Originaltext");
       const originaltext = inhaltAlsMarkdown(n.inhalt);
       if (originaltext) teile.push(originaltext);
 
@@ -562,7 +564,7 @@ function erzeugeGesetzesNotizen(gesetze, namen) {
       teile.push(
         "## Quelle",
         [
-          `- Amtliche Fassung: ${mdLink(`${n.bez} ${g.kurz} auf ${hostname(n.url)}`, n.url)}`,
+          `- ${g.nurVerzeichnis ? "Bezugsquelle" : g.id === "baugb" || g.id === "ndschg" ? "Amtliche Fassung" : "Quelle"}: ${mdLink(`${n.bez} ${g.kurz} auf ${hostname(n.url)}`, n.url)}`,
           `- Stand: ${mdText(leer(g.stand))}`,
           g.quelle?.abgerufen ? `- Abgerufen: ${mdText(g.quelle.abgerufen)}` : null,
           `- Daten: \x60${g._datei}\x60`,
@@ -680,14 +682,18 @@ function selbsttest(paragraphNotizen) {
   const fehler = [];
   for (const notiz of paragraphNotizen) {
     const n = notiz.norm;
+    if (notiz.gesetz?.nurVerzeichnis) continue;
     const m = notiz.inhalt.match(/\n## Originaltext\n([\s\S]*?)(?=\n## |$)/);
     if (!m) {
       fehler.push(`${notiz.name}: Abschnitt „Originaltext“ fehlt`);
       continue;
     }
     try {
-      const ist = normWs(markdownZuKlartext(m[1]));
-      const soll = normWs(n.text);
+      // Hochgestelltes (nur MBO: Satznummern, Fußnotenzeichen, m²/m³) steht im "text" der Quelle nicht bzw. als ²/³ –
+      // für den Vergleich fällt es auf beiden Seiten weg; alles andere wird Zeichen für Zeichen verglichen.
+      const ohneHoch = (s) => s.replace(/[²³]/g, "");
+      const ist = normWs(ohneHoch(markdownZuKlartext(m[1].replace(/<sup>[^<]*<\/sup>/g, ""))));
+      const soll = normWs(ohneHoch(n.text));
       if (ist !== soll) fehler.push(`${notiz.name}: Wortlaut weicht ab ${abweichung(ist, soll)}`);
       const h1 = notiz.inhalt.match(/\n# (.*)\n/);
       if (!h1 || normWs(zeileZuText(h1[1])) !== normWs(notiz.ueberschrift)) fehler.push(`${notiz.name}: Überschrift weicht ab`);
@@ -1328,7 +1334,7 @@ function farbGruppen(gesetze) {
       query: `tag:#gesetz/${tagSlug(g.kurz)}`,
       farbe: g._farbe,
       text: `${g.kurz} – Paragraphen${g.normen.some((n) => /^Anlage\b/.test(n.bez)) ? ", Anlagen" : ""} und Übersicht`,
-      farbname: g.id === "baugb" ? "grün" : g.id === "ndschg" ? "ocker" : g._farbe,
+      farbname: FARB_NAMEN[g.id] ?? g._farbe,
     })),
     { query: "tag:#projekt", farbe: FARBE_PROJEKT, text: "Projektdateien und Architektur", farbname: "grau" },
   ];
@@ -1480,7 +1486,9 @@ function main() {
   console.log(`  Projekt/   ${projektNotizen.length} Notizen (${infos.size} Quelldateien + Architektur)`);
   console.log(`  Start.md   1 Notiz`);
   console.log(`  Gesamt     ${alle.length} Notizen`);
-  console.log(`  Selbsttest Wortlaut: ${paragraphNotizen.length}/${paragraphNotizen.length} Vorschriften identisch mit "text" (nach Leerraum-Normalisierung), Gegenprobe bestanden`);
+  const geprueft = paragraphNotizen.filter((x) => !x.gesetz?.nurVerzeichnis).length;
+  const nurVerzeichnis = paragraphNotizen.length - geprueft;
+  console.log(`  Selbsttest Wortlaut: ${geprueft}/${geprueft} Vorschriften identisch mit "text" (nach Leerraum-Normalisierung, ohne Hochgestelltes), Gegenprobe bestanden${nurVerzeichnis ? `; ${nurVerzeichnis} Verzeichniseinträge ohne Wortlaut (VOB/C)` : ""}`);
   console.log(`  graph.json ${graphStatus}`);
   console.log(SCHLANK ? "  Brotkrumen: nur direkte Oberebene verlinkt (Baum)" : "  Brotkrumen: alle Ebenen verlinkt (--voller-pfad)");
 }

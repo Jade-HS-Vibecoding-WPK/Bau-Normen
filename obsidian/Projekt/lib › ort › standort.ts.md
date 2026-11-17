@@ -2,7 +2,7 @@
 pfad: "lib/ort/standort.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 57
+zeilen: 64
 beschreibung: "Adresse -> Koordinaten (Geokodierung) für die Stadt Oldenburg (Oldb). Dienst: Nominatim / OpenStreetMap. Wir prüfen, ob Stadt und Hausnummer wirklich passen, und sagen es offen, wenn nur die Straße gefunden wurde."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/ort/standort.ts
 
-**Pfad:** `lib/ort/standort.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 57
+**Pfad:** `lib/ort/standort.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 64
 
 ## Kurzbeschreibung
 
@@ -20,6 +20,7 @@ Adresse -\> Koordinaten (Geokodierung) für die Stadt Oldenburg (Oldb). Dienst: 
 ## Importiert (lokal)
 
 - [[Projekt/lib › ort › abruf.ts.md|lib/ort/abruf.ts]]
+- [[Projekt/lib › sprache.ts.md|lib/sprache.ts]]
 
 ## Stellt bereit
 

@@ -2,8 +2,8 @@
 pfad: "components/Lageskizze.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 208
-beschreibung: "Schematische Lageskizze der Ortsauskunft: Standort, Umkreis 50 m, B-Plan-Umring und Denkmalflächen. Ein kleiner Gecko krabbelt über das Grundstück und steckt an jedem Denkmal ein Fähnchen. Keine amtliche Karte – die Umrisse kommen aus den Datendiensten (Stadt Oldenburg, Denkmalatlas)."
+zeilen: 447
+beschreibung: "Lageskizze der Ortsauskunft: OpenStreetMap als Hintergrund, darüber Standort, Umkreis 50 m, B-Plan-Umring und Denkmalflächen. Die Karte lässt sich zoomen (Mausrad, Knöpfe, Doppelklick, zwei Finger) und verschieben (Ziehen, Pfeiltasten). Die Fähnchen steckt der Gecko der Seite: Sobald die Skizze im Bild ist, bekommt er einen Auftrag (\"gecko-fahnen\") und läuft von Fahne zu Fahne. Ist der Gecko ausgeblendet (oder sind Animationen aus), erscheinen die Fahnen von selbst. Keine amtliche Karte – die Umrisse kommen aus den Datendiensten (Stadt Oldenburg, Denkmalatlas)."
 tags:
   - "projekt"
   - "projekt/oberflaeche"
@@ -11,16 +11,17 @@ tags:
 
 # components/Lageskizze.tsx
 
-**Pfad:** `components/Lageskizze.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 208
+**Pfad:** `components/Lageskizze.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 447
 
 ## Kurzbeschreibung
 
-Schematische Lageskizze der Ortsauskunft: Standort, Umkreis 50 m, B-Plan-Umring und Denkmalflächen. Ein kleiner Gecko krabbelt über das Grundstück und steckt an jedem Denkmal ein Fähnchen. Keine amtliche Karte – die Umrisse kommen aus den Datendiensten (Stadt Oldenburg, Denkmalatlas).
+Lageskizze der Ortsauskunft: OpenStreetMap als Hintergrund, darüber Standort, Umkreis 50 m, B-Plan-Umring und Denkmalflächen. Die Karte lässt sich zoomen (Mausrad, Knöpfe, Doppelklick, zwei Finger) und verschieben (Ziehen, Pfeiltasten). Die Fähnchen steckt der Gecko der Seite: Sobald die Skizze im Bild ist, bekommt er einen Auftrag ("gecko-fahnen") und läuft von Fahne zu Fahne. Ist der Gecko ausgeblendet (oder sind Animationen aus), erscheinen die Fahnen von selbst. Keine amtliche Karte – die Umrisse kommen aus den Datendiensten (Stadt Oldenburg, Denkmalatlas).
 
 ## Importiert (lokal)
 
+- [[Projekt/lib › gecko.ts.md|lib/gecko.ts]] – nur Typen
 - [[Projekt/lib › typen.ts.md|lib/typen.ts]] – nur Typen
-- [[Projekt/components › GeckoFigur.tsx.md|components/GeckoFigur.tsx]]
+- [[Projekt/components › Einstellungen.tsx.md|components/Einstellungen.tsx]]
 
 ## Stellt bereit
 

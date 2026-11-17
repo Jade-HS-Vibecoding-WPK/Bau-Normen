@@ -2,7 +2,7 @@
 pfad: "lib/text.ts"
 bereich: "Helfer"
 sprache: "TypeScript"
-zeilen: 36
+zeilen: 47
 beschreibung: "Hilfsfunktionen für Text (auch im Browser nutzbar)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/text.ts
 
-**Pfad:** `lib/text.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 36
+**Pfad:** `lib/text.ts` · **Bereich:** Helfer · **Sprache:** TypeScript · **Zeilen:** 47
 
 ## Kurzbeschreibung
 

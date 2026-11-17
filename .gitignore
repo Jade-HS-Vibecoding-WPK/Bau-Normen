@@ -13,6 +13,8 @@ next-env.d.ts
 
 # Rohdownloads (die entpackten Quell-XML-Dateien werden versioniert)
 data/quellen/**/*.zip
+# PDF-Quellen (MBO, VOB) – versioniert wird nur der daraus gelesene Text
+data/quellen/**/*.pdf
 # NI-VORIS (Wolters Kluwer) behält sich Text- und Data-Mining vor (§ 44b Abs. 3 UrhG).
 # Der Gesetzestext selbst ist gemeinfrei (§ 5 UrhG) und liegt in data/gesetze/ndschg.json –
 # die Roh-HTML-Seiten mit Verlags-Markup veröffentlichen wir nicht.

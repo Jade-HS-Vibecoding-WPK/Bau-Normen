@@ -39,5 +39,5 @@ Erkennt Verweise auf andere Paragraphen DESSELBEN Gesetzes im Gesetzestext.
 
 ## Wird verwendet von
 
-`scripts/import-baugb.mjs`, `scripts/import-ndschg.mjs`  
+`scripts/import-baugb.mjs`, `scripts/import-mbo.mjs`, `scripts/import-ndschg.mjs`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*

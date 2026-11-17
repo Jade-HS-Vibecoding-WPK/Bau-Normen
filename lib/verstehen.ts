@@ -6,15 +6,33 @@ import { alleGesetze, normAnsicht, stichwortSuche, suche } from "./gesetze";
 import { ortsauskunft } from "./ort";
 import type { Antwort, NormRef } from "./typen";
 import { type Sprache, zweisprachig } from "./sprache";
+import { nummerText } from "./regelwerke";
+
+// Teil A/B/C der VOB: "VOB/A", "VOB A", "VOB-A", "VOBA", "VOB Teil A", auch "VOB/A-EU"
+const vobTeil = (b: string) => new RegExp(`\\bvob\\s*(?:\\/|-|\\s+teil)?\\s*${b}(?![a-zäöüß])`, "i");
 
 const GESETZ_MUSTER: { id: string; re: RegExp }[] = [
   { id: "baugb", re: /\b(baugb|baugesetzbuch|bbaug)\b/i },
   { id: "ndschg", re: /\b(ndschg|nds\.?\s*dschg|ndsdschg|denkmalschutzgesetz)\b/i },
+  { id: "mbo", re: /\b(mbo|musterbauordnung|muster-bauordnung)\b/i },
+  // Landesbauordnungen sind (noch) nicht in der Bibliothek – nicht mit der Musterbauordnung verwechseln
+  { id: "nbauo", re: /\b(nbauo|niedersächsische[nr]? bauordnung|landesbauordnung|lbo)\b/i },
+  { id: "voba", re: vobTeil("a") },
+  { id: "vobb", re: vobTeil("b") },
+  { id: "vobc", re: vobTeil("c") },
+  // "VOB" ohne Teil: Teil A oder B (Teil C hat keine Paragraphen)
+  { id: "vob", re: /\bvob\b/i },
 ];
 
 export function erkenneGesetz(t: string): string | null {
   for (const g of GESETZ_MUSTER) if (g.re.test(t)) return g.id;
   return null;
+}
+
+/** ATV der VOB/C: "DIN 18353", "ATV DIN 18300", "ATV 18299" */
+export function erkenneDin(t: string): string[] {
+  const nr = [...t.matchAll(/\b(?:atv\s*)?din\s*(18\d{3})\b|\batv\s*(18\d{3})\b/gi)].map((m) => m[1] ?? m[2]);
+  return [...new Set(nr)];
 }
 
 /** Findet Paragraphennummern wie "§ 34", "§§ 30, 34 und 35", "Paragraph 13a", "34 BauGB". */
@@ -28,8 +46,11 @@ export function erkenneNummern(t: string): string[] {
       const rest = t.slice(pos);
       const nr = rest.match(/^(\d{1,3})(?:\s?([a-z])(?![a-zäöüß]))?/);
       if (!nr) break;
-      nummern.push(nr[1] + (nr[2] ?? ""));
       pos += nr[0].length;
+      // VOB/A Abschnitt 2 und 3: "§ 3a EU", "§ 6 VS"
+      const abschnitt = t.slice(pos).match(/^\s*(eu|vs)\b/i);
+      if (abschnitt) pos += abschnitt[0].length;
+      nummern.push(nr[1] + (nr[2] ?? "") + (abschnitt ? "-" + abschnitt[1].toLowerCase() : ""));
       const verb = t.slice(pos).match(/^\s*(,|und|sowie|oder)\s*/);
       if (!verb) break;
       pos += verb[0].length;
@@ -37,9 +58,12 @@ export function erkenneNummern(t: string): string[] {
   }
   // "35 BauGB" ohne §-Zeichen – nur wenn kein § erkannt wurde und die Zahl kein Absatz/Satz/Nummer ist.
   if (!nummern.length) {
-    const nachgestellt = /(?<!(?:abs\.?|absatz|satz|nr\.?|nummer)\s*)\b(\d{1,3}[a-z]?)\s*(?:baugb|ndschg)\b/gi;
+    const nachgestellt = /(?<!(?:abs\.?|absatz|satz|nr\.?|nummer)\s*)\b(\d{1,3}[a-z]?)\s*(?:baugb|ndschg|mbo|vob\s*\/?\s*[ab])\b/gi;
     while ((m = nachgestellt.exec(t))) nummern.push(m[1].toLowerCase());
   }
+  // "§ 3 VOB/A-EU" bzw. "VOB/A EU § 3" -> § 3 EU
+  const teil = t.match(/\bvob\s*\/?\s*a\s*[-–]?\s*(eu|vs)\b/i);
+  if (teil) return [...new Set(nummern.map((n) => (/-(eu|vs)$/.test(n) ? n : `${n}-${teil[1].toLowerCase()}`)))];
   return [...new Set(nummern)];
 }
 
@@ -65,12 +89,30 @@ function normAntwort(gesetzId: string, nr: string, sprache: Sprache): Antwort {
   const g = alleGesetze().get(gesetzId)!;
   const ansicht = normAnsicht(gesetzId, nr);
   if (ansicht) return { art: "norm", ansicht };
-  const letzte = [...g.normen].reverse().find((n) => n.bez.startsWith("§"));
+  const tx = zweisprachig(sprache);
+  const paragraphen = g.normen.filter((n) => n.bez.startsWith("§"));
+  const bereich = paragraphen.length ? `${paragraphen[0].bez} – ${paragraphen.at(-1)!.bez}` : "?";
+  // VOB/A: "§ 3a" gibt es auch als "§ 3a EU" / "§ 3a VS" -> anbieten
+  const varianten = g.normen.filter((n) => n.id === `${nr}-eu` || n.id === `${nr}-vs`);
   return {
     art: "fehler",
-    text: zweisprachig(sprache)(
-      `§ ${nr} gibt es im ${g.kurz} nicht. Das ${g.kurz} reicht von § 1 bis ${letzte?.bez ?? "?"}. Es wird kein Text angezeigt, statt zu raten.`,
-      `There is no § ${nr} in the ${g.kurz}. The ${g.kurz} runs from § 1 to ${letzte?.bez ?? "?"}. No text is shown rather than guessing.`,
+    text: tx(
+      `${g.kurz}: Einen § ${nummerText(nr)} gibt es dort nicht (vorhanden: ${bereich}). Es wird kein Text angezeigt, statt zu raten.`,
+      `${g.kurz}: there is no § ${nummerText(nr)} (available: ${bereich}). No text is shown rather than guessing.`,
+    ),
+    ...(varianten.length ? { vorschlaege: varianten.map((n) => ({ label: `${n.bez} ${g.kurz}`, anfrage: `${n.bez} ${g.kurz}` })) } : {}),
+  };
+}
+
+function dinAntwort(nr: string, sprache: Sprache): Antwort {
+  const tx = zweisprachig(sprache);
+  const vobc = alleGesetze().get("vobc");
+  if (vobc && vobc.normen.some((n) => n.id === nr)) return { art: "norm", ansicht: normAnsicht("vobc", nr)! };
+  return {
+    art: "fehler",
+    text: tx(
+      `DIN ${nr} ist keine ATV der VOB/C (Stand: VOB 2019 mit Ergänzungsband 2023). Normen außerhalb der VOB/C enthält die Bibliothek nicht.`,
+      `DIN ${nr} is not one of the VOB/C standards (as of VOB 2019 with the 2023 supplement). Other standards are not in the library.`,
     ),
   };
 }
@@ -80,24 +122,51 @@ function paragraphAntwort(t: string, nummern: string[], sprache: Sprache): Antwo
   const gesetze = alleGesetze();
   const gesetzId = erkenneGesetz(t);
   const verfuegbar = [...gesetze.values()].map((g) => g.kurz).join(", ");
-  if (gesetzId && gesetze.has(gesetzId)) return nummern.slice(0, 3).map((nr) => normAntwort(gesetzId, nr, sprache));
-  if (gesetzId && !gesetze.has(gesetzId)) {
+  if (gesetzId === "vobc") {
+    return [
+      {
+        art: "fehler",
+        text: tx(
+          "Die VOB/C hat keine Paragraphen, sondern ATV-Normen – z. B. „DIN 18300“ (Erdarbeiten) oder „DIN 18353“ (Estricharbeiten).",
+          "The VOB/C has no sections but ATV standards – e.g. “DIN 18300” (earthworks) or “DIN 18353” (screed work).",
+        ),
+        vorschlaege: [
+          { label: "DIN 18299", anfrage: "DIN 18299" },
+          { label: "DIN 18300", anfrage: "DIN 18300" },
+        ],
+      },
+    ];
+  }
+  if (gesetzId === "nbauo") {
+    return [
+      {
+        art: "fehler",
+        text: tx(
+          `Die Niedersächsische Bauordnung (NBauO) ist noch nicht in der Bibliothek. Verfügbar: ${verfuegbar}. Die Musterbauordnung (MBO) ist nur eine Vorlage – ihre Paragraphen stimmen nicht mit der NBauO überein.`,
+          `The Lower Saxony building code (NBauO) is not in the library yet. Available: ${verfuegbar}. The model code (MBO) is only a template – its sections do not match the NBauO.`,
+        ),
+      },
+    ];
+  }
+  if (gesetzId && gesetzId !== "vob" && gesetze.has(gesetzId)) return nummern.slice(0, 3).map((nr) => normAntwort(gesetzId, nr, sprache));
+  if (gesetzId && gesetzId !== "vob" && !gesetze.has(gesetzId)) {
     return [{ art: "fehler", text: tx(`Dieses Gesetz ist noch nicht in der Bibliothek. Verfügbar: ${verfuegbar}.`, `This act is not in the library yet. Available: ${verfuegbar}.`) }];
   }
   const nr = nummern[0];
-  const kandidaten = [...gesetze.values()].filter((g) => g.normen.some((n) => n.id === nr));
+  // "§ 13 VOB" ohne Teil -> nur VOB/A und VOB/B kommen infrage
+  const kandidaten = [...gesetze.values()].filter((g) => (gesetzId !== "vob" || g.id === "voba" || g.id === "vobb") && g.normen.some((n) => n.id === nr));
   // Nur ein Gesetz hat diesen Paragraphen -> eindeutig, keine Rückfrage nötig.
   if (kandidaten.length === 1) return nummern.slice(0, 3).map((x) => normAntwort(kandidaten[0].id, x, sprache));
   if (kandidaten.length === 0) {
-    return [{ art: "fehler", text: tx(`Einen § ${nr} gibt es in keinem der verfügbaren Gesetze (${verfuegbar}).`, `None of the available acts has a § ${nr} (${verfuegbar}).`) }];
+    return [{ art: "fehler", text: tx(`Einen § ${nummerText(nr)} gibt es in keinem der verfügbaren Regelwerke (${verfuegbar}).`, `None of the available acts has a § ${nummerText(nr)} (${verfuegbar}).`) }];
   }
   return [
     {
       art: "auswahl",
-      frage: tx(`§ ${nr} gibt es in mehreren Gesetzen. Welches ist gemeint?`, `§ ${nr} exists in several acts. Which one do you mean?`),
+      frage: tx(`§ ${nummerText(nr)} gibt es in mehreren Regelwerken. Welches ist gemeint?`, `§ ${nummerText(nr)} exists in several acts. Which one do you mean?`),
       optionen: kandidaten.map((g) => {
         const n = g.normen.find((x) => x.id === nr)!;
-        return { label: `§ ${nr} ${g.kurz} – ${n.titel}`, anfrage: `§ ${nr} ${g.kurz}` };
+        return { label: `${n.bez} ${g.kurz} – ${n.titel}`, anfrage: `${n.bez} ${g.kurz}` };
       }),
     },
   ];
@@ -112,7 +181,11 @@ export async function beantworte(eingabe: string, sprache: Sprache = "de"): Prom
   const adresse = erkenneAdresse(t, true);
   if (adresse) return [{ art: "ort", ort: await ortsauskunft(adresse.strasse, adresse.hausnummer, t, sprache) }];
 
-  // 2) Paragraph-Abruf
+  // 2) ATV der VOB/C ("DIN 18353")
+  const din = erkenneDin(t);
+  if (din.length) return din.slice(0, 3).map((nr) => dinAntwort(nr, sprache));
+
+  // 2b) Paragraph-Abruf
   const nummern = erkenneNummern(t);
   if (nummern.length) return paragraphAntwort(t, nummern, sprache);
 

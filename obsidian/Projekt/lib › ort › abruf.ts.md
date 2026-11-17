@@ -2,7 +2,7 @@
 pfad: "lib/ort/abruf.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 24
+zeilen: 38
 beschreibung: "Gemeinsamer, vorsichtiger Abruf externer Dienste: Zeitlimit, Zwischenspeicher, klare Fehler."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/ort/abruf.ts
 
-**Pfad:** `lib/ort/abruf.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 24
+**Pfad:** `lib/ort/abruf.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 38
 
 ## Kurzbeschreibung
 
@@ -23,7 +23,7 @@ Gemeinsamer, vorsichtiger Abruf externer Dienste: Zeitlimit, Zwischenspeicher, k
 
 ## Stellt bereit
 
-`DienstFehler`, `holeJson`
+`DienstFehler`, `fehlerText`, `holeJson`
 
 ## Wird verwendet von
 

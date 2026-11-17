@@ -2,8 +2,8 @@
 pfad: "app/globals.css"
 bereich: "Oberfläche"
 sprache: "CSS"
-zeilen: 422
-beschreibung: "Bau-Normen-KI – Gestaltung Leitidee: technische Zeichnung / Planunterlage. Ruhiges Papierweiß, dunkles Tannengrün, feine Linien, Schriftfeld-Kopf wie auf Bauplänen, Mono-Schrift für Nummern und Metadaten, Serifenschrift für den Gesetzestext."
+zeilen: 698
+beschreibung: "Bau-Normen-KI – Gestaltung „Gelände & Linie“ Leitidee: Organic Shapes & Line Art, hell und pastellig. Weiche Flächen in Minze, Salbei, Aqua und Flieder wie Grünflächen im Lageplan, feine Höhenlinien wie auf einer Geländekarte, Tannengrün nur für Text und Knöpfe. Fraunces für Überschriften, Figtree für die Oberfläche, DM Mono für Nummern und Metadaten, Source Serif für den Gesetzestext."
 tags:
   - "projekt"
   - "projekt/oberflaeche"
@@ -11,11 +11,11 @@ tags:
 
 # app/globals.css
 
-**Pfad:** `app/globals.css` · **Bereich:** Oberfläche · **Sprache:** CSS · **Zeilen:** 422
+**Pfad:** `app/globals.css` · **Bereich:** Oberfläche · **Sprache:** CSS · **Zeilen:** 698
 
 ## Kurzbeschreibung
 
-Bau-Normen-KI – Gestaltung Leitidee: technische Zeichnung / Planunterlage. Ruhiges Papierweiß, dunkles Tannengrün, feine Linien, Schriftfeld-Kopf wie auf Bauplänen, Mono-Schrift für Nummern und Metadaten, Serifenschrift für den Gesetzestext.
+Bau-Normen-KI – Gestaltung „Gelände \& Linie“ Leitidee: Organic Shapes \& Line Art, hell und pastellig. Weiche Flächen in Minze, Salbei, Aqua und Flieder wie Grünflächen im Lageplan, feine Höhenlinien wie auf einer Geländekarte, Tannengrün nur für Text und Knöpfe. Fraunces für Überschriften, Figtree für die Oberfläche, DM Mono für Nummern und Metadaten, Source Serif für den Gesetzestext.
 
 ## Importiert (lokal)
 

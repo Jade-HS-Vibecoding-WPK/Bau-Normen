@@ -2,7 +2,7 @@
 pfad: "lib/ort/index.ts"
 bereich: "Ortsauskunft"
 sprache: "TypeScript"
-zeilen: 251
+zeilen: 316
 beschreibung: "Ortsauskunft: Adresse -> Standort -> B-Plan (Stadt Oldenburg) + Denkmale (Denkmalatlas Niedersachsen) -> feste, nachvollziehbare Regeln, welche Paragraphen zu beachten sind. Keine KI beteiligt."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # lib/ort/index.ts
 
-**Pfad:** `lib/ort/index.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 251
+**Pfad:** `lib/ort/index.ts` · **Bereich:** Ortsauskunft · **Sprache:** TypeScript · **Zeilen:** 316
 
 ## Kurzbeschreibung
 
@@ -24,11 +24,13 @@ Ortsauskunft: Adresse -\> Standort -\> B-Plan (Stadt Oldenburg) + Denkmale (Denk
 > 
 > Grundsatz: Wenn ein Dienst nicht antwortet, sagen wir "keine Aussage möglich" –
 > niemals "kein B-Plan" oder "kein Denkmal", nur weil eine Abfrage fehlgeschlagen ist.
+> Alle Texte stehen zweisprachig (Deutsch/Englisch) nebeneinander; Paragraphen bleiben im deutschen Original.
 > ```
 
 ## Importiert (lokal)
 
 - [[Projekt/lib › gesetze.ts.md|lib/gesetze.ts]]
+- [[Projekt/lib › sprache.ts.md|lib/sprache.ts]]
 - [[Projekt/lib › typen.ts.md|lib/typen.ts]] – nur Typen
 - [[Projekt/lib › ort › bplan.ts.md|lib/ort/bplan.ts]]
 - [[Projekt/lib › ort › bplan-dokumente.ts.md|lib/ort/bplan-dokumente.ts]]
@@ -41,5 +43,5 @@ Ortsauskunft: Adresse -\> Standort -\> B-Plan (Stadt Oldenburg) + Denkmale (Denk
 
 ## Wird verwendet von
 
-`app/api/frage/route.ts`, `lib/verstehen.ts`  
+`lib/anfrage.ts`, `lib/verstehen.ts`  
 *(als Links im Bereich „Rückverweise“ von Obsidian)*

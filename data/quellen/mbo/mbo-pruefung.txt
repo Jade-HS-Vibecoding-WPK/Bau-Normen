@@ -1,0 +1,492 @@
+Prüfprotokoll MBO-Import – erzeugt von scripts/import-mbo.mjs (nicht von Hand bearbeiten)
+Quelle: https://www.dibt.de/fileadmin/dibt-website/Dokumente/Rechtsgrundlagen/MBO.pdf
+PDF: 83 Seiten, SHA-256 53fd13388013263c3f676a3a8024f6932e38b8d326af6d2d844ecb9be61d340c, erstellt 2025-04-16 16:30:17 (Microsoft® Word 2016)
+Abgerufen: 2026-11-17
+
+1. Seitenvergleich (alle Zeichen ohne Leerraum): pypdf-Textoperatoren (mbo.txt) gegen pdftotext -layout und pypdf extract_text()
+   83/83 Seiten identisch.
+
+2. Paragraphenvergleich: Inhalt in mbo.json (mit Hochgestelltem und Listenmarken) gegen pdftotext, ohne Leerraum
+   97/97 Einträge identisch (bis auf die dokumentierten Reparaturen R1 und R2).
+   § 16a: erklärt durch Reparatur: „²“ -> „2“
+   § 66: erklärt durch Reparatur: „-“ -> „“
+   § 87: erklärt durch Reparatur: „²“ -> „2“; „²“ -> „2“
+
+3. Vollständigkeit (Zeichen ohne Leerraum je Art der Zeile)
+   Titelseite + Inhaltsverzeichnis 3850, Überschriften 3787, Normtext 147847, Seitenzahlen 157, Fußnotenbereiche 832
+   Summe 156473 = alle Zeichen des PDF 156473
+
+4. Zeilenende mit Bindestrich (R1) – 19 Fälle
+   S. 5, § 1: „CE-⏎Zeichen“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 9, § 4: „öffentlich-⏎rechtlich“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 10, § 6: „Gewerbe-␣⏎und“ – Bindestrich + Leerzeichen wie im PDF (Ergänzungsstrich)
+   S. 24, § 30: „Brutto-⏎Rauminhalt,“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 38, § 45: „dicht-␣⏎und“ – Bindestrich + Leerzeichen wie im PDF (Ergänzungsstrich)
+   S. 39, § 47: „Netto-⏎Raumfläche“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 39, § 47: „Sport-⏎,“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 52, § 62: „Brutto-⏎Grundfläche“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 58, § 66: „Schall-␣⏎und“ – Bindestrich + Leerzeichen wie im PDF (Ergänzungsstrich)
+   S. 59, § 66: „Brandschutznach-␣⏎weisen“ – Silbentrennung: Bindestrich und Leerzeichen entfallen (R1)
+   S. 63, § 70: „Brutto-⏎Grundfläche“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 64, § 70: „Umwelt-⏎Rechtsbehelfsgesetzes“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 65, § 72: „öffentlich-⏎rechtlichen“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 72, § 81: „Mittel-␣⏎und“ – Bindestrich + Leerzeichen wie im PDF (Ergänzungsstrich)
+   S. 78, § 85a: „Bemessungs-␣⏎und“ – Bindestrich + Leerzeichen wie im PDF (Ergänzungsstrich)
+   S. 80, § 87: „CE-⏎Kennzeichnung“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 82, Anlage 1: „ECTS-⏎Leistungspunkten)“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 82, Anlage 1: „thematisch-⏎naturwissenschaftlichen“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+   S. 83, Anlage 1: „ECTS-⏎Punkte“ – Bindestrich ohne Leerzeichen wie im PDF (Bindestrichwort)
+
+5. Satznummer als Zeichen „²“ (R2) – 3 Fälle
+   § 16a: „… Nr. 6 zu erbringen hat. ²In der …“ – Zeichen „²“ als Satznummer 2 gespeichert (R2)
+   § 87: „…zes nicht mehr zulässig. ²Sind bereits in…“ – Zeichen „²“ als Satznummer 2 gespeichert (R2)
+   § 87: „…Umfang wirksam. ²Vor dem Inkraft…“ – Zeichen „²“ als Satznummer 2 gespeichert (R2)
+
+6. Hochgestelltes: 519 Satznummern, 51 Fußnotenzeichen, 3 Einheiten (m²/m³)
+   S. 71, § 81: Fußnotenzeichen „22“ ohne Fußnotentext auf derselben Seite – Zeichen unverändert übernommen
+   S. 72, § 82: Fußnotenzeichen „26“ ohne Fußnotentext auf derselben Seite – Zeichen unverändert übernommen
+   S. 81, § 87: Fußnotenzeichen „*)“ ohne Fußnotentext auf derselben Seite – Zeichen unverändert übernommen
+   S. 81, § 87: Fußnotenzeichen „)“ ohne Fußnotentext auf derselben Seite – Zeichen unverändert übernommen
+   Ungewöhnliche Satznummernfolgen:
+     § 28, 5. Absatz: Satznummern 2
+
+7. Gliederung, Absätze, Listen
+   S. 19: Überschrift „23“ ohne Paragraphenzeichen – als § 23 übernommen
+   S. 34: „§ 38“ – Paragraphenzeichen nicht fett gesetzt (Darstellung, ohne Folgen)
+   S. 36: „§ 40“ – Paragraphenzeichen nicht fett gesetzt (Darstellung, ohne Folgen)
+   S. 37: „§ 41“ – Paragraphenzeichen nicht fett gesetzt (Darstellung, ohne Folgen)
+   S. 66: Überschrift „§ 72a MBO“ – Zusatz „MBO“ steht so im PDF, Bezeichnung „§ 72a“
+   § 65 (S. 54): Liste beginnt mit „4.“ (so im PDF)
+   § 66 (S. 59): „2. a)“ – Unterliste beginnt in derselben Zeile
+   § 72 (S. 65): eingeschobener Absatz „(1a)“
+   § 82 (S. 72): Listenmarke „[1.“ mit eckiger Klammer der Muster-Alternative (so im PDF)
+   § 85 (S. 77): eingeschobener Absatz „(4a)“
+   Absatznummern: in jedem Paragraphen lückenlos (1), (2), …
+
+8. Inhaltsverzeichnis des PDF gegen Überschriften im Text (maßgeblich ist die Überschrift) – 2 Abweichungen
+   § 73: Überschrift „Geltungsdauer der Genehmigung“ – Inhaltsverzeichnis „Geltungsdauer der Baugenehmigung“
+   § 87: Überschrift „Inkrafttreten, Übergangsvorschriften“ – Inhaltsverzeichnis „In-Kraft-Treten, Übergangsvorschriften“
+
+9. Leerzeichen: Abweichungen der Vergleichsextraktoren von den Leerzeichen-Zeichen im PDF (informativ;
+   übernommen werden immer die Leerzeichen-Zeichen des PDF). ␣ = Leerzeichen im PDF, | = keins.
+   nur pdftotext: 133
+     S. 5: gmitWasser,Gas|,Elektrizität,
+     S. 5: ampingplätze,W|ochenendplätze
+     S. 6: Nutzungseinhei|ten
+     S. 7: g,ausgenommenW|ohngebäudeundG
+     S. 7: fas|sen,wenndieseV
+     S. 7: 11.W|ohnheime,
+     S. 8: 5.Camping-undW|ochenendplätze
+     S. 8: chVerbrennungW|ärmezuerzeugen
+     S. 8: emeinüblichenW|eise,ohnebeson
+     S. 9: ,wennöffentlic|h-
+     S. 10: denenW|irkungenwievon
+     S. 10: de,dieineinemW|inkelvonmehral
+     S. 10: W|ohngebäudender
+     S. 10: senkrechtzurW|andgemessen.2W
+     S. 10: andgemessen.2W|andhöheistdasM
+     S. 10: hnittpunktderW|andmitderDachh
+     S. 10: DrittelderW|andhöhehinzuge
+     S. 10: ndsfläche3m.4W|erdenvon
+     S. 12: endiesesGesetz|esoder
+     S. 12: itmehralsdreiW|ohnungenistauf
+     S. 13: (2)1FürW|erbeanlagen,di
+     S. 13: ndeHäufungvonW|erbeanlagenist
+     S. 13: 1.W|erbeanlagenand
+     S. 13: hrsstraßenundW|egabzweigungen
+     S. 13: zusam|mengefasstsind
+     S. 13: ngebietensindW|erbeanlagennur
+     S. 13: dieDauereinesW|ahlkampfs.
+     S. 14: genordnungsgem|äß
+     S. 14: nzenoderdurchW|arnzeichenzuke
+     S. 14: dassdurchW|asser,Feuchtig
+     S. 15: henVerhältniss|en
+     S. 15: ntsprechendenW|ärmeschutzhabe
+     S. 21: W|iderstandgegen
+     S. 22: sdenAnforderun|gen
+     S. 22: daussteifendeW|ändeundStützen
+     S. 22: daussteifendeW|ändeundStützen
+     S. 22: aus|zubilden,dasse
+     S. 23: Brandaus|breitungbesond
+     S. 24: feuerhemmendeW|ände,
+     S. 25: eile,diedieseW|ändeundDeckenu
+     S. 25: nicht,wennderW|inkelderinnere
+     S. 25: feuerhemmendeW|andausgebildet
+     S. 25: enwandbekleidu|ngen
+     S. 25: andbekleidunge|n
+     S. 26: echendauchfürW|ände,dienachAb
+     S. 26: ausgenommeninW|ohngebäudender
+     S. 28: chtkuppelnvonW|ohngebäuden,
+     S. 28: undstrahlendeW|ärmenichtzubef
+     S. 28: dwändenundvonW|änden,
+     S. 29: ndwandoderderW|and,dieanstell
+     S. 29: vondiesenW|ändenalsraumab
+     S. 29: fürAnbautenanW|ohngebäudederG
+     S. 29: derGebäudeklas|sen
+     S. 29: erGebäudeklass|en
+     S. 31: derungenandieW|ändedesTreppen
+     S. 31: (4)1DieW|ändenotwendige
+     S. 32: igeTreppenräum|e
+     S. 33: 1.inW|ohngebäudender
+     S. 33: (4)1DieW|ändenotwendige
+     S. 33: ndigsein.2DieW|ändesindbisand
+     S. 33: (5)1FürW|ändeundBrüstun
+     S. 36: austrittdurchW|indeinflussnic
+     S. 36: mindes|tens1,10mx1,40
+     S. 38: (2)1JedeW|ohnungmusseine
+     S. 38: seineneigenenW|asserzählerhab
+     S. 38: enauszugänglic|h
+     S. 38: iedafürbestimm|ten
+     S. 38: tdertragendenW|ändeund
+     S. 39: (2)InW|ohngebäudender
+     S. 39: rsowiefürjedeW|ohnungeinausre
+     S. 39: (3)JedeW|ohnungmusseinB
+     S. 40: itmehralszweiW|ohnungenmüssen
+     S. 40: ufenthaltsräum|e,eineToilette
+     S. 41: Brand-,W|ärme-,Schall-o
+     S. 42: 23.Erst-,W|iederholungs-u
+     S. 42: imRahmenihresW|irkungskreises
+     S. 43: eitzuhalten.4W|erdenBauproduk
+     S. 43: mitzuteilen.6W|echseltderBauh
+     S. 44: W|eisungenzuerte
+     S. 45: .2SiekönneninW|ahrnehmung
+     S. 45: chließlichderW|ohnungenzu
+     S. 45: tzlichkeitderW|ohnung(Art.13d
+     S. 45: aus|genommenGebäud
+     S. 47: nendhäuseraufW|ochenendplätze
+     S. 47: dAußenwandfläc|hen
+     S. 47: W|ohngebieten,
+     S. 47: ät,Gas,ÖloderW|ärmedienen,mit
+     S. 49: tzen,Reit-undW|anderwegen,
+     S. 49: Wärmedäm|mung,ausgenomm
+     S. 49: hMaßnahmenderW|ärmedämmung
+     S. 49: 12.folgendeW|erbeanlagen:
+     S. 51: Jägerstände,W|ildfütterungen
+     S. 52: ins|besonderedesha
+     S. 55: erIngenieurkam|mer
+     S. 55: rIngenieurkamm|er
+     S. 60: erungundunterW|ürdigungder
+     S. 62: nenFristauf.2W|erdendieMängel
+     S. 65: begründen.3W|iderspruchundA
+     S. 65: aufschiebendeW|irkung,alsdieG
+     S. 65: rdasgemeindlic|he
+     S. 65: eineöffentlich|-
+     S. 65: Genehmigungs|verfahrenzuprü
+     S. 65: ichkeitsprüfun|g
+     S. 66: unddieW|iederaufnahmed
+     S. 68: ltundinGebrauc|h
+     S. 69: ÄnderungeneinW|echselderZustä
+     S. 69: ebrauchsabnahm|eoderderVerzic
+     S. 69: ewichenwird.2W|irddieAufstell
+     S. 69: ebrauchsabnahm|e
+     S. 69: heitNachabnahm|en
+     S. 70: derBundespoliz|ei
+     S. 70: ningeeigneterW|eisezurKenntni
+     S. 71: (1)1W|erdenAnlagenim
+     S. 71: 1W|erdenAnlagenim
+     S. 71: ichtaufandereW|eiserechtmäßig
+     S. 71: erdenkönnen.2W|erdenAnlagenim
+     S. 71: rdenAnlagenimW|iderspruchzuöf
+     S. 72: bestätigen.[3W|irddieBauausfü
+     S. 72: indestenszweiW|ochenvorherder
+     S. 73: rvorihranerkan|nt
+     S. 73: fristungenundW|iderrufsvorbeh
+     S. 75: widerbesseresW|issen
+     S. 75: §36Abs.1Nr.1OW|iGistindenFäll
+     S. 75: 5.Erst-,W|iederholungs-u
+     S. 76: ,RücknahmeundW|iderrufderAner
+     S. 77: anderenW|illensbildungd
+     S. 77: cknahme,ihrenW|iderrufundihrE
+     S. 78: ltenenPlanungs|-,Bemessungs-
+     S. 78: oderaufandereW|eiseerfolgen,i
+     S. 79: vonW|erbeanlagenund
+     S. 79: rbeanlagenundW|arenautomatena
+     S. 80: assenwerden.2W|erdendieörtlic
+     S. 80: ssungfort.2InW|ohngebäudender
+   nur pypdf: 269
+     S. 5: ,S.241,bericht|igtdurchABl.L0
+     S. 5: nigungundeinCE|-
+     S. 5: licheAnlagensi|ndauch
+     S. 6: essinddieBrutt|o-Grundflächen
+     S. 6: lächen;beiderB|erechnungderBr
+     S. 6: chnungderBrutt|o-Grundflächen
+     S. 6: ung)(ABl.L328v|om
+     S. 7: eineGrundfläch|e
+     S. 7: MenschenmitBeh|inderungundalt
+     S. 8: renverbundensi|nd.
+     S. 8: )Bauproduktesi|nd
+     S. 11: erliegendenNac|hbargrenzeentf
+     S. 12: nGrundstückesi|nd
+     S. 12: neAnwendung,so|weitBebauungsp
+     S. 12: ndauerhafteNut|zungfürdiesenZ
+     S. 12: dieKin|dernutzbarerSp
+     S. 12: ,wenndiesdieGe|sundheitundder
+     S. 12: ndheitundderSc|hutzderKinder
+     S. 12: derSchutzderKi|nder
+     S. 13: ecktliegendeSt|ättenaufmerksa
+     S. 13: Anlagenfüra|mtlicheMitteil
+     S. 13: ekorationeninF|ensternundScha
+     S. 14: fahrensfreierB|auvorhabenhatd
+     S. 15: tgenehmigungdu|rchdasDeutsche
+     S. 17: nanerkanntenRe|gelderTechnika
+     S. 17: ntergeordneteB|edeutunghat.
+     S. 17: n,diekeinesVer|wendbarkeitsna
+     S. 18: technischenRe|gelnindenTechn
+     S. 18: schenRegelnind|enTechnischenB
+     S. 18: ichung,dienich|t
+     S. 19: sungen,indenal|lgemeinenbauau
+     S. 19: nallgemeinenba|uaufsichtliche
+     S. 19: gemäßenHerstel|lungerforderli
+     S. 19: Bauproduktdara|ufhinzuüberprü
+     S. 19: aufhinzuüberpr|üfen,obesden
+     S. 19: egeln,Zulassun|gen,Prüfzeugni
+     S. 19: Zulassungen,Pr|üfzeugnissenod
+     S. 19: üfzeugnissenod|er
+     S. 20: üfen,obdasBaup|roduktden
+     S. 20: nnach§85aAbs.2|,derallgemeine
+     S. 20: rallgemeinenba|uaufsichtliche
+     S. 20: stellefürdieÜb|erprüfungvonBa
+     S. 20: oduktenvorBest|ätigungder
+     S. 20: tlichenVorschr|iften
+     S. 20: berdieerforder|lichen
+     S. 20: mitdenerforder|lichen
+     S. 20: vonPrüf-,Zerti|fizierungs-und
+     S. 20: ergegenüberein|er
+     S. 20: rchPrüfungnach|zuweisende
+     S. 20: ungunddieAusbi|ldungsstättene
+     S. 21: chtbrennbarenB|austoffen,
+     S. 21: edurchgehendeS|chichtausnicht
+     S. 22: zenmüssenimBra|ndfall
+     S. 22: feuerhemmendsi|nd.
+     S. 23: chosseüberbrüc|kendeSolaranla
+     S. 23: ustoffe,diesch|werentflammbar
+     S. 23: ennwändenachAb|satz2müssenals
+     S. 23: tz2müssenalsra|umabschließend
+     S. 23: schließendeBau|teilevon
+     S. 24: erbeständigerB|auteilehaben.
+     S. 24: erals2000m³ist|.
+     S. 25: chtbrennbarenB|austoffenbeste
+     S. 25: dausbreitungbe|günstigenkönne
+     S. 26: hrereigenenAus|ladungentspric
+     S. 28: henfenster,Lic|htkuppeln,Ober
+     S. 28: soan|zuordnenundher
+     S. 28: dieanst|ellevonBrandwä
+     S. 28: anstellevonBra|ndwändenzuläss
+     S. 29: dieFe|uerwiderstands
+     S. 30: 3.inG|ebäudenderGebä
+     S. 30: fürGebäudederG|ebäudeklassen3
+     S. 31: ngen,Putze,Däm|mstoffe,Unterd
+     S. 32: auchdichteunds|elbstschließen
+     S. 32: rkehrungenzutr|effen.
+     S. 33: Bekleidungen,P|utze,Unterdeck
+     S. 34: denoberkantean|geordnetsein.2
+     S. 35: shöheliegen,si|ndzusichern.
+     S. 36: henderDickehab|en.
+     S. 36: üssenzulüftens|einundeineÖffn
+     S. 36: ierigkeitenher|gestelltwerden
+     S. 37: inrichtungensi|ndinLüftungsle
+     S. 38: undsoher|zustellen,dass
+     S. 39: lfteihrerNetto|-Raumflächehab
+     S. 39: deklassen1und2|.
+     S. 40: nutzungfürdies|enZwecköffentl
+     S. 40: nbeieinemam…*)|1rechtmäßigbes
+     S. 42: rzuerbringensi|nd.
+     S. 43: zusor|gen,dassdiefür
+     S. 45: genehmigung,so|weitinden§§60b
+     S. 45: Sonderbautensi|nd,
+     S. 46: Sonderbautensi|nd,
+     S. 46: ugenehmigung,d|ie
+     S. 46: rfahrensfreisi|nd
+     S. 47: bhängigeSolara|nlagenmiteiner
+     S. 48: üssiggasmitein|emFassungsverm
+     S. 50: ngenehmigterTa|nkstellensowie
+     S. 51: wieHa|useingangsüber
+     S. 51: ,Markisen,Roll|läden,Terrasse
+     S. 51: keineGebäudesi|nd,miteinerHöh
+     S. 51: rfahrensfreisi|ndInstandhaltu
+     S. 51: Absatzes2dieEr|richtung,Änder
+     S. 51: ieErrichtung,Ä|nderungund
+     S. 52: 1.einesodermeh|rererGebäude,w
+     S. 52: mtmehrals5000m|2Brutto-
+     S. 52: IS.1274)inderj|eweilsgeltende
+     S. 52: erlagenbeiderG|emeinde
+     S. 52: ereinfachteBau|genehmigungsve
+     S. 53: dieBau|aufsichtsbehör
+     S. 54: erendenHochsch|ulabschluss
+     S. 55: usseinesStudiu|msder
+     S. 55: ichsind,uminde|ssenHoheitsgeb
+     S. 55: tmitdenAnforde|rungennach§65a
+     S. 55: nesBefähigungs|-oderAusbildun
+     S. 55: achweisesist,d|erden
+     S. 56: eurkammerLand…|*)zurBeschaffu
+     S. 56: urkammerLand….|*)beiberechtig
+     S. 56: agstellerderIn|genieurkammerL
+     S. 56: urkammerLand….|*)unverzüglich
+     S. 57: eurkammerLand…|*)sowohleinen
+     S. 57: hsmaßnahmenwer|dendurch
+     S. 57: maßnahmenschli|eßen.2DieVerei
+     S. 57: undgelegentlic|henErstellungv
+     S. 57: urkammerLand….|*)inTextforman
+     S. 58: endeTätigkeitm|indestenseinJa
+     S. 58: eichbarenRegel|ungengelten
+     S. 58: eurkammerLand…|*)stehtesfrei,
+     S. 58: urkammerLand….|*)stelltüberdi
+     S. 58: areRegelungfin|detentsprechen
+     S. 58: ndsicherheit,d|enBrand-,Schal
+     S. 59: ichenAnlagen,d|iekeineGebäude
+     S. 59: asBauvorhabenB|auvorlageberec
+     S. 59: eichwertigesSt|udiumaneinerau
+     S. 59: ändischenHochs|chule
+     S. 59: esenistunddiee|rforderlichenK
+     S. 60: chutznachweis[|bauaufsichtlic
+     S. 60: geprüft/durche|inen
+     S. 60: fsichtlichenPr|üfung/Beschein
+     S. 61: efreiungenvond|enFestsetzunge
+     S. 61: Festsetzungene|inesBebauungsp
+     S. 61: gsplansoderein|ersonstigen
+     S. 61: nsodereinerson|stigen
+     S. 62: inheitlicheSte|llestellteinVe
+     S. 62: telltdieBauauf|sichtsbehörde
+     S. 63: Bauherrentspre|chendeBauvorla
+     S. 63: enAnlagen,diea|ufGrundihrerBe
+     S. 63: rundihrerBesch|affenheitoderi
+     S. 63: ,öffentlichbek|anntmachen.2Be
+     S. 63: mtmehrals5000m|2Brutto-
+     S. 63: eitsabstandsei|nesBetriebsber
+     S. 63: 1.dieBauaufsi|chtsbehördezud
+     S. 64: Abs.2desUmwelt|-
+     S. 64: ndurchöffentli|che
+     S. 64: tstellungderPf|lichtzurDurchf
+     S. 64: sprüfungdesVor|habensnach§5UV
+     S. 64: ensnach§5UVPGs|owie
+     S. 64: ntscheidungeno|der,soweitvorh
+     S. 64: itendesVerfahr|enszurUnterric
+     S. 64: ZeitpunktderB|ekanntmachungv
+     S. 64: achungvorliege|n,einenMonatzu
+     S. 64: zurEinsichtaus|zulegen.
+     S. 64: n,dieGeschäfts|-oderBetriebsg
+     S. 64: ilt§10Abs.2BIm|SchGentspreche
+     S. 64: end.3BiszweiWo|chennach
+     S. 64: gegenüberderzu|ständigenBehör
+     S. 64: ngdurchöffentl|icheBekanntmac
+     S. 64: hungersetztwer|den;
+     S. 64: chkeitsbeteili|gungnachAbsatz
+     S. 64: idöffentlichbe|kanntzumachen.
+     S. 64: twerden;aufAuf|lagenisthinzuw
+     S. 64: isthinzuweisen|.3EineAusferti
+     S. 64: atsächlichenun|drechtlichenGr
+     S. 65: 5Inderöffentli|chenBekanntmac
+     S. 65: kanntmachungis|tanzugeben,wou
+     S. 65: heidundseineBe|gründungeinges
+     S. 65: fristgiltderBe|scheidauchDrit
+     S. 65: ,diekeineEinwe|ndungenerhoben
+     S. 65: nhaben,alszuge|stellt;daraufi
+     S. 65: machunghinzuwe|isen.7Nachderö
+     S. 65: öffentlichenBe|kanntmachungkö
+     S. 65: cheidundseineB|egründungbiszu
+     S. 65: zumAblaufderWi|derspruchsfris
+     S. 65: ttelten,beschr|iebenenundbewe
+     S. 66: ugegangenistso|wie
+     S. 66: hdiesemGesetzo|deraufgrunddie
+     S. 67: nfJahre.DieFri|stkannaufAntra
+     S. 67: albvondreiJahr|ennachihrerErt
+     S. 67: teilungmitderA|usführungdes
+     S. 69: eitverbundenis|t,dernunmehrzu
+     S. 69: (Grundfläche,H|öhe),derGeltun
+     S. 69: und,so|weitihreöffent
+     S. 70: beseitigenlass|en.
+     S. 71: tlichenVorschr|iften
+     S. 72: ätigt,findetin|soweiteinebaua
+     S. 72: aufsichtlicheÜ|berwachungnich
+     S. 73: ejeweiligeBest|ätigung.
+     S. 73: derbevollmäch|tigteBezirkssc
+     S. 73: chgegenüberRec|htsnachfolgern
+     S. 73: ,Bedingungen,B|efristungenund
+     S. 75: rgeben(§51),so|wieüberdieAnwe
+     S. 76: 2)1DieobersteB|auaufsichtsbeh
+     S. 76: ingenieureundP|rüfämter,denen
+     S. 76: ufsichtlichePr|üfaufgaben
+     S. 76: chließlichderB|auüberwachungu
+     S. 76: eimAuftragdesB|auherrnoderdes
+     S. 76: sBauherrnoderd|essonstigennac
+     S. 76: ortlichendieEi|nhaltungbauord
+     S. 76: Erlöschen,Rück|nahmeundWiderr
+     S. 76: enLeiternvonBr|andschutzdiens
+     S. 76: en,dassdievons|olchenPrüfsach
+     S. 76: ievonsolchenPr|üfsachverständ
+     S. 76: agwerksplanern|ach§66Abs.2Sat
+     S. 76: 3)1DieobersteB|auaufsichtsbeh
+     S. 76: ang,InhaltundZ|ahldererforder
+     S. 76: altundZahldere|rforderlichenU
+     S. 76: 2.diee|rforderlichenA
+     S. 76: chenAnträge,An|zeigen,Nachwei
+     S. 76: ge,Anzeigen,Na|chweise,Besche
+     S. 77: erschiedlicheA|nforderungenun
+     S. 78: immen,dassdieA|nforderungende
+     S. 78: gerlassenenRec|htsverordnunge
+     S. 78: rfahrenfürdieF|eststellungder
+     S. 78: derLeistungein|esBauproduktes
+     S. 78: eistungeinesBa|uproduktesim
+     S. 78: e)dieFestle|gungvonKlassen
+     S. 78: legungvonKlass|enundStufeninB
+     S. 78: onKlassenundSt|ufeninBezugauf
+     S. 78: nundStufeninBe|zugaufbestimmt
+     S. 78: StufeninBezuga|ufbestimmte
+     S. 78: eninBezugaufbe|stimmte
+     S. 78: f)diefüre|inenbestimmten
+     S. 78: iefüreinenbest|immtenVerwendu
+     S. 78: nbestimmtenVer|wendungszwecka
+     S. 78: endungszweckan|zugebendeoder
+     S. 78: kanzugebendeod|er
+     S. 79: estimmungensol|lennachdenGrun
+     S. 79: gsvorschrifter|lässt.
+     S. 79: licherAnlagens|owie
+     S. 79: 3.dieLage,Größ|e,Beschaffenhe
+     S. 79: Lage,Größe,Bes|chaffenheit,Au
+     S. 79: gsverkehrmitKr|aftfahrzeugeno
+     S. 79: lplätzeundAbst|ellplätzefür
+     S. 80: 5.dieG|estaltungderPl
+     S. 80: estaltungderPl|ätzefürbewegli
+     S. 80: fürbeweglicheA|bfallbehälteru
+     S. 80: ndstückesowieü|berdieNotwendi
+     S. 80: owieüberdieNot|wendigkeit,Art
+     S. 80: estaltungundHö|hevonEinfriedu
+     S. 80: ngundHöhevonEi|nfriedungen;da
+     S. 80: dungen;dabeika|nnbestimmtwerd
+     S. 80: en1und2könneni|nnerhalbderört
+     S. 80: eichnerischerD|arstellungenge
+     S. 80: Bekanntgabek|anndadurcherse
+     S. 80: (1)1DiesesGes|etztrittam…inK
+     S. 80: tztrittam…inKr|aft.2Abweichen
+     S. 80: ertenmateriell|-rechtlichenVo
+     S. 80: tsräumeinsolch|en
+     S. 81: ndesGesetzes…*|)
+     S. 81: lamentsunddesR|atesundderRich
+     S. 82: ichendiePlanun|g,denEntwurf,d
+     S. 82: spricht180ECTS|-
+     S. 82: destens135ECTS|-PunkteinStudi
+     S. 82: enimthematisch|-
+     S. 82: mitteln:insbes|ondereHöhereMa
+     S. 82: besondereBaust|atik,Massivbau
+     S. 82: assivbau(Beton|-,Stahlbeton-u
+     S. 82: on-,Stahlbeton|-und
+     S. 82: erksbau),Stahl|-undMetallbau,
+     S. 82: nsbesondereWas|serwirtschaft,
+     S. 83: träge,Haftung)|,Bauen
+   pdftotext und pypdf: 13
+     S. 18: üfzeugnisses.2|Dieswirdmitder
+     S. 44: emeinden(Ämter|3)
+     S. 44: meinden(Ämter3|)
+     S. 48: inhaltbiszu10m|3sowie,soweits
+     S. 60: enbescheinigt]|1sein;dasgiltn
+     S. 66: hverständigen]|1müssenanderBa
+     S. 69: mungderhöheren|1
+     S. 70: tbeiderhöheren|1Bauaufsichtsb
+     S. 78: ndzubeachten.3|Von
+     S. 79: desLandes|1,soweitdieobe
+     S. 79: desLandes1|,soweitdieober
+     S. 81: 006/42/EG“durc|h
+     S. 82: n/Objektplanun|g
+   nur PDF: 0
+   PDF und pdftotext: 0
+   PDF und pypdf: 0

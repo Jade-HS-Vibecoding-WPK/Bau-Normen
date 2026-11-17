@@ -2,7 +2,7 @@
 pfad: "app/api/frage/route.ts"
 bereich: "Schnittstelle"
 sprache: "TypeScript"
-zeilen: 31
+zeilen: 12
 tags:
   - "projekt"
   - "projekt/schnittstelle"
@@ -10,14 +10,14 @@ tags:
 
 # app/api/frage/route.ts
 
-**Pfad:** `app/api/frage/route.ts` · **Bereich:** Schnittstelle · **Sprache:** TypeScript · **Zeilen:** 31
+**Pfad:** `app/api/frage/route.ts` · **Bereich:** Schnittstelle · **Sprache:** TypeScript · **Zeilen:** 12
 
 ## Kurzbeschreibung
 
 ## Importiert (lokal)
 
-- [[Projekt/lib › ort › index.ts.md|lib/ort/index.ts]]
-- [[Projekt/lib › verstehen.ts.md|lib/verstehen.ts]]
+- [[Projekt/lib › anfrage.ts.md|lib/anfrage.ts]]
+- [[Projekt/lib › daten-server.ts.md|lib/daten-server.ts]]
 
 ## Stellt bereit
 

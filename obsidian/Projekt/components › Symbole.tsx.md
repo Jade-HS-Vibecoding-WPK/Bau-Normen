@@ -2,8 +2,8 @@
 pfad: "components/Symbole.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 42
-beschreibung: "Schlichte Linien-Symbole (SVG), angelehnt an Planzeichen."
+zeilen: 43
+beschreibung: "Schlichte Linien-Symbole (SVG) im Stil der Linienkunst."
 tags:
   - "projekt"
   - "projekt/oberflaeche"
@@ -11,11 +11,11 @@ tags:
 
 # components/Symbole.tsx
 
-**Pfad:** `components/Symbole.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 42
+**Pfad:** `components/Symbole.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 43
 
 ## Kurzbeschreibung
 
-Schlichte Linien-Symbole (SVG), angelehnt an Planzeichen.
+Schlichte Linien-Symbole (SVG) im Stil der Linienkunst.
 
 ## Importiert (lokal)
 

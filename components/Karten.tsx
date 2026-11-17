@@ -70,6 +70,8 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
   const lang = norm.inhalt.length > 4 || JSON.stringify(norm.inhalt).length > 2500;
   const datum = standDatum(gesetz.stand);
   const nummer = norm.bez.replace(/^§\s*/, "§ ");
+  const verzeichnis = !!gesetz.nurVerzeichnis;
+  const sp = e.sprache === "en" ? "en" : "de";
   const abschnitt = norm.gliederung.at(-1)?.split(" – ")[1];
 
   async function kopieren() {
@@ -115,26 +117,32 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
           <div>
             <dt>{t("Wortlaut", "Wording")}</dt>
             <dd>
-              <button onClick={kopieren}>{kopiert ? t("kopiert ✓", "copied ✓") : t("kopieren", "copy")}</button>
+              {verzeichnis ? (
+                <span title={t("Der Wortlaut ist eine DIN-Norm und nicht enthalten.", "The wording is a DIN standard and not included.")}>{t("nur bei DIN", "DIN only")}</span>
+              ) : (
+                <button onClick={kopieren}>{kopiert ? t("kopiert ✓", "copied ✓") : t("kopieren", "copy")}</button>
+              )}
             </dd>
           </div>
           {obsidianPfad && lokal && (
             <div>
               <dt>Obsidian</dt>
               <dd>
-                <a href={obsidianLink(obsidianPfad, `Gesetze/${gesetz.kurz}/${norm.bez} ${gesetz.kurz}.md`)}>{t("Notiz öffnen", "Open note")}</a>
+                <a href={obsidianLink(obsidianPfad, `Gesetze/${gesetz.kurz.replace(/\//g, "-")}/${norm.bez} ${gesetz.kurz.replace(/\//g, "-")}.md`)}>{t("Notiz öffnen", "Open note")}</a>
               </dd>
             </div>
           )}
         </dl>
       </header>
 
+      {gesetz.hinweis && (
+        <p className={`regelwerk-hinweis rh-${gesetz.art}`}>
+          <b>{gesetz.artText[sp]}</b> {gesetz.hinweis[sp]}
+        </p>
+      )}
+
       <section className="teil">
-        <TeilKopf
-          nr="01"
-          titel={t("Originaltext", "Original text")}
-          zusatz={t("amtlicher Wortlaut, unverändert übernommen", "official German wording, reproduced unchanged – only the German text is legally binding")}
-        />
+        <TeilKopf nr="01" titel={verzeichnis ? t("Verzeichniseintrag", "Index entry") : t("Originaltext", "Original text")} zusatz={gesetz.wortlaut[sp]} />
         <div className={`original ${lang && !offen ? "eingeklappt" : ""}`} lang="de">
           {norm.weggefallen ? <p className="weggefallen">(weggefallen)</p> : <Normtext inhalt={norm.inhalt} />}
           {norm.fussnoten && <p className="fussnote">{norm.fussnoten}</p>}
@@ -173,7 +181,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             )}
           </div>
         ) : (
-          <p className="leer-text">{t("Für diesen Paragraphen liegt noch keine Erläuterung vor.", "No explanation is available for this section yet.")}</p>
+          <p className="leer-text">{t("Für diese Vorschrift liegt noch keine Erläuterung vor.", "No explanation is available for this provision yet.")}</p>
         )}
         {erlaeuterung?.status === "entwurf" && <p className="erl-status">{t("Entwurf · fachliche Prüfung ausstehend", "Draft · expert review pending")}</p>}
       </section>
@@ -208,7 +216,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
             )}
           </dl>
         ) : (
-          <p className="leer-text">{t("Keine Verweise innerhalb des Gesetzes.", "No cross-references within the act.")}</p>
+          <p className="leer-text">{t("Keine Verweise innerhalb des Regelwerks.", "No cross-references within the act.")}</p>
         )}
       </section>
     </article>

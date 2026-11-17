@@ -1,7 +1,7 @@
 "use client";
 // Oberfläche: Kopf (Sprache, Darstellung), Seitenleiste mit festen Formularen (Ortsauskunft, Paragraph),
 // angeheftete Gebietsleiste und der Auskunfts-Verlauf (Chat).
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { type GeckoSignal, geckoSignal } from "@/lib/gecko";
 import { standDatum } from "@/lib/text";
 import type { Antwort, GesetzInfo, OrtAnsicht } from "@/lib/typen";
@@ -121,7 +121,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
           </a>
           <div className="kopf-meta">
             <span className="kopf-stand">
-              {gesetze.map((g) => (
+              {gesetze.filter((g) => g.imKopf).map((g) => (
                 <span key={g.id}>
                   <b>{g.kurz}</b> {t("Stand", "as of")} {standDatum(g.stand) ?? "–"}
                 </span>
@@ -181,14 +181,14 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               className="block-inhalt"
               onSubmit={(ev) => {
                 ev.preventDefault();
-                const nr = paraNr.replace(/[§\s]/g, "");
-                if (nr) frage(`§ ${nr} ${paraGesetz}`);
+                const nr = paraNr.replace(/§|din|atv/gi, "").replace(/\s+/g, " ").trim();
+                if (nr) frage(paraGesetz === "VOB/C" ? `DIN ${nr.replace(/\s/g, "")}` : `§ ${nr} ${paraGesetz}`);
                 setParaNr("");
               }}
             >
               <div className="feldreihe para">
                 <div className="feld">
-                  <label htmlFor="gesetz">{t("Gesetz", "Act")}</label>
+                  <label htmlFor="gesetz">{t("Regelwerk", "Act")}</label>
                   <select id="gesetz" value={paraGesetz} onChange={(ev) => setParaGesetz(ev.target.value)}>
                     {gesetze.map((g) => (
                       <option key={g.id} value={g.kurz}>
@@ -198,8 +198,20 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                   </select>
                 </div>
                 <div className="feld">
-                  <label htmlFor="paranr">{t("Paragraph", "Section")}</label>
-                  <input id="paranr" value={paraNr} onChange={(ev) => setParaNr(ev.target.value)} placeholder={t("z. B. 34 oder 13a", "e.g. 34 or 13a")} autoComplete="off" />
+                  <label htmlFor="paranr">{paraGesetz === "VOB/C" ? "ATV DIN" : t("Paragraph", "Section")}</label>
+                  <input
+                    id="paranr"
+                    value={paraNr}
+                    onChange={(ev) => setParaNr(ev.target.value)}
+                    placeholder={
+                      paraGesetz === "VOB/C"
+                        ? t("z. B. 18353", "e.g. 18353")
+                        : paraGesetz === "VOB/A"
+                          ? t("z. B. 3a oder 3a EU", "e.g. 3a or 3a EU")
+                          : t("z. B. 34 oder 13a", "e.g. 34 or 13a")
+                    }
+                    autoComplete="off"
+                  />
                 </div>
               </div>
               <button className="knopf knopf-zweit knopf-breit" type="submit" disabled={laedt || !paraNr.trim()}>
@@ -213,23 +225,29 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               <span className="kennung">C</span> {t("Bibliothek", "Library")}
             </h2>
             <ul className="bibliothek">
-              {gesetze.map((g) => (
-                <li key={g.id}>
-                  <span className="kuerzel">{g.kurz}</span>
-                  <span>
-                    <span className="titel" lang="de">
-                      {g.titel}
-                    </span>
-                    <span className="meta">
-                      {g.anzahl} {t("Vorschriften", "provisions")} · {t("Stand", "as of")} {standDatum(g.stand) ?? "–"}
-                      <br />
-                      <a href={g.quelleUrl} target="_blank" rel="noreferrer">
-                        {t("amtliche Quelle ↗", "official source ↗")}
-                      </a>
-                    </span>
-                  </span>
-                </li>
-              ))}
+              {gesetze.map((g, i) => {
+                const sp = e.sprache === "en" ? "en" : "de";
+                const neueGruppe = i === 0 || gesetze[i - 1].gruppe.de !== g.gruppe.de;
+                return (
+                  <Fragment key={g.id}>
+                    {neueGruppe && <li className="bib-gruppe">{g.gruppe[sp]}</li>}
+                    <li>
+                      <span className="kuerzel">{g.kurz}</span>
+                      <span>
+                        <span className="titel" title={g.titel}>
+                          {g.kurztitel[sp]}
+                        </span>
+                        <span className="meta">
+                          {g.anzahl} {g.nurVerzeichnis ? "ATV" : "§§"} · {standDatum(g.stand) ?? "–"} ·{" "}
+                          <a href={g.quelleUrl} target="_blank" rel="noreferrer" title={g.quelleName}>
+                            {g.nurVerzeichnis ? "DIN ↗" : t("Quelle ↗", "source ↗")}
+                          </a>
+                        </span>
+                      </span>
+                    </li>
+                  </Fragment>
+                );
+              })}
             </ul>
           </section>
 
@@ -238,8 +256,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               <p>
                 <strong>{t("Verlässlichkeit:", "Reliability:")}</strong>{" "}
                 {t(
-                  "Gesetzestexte werden unverändert aus amtlichen Quellen angezeigt. Ortsauskünfte stammen live aus den Datendiensten der Stadt Oldenburg und des Landesamts für Denkmalpflege. Die Auskunft ersetzt keine Rechtsberatung.",
-                  "Statutory texts are shown unchanged from official sources (in German). Location checks come live from the data services of the City of Oldenburg and the Lower Saxony State Office for Heritage. This is not legal advice.",
+                  "Gesetze, Musterbauordnung und VOB werden unverändert im Wortlaut der Quelle angezeigt, die VOB/C nur als Verzeichnis. Ortsauskünfte stammen live aus den Datendiensten der Stadt Oldenburg und des Landesamts für Denkmalpflege. Die Auskunft ersetzt keine Rechtsberatung.",
+                  "Acts, the model building code and the VOB are shown unchanged in their source wording (in German); the VOB/C as an index only. Location checks come live from the data services of the City of Oldenburg and the Lower Saxony State Office for Heritage. This is not legal advice.",
                 )}
               </p>
               {STATISCH && (
@@ -268,8 +286,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                     </h1>
                     <p>
                       {t(
-                        "Paragraphen im amtlichen Wortlaut mit Erläuterung und Zusammenhängen – oder eine Ortsauskunft zu Bebauungsplan und Denkmalschutz für ein Grundstück in Oldenburg.",
-                        "Sections of German building law in their official wording, with explanations and related provisions – or a location check on development plans and monument protection for a plot in Oldenburg.",
+                        "Baugesetzbuch, Denkmalschutzgesetz, Musterbauordnung und VOB im Wortlaut, mit Erläuterung und Zusammenhängen – oder eine Ortsauskunft zu Bebauungsplan und Denkmalschutz für ein Grundstück in Oldenburg.",
+                        "German building law, monument protection law, the model building code and the VOB in their original wording, with explanations and related provisions – or a location check on development plans and monument protection for a plot in Oldenburg.",
                       )}
                     </p>
                   </div>
@@ -296,8 +314,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 </div>
                 <p className="leer-fuss">
                   {t(
-                    "Im Eingabefeld unten funktionieren auch freie Formulierungen wie „Ich brauche Paragraph 5“, „§§ 30 und 31 BauGB“ oder eine Adresse.",
-                    "The input field below also understands free phrasing such as “section 35 BauGB”, “§§ 30 and 31 BauGB” or an address. Keyword search works with German terms.",
+                    "Im Eingabefeld unten funktionieren auch freie Formulierungen wie „Ich brauche Paragraph 5“, „§§ 30 und 31 BauGB“, „§ 13 VOB/B“, „DIN 18353“ oder eine Adresse.",
+                    "The input field below also understands free phrasing such as “section 35 BauGB”, “§§ 30 and 31 BauGB”, “§ 13 VOB/B”, “DIN 18353” or an address. Keyword search works with German terms.",
                   )}
                 </p>
               </div>

@@ -2,7 +2,7 @@
 pfad: "components/Gecko.tsx"
 bereich: "Oberfläche"
 sprache: "TypeScript (React)"
-zeilen: 525
+zeilen: 624
 beschreibung: "Der Gecko – als bewegliches Skelett gezeichnet (Kopf, Rumpf, Becken, Schwanzglieder, vier Beine)."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # components/Gecko.tsx
 
-**Pfad:** `components/Gecko.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 525
+**Pfad:** `components/Gecko.tsx` · **Bereich:** Oberfläche · **Sprache:** TypeScript (React) · **Zeilen:** 624
 
 ## Kurzbeschreibung
 
@@ -31,12 +31,17 @@ Der Gecko – als bewegliches Skelett gezeichnet (Kopf, Rumpf, Becken, Schwanzgl
 >  - setzt sich an neue Antworten; muss er umkehren, wendet er auf der Stelle (nie rückwärts)
 >  - beim Darüberfahren rollt er sich ein (Körper als C, Schwanz drumherum, Beine angezogen)
 >  - bei Fehlern rot, bei Hinweisen orange; beim Darüberfahren zeigt er die Meldungen
+>  - Zusatzauftrag: kommt eine Lageskizze ins Bild, läuft er hin und steckt die Fähnchen
+>    (Ereignis "gecko-fahnen"); danach setzt er sich an die Skizze und macht weiter wie oben
+>  - über Text wird er durchsichtiger, damit nichts verdeckt wird
+>  - "Gecko aus" (fest): sitzt still am Stammplatz und dient nur noch als Signal für Fehler und Hinweise
 > Alles folgt festen Regeln – keine KI.
 > ```
 
 ## Importiert (lokal)
 
 - [[Projekt/lib › gecko.ts.md|lib/gecko.ts]] – nur Typen
+- [[Projekt/components › Einstellungen.tsx.md|components/Einstellungen.tsx]]
 
 ## Stellt bereit
 

@@ -45,7 +45,15 @@
 - [x] Gecko über Text durchsichtig; „Sitzt still“ als Signalanzeige; Animationen abschaltbar
 - [ ] Erläuterungen auf Englisch (bisher nur Deutsch; der Gesetzestext bleibt ohnehin im deutschen Original)
 - [ ] Englische Stichworte im Stichwortverzeichnis (z. B. „pre-emption right“ → § 24 BauGB)
-- [ ] Stichwortverzeichnis erweitern, mehr Testfälle (Ziel: 50)
+- [x] Darstellungsmenü lag hinter dem Hauptteil – Kopf liegt jetzt darüber
+- [x] Musterbauordnung (DIBt-PDF, Stand 26./27.09.2024) im Wortlaut, Satznummern hochgestellt, Gegenprüfung mit zweiter PDF-Auslesung (`npm run import:mbo`)
+- [x] VOB/A aus dem Bundesanzeiger (Abschnitt 1 Ausgabe 2019 mit den § 3a-Änderungen von 2025, Abschnitte 2 und 3 Ausgabe 2026) und VOB/B (Ausgabe 2016, Lesefassung der Fachinformation Bundesbau) im Wortlaut, Gegenprüfung mit zwei PDF-Auslesungen (`npm run import:vob`)
+- [x] VOB/C als Verzeichnis der 68 ATV (DIN-Normen, Wortlaut geschützt) (`npm run vobc`)
+- [x] Hinweis zur Verbindlichkeit in jeder Karte (MBO: Muster, VOB/A: Vergaberegeln, VOB/B: AGB, VOB/C: DIN-Normen)
+- [x] Lotse versteht „§ 6 MBO“, „§ 3a EU VOB/A“, „§ 3 VOB/A-EU“, „§ 13 VOB/B“, „§ 4 VOB“ (Rückfrage), „DIN 18353“; „NBauO“ wird als noch fehlend erkannt
+- [x] Stichwortverzeichnis um 58 Begriffsgruppen zu MBO und VOB erweitert; Testkatalog 47 Fragen
+- [ ] Erläuterungen für MBO und VOB
+- [ ] Stichwortverzeichnis erweitern, mehr Testfälle
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)
 
 ## Tag 3 – 18.11. (final)
@@ -57,7 +65,9 @@
 
 ## Tag 4 – 19.11. (Puffer)
 - [ ] Weitere Landes-Denkmalschutzgesetze – jedes Land einzeln mit Treueprüfung
-- [ ] NBauO (Niedersächsische Bauordnung)
+- [ ] NBauO (Niedersächsische Bauordnung) – wichtig: die MBO ist nur ein Muster, in Niedersachsen gilt die NBauO
+- [ ] § 3a VOB/A: zusammengeführten Text fachlich gegenlesen lassen (die Bekanntmachung 2025 enthält nur Änderungsbefehle)
+- [ ] VOB/B: auf die Bundesanzeiger-Fassungen (2009/2012/2016) umstellen, sobald abrufbar (bisher konsolidierte Lesefassung der Fachinformation Bundesbau)
 
 ---
 
@@ -68,7 +78,7 @@
 - [ ] Erläuterungen pflegen/aktualisieren, wenn sich Gesetze ändern
 
 **Weitere Ausbaustufen:**
-- [ ] Normen (DIN) – vorher Lizenz klären: DIN-Normen sind urheberrechtlich geschützt (anders als Gesetze)
+- [ ] Normen (DIN), auch der Wortlaut der VOB/C-ATV – nur mit Lizenz von DIN Media: DIN-Normen sind urheberrechtlich geschützt (anders als Gesetze)
 - [ ] Weitere Städte / B-Plan-Portale
 - [ ] Flächennutzungsplan, Erhaltungs-, Sanierungs- und Innenbereichssatzungen der Stadt Oldenburg als zusätzliche Ebenen
 - [ ] Historische BauNVO-Fassungen (1962, 1968, 1977, 1990)

@@ -42,6 +42,19 @@ export interface GesetzInfo {
   quelleName: string;
   quelleUrl: string;
   anzahl: number;
+  /** Art des Regelwerks (Gesetz, Muster, Vergaberegeln …) – aus lib/regelwerke.ts */
+  art: string;
+  artText: { de: string; en: string };
+  gruppe: { de: string; en: string };
+  kurztitel: { de: string; en: string };
+  /** Hinweis zur Verbindlichkeit (z. B. „Muster, kein geltendes Recht“) */
+  hinweis?: { de: string; en: string };
+  /** Herkunft des Wortlauts */
+  wortlaut: { de: string; en: string };
+  /** Nur Verzeichnis, kein Wortlaut (VOB/C) */
+  nurVerzeichnis?: boolean;
+  /** Stand im Seitenkopf zeigen */
+  imKopf?: boolean;
 }
 
 /** Kurzer Verweis auf einen Paragraphen (für Chips/Links). */

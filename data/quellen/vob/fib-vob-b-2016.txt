@@ -1,0 +1,887 @@
+# Fachinformation Bundesbau (fib-bund.de) – VOB/B 2016, nichtamtliche Fassung
+# Quelle: https://www.fib-bund.de/Inhalt/Vergabe/VOB/VOB-B_2016_nichtamtliche_Fassung.pdf
+# PDF: fib-vob-b-2016.pdf, 557904 Bytes, SHA-256 031cfee3017a1c96e4ea3eb258f2c78c27051fbfb3565251b0175e964cf31c0c
+# Abgerufen: 2026-11-17
+# Textauszug von scripts/import-vob.mjs – bitte nicht von Hand ändern. Je Textzeile im PDF:
+#   Grundlinie y | linker Rand x0 | rechter Rand x1 | Schriftgröße (f = fett, t = teilweise fett) | Text
+#   (PDF-Punkte, Ursprung unten links). Hochgestellte Zeichen stehen als ^{…}.
+#   „gedreht:“ = Text, der nicht waagerecht steht (z. B. ein Wasserzeichen), wird nicht übernommen.
+=== Seite 1 ===
+gedreht: nichtamtliche Fassung
+ 751.6  283.5  321.5 12.0f | VOB/B
+ 731.8  113.4  442.1 12.0f | Vergabe- und Vertragsordnung für Bauleistungen – Teil B
+ 712.0  113.4  497.6 12.0  | Allgemeine Vertragsbedingungen für die Ausführung von Bauleistungen,
+ 691.1  113.4  458.1 9.0  | aufgestellt vom Deutschen Vergabe- und Vertragsausschuss für Bauleistungen (DVA),
+ 679.2  113.4  489.1 9.0  | bekanntgemacht im Bundesanzeiger – Banz AT 19.01.2016 B3 und BAnz AT 01.04.2016 B1 –
+ 510.0  302.9  334.9 12.0f | Inhalt
+ 491.3  113.4  504.6 11.0  | § 1 Art und Umfang der Leistung ........................................................................ 2
+ 472.9  113.4  504.6 11.0  | § 2 Vergütung ...................................................................................................... 2
+ 454.4  113.4  504.6 11.0  | § 3 Ausführungsunterlagen ................................................................................. 4
+ 435.8  113.4  504.6 11.0  | § 4 Ausführung .................................................................................................... 5
+ 417.4  113.4  504.6 11.0  | § 5 Ausführungsfristen ........................................................................................ 7
+ 398.9  113.4  504.6 11.0  | § 6 Behinderung und Unterbrechung der Ausführung ......................................... 7
+ 380.3  113.4  504.6 11.0  | § 7 Verteilung der Gefahr .................................................................................... 8
+ 361.9  113.4  504.6 11.0  | § 8 Kündigung durch den Auftraggeber .............................................................. 8
+ 343.4  113.4  504.6 11.0  | § 9 Kündigung durch den Auftragnehmer ......................................................... 10
+ 324.8  113.4  504.6 11.0  | § 10 Haftung der Vertragsparteien .................................................................... 10
+ 306.3  113.4  504.6 11.0  | § 11 Vertragsstrafe ............................................................................................ 11
+ 287.9  113.4  504.6 11.0  | § 12 Abnahme ................................................................................................... 11
+ 269.3  113.4  504.6 11.0  | § 13 Mängelansprüche ...................................................................................... 12
+ 250.8  113.4  504.6 11.0  | § 14 Abrechnung ............................................................................................... 14
+ 232.4  113.3  504.6 11.0  | § 15 Stundenlohnarbeiten ................................................................................. 14
+ 213.8  113.3  504.6 11.0  | § 16 Zahlung ..................................................................................................... 15
+ 195.3  113.3  504.6 11.0  | § 17 Sicherheitsleistung .................................................................................... 17
+ 176.9  113.4  504.6 11.0  | § 18 Streitigkeiten .............................................................................................. 18
+  84.1  518.3  524.4 11.0  | 1
+=== Seite 2 ===
+gedreht: nichtamtliche Fassung
+ 775.0  311.2  326.5 11.0f | § 1
+ 762.3  242.8  394.9 11.0f | Art und Umfang der Leistung
+ 740.7  113.4  524.4 11.0  | (1) Die auszuführende Leistung wird nach Art und Umfang durch den Vertrag
+ 728.1  141.8  524.4 11.0  | bestimmt. Als Bestandteil des Vertrags gelten auch die Allgemeinen Techni-
+ 715.4  141.8  415.6 11.0  | schen Vertragsbedingungen für Bauleistungen (VOB/C).
+ 693.8  113.4  394.2 11.0  | (2) Bei Widersprüchen im Vertrag gelten nacheinander:
+ 678.1  141.8  295.8 11.0  | 1. die Leistungsbeschreibung,
+ 662.5  141.8  350.1 11.0  | 2. die Besonderen Vertragsbedingungen,
+ 646.8  141.8  369.7 11.0  | 3. etwaige Zusätzliche Vertragsbedingungen,
+ 631.2  141.8  429.0 11.0  | 4. etwaige Zusätzliche Technische Vertragsbedingungen,
+ 615.5  141.8  505.6 11.0  | 5. die Allgemeinen Technischen Vertragsbedingungen für Bauleistungen,
+ 599.9  141.8  524.3 11.0  | 6. die Allgemeinen Vertragsbedingungen für die Ausführung von Bau-
+ 587.2  161.9  215.1 11.0  | leistungen.
+ 565.6  113.4  524.3 11.0  | (3) Änderungen des Bauentwurfs anzuordnen, bleibt dem Auftraggeber vor-
+ 552.9  141.8  187.1 11.0  | behalten.
+ 531.3  113.4  524.4 11.0  | (4) Nicht vereinbarte Leistungen, die zur Ausführung der vertraglichen Leistung
+ 518.6  141.8  524.3 11.0  | erforderlich werden, hat der Auftragnehmer auf Verlangen des Auftraggebers
+ 506.0  141.8  524.4 11.0  | mit auszuführen, außer wenn sein Betrieb auf derartige Leistungen nicht ein-
+ 493.3  141.8  524.4 11.0  | gerichtet ist. Andere Leistungen können dem Auftragnehmer nur mit seiner
+ 480.7  141.8  300.7 11.0  | Zustimmung übertragen werden.
+ 450.0  311.2  326.5 11.0f | § 2
+ 437.3  291.4  346.3 11.0f | Vergütung
+ 415.7  113.4  524.3 11.0  | (1) Durch die vereinbarten Preise werden alle Leistungen abgegolten, die nach
+ 403.1  141.8  524.3 11.0  | der Leistungsbeschreibung, den Besonderen Vertragsbedingungen, den Zu-
+ 390.4  141.8  524.3 11.0  | sätzlichen Vertragsbedingungen, den Zusätzlichen Technischen Vertragsbe-
+ 377.8  141.8  524.4 11.0  | dingungen, den Allgemeinen Technischen Vertragsbedingungen für Bauleis-
+ 365.1  141.8  527.4 11.0  | tungen und der gewerblichen Verkehrssitte zur vertraglichen Leistung gehören.
+ 343.5  113.4  524.5 11.0  | (2) Die Vergütung wird nach den vertraglichen Einheitspreisen und den tatsäch-
+ 330.8  141.8  524.4 11.0  | lich ausgeführten Leistungen berechnet, wenn keine andere Berechnungsart
+ 318.2  141.8  524.4 11.0  | (z. B. durch Pauschalsumme, nach Stundenlohnsätzen, nach Selbstkosten)
+ 305.5  141.8  207.8 11.0  | vereinbart ist.
+ 283.9  113.4  524.5 11.0  | (3) 1. Weicht die ausgeführte Menge der unter einem Einheitspreis erfassten
+ 271.2  141.8  524.4 11.0  | Leistung oder Teilleistung um nicht mehr als 10 v. H. von dem im Vertrag vor-
+ 258.6  141.8  435.9 11.0  | gesehenen Umfang ab, so gilt der vertragliche Einheitspreis.
+ 239.9  141.8  524.4 11.0  | 2. Für die über 10 v. H. hinausgehende Überschreitung des Mengen-
+ 227.3  141.8  524.5 11.0  | ansatzes ist auf Verlangen ein neuer Preis unter Berücksichtigung der Mehr-
+ 214.6  141.8  311.7 11.0  | oder Minderkosten zu vereinbaren.
+ 196.0  141.8  524.5 11.0  | 3. Bei einer über 10 v. H. hinausgehenden Unterschreitung des Mengen-
+ 183.3  141.9  524.5 11.0  | ansatzes ist auf Verlangen der Einheitspreis für die tatsächlich ausgeführte
+ 170.7  141.9  524.4 11.0  | Menge der Leistung oder Teilleistung zu erhöhen, soweit der Auftragnehmer
+ 158.0  141.9  524.5 11.0  | nicht durch Erhöhung der Mengen bei anderen Ordnungszahlen (Positionen)
+ 145.4  141.9  524.3 11.0  | oder in anderer Weise einen Ausgleich erhält. Die Erhöhung des Einheitsprei-
+ 132.7  141.9  524.4 11.0  | ses soll im Wesentlichen dem Mehrbetrag entsprechen, der sich durch Vertei-
+ 120.1  141.9  524.5 11.0  | lung der Baustelleneinrichtungs- und Baustellengemeinkosten und der Allge-
+  84.1  518.3  524.4 11.0  | 2
+=== Seite 3 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.5 11.0  | meinen Geschäftskosten auf die verringerte Menge ergibt. Die Umsatzsteuer
+ 762.4  141.8  359.4 11.0  | wird entsprechend dem neuen Preis vergütet.
+ 743.7  141.8  524.4 11.0  | 4. Sind von der unter einem Einheitspreis erfassten Leistung oder Teilleis-
+ 731.1  141.8  524.5 11.0  | tung andere Leistungen abhängig, für die eine Pauschalsumme vereinbart ist,
+ 718.4  141.8  524.4 11.0  | so kann mit der Änderung des Einheitspreises auch eine angemessene Ände-
+ 705.8  141.8  356.3 11.0  | rung der Pauschalsumme gefordert werden.
+ 684.1  113.4  524.2 11.0  | (4) Werden im Vertrag ausbedungene Leistungen des Auftragnehmers vom Auf-
+ 671.5  141.8  524.4 11.0  | traggeber selbst übernommen (z. B. Lieferung von Bau-, Bauhilfs- und Be-
+ 658.8  141.8  524.5 11.0  | triebsstoffen), so gilt, wenn nichts anderes vereinbart wird, § 8 Absatz 1
+ 646.2  141.8  265.9 11.0  | Nummer 2 entsprechend.
+ 624.5  113.4  524.2 11.0  | (5) Werden durch Änderung des Bauentwurfs oder andere Anordnungen des Auf-
+ 611.9  141.8  524.4 11.0  | traggebers die Grundlagen des Preises für eine im Vertrag vorgesehene Leis-
+ 599.2  141.8  524.4 11.0  | tung geändert, so ist ein neuer Preis unter Berücksichtigung der Mehr- oder
+ 586.5  141.8  524.4 11.0  | Minderkosten zu vereinbaren. Die Vereinbarung soll vor der Ausführung ge-
+ 573.9  141.8  215.2 11.0  | troffen werden.
+ 552.3  113.4  524.3 11.0  | (6) 1. Wird eine im Vertrag nicht vorgesehene Leistung gefordert, so hat der
+ 539.6  141.8  524.4 11.0  | Auftragnehmer Anspruch auf besondere Vergütung. Er muss jedoch den An-
+ 527.0  141.8  524.5 11.0  | spruch dem Auftraggeber ankündigen, bevor er mit der Ausführung der Leis-
+ 514.3  141.8  205.4 11.0  | tung beginnt.
+ 495.7  141.8  524.4 11.0  | 2. Die Vergütung bestimmt sich nach den Grundlagen der Preisermittlung für
+ 483.0  141.8  524.4 11.0  | die vertragliche Leistung und den besonderen Kosten der geforderten Leis-
+ 470.4  141.8  461.6 11.0  | tung. Sie ist möglichst vor Beginn der Ausführung zu vereinbaren.
+ 448.7  113.4  524.3 11.0  | (7) 1. Ist als Vergütung der Leistung eine Pauschalsumme vereinbart, so bleibt
+ 436.1  141.8  524.3 11.0  | die Vergütung unverändert. Weicht jedoch die ausgeführte Leistung von der
+ 423.4  141.8  524.3 11.0  | vertraglich vorgesehenen Leistung so erheblich ab, dass ein Festhalten an der
+ 410.8  141.8  524.5 11.0  | Pauschalsumme nicht zumutbar ist (§ 313 BGB), so ist auf Verlangen ein
+ 398.1  141.8  524.4 11.0  | Ausgleich unter Berücksichtigung der Mehr- oder Minderkosten zu gewähren.
+ 385.5  141.8  524.3 11.0  | Für die Bemessung des Ausgleichs ist von den Grundlagen der Preisermitt-
+ 372.8  141.8  228.7 11.0  | lung auszugehen.
+ 354.2  141.8  524.3 11.0  | 2. Die Regelungen der Absätze 4, 5 und 6 gelten auch bei Vereinbarung ei-
+ 341.6  141.8  245.1 11.0  | ner Pauschalsumme.
+ 322.9  141.8  524.3 11.0  | 3. Wenn nichts anderes vereinbart ist, gelten die Nummern 1 und 2 auch für
+ 310.2  141.8  524.4 11.0  | Pauschalsummen, die für Teile der Leistung vereinbart sind; Absatz 3 Num-
+ 297.6  141.8  252.5 11.0  | mer 4 bleibt unberührt.
+ 275.9  113.4  524.3 11.0  | (8) 1. Leistungen, die der Auftragnehmer ohne Auftrag oder unter eigenmächti-
+ 263.3  141.8  524.4 11.0  | ger Abweichung vom Auftrag ausführt, werden nicht vergütet. Der Auftrag-
+ 250.6  141.8  524.4 11.0  | nehmer hat sie auf Verlangen innerhalb einer angemessenen Frist zu beseiti-
+ 238.0  141.8  524.4 11.0  | gen; sonst kann es auf seine Kosten geschehen. Er haftet außerdem für
+ 225.3  141.8  428.0 11.0  | andere Schäden, die dem Auftraggeber hieraus entstehen.
+ 206.7  141.8  524.3 11.0  | 2. Eine Vergütung steht dem Auftragnehmer jedoch zu, wenn der Auftrag-
+ 194.0  141.8  524.3 11.0  | geber solche Leistungen nachträglich anerkennt. Eine Vergütung steht ihm
+ 181.4  141.8  524.4 11.0  | auch zu, wenn die Leistungen für die Erfüllung des Vertrags notwendig waren,
+ 168.7  141.8  524.3 11.0  | dem mutmaßlichen Willen des Auftraggebers entsprachen und ihm unverzüg-
+ 156.1  141.8  524.5 11.0  | lich angezeigt wurden. Soweit dem Auftragnehmer eine Vergütung zusteht,
+ 143.4  141.8  524.5 11.0  | gelten die Berechnungsgrundlagen für geänderte oder zusätzliche Leistungen
+ 130.8  141.8  316.7 11.0  | der Absätze 5 oder 6 entsprechend.
+ 112.1  141.8  524.3 11.0  | 3. Die Vorschriften des BGB über die Geschäftsführung ohne Auftrag
+  99.5  141.8  313.0 11.0  | (§§ 677 ff. BGB) bleiben unberührt.
+  84.1  518.3  524.4 11.0  | 3
+=== Seite 4 ===
+gedreht: nichtamtliche Fassung
+ 753.4  113.4  524.4 11.0  | (9) 1. Verlangt der Auftraggeber Zeichnungen, Berechnungen oder andere Un-
+ 740.7  141.8  524.4 11.0  | terlagen, die der Auftragnehmer nach dem Vertrag, besonders den Techni-
+ 728.1  141.8  524.2 11.0  | schen Vertragsbedingungen oder der gewerblichen Verkehrssitte, nicht zu be-
+ 715.4  141.8  331.4 11.0  | schaffen hat, so hat er sie zu vergüten.
+ 696.8  141.8  524.2 11.0  | 2. Lässt er vom Auftragnehmer nicht aufgestellte technische Berechnungen
+ 684.1  141.8  480.5 11.0  | durch den Auftragnehmer nachprüfen, so hat er die Kosten zu tragen.
+ 662.5  113.4  524.4 11.0  | (10) Stundenlohnarbeiten werden nur vergütet, wenn sie als solche vor ihrem Be-
+ 649.8  141.8  376.0 11.0  | ginn ausdrücklich vereinbart worden sind (§ 15).
+ 619.1  311.2  326.5 11.0f | § 3
+ 606.5  256.5  381.2 11.0f | Ausführungsunterlagen
+ 584.9  113.4  524.5 11.0  | (1) Die für die Ausführung nötigen Unterlagen sind dem Auftragnehmer unentgelt-
+ 572.2  141.8  306.2 11.0  | lich und rechtzeitig zu übergeben.
+ 550.6  113.4  524.3 11.0  | (2) Das Abstecken der Hauptachsen der baulichen Anlagen, ebenso der Grenzen
+ 538.0  141.8  524.3 11.0  | des Geländes, das dem Auftragnehmer zur Verfügung gestellt wird, und das
+ 525.3  141.8  524.5 11.0  | Schaffen der notwendigen Höhenfestpunkte in unmittelbarer Nähe der bauli-
+ 512.6  141.8  362.5 11.0  | chen Anlagen sind Sache des Auftraggebers.
+ 491.0  113.4  524.3 11.0  | (3) Die vom Auftraggeber zur Verfügung gestellten Geländeaufnahmen und Ab-
+ 478.3  141.8  524.4 11.0  | steckungen und die übrigen für die Ausführung übergebenen Unterlagen sind
+ 465.7  141.8  524.4 11.0  | für den Auftragnehmer maßgebend. Jedoch hat er sie, soweit es zur ord-
+ 453.0  141.8  524.3 11.0  | nungsgemäßen Vertragserfüllung gehört, auf etwaige Unstimmigkeiten zu
+ 440.4  141.8  524.4 11.0  | überprüfen und den Auftraggeber auf entdeckte oder vermutete Mängel hin-
+ 427.7  141.8  190.7 11.0  | zuweisen.
+ 406.1  113.4  524.3 11.0  | (4) Vor Beginn der Arbeiten ist, soweit notwendig, der Zustand der Straßen und
+ 393.4  141.8  524.3 11.0  | Geländeoberfläche, der Vorfluter und Vorflutleitungen, ferner der baulichen
+ 380.8  141.8  524.2 11.0  | Anlagen im Baubereich in einer Niederschrift festzuhalten, die vom Auftragge-
+ 368.1  141.8  344.8 11.0  | ber und Auftragnehmer anzuerkennen ist.
+ 346.5  113.4  524.3 11.0  | (5) Zeichnungen, Berechnungen, Nachprüfungen von Berechnungen oder andere
+ 333.8  141.8  524.3 11.0  | Unterlagen, die der Auftragnehmer nach dem Vertrag, besonders den Techni-
+ 321.2  141.8  524.3 11.0  | schen Vertragsbedingungen, oder der gewerblichen Verkehrssitte oder auf
+ 308.5  141.8  524.5 11.0  | besonderes Verlangen des Auftraggebers (§ 2 Absatz 9) zu beschaffen hat,
+ 295.9  141.8  459.8 11.0  | sind dem Auftraggeber nach Aufforderung rechtzeitig vorzulegen.
+ 274.2  113.4  524.3 11.0  | (6) 1. Die in Absatz 5 genannten Unterlagen dürfen ohne Genehmigung ihres
+ 261.6  141.8  524.4 11.0  | Urhebers nicht veröffentlicht, vervielfältigt, geändert oder für einen anderen als
+ 248.9  141.8  340.4 11.0  | den vereinbarten Zweck benutzt werden.
+ 230.2  141.8  524.3 11.0  | 2. An DV-Programmen hat der Auftraggeber das Recht zur Nutzung mit den
+ 217.6  141.8  524.3 11.0  | vereinbarten Leistungsmerkmalen in unveränderter Form auf den festgelegten
+ 205.0  141.8  524.3 11.0  | Geräten. Der Auftraggeber darf zum Zwecke der Datensicherung zwei Kopien
+ 192.3  141.8  524.4 11.0  | herstellen. Diese müssen alle Identifikationsmerkmale enthalten. Der Verbleib
+ 179.7  141.8  356.4 11.0  | der Kopien ist auf Verlangen nachzuweisen.
+ 161.0  141.8  524.3 11.0  | 3. Der Auftragnehmer bleibt unbeschadet des Nutzungsrechts des Auf-
+ 148.4  141.8  506.9 11.0  | traggebers zur Nutzung der Unterlagen und der DV-Programme berechtigt.
+  84.1  518.3  524.4 11.0  | 4
+=== Seite 5 ===
+gedreht: nichtamtliche Fassung
+ 775.0  311.2  326.5 11.0f | § 4
+ 762.3  287.7  350.0 11.0f | Ausführung
+ 740.7  113.4  524.1 11.0  | (1) 1. Der Auftraggeber hat für die Aufrechterhaltung der allgemeinen Ordnung
+ 728.1  141.8  524.5 11.0  | auf der Baustelle zu sorgen und das Zusammenwirken der verschiedenen Un-
+ 715.4  141.8  524.4 11.0  | ternehmer zu regeln. Er hat die erforderlichen öffentlich-rechtlichen Genehmi-
+ 702.8  141.8  524.5 11.0  | gungen und Erlaubnisse — z. B. nach dem Baurecht, dem Straßenverkehrs-
+ 690.1  141.8  451.7 11.0  | recht, dem Wasserrecht, dem Gewerberecht — herbeizuführen.
+ 671.5  141.8  524.2 11.0  | 2. Der Auftraggeber hat das Recht, die vertragsgemäße Ausführung der
+ 658.8  141.8  524.4 11.0  | Leistung zu überwachen. Hierzu hat er Zutritt zu den Arbeitsplätzen, Werkstät-
+ 646.2  141.8  524.2 11.0  | ten und Lagerräumen, wo die vertragliche Leistung oder Teile von ihr herge-
+ 633.5  141.8  524.4 11.0  | stellt oder die hierfür bestimmten Stoffe und Bauteile gelagert werden. Auf
+ 620.9  141.8  524.4 11.0  | Verlangen sind ihm die Werkzeichnungen oder andere Ausführungsunterlagen
+ 608.2  141.8  524.3 11.0  | sowie die Ergebnisse von Güteprüfungen zur Einsicht vorzulegen und die er-
+ 595.6  141.8  524.4 11.0  | forderlichen Auskünfte zu erteilen, wenn hierdurch keine Geschäftsgeheimnis-
+ 582.9  141.8  524.4 11.0  | se preisgegeben werden. Als Geschäftsgeheimnis bezeichnete Auskünfte und
+ 570.3  141.8  352.7 11.0  | Unterlagen hat er vertraulich zu behandeln.
+ 553.6  141.8  524.3 11.0  | 3. Der Auftraggeber ist befugt, unter Wahrung der dem Auftragnehmer zu-
+ 540.9  141.8  524.5 11.0  | stehenden Leitung (Absatz 2) Anordnungen zu treffen, die zur vertrags-
+ 528.3  141.8  524.3 11.0  | gemäßen Ausführung der Leistung notwendig sind. Die Anordnungen sind
+ 515.7  141.8  524.3 11.0  | grundsätzlich nur dem Auftragnehmer oder seinem für die Leitung der Ausfüh-
+ 503.0  141.8  524.2 11.0  | rung bestellten Vertreter zu erteilen, außer wenn Gefahr im Verzug ist. Dem
+ 490.4  141.8  524.3 11.0  | Auftraggeber ist mitzuteilen, wer jeweils als Vertreter des Auftragnehmers für
+ 477.7  141.8  328.9 11.0  | die Leitung der Ausführung bestellt ist.
+ 461.1  141.8  524.3 11.0  | 4. Hält der Auftragnehmer die Anordnungen des Auftraggebers für unbe-
+ 448.4  141.8  524.3 11.0  | rechtigt oder unzweckmäßig, so hat er seine Bedenken geltend zu machen,
+ 435.8  141.8  524.4 11.0  | die Anordnungen jedoch auf Verlangen auszuführen, wenn nicht gesetzliche
+ 423.1  141.8  524.2 11.0  | oder behördliche Bestimmungen entgegenstehen. Wenn dadurch eine unge-
+ 410.5  141.8  524.3 11.0  | rechtfertigte Erschwerung verursacht wird, hat der Auftraggeber die Mehrkos-
+ 397.8  141.8  209.0 11.0  | ten zu tragen.
+ 376.2  113.4  524.3 11.0  | (2) 1. Der Auftragnehmer hat die Leistung unter eigener Verantwortung nach
+ 363.5  141.8  524.3 11.0  | dem Vertrag auszuführen. Dabei hat er die anerkannten Regeln der Technik
+ 350.9  141.8  524.3 11.0  | und die gesetzlichen und behördlichen Bestimmungen zu beachten. Es ist
+ 338.2  141.8  524.3 11.0  | seine Sache, die Ausführung seiner vertraglichen Leistung zu leiten und für
+ 325.6  141.8  353.2 11.0  | Ordnung auf seiner Arbeitsstelle zu sorgen.
+ 308.9  141.8  524.3 11.0  | 2. Er ist für die Erfüllung der gesetzlichen, behördlichen und berufs-
+ 296.2  141.8  524.3 11.0  | genossenschaftlichen Verpflichtungen gegenüber seinen Arbeitnehmern allein
+ 283.6  141.8  524.3 11.0  | verantwortlich. Es ist ausschließlich seine Aufgabe, die Vereinbarungen und
+ 271.0  141.8  496.3 11.0  | Maßnahmen zu treffen, die sein Verhältnis zu den Arbeitnehmern regeln.
+ 249.3  113.4  524.2 11.0  | (3) Hat der Auftragnehmer Bedenken gegen die vorgesehene Art der Ausführung
+ 236.7  141.8  524.3 11.0  | (auch wegen der Sicherung gegen Unfallgefahren), gegen die Güte der vom
+ 224.0  141.8  524.4 11.0  | Auftraggeber gelieferten Stoffe oder Bauteile oder gegen die Leistungen ande-
+ 211.4  141.8  524.5 11.0  | rer Unternehmer, so hat er sie dem Auftraggeber unverzüglich — möglichst
+ 198.7  141.8  524.4 11.0  | schon vor Beginn der Arbeiten — schriftlich mitzuteilen; der Auftraggeber
+ 186.1  141.8  524.4 11.0  | bleibt jedoch für seine Angaben, Anordnungen oder Lieferungen verantwort-
+ 173.4  141.8  161.4 11.0  | lich.
+ 151.8  113.4  524.2 11.0  | (4) Der Auftraggeber hat, wenn nichts anderes vereinbart ist, dem Auftragnehmer
+ 139.1  141.8  446.2 11.0  | unentgeltlich zur Benutzung oder Mitbenutzung zu überlassen:
+ 122.5  141.8  453.6 11.0  | 1. die notwendigen Lager- und Arbeitsplätze auf der Baustelle,
+ 106.8  141.8  396.1 11.0  | 2. vorhandene Zufahrtswege und Anschlussgleise,
+  84.1  518.3  524.4 11.0  | 5
+=== Seite 6 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.2 11.0  | 3. vorhandene Anschlüsse für Wasser und Energie. Die Kosten für den Ver-
+ 762.4  161.9  524.2 11.0  | brauch und den Messer oder Zähler trägt der Auftragnehmer, mehrere
+ 749.7  161.9  326.9 11.0  | Auftragnehmer tragen sie anteilig.
+ 730.1  113.4  524.3 11.0  | (5) Der Auftragnehmer hat die von ihm ausgeführten Leistungen und die ihm für
+ 717.4  141.8  524.3 11.0  | die Ausführung übergebenen Gegenstände bis zur Abnahme vor Be-
+ 704.8  141.8  524.4 11.0  | schädigung und Diebstahl zu schützen. Auf Verlangen des Auftraggebers hat
+ 692.1  141.8  524.2 11.0  | er sie vor Winterschäden und Grundwasser zu schützen, ferner Schnee und
+ 679.5  141.8  524.4 11.0  | Eis zu beseitigen. Obliegt ihm die Verpflichtung nach Satz 2 nicht schon nach
+ 666.8  141.8  438.9 11.0  | dem Vertrag, so regelt sich die Vergütung nach § 2 Absatz 6.
+ 647.2  113.4  524.4 11.0  | (6) Stoffe oder Bauteile, die dem Vertrag oder den Proben nicht entsprechen, sind
+ 634.6  141.8  524.3 11.0  | auf Anordnung des Auftraggebers innerhalb einer von ihm bestimmten Frist
+ 621.9  141.8  524.3 11.0  | von der Baustelle zu entfernen. Geschieht es nicht, so können sie auf Kosten
+ 609.2  141.8  496.9 11.0  | des Auftragnehmers entfernt oder für seine Rechnung veräußert werden.
+ 589.6  113.4  524.4 11.0  | (7) Leistungen, die schon während der Ausführung als mangelhaft oder ver-
+ 577.0  141.8  524.4 11.0  | tragswidrig erkannt werden, hat der Auftragnehmer auf eigene Kosten durch
+ 564.3  141.8  524.4 11.0  | mangelfreie zu ersetzen. Hat der Auftragnehmer den Mangel oder die Ver-
+ 551.6  141.8  524.2 11.0  | tragswidrigkeit zu vertreten, so hat er auch den daraus entstehenden Schaden
+ 539.0  141.8  524.4 11.0  | zu ersetzen. Kommt der Auftragnehmer der Pflicht zur Beseitigung des Mangels
+ 526.3  141.8  524.5 11.0  | nicht nach, so kann ihm der Auftraggeber eine angemessene Frist zur Beseiti-
+ 513.7  141.8  524.3 11.0  | gung des Mangels setzen und erklären, dass er nach fruchtlosem Ablauf der
+ 501.0  141.8  379.0 11.0  | Frist den Vertrag kündigen werde (§ 8 Absatz 3).
+ 481.4  113.4  524.3 11.0  | (8) 1. Der Auftragnehmer hat die Leistung im eigenen Betrieb auszuführen. Mit
+ 468.7  141.8  524.3 11.0  | schriftlicher Zustimmung des Auftraggebers darf er sie an Nachunternehmer
+ 456.1  141.8  524.3 11.0  | übertragen. Die Zustimmung ist nicht notwendig bei Leistungen, auf die der
+ 443.4  141.8  524.3 11.0  | Betrieb des Auftragnehmers nicht eingerichtet ist. Erbringt der Auftragnehmer
+ 430.8  141.8  524.3 11.0  | ohne schriftliche Zustimmung des Auftraggebers Leistungen nicht im eigenen
+ 418.1  141.8  524.4 11.0  | Betrieb, obwohl sein Betrieb darauf eingerichtet ist, kann der Auftraggeber ihm
+ 405.5  141.8  524.3 11.0  | eine angemessene Frist zur Aufnahme der Leistung im eigenen Betrieb set-
+ 392.9  141.8  524.4 11.0  | zen und erklären, dass er nach fruchtlosem Ablauf der Frist den Vertrag kün-
+ 380.2  141.8  276.3 11.0  | digen werde (§ 8 Absatz 3).
+ 361.5  141.8  524.3 11.0  | 2. Der Auftragnehmer hat bei der Weitervergabe von Bauleistungen an
+ 348.9  141.8  524.4 11.0  | Nachunternehmer die Vergabe- und Vertragsordnung für Bauleistungen Teile
+ 336.2  141.8  278.2 11.0  | B und C zugrunde zu legen.
+ 317.6  141.8  524.2 11.0  | 3. Der Auftragnehmer hat dem Auftraggeber die Nachunternehmer und de-
+ 305.0  141.8  524.3 11.0  | ren Nachunternehmer ohne Aufforderung spätestens bis zum Leistungsbeginn
+ 292.3  141.8  524.4 11.0  | des Nachunternehmers mit Namen, gesetzlichen Vertretern und Kontaktdaten
+ 279.6  141.8  524.3 11.0  | bekannt zu geben. Auf Verlangen des Auftraggebers hat der Auftragnehmer
+ 267.0  141.8  524.4 11.0  | für seine Nachunternehmer Erklärungen und Nachweise zur Eignung vorzule-
+ 254.3  141.8  163.2 11.0  | gen.
+ 232.7  113.4  524.2 11.0  | (9) Werden bei Ausführung der Leistung auf einem Grundstück Gegenstände von
+ 220.1  141.8  524.4 11.0  | Altertums-, Kunst- oder wissenschaftlichem Wert entdeckt, so hat der Auftrag-
+ 207.4  141.8  524.4 11.0  | nehmer vor jedem weiteren Aufdecken oder Ändern dem Auftraggeber den
+ 194.7  141.8  524.5 11.0  | Fund anzuzeigen und ihm die Gegenstände nach näherer Weisung abzulie-
+ 182.1  141.8  524.4 11.0  | fern. Die Vergütung etwaiger Mehrkosten regelt sich nach § 2 Absatz 6. Die
+ 169.4  141.8  426.7 11.0  | Rechte des Entdeckers (§ 984 BGB) hat der Auftraggeber.
+ 147.8  113.4  524.3 11.0  | (10) Der Zustand von Teilen der Leistung ist auf Verlangen gemeinsam von Auf-
+ 135.2  141.8  524.3 11.0  | traggeber und Auftragnehmer festzustellen, wenn diese Teile der Leistung
+ 122.5  141.8  524.3 11.0  | durch die weitere Ausführung der Prüfung und Feststellung entzogen werden.
+ 109.9  141.8  346.0 11.0  | Das Ergebnis ist schriftlich niederzulegen.
+  84.1  518.3  524.4 11.0  | 6
+=== Seite 7 ===
+gedreht: nichtamtliche Fassung
+ 775.0  311.2  326.5 11.0f | § 5
+ 762.3  267.8  369.9 11.0f | Ausführungsfristen
+ 740.7  113.4  524.3 11.0  | (1) Die Ausführung ist nach den verbindlichen Fristen (Vertragsfristen) zu be-
+ 728.1  141.8  524.3 11.0  | ginnen, angemessen zu fördern und zu vollenden. In einem Bauzeitenplan
+ 715.4  141.8  524.3 11.0  | enthaltene Einzelfristen gelten nur dann als Vertragsfristen, wenn dies im Ver-
+ 702.8  141.8  294.0 11.0  | trag ausdrücklich vereinbart ist.
+ 681.1  113.4  524.2 11.0  | (2) Ist für den Beginn der Ausführung keine Frist vereinbart, so hat der Auf-
+ 668.4  141.8  524.5 11.0  | traggeber dem Auftragnehmer auf Verlangen Auskunft über den voraus-
+ 655.8  141.8  524.3 11.0  | sichtlichen Beginn zu erteilen. Der Auftragnehmer hat innerhalb von
+ 643.2  141.8  524.4 11.0  | 12 Werktagen nach Aufforderung zu beginnen. Der Beginn der Ausführung ist
+ 630.5  141.8  292.2 11.0  | dem Auftraggeber anzuzeigen.
+ 608.9  113.4  524.5 11.0  | (3) Wenn Arbeitskräfte, Geräte, Gerüste, Stoffe oder Bauteile so unzureichend
+ 596.2  141.8  524.4 11.0  | sind, dass die Ausführungsfristen offenbar nicht eingehalten werden können,
+ 583.5  141.8  483.6 11.0  | muss der Auftragnehmer auf Verlangen unverzüglich Abhilfe schaffen.
+ 561.9  113.4  524.3 11.0  | (4) Verzögert der Auftragnehmer den Beginn der Ausführung, gerät er mit der
+ 549.3  141.8  524.3 11.0  | Vollendung in Verzug, oder kommt er der in Absatz 3 erwähnten Verpflichtung
+ 536.6  141.8  524.4 11.0  | nicht nach, so kann der Auftraggeber bei Aufrechterhaltung des Vertrages
+ 524.0  141.8  524.2 11.0  | Schadensersatz nach § 6 Absatz 6 verlangen oder dem Auftragnehmer eine
+ 511.3  141.8  524.4 11.0  | angemessene Frist zur Vertragserfüllung setzen und erklären, dass er nach
+ 498.7  141.8  492.1 11.0  | fruchtlosem Ablauf der Frist den Vertrag kündigen werde (§ 8 Absatz 3).
+ 468.0  311.2  326.5 11.0f | § 6
+ 455.3  189.7  448.0 11.0f | Behinderung und Unterbrechung der Ausführung
+ 433.7  113.4  524.4 11.0  | (1) Glaubt sich der Auftragnehmer in der ordnungsgemäßen Ausführung der Leis-
+ 421.1  141.8  524.5 11.0  | tung behindert, so hat er es dem Auftraggeber unverzüglich schriftlich anzu-
+ 408.4  141.8  524.4 11.0  | zeigen. Unterlässt er die Anzeige, so hat er nur dann Anspruch auf Berück-
+ 395.8  141.8  524.3 11.0  | sichtigung der hindernden Umstände, wenn dem Auftraggeber offenkundig die
+ 383.1  141.8  413.1 11.0  | Tatsache und deren hindernde Wirkung bekannt waren.
+ 361.5  113.4  524.3 11.0  | (2) 1. Ausführungsfristen werden verlängert, soweit die Behinderung verursacht
+ 348.8  141.8  155.9 11.0  | ist:
+ 333.2  141.8  476.7 11.0  | a) durch einen Umstand aus dem Risikobereich des Auftraggebers,
+ 317.5  141.8  524.3 11.0  | b) durch Streik oder eine von der Berufsvertretung der Arbeitgeber an-
+ 304.9  161.9  524.3 11.0  | geordnete Aussperrung im Betrieb des Auftragnehmers oder in einem
+ 292.2  161.9  352.0 11.0  | unmittelbar für ihn arbeitenden Betrieb,
+ 276.6  141.8  524.1 11.0  | c) durch höhere Gewalt oder andere für den Auftragnehmer unabwendbare
+ 263.9  161.9  215.0 11.0  | Umstände.
+ 245.3  141.8  524.3 11.0  | 2. Witterungseinflüsse während der Ausführungszeit, mit denen bei Abgabe
+ 232.7  141.8  524.4 11.0  | des Angebots normalerweise gerechnet werden musste, gelten nicht als Be-
+ 220.0  141.8  193.8 11.0  | hinderung.
+ 198.3  113.4  524.5 11.0  | (3) Der Auftragnehmer hat alles zu tun, was ihm billigerweise zugemutet werden
+ 185.7  141.8  524.4 11.0  | kann, um die Weiterführung der Arbeiten zu ermöglichen. Sobald die hindern-
+ 173.0  141.8  524.2 11.0  | den Umstände wegfallen, hat er ohne weiteres und unverzüglich die Arbeiten
+ 160.4  141.8  484.7 11.0  | wieder aufzunehmen und den Auftraggeber davon zu benachrichtigen.
+ 138.7  113.4  524.2 11.0  | (4) Die Fristverlängerung wird berechnet nach der Dauer der Behinderung mit ei-
+ 126.1  141.8  524.3 11.0  | nem Zuschlag für die Wiederaufnahme der Arbeiten und die etwaige Ver-
+ 113.4  141.8  350.3 11.0  | schiebung in eine ungünstigere Jahreszeit.
+  84.1  518.3  524.4 11.0  | 7
+=== Seite 8 ===
+gedreht: nichtamtliche Fassung
+ 775.0  113.4  524.3 11.0  | (5) Wird die Ausführung für voraussichtlich längere Dauer unterbrochen, ohne
+ 762.4  141.8  524.4 11.0  | dass die Leistung dauernd unmöglich wird, so sind die ausgeführten Leistun-
+ 749.7  141.8  524.4 11.0  | gen nach den Vertragspreisen abzurechnen und außerdem die Kosten zu
+ 737.1  141.8  524.5 11.0  | vergüten, die dem Auftragnehmer bereits entstanden und in den Vertragsprei-
+ 724.4  141.8  438.4 11.0  | sen des nicht ausgeführten Teils der Leistung enthalten sind.
+ 702.8  113.4  524.4 11.0  | (6) Sind die hindernden Umstände von einem Vertragsteil zu vertreten, so hat der
+ 690.1  141.8  524.4 11.0  | andere Teil Anspruch auf Ersatz des nachweislich entstandenen Schadens,
+ 677.5  141.8  524.3 11.0  | des entgangenen Gewinns aber nur bei Vorsatz oder grober Fahrlässigkeit. Im
+ 664.8  141.8  524.3 11.0  | Übrigen bleibt der Anspruch des Auftragnehmers auf angemessene Entschä-
+ 652.2  141.8  524.5 11.0  | digung nach § 642 BGB unberührt, sofern die Anzeige nach Absatz 1 Satz 1
+ 639.5  141.8  476.3 11.0  | erfolgt oder wenn Offenkundigkeit nach Absatz 1 Satz 2 gegeben ist.
+ 617.9  113.4  524.4 11.0  | (7) Dauert eine Unterbrechung länger als 3 Monate, so kann jeder Teil nach Ab-
+ 605.2  141.8  524.5 11.0  | lauf dieser Zeit den Vertrag schriftlich kündigen. Die Abrechnung regelt sich
+ 592.5  141.8  524.4 11.0  | nach den Absätzen 5 und 6; wenn der Auftragnehmer die Unterbrechung nicht
+ 579.9  141.8  524.4 11.0  | zu vertreten hat, sind auch die Kosten der Baustellenräumung zu vergüten,
+ 567.3  141.8  524.3 11.0  | soweit sie nicht in der Vergütung für die bereits ausgeführten Leistungen ent-
+ 554.6  141.8  198.1 11.0  | halten sind.
+ 523.9  311.2  326.5 11.0f | § 7
+ 511.2  262.7  375.1 11.0f | Verteilung der Gefahr
+ 489.7  113.4  524.3 11.0  | (1) Wird die ganz oder teilweise ausgeführte Leistung vor der Abnahme durch
+ 477.0  141.8  524.2 11.0  | höhere Gewalt, Krieg, Aufruhr oder andere objektiv unabwendbare vom Auf-
+ 464.4  141.8  524.3 11.0  | tragnehmer nicht zu vertretende Umstände beschädigt oder zerstört, so hat
+ 451.7  141.8  524.4 11.0  | dieser für die ausgeführten Teile der Leistung die Ansprüche nach § 6 Ab-
+ 439.1  141.8  473.9 11.0  | satz 5; für andere Schäden besteht keine gegenseitige Ersatzpflicht.
+ 417.4  113.4  524.7 11.0  | (2) Zu der ganz oder teilweise ausgeführten Leistung gehören alle mit der bauli-
+ 404.8  141.8  524.5 11.0  | chen Anlage unmittelbar verbundenen, in ihre Substanz eingegangenen Leistun-
+ 392.1  141.8  375.4 11.0  | gen, unabhängig von deren Fertigstellungsgrad.
+ 370.5  113.4  524.4 11.0  | (3) Zu der ganz oder teilweise ausgeführten Leistung gehören nicht die noch nicht
+ 357.8  141.8  524.3 11.0  | eingebauten Stoffe und Bauteile sowie die Baustelleneinrichtung und Abste-
+ 345.1  141.8  524.4 11.0  | ckungen. Zu der ganz oder teilweise ausgeführten Leistung gehören ebenfalls
+ 332.5  141.8  524.3 11.0  | nicht Hilfskonstruktionen und Gerüste, auch wenn diese als Besondere
+ 319.9  141.8  350.9 11.0  | Leistung oder selbstständig vergeben sind.
+ 289.2  311.3  326.5 11.0f | § 8
+ 276.5  225.8  412.1 11.0f | Kündigung durch den Auftraggeber
+ 254.9  113.4  524.4 11.0  | (1) 1. Der Auftraggeber kann bis zur Vollendung der Leistung jederzeit den Ver-
+ 242.2  141.8  211.5 11.0  | trag kündigen.
+ 223.6  141.8  524.4 11.0  | 2. Dem Auftragnehmer steht die vereinbarte Vergütung zu. Er muss sich je-
+ 211.0  141.8  524.4 11.0  | doch anrechnen lassen, was er infolge der Aufhebung des Vertrags an Kosten
+ 198.3  141.8  524.4 11.0  | erspart oder durch anderweitige Verwendung seiner Arbeitskraft und seines
+ 185.7  141.8  469.4 11.0  | Betriebs erwirbt oder zu erwerben böswillig unterlässt (§ 649 BGB).
+ 164.0  113.5  524.3 11.0  | (2) 1. Der Auftraggeber kann den Vertrag kündigen, wenn der Auftragnehmer
+ 151.4  141.8  524.4 11.0  | seine Zahlungen einstellt, von ihm oder zulässigerweise vom Auftraggeber
+ 138.7  141.8  524.4 11.0  | oder einem anderen Gläubiger das Insolvenzverfahren (§§ 14 und 15 InsO)
+ 126.1  141.8  524.4 11.0  | beziehungsweise ein vergleichbares gesetzliches Verfahren beantragt ist, ein
+ 113.4  141.8  524.4 11.0  | solches Verfahren eröffnet wird oder dessen Eröffnung mangels Masse abge-
+ 100.7  141.8  192.0 11.0  | lehnt wird.
+  84.1  518.3  524.4 11.0  | 8
+=== Seite 9 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.3 11.0  | 2. Die ausgeführten Leistungen sind nach § 6 Absatz 5 abzurechnen. Der
+ 762.4  141.8  524.3 11.0  | Auftraggeber kann Schadensersatz wegen Nichterfüllung des Restes verlan-
+ 749.7  141.8  163.2 11.0  | gen.
+ 728.1  113.4  524.4 11.0  | (3) 1. Der Auftraggeber kann den Vertrag kündigen, wenn in den Fällen des § 4
+ 715.4  141.8  524.4 11.0  | Absatz 7 und 8 Nummer 1 und des § 5 Absatz 4 die gesetzte Frist fruchtlos
+ 702.8  141.8  524.4 11.0  | abgelaufen ist. Die Kündigung kann auf einen in sich abgeschlossenen Teil
+ 690.1  141.8  367.4 11.0  | der vertraglichen Leistung beschränkt werden.
+ 671.5  141.8  524.4 11.0  | 2. Nach der Kündigung ist der Auftraggeber berechtigt, den noch nicht voll-
+ 658.8  141.8  524.3 11.0  | endeten Teil der Leistung zu Lasten des Auftragnehmers durch einen Dritten
+ 646.2  141.8  524.4 11.0  | ausführen zu lassen, doch bleiben seine Ansprüche auf Ersatz des etwa ent-
+ 633.5  141.8  524.4 11.0  | stehenden weiteren Schadens bestehen. Er ist auch berechtigt, auf die weite-
+ 620.9  141.8  524.4 11.0  | re Ausführung zu verzichten und Schadensersatz wegen Nichterfüllung zu
+ 608.2  141.8  524.3 11.0  | verlangen, wenn die Ausführung aus den Gründen, die zur Kündigung geführt
+ 595.6  141.8  330.1 11.0  | haben, für ihn kein Interesse mehr hat.
+ 577.0  141.8  524.2 11.0  | 3. Für die Weiterführung der Arbeiten kann der Auftraggeber Geräte, Gerüs-
+ 564.3  141.8  524.3 11.0  | te, auf der Baustelle vorhandene andere Einrichtungen und angelieferte Stoffe
+ 551.6  141.8  469.4 11.0  | und Bauteile gegen angemessene Vergütung in Anspruch nehmen.
+ 533.0  141.8  524.3 11.0  | 4. Der Auftraggeber hat dem Auftragnehmer eine Aufstellung über die ent-
+ 520.3  141.8  524.3 11.0  | standenen Mehrkosten und über seine anderen Ansprüche spätestens binnen
+ 507.7  141.8  442.6 11.0  | 12 Werktagen nach Abrechnung mit dem Dritten zuzusenden.
+ 486.1  113.4  364.3 11.0  | (4) Der Auftraggeber kann den Vertrag kündigen,
+ 467.4  141.8  524.2 11.0  | 1. wenn der Auftragnehmer aus Anlass der Vergabe eine Abrede getroffen
+ 454.7  141.8  524.5 11.0  | hatte, die eine unzulässige Wettbewerbsbeschränkung darstellt. Absatz 3
+ 442.1  141.8  419.4 11.0  | Nummer 1 Satz 2 und Nummer 2 bis 4 gilt entsprechend.
+ 423.4  141.8  524.4 11.0  | 2. sofern dieser im Anwendungsbereich des 4. Teils des GWB geschlossen
+ 410.8  141.8  174.8 11.0  | wurde,
+ 395.2  141.8  524.2 11.0  | a) wenn der Auftragnehmer wegen eines zwingenden Ausschlussgrundes
+ 382.5  161.9  524.3 11.0  | zum Zeitpunkt des Zuschlags nicht hätte beauftragt werden dürfen.
+ 369.8  161.9  485.4 11.0  | Absatz 3 Nummer 1 Satz 2 und Nummer 2 bis 4 gilt entsprechend.
+ 354.2  141.8  524.3 11.0  | b) bei wesentlicher Änderung des Vertrages oder bei Feststellung einer
+ 341.6  161.9  524.3 11.0  | schweren Verletzung der Verträge über die Europäische Union und die
+ 328.9  161.9  524.4 11.0  | Arbeitsweise der Europäischen Union durch den Europäischen Gerichts-
+ 316.3  161.9  524.4 11.0  | hof. Die ausgeführten Leistungen sind nach § 6 Absatz 5 abzurechnen.
+ 303.6  161.9  489.0 11.0  | Etwaige Schadensersatzansprüche der Parteien bleiben unberührt.
+ 287.9  141.8  524.4 11.0  | Die Kündigung ist innerhalb von 12 Werktagen nach Bekanntwerden des
+ 275.3  141.8  320.4 11.0  | Kündigungsgrundes auszusprechen.
+ 253.7  113.4  524.3 11.0  | (5) Sofern der Auftragnehmer die Leistung, ungeachtet des Anwendungsbereichs
+ 241.0  141.8  524.2 11.0  | des 4. Teils des GWB, ganz oder teilweise an Nachunternehmer weiterverge-
+ 228.4  141.8  524.5 11.0  | ben hat, steht auch ihm das Kündigungsrecht gemäß Absatz 4 Nummer 2
+ 215.7  141.8  524.4 11.0  | Buchstabe b zu, wenn der ihn als Auftragnehmer verpflichtende Vertrag
+ 203.1  141.8  524.4 11.0  | (Hauptauftrag) gemäß Absatz 4 Nummer 2 Buchstabe b gekündigt wurde.
+ 190.4  141.8  524.4 11.0  | Entsprechendes gilt für jeden Auftraggeber der Nachunternehmerkette, sofern
+ 177.8  141.8  481.8 11.0  | sein jeweiliger Auftraggeber den Vertrag gemäß Satz 1 gekündigt hat.
+  84.1  518.3  524.4 11.0  | 9
+=== Seite 10 ===
+gedreht: nichtamtliche Fassung
+ 766.0  113.4  337.4 11.0  | (6) Die Kündigung ist schriftlich zu erklären.
+ 744.4  113.4  524.4 11.0  | (7) Der Auftragnehmer kann Aufmaß und Abnahme der von ihm ausgeführten
+ 731.7  141.8  524.2 11.0  | Leistungen alsbald nach der Kündigung verlangen; er hat unverzüglich eine
+ 719.1  141.8  462.7 11.0  | prüfbare Rechnung über die ausgeführten Leistungen vorzulegen.
+ 697.4  113.4  524.3 11.0  | (8) Eine wegen Verzugs verwirkte, nach Zeit bemessene Vertragsstrafe kann nur
+ 684.8  141.8  485.9 11.0  | für die Zeit bis zum Tag der Kündigung des Vertrags gefordert werden.
+ 654.0  311.2  326.5 11.0f | § 9
+ 641.4  220.8  416.9 11.0f | Kündigung durch den Auftragnehmer
+ 619.8  113.4  373.5 11.0  | (1) Der Auftragnehmer kann den Vertrag kündigen:
+ 601.2  141.8  524.3 11.0  | 1. wenn der Auftraggeber eine ihm obliegende Handlung unterlässt und
+ 588.5  141.8  524.3 11.0  | dadurch den Auftragnehmer außerstande setzt, die Leistung auszuführen
+ 575.9  141.8  334.3 11.0  | (Annahmeverzug nach §§ 293 ff. BGB),
+ 557.2  141.8  524.2 11.0  | 2. wenn der Auftraggeber eine fällige Zahlung nicht leistet oder sonst in
+ 544.6  141.8  255.5 11.0  | Schuldnerverzug gerät.
+ 523.0  113.4  524.2 11.0  | (2) Die Kündigung ist schriftlich zu erklären. Sie ist erst zulässig, wenn der Auf-
+ 510.3  141.8  524.2 11.0  | tragnehmer dem Auftraggeber ohne Erfolg eine angemessene Frist zur Ver-
+ 497.6  141.8  524.3 11.0  | tragserfüllung gesetzt und erklärt hat, dass er nach fruchtlosem Ablauf der
+ 485.0  141.8  307.4 11.0  | Frist den Vertrag kündigen werde.
+ 463.3  113.4  524.4 11.0  | (3) Die bisherigen Leistungen sind nach den Vertragspreisen abzurechnen. Au-
+ 450.7  141.8  524.3 11.0  | ßerdem hat der Auftragnehmer Anspruch auf angemessene Entschädigung
+ 438.0  141.8  524.3 11.0  | nach § 642 BGB; etwaige weitergehende Ansprüche des Auftragnehmers
+ 425.4  141.8  230.4 11.0  | bleiben unberührt.
+ 394.7  308.2  329.6 11.0f | § 10
+ 382.0  242.8  394.9 11.0f | Haftung der Vertragsparteien
+ 360.4  113.4  524.3 11.0  | (1) Die Vertragsparteien haften einander für eigenes Verschulden sowie für das
+ 347.8  141.8  524.2 11.0  | Verschulden ihrer gesetzlichen Vertreter und der Personen, deren sie sich zur
+ 335.1  141.8  443.3 11.0  | Erfüllung ihrer Verbindlichkeiten bedienen (§§ 276, 278 BGB).
+ 313.5  113.4  524.3 11.0  | (2) 1. Entsteht einem Dritten im Zusammenhang mit der Leistung ein Schaden,
+ 300.8  141.8  524.3 11.0  | für den auf Grund gesetzlicher Haftpflichtbestimmungen beide Ver-
+ 288.2  141.8  524.5 11.0  | tragsparteien haften, so gelten für den Ausgleich zwischen den Vertrags-
+ 275.6  141.8  524.4 11.0  | parteien die allgemeinen gesetzlichen Bestimmungen, soweit im Einzelfall
+ 262.9  141.8  524.4 11.0  | nichts anderes vereinbart ist. Soweit der Schaden des Dritten nur die Folge
+ 250.2  141.8  524.3 11.0  | einer Maßnahme ist, die der Auftraggeber in dieser Form angeordnet hat, trägt
+ 237.6  141.8  524.5 11.0  | er den Schaden allein, wenn ihn der Auftragnehmer auf die mit der angeord-
+ 224.9  141.8  503.1 11.0  | neten Ausführung verbundene Gefahr nach § 4 Absatz 3 hingewiesen hat.
+ 206.3  141.8  524.4 11.0  | 2. Der Auftragnehmer trägt den Schaden allein, soweit er ihn durch Ver-
+ 193.7  141.8  524.3 11.0  | sicherung seiner gesetzlichen Haftpflicht gedeckt hat oder durch eine solche
+ 181.0  141.8  524.5 11.0  | zu tarifmäßigen, nicht auf außergewöhnliche Verhältnisse abgestellten Prä-
+ 168.3  141.8  524.5 11.0  | mien und Prämienzuschlägen bei einem im Inland zum Geschäftsbetrieb zu-
+ 155.7  141.8  365.6 11.0  | gelassenen Versicherer hätte decken können.
+ 134.0  113.4  524.4 11.0  | (3) Ist der Auftragnehmer einem Dritten nach den §§ 823 ff. BGB zu Scha-
+ 121.4  141.8  524.3 11.0  | densersatz verpflichtet wegen unbefugten Betretens oder Beschädigung an-
+ 108.7  141.8  524.3 11.0  | grenzender Grundstücke, wegen Entnahme oder Auflagerung von Boden oder
+  96.1  141.8  524.2 11.0  | anderen Gegenständen außerhalb der vom Auftraggeber dazu angewiesenen
+  84.1  512.2  524.4 11.0  | 10
+=== Seite 11 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.2 11.0  | Flächen oder wegen der Folgen eigenmächtiger Versperrung von Wegen oder
+ 762.4  141.8  521.5 11.0  | Wasserläufen, so trägt er im Verhältnis zum Auftraggeber den Schaden allein.
+ 740.7  113.4  524.4 11.0  | (4) Für die Verletzung gewerblicher Schutzrechte haftet im Verhältnis der Ver-
+ 728.1  141.8  524.4 11.0  | tragsparteien zueinander der Auftragnehmer allein, wenn er selbst das ge-
+ 715.4  141.8  524.4 11.0  | schützte Verfahren oder die Verwendung geschützter Gegenstände an-
+ 702.8  141.8  524.3 11.0  | geboten oder wenn der Auftraggeber die Verwendung vorgeschrieben und auf
+ 690.1  141.8  306.3 11.0  | das Schutzrecht hingewiesen hat.
+ 668.4  113.4  524.4 11.0  | (5) Ist eine Vertragspartei gegenüber der anderen nach den Absätzen 2, 3 oder 4
+ 655.8  141.8  524.4 11.0  | von der Ausgleichspflicht befreit, so gilt diese Befreiung auch zugunsten ihrer
+ 643.2  141.8  524.3 11.0  | gesetzlichen Vertreter und Erfüllungsgehilfen, wenn sie nicht vorsätzlich oder
+ 630.5  141.8  302.0 11.0  | grob fahrlässig gehandelt haben.
+ 608.9  113.4  524.4 11.0  | (6) Soweit eine Vertragspartei von dem Dritten für einen Schaden in Anspruch
+ 596.2  141.8  524.4 11.0  | genommen wird, den nach den Absätzen 2, 3 oder 4 die andere Vertragspar-
+ 583.5  141.8  524.2 11.0  | tei zu tragen hat, kann sie verlangen, dass ihre Vertragspartei sie von der
+ 570.9  141.8  524.5 11.0  | Verbindlichkeit gegenüber dem Dritten befreit. Sie darf den Anspruch des Drit-
+ 558.3  141.8  524.4 11.0  | ten nicht anerkennen oder befriedigen, ohne der anderen Vertragspartei vorher
+ 545.6  141.8  368.0 11.0  | Gelegenheit zur Äußerung gegeben zu haben.
+ 514.9  308.2  329.6 11.0f | § 11
+ 502.2  281.6  356.1 11.0f | Vertragsstrafe
+ 480.7  113.4  482.3 11.0  | (1) Wenn Vertragsstrafen vereinbart sind, gelten die §§ 339 bis 345 BGB.
+ 459.0  113.4  524.4 11.0  | (2) Ist die Vertragsstrafe für den Fall vereinbart, dass der Auftragnehmer nicht in
+ 446.4  141.8  524.4 11.0  | der vorgesehenen Frist erfüllt, so wird sie fällig, wenn der Auftragnehmer in
+ 433.7  141.8  207.8 11.0  | Verzug gerät.
+ 412.0  113.4  524.4 11.0  | (3) Ist die Vertragsstrafe nach Tagen bemessen, so zählen nur Werktage; ist sie
+ 399.4  141.8  524.3 11.0  | nach Wochen bemessen, so wird jeder Werktag angefangener Wochen als
+ 386.8  141.8  249.4 11.0  | 1/6 Woche gerechnet.
+ 365.1  113.4  524.3 11.0  | (4) Hat der Auftraggeber die Leistung abgenommen, so kann er die Strafe nur
+ 352.5  141.8  427.3 11.0  | verlangen, wenn er dies bei der Abnahme vorbehalten hat.
+ 321.7  308.2  329.6 11.0f | § 12
+ 309.1  293.8  343.9 11.0f | Abnahme
+ 287.5  113.4  524.4 11.0  | (1) Verlangt der Auftragnehmer nach der Fertigstellung — gegebenenfalls auch
+ 274.9  141.8  524.4 11.0  | vor Ablauf der vereinbarten Ausführungsfrist — die Abnahme der Leistung, so
+ 262.2  141.8  524.3 11.0  | hat sie der Auftraggeber binnen 12 Werktagen durchzuführen; eine andere Frist
+ 249.6  141.8  259.7 11.0  | kann vereinbart werden.
+ 227.9  113.4  524.3 11.0  | (2) Auf Verlangen sind in sich abgeschlossene Teile der Leistung besonders ab-
+ 215.2  141.8  196.2 11.0  | zunehmen.
+ 193.6  113.4  524.4 11.0  | (3) Wegen wesentlicher Mängel kann die Abnahme bis zur Beseitigung ver-
+ 181.0  141.8  219.4 11.0  | weigert werden.
+ 159.3  113.4  524.3 11.0  | (4) 1. Eine förmliche Abnahme hat stattzufinden, wenn eine Vertragspartei es
+ 146.6  141.8  524.3 11.0  | verlangt. Jede Partei kann auf ihre Kosten einen Sachverständigen zuziehen.
+ 134.0  141.8  524.3 11.0  | Der Befund ist in gemeinsamer Verhandlung schriftlich niederzulegen. In die
+ 121.4  141.8  524.2 11.0  | Niederschrift sind etwaige Vorbehalte wegen bekannter Mängel und wegen
+ 108.7  141.8  524.3 11.0  | Vertragsstrafen aufzunehmen, ebenso etwaige Einwendungen des Auftrag-
+  96.1  141.8  368.7 11.0  | nehmers. Jede Partei erhält eine Ausfertigung.
+  84.1  512.2  524.4 11.0  | 11
+=== Seite 12 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.4 11.0  | 2. Die förmliche Abnahme kann in Abwesenheit des Auftragnehmers statt-
+ 762.4  141.8  524.3 11.0  | finden, wenn der Termin vereinbart war oder der Auftraggeber mit genügender
+ 749.7  141.8  524.3 11.0  | Frist dazu eingeladen hatte. Das Ergebnis der Abnahme ist dem Auftragneh-
+ 737.1  141.8  257.4 11.0  | mer alsbald mitzuteilen.
+ 715.4  113.4  524.4 11.0  | (5) 1. Wird keine Abnahme verlangt, so gilt die Leistung als abgenommen mit
+ 702.8  141.8  524.2 11.0  | Ablauf von 12 Werktagen nach schriftlicher Mitteilung über die Fertigstellung
+ 690.1  141.8  205.4 11.0  | der Leistung.
+ 671.5  141.8  524.2 11.0  | 2. Wird keine Abnahme verlangt und hat der Auftraggeber die Leistung oder
+ 658.8  141.8  524.4 11.0  | einen Teil der Leistung in Benutzung genommen, so gilt die Abnahme nach
+ 646.2  141.8  524.4 11.0  | Ablauf von 6 Werktagen nach Beginn der Benutzung als erfolgt, wenn nichts
+ 633.5  141.8  524.3 11.0  | anderes vereinbart ist. Die Benutzung von Teilen einer baulichen Anlage zur
+ 620.9  141.8  387.5 11.0  | Weiterführung der Arbeiten gilt nicht als Abnahme.
+ 602.2  141.8  524.3 11.0  | 3. Vorbehalte wegen bekannter Mängel oder wegen Vertragsstrafen hat der
+ 589.6  141.8  524.4 11.0  | Auftraggeber spätestens zu den in den Nummern 1 und 2 bezeichneten Zeit-
+ 577.0  141.8  280.0 11.0  | punkten geltend zu machen.
+ 555.3  113.4  524.3 11.0  | (6) Mit der Abnahme geht die Gefahr auf den Auftraggeber über, soweit er sie
+ 542.6  141.8  270.8 11.0  | nicht schon nach § 7 trägt.
+ 511.9  308.2  329.6 11.0f | § 13
+ 499.2  272.1  365.6 11.0f | Mängelansprüche
+ 477.7  113.4  524.3 11.0  | (1) Der Auftragnehmer hat dem Auftraggeber seine Leistung zum Zeitpunkt der
+ 465.0  141.8  524.3 11.0  | Abnahme frei von Sachmängeln zu verschaffen. Die Leistung ist zur Zeit der
+ 452.4  141.8  524.3 11.0  | Abnahme frei von Sachmängeln, wenn sie die vereinbarte Beschaffenheit hat
+ 439.7  141.8  524.3 11.0  | und den anerkannten Regeln der Technik entspricht. Ist die Beschaffenheit
+ 427.1  141.8  524.3 11.0  | nicht vereinbart, so ist die Leistung zur Zeit der Abnahme frei von Sachmän-
+ 414.4  141.8  165.6 11.0  | geln,
+ 398.8  141.8  432.8 11.0  | 1. wenn sie sich für die nach dem Vertrag vorausgesetzte,
+ 383.1  141.8  168.1 11.0  | sonst
+ 367.5  141.8  524.4 11.0  | 2. für die gewöhnliche Verwendung eignet und eine Beschaffenheit aufweist,
+ 354.8  141.8  524.2 11.0  | die bei Werken der gleichen Art üblich ist und die der Auftraggeber nach der
+ 342.2  141.8  295.2 11.0  | Art der Leistung erwarten kann.
+ 320.6  113.4  524.3 11.0  | (2) Bei Leistungen nach Probe gelten die Eigenschaften der Probe als vereinbarte
+ 307.9  141.8  524.3 11.0  | Beschaffenheit, soweit nicht Abweichungen nach der Verkehrssitte als bedeu-
+ 295.2  141.8  524.3 11.0  | tungslos anzusehen sind. Dies gilt auch für Proben, die erst nach Vertragsab-
+ 282.6  141.8  308.8 11.0  | schluss als solche anerkannt sind.
+ 260.9  113.4  524.5 11.0  | (3) Ist ein Mangel zurückzuführen auf die Leistungsbeschreibung oder auf Anord-
+ 248.3  141.8  524.4 11.0  | nungen des Auftraggebers, auf die von diesem gelieferten oder vor-
+ 235.7  141.8  524.3 11.0  | geschriebenen Stoffe oder Bauteile oder die Beschaffenheit der Vorleistung
+ 223.0  141.8  524.2 11.0  | eines anderen Unternehmers, haftet der Auftragnehmer, es sei denn, er hat
+ 210.3  141.8  423.6 11.0  | die ihm nach § 4 Absatz 3 obliegende Mitteilung gemacht.
+ 188.7  113.4  524.3 11.0  | (4) 1. Ist für Mängelansprüche keine Verjährungsfrist im Vertrag vereinbart, so
+ 176.0  141.8  524.3 11.0  | beträgt sie für Bauwerke 4 Jahre, für andere Werke, deren Erfolg in der Her-
+ 163.4  141.8  524.3 11.0  | stellung, Wartung oder Veränderung einer Sache besteht, und für die vom
+ 150.8  141.8  524.5 11.0  | Feuer berührten Teile von Feuerungsanlagen 2 Jahre. Abweichend von Satz 1
+ 138.1  141.8  524.3 11.0  | beträgt die Verjährungsfrist für feuerberührte und abgasdämmende Teile von
+ 125.4  141.8  331.9 11.0  | industriellen Feuerungsanlagen 1 Jahr.
+  84.1  512.2  524.4 11.0  | 12
+=== Seite 13 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.4 11.0  | 2. Ist für Teile von maschinellen und elektrotechnischen/elektronischen An-
+ 762.4  141.8  524.4 11.0  | lagen, bei denen die Wartung Einfluss auf Sicherheit und Funktionsfähigkeit
+ 749.7  141.8  524.3 11.0  | hat, nichts anderes vereinbart, beträgt für diese Anlagenteile die Verjährungs-
+ 737.1  141.8  524.4 11.0  | frist für Mängelansprüche abweichend von Nummer 1 zwei Jahre, wenn der
+ 724.4  141.8  524.4 11.0  | Auftraggeber sich dafür entschieden hat, dem Auftragnehmer die Wartung für
+ 711.8  141.8  524.4 11.0  | die Dauer der Verjährungsfrist nicht zu übertragen; dies gilt auch, wenn für
+ 699.1  141.8  444.4 11.0  | weitere Leistungen eine andere Verjährungsfrist vereinbart ist.
+ 680.5  141.8  524.3 11.0  | 3. Die Frist beginnt mit der Abnahme der gesamten Leistung; nur für in sich
+ 667.8  141.8  524.4 11.0  | abgeschlossene Teile der Leistung beginnt sie mit der Teilabnahme (§ 12 Ab-
+ 655.2  141.8  177.9 11.0  | satz 2).
+ 633.5  113.4  524.3 11.0  | (5) 1. Der Auftragnehmer ist verpflichtet, alle während der Verjährungsfrist her-
+ 620.9  141.8  524.3 11.0  | vortretenden Mängel, die auf vertragswidrige Leistung zurückzuführen sind,
+ 608.2  141.8  524.4 11.0  | auf seine Kosten zu beseitigen, wenn es der Auftraggeber vor Ablauf der Frist
+ 595.6  141.8  524.3 11.0  | schriftlich verlangt. Der Anspruch auf Beseitigung der gerügten Mängel ver-
+ 582.9  141.8  524.5 11.0  | jährt in 2 Jahren, gerechnet vom Zugang des schriftlichen Verlangens an, je-
+ 570.3  141.8  524.4 11.0  | doch nicht vor Ablauf der Regelfristen nach Absatz 4 oder der an ihrer Stelle
+ 557.6  141.8  524.4 11.0  | vereinbarten Frist. Nach Abnahme der Mängelbeseitigungsleistung beginnt für
+ 545.0  141.8  524.4 11.0  | diese Leistung eine Verjährungsfrist von 2 Jahren neu, die jedoch nicht vor Ab-
+ 532.3  141.8  524.3 11.0  | lauf der Regelfristen nach Absatz 4 oder der an ihrer Stelle vereinbarten Frist
+ 519.7  141.8  172.4 11.0  | endet.
+ 501.0  141.8  524.3 11.0  | 2. Kommt der Auftragnehmer der Aufforderung zur Mängelbeseitigung in ei-
+ 488.4  141.8  524.3 11.0  | ner vom Auftraggeber gesetzten angemessenen Frist nicht nach, so kann der
+ 475.7  141.8  511.1 11.0  | Auftraggeber die Mängel auf Kosten des Auftragnehmers beseitigen lassen.
+ 454.1  113.4  524.4 11.0  | (6) Ist die Beseitigung des Mangels für den Auftraggeber unzumutbar oder ist sie
+ 441.4  141.8  524.3 11.0  | unmöglich oder würde sie einen unverhältnismäßig hohen Aufwand erfordern
+ 428.8  141.8  524.4 11.0  | und wird sie deshalb vom Auftragnehmer verweigert, so kann der Auftragge-
+ 416.1  141.8  524.3 11.0  | ber durch Erklärung gegenüber dem Auftragnehmer die Vergütung mindern
+ 403.5  141.8  206.0 11.0  | (§ 638 BGB).
+ 381.8  113.4  524.3 11.0  | (7) 1. Der Auftragnehmer haftet bei schuldhaft verursachten Mängeln für Schä-
+ 369.2  141.8  487.2 11.0  | den aus der Verletzung des Lebens, des Körpers oder der Gesundheit.
+ 350.6  141.8  524.2 11.0  | 2. Bei vorsätzlich oder grob fahrlässig verursachten Mängeln haftet er für al-
+ 337.9  141.8  199.9 11.0  | le Schäden.
+ 319.2  141.8  524.2 11.0  | 3. Im Übrigen ist dem Auftraggeber der Schaden an der baulichen Anlage zu
+ 306.6  141.8  524.3 11.0  | ersetzen, zu deren Herstellung, Instandhaltung oder Änderung die Leistung
+ 293.9  141.8  524.4 11.0  | dient, wenn ein wesentlicher Mangel vorliegt, der die Gebrauchsfähigkeit er-
+ 281.3  141.8  524.5 11.0  | heblich beeinträchtigt und auf ein Verschulden des Auftragnehmers zurückzu-
+ 268.7  141.8  524.3 11.0  | führen ist. Einen darüber hinausgehenden Schaden hat der Auftragnehmer
+ 256.0  141.8  248.2 11.0  | nur dann zu ersetzen,
+ 240.3  141.8  524.2 11.0  | a) wenn der Mangel auf einem Verstoß gegen die anerkannten Regeln der
+ 227.7  161.9  237.7 11.0  | Technik beruht,
+ 212.0  141.8  524.3 11.0  | b) wenn der Mangel in dem Fehlen einer vertraglich vereinbarten Be-
+ 199.4  161.9  285.4 11.0  | schaffenheit besteht oder
+ 183.8  141.8  524.2 11.0  | c) soweit der Auftragnehmer den Schaden durch Versicherung seiner ge-
+ 171.1  161.9  524.3 11.0  | setzlichen Haftpflicht gedeckt hat oder durch eine solche zu tarifmäßigen,
+ 158.4  161.9  524.4 11.0  | nicht auf außergewöhnliche Verhältnisse abgestellten Prämien und Prä-
+ 145.8  161.9  524.4 11.0  | mienzuschlägen bei einem im Inland zum Geschäftsbetrieb zugelassenen
+ 133.1  161.9  326.4 11.0  | Versicherer hätte decken können.
+ 114.5  141.8  524.4 11.0  | 4. Abweichend von Absatz 4 gelten die gesetzlichen Verjährungsfristen, so-
+ 101.9  141.8  524.5 11.0  | weit sich der Auftragnehmer nach Nummer 3 durch Versicherung geschützt
+  84.1  512.2  524.4 11.0  | 13
+=== Seite 14 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.3 11.0  | hat oder hätte schützen können oder soweit ein besonderer Versiche-
+ 762.4  141.8  270.1 11.0  | rungsschutz vereinbart ist.
+ 743.7  141.8  524.4 11.0  | 5. Eine Einschränkung oder Erweiterung der Haftung kann in begründeten
+ 731.1  141.8  297.6 11.0  | Sonderfällen vereinbart werden.
+ 700.4  308.2  329.6 11.0f | § 14
+ 687.7  286.5  351.3 11.0f | Abrechnung
+ 666.1  113.4  524.4 11.0  | (1) Der Auftragnehmer hat seine Leistungen prüfbar abzurechnen. Er hat die
+ 653.5  141.8  524.3 11.0  | Rechnungen übersichtlich aufzustellen und dabei die Reihenfolge der Posten
+ 640.8  141.8  524.3 11.0  | einzuhalten und die in den Vertragsbestandteilen enthaltenen Bezeichnungen
+ 628.2  141.8  524.5 11.0  | zu verwenden. Die zum Nachweis von Art und Umfang der Leistung erforderli-
+ 615.5  141.8  524.3 11.0  | chen Mengenberechnungen, Zeichnungen und andere Belege sind beizufü-
+ 602.9  141.8  524.3 11.0  | gen. Änderungen und Ergänzungen des Vertrags sind in der Rechnung be-
+ 590.2  141.8  512.3 11.0  | sonders kenntlich zu machen; sie sind auf Verlangen getrennt abzurechnen.
+ 568.6  113.4  524.4 11.0  | (2) Die für die Abrechnung notwendigen Feststellungen sind dem Fortgang der
+ 555.9  141.8  524.2 11.0  | Leistung entsprechend möglichst gemeinsam vorzunehmen. Die Ab-
+ 543.3  141.8  524.3 11.0  | rechnungsbestimmungen in den Technischen Vertragsbedingungen und den
+ 530.6  141.8  524.3 11.0  | anderen Vertragsunterlagen sind zu beachten. Für Leistungen, die bei Weiter-
+ 518.0  141.8  524.2 11.0  | führung der Arbeiten nur schwer feststellbar sind, hat der Auftragnehmer
+ 505.3  141.8  408.9 11.0  | rechtzeitig gemeinsame Feststellungen zu beantragen.
+ 483.7  113.4  524.3 11.0  | (3) Die Schlussrechnung muss bei Leistungen mit einer vertraglichen Ausfüh-
+ 471.1  141.8  524.4 11.0  | rungsfrist von höchstens 3 Monaten spätestens 12 Werktage nach Fertig-
+ 458.4  141.8  524.4 11.0  | stellung eingereicht werden, wenn nichts anderes vereinbart ist; diese Frist
+ 445.7  141.8  503.7 11.0  | wird um je 6 Werktage für je weitere 3 Monate Ausführungsfrist verlängert.
+ 424.1  113.4  524.3 11.0  | (4) Reicht der Auftragnehmer eine prüfbare Rechnung nicht ein, obwohl ihm der
+ 411.4  141.8  524.5 11.0  | Auftraggeber dafür eine angemessene Frist gesetzt hat, so kann sie der Auf-
+ 398.8  141.8  431.5 11.0  | traggeber selbst auf Kosten des Auftragnehmers aufstellen.
+ 368.1  308.2  329.6 11.0f | § 15
+ 355.4  263.9  373.8 11.0f | Stundenlohnarbeiten
+ 333.8  113.4  524.2 11.0  | (1) 1. Stundenlohnarbeiten werden nach den vertraglichen Vereinbarungen ab-
+ 321.2  141.8  193.8 11.0  | gerechnet.
+ 302.6  141.8  524.2 11.0  | 2. Soweit für die Vergütung keine Vereinbarungen getroffen worden sind, gilt
+ 289.9  141.8  524.3 11.0  | die ortsübliche Vergütung. Ist diese nicht zu ermitteln, so werden die Aufwen-
+ 277.2  141.8  524.4 11.0  | dungen des Auftragnehmers für Lohn- und Gehaltskosten der Baustelle, Lohn-
+ 264.6  141.8  524.4 11.0  | und Gehaltsnebenkosten der Baustelle, Stoffkosten der Baustelle, Kosten der
+ 251.9  141.8  524.4 11.0  | Einrichtungen, Geräte, Maschinen und maschinellen Anlagen der Baustelle,
+ 239.3  141.8  524.4 11.0  | Fracht-, Fuhr- und Ladekosten, Sozialkassenbeiträge und Sonderkosten, die
+ 226.7  141.8  524.4 11.0  | bei wirtschaftlicher Betriebsführung entstehen, mit angemessenen Zuschlägen
+ 214.0  141.8  524.4 11.0  | für Gemeinkosten und Gewinn (einschließlich allgemeinem Unternehmerwag-
+ 201.3  141.8  325.2 11.0  | nis) zuzüglich Umsatzsteuer vergütet.
+ 179.7  113.4  524.3 11.0  | (2) Verlangt der Auftraggeber, dass die Stundenlohnarbeiten durch einen Polier
+ 167.0  141.8  524.4 11.0  | oder eine andere Aufsichtsperson beaufsichtigt werden, oder ist die Aufsicht
+ 154.4  141.8  524.3 11.0  | nach den einschlägigen Unfallverhütungsvorschriften notwendig, so gilt Ab-
+ 141.7  141.8  243.9 11.0  | satz 1 entsprechend.
+ 120.1  113.4  524.3 11.0  | (3) Dem Auftraggeber ist die Ausführung von Stundenlohnarbeiten vor Beginn
+ 107.4  141.8  527.3 11.0  | anzuzeigen. Über die geleisteten Arbeitsstunden und den dabei erforderlichen,
+  84.1  512.2  524.4 11.0  | 14
+=== Seite 15 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.2 11.0  | besonders zu vergütenden Aufwand für den Verbrauch von Stoffen, für Vor-
+ 762.4  141.8  524.3 11.0  | haltung von Einrichtungen, Geräten, Maschinen und maschinellen Anlagen,
+ 749.7  141.8  524.3 11.0  | für Frachten, Fuhr- und Ladeleistungen sowie etwaige Sonderkosten sind,
+ 737.1  141.8  524.2 11.0  | wenn nichts anderes vereinbart ist, je nach der Verkehrssitte werktäglich oder
+ 724.4  141.8  524.3 11.0  | wöchentlich Listen (Stundenlohnzettel) einzureichen. Der Auftraggeber hat die
+ 711.8  141.8  524.5 11.0  | von ihm bescheinigten Stundenlohnzettel unverzüglich, spätestens jedoch in-
+ 699.1  141.8  524.4 11.0  | nerhalb von 6 Werktagen nach Zugang, zurückzugeben. Dabei kann er Ein-
+ 686.5  141.8  524.2 11.0  | wendungen auf den Stundenlohnzetteln oder gesondert schriftlich erheben.
+ 673.8  141.8  502.5 11.0  | Nicht fristgemäß zurückgegebene Stundenlohnzettel gelten als anerkannt.
+ 652.2  113.4  524.4 11.0  | (4) Stundenlohnrechnungen sind alsbald nach Abschluss der Stundenlohn-
+ 639.5  141.8  524.3 11.0  | arbeiten, längstens jedoch in Abständen von 4 Wochen, einzureichen. Für die
+ 626.9  141.8  226.2 11.0  | Zahlung gilt § 16.
+ 605.2  113.4  524.3 11.0  | (5) Wenn Stundenlohnarbeiten zwar vereinbart waren, über den Umfang der
+ 592.6  141.8  524.3 11.0  | Stundenlohnleistungen aber mangels rechtzeitiger Vorlage der Stunden-
+ 579.9  141.8  524.3 11.0  | lohnzettel Zweifel bestehen, so kann der Auftraggeber verlangen, dass für die
+ 567.3  141.8  524.4 11.0  | nachweisbar ausgeführten Leistungen eine Vergütung vereinbart wird, die
+ 554.6  141.8  524.3 11.0  | nach Maßgabe von Absatz 1 Nummer 2 für einen wirtschaftlich vertretbaren
+ 542.0  141.8  524.3 11.0  | Aufwand an Arbeitszeit und Verbrauch von Stoffen, für Vorhaltung von Ein-
+ 529.3  141.8  524.4 11.0  | richtungen, Geräten, Maschinen und maschinellen Anlagen, für Frachten,
+ 516.7  141.8  478.6 11.0  | Fuhr- und Ladeleistungen sowie etwaige Sonderkosten ermittelt wird.
+ 486.0  308.2  329.6 11.0f | § 16
+ 473.3  297.5  340.3 11.0f | Zahlung
+ 451.7  113.4  524.3 11.0  | (1) 1. Abschlagszahlungen sind auf Antrag in möglichst kurzen Zeitabständen
+ 439.1  141.8  524.2 11.0  | oder zu den vereinbarten Zeitpunkten zu gewähren, und zwar in Höhe des
+ 426.4  141.8  524.4 11.0  | Wertes der jeweils nachgewiesenen vertragsgemäßen Leistungen einschließ-
+ 413.8  141.8  524.4 11.0  | lich des ausgewiesenen, darauf entfallenden Umsatzsteuerbetrages. Die Leis-
+ 401.1  141.8  524.4 11.0  | tungen sind durch eine prüfbare Aufstellung nachzuweisen, die eine rasche
+ 388.5  141.8  524.3 11.0  | und sichere Beurteilung der Leistungen ermöglichen muss. Als Leistungen
+ 375.8  141.8  524.2 11.0  | gelten hierbei auch die für die geforderte Leistung eigens angefertigten und
+ 363.2  141.8  524.3 11.0  | bereitgestellten Bauteile sowie die auf der Baustelle angelieferten Stoffe und
+ 350.6  141.8  524.4 11.0  | Bauteile, wenn dem Auftraggeber nach seiner Wahl das Eigentum an ihnen
+ 337.9  141.8  433.9 11.0  | übertragen ist oder entsprechende Sicherheit gegeben wird.
+ 319.2  141.8  524.2 11.0  | 2. Gegenforderungen können einbehalten werden. Andere Einbehalte sind
+ 306.6  141.8  524.3 11.0  | nur in den im Vertrag und in den gesetzlichen Bestimmungen vorgesehenen
+ 293.9  141.8  217.6 11.0  | Fällen zulässig.
+ 275.3  141.8  524.3 11.0  | 3. Ansprüche auf Abschlagszahlungen werden binnen 21 Tagen nach Zu-
+ 262.7  141.8  271.4 11.0  | gang der Aufstellung fällig.
+ 244.0  141.8  524.2 11.0  | 4. Die Abschlagszahlungen sind ohne Einfluss auf die Haftung des Auf-
+ 231.3  141.8  470.7 11.0  | tragnehmers; sie gelten nicht als Abnahme von Teilen der Leistung.
+ 209.7  113.4  524.2 11.0  | (2) 1. Vorauszahlungen können auch nach Vertragsabschluss vereinbart wer-
+ 197.0  141.8  524.4 11.0  | den; hierfür ist auf Verlangen des Auftraggebers ausreichende Sicherheit zu
+ 184.4  141.8  524.2 11.0  | leisten. Diese Vorauszahlungen sind, sofern nichts anderes vereinbart wird,
+ 171.8  141.8  456.0 11.0  | mit 3 v. H. über dem Basiszinssatz des § 247 BGB zu verzinsen.
+ 153.1  141.8  524.3 11.0  | 2. Vorauszahlungen sind auf die nächstfälligen Zahlungen anzurechnen,
+ 140.4  141.8  524.3 11.0  | soweit damit Leistungen abzugelten sind, für welche die Vorauszahlungen
+ 127.8  141.8  246.4 11.0  | gewährt worden sind.
+  84.1  512.2  524.4 11.0  | 15
+=== Seite 16 ===
+gedreht: nichtamtliche Fassung
+ 775.0  113.4  524.4 11.0  | (3) 1. Der Anspruch auf Schlusszahlung wird alsbald nach Prüfung und Feststel-
+ 762.4  141.8  524.5 11.0  | lung fällig, spätestens innerhalb von 30 Tagen nach Zugang der Schlussrech-
+ 749.7  141.8  524.3 11.0  | nung. Die Frist verlängert sich auf höchstens 60 Tage, wenn sie aufgrund der
+ 737.1  141.8  524.3 11.0  | besonderen Natur oder Merkmale der Vereinbarung sachlich gerechtfertigt ist
+ 724.4  141.8  524.2 11.0  | und ausdrücklich vereinbart wurde. Werden Einwendungen gegen die Prüf-
+ 711.8  141.8  524.4 11.0  | barkeit unter Angabe der Gründe nicht bis zum Ablauf der jeweiligen Frist
+ 699.1  141.8  524.3 11.0  | erhoben, kann der Auftraggeber sich nicht mehr auf die fehlende Prüfbarkeit
+ 686.5  141.8  524.3 11.0  | berufen. Die Prüfung der Schlussrechnung ist nach Möglichkeit zu beschleu-
+ 673.8  141.8  524.4 11.0  | nigen. Verzögert sie sich, so ist das unbestrittene Guthaben als Abschlags-
+ 661.2  141.8  264.1 11.0  | zahlung sofort zu zahlen.
+ 642.5  141.8  524.3 11.0  | 2. Die vorbehaltlose Annahme der Schlusszahlung schließt Nachforde-
+ 629.9  141.8  524.3 11.0  | rungen aus, wenn der Auftragnehmer über die Schlusszahlung schriftlich un-
+ 617.2  141.8  438.9 11.0  | terrichtet und auf die Ausschlusswirkung hingewiesen wurde.
+ 598.6  141.8  524.4 11.0  | 3. Einer Schlusszahlung steht es gleich, wenn der Auftraggeber unter Hin-
+ 586.0  141.8  524.3 11.0  | weis auf geleistete Zahlungen weitere Zahlungen endgültig und schriftlich ab-
+ 573.3  141.8  168.7 11.0  | lehnt.
+ 554.6  141.8  524.2 11.0  | 4. Auch früher gestellte, aber unerledigte Forderungen werden ausge-
+ 542.0  141.8  419.3 11.0  | schlossen, wenn sie nicht nochmals vorbehalten werden.
+ 523.3  141.8  524.4 11.0  | 5. Ein Vorbehalt ist innerhalb von 28 Tagen nach Zugang der Mitteilung nach
+ 510.7  141.8  524.3 11.0  | den Nummern 2 und 3 über die Schlusszahlung zu erklären. Er wird hinfällig,
+ 498.1  141.8  524.5 11.0  | wenn nicht innerhalb von weiteren 28 Tagen — beginnend am Tag nach Ab-
+ 485.4  141.8  524.3 11.0  | lauf der in Satz 1 genannten 28 Tage — eine prüfbare Rechnung über die
+ 472.7  141.8  524.3 11.0  | vorbehaltenen Forderungen eingereicht oder, wenn das nicht möglich ist, der
+ 460.1  141.8  322.1 11.0  | Vorbehalt eingehend begründet wird.
+ 441.4  141.8  524.3 11.0  | 6. Die Ausschlussfristen gelten nicht für ein Verlangen nach Richtigstellung
+ 428.8  141.8  524.4 11.0  | der Schlussrechnung und -zahlung wegen Aufmaß-, Rechen- und Übertra-
+ 416.2  141.8  208.4 11.0  | gungsfehlern.
+ 394.5  113.4  524.3 11.0  | (4) In sich abgeschlossene Teile der Leistung können nach Teilabnahme
+ 381.8  141.8  524.2 11.0  | ohne Rücksicht auf die Vollendung der übrigen Leistungen endgültig fest-
+ 369.2  141.8  278.7 11.0  | gestellt und bezahlt werden.
+ 347.6  113.4  421.8 11.0  | (5) 1. Alle Zahlungen sind aufs Äußerste zu beschleunigen.
+ 328.9  141.8  399.7 11.0  | 2. Nicht vereinbarte Skontoabzüge sind unzulässig.
+ 310.3  141.8  524.3 11.0  | 3. Zahlt der Auftraggeber bei Fälligkeit nicht, so kann ihm der Auftragnehmer
+ 297.6  141.8  524.3 11.0  | eine angemessene Nachfrist setzen. Zahlt er auch innerhalb der Nachfrist
+ 285.0  141.8  524.5 11.0  | nicht, so hat der Auftragnehmer vom Ende der Nachfrist an Anspruch auf Zin-
+ 272.3  141.8  524.4 11.0  | sen in Höhe der in § 288 Absatz 2 BGB angegebenen Zinssätze, wenn er
+ 259.7  141.8  524.3 11.0  | nicht einen höheren Verzugsschaden nachweist. Der Auftraggeber kommt je-
+ 247.0  141.8  524.3 11.0  | doch, ohne dass es einer Nachfristsetzung bedarf, spätestens 30 Tage nach
+ 234.4  141.8  524.3 11.0  | Zugang der Rechnung oder der Aufstellung bei Abschlagszahlungen in Zah-
+ 221.7  141.8  524.3 11.0  | lungsverzug, wenn der Auftragnehmer seine vertraglichen und gesetzlichen
+ 209.0  141.8  524.3 11.0  | Verpflichtungen erfüllt und den fälligen Entgeltbetrag nicht rechtzeitig erhalten
+ 196.4  141.8  524.4 11.0  | hat, es sei denn, der Auftraggeber ist für den Zahlungsverzug nicht verant-
+ 183.8  141.8  524.3 11.0  | wortlich. Die Frist verlängert sich auf höchstens 60 Tage, wenn sie aufgrund
+ 171.1  141.8  524.3 11.0  | der besonderen Natur oder Merkmale der Vereinbarung sachlich gerechtfertigt
+ 158.5  141.8  326.4 11.0  | ist und ausdrücklich vereinbart wurde.
+ 139.8  141.8  524.4 11.0  | 4. Der Auftragnehmer darf die Arbeiten bei Zahlungsverzug bis zur Zahlung
+ 127.1  141.8  524.5 11.0  | einstellen, sofern eine dem Auftraggeber zuvor gesetzte angemessene Frist er-
+ 114.5  141.8  247.6 11.0  | folglos verstrichen ist.
+  84.1  512.2  524.4 11.0  | 16
+=== Seite 17 ===
+gedreht: nichtamtliche Fassung
+ 775.0  113.4  524.2 11.0  | (6) Der Auftraggeber ist berechtigt, zur Erfüllung seiner Verpflichtungen aus den
+ 762.4  141.8  524.4 11.0  | Absätzen 1 bis 5 Zahlungen an Gläubiger des Auftragnehmers zu leisten, so-
+ 749.7  141.8  524.2 11.0  | weit sie an der Ausführung der vertraglichen Leistung des Auftragnehmers
+ 737.1  141.8  524.4 11.0  | aufgrund eines mit diesem abgeschlossenen Dienst- oder Werkvertrags betei-
+ 724.4  141.8  524.3 11.0  | ligt sind, wegen Zahlungsverzugs des Auftragnehmers die Fortsetzung ihrer
+ 711.8  141.8  524.5 11.0  | Leistung zu Recht verweigern und die Direktzahlung die Fortsetzung der Leis-
+ 699.1  141.8  524.2 11.0  | tung sicherstellen soll. Der Auftragnehmer ist verpflichtet, sich auf Verlangen
+ 686.5  141.8  524.4 11.0  | des Auftraggebers innerhalb einer von diesem gesetzten Frist darüber zu
+ 673.8  141.8  524.3 11.0  | erklären, ob und inwieweit er die Forderungen seiner Gläubiger anerkennt;
+ 661.2  141.8  524.4 11.0  | wird diese Erklärung nicht rechtzeitig abgegeben, so gelten die Voraussetzun-
+ 648.5  141.8  336.2 11.0  | gen für die Direktzahlung als anerkannt.
+ 617.8  308.2  329.6 11.0f | § 17
+ 605.1  268.2  369.6 11.0f | Sicherheitsleistung
+ 583.6  113.4  524.3 11.0  | (1) 1. Wenn Sicherheitsleistung vereinbart ist, gelten die §§ 232 bis 240 BGB,
+ 570.9  141.8  500.8 11.0  | soweit sich aus den nachstehenden Bestimmungen nichts anderes ergibt.
+ 553.2  141.8  524.3 11.0  | 2. Die Sicherheit dient dazu, die vertragsgemäße Ausführung der Leistung
+ 540.6  141.8  347.3 11.0  | und die Mängelansprüche sicherzustellen.
+ 519.5  113.4  524.4 11.0  | (2) Wenn im Vertrag nichts anderes vereinbart ist, kann Sicherheit durch Ein-
+ 506.8  141.8  524.3 11.0  | behalt oder Hinterlegung von Geld oder durch Bürgschaft eines Kreditinstituts
+ 494.2  141.8  524.4 11.0  | oder Kreditversicherers geleistet werden, sofern das Kreditinstitut oder der
+ 481.5  141.8  224.9 11.0  | Kreditversicherer
+ 465.9  141.8  355.7 11.0  | 1. in der Europäischen Gemeinschaft oder
+ 450.2  141.8  524.4 11.0  | 2. in einem Staat der Vertragsparteien des Abkommens über den Euro-
+ 437.6  141.8  293.4 11.0  | päischen Wirtschaftsraum oder
+ 421.9  141.8  524.3 11.0  | 3. in einem Staat der Vertragsparteien des WTO-Übereinkommens über das
+ 409.3  141.8  293.4 11.0  | öffentliche Beschaffungswesen
+ 393.6  141.8  214.6 11.0  | zugelassen ist.
+ 372.5  113.4  524.4 11.0  | (3) Der Auftragnehmer hat die Wahl unter den verschiedenen Arten der Sicher-
+ 359.9  141.8  418.2 11.0  | heit; er kann eine Sicherheit durch eine andere ersetzen.
+ 338.7  113.4  524.4 11.0  | (4) Bei Sicherheitsleistung durch Bürgschaft ist Voraussetzung, dass der Auf-
+ 326.0  141.8  524.4 11.0  | traggeber den Bürgen als tauglich anerkannt hat. Die Bürgschaftserklärung ist
+ 313.4  141.8  524.5 11.0  | schriftlich unter Verzicht auf die Einrede der Vorausklage abzugeben (§ 771
+ 300.8  141.8  524.4 11.0  | BGB); sie darf nicht auf bestimmte Zeit begrenzt und muss nach Vorschrift des
+ 288.1  141.8  524.3 11.0  | Auftraggebers ausgestellt sein. Der Auftraggeber kann als Sicherheit keine
+ 275.4  141.8  524.3 11.0  | Bürgschaft fordern, die den Bürgen zur Zahlung auf erstes Anfordern ver-
+ 262.8  141.8  182.8 11.0  | pflichtet.
+ 241.6  113.4  524.3 11.0  | (5) Wird Sicherheit durch Hinterlegung von Geld geleistet, so hat der Auftrag-
+ 229.0  141.8  524.3 11.0  | nehmer den Betrag bei einem zu vereinbarenden Geldinstitut auf ein Sperr-
+ 216.3  141.8  524.3 11.0  | konto einzuzahlen, über das beide nur gemeinsam verfügen können („Und-
+ 203.7  141.8  413.2 11.0  | Konto“). Etwaige Zinsen stehen dem Auftragnehmer zu.
+ 182.5  113.4  524.2 11.0  | (6) 1. Soll der Auftraggeber vereinbarungsgemäß die Sicherheit in Teilbeträgen
+ 169.9  141.8  524.4 11.0  | von seinen Zahlungen einbehalten, so darf er jeweils die Zahlung um höchs-
+ 157.2  141.8  524.3 11.0  | tens 10 v. H. kürzen, bis die vereinbarte Sicherheitssumme erreicht ist. Sofern
+ 144.6  141.8  524.4 11.0  | Rechnungen ohne Umsatzsteuer gemäß § 13 b UStG gestellt werden, bleibt
+ 131.9  141.8  524.5 11.0  | die Umsatzsteuer bei der Berechnung des Sicherheitseinbehalts unberück-
+ 119.3  141.8  524.4 11.0  | sichtigt. Den jeweils einbehaltenen Betrag hat er dem Auftragnehmer mitzutei-
+ 106.6  141.8  524.3 11.0  | len und binnen 18 Werktagen nach dieser Mitteilung auf ein Sperrkonto bei
+  84.1  512.2  524.4 11.0  | 17
+=== Seite 18 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.4 11.0  | dem vereinbarten Geldinstitut einzuzahlen. Gleichzeitig muss er veranlassen,
+ 762.4  141.8  524.4 11.0  | dass dieses Geldinstitut den Auftragnehmer von der Einzahlung des Sicher-
+ 749.7  141.8  412.1 11.0  | heitsbetrags benachrichtigt. Absatz 5 gilt entsprechend.
+ 731.1  141.8  524.3 11.0  | 2. Bei kleineren oder kurzfristigen Aufträgen ist es zulässig, dass der Auf-
+ 718.4  141.8  524.3 11.0  | traggeber den einbehaltenen Sicherheitsbetrag erst bei der Schlusszahlung
+ 705.8  141.8  275.7 11.0  | auf ein Sperrkonto einzahlt.
+ 687.1  141.8  524.5 11.0  | 3. Zahlt der Auftraggeber den einbehaltenen Betrag nicht rechtzeitig ein, so
+ 674.5  141.8  524.5 11.0  | kann ihm der Auftragnehmer hierfür eine angemessene Nachfrist setzen. Lässt
+ 661.8  141.8  524.5 11.0  | der Auftraggeber auch diese verstreichen, so kann der Auftragnehmer die so-
+ 649.2  141.8  524.3 11.0  | fortige Auszahlung des einbehaltenen Betrags verlangen und braucht dann
+ 636.5  141.8  300.8 11.0  | keine Sicherheit mehr zu leisten.
+ 617.9  141.8  524.4 11.0  | 4. Öffentliche Auftraggeber sind berechtigt, den als Sicherheit einbehaltenen
+ 605.2  141.8  524.3 11.0  | Betrag auf eigenes Verwahrgeldkonto zu nehmen; der Betrag wird nicht ver-
+ 592.6  141.8  167.5 11.0  | zinst.
+ 571.0  113.4  524.4 11.0  | (7) Der Auftragnehmer hat die Sicherheit binnen 18 Werktagen nach Ver-
+ 558.3  141.8  524.4 11.0  | tragsabschluss zu leisten, wenn nichts anderes vereinbart ist. Soweit er diese
+ 545.6  141.8  524.2 11.0  | Verpflichtung nicht erfüllt hat, ist der Auftraggeber berechtigt, vom Guthaben
+ 533.0  141.8  524.5 11.0  | des Auftragnehmers einen Betrag in Höhe der vereinbarten Sicherheit einzu-
+ 520.3  141.8  524.5 11.0  | behalten. Im Übrigen gelten die Absätze 5 und 6 außer Nummer 1 Satz 1 ent-
+ 507.7  141.8  196.3 11.0  | sprechend.
+ 486.1  113.4  524.4 11.0  | (8) 1. Der Auftraggeber hat eine nicht verwertete Sicherheit für die Vertrags-
+ 473.4  141.8  524.3 11.0  | erfüllung zum vereinbarten Zeitpunkt, spätestens nach Abnahme und Stellung
+ 460.7  141.8  524.5 11.0  | der Sicherheit für Mängelansprüche zurückzugeben, es sei denn, dass An-
+ 448.1  141.8  524.4 11.0  | sprüche des Auftraggebers, die nicht von der gestellten Sicherheit für Mängel-
+ 435.4  141.8  524.3 11.0  | ansprüche umfasst sind, noch nicht erfüllt sind. Dann darf er für diese Ver-
+ 422.8  141.8  524.5 11.0  | tragserfüllungsansprüche einen entsprechenden Teil der Sicherheit zurück-
+ 410.2  141.8  174.8 11.0  | halten.
+ 391.5  141.8  524.4 11.0  | 2. Der Auftraggeber hat eine nicht verwertete Sicherheit für Mängel-
+ 378.8  141.8  524.2 11.0  | ansprüche nach Ablauf von 2 Jahren zurückzugeben, sofern kein anderer
+ 366.2  141.8  524.4 11.0  | Rückgabezeitpunkt vereinbart worden ist. Soweit jedoch zu diesem Zeitpunkt
+ 353.6  141.8  524.4 11.0  | seine geltend gemachten Ansprüche noch nicht erfüllt sind, darf er einen ent-
+ 340.9  141.8  365.6 11.0  | sprechenden Teil der Sicherheit zurückhalten.
+ 310.2  308.2  329.6 11.0f | § 18
+ 297.5  284.1  353.7 11.0f | Streitigkeiten
+ 275.9  113.4  524.5 11.0  | (1) Liegen die Voraussetzungen für eine Gerichtsstandvereinbarung nach § 38
+ 263.3  141.8  524.4 11.0  | der Zivilprozessordnung vor, richtet sich der Gerichtsstand für Streitigkeiten
+ 250.7  141.8  524.4 11.0  | aus dem Vertrag nach dem Sitz der für die Prozessvertretung des Auf-
+ 238.0  141.8  524.3 11.0  | traggebers zuständigen Stelle, wenn nichts anderes vereinbart ist. Sie ist dem
+ 225.4  141.8  344.8 11.0  | Auftragnehmer auf Verlangen mitzuteilen.
+ 203.7  113.4  524.2 11.0  | (2) 1. Entstehen bei Verträgen mit Behörden Meinungsverschiedenheiten, so
+ 191.0  141.8  524.3 11.0  | soll der Auftragnehmer zunächst die der auftraggebenden Stelle unmittelbar
+ 178.4  141.8  524.4 11.0  | vorgesetzte Stelle anrufen. Diese soll dem Auftragnehmer Gelegenheit zur
+ 165.8  141.8  524.3 11.0  | mündlichen Aussprache geben und ihn möglichst innerhalb von 2 Monaten
+ 153.1  141.8  524.3 11.0  | nach der Anrufung schriftlich bescheiden und dabei auf die Rechtsfolgen des
+ 140.4  141.8  524.4 11.0  | Satzes 3 hinweisen. Die Entscheidung gilt als anerkannt, wenn der Auftrag-
+ 127.8  141.8  524.4 11.0  | nehmer nicht innerhalb von 3 Monaten nach Eingang des Bescheides schrift-
+ 115.1  141.8  524.4 11.0  | lich Einspruch beim Auftraggeber erhebt und dieser ihn auf die Ausschlussfrist
+ 102.5  141.8  224.3 11.0  | hingewiesen hat.
+  84.1  512.2  524.4 11.0  | 18
+=== Seite 19 ===
+gedreht: nichtamtliche Fassung
+ 775.0  141.8  524.3 11.0  | 2. Mit dem Eingang des schriftlichen Antrages auf Durchführung eines Ver-
+ 762.4  141.8  524.3 11.0  | fahrens nach Nummer 1 wird die Verjährung des in diesem Antrag geltend
+ 749.7  141.8  524.2 11.0  | gemachten Anspruchs gehemmt. Wollen Auftraggeber oder Auftragnehmer
+ 737.1  141.8  524.4 11.0  | das Verfahren nicht weiter betreiben, teilen sie dies dem jeweils anderen Teil
+ 724.4  141.8  524.3 11.0  | schriftlich mit. Die Hemmung endet 3 Monate nach Zugang des schriftlichen
+ 711.8  141.8  357.1 11.0  | Bescheides oder der Mitteilung nach Satz 2.
+ 690.1  113.4  524.3 11.0  | (3) Daneben kann ein Verfahren zur Streitbeilegung vereinbart werden. Die Ver-
+ 677.5  141.8  376.7 11.0  | einbarung sollte mit Vertragsabschluss erfolgen.
+ 655.8  113.4  524.3 11.0  | (4) Bei Meinungsverschiedenheiten über die Eigenschaft von Stoffen und Bautei-
+ 643.2  141.8  524.3 11.0  | len, für die allgemein gültige Prüfungsverfahren bestehen, und über die Zuläs-
+ 630.5  141.8  524.3 11.0  | sigkeit oder Zuverlässigkeit der bei der Prüfung verwendeten Maschinen oder
+ 617.9  141.8  524.2 11.0  | angewendeten Prüfungsverfahren kann jede Vertragspartei nach vorheriger
+ 605.2  141.8  524.5 11.0  | Benachrichtigung der anderen Vertragspartei die materialtechnische Untersu-
+ 592.5  141.8  524.3 11.0  | chung durch eine staatliche oder staatlich anerkannte Materialprüfungsstelle
+ 579.9  141.8  524.4 11.0  | vornehmen lassen; deren Feststellungen sind verbindlich. Die Kosten trägt der
+ 567.3  141.8  232.3 11.0  | unterliegende Teil.
+ 545.6  113.4  500.7 11.0  | (5) Streitfälle berechtigen den Auftragnehmer nicht, die Arbeiten einzustellen.
+  84.1  512.2  524.4 11.0  | 19

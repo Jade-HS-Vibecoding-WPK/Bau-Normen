@@ -1,0 +1,62 @@
+# Bundesanzeiger, BAnz AT 16.12.2025 B7 – Bekanntmachung der Änderung der VOB/A vom 24. November 2025 (Kopie des forum vergabe e. V.)
+# Quelle: https://forum-vergabe.de/wp-content/uploads/2025/12/BAnz-AT-16.12.2025-B7.pdf
+# PDF: banz-at-2025-12-16-b7.pdf, 306426 Bytes, SHA-256 abbc74a103f6ceea6cc14f3a4c55b964f90c49ae098e19fafd3ec4567c5efdd3
+# Abgerufen: 2026-11-17
+# Textauszug von scripts/import-vob.mjs – bitte nicht von Hand ändern. Je Textzeile im PDF:
+#   Grundlinie y | linker Rand x0 | rechter Rand x1 | Schriftgröße (f = fett, t = teilweise fett) | Text
+#   (PDF-Punkte, Ursprung unten links). Hochgestellte Zeichen stehen als ^{…}.
+#   „gedreht:“ = Text, der nicht waagerecht steht (z. B. ein Wasserzeichen), wird nicht übernommen.
+=== Seite 1 ===
+ 815.0  338.0  472.2 16.0f | Bekanntmachung
+ 800.0  338.0  527.6 9.0  | Veröffentlicht am Dienstag, 16. Dezember 2025
+ 790.0  338.0  434.6 9.0  | BAnz AT 16.12.2025 B7
+ 777.0  338.0  390.5 9.0  | Seite 1 von 2
+ 701.0  240.2  355.1 14.0f | Bundesministerium
+ 684.2  157.2  438.1 14.0f | für Wohnen, Stadtentwicklung und Bauwesen
+ 650.5  254.9  340.3 10.0f | Bekanntmachung
+ 639.5  132.6  462.7 10.0f | der Änderung der Vergabe- und Vertragsordnung für Bauleistungen
+ 628.5  263.1  332.2 10.0f | Teil A (VOB/A)
+ 607.0  244.2  351.1 9.0f | Vom 24. November 2025
+ 585.6  127.6  467.7 9.0  | Die anliegenden vom Deutschen Vergabe- und Vertragsausschuss für Bauleistun-
+ 574.8  127.6  467.7 9.0  | gen (DVA) erarbeiteten Änderungen an der Vergabe- und Vertragsordnung für Bau-
+ 564.0  127.6  373.6 9.0  | leistungen Teil A (VOB/A) werden hiermit bekannt gegeben.
+ 550.0  127.6  467.7 9.0  | Im Abschnitt 1 der VOB/A in der Fassung der Bekanntmachung vom 31. Ja-
+ 539.2  127.6  467.7 9.0  | nuar 2019 (BAnz AT 19.02.2019 B2), zuletzt geändert in der Bekanntmachung
+ 528.4  127.6  412.6 9.0  | vom 11. März 2025 (BAnz AT 02.04.2025 B7), wird § 3a neu gefasst.
+ 514.4  127.6  337.0 9.0  | Die Änderungen treten am 1. Januar 2026 in Kraft.
+ 500.4  127.6  467.7 9.0  | Das Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen wird in ei-
+ 489.6  127.6  467.7 9.0  | nem Erlass auf die aktuellen Änderungen der VOB/A – Abschnitt 1 hinweisen. Die-
+ 478.8  127.6  385.8 9.0  | ser Erlass wird im Gemeinsamen Ministerialblatt veröffentlicht.
+ 464.8  127.6  467.7 9.0  | Erläuterungen zu den Änderungen im Abschnitt 1 der VOB/A ergeben sich aus den
+ 454.0  127.6  224.2 9.0  | beigefügten Hinweisen.
+ 440.1  127.6  467.7 9.0  | Die VOB/A wird im Auftrag des DVA vom Deutschen Institut für Normung e. V. (DIN)
+ 429.2  127.6  250.1 9.0  | als DIN 1960 herausgegeben.
+ 407.8  127.6  256.9 9.0  | Berlin, den 24. November 2025
+ 397.0  127.6  204.1 9.0  | B II 1 – 70421/2#7
+ 380.9  258.2  337.1 9.0  | Bundesministerium
+ 370.1  203.1  392.2 9.0  | für Wohnen, Stadtentwicklung und Bauwesen
+ 354.0  276.1  319.2 9.0  | Im Auftrag
+ 343.2  257.2  338.1 9.0  | Christian Kreisel
+=== Seite 2 ===
+ 815.0  338.0  472.2 16.0f | Bekanntmachung
+ 800.0  338.0  527.6 9.0  | Veröffentlicht am Dienstag, 16. Dezember 2025
+ 790.0  338.0  434.6 9.0  | BAnz AT 16.12.2025 B7
+ 777.0  338.0  390.5 9.0  | Seite 2 von 2
+ 735.9  156.4  438.9 9.0f | Vergabe- und Vertragsordnung für Bauleistungen Teil A (VOB/A)
+ 725.1  172.2  423.1 9.0f | Hinweise für die Änderungen in der VOB/A – 1. Abschnitt
+ 705.8  127.6  467.7 9.0  | Der Deutsche Vergabe- und Vertragsausschuss für Bauleistungen (DVA) hat die
+ 695.0  127.6  393.6 9.0  | folgenden Änderungen in der VOB/A – Abschnitt 1 beschlossen:
+ 681.1  127.7  467.7 9.0  | 1. In § 3a Absatz 2 wird vor der Angabe „Beschränkte“ die Angabe „Die“ eingefügt.
+ 667.0  127.7  444.6 9.0  | 2. § 3a Absatz 2 Satz 1 Nummer 1 wird durch die folgende Nummer ersetzt:
+ 653.0  138.6  467.7 9.0  | „1. bis zu einem Auftragswert der Bauleistung von 150 000 Euro ohne Umsatz-
+ 642.3  154.7  184.2 9.0  | steuer“
+ 628.3  127.7  397.3 9.0  | 3. § 3a Absatz 3 Satz 1 wird durch den folgenden Satz 1 ersetzt:
+ 614.3  138.6  467.7 9.0  | „Die Freihändige Vergabe ist zulässig, wenn die Öffentliche Ausschreibung oder
+ 603.5  138.6  409.8 9.0  | die Beschränkte Ausschreibung unzweckmäßig sind, besonders,“
+ 589.5  127.7  370.8 9.0  | 4. § 3a Absatz 3 Satz 2 wird durch folgenden Satz ersetzt:
+ 575.5  138.6  467.7 9.0  | „Die Freihändige Vergabe kann außerdem bis zu einem Auftragswert von
+ 564.7  138.6  320.2 9.0  | 100 000 Euro ohne Umsatzsteuer erfolgen.“
+ 550.7  127.7  407.4 9.0  | 5. In § 3a Absatz 3 Satz 2 wird die Angabe „Fußnote 1“ gestrichen.
+ 536.7  127.7  467.7 9.0  | 6. In § 3a Absatz 4 Satz 1 wird die Angabe „3000“ durch die Angabe „50 000“
+ 525.9  138.6  168.9 9.0  | ersetzt.
+ 511.9  127.7  378.1 9.0  | 7. In § 3a Absatz 4 wird die Angabe „Fußnote 2“ gestrichen.

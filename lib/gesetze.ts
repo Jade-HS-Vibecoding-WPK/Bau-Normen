@@ -2,6 +2,7 @@
 // Wichtig: Hier wird kein Text erzeugt – alles stammt 1:1 aus data/gesetze/*.json.
 // Woher die Dateien kommen, regelt die Datenquelle: auf dem Server das Dateisystem (lib/daten-server.ts),
 // in der statischen Online-Version (GitHub Pages) der Browser (lib/daten-browser.ts).
+import { regelwerk } from "./regelwerke";
 import type { Erlaeuterung, Gesetz, GesetzInfo, Norm, NormAnsicht, NormRef } from "./typen";
 
 export interface Datenquelle {
@@ -30,8 +31,8 @@ let cacheVon: Gesetz[] | null = null;
 export function alleGesetze(): Map<string, Gesetz> {
   const liste = daten().gesetze();
   if (cache && liste === cacheVon) return cache;
-  // Feste Reihenfolge: Bundesrecht zuerst, dann Landesrecht
-  const geordnet = [...liste].sort((a, b) => Number(b.ebene === "Bund") - Number(a.ebene === "Bund"));
+  // Feste Reihenfolge (lib/regelwerke.ts): Gesetze zuerst, dann Musterbauordnung und VOB
+  const geordnet = [...liste].sort((a, b) => regelwerk(a.id).reihenfolge - regelwerk(b.id).reihenfolge);
   cache = new Map(geordnet.map((g) => [g.id, g]));
   cacheVon = liste;
   return cache;
@@ -42,7 +43,16 @@ function erlaeuterungen(gesetzId: string): Record<string, Erlaeuterung> {
 }
 
 export function gesetzInfo(g: Gesetz): GesetzInfo {
+  const m = regelwerk(g.id);
   return {
+    art: m.art,
+    artText: m.artText,
+    gruppe: m.gruppe,
+    kurztitel: m.kurztitel.de ? m.kurztitel : { de: g.titel, en: g.titel },
+    wortlaut: m.wortlaut,
+    ...(m.hinweis ? { hinweis: m.hinweis } : {}),
+    ...(m.nurVerzeichnis ? { nurVerzeichnis: true } : {}),
+    ...(m.imKopf ? { imKopf: true } : {}),
     id: g.id,
     kurz: g.kurz,
     titel: g.titel,

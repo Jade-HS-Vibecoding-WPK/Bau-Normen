@@ -21,7 +21,7 @@
 
 Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 
-- **Gesetze im amtlichen Wortlaut** – Baugesetzbuch (BauGB) und Niedersächsisches Denkmalschutzgesetz (NDSchG), Paragraph für Paragraph, unverändert aus den amtlichen Quellen
+- **Gesetze und Regelwerke im Wortlaut** – Baugesetzbuch (BauGB), Niedersächsisches Denkmalschutzgesetz (NDSchG), Musterbauordnung (MBO), VOB Teil A und Teil B, Paragraph für Paragraph, unverändert aus den Quellen; dazu das Verzeichnis der VOB Teil C (ATV)
 - **verständlich erklärt** – zu jedem Paragraphen eine Erläuterung und die zusammenhängenden Vorschriften
 - **Ortsauskunft für Oldenburg (Oldb)** – zu einer Adresse: gilt ein Bebauungsplan, gibt es Kulturdenkmale, welche Paragraphen sind zu beachten
 
@@ -58,17 +58,18 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 
 | Funktion | Was passiert |
 |---|---|
-| **Paragraph abrufen** | „§ 34 BauGB“, „§§ 30, 34 und 35 BauGB“, „35 BauGB“, „Paragraph 13a“ – der Paragraph erscheint im amtlichen Wortlaut mit Stand, Quelle und Kopier-Knopf. Gibt es eine Nummer in beiden Gesetzen („Paragraph 5“), fragt die App nach. Gibt es sie nicht („§ 300 BauGB“), sagt sie das – statt zu raten. |
+| **Paragraph abrufen** | „§ 34 BauGB“, „§§ 30, 34 und 35 BauGB“, „35 BauGB“, „Paragraph 13a“, „§ 6 MBO“, „§ 3a EU VOB/A“, „§ 13 VOB/B“, „DIN 18353“ – die Vorschrift erscheint im Wortlaut mit Stand, Quelle und Kopier-Knopf. Gibt es eine Nummer in mehreren Regelwerken („Paragraph 5“, „§ 4 VOB“), fragt die App nach. Gibt es sie nicht („§ 300 BauGB“), sagt sie das – statt zu raten. |
+| **Musterbauordnung und VOB** | Die **MBO** (Muster der Bauministerkonferenz, Stand 26./27.09.2024), die **VOB/A** (Abschnitt 1 sowie die Abschnitte 2 „EU“ und 3 „VS“ in der Ausgabe 2026) und die **VOB/B** (Ausgabe 2016) im Wortlaut. Von der **VOB/C** gibt es nur das Verzeichnis der 68 ATV mit Nummer und Titel – ihr Text ist als DIN-Norm geschützt. Weil keines davon ein Gesetz ist, sagt jede Karte oben, wie verbindlich es ist (z. B. „Muster, kein geltendes Recht – in Niedersachsen gilt die NBauO“). |
 | **Erläuterung** | Unter dem Wortlaut steht eine leicht verständliche, aber detaillierte Erläuterung: Kurzfassung, jeder Absatz einzeln, Hinweis für die Praxis. Vorhanden für BauGB §§ 1–38 und das komplette NDSchG (88 Paragraphen, Status „Entwurf“). |
 | **Zusammenhang** | „Verweist auf“, „Wird erwähnt in“ und „Gleicher Abschnitt“ – automatisch aus den Verweisen im Gesetzestext ermittelt, jeweils anklickbar. |
-| **Stichwortsuche** | „Vorkaufsrecht“, „Innenbereich“, „Bauen neben einem Denkmal“ – ein von Hand gepflegtes Stichwortverzeichnis (rund 60 Fachbegriffe) plus Volltextsuche. |
+| **Stichwortsuche** | „Vorkaufsrecht“, „Innenbereich“, „Bauen neben einem Denkmal“, „Abstandsflächen“, „Abnahme“, „Estricharbeiten“ – ein von Hand gepflegtes Stichwortverzeichnis (rund 120 Begriffsgruppen) plus Volltextsuche. |
 | **Ortsauskunft Oldenburg** | Adresse → Standort → **Bebauungsplan** der Stadt Oldenburg (mit Planzeichnung und Begründung als PDF, falls online verfügbar), **Pläne in Aufstellung**, **Veränderungssperren** → **Kulturdenkmale** im Umkreis von 50 m (Denkmalatlas Niedersachsen) → **Einordnung** nach festen Regeln mit den einschlägigen Paragraphen. |
 | **Gebietsleiste** | Die Hauptinformationen zum zuletzt geprüften Gebiet – Adresse, Bebauungsplan (mit Link zur Planzeichnung) und Denkmalschutz – stehen fest über dem Verlauf. Sie bewegen sich nur mit der Seite; die Details darunter scrollen wie im Chat. |
 | **Lageskizze** | Skizze des Standorts auf einer **OpenStreetMap-Karte**: Umkreis 50 m, B-Plan-Grenze, Denkmalflächen. Die Karte lässt sich **zoomen** (Mausrad, +/−, Doppelklick, zwei Finger) und **verschieben** (Ziehen, Pfeiltasten). Der Gecko der Seite läuft hin und steckt an Standort und Denkmalen die Fähnchen. |
 | **Obsidian-Ansicht** | Alle Paragraphen, die Gliederung und die Dateien der App als vernetzte Notizen für [Obsidian](https://obsidian.md) – mit Graph-Ansicht. |
 | **Gecko** | Ein kleines Maskottchen, das auf der Seite unterwegs ist und bei Fehlern oder Hinweisen die Farbe wechselt. Über Text wird er durchsichtig; auf Wunsch sitzt er still und dient nur als Signal. |
 | **Hell & Dunkel** | Helles und dunkles Farbschema, oder automatisch wie im Betriebssystem eingestellt (Menü **Darstellung**). |
-| **Deutsch & Englisch** | Die gesamte Oberfläche, die Ortsauskunft und alle Hinweise gibt es auf Deutsch und Englisch (Umschalter **DE/EN**). Der Gesetzestext bleibt im amtlichen deutschen Wortlaut. |
+| **Deutsch & Englisch** | Die gesamte Oberfläche, die Ortsauskunft und alle Hinweise gibt es auf Deutsch und Englisch (Umschalter **DE/EN**). Der Text der Vorschriften bleibt im deutschen Wortlaut. |
 | **Online-Version** | Die App läuft auch ohne Server direkt im Browser – veröffentlicht auf [GitHub Pages](https://jade-hs-vibecoding-wpk.github.io/Bau-Normen-KI/). |
 
 ---
@@ -105,6 +106,13 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 
 <table>
   <tr>
+    <td width="50%" valign="top"><img src="docs/bilder/mbo.png" alt="§ 6 Musterbauordnung mit Hinweis: Muster, kein geltendes Recht" width="100%"><br><sub><b>Musterbauordnung</b> – mit hochgestellten Satznummern und dem Hinweis, dass in Niedersachsen die NBauO gilt</sub></td>
+    <td width="50%" valign="top"><img src="docs/bilder/vob.png" alt="§ 13 VOB/B mit Hinweis: Vertragsbedingungen, kein Gesetz" width="100%"><br><sub><b>VOB/B</b> – jede Karte sagt, wie verbindlich das Regelwerk ist</sub></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
     <td width="33%" valign="top"><img src="docs/bilder/mobil.png" alt="Startseite auf dem Smartphone" width="100%"></td>
     <td width="33%" valign="top"><img src="docs/bilder/mobil-paragraph.png" alt="§ 8 NDSchG auf dem Smartphone" width="100%"></td>
     <td width="34%" valign="middle">
@@ -124,7 +132,8 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 4. **Kein Raten bei Ausfällen.** Antwortet ein Datendienst nicht, steht dort „keine Aussage möglich“ – niemals „kein B-Plan“ oder „kein Denkmal“.
 5. **Quelle und Stand stehen immer dabei.**
 6. **Hinweis Denkmalschutz:** In Niedersachsen ist ein Kulturdenkmal auch ohne Eintrag im Verzeichnis geschützt (§ 5 Abs. 1 NDSchG). Kein Treffer im Denkmalatlas heißt also nicht automatisch „kein Denkmal“ – die App weist jedes Mal darauf hin.
-7. **Englisch ohne Übersetzungsdienst:** Alle englischen Texte stehen im Code direkt neben dem deutschen Original (`t("…", "…")`). Gesetzestext und Erläuterungen werden nicht übersetzt – verbindlich ist allein der deutsche Wortlaut, und die App sagt das auch auf Englisch.
+7. **Nur, was frei verwendet werden darf:** Gesetze, Musterbauordnung und die im Bundesanzeiger bekannt gemachte VOB/A und VOB/B stehen im Wortlaut in der App. Die ATV der VOB/C sind DIN-Normen und urheberrechtlich geschützt (§ 5 Abs. 3 UrhG) – die App nennt nur Nummer und Titel und verweist auf DIN Media.
+8. **Englisch ohne Übersetzungsdienst:** Alle englischen Texte stehen im Code direkt neben dem deutschen Original (`t("…", "…")`). Gesetzestext und Erläuterungen werden nicht übersetzt – verbindlich ist allein der deutsche Wortlaut, und die App sagt das auch auf Englisch.
 
 ---
 
@@ -178,9 +187,9 @@ Die Seite hat links drei feste Formulare und rechts den Auskunftsbereich mit Ein
 | Bereich | Verwendung |
 |---|---|
 | **A · Ortsauskunft Oldenburg** | Straße und Hausnummer eintragen → „Standort prüfen“ |
-| **B · Paragraph abrufen** | Gesetz wählen, Nummer eintragen (z. B. `34` oder `13a`) → „Wortlaut anzeigen“ |
-| **C · Bibliothek** | Welche Gesetze in welchem Stand enthalten sind, mit Link zur amtlichen Quelle |
-| **Eingabefeld unten** | Freie Eingabe: Paragraph, Stichwort oder Adresse, z. B. „Ich brauche § 35 BauGB“, „section 35 BauGB“, „Vorkaufsrecht“, „Gartenstraße 5“ |
+| **B · Paragraph abrufen** | Regelwerk wählen, Nummer eintragen (z. B. `34`, `13a`, bei der VOB/A auch `3a EU`; bei der VOB/C die DIN-Nummer, z. B. `18353`) → „Wortlaut anzeigen“ |
+| **C · Bibliothek** | Welche Regelwerke in welchem Stand enthalten sind – gruppiert nach Gesetzen, Muster und VOB –, mit Link zur Quelle |
+| **Eingabefeld unten** | Freie Eingabe: Paragraph, Stichwort oder Adresse, z. B. „Ich brauche § 35 BauGB“, „section 35 BauGB“, „§ 13 VOB/B“, „DIN 18353“, „Vorkaufsrecht“, „Gartenstraße 5“ |
 | **Gebietsleiste** | Erscheint nach einer Ortsauskunft fest über dem Verlauf: Adresse, B-Plan, Denkmalschutz; „Details“ und „Karte“ springen zur Auskunft, „×“ blendet sie aus |
 | **DE / EN** | Sprache der Oberfläche und der Antworten (neue Anfragen werden in der gewählten Sprache beantwortet) |
 | **Darstellung** | Farbschema Hell / Dunkel / Auto · Gecko „Läuft“ oder „Sitzt still“ · Animationen an/aus – wird im Browser gemerkt |
@@ -230,11 +239,11 @@ flowchart LR
 |---|---|
 | `app/` | Seite (`page.tsx`), Grundgerüst und Schriften (`layout.tsx`), Gestaltung (`globals.css`) und die Schnittstelle `api/frage/route.ts` für die lokale Fassung |
 | `components/` | Oberfläche: `ChatApp.tsx` (Seite mit Formularen und Verlauf), `Karten.tsx` (Paragraph- und Ortsauskunft-Karte), `Normtext.tsx` (Wortlaut), `Lageskizze.tsx` (Karte und Fähnchen), `Obsidian.tsx` (Knopf und Links), `Gecko.tsx`, `Organisch.tsx` (Flächen, Höhenlinien, Linienzeichnung), `Einstellungen.tsx` (Sprache, Farbschema, Gecko, Animationen), `Symbole.tsx` |
-| `lib/` | Logik: `anfrage.ts` (eine Anfrage bearbeiten), `verstehen.ts` (Lotse), `gesetze.ts` (Bibliothek, Suche), `daten-server.ts` / `daten-browser.ts` (Datenquelle lokal bzw. online), `ort/` (Ortsauskunft: Standort, B-Plan, Plan-Dokumente, Denkmale, Geometrie), `gecko.ts` (Regeln für den Gecko), `sprache.ts` (Deutsch/Englisch), `vorab.ts` (Einstellungen vor dem ersten Zeichnen), `typen.ts`, `text.ts` |
-| `data/gesetze/` | Die Gesetze als JSON – Paragraph für Paragraph mit Struktur, Wortlaut und erkannten Verweisen |
+| `lib/` | Logik: `anfrage.ts` (eine Anfrage bearbeiten), `verstehen.ts` (Lotse), `gesetze.ts` (Bibliothek, Suche), `daten-server.ts` / `daten-browser.ts` (Datenquelle lokal bzw. online), `ort/` (Ortsauskunft: Standort, B-Plan, Plan-Dokumente, Denkmale, Geometrie), `gecko.ts` (Regeln für den Gecko), `regelwerke.ts` (Reihenfolge, Art und Verbindlichkeitshinweis je Regelwerk), `sprache.ts` (Deutsch/Englisch), `vorab.ts` (Einstellungen vor dem ersten Zeichnen), `typen.ts`, `text.ts` |
+| `data/gesetze/` | Gesetze und Regelwerke als JSON (`baugb`, `ndschg`, `mbo`, `voba`, `vobb`, `vobc`) – Paragraph für Paragraph mit Struktur, Wortlaut und erkannten Verweisen |
 | `data/erlaeuterungen/` | Erläuterungen je Gesetz, dazu `LEITFADEN.md` (Regeln zum Schreiben) und `PRUEFHINWEISE.md` (Stellen für die fachliche Prüfung) |
 | `data/stichworte.json` | Stichwortverzeichnis (Begriff → Paragraphen) |
-| `data/quellen/` | Amtliche Rohdaten (BauGB-XML); NI-VORIS-Rohdaten werden bewusst nicht versioniert |
+| `data/quellen/` | Rohdaten: BauGB-XML, der aus den PDFs gelesene Text von MBO und VOB samt Prüfprotokoll (die PDFs selbst lädt das Importskript); NI-VORIS-Rohdaten werden bewusst nicht versioniert |
 | `scripts/` | Import der Gesetze, Prüfprogramme, Obsidian-Export, Bau und Vorschau der Online-Version (`pages-bauen.mjs`, `pages-vorschau.mjs`) |
 | `tests/testkatalog.mjs` | Testfragen mit erwarteten Antworten |
 | `obsidian/` | Erzeugter Obsidian-Vault (Gesetze, Gliederung, Projektdateien) |
@@ -252,7 +261,7 @@ flowchart LR
 | `npm run build` / `npm start` | Produktionsversion bauen bzw. starten |
 | `npm run build:pages` | Online-Version für GitHub Pages nach `out/` bauen |
 | `npm run preview:pages` | Online-Version lokal ansehen (http://localhost:3100/Bau-Normen-KI/) |
-| `npm run import:all` | BauGB und NDSchG neu aus den amtlichen Quellen laden (`import:baugb`, `import:ndschg` einzeln) |
+| `npm run import:all` | Alle Regelwerke neu aus den Quellen laden (einzeln: `import:baugb`, `import:ndschg`, `import:mbo`, `import:vob`, `vobc`). MBO und VOB werden aus PDFs gelesen – dafür sind `pdftotext` (Poppler) und Python mit `pypdf` nötig; mit `-- --offline` genügt der gespeicherte Text |
 | `node scripts/wortlaut-pruefen.mjs` | Jeden BauGB-Paragraphen mit der amtlichen Einzelseite vergleichen (ca. 2 Minuten; einzelne: `… 34 35`) |
 | `node scripts/erlaeuterungen-pruefen.mjs` | Erläuterungen prüfen (Pflichtfelder, nur Paragraphen/Absätze, die es im Original gibt) |
 | `npm run obsidian` | Obsidian-Vault neu erzeugen – mit Selbsttest, dass der Wortlaut unverändert ist |
@@ -282,9 +291,11 @@ Geänderte Paragraphen sollten danach auch inhaltlich mit ihrer Erläuterung abg
 |---|---|
 | Wortlaut BauGB gegen gesetze-im-internet.de | 297/297 Paragraphen identisch |
 | Wortlaut NDSchG gegen NI-VORIS (beim Import) | Stichproben Zeichen für Zeichen identisch |
+| Wortlaut MBO gegen zweite PDF-Auslesung (pdftotext und pypdf, ohne Leerraum) | 83/83 Seiten und 97/97 Vorschriften identisch, 4 dokumentierte Reparaturen (Protokoll in `data/quellen/mbo/`) |
+| Wortlaut VOB/A und VOB/B gegen zweite PDF-Auslesung | 149/149 Seiten, VOB/A 152/153 und VOB/B 18/18 Vorschriften identisch; § 3a weicht genau um die 2025 bekannt gemachten Änderungen ab (Protokoll in `data/quellen/vob/`) |
 | Erläuterungen (automatische Prüfung) | 88 Erläuterungen, 0 Fehler, 0 Warnungen |
-| Obsidian-Export (Wortlaut-Selbsttest) | 339/339 Vorschriften identisch |
-| Testkatalog | 29/29 Fragen – Paragraphen, Rückfragen, Stichworte, Ortsauskunft (live) |
+| Obsidian-Export (Wortlaut-Selbsttest) | 607/607 Vorschriften identisch (dazu 68 VOB/C-Verzeichniseinträge ohne Wortlaut) |
+| Testkatalog | 47/47 Fragen – Paragraphen, MBO, VOB, DIN-Nummern, Rückfragen, Stichworte, Ortsauskunft (live) |
 | Online-Version (statischer Bau) | Paragraph, Rückfrage, Stichwort und Ortsauskunft mit B-Plan-PDFs direkt im Browser geprüft, keine Fehler |
 
 ---
@@ -315,7 +326,7 @@ Der Ordner `obsidian/` ist ein [Obsidian](https://obsidian.md)-Vault:
 - je Paragraph eine Notiz mit Wortlaut, Erläuterung, Verweisen und Quelle
 - die Gliederung (Kapitel → Teil → Abschnitt) als Baum
 - jede Datei der App mit Kurzbeschreibung und Verbindungen zu anderen Dateien
-- Farben im Graph: BauGB grün · NDSchG ocker · Gliederung grau-blau · Projektdateien grau
+- Farben im Graph: BauGB grün · NDSchG ocker · MBO blau · VOB/A violett · VOB/B rot · VOB/C braun · Gliederung grau-blau · Projektdateien grau
 
 **Öffnen:** einmalig in Obsidian „Ordner als Vault öffnen“ → Ordner `obsidian` wählen. Danach öffnet der Knopf **„Obsidian-Ansicht“** oben rechts in der App den Vault direkt, und jede Paragraph-Karte hat einen Link „Notiz öffnen“. Graph-Ansicht: `Strg + G`. (Nur in der lokalen Fassung – die Online-Version hat keinen Zugriff auf den eigenen Rechner.)
 
@@ -351,6 +362,10 @@ Gezeichnet wird er als bewegliches Skelett (Kopf, Rumpf, Schwanzglieder, vier Be
 |---|---|
 | BauGB | Bundesministerium der Justiz / juris – [gesetze-im-internet.de](https://www.gesetze-im-internet.de/bbaug/) (XML) |
 | NDSchG | Niedersächsisches Vorschrifteninformationssystem (NI-VORIS) |
+| Musterbauordnung | Deutsches Institut für Bautechnik (DIBt) – [MBO, Fassung 2002, zuletzt geändert 26./27.09.2024](https://www.dibt.de/fileadmin/dibt-website/Dokumente/Rechtsgrundlagen/MBO.pdf) (PDF) |
+| VOB/A | Bundesanzeiger: Abschnitte 2 und 3 Ausgabe 2026 (BAnz AT 24.08.2026 B6); Abschnitt 1 Ausgabe 2019 (BAnz AT 19.02.2019 B2), in § 3a mit den Änderungen vom 11.03.2025 (BAnz AT 02.04.2025 B7) und 24.11.2025 (BAnz AT 16.12.2025 B7) – die Bekanntmachung von 2025 enthält nur Änderungsbefehle, die App sagt bei § 3a, dass der Text zusammengeführt ist |
+| VOB/B | Ausgabe 2016, konsolidierte Fassung der [Fachinformation Bundesbau](https://www.fib-bund.de/Inhalt/Vergabe/VOB/) |
+| VOB/C | nur Verzeichnis: Einführungserlass des BMWSB vom 20.09.2023 (Ergänzungsband 2023) und DIN Media |
 | Bebauungspläne | Stadt Oldenburg – Open Data „Umringe rechtsverbindlicher Bebauungspläne“ und Kartenportal „Bauen & Wohnen“ (Plan-Dokumente, Pläne in Aufstellung, Veränderungssperren) |
 | Kulturdenkmale | [Denkmalatlas Niedersachsen](https://denkmalatlas.niedersachsen.de) – Niedersächsisches Landesamt für Denkmalpflege |
 | Adresssuche | OpenStreetMap / Nominatim |
@@ -359,7 +374,8 @@ Gezeichnet wird er als bewegliches Skelett (Kopf, Rumpf, Schwanzglieder, vier Be
 
 - Amtliche Gesetzestexte sind gemeinfrei (§ 5 UrhG).
 - NI-VORIS behält sich automatisiertes Text- und Data-Mining vor. Gespeichert und veröffentlicht wird deshalb nur der gemeinfreie Gesetzestext, nicht die Roh-HTML-Seiten des Anbieters. Für eine kommerzielle Nutzung ist das erneut zu prüfen.
-- DIN-Normen sind – anders als Gesetze – urheberrechtlich geschützt; vor einer Aufnahme ist die Lizenzfrage zu klären (siehe `TODO.md`).
+- DIN-Normen sind – anders als Gesetze – urheberrechtlich geschützt (§ 5 Abs. 3 UrhG). Deshalb enthält die App von der VOB/C nur Nummer und Titel der ATV; für weitere Normen ist die Lizenzfrage zu klären (siehe `TODO.md`).
+- Die Musterbauordnung ist ein Muster der Bauministerkonferenz und kein geltendes Recht; die VOB ist kein Gesetz (VOB/A: Vergaberegeln, auf die das Haushalts- und Vergaberecht verweist; VOB/B und VOB/C: Vertragsbedingungen). Die App sagt das in jeder Karte.
 - Die Erläuterungen sind Orientierungshilfen (Status „Entwurf“) und keine Rechtsberatung. Maßgeblich ist der amtliche Wortlaut.
 - In der Online-Version fragt der Browser die Geodienste direkt ab; dabei wird nur die eingegebene Adresse bzw. der Standort übermittelt. Die Kartenkacheln lädt der Browser – in beiden Fassungen – direkt bei OpenStreetMap; für eine Nutzung mit vielen Zugriffen wäre ein eigener Kachelserver oder Anbieter nötig (Nutzungsrichtlinie von OpenStreetMap).
 

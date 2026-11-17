@@ -28,6 +28,22 @@ const FAELLE = [
   { frage: "§ 200 BauGB", erwartet: [["norm", "§ 200", "baugb"]] },
   { frage: "Paragraph 200", erwartet: [["norm", "§ 200", "baugb"]] }, // nur im BauGB vorhanden -> keine Rückfrage nötig
 
+  // Musterbauordnung und VOB
+  { frage: "§ 6 MBO", erwartet: [["norm", "§ 6", "mbo"]] },
+  { frage: "Musterbauordnung § 61", erwartet: [["norm", "§ 61", "mbo"]] },
+  { frage: "§ 5 NBauO", erwartet: [["fehler"]] }, // Landesbauordnung noch nicht in der Bibliothek – nicht mit der MBO verwechseln
+  { frage: "§ 3a VOB/A", erwartet: [["norm", "§ 3a", "voba"]] },
+  { frage: "§ 3a EU VOB/A", erwartet: [["norm", "§ 3a EU", "voba"]] },
+  { frage: "§ 3 VOB/A-EU", erwartet: [["norm", "§ 3 EU", "voba"]] },
+  { frage: "§ 2 VS", erwartet: [["norm", "§ 2 VS", "voba"]] }, // nur in der VOB/A Abschnitt 3 -> eindeutig
+  { frage: "§ 13 VOB/B", erwartet: [["norm", "§ 13", "vobb"]] },
+  { frage: "VOB Teil B § 12", erwartet: [["norm", "§ 12", "vobb"]] },
+  { frage: "§ 4 VOB", erwartet: [["auswahl"]] }, // VOB ohne Teil -> VOB/A oder VOB/B
+  { frage: "DIN 18353", erwartet: [["norm", "DIN 18353", "vobc"]] },
+  { frage: "ATV DIN 18300", erwartet: [["norm", "DIN 18300", "vobc"]] },
+  { frage: "DIN 18310", erwartet: [["fehler"]] }, // zurückgezogen, keine ATV mehr
+  { frage: "§ 1 VOB/C", erwartet: [["fehler"]] }, // VOB/C hat keine Paragraphen
+
   // Stichworte (kuratiertes Verzeichnis + Volltext)
   { frage: "Was gilt beim Bauen im Außenbereich?", erwartet: [["treffer", "§ 35"]] },
   { frage: "Vorkaufsrecht der Gemeinde", erwartet: [["treffer", "§ 24"]] },
@@ -37,6 +53,10 @@ const FAELLE = [
   { frage: "Genehmigung für Arbeiten an einem Baudenkmal", erwartet: [["treffer", "§ 10"]] },
   { frage: "Erdarbeiten", erwartet: [["treffer", "§ 13"]] },
   { frage: "Milieuschutz", erwartet: [["treffer", "§ 172"]] },
+  { frage: "Abstandsflächen", erwartet: [["treffer", "§ 6"]] },
+  { frage: "Abnahme der Bauleistung", erwartet: [["treffer", "§ 12"]] },
+  { frage: "Mängelansprüche", erwartet: [["treffer", "§ 13"]] },
+  { frage: "Estricharbeiten", erwartet: [["treffer", "DIN 18353"]] },
   { frage: "xyzqv", erwartet: [["fehler"]] },
 
   // Ortsauskunft (live)

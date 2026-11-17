@@ -13,10 +13,15 @@ export function alsText(nodes: TextKnoten[]): string {
       out += "\n";
     } else if (n.t === "table") out += n.rows.map((r) => r.join(" | ")).join("\n") + "\n";
     else if (n.t === "pre" || n.t === "hinweis") out += n.v + "\n";
+    // Hochgestellte Ziffern (Satznummern der MBO, m², Fußnotenzeichen) als hochgestellte Zeichen: "¹Bauliche Anlagen", "m²"
+    else if (n.t === "sup") out += hochgestellt(alsText(n.c));
     else if ("c" in n) out += alsText(n.c);
   }
   return out.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
+
+const HOCH: Record<string, string> = { "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", "*": "*", ")": "⁾", "(": "⁽" };
+const hochgestellt = (s: string) => (/^[0-9*()]+$/.test(s) ? [...s].map((z) => HOCH[z]).join("") : s);
 
 const MONATE = ["januar", "februar", "märz", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "dezember"];
 
@@ -31,5 +36,11 @@ export function standDatum(stand: string): string | null {
   const w = stand.match(/vom\s+(\d{1,2})\.\s*([A-Za-zäÄ]+)\s+(\d{4})/);
   const monat = w ? MONATE.indexOf(w[2].toLowerCase()) + 1 : 0;
   if (w && monat) return `${w[1].padStart(2, "0")}.${String(monat).padStart(2, "0")}.${w[3]}`;
+  // sonst das späteste Datum im Text ("26./27.9.2024", "BAnz AT 24.08.2026 B6")
+  const daten = [...stand.matchAll(/(\d{1,2})\.(\d{1,2})\.(\d{4})/g)].map((d) => ({ d, wert: Number(d[3]) * 10000 + Number(d[2]) * 100 + Number(d[1]) }));
+  if (daten.length) {
+    const { d } = daten.sort((a, b) => b.wert - a.wert)[0];
+    return `${d[1].padStart(2, "0")}.${d[2].padStart(2, "0")}.${d[3]}`;
+  }
   return null;
 }

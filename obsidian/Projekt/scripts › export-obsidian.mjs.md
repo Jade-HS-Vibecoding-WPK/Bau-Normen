@@ -2,7 +2,7 @@
 pfad: "scripts/export-obsidian.mjs"
 bereich: "Export (Obsidian)"
 sprache: "JavaScript (Node, ESM)"
-zeilen: 1489
+zeilen: 1497
 beschreibung: "Exportiert Gesetze und Projektdateien als Obsidian-Vault in den Ordner obsidian/, damit man Aufbau und Zusammenhänge in Obsidian (vor allem in der Graph-Ansicht) ansehen kann."
 tags:
   - "projekt"
@@ -11,7 +11,7 @@ tags:
 
 # scripts/export-obsidian.mjs
 
-**Pfad:** `scripts/export-obsidian.mjs` · **Bereich:** Export (Obsidian) · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 1489
+**Pfad:** `scripts/export-obsidian.mjs` · **Bereich:** Export (Obsidian) · **Sprache:** JavaScript (Node, ESM) · **Zeilen:** 1497
 
 ## Kurzbeschreibung
 
@@ -50,7 +50,7 @@ Exportiert Gesetze und Projektdateien als Obsidian-Vault in den Ordner obsidian/
 ## Daten
 
 - **liest** `data/erlaeuterungen/*.json` → Erläuterungen zu [[BauGB]], [[NDSchG]]
-- **liest** `data/gesetze/*` → [[BauGB]], [[NDSchG]]
+- **liest** `data/gesetze/*` → [[BauGB]], [[MBO]], [[NDSchG]], [[VOB-A]], [[VOB-B]], [[VOB-C]]
 
 ## Externe Pakete
 
