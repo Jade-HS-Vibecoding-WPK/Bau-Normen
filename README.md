@@ -261,7 +261,7 @@ flowchart LR
 | `data/quellen/` | Rohdaten: BauGB-XML, der aus den PDFs gelesene Text von MBO und VOB samt Prüfprotokoll (die PDFs selbst lädt das Importskript); NI-VORIS-Rohdaten werden bewusst nicht versioniert |
 | `scripts/` | Import der Gesetze (Landesrecht: `import-landesrecht-c.mjs` mit einem Adapter je Landesportal in `scripts/lib/`), Prüfprogramme, Obsidian-Export, Bau und Vorschau der Online-Version (`pages-bauen.mjs`, `pages-vorschau.mjs`) |
 | `tests/testkatalog.mjs` | Testfragen mit erwarteten Antworten |
-| `obsidian/` | Erzeugter Obsidian-Vault (Gesetze, Gliederung, Projektdateien) |
+| `obsidian/` | Obsidian-Vault (Gesetze, Gliederung, Projektdateien) – wird lokal mit `npm run obsidian` erzeugt, nicht versioniert |
 | `.github/workflows/pages.yml` | Veröffentlicht die Online-Version bei jedem Push auf `main` |
 | `docs/bilder/` | Bilder für diese README (Screenshots, Banner, Gestaltung – Banner und Gestaltung mit HTML-Quelle) |
 | `TODO.md` | Plan, erledigte Punkte, nächste Schritte |
@@ -281,7 +281,7 @@ flowchart LR
 | `node scripts/wortlaut-pruefen.mjs` | Jeden BauGB-Paragraphen mit der amtlichen Einzelseite vergleichen (ca. 2 Minuten; einzelne: `… 34 35`) |
 | `node scripts/erlaeuterungen-pruefen.mjs` | Erläuterungen prüfen (Pflichtfelder, nur Paragraphen/Absätze, die es im Original gibt) |
 | `node scripts/gegenstuecke-pruefen.mjs` | Gegenstücke der Landesgesetze prüfen (jede Vorschrift existiert, jedes Zitat steht wörtlich im Gesetz) |
-| `npm run obsidian` | Obsidian-Vault neu erzeugen – mit Selbsttest, dass der Wortlaut unverändert ist |
+| `npm run obsidian` | Obsidian-Vault lokal erzeugen bzw. erneuern (nicht versioniert) – mit Selbsttest, dass der Wortlaut unverändert ist |
 | `node tests/testkatalog.mjs` | Testkatalog gegen die laufende App (`npm run dev` muss laufen; fragt teils echte Dienste ab) |
 
 ---
@@ -348,14 +348,14 @@ Farben und Formen sind zentral als CSS-Variablen in [`app/globals.css`](app/glob
 
 ## Obsidian-Ansicht
 
-Der Ordner `obsidian/` ist ein [Obsidian](https://obsidian.md)-Vault:
+`npm run obsidian` erzeugt im Ordner `obsidian/` einen [Obsidian](https://obsidian.md)-Vault (rund 1.700 Notizen). Er steht **nicht im Repository** – jede Neuerzeugung würde Hunderte Dateien ändern –, sondern wird auf dem eigenen Rechner erzeugt:
 
 - je Paragraph eine Notiz mit Wortlaut, Erläuterung, Verweisen und Quelle
 - die Gliederung (Kapitel → Teil → Abschnitt) als Baum
-- jede Datei der App mit Kurzbeschreibung und Verbindungen zu anderen Dateien
-- Farben im Graph: BauGB grün · NDSchG ocker · MBO blau · VOB/A violett · VOB/B rot · VOB/C braun · Gliederung grau-blau · Projektdateien grau
+- jede Datei der App mit Kurzbeschreibung und Verbindungen zu anderen Dateien (dazu `Projekt/Architektur.md`)
+- Farben im Graph: BauGB grün · NDSchG ocker · NBauO petrol · MBO blau · VOB/A violett · VOB/B rot · VOB/C braun · übrige Landesgesetze je eine Ersatzfarbe · Gliederung grau-blau · Projektdateien grau
 
-**Öffnen:** einmalig in Obsidian „Ordner als Vault öffnen“ → Ordner `obsidian` wählen. Danach öffnet der Knopf **„Obsidian-Ansicht“** oben rechts in der App den Vault direkt, und jede Paragraph-Karte hat einen Link „Notiz öffnen“. Graph-Ansicht: `Strg + G`. (Nur in der lokalen Fassung – die Online-Version hat keinen Zugriff auf den eigenen Rechner.)
+**Öffnen:** einmal `npm run obsidian` ausführen, dann in Obsidian „Ordner als Vault öffnen“ → Ordner `obsidian` wählen. Danach öffnet der Knopf **„Obsidian-Ansicht“** oben rechts in der App den Vault direkt, und jede Paragraph-Karte hat einen Link „Notiz öffnen“. Graph-Ansicht: `Strg + G`. (Nur in der lokalen Fassung – die Online-Version hat keinen Zugriff auf den eigenen Rechner.)
 
 Nach Änderungen an Gesetzen oder Code: `npm run obsidian`.
 
@@ -445,4 +445,4 @@ Vor einer kommerziellen Nutzung zu klären: Bayern (CC BY-ND – Namensnennung, 
 - [data/gegenstuecke/THEMEN.md](data/gegenstuecke/THEMEN.md) – Themen und Regeln für die Zuordnung der Landesvorschriften
 - [data/erlaeuterungen/LEITFADEN.md](data/erlaeuterungen/LEITFADEN.md) – Regeln für das Schreiben von Erläuterungen
 - [data/erlaeuterungen/PRUEFHINWEISE.md](data/erlaeuterungen/PRUEFHINWEISE.md) – Stellen, die eine Fachperson prüfen sollte
-- [obsidian/Projekt/Architektur.md](obsidian/Projekt/Architektur.md) – Zusammenspiel der Bausteine
+- `obsidian/Projekt/Architektur.md` – Zusammenspiel der Bausteine (nach `npm run obsidian`)

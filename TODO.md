@@ -28,6 +28,7 @@
 - [x] Dauerhaftes Prüfprogramm `node scripts/wortlaut-pruefen.mjs`: BauGB 297/297 Zeichen für Zeichen identisch mit den amtlichen Einzelseiten (16.11.2026); NDSchG beim Import gegen NI-VORIS geprüft
 - [x] B-Plan-Dokumente (Planzeichnung, Begründung als PDF) in der Ortsauskunft verlinkt, dazu Pläne in Aufstellung, Veränderungssperren, unwirksame Pläne
 - [x] Obsidian-Button im Kopf + „Notiz öffnen“ je Paragraph
+- [x] Obsidian-Vault nicht mehr versioniert (`obsidian/` in `.gitignore`, lokal mit `npm run obsidian` erzeugen) – bewusst keine Graph-Ansicht in der Website; falls später eine Verlinkung, dann ein Ländervergleich über `data/gegenstuecke` (z. B. § 6 MBO ↔ Art. 6 BayBO ↔ § 6 BauO NRW)
 - [x] Erläuterungen fest gespeichert (zur Laufzeit keine KI): BauGB §§ 1–38 (47) und NDSchG komplett (41), Status „Entwurf“, automatisch geprüft (`node scripts/erlaeuterungen-pruefen.mjs`)
 - [ ] Erläuterungen für die übrigen BauGB-Paragraphen (§§ 39–250)
 - [ ] Fachliche Prüfung der Erläuterungen anhand von `data/erlaeuterungen/PRUEFHINWEISE.md`, danach Status „geprüft“

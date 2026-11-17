@@ -23,10 +23,9 @@ data/quellen/nbauo/
 # Rohdaten der Landesrechtsportale (nur der gemeinfreie Gesetzestext wird veröffentlicht, in data/gesetze/)
 data/quellen/landesrecht/
 
-# Obsidian: persönliche Arbeitsbereich-Einstellungen nicht versionieren, nur die Graph-Farben
-obsidian/.obsidian/*
-!obsidian/.obsidian/graph.json
-obsidian/.trash/
+# Obsidian-Vault: wird lokal mit „npm run obsidian“ aus data/ und dem Code erzeugt (rund 1.700 Notizen) –
+# nicht versionieren, sonst ändert jede Neuerzeugung Hunderte Dateien
+obsidian/
 
 # System
 .DS_Store
