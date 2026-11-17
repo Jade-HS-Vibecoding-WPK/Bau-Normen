@@ -66,7 +66,8 @@ export function geckoProbleme(antworten: Antwort[], sprache: Sprache = "de"): Ge
         if (o.bplan.status === "fehler") liste.push({ stufe: o.bplan.nichtAngebunden ? "warnung" : "fehler", text: o.bplan.hinweis });
         else {
           if (!o.bplan.dokumenteAbrufbar) liste.push({ stufe: "warnung", text: t("Plan-Dokumente (PDF) konnten nicht abgerufen werden.", "Plan documents (PDF) could not be retrieved.") });
-          if (o.bplan.weitere === null) liste.push({ stufe: "warnung", text: t("Laufende Verfahren (Aufstellung, Veränderungssperre) nicht abrufbar.", "Ongoing procedures (plans in preparation, development freezes) not retrievable.") });
+          // laufende Verfahren werden nur für die Stadt Oldenburg abgefragt – anderswo ist null kein Ausfall
+          if (o.standort.oldenburg && o.bplan.weitere === null) liste.push({ stufe: "warnung", text: t("Laufende Verfahren (Aufstellung, Veränderungssperre) nicht abrufbar.", "Ongoing procedures (plans in preparation, development freezes) not retrievable.") });
         }
         if (o.denkmal.status === "fehler") liste.push({ stufe: o.denkmal.nichtAngebunden ? "warnung" : "fehler", text: o.denkmal.hinweis });
         break;

@@ -1,0 +1,81 @@
+{
+ "gesetz": "nbauo",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "abstandsflaechen": [
+   "5",
+   "7"
+  ],
+  "nicht-ueberbaute-flaechen": [
+   "9"
+  ],
+  "werbeanlagen": [
+   "50"
+  ],
+  "brandwaende": [
+   "30"
+  ],
+  "rettungswege": [
+   "33"
+  ],
+  "stellplaetze": [
+   "47",
+   "46",
+   "48"
+  ],
+  "barrierefrei": [
+   "49"
+  ],
+  "sonderbauten": [
+   "51"
+  ],
+  "bauherr": [
+   "52"
+  ],
+  "entwurfsverfasser": [
+   "53"
+  ],
+  "bauvorlageberechtigung": [
+   "53"
+  ],
+  "genehmigungspflicht": [
+   "59"
+  ],
+  "verfahrensfrei": [
+   "60",
+   "anhang"
+  ],
+  "genehmigungsfreistellung": [
+   "62"
+  ],
+  "vereinfachtes-verfahren": [
+   "63"
+  ],
+  "baugenehmigungsverfahren": [
+   "64"
+  ],
+  "abweichungen": [
+   "66"
+  ],
+  "bauantrag": [
+   "67"
+  ],
+  "baugenehmigung": [
+   "70"
+  ],
+  "vorbescheid": [
+   "73"
+  ],
+  "baulasten": [
+   "81"
+  ],
+  "oertliche-bauvorschriften": [
+   "84"
+  ]
+ },
+ "hinweise": [
+  "Grenzabstände statt Abstandsflächen (§§ 5–7); verfahrensfreie Baumaßnahmen im Anhang zu § 60; die Bauvorlageberechtigung steht in § 53 (Entwurfsverfasser)."
+ ]
+}

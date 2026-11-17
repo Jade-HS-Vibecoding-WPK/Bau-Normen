@@ -43,6 +43,18 @@ const FAELLE = [
   { frage: "VOB Teil B § 12", erwartet: [["norm", "§ 12", "vobb"]] },
   { frage: "§ 4 VOB", erwartet: [["auswahl"]] }, // VOB ohne Teil -> VOB/A oder VOB/B
   { frage: "DIN 18353", erwartet: [["norm", "DIN 18353", "vobc"]] },
+
+  // Landesrecht anderer Länder (Land der Frage: Feld "land", sonst Niedersachsen)
+  { frage: "Art. 6 BayBO", erwartet: [["norm", "Art. 6", "baybo"]] },
+  { frage: "Artikel 57 Bayerische Bauordnung", erwartet: [["norm", "Art. 57", "baybo"]] },
+  { frage: "§ 6 Bauordnung", land: "Bayern", erwartet: [["norm", "Art. 6", "baybo"]] },
+  { frage: "§ 6 Bauordnung", erwartet: [["norm", "§ 6", "nbauo"]] },
+  { frage: "§ 6 BauO NRW", erwartet: [["norm", "§ 6", "bauo-nrw"]] },
+  { frage: "§ 10 SächsDSchG", erwartet: [["norm", "§ 10", "saechsdschg"]] },
+  { frage: "§ 3 BremDSchG", erwartet: [["norm", "§ 3", "bremdschg"]] },
+  { frage: "§ 6 Bauordnung", land: "Hessen", erwartet: [["fehler"]] }, // HBO noch nicht in der Bibliothek – offen sagen
+  { frage: "Abstandsflächen", land: "Nordrhein-Westfalen", erwartet: [["treffer", "§ 6"]] },
+  { frage: "Baugenehmigung", land: "Brandenburg", erwartet: [["treffer", "§ 64"]] },
   { frage: "ATV DIN 18300", erwartet: [["norm", "DIN 18300", "vobc"]] },
   { frage: "DIN 18310", erwartet: [["fehler"]] }, // zurückgezogen, keine ATV mehr
   { frage: "§ 1 VOB/C", erwartet: [["fehler"]] }, // VOB/C hat keine Paragraphen
@@ -68,11 +80,27 @@ const FAELLE = [
   { frage: "Gartenstraße 5", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Ich habe ein Grundstück an der Gartenstraße 5, dort steht ein Denkmal", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Fantasiestraße 999", erwartet: [["ort", "standort-fehlt"]] },
-  // Ortsauskunft Deutschland: B-Pläne nur Oldenburg, Denkmale nur Niedersachsen – sonst „keine Aussage“ (fehler), nie „keiner“
+  // Ortsauskunft Deutschland: Dienste je Land/Stadt (lib/ort/dienste); "keiner" bei unvollständigen Diensten = "nicht verzeichnet"
   { frage: "Gartenstraße 5, 26122 Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Bahnhofstraße 1, 30159 Hannover", erwartet: [["ort", "fehler/*"]] },
-  { frage: "Marienplatz 1, 80331 München", erwartet: [["ort", "fehler/fehler"]] },
+  { frage: "Marienplatz 1, 80331 München", erwartet: [["ort", "keiner/am-standort"]] }, // Stadt München + BLfD; B-Plan-Dienst unvollständig -> "nicht verzeichnet"
   { frage: "Königsallee 1", erwartet: [["auswahl"]] }, // gibt es in vielen Orten -> Rückfrage mit Postleitzahl
+  // je Land eine Adresse (Dienste am 17.11.2026 geprüft); "*" wo ein Dienst zeitweise ausfällt oder sich der Bestand ändern kann
+  { frage: "Schlossplatz 4, 70173 Stuttgart", erwartet: [["ort", "gefunden/am-standort"]] }, // BW: Raumordnungskataster + Stuttgart, LAD
+  { frage: "Pariser Platz 1, 10117 Berlin", erwartet: [["ort", "gefunden/am-standort"]] },
+  { frage: "Alter Markt 1, 14467 Potsdam", erwartet: [["ort", "gefunden/fehler"]] }, // Brandenburg: kein Denkmal-Dienst angebunden
+  { frage: "Am Markt 1, 28195 Bremen", erwartet: [["ort", "gefunden/am-standort"]] },
+  { frage: "Hans-Scharoun-Platz 1, 27568 Bremerhaven", erwartet: [["ort", "gefunden/am-standort"]] }, // B-Plan-Dienst vollständig
+  { frage: "Rathausmarkt 1, 20095 Hamburg", erwartet: [["ort", "gefunden/am-standort"]] }, // B-Plan-Dienst vollständig, DSchG HH fehlt
+  { frage: "Domplatz 1, 60311 Frankfurt am Main", erwartet: [["ort", "gefunden/am-standort"]] },
+  { frage: "Neuer Markt 1, 18055 Rostock", erwartet: [["ort", "keiner/*"]] }, // Denkmal-Dienst Rostock fiel am 17.11. zeitweise aus
+  { frage: "Roncalliplatz 2, 50667 Köln", erwartet: [["ort", "gefunden/umgebung"]] }, // NRW: konstitutives System (§ 5 DSchG NRW)
+  { frage: "Markt 10, 55116 Mainz", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Neumarkt 1, 01067 Dresden", erwartet: [["ort", "keiner/umgebung"]] },
+  { frage: "Domplatz 4, 39104 Magdeburg", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Ludwigsplatz 1, 66117 Saarbrücken", erwartet: [["ort", "fehler/umgebung"]] }, // Saarland: B-Pläne bewusst nicht angebunden
+  { frage: "Dänische Straße 44, 24103 Kiel", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Jürgen-Fuchs-Straße 1, 99096 Erfurt", erwartet: [["ort", "gefunden/fehler"]] }, // Thüringen: Plan ohne Nummer, kein Denkmal-Dienst
 ];
 
 function kurzform(a) {
@@ -100,7 +128,7 @@ function passt(a, [art, detail, gesetz]) {
 
 let ok = 0;
 for (const f of FAELLE) {
-  const res = await fetch(`${BASIS}/api/frage`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: f.frage }) });
+  const res = await fetch(`${BASIS}/api/frage`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: f.frage, ...(f.land ? { land: f.land } : {}) }) });
   const { antworten } = await res.json();
   const bestanden = antworten.length === f.erwartet.length && f.erwartet.every((e, i) => passt(antworten[i], e));
   if (bestanden) ok++;

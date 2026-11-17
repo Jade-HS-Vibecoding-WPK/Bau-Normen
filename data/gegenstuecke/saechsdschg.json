@@ -1,0 +1,44 @@
+{
+ "gesetz": "saechsdschg",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "eintragung": [
+   "10"
+  ],
+  "erhaltungspflicht": [
+   "8"
+  ],
+  "genehmigungspflicht": [
+   "12",
+   "13"
+  ],
+  "umgebungsschutz": [
+   "12"
+  ],
+  "erdarbeiten": [
+   "14"
+  ],
+  "bodenfunde": [
+   "20"
+  ],
+  "behoerden": [
+   "3",
+   "3a",
+   "4"
+  ]
+ },
+ "schutzOhneEintragung": true,
+ "belege": {
+  "schutzOhneEintragung": {
+   "norm": "10",
+   "satz": "Der Denkmalschutz nach diesem Gesetz ist nicht von der Aufnahme eines Kulturdenkmals in ein Verzeichnis abhängig."
+  }
+ },
+ "hinweise": [
+  "Der Begriff des Kulturdenkmals steht in § 2 („Gegenstand des Denkmalschutzes“); nach § 2 Abs. 3 Nr. 1 ist auch die Umgebung eines Kulturdenkmals Gegenstand des Denkmalschutzes.",
+  "Umgebungsschutz: Genehmigungspflicht für Anlagen in der Umgebung eines Kulturdenkmals in § 12 Abs. 2.",
+  "Kulturdenkmallisten werden nach § 10 Abs. 1 nur nachrichtlich geführt."
+ ]
+}

@@ -240,6 +240,28 @@ const denkmalStatus = (t: T) =>
     fehler: [t("keine Aussage", "no statement"), "status-signal"],
   }) as const;
 
+/** Leeres Ergebnis eines Dienstes, der nicht nachweislich alles enthält: nur "nicht verzeichnet", nie "kein Plan"/"kein Denkmal" */
+const nurNichtVerzeichnet = (x: OrtAnsicht["bplan"] | OrtAnsicht["denkmal"]) => x.status === "keiner" && x.vollstaendig !== true;
+
+function statusAnzeige(t: T, o: OrtAnsicht) {
+  const nv = [t("nicht verzeichnet", "not listed"), "status-neutral"] as const;
+  return {
+    b: nurNichtVerzeichnet(o.bplan) ? nv : bplanStatus(t)[o.bplan.status],
+    d: nurNichtVerzeichnet(o.denkmal) ? nv : denkmalStatus(t)[o.denkmal.status],
+  };
+}
+
+/** Hinweis zur Abdeckung der Dienste (klein unter der Quelle) */
+function Abdeckung({ x }: { x: OrtAnsicht["bplan"] | OrtAnsicht["denkmal"] }) {
+  const t = useT();
+  if (x.status === "fehler" || !x.abdeckung) return null;
+  return (
+    <p className="kachel-abdeckung" lang="de">
+      <span>{t("Abdeckung", "Coverage")}:</span> {x.abdeckung}
+    </p>
+  );
+}
+
 const osmLink = (lat: number, lon: number) => `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=19/${lat}/${lon}`;
 
 export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; kartenId: string }) {
@@ -255,8 +277,8 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
         </p>
         <p>
           {t(
-            "Die Ortsauskunft findet Adressen in ganz Deutschland – mit Postleitzahl wird die Suche eindeutig. Bebauungspläne sind für die Stadt Oldenburg angebunden, Denkmale für Niedersachsen.",
-            "The location check finds addresses anywhere in Germany – adding a postcode makes the search unambiguous. Development plans are connected for the City of Oldenburg, monuments for Lower Saxony.",
+            "Die Ortsauskunft findet Adressen in ganz Deutschland – mit Postleitzahl wird die Suche eindeutig. Bebauungspläne und Denkmale kommen aus den amtlichen Diensten der Länder und Städte, soweit sie offen abrufbar sind.",
+            "The location check finds addresses anywhere in Germany – adding a postcode makes the search unambiguous. Development plans and monuments come from the official services of the states and cities, where openly accessible.",
           )}
         </p>
       </div>
@@ -264,10 +286,14 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
   }
 
   const s = o.standort;
-  const [bLabel, bKlasse] = bplanStatus(t)[o.bplan.status];
-  const [dLabel, dKlasse] = denkmalStatus(t)[o.denkmal.status];
+  const {
+    b: [bLabel, bKlasse],
+    d: [dLabel, dKlasse],
+  } = statusAnzeige(t, o);
   const denkmale = o.denkmal.status !== "fehler" ? o.denkmal.denkmale : [];
   const sichtbar = alleDenkmale ? denkmale : denkmale.slice(0, 4);
+  // Quellen mit Lizenzangabe (Namensnennung) – nur Dienste, die geantwortet haben
+  const quellen = [s.quelle, o.bplan.status !== "fehler" && o.bplan.quelle, o.denkmal.status !== "fehler" && o.denkmal.quelle].filter(Boolean).join(" · ");
   const doku = (art: string) => (e.sprache === "en" ? (DOKUMENT_EN[art] ?? art) : art);
 
   return (
@@ -315,12 +341,19 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             <span className={`status ${bKlasse}`}>{bLabel}</span>
           </div>
           {o.bplan.status === "fehler" && <p className="kachel-sub">{o.bplan.hinweis}</p>}
-          {o.bplan.status === "keiner" && <p className="kachel-wert">{t("Kein rechtsverbindlicher Bebauungsplan verzeichnet", "No legally binding development plan listed")}</p>}
+          {o.bplan.status === "keiner" && (
+            <p className="kachel-wert">
+              {nurNichtVerzeichnet(o.bplan)
+                ? t("Kein Bebauungsplan verzeichnet – der Dienst enthält nicht nachweislich alle Pläne", "No development plan listed – the service is not proven to contain every plan")
+                : t("Kein rechtsverbindlicher Bebauungsplan", "No legally binding development plan")}
+            </p>
+          )}
           {o.bplan.status === "gefunden" &&
-            o.bplan.plaene.map((p) => (
-              <div key={p.nummer} className="plan">
+            o.bplan.plaene.map((p, i) => (
+              <div key={`${p.nummer}|${p.name}|${i}`} className="plan">
                 <p className="kachel-wert">
-                  Nr. {p.nummer} – <span lang="de">{p.name}</span>
+                  {p.nummer ? `Nr. ${p.nummer} – ` : ""}
+                  <span lang="de">{p.name}</span>
                 </p>
                 <p className="kachel-sub">
                   {p.rechtsverbindlichSeit && (
@@ -346,11 +379,19 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
                       </li>
                     ))}
                   </ul>
+                ) : p.link ? (
+                  <ul className="dokumente">
+                    <li>
+                      <a href={p.link} target="_blank" rel="noreferrer">
+                        {t("Plan öffnen ↗", "Open plan ↗")}
+                      </a>
+                    </li>
+                  </ul>
                 ) : (
                   <p className="kachel-sub">
                     {o.bplan.status === "gefunden" && !o.bplan.dokumenteAbrufbar
                       ? t("Plan-Dokumente derzeit nicht abrufbar – bitte im Kartenportal öffnen.", "Plan documents currently not retrievable – please open them in the map portal.")
-                      : t("Keine Plan-Dokumente online verfügbar – erhältlich beim Stadtplanungsamt.", "No plan documents online – available from the city planning office.")}
+                      : t("Plan-Dokumente sind nicht im Dienst enthalten – erhältlich bei der Gemeinde (Geoportal oder Stadtplanungsamt).", "Plan documents are not included in the service – available from the municipality (geoportal or planning office).")}
                   </p>
                 )}
               </div>
@@ -372,6 +413,7 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             </ul>
           )}
           <p className="kachel-quelle">{o.bplan.quelle}</p>
+          <Abdeckung x={o.bplan} />
         </div>
 
         <div className="kachel">
@@ -384,7 +426,12 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
           {o.denkmal.status === "fehler" && <p className="kachel-sub">{o.denkmal.hinweis}</p>}
           {o.denkmal.status === "keiner" && (
             <p className="kachel-wert">
-              {t(`Kein Kulturdenkmal im Umkreis von ${o.denkmal.radiusM} m verzeichnet`, `No cultural monument recorded within ${o.denkmal.radiusM} m`)}
+              {nurNichtVerzeichnet(o.denkmal)
+                ? t(
+                    `Im Umkreis von ${o.denkmal.radiusM} m kein Kulturdenkmal verzeichnet – der Dienst enthält nicht nachweislich alle Denkmale`,
+                    `No cultural monument listed within ${o.denkmal.radiusM} m – the service is not proven to contain every monument`,
+                  )
+                : t(`Kein Kulturdenkmal im Umkreis von ${o.denkmal.radiusM} m verzeichnet`, `No cultural monument recorded within ${o.denkmal.radiusM} m`)}
             </p>
           )}
           {denkmale.length > 0 && (
@@ -417,6 +464,7 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             </button>
           )}
           <p className="kachel-quelle">{o.denkmal.quelle}</p>
+          <Abdeckung x={o.denkmal} />
         </div>
       </div>
 
@@ -455,8 +503,8 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
       </section>
       <div className="fusszeile">
         {t(
-          `Automatische Auswertung von Datendiensten (${[s.quelle, s.oldenburg && "Stadt Oldenburg", s.land === "Niedersachsen" && "Denkmalatlas Niedersachsen"].filter(Boolean).join(", ")}). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.`,
-          `Automatic evaluation of data services (${[s.quelle, s.oldenburg && "City of Oldenburg", s.land === "Niedersachsen" && "Lower Saxony monument atlas"].filter(Boolean).join(", ")}). Does not replace information from the building authority or the monument protection authority.`,
+          `Automatische Auswertung von Datendiensten (${quellen}). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.`,
+          `Automatic evaluation of data services (${quellen}). Does not replace information from the building authority or the monument protection authority.`,
         )}
       </div>
     </article>
@@ -471,10 +519,17 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
   const t = useT();
   if (o.standort.status !== "ok") return null;
   const s = o.standort;
-  const [bLabel, bKlasse] = bplanStatus(t)[o.bplan.status];
-  const [dLabel, dKlasse] = denkmalStatus(t)[o.denkmal.status];
+  const {
+    b: [bLabel, bKlasse],
+    d: [dLabel, dKlasse],
+  } = statusAnzeige(t, o);
   const plan = o.bplan.status === "gefunden" ? o.bplan.plaene[0] : undefined;
   const zeichnung = plan?.dokumente?.find((d) => d.art === "Planzeichnung") ?? plan?.dokumente?.[0];
+  const planLink = zeichnung
+    ? { url: zeichnung.url, text: t("Planzeichnung ↗", "Plan drawing ↗") }
+    : plan?.link
+      ? { url: plan.link, text: t("Plan öffnen ↗", "Open plan ↗") }
+      : undefined;
   const denkmale = o.denkmal.status !== "fehler" ? o.denkmal.denkmale : [];
   const naechstes = denkmale[0];
   // nur den Verlauf scrollen (nicht die ganze Seite)
@@ -487,20 +542,24 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
 
   const bText =
     o.bplan.status === "gefunden" && plan
-      ? `Nr. ${plan.nummer} – ${plan.name}${o.bplan.plaene.length > 1 ? ` (+${o.bplan.plaene.length - 1})` : ""}`
-      : o.bplan.status === "keiner"
-        ? t("kein rechtsverbindlicher Plan – § 34/35 BauGB", "no binding plan – § 34/35 BauGB")
-        : o.bplan.status === "fehler" && o.bplan.nichtAngebunden
+      ? `${plan.nummer ? `Nr. ${plan.nummer} – ` : ""}${plan.name}${o.bplan.plaene.length > 1 ? ` (+${o.bplan.plaene.length - 1})` : ""}`
+      : nurNichtVerzeichnet(o.bplan)
+        ? t("kein Plan verzeichnet, Dienst unvollständig – § 30/34/35 BauGB", "no plan listed, service incomplete – § 30/34/35 BauGB")
+        : o.bplan.status === "keiner"
+          ? t("kein rechtsverbindlicher Plan – § 34/35 BauGB", "no binding plan – § 34/35 BauGB")
+          : o.bplan.status === "fehler" && o.bplan.nichtAngebunden
           ? t("für diesen Ort nicht angebunden – § 30/34/35 BauGB", "not connected for this place – § 30/34/35 BauGB")
           : t("Dienst nicht erreichbar", "service unreachable");
   const dText =
     o.denkmal.status === "fehler"
       ? o.denkmal.nichtAngebunden
-        ? t("Denkmaldaten bisher nur für Niedersachsen", "monument data so far only for Lower Saxony")
+        ? t("für dieses Land kein Denkmal-Dienst angebunden", "no monument service connected for this state")
         : t("Dienst nicht erreichbar", "service unreachable")
       : naechstes
         ? `${naechstes.amStandort ? t("hier", "here") : `${naechstes.entfernungM} m`}: ${naechstes.name}${denkmale.length > 1 ? ` (+${denkmale.length - 1})` : ""}`
-        : t(`keins im Umkreis von ${o.denkmal.radiusM} m`, `none within ${o.denkmal.radiusM} m`);
+        : nurNichtVerzeichnet(o.denkmal)
+          ? t(`im Umkreis von ${o.denkmal.radiusM} m nicht verzeichnet, Dienst unvollständig`, `none listed within ${o.denkmal.radiusM} m, service incomplete`)
+          : t(`keins im Umkreis von ${o.denkmal.radiusM} m`, `none within ${o.denkmal.radiusM} m`);
 
   return (
     <section className="gebiet" aria-label={t("Hauptinformationen zum Gebiet", "Key facts about the area")}>
@@ -519,11 +578,11 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
         </span>
         <span className="gebiet-wert" lang="de">
           {bText}
-          {zeichnung && (
+          {planLink && (
             <>
               {" · "}
-              <a href={zeichnung.url} target="_blank" rel="noreferrer">
-                {t("Planzeichnung ↗", "Plan drawing ↗")}
+              <a href={planLink.url} target="_blank" rel="noreferrer">
+                {planLink.text}
               </a>
             </>
           )}

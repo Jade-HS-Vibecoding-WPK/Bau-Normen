@@ -1,0 +1,48 @@
+{
+ "gesetz": "bremdschg",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "eintragung": [
+   "7",
+   "3"
+  ],
+  "erhaltungspflicht": [
+   "9",
+   "12"
+  ],
+  "genehmigungspflicht": [
+   "10"
+  ],
+  "umgebungsschutz": [
+   "10",
+   "2"
+  ],
+  "erdarbeiten": [
+   "16",
+   "17"
+  ],
+  "bodenfunde": [
+   "15",
+   "18",
+   "19"
+  ],
+  "behoerden": [
+   "4",
+   "5"
+  ]
+ },
+ "schutzOhneEintragung": false,
+ "belege": {
+  "schutzOhneEintragung": {
+   "norm": "3",
+   "satz": "Aufgrund der Unterschutzstellung unterliegen sie den Schutzvorschriften dieses Gesetzes."
+  }
+ },
+ "hinweise": [
+  "Konstitutives System über die Unterschutzstellung: Die Denkmalfachbehörde stellt Kulturdenkmäler durch Bescheid unter Schutz (§ 7 Abs. 1), Ensembles ggf. durch Rechtsverordnung (§ 7 Abs. 3); die Eintragung in die Denkmalliste erfolgt danach nur nachrichtlich (§ 7 Abs. 4).",
+  "Ausnahmen: Bodendenkmäler (§ 2 Abs. 2 Nr. 4) unterliegen der Genehmigungspflicht nach § 10 bereits vor der Unterschutzstellung (§ 3 Abs. 2); vorläufiger Schutz ab Mitteilung der Einleitung des Unterschutzstellungsverfahrens (§ 8).",
+  "Umgebungsschutz: § 2 Abs. 4 (Schutz der Umgebung) und § 10 Abs. 2 (Genehmigung für Maßnahmen in der Umgebung)."
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "gesetz": "baydschg",
+ "themen": {
+  "begriffe": [
+   "1"
+  ],
+  "eintragung": [
+   "2"
+  ],
+  "erhaltungspflicht": [
+   "4",
+   "5"
+  ],
+  "genehmigungspflicht": [
+   "6",
+   "14"
+  ],
+  "umgebungsschutz": [
+   "6"
+  ],
+  "erdarbeiten": [
+   "7"
+  ],
+  "bodenfunde": [
+   "8"
+  ],
+  "behoerden": [
+   "10",
+   "11"
+  ]
+ },
+ "schutzOhneEintragung": true,
+ "belege": {
+  "schutzOhneEintragung": {
+   "norm": "2",
+   "satz": "Die Baudenkmäler und die Bodendenkmäler sollen nachrichtlich in ein Verzeichnis (Denkmalliste) aufgenommen werden."
+  }
+ },
+ "hinweise": [
+  "Einen ausdrücklichen Satz „Der Schutz ist nicht von der Eintragung abhängig“ enthält das BayDSchG nicht; es bestimmt die Denkmalliste als nachrichtlich (Art. 2 Satz 1), der Denkmalbegriff ergibt sich unmittelbar aus Art. 1.",
+  "Umgebungsschutz: Art. 6 Abs. 1 Satz 2 (Erlaubnis für Anlagen in der Nähe von Baudenkmälern)."
+ ]
+}

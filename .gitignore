@@ -20,6 +20,8 @@ data/quellen/**/*.pdf
 # die Roh-HTML-Seiten mit Verlags-Markup veröffentlichen wir nicht.
 data/quellen/ndschg/
 data/quellen/nbauo/
+# Rohdaten der Landesrechtsportale (nur der gemeinfreie Gesetzestext wird veröffentlicht, in data/gesetze/)
+data/quellen/landesrecht/
 
 # Obsidian: persönliche Arbeitsbereich-Einstellungen nicht versionieren, nur die Graph-Farben
 obsidian/.obsidian/*

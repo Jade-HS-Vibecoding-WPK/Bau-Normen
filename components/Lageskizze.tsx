@@ -3,7 +3,7 @@
 // Die Karte lässt sich zoomen (Mausrad, Knöpfe, Doppelklick, zwei Finger) und verschieben (Ziehen, Pfeiltasten).
 // Die Fähnchen steckt der Gecko der Seite: Sobald die Skizze im Bild ist, bekommt er einen Auftrag ("gecko-fahnen")
 // und läuft von Fahne zu Fahne. Ist der Gecko ausgeblendet (oder sind Animationen aus), erscheinen die Fahnen von selbst.
-// Keine amtliche Karte – die Umrisse kommen aus den Datendiensten (Stadt Oldenburg, Denkmalatlas).
+// Keine amtliche Karte – die Umrisse kommen aus den Datendiensten der Länder und Städte (lib/ort/dienste).
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import type { GeckoFahnenAuftrag } from "@/lib/gecko";
 import type { OrtAnsicht } from "@/lib/typen";
@@ -342,8 +342,8 @@ export default function Lageskizze({ o, id }: { o: OrtAnsicht; id: string }) {
           </g>
           <rect x={-BREITE} y={-HOEHE} width={BREITE * 2} height={HOEHE * 2} className="sk-schleier" />
           <g clipPath={`url(#ausschnitt-${uid})`}>
-            {plaene.map((p) => (
-              <path key={p.nummer} d={svgPfad(a, p.umriss as P[][])} className="sk-bplan" />
+            {plaene.map((p, i) => (
+              <path key={`p${i}`} d={svgPfad(a, p.umriss as P[][])} className="sk-bplan" />
             ))}
             {denkmale
               .filter((d) => d.gruppe)
@@ -360,7 +360,7 @@ export default function Lageskizze({ o, id }: { o: OrtAnsicht; id: string }) {
             <circle cx={mx} cy={my} r={radius * a.k} className="sk-umkreis" />
             {plan && planLabel && (
               <text x={bild(a, ...planLabel)[0]} y={bild(a, ...planLabel)[1]} className="sk-text sk-text-plan">
-                B-Plan {plan.nummer}
+                {plan.nummer ? `B-Plan ${plan.nummer}` : "B-Plan"}
               </text>
             )}
             {/* Fähnchen (bleiben beim Zoomen gleich groß) */}
@@ -435,7 +435,7 @@ export default function Lageskizze({ o, id }: { o: OrtAnsicht; id: string }) {
         </li>
       </ul>
       <p className="sk-hinweis">
-        {t("Lageskizze, keine amtliche Karte. Umrisse: Stadt Oldenburg, Denkmalatlas Niedersachsen. Karte:", "Sketch, not an official map. Outlines: City of Oldenburg, Lower Saxony monument atlas. Map:")}{" "}
+        {t("Lageskizze, keine amtliche Karte. Umrisse aus den genannten Datendiensten. Karte:", "Sketch, not an official map. Outlines from the data services named. Map:")}{" "}
         <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">
           © {t("OpenStreetMap-Mitwirkende", "OpenStreetMap contributors")}
         </a>

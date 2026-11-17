@@ -3,6 +3,7 @@ import { ortsAntwort } from "./ort";
 import { alsSprache, type Sprache, zweisprachig } from "./sprache";
 import type { Antwort } from "./typen";
 import { beantworte } from "./verstehen";
+import { landNamens, STANDARD_LAND } from "./laender";
 
 export interface Anfrage {
   text?: string;
@@ -10,10 +11,13 @@ export interface Anfrage {
   adresse?: { strasse?: string; hausnummer?: string; plz?: string; ort?: string };
   /** Sprache der Antworttexte (der Gesetzestext bleibt deutsch) */
   sprache?: Sprache;
+  /** gewähltes Bundesland: bestimmt, welche Landesgesetze gemeint sind ("Bauordnung", Stichworte, Suche) */
+  land?: string;
 }
 
 export async function bearbeite(anfrage: Anfrage): Promise<{ antworten: Antwort[]; status: number }> {
   const sprache = alsSprache(anfrage.sprache);
+  const land = landNamens(anfrage.land)?.name ?? STANDARD_LAND;
   const t = zweisprachig(sprache);
   if (anfrage.adresse) {
     const strasse = (anfrage.adresse.strasse ?? "").trim().slice(0, 120);
@@ -28,5 +32,5 @@ export async function bearbeite(anfrage: Anfrage): Promise<{ antworten: Antwort[
   if (!text || typeof text !== "string" || text.length > 2000) {
     return { antworten: [{ art: "fehler", text: t("Bitte eine Frage eingeben (max. 2000 Zeichen).", "Please enter a question (max. 2000 characters).") }], status: 400 };
   }
-  return { antworten: await beantworte(text, sprache), status: 200 };
+  return { antworten: await beantworte(text, sprache, land), status: 200 };
 }

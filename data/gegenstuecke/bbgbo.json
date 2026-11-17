@@ -1,0 +1,83 @@
+{
+ "gesetz": "bbgbo",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "abstandsflaechen": [
+   "6"
+  ],
+  "nicht-ueberbaute-flaechen": [
+   "8"
+  ],
+  "werbeanlagen": [
+   "10"
+  ],
+  "brandwaende": [
+   "30"
+  ],
+  "rettungswege": [
+   "33"
+  ],
+  "stellplaetze": [
+   "49"
+  ],
+  "barrierefrei": [
+   "50"
+  ],
+  "sonderbauten": [
+   "51"
+  ],
+  "bauherr": [
+   "53"
+  ],
+  "entwurfsverfasser": [
+   "54"
+  ],
+  "bauvorlageberechtigung": [
+   "65",
+   "65a",
+   "65b",
+   "65c",
+   "65d"
+  ],
+  "genehmigungspflicht": [
+   "59"
+  ],
+  "verfahrensfrei": [
+   "61"
+  ],
+  "genehmigungsfreistellung": [
+   "62"
+  ],
+  "vereinfachtes-verfahren": [
+   "63"
+  ],
+  "baugenehmigungsverfahren": [
+   "64"
+  ],
+  "abweichungen": [
+   "67"
+  ],
+  "bauantrag": [
+   "68"
+  ],
+  "baugenehmigung": [
+   "72"
+  ],
+  "vorbescheid": [
+   "75"
+  ],
+  "baulasten": [
+   "84"
+  ],
+  "oertliche-bauvorschriften": [
+   "87"
+  ]
+ },
+ "hinweise": [
+  "Statt Genehmigungsfreistellung kennt die geltende Fassung das Bauanzeigeverfahren (§ 62); laut Gesetz vom 29. Juni 2026 wird § 62 zum 1. Januar 2027 neu gefasst („Genehmigungsfreistellung“) – noch nicht eingearbeitet.",
+  "Werbeanlagen heißen „Anlagen der Außenwerbung“ (§ 10).",
+  "Verfahrensfreie Vorhaben stehen in § 61 selbst, kein Anhang."
+ ]
+}

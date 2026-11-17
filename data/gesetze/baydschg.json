@@ -1,0 +1,2247 @@
+{
+ "id": "baydschg",
+ "kurz": "BayDSchG",
+ "titel": "Gesetz zum Schutz und zur Pflege der Denkmäler",
+ "ebene": "Bayern",
+ "land": "Bayern",
+ "typ": "denkmalschutz",
+ "stand": "zuletzt durch § 4 des Gesetzes vom 23. April 2026 (GVBl. S. 190) geändert worden ist",
+ "gueltigAb": "2026-05-01",
+ "ausfertigung": "Vom 25. Juni 1973 (BayRS IV S. 354)",
+ "quelle": {
+  "name": "BAYERN.RECHT – Bayerische Staatskanzlei (www.gesetze-bayern.de)",
+  "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG",
+  "fassung": "Text gilt ab: 01.05.2026",
+  "abgerufen": "2026-11-17"
+ },
+ "normen": [
+  {
+   "id": "1",
+   "bez": "Art. 1",
+   "titel": "Begriffsbestimmungen",
+   "gliederung": [
+    "Teil 1 – Allgemeine Bestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Denkmäler sind von Menschen geschaffene Sachen oder Teile davon aus vergangener Zeit, deren Erhaltung wegen ihrer geschichtlichen, künstlerischen, städtebaulichen, wissenschaftlichen oder volkskundlichen Bedeutung im Interesse der Allgemeinheit liegt."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Baudenkmäler sind bauliche Anlagen oder Teile davon aus vergangener Zeit, soweit sie nicht unter Abs. 4 fallen, einschließlich dafür bestimmter historischer Ausstattungsstücke und mit der in Abs. 1 bezeichneten Bedeutung. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Auch bewegliche Sachen können historische Ausstattungsstücke sein, wenn sie integrale Bestandteile einer historischen Raumkonzeption oder einer ihr gleichzusetzenden historisch abgeschlossenen Neuausstattung oder Umgestaltung sind. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Gartenanlagen, die die Voraussetzungen des Abs. 1 erfüllen, gelten als Baudenkmäler."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Zu den Baudenkmälern kann auch eine Mehrheit von baulichen Anlagen (Ensemble) gehören, und zwar auch dann, wenn keine oder nur einzelne dazugehörige bauliche Anlagen die Voraussetzungen des Abs. 1 erfüllen, das Orts-, Platz- oder Straßenbild aber insgesamt erhaltenswürdig ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Bodendenkmäler sind bewegliche und unbewegliche Denkmäler einschließlich der zu ihnen gehörenden menschlichen Gebeine, tierischen und sonstigen organischen Überreste, die sich im Boden befinden oder befanden und in der Regel aus vor- oder frühgeschichtlicher Zeit stammen."
+     ]
+    }
+   ],
+   "text": "(1) Denkmäler sind von Menschen geschaffene Sachen oder Teile davon aus vergangener Zeit, deren Erhaltung wegen ihrer geschichtlichen, künstlerischen, städtebaulichen, wissenschaftlichen oder volkskundlichen Bedeutung im Interesse der Allgemeinheit liegt.\n(2) Baudenkmäler sind bauliche Anlagen oder Teile davon aus vergangener Zeit, soweit sie nicht unter Abs. 4 fallen, einschließlich dafür bestimmter historischer Ausstattungsstücke und mit der in Abs. 1 bezeichneten Bedeutung. Auch bewegliche Sachen können historische Ausstattungsstücke sein, wenn sie integrale Bestandteile einer historischen Raumkonzeption oder einer ihr gleichzusetzenden historisch abgeschlossenen Neuausstattung oder Umgestaltung sind. Gartenanlagen, die die Voraussetzungen des Abs. 1 erfüllen, gelten als Baudenkmäler.\n(3) Zu den Baudenkmälern kann auch eine Mehrheit von baulichen Anlagen (Ensemble) gehören, und zwar auch dann, wenn keine oder nur einzelne dazugehörige bauliche Anlagen die Voraussetzungen des Abs. 1 erfüllen, das Orts-, Platz- oder Straßenbild aber insgesamt erhaltenswürdig ist.\n(4) Bodendenkmäler sind bewegliche und unbewegliche Denkmäler einschließlich der zu ihnen gehörenden menschlichen Gebeine, tierischen und sonstigen organischen Überreste, die sich im Boden befinden oder befanden und in der Regel aus vor- oder frühgeschichtlicher Zeit stammen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-1",
+   "verweise": []
+  },
+  {
+   "id": "2",
+   "bez": "Art. 2",
+   "titel": "Denkmalliste",
+   "gliederung": [
+    "Teil 1 – Allgemeine Bestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die Baudenkmäler und die Bodendenkmäler sollen nachrichtlich in ein Verzeichnis (Denkmalliste) aufgenommen werden. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Das Landesamt für Denkmalpflege kennzeichnet in der Denkmalliste die Baudenkmäler, bei denen nur das Erscheinungsbild erhaltenswürdig ist, sowie die Bau- und Bodendenkmäler, für die es eine Zustimmung zu einem Denkmalpflegewerk erteilt hat. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die Eintragung erfolgt durch das Landesamt für Denkmalpflege von Amts wegen im Benehmen mit der Gemeinde. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Der Berechtigte und der zuständige Heimatpfleger können die Eintragung anregen. ",
+      {
+       "t": "sup",
+       "c": [
+        "5"
+       ]
+      },
+      "Eine Neueintragung von Baudenkmälern, bei denen nur das Erscheinungsbild erhaltenswürdig ist, erfolgt nur auf Antrag des Eigentümers oder in besonders wichtigen Fällen durch das Landesamt für Denkmalpflege im Benehmen mit der Gemeinde. ",
+      {
+       "t": "sup",
+       "c": [
+        "6"
+       ]
+      },
+      "Die Eintragung ist im Bebauungsplan kenntlich zu machen. ",
+      {
+       "t": "sup",
+       "c": [
+        "7"
+       ]
+      },
+      "Die Liste kann von jedermann eingesehen werden."
+     ]
+    }
+   ],
+   "text": "Die Baudenkmäler und die Bodendenkmäler sollen nachrichtlich in ein Verzeichnis (Denkmalliste) aufgenommen werden. Das Landesamt für Denkmalpflege kennzeichnet in der Denkmalliste die Baudenkmäler, bei denen nur das Erscheinungsbild erhaltenswürdig ist, sowie die Bau- und Bodendenkmäler, für die es eine Zustimmung zu einem Denkmalpflegewerk erteilt hat. Die Eintragung erfolgt durch das Landesamt für Denkmalpflege von Amts wegen im Benehmen mit der Gemeinde. Der Berechtigte und der zuständige Heimatpfleger können die Eintragung anregen. Eine Neueintragung von Baudenkmälern, bei denen nur das Erscheinungsbild erhaltenswürdig ist, erfolgt nur auf Antrag des Eigentümers oder in besonders wichtigen Fällen durch das Landesamt für Denkmalpflege im Benehmen mit der Gemeinde. Die Eintragung ist im Bebauungsplan kenntlich zu machen. Die Liste kann von jedermann eingesehen werden.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-2",
+   "verweise": []
+  },
+  {
+   "id": "3",
+   "bez": "Art. 3",
+   "titel": "Gemeindliche Rücksichtnahme",
+   "gliederung": [
+    "Teil 1 – Allgemeine Bestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die Gemeinden nehmen bei ihrer Tätigkeit, vor allem im Rahmen der Bauleitplanung, auf die Belange des Denkmalschutzes und der Denkmalpflege, insbesondere auf die Erhaltung von Ensembles, angemessen Rücksicht."
+     ]
+    }
+   ],
+   "text": "Die Gemeinden nehmen bei ihrer Tätigkeit, vor allem im Rahmen der Bauleitplanung, auf die Belange des Denkmalschutzes und der Denkmalpflege, insbesondere auf die Erhaltung von Ensembles, angemessen Rücksicht.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-3",
+   "verweise": []
+  },
+  {
+   "id": "4",
+   "bez": "Art. 4",
+   "titel": "Erhaltung von Baudenkmälern",
+   "gliederung": [
+    "Teil 2 – Baudenkmäler"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die Eigentümer und die sonst dinglich Verfügungsberechtigten von Baudenkmälern haben ihre Baudenkmäler instandzuhalten, instandzusetzen, sachgemäß zu behandeln und vor Gefährdung zu schützen, soweit ihnen das zuzumuten ist. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Ist der Eigentümer oder der sonst dinglich Verfügungsberechtigte nicht der unmittelbare Besitzer, so gilt Satz 1 auch für den unmittelbaren Besitzer, soweit dieser die Möglichkeit hat, entsprechend zu verfahren."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die in Abs. 1 genannten Personen können verpflichtet werden, bestimmte Erhaltungsmaßnahmen ganz oder zum Teil durchzuführen, soweit ihnen das insbesondere unter Berücksichtigung ihrer sonstigen Aufgaben und Verpflichtungen zumutbar ist; soweit sie die Maßnahmen nicht selbst durchzuführen haben, können sie zur Duldung der Maßnahmen verpflichtet werden. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Entscheidungen, durch die der Bund oder die Länder verpflichtet werden sollen, bedürfen der vorherigen Zustimmung der Obersten Denkmalschutzbehörde."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Macht der Zustand eines Baudenkmals Maßnahmen zu seiner Instandhaltung, Instandsetzung oder zu seinem Schutz erforderlich, ohne daß eine vollstreckbare Entscheidung nach Abs. 2 vorliegt, so kann die zuständige Denkmalschutzbehörde die Maßnahmen durchführen oder durchführen lassen. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die dinglich und obligatorisch Berechtigten können zur Duldung der Maßnahmen verpflichtet werden. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die Kosten der Maßnahmen tragen die in Abs. 1 genannten Personen, soweit sie nach Abs. 2 zur Durchführung der Maßnahmen verpflichtet wurden oder hätten verpflichtet werden können, im übrigen der Entschädigungsfonds."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Handlungen, die ein Baudenkmal schädigen oder gefährden, können untersagt werden."
+     ]
+    }
+   ],
+   "text": "(1) Die Eigentümer und die sonst dinglich Verfügungsberechtigten von Baudenkmälern haben ihre Baudenkmäler instandzuhalten, instandzusetzen, sachgemäß zu behandeln und vor Gefährdung zu schützen, soweit ihnen das zuzumuten ist. Ist der Eigentümer oder der sonst dinglich Verfügungsberechtigte nicht der unmittelbare Besitzer, so gilt Satz 1 auch für den unmittelbaren Besitzer, soweit dieser die Möglichkeit hat, entsprechend zu verfahren.\n(2) Die in Abs. 1 genannten Personen können verpflichtet werden, bestimmte Erhaltungsmaßnahmen ganz oder zum Teil durchzuführen, soweit ihnen das insbesondere unter Berücksichtigung ihrer sonstigen Aufgaben und Verpflichtungen zumutbar ist; soweit sie die Maßnahmen nicht selbst durchzuführen haben, können sie zur Duldung der Maßnahmen verpflichtet werden. Entscheidungen, durch die der Bund oder die Länder verpflichtet werden sollen, bedürfen der vorherigen Zustimmung der Obersten Denkmalschutzbehörde.\n(3) Macht der Zustand eines Baudenkmals Maßnahmen zu seiner Instandhaltung, Instandsetzung oder zu seinem Schutz erforderlich, ohne daß eine vollstreckbare Entscheidung nach Abs. 2 vorliegt, so kann die zuständige Denkmalschutzbehörde die Maßnahmen durchführen oder durchführen lassen. Die dinglich und obligatorisch Berechtigten können zur Duldung der Maßnahmen verpflichtet werden. Die Kosten der Maßnahmen tragen die in Abs. 1 genannten Personen, soweit sie nach Abs. 2 zur Durchführung der Maßnahmen verpflichtet wurden oder hätten verpflichtet werden können, im übrigen der Entschädigungsfonds.\n(4) Handlungen, die ein Baudenkmal schädigen oder gefährden, können untersagt werden.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-4",
+   "verweise": []
+  },
+  {
+   "id": "5",
+   "bez": "Art. 5",
+   "titel": "Nutzung von Baudenkmälern",
+   "gliederung": [
+    "Teil 2 – Baudenkmäler"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Baudenkmäler sollen möglichst entsprechend ihrer ursprünglichen Zweckbestimmung genutzt werden. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Werden Baudenkmäler nicht mehr entsprechend ihrer ursprünglichen Zweckbestimmung genutzt, so sollen die Eigentümer und die sonst dinglich oder obligatorisch zur Nutzung Berechtigten eine der ursprünglichen gleiche oder gleichwertige Nutzung anstreben. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Soweit dies nicht möglich ist, soll eine Nutzung gewählt werden, die eine möglichst weitgehende Erhaltung der Substanz auf die Dauer gewährleistet. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Sind verschiedene Nutzungen möglich, so soll diejenige Nutzung gewählt werden, die das Baudenkmal und sein Zubehör am wenigsten beeinträchtigt. ",
+      {
+       "t": "sup",
+       "c": [
+        "5"
+       ]
+      },
+      "Staat, Gemeinden und sonstige Körperschaften des öffentlichen Rechts sollen Eigentümer und Besitzer unterstützen."
+     ]
+    }
+   ],
+   "text": "Baudenkmäler sollen möglichst entsprechend ihrer ursprünglichen Zweckbestimmung genutzt werden. Werden Baudenkmäler nicht mehr entsprechend ihrer ursprünglichen Zweckbestimmung genutzt, so sollen die Eigentümer und die sonst dinglich oder obligatorisch zur Nutzung Berechtigten eine der ursprünglichen gleiche oder gleichwertige Nutzung anstreben. Soweit dies nicht möglich ist, soll eine Nutzung gewählt werden, die eine möglichst weitgehende Erhaltung der Substanz auf die Dauer gewährleistet. Sind verschiedene Nutzungen möglich, so soll diejenige Nutzung gewählt werden, die das Baudenkmal und sein Zubehör am wenigsten beeinträchtigt. Staat, Gemeinden und sonstige Körperschaften des öffentlichen Rechts sollen Eigentümer und Besitzer unterstützen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-5",
+   "verweise": []
+  },
+  {
+   "id": "6",
+   "bez": "Art. 6",
+   "titel": "Maßnahmen an Baudenkmälern",
+   "gliederung": [
+    "Teil 2 – Baudenkmäler"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Wer",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Baudenkmäler beseitigen, verändern oder an einen anderen Ort verbringen oder"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "geschützte Ausstattungsstücke beseitigen, verändern, an einen anderen Ort verbringen oder aus einem Baudenkmal entfernen"
+         ]
+        }
+       ]
+      },
+      "will, bedarf der Erlaubnis, soweit in Abs. 2 und 3 nichts anderes bestimmt ist. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Der Erlaubnis bedarf auch, wer in der Nähe von Baudenkmälern Anlagen errichten, verändern oder beseitigen will, wenn sich dies auf Bestand oder Erscheinungsbild eines der Baudenkmäler auswirken kann. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Wer ein Ensemble verändern will, bedarf der Erlaubnis nur, wenn die Veränderung eine bauliche Anlage betrifft, die für sich genommen ein Baudenkmal ist, oder wenn sie sich auf das Erscheinungsbild des Ensembles auswirken kann. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Wer ein Baudenkmal, bei dem nur das Erscheinungsbild erhaltungswürdig ist, verändern will, bedarf der Erlaubnis nur, wenn sich diese Veränderung auf den Bestand oder das Erscheinungsbild auswirken kann."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Das Landesamt für Denkmalpflege kann regelmäßig wiederkehrenden oder längerfristig vorhersehbaren Instandhaltungs- und Instandsetzungsmaßnahmen an Baudenkmälern im Rahmen einer mehrjährigen maximal zehn Jahre umfassenden Unterlage zur Pflege (Denkmalpflegewerk) im Benehmen mit der zuständigen Denkmalschutzbehörde zustimmen. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "In diesen Fällen bedarf es abweichend von Abs. 1 keiner Erlaubnis für Maßnahmen in Durchführung des Denkmalpflegewerks."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Erlaubnisfrei sind",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "an und in Baudenkmälern",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "Küchen- und Baderneuerungen, die nicht mit einem Verlust historischer Ausstattungs- und Bauelemente, einer Grundrissveränderung oder erheblichen Substanzeingriffen in Mauerwerk und Boden verbunden sind,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "temporäre Maßnahmen, die reversibel nur das Erscheinungsbild des Denkmals über einen Zeitraum von höchstens drei Monaten beeinträchtigen,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "die Beseitigung von Antennen, Satellitenschüsseln, Be- und Entlüftungsanlagen sowie von nicht in die Gebäudeaußenhülle integrierten Solarenergieanlagen, Sonnenkollektoren und ähnlichen Anlagen, sofern diese selbst kein Denkmal im Sinne des Art. 1 Abs. 1 sind;"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "in der Nähe von Baudenkmälern die Errichtung, Veränderung oder Beseitigung von",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "temporären Maßnahmen, die reversibel nur das Erscheinungsbild des Denkmals über einen Zeitraum von höchstens drei Monaten beeinträchtigen,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "Terrassenüberdachungen, wenn sie aus dem öffentlichen Raum aus nicht sichtbar sind,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "Masten, die aus Gründen des Brauchtums errichtet werden,"
+             ]
+            },
+            {
+             "dt": "d)",
+             "c": [
+              "Mauern einschließlich Stützmauern und Einfriedungen, Sichtschutzzäunen und Terrassentrennwänden mit einer Höhe bis zu 2 m mit einem Abstand von mindestens 3 m zum Baudenkmal,"
+             ]
+            },
+            {
+             "dt": "e)",
+             "c": [
+              "Anlagen, die der zweckentsprechenden Einrichtung von Spiel-, Abenteuerspiel-, Bolz- und Sportplätzen, Reit- und Wanderwegen, Trimm- und Lehrpfaden dienen, ausgenommen Gebäude und Tribünen,"
+             ]
+            },
+            {
+             "dt": "f)",
+             "c": [
+              "Anlagen, die der Gartennutzung, der Gartengestaltung oder der zweckentsprechenden Einrichtung von Gärten dienen, ausgenommen Gebäude und Einfriedungen,"
+             ]
+            },
+            {
+             "dt": "g)",
+             "c": [
+              "Außenwandbekleidungen einschließlich Maßnahmen der Wärmedämmung, Verblendungen und Verputz baulicher Anlagen ohne Änderung der Farbgebung,"
+             ]
+            },
+            {
+             "dt": "h)",
+             "c": [
+              "Bedachungen einschließlich Maßnahmen der Wärmedämmung,"
+             ]
+            },
+            {
+             "dt": "i)",
+             "c": [
+              "Werbeanlagen in Auslagen oder an Schaufenstern, im Übrigen mit einer Ansichtsfläche bis zu 1 m",
+              {
+               "t": "sup",
+               "c": [
+                "2"
+               ]
+              },
+              ","
+             ]
+            },
+            {
+             "dt": "j)",
+             "c": [
+              "Fahrgeschäften mit einer Höhe bis zu 5 m, die für Kinder betrieben werden und eine Geschwindigkeit von höchstens 1 m/s haben,"
+             ]
+            },
+            {
+             "dt": "k)",
+             "c": [
+              "Kinderspielplätzen,"
+             ]
+            },
+            {
+             "dt": "l)",
+             "c": [
+              "Freischankflächen bis zu 40 m",
+              {
+               "t": "sup",
+               "c": [
+                "2"
+               ]
+              },
+              ","
+             ]
+            },
+            {
+             "dt": "m)",
+             "c": [
+              "freistehenden Ladestationen für Elektrofahrzeuge mit einer Höhe bis zu 2 m und einer Breite und Tiefe bis zu je 0,5 m im Abstand von mindestens 3 m zum Baudenkmal,"
+             ]
+            },
+            {
+             "dt": "n)",
+             "c": [
+              "Grabdenkmalen auf Friedhöfen, Feldkreuzen, Denkmälern und sonstigen Kunstwerken jeweils mit einer Höhe bis zu 4 m, sofern diese selbst kein Denkmal im Sinne des Art. 1 Abs. 1 sind,"
+             ]
+            },
+            {
+             "dt": "o)",
+             "c": [
+              "unbedeutenden Anlagen oder unbedeutenden Teilen von Anlagen wie Hauseingangsüberdachungen, Markisen, Rollläden, Terrassen, Maschinenfundamente, Straßenfahrzeugwaagen, Pergolen, Jägerstände, Wildfütterungen, Bienenfreistände, Taubenhäuser, Hofeinfahrten und Teppichstangen;"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "in der Nähe von Baudenkmälern die Erneuerung von",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "Spenglerarbeiten wie Regenrinnen und Fallrohren, Verwahrungen an Kaminen, Gauben, Ortgängen,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "Farbanstrichen,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "Dachdeckungen,"
+             ]
+            }
+           ]
+          },
+          "die sich am vorhandenen Bestand oder einer nachweisbaren älteren Ausführung orientieren;"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "in der Nähe von Baudenkmälern die Beseitigung von baulichen Anlagen und Teilen baulicher Anlagen mit einem Abstand von mindestens 3 m zum Baudenkmal."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die Erlaubnis kann im Fall des Abs. 1 Satz 1 Nr. 1 und 2 versagt werden, soweit gewichtige Gründe des Denkmalschutzes für die unveränderte Beibehaltung des bisherigen Zustands sprechen. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Im Fall des Abs. 1 Satz 2 kann die Erlaubnis versagt werden, soweit das Vorhaben zu einer Beeinträchtigung des Wesens, des überlieferten Erscheinungsbilds oder der künstlerischen Wirkung eines Baudenkmals führen würde und gewichtige Gründe des Denkmalschutzes für die unveränderte Beibehaltung des bisherigen Zustands sprechen. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Dient die Maßnahme der Gewinnung erneuerbarer Energien überwiegend für den Energiebedarf im Baudenkmal oder zu seiner energetischen Verbesserung, kann die Erlaubnis in den Fällen des Satzes 1 oder 2 nur versagt werden, soweit überwiegende Gründe des Denkmalschutzes entgegenstehen und diesen nicht durch Nebenbestimmungen zur Art der Umsetzung Rechnung getragen werden kann."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Ist eine Baugenehmigung oder an ihrer Stelle eine bauaufsichtliche Zustimmung oder abgrabungsaufsichtliche Genehmigung erforderlich, entfällt die Erlaubnis. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Unbeschadet des Satzes 1 entfällt die Erlaubnis bei Bauvorhaben, die die Voraussetzungen des Art. 73 Abs. 1 Satz 1 der Bayerischen Bauordnung (BayBO) erfüllen und bei verfahrensfreien Bauvorhaben, die im Übrigen die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, wenn das Landesamt für Denkmalpflege dem Bauvorhaben auf Ersuchen der Baudienststelle zugestimmt hat. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Für denkmaltypische Bauprodukte, die in Baudenkmälern verwendet werden sollen, erteilt die untere Bauaufsichtsbehörde die Zustimmung im Einzelfall nach Art. 20 BayBO. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Werden denkmaltypische Bauprodukte bei Bauvorhaben verwendet, die die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, oder in verfahrensfreien Bauvorhaben, die im Übrigen die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, entscheidet die höhere Bauaufsichtsbehörde."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Bei Entscheidungen nach den Abs. 1, 4 und 5 sind auch die Belange von Menschen mit Behinderung und von Menschen mit sonstigen Mobilitätsbeeinträchtigungen zu berücksichtigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Abweichend von Abs. 1 Satz 2 bedarf die Errichtung, Veränderung oder Beseitigung von Windenergieanlagen nur in der Nähe von besonders landschaftsprägenden Baudenkmälern der Erlaubnis. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die Erlaubnis ist zu versagen, soweit das Vorhaben zu einer Beeinträchtigung des Wesens, des überlieferten Erscheinungsbilds oder der künstlerischen Wirkung des besonders landschaftsprägenden Baudenkmals führen würde und gewichtige Gründe des Denkmalschutzes für die unveränderte Beibehaltung des bisherigen Zustands sprechen."
+     ]
+    }
+   ],
+   "text": "(1) Wer\n1. Baudenkmäler beseitigen, verändern oder an einen anderen Ort verbringen oder\n2. geschützte Ausstattungsstücke beseitigen, verändern, an einen anderen Ort verbringen oder aus einem Baudenkmal entfernen\nwill, bedarf der Erlaubnis, soweit in Abs. 2 und 3 nichts anderes bestimmt ist. Der Erlaubnis bedarf auch, wer in der Nähe von Baudenkmälern Anlagen errichten, verändern oder beseitigen will, wenn sich dies auf Bestand oder Erscheinungsbild eines der Baudenkmäler auswirken kann. Wer ein Ensemble verändern will, bedarf der Erlaubnis nur, wenn die Veränderung eine bauliche Anlage betrifft, die für sich genommen ein Baudenkmal ist, oder wenn sie sich auf das Erscheinungsbild des Ensembles auswirken kann. Wer ein Baudenkmal, bei dem nur das Erscheinungsbild erhaltungswürdig ist, verändern will, bedarf der Erlaubnis nur, wenn sich diese Veränderung auf den Bestand oder das Erscheinungsbild auswirken kann.\n(2) Das Landesamt für Denkmalpflege kann regelmäßig wiederkehrenden oder längerfristig vorhersehbaren Instandhaltungs- und Instandsetzungsmaßnahmen an Baudenkmälern im Rahmen einer mehrjährigen maximal zehn Jahre umfassenden Unterlage zur Pflege (Denkmalpflegewerk) im Benehmen mit der zuständigen Denkmalschutzbehörde zustimmen. In diesen Fällen bedarf es abweichend von Abs. 1 keiner Erlaubnis für Maßnahmen in Durchführung des Denkmalpflegewerks.\n(3) Erlaubnisfrei sind\n1. an und in Baudenkmälern\na) Küchen- und Baderneuerungen, die nicht mit einem Verlust historischer Ausstattungs- und Bauelemente, einer Grundrissveränderung oder erheblichen Substanzeingriffen in Mauerwerk und Boden verbunden sind,\nb) temporäre Maßnahmen, die reversibel nur das Erscheinungsbild des Denkmals über einen Zeitraum von höchstens drei Monaten beeinträchtigen,\nc) die Beseitigung von Antennen, Satellitenschüsseln, Be- und Entlüftungsanlagen sowie von nicht in die Gebäudeaußenhülle integrierten Solarenergieanlagen, Sonnenkollektoren und ähnlichen Anlagen, sofern diese selbst kein Denkmal im Sinne des Art. 1 Abs. 1 sind;\n2. in der Nähe von Baudenkmälern die Errichtung, Veränderung oder Beseitigung von\na) temporären Maßnahmen, die reversibel nur das Erscheinungsbild des Denkmals über einen Zeitraum von höchstens drei Monaten beeinträchtigen,\nb) Terrassenüberdachungen, wenn sie aus dem öffentlichen Raum aus nicht sichtbar sind,\nc) Masten, die aus Gründen des Brauchtums errichtet werden,\nd) Mauern einschließlich Stützmauern und Einfriedungen, Sichtschutzzäunen und Terrassentrennwänden mit einer Höhe bis zu 2 m mit einem Abstand von mindestens 3 m zum Baudenkmal,\ne) Anlagen, die der zweckentsprechenden Einrichtung von Spiel-, Abenteuerspiel-, Bolz- und Sportplätzen, Reit- und Wanderwegen, Trimm- und Lehrpfaden dienen, ausgenommen Gebäude und Tribünen,\nf) Anlagen, die der Gartennutzung, der Gartengestaltung oder der zweckentsprechenden Einrichtung von Gärten dienen, ausgenommen Gebäude und Einfriedungen,\ng) Außenwandbekleidungen einschließlich Maßnahmen der Wärmedämmung, Verblendungen und Verputz baulicher Anlagen ohne Änderung der Farbgebung,\nh) Bedachungen einschließlich Maßnahmen der Wärmedämmung,\ni) Werbeanlagen in Auslagen oder an Schaufenstern, im Übrigen mit einer Ansichtsfläche bis zu 1 m²,\nj) Fahrgeschäften mit einer Höhe bis zu 5 m, die für Kinder betrieben werden und eine Geschwindigkeit von höchstens 1 m/s haben,\nk) Kinderspielplätzen,\nl) Freischankflächen bis zu 40 m²,\nm) freistehenden Ladestationen für Elektrofahrzeuge mit einer Höhe bis zu 2 m und einer Breite und Tiefe bis zu je 0,5 m im Abstand von mindestens 3 m zum Baudenkmal,\nn) Grabdenkmalen auf Friedhöfen, Feldkreuzen, Denkmälern und sonstigen Kunstwerken jeweils mit einer Höhe bis zu 4 m, sofern diese selbst kein Denkmal im Sinne des Art. 1 Abs. 1 sind,\no) unbedeutenden Anlagen oder unbedeutenden Teilen von Anlagen wie Hauseingangsüberdachungen, Markisen, Rollläden, Terrassen, Maschinenfundamente, Straßenfahrzeugwaagen, Pergolen, Jägerstände, Wildfütterungen, Bienenfreistände, Taubenhäuser, Hofeinfahrten und Teppichstangen;\n3. in der Nähe von Baudenkmälern die Erneuerung von\na) Spenglerarbeiten wie Regenrinnen und Fallrohren, Verwahrungen an Kaminen, Gauben, Ortgängen,\nb) Farbanstrichen,\nc) Dachdeckungen,\ndie sich am vorhandenen Bestand oder einer nachweisbaren älteren Ausführung orientieren;\n4. in der Nähe von Baudenkmälern die Beseitigung von baulichen Anlagen und Teilen baulicher Anlagen mit einem Abstand von mindestens 3 m zum Baudenkmal.\n(4) Die Erlaubnis kann im Fall des Abs. 1 Satz 1 Nr. 1 und 2 versagt werden, soweit gewichtige Gründe des Denkmalschutzes für die unveränderte Beibehaltung des bisherigen Zustands sprechen. Im Fall des Abs. 1 Satz 2 kann die Erlaubnis versagt werden, soweit das Vorhaben zu einer Beeinträchtigung des Wesens, des überlieferten Erscheinungsbilds oder der künstlerischen Wirkung eines Baudenkmals führen würde und gewichtige Gründe des Denkmalschutzes für die unveränderte Beibehaltung des bisherigen Zustands sprechen. Dient die Maßnahme der Gewinnung erneuerbarer Energien überwiegend für den Energiebedarf im Baudenkmal oder zu seiner energetischen Verbesserung, kann die Erlaubnis in den Fällen des Satzes 1 oder 2 nur versagt werden, soweit überwiegende Gründe des Denkmalschutzes entgegenstehen und diesen nicht durch Nebenbestimmungen zur Art der Umsetzung Rechnung getragen werden kann.\n(5) Ist eine Baugenehmigung oder an ihrer Stelle eine bauaufsichtliche Zustimmung oder abgrabungsaufsichtliche Genehmigung erforderlich, entfällt die Erlaubnis. Unbeschadet des Satzes 1 entfällt die Erlaubnis bei Bauvorhaben, die die Voraussetzungen des Art. 73 Abs. 1 Satz 1 der Bayerischen Bauordnung (BayBO) erfüllen und bei verfahrensfreien Bauvorhaben, die im Übrigen die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, wenn das Landesamt für Denkmalpflege dem Bauvorhaben auf Ersuchen der Baudienststelle zugestimmt hat. Für denkmaltypische Bauprodukte, die in Baudenkmälern verwendet werden sollen, erteilt die untere Bauaufsichtsbehörde die Zustimmung im Einzelfall nach Art. 20 BayBO. Werden denkmaltypische Bauprodukte bei Bauvorhaben verwendet, die die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, oder in verfahrensfreien Bauvorhaben, die im Übrigen die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, entscheidet die höhere Bauaufsichtsbehörde.\n(6) Bei Entscheidungen nach den Abs. 1, 4 und 5 sind auch die Belange von Menschen mit Behinderung und von Menschen mit sonstigen Mobilitätsbeeinträchtigungen zu berücksichtigen.\n(7) Abweichend von Abs. 1 Satz 2 bedarf die Errichtung, Veränderung oder Beseitigung von Windenergieanlagen nur in der Nähe von besonders landschaftsprägenden Baudenkmälern der Erlaubnis. Die Erlaubnis ist zu versagen, soweit das Vorhaben zu einer Beeinträchtigung des Wesens, des überlieferten Erscheinungsbilds oder der künstlerischen Wirkung des besonders landschaftsprägenden Baudenkmals führen würde und gewichtige Gründe des Denkmalschutzes für die unveränderte Beibehaltung des bisherigen Zustands sprechen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-6",
+   "verweise": [
+    "1"
+   ]
+  },
+  {
+   "id": "7",
+   "bez": "Art. 7",
+   "titel": "Ausgraben von Bodendenkmälern",
+   "gliederung": [
+    "Teil 3 – Bodendenkmäler"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Wer auf einem Grundstück nach Bodendenkmälern graben oder zu einem anderen Zweck Erdarbeiten auf einem Grundstück vornehmen will, obwohl er weiß oder vermutet oder den Umständen nach annehmen muß, daß sich dort Bodendenkmäler befinden, bedarf der Erlaubnis. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Er hat die Kosten für die vorherige wissenschaftliche Untersuchung, die Bergung von Funden und die Dokumentation der Befunde zu tragen, soweit ihm das zuzumuten ist. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die Erlaubnis kann versagt werden, soweit dies zum Schutz eines Bodendenkmals erforderlich ist. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Art. 6 Abs. 5 Satz 2 gilt entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Art. 6 Abs. 2 gilt entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Erlaubnisfrei sind",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "das Verlegen, Erneuern und Entfernen folgender Anlagen:",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "Hauseinführungen bei Wasser- und Abwasserleitungen, Stromleitungen, Gasversorgungs- und Fernwärmeleitungen,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "Netzverteiler für Medien- und Kabelverteiler für Niederspannungsleitungen,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "Medien- und Niederspannungsleitungen bei grabenloser Verlegung im Oberboden;"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "das Verlegen, Erneuern und Entfernen folgender Leitungen:",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "Medien-, Wasser-, Abwasser-, Strom-, Wasserstoff- und Gasversorgungsleitungen einschließlich Leerrohren und Hausanschlüssen vollständig in bestehenden Leitungsgräben,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "Medien- und Niederspannungsstromleitungen im Schlitzverfahren,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "Medien- und Niederspannungsleitungen in Straßen, Gehwegen sowie befestigten Wegen im bestehenden Straßenkörper mit einer Mindertiefe,"
+             ]
+            },
+            {
+             "dt": "d)",
+             "c": [
+              "Start- und Zielgruben innerhalb des Oberbodens für die grabenlose Verlegung von Medien- und Niederspannungsleitungen."
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Abs. 1 gilt nicht für Grabungen, die vom Landesamt für Denkmalpflege oder unter seiner Mitwirkung vorgenommen oder veranlaßt werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Wer in der Nähe von Bodendenkmälern, die ganz oder zum Teil über der Erdoberfläche erkennbar sind, Anlagen errichten, verändern oder beseitigen will, bedarf der Erlaubnis, wenn sich dies auf Bestand oder Erscheinungsbild eines dieser Bodendenkmäler auswirken kann. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Abs. 1 Satz 2 und Art. 6 Abs. 4 Satz 2 sowie Art. 6 Abs. 5 gelten entsprechend. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Abweichend von Satz 1 bedarf die Errichtung, Veränderung oder Beseitigung von Windenergieanlagen der Erlaubnis",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "in der Nähe von besonders landschaftsprägenden Bodendenkmälern oder"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "wenn sie sich auf den Bestand eines Bodendenkmals auswirken kann."
+         ]
+        }
+       ]
+      },
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "In den Fällen des Satzes 3 Nr. 1 gilt Art. 6 Abs. 5 Satz 2 entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Soll eine Grabung auf einem fremden Grundstück erfolgen, so kann der Eigentümer verpflichtet werden, die Grabung zuzulassen, wenn das Landesamt für Denkmalpflege festgestellt hat, daß ein besonderes öffentliches Interesse an der Grabung besteht. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Der Inhaber der Grabungsgenehmigung hat den dem Eigentümer entstehenden Schaden zu ersetzen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Auf in der Denkmalliste nach Art. 2 Abs. 1 verzeichneten Bodendenkmälern ist der Einsatz technischer Ortungsgeräte, die geeignet sind, Denkmäler im Erdreich aufzufinden, verboten. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Eine Erlaubnis kann nur für berechtigte berufliche Zwecke erteilt werden. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Abs. 1 Satz 3 und Abs. 4 gelten entsprechend."
+     ]
+    }
+   ],
+   "text": "(1) Wer auf einem Grundstück nach Bodendenkmälern graben oder zu einem anderen Zweck Erdarbeiten auf einem Grundstück vornehmen will, obwohl er weiß oder vermutet oder den Umständen nach annehmen muß, daß sich dort Bodendenkmäler befinden, bedarf der Erlaubnis. Er hat die Kosten für die vorherige wissenschaftliche Untersuchung, die Bergung von Funden und die Dokumentation der Befunde zu tragen, soweit ihm das zuzumuten ist. Die Erlaubnis kann versagt werden, soweit dies zum Schutz eines Bodendenkmals erforderlich ist. Art. 6 Abs. 5 Satz 2 gilt entsprechend.\n(2) Art. 6 Abs. 2 gilt entsprechend.\n(3) Erlaubnisfrei sind\n1. das Verlegen, Erneuern und Entfernen folgender Anlagen:\na) Hauseinführungen bei Wasser- und Abwasserleitungen, Stromleitungen, Gasversorgungs- und Fernwärmeleitungen,\nb) Netzverteiler für Medien- und Kabelverteiler für Niederspannungsleitungen,\nc) Medien- und Niederspannungsleitungen bei grabenloser Verlegung im Oberboden;\n2. das Verlegen, Erneuern und Entfernen folgender Leitungen:\na) Medien-, Wasser-, Abwasser-, Strom-, Wasserstoff- und Gasversorgungsleitungen einschließlich Leerrohren und Hausanschlüssen vollständig in bestehenden Leitungsgräben,\nb) Medien- und Niederspannungsstromleitungen im Schlitzverfahren,\nc) Medien- und Niederspannungsleitungen in Straßen, Gehwegen sowie befestigten Wegen im bestehenden Straßenkörper mit einer Mindertiefe,\nd) Start- und Zielgruben innerhalb des Oberbodens für die grabenlose Verlegung von Medien- und Niederspannungsleitungen.\n(4) Abs. 1 gilt nicht für Grabungen, die vom Landesamt für Denkmalpflege oder unter seiner Mitwirkung vorgenommen oder veranlaßt werden.\n(5) Wer in der Nähe von Bodendenkmälern, die ganz oder zum Teil über der Erdoberfläche erkennbar sind, Anlagen errichten, verändern oder beseitigen will, bedarf der Erlaubnis, wenn sich dies auf Bestand oder Erscheinungsbild eines dieser Bodendenkmäler auswirken kann. Abs. 1 Satz 2 und Art. 6 Abs. 4 Satz 2 sowie Art. 6 Abs. 5 gelten entsprechend. Abweichend von Satz 1 bedarf die Errichtung, Veränderung oder Beseitigung von Windenergieanlagen der Erlaubnis\n1. in der Nähe von besonders landschaftsprägenden Bodendenkmälern oder\n2. wenn sie sich auf den Bestand eines Bodendenkmals auswirken kann.\nIn den Fällen des Satzes 3 Nr. 1 gilt Art. 6 Abs. 5 Satz 2 entsprechend.\n(6) Soll eine Grabung auf einem fremden Grundstück erfolgen, so kann der Eigentümer verpflichtet werden, die Grabung zuzulassen, wenn das Landesamt für Denkmalpflege festgestellt hat, daß ein besonderes öffentliches Interesse an der Grabung besteht. Der Inhaber der Grabungsgenehmigung hat den dem Eigentümer entstehenden Schaden zu ersetzen.\n(7) Auf in der Denkmalliste nach Art. 2 Abs. 1 verzeichneten Bodendenkmälern ist der Einsatz technischer Ortungsgeräte, die geeignet sind, Denkmäler im Erdreich aufzufinden, verboten. Eine Erlaubnis kann nur für berechtigte berufliche Zwecke erteilt werden. Abs. 1 Satz 3 und Abs. 4 gelten entsprechend.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-7",
+   "verweise": [
+    "6",
+    "2"
+   ]
+  },
+  {
+   "id": "8",
+   "bez": "Art. 8",
+   "titel": "Auffinden von Bodendenkmälern",
+   "gliederung": [
+    "Teil 3 – Bodendenkmäler"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Wer Bodendenkmäler auffindet, ist verpflichtet, dies unverzüglich der Unteren Denkmalschutzbehörde oder dem Landesamt für Denkmalpflege anzuzeigen. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Zur Anzeige verpflichtet sind auch der Eigentümer und der Besitzer des Grundstücks sowie der Unternehmer und der Leiter der Arbeiten, die zu dem Fund geführt haben. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die Anzeige eines der Verpflichteten befreit die übrigen. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Nimmt der Finder an den Arbeiten, die zu dem Fund geführt haben, auf Grund eines Arbeitsverhältnisses teil, so wird er durch Anzeige an den Unternehmer oder den Leiter der Arbeiten befreit."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die aufgefundenen Gegenstände und der Fundort sind bis zum Ablauf von einer Woche nach der Anzeige unverändert zu belassen, wenn nicht die Untere Denkmalschutzbehörde die Gegenstände vorher freigibt oder die Fortsetzung der Arbeiten gestattet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die Abs. 1 und 2 gelten nicht bei Arbeiten, die vom Landesamt für Denkmalpflege oder unter seiner Mitwirkung vorgenommen oder veranlaßt werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Eigentümer, dinglich Verfügungsberechtigte und unmittelbare Besitzer eines Grundstücks, auf dem Bodendenkmäler gefunden werden, können verpflichtet werden, die notwendigen Maßnahmen zur sachgemäßen Bergung des Fundgegenstands sowie zur Klärung der Fundumstände und zur Sicherung weiterer auf dem Grundstück vorhandener Bodendenkmäler zu dulden."
+     ]
+    }
+   ],
+   "text": "(1) Wer Bodendenkmäler auffindet, ist verpflichtet, dies unverzüglich der Unteren Denkmalschutzbehörde oder dem Landesamt für Denkmalpflege anzuzeigen. Zur Anzeige verpflichtet sind auch der Eigentümer und der Besitzer des Grundstücks sowie der Unternehmer und der Leiter der Arbeiten, die zu dem Fund geführt haben. Die Anzeige eines der Verpflichteten befreit die übrigen. Nimmt der Finder an den Arbeiten, die zu dem Fund geführt haben, auf Grund eines Arbeitsverhältnisses teil, so wird er durch Anzeige an den Unternehmer oder den Leiter der Arbeiten befreit.\n(2) Die aufgefundenen Gegenstände und der Fundort sind bis zum Ablauf von einer Woche nach der Anzeige unverändert zu belassen, wenn nicht die Untere Denkmalschutzbehörde die Gegenstände vorher freigibt oder die Fortsetzung der Arbeiten gestattet.\n(3) Die Abs. 1 und 2 gelten nicht bei Arbeiten, die vom Landesamt für Denkmalpflege oder unter seiner Mitwirkung vorgenommen oder veranlaßt werden.\n(4) Eigentümer, dinglich Verfügungsberechtigte und unmittelbare Besitzer eines Grundstücks, auf dem Bodendenkmäler gefunden werden, können verpflichtet werden, die notwendigen Maßnahmen zur sachgemäßen Bergung des Fundgegenstands sowie zur Klärung der Fundumstände und zur Sicherung weiterer auf dem Grundstück vorhandener Bodendenkmäler zu dulden.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-8",
+   "verweise": []
+  },
+  {
+   "id": "9",
+   "bez": "Art. 9",
+   "titel": "Schatzregal",
+   "gliederung": [
+    "Teil 3 – Bodendenkmäler"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Bewegliche Bodendenkmäler oder Teile davon, die herrenlos oder so lange verborgen gewesen sind, dass ihr Eigentümer nicht mehr zu ermitteln ist, werden unabhängig von einer Eintragung nach Art. 2 Abs. 1 mit der Entdeckung Eigentum des Freistaates Bayern. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Sie sind unverzüglich dem Landesamt für Denkmalpflege zu übergeben."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Eigentümer des Grundstücks, auf dem das Bodendenkmal entdeckt wurde, hat gegen den Freistaat Bayern einen Anspruch auf Ausgleich. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Für Funde auf der Grundstücksgrenze gilt § 432 des Bürgerlichen Gesetzbuches (BGB). ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die Sätze 1 und 2 gelten nicht für Objekte, deren",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Verkehrswert weniger als 1000 € beträgt oder"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "deren Fund oder Bergung unter Verstoß gegen gesetzliche Bestimmungen erfolgte."
+         ]
+        }
+       ]
+      },
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Die Höhe des Ausgleichs bemisst sich nach dem Verkehrswert des restaurierten Objekts abzüglich des Aufwands für eine fachgerechte Restaurierung und Konservierung. ",
+      {
+       "t": "sup",
+       "c": [
+        "5"
+       ]
+      },
+      "Die Belohnung nach Abs. 3 ist zum Abzug zu bringen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Entdecker, der nicht zugleich Grundstückseigentümer ist, hat gegen den Freistaat Bayern einen Anspruch auf Belohnung nach § 971 BGB. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Abs. 2 Satz 3 gilt entsprechend. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Für die Wertberechnung im Rahmen des § 971 Abs. 1 Satz 2 BGB gilt Abs. 2 Satz 4."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Anspruch auf Ausgleich oder Belohnung entsteht 24 Monate nach der Übergabe an das Landesamt für Denkmalpflege. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Er entfällt, wenn das Objekt an die nach § 984 BGB Berechtigten zurückgegeben und diesen je zur Hälfte das Eigentum an dem Objekt übertragen wird."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Das Eigentum soll vom Freistaat Bayern auf Antrag der Gemeinde des Fundorts übertragen werden, wenn die fachgerechte Archivierung und Lagerung der gesamten Funde einer Grabung durch eine fachlich besetzte Einrichtung gewährleistet wird. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "In diesem Fall bestehen keine Ansprüche der Gemeinde nach den Abs. 2 und 3."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Für Entdeckungen vor dem 1. Juli 2023 sind die Vorschriften des Bayerischen Denkmalschutzgesetzes in der am 30. Juni 2023 geltenden Fassung anzuwenden."
+     ]
+    }
+   ],
+   "text": "(1) Bewegliche Bodendenkmäler oder Teile davon, die herrenlos oder so lange verborgen gewesen sind, dass ihr Eigentümer nicht mehr zu ermitteln ist, werden unabhängig von einer Eintragung nach Art. 2 Abs. 1 mit der Entdeckung Eigentum des Freistaates Bayern. Sie sind unverzüglich dem Landesamt für Denkmalpflege zu übergeben.\n(2) Der Eigentümer des Grundstücks, auf dem das Bodendenkmal entdeckt wurde, hat gegen den Freistaat Bayern einen Anspruch auf Ausgleich. Für Funde auf der Grundstücksgrenze gilt § 432 des Bürgerlichen Gesetzbuches (BGB). Die Sätze 1 und 2 gelten nicht für Objekte, deren\n1. Verkehrswert weniger als 1000 € beträgt oder\n2. deren Fund oder Bergung unter Verstoß gegen gesetzliche Bestimmungen erfolgte.\nDie Höhe des Ausgleichs bemisst sich nach dem Verkehrswert des restaurierten Objekts abzüglich des Aufwands für eine fachgerechte Restaurierung und Konservierung. Die Belohnung nach Abs. 3 ist zum Abzug zu bringen.\n(3) Der Entdecker, der nicht zugleich Grundstückseigentümer ist, hat gegen den Freistaat Bayern einen Anspruch auf Belohnung nach § 971 BGB. Abs. 2 Satz 3 gilt entsprechend. Für die Wertberechnung im Rahmen des § 971 Abs. 1 Satz 2 BGB gilt Abs. 2 Satz 4.\n(4) Der Anspruch auf Ausgleich oder Belohnung entsteht 24 Monate nach der Übergabe an das Landesamt für Denkmalpflege. Er entfällt, wenn das Objekt an die nach § 984 BGB Berechtigten zurückgegeben und diesen je zur Hälfte das Eigentum an dem Objekt übertragen wird.\n(5) Das Eigentum soll vom Freistaat Bayern auf Antrag der Gemeinde des Fundorts übertragen werden, wenn die fachgerechte Archivierung und Lagerung der gesamten Funde einer Grabung durch eine fachlich besetzte Einrichtung gewährleistet wird. In diesem Fall bestehen keine Ansprüche der Gemeinde nach den Abs. 2 und 3.\n(6) Für Entdeckungen vor dem 1. Juli 2023 sind die Vorschriften des Bayerischen Denkmalschutzgesetzes in der am 30. Juni 2023 geltenden Fassung anzuwenden.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-9",
+   "verweise": [
+    "2"
+   ]
+  },
+  {
+   "id": "10",
+   "bez": "Art. 10",
+   "titel": "Denkmalschutzbehörden",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Untere Denkmalschutzbehörden sind die Kreisverwaltungsbehörden. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Soweit kreisangehörigen Gemeinden die Aufgaben der Unteren Bauaufsichtsbehörden übertragen sind oder übertragen werden, gilt diese Übertragung auch für die Aufgaben der Unteren Denkmalschutzbehörden. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Art. 115 Abs. 2 der Gemeindeordnung gilt entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Höhere Denkmalschutzbehörden sind die Regierungen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Oberste Denkmalschutzbehörde ist das Staatsministerium für Wissenschaft und Kunst (Staatsministerium)."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Soweit nichts anderes bestimmt ist, sind die Unteren Denkmalschutzbehörden für den Vollzug dieses Gesetzes zuständig. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Bei Bauvorhaben, die die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen und bei verfahrensfreien Bauvorhaben, die im Übrigen die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, treten die Höheren an die Stelle der Unteren Denkmalschutzbehörden. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Satz 2 gilt auch für Entscheidungen nach Art. 7."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Die Aufgaben der Denkmalschutzbehörden sind Staatsaufgaben; für die Gemeinden sind sie übertragene Aufgaben."
+     ]
+    }
+   ],
+   "text": "(1) Untere Denkmalschutzbehörden sind die Kreisverwaltungsbehörden. Soweit kreisangehörigen Gemeinden die Aufgaben der Unteren Bauaufsichtsbehörden übertragen sind oder übertragen werden, gilt diese Übertragung auch für die Aufgaben der Unteren Denkmalschutzbehörden. Art. 115 Abs. 2 der Gemeindeordnung gilt entsprechend.\n(2) Höhere Denkmalschutzbehörden sind die Regierungen.\n(3) Oberste Denkmalschutzbehörde ist das Staatsministerium für Wissenschaft und Kunst (Staatsministerium).\n(4) Soweit nichts anderes bestimmt ist, sind die Unteren Denkmalschutzbehörden für den Vollzug dieses Gesetzes zuständig. Bei Bauvorhaben, die die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen und bei verfahrensfreien Bauvorhaben, die im Übrigen die Voraussetzungen des Art. 73 Abs. 1 Satz 1 BayBO erfüllen, treten die Höheren an die Stelle der Unteren Denkmalschutzbehörden. Satz 2 gilt auch für Entscheidungen nach Art. 7.\n(5) Die Aufgaben der Denkmalschutzbehörden sind Staatsaufgaben; für die Gemeinden sind sie übertragene Aufgaben.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-10",
+   "verweise": []
+  },
+  {
+   "id": "11",
+   "bez": "Art. 11",
+   "titel": "Landesamt für Denkmalpflege",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Das Landesamt für Denkmalpflege ist die staatliche Fachbehörde für alle Fragen des Denkmalschutzes und der Denkmalpflege. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Es ist dem Staatsministerium unmittelbar nachgeordnet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Dem Landesamt für Denkmalpflege obliegen die Denkmalpflege und die Mitwirkung beim Denkmalschutz. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die Denkmalpflege umfasst auch die Erforschung der Denkmäler, soweit solche Vorhaben mit den sonstigen Aufgaben des Landesamts für Denkmalpflege in unmittelbarem Zusammenhang stehen und mit diesen vereinbar sind. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Insbesondere hat es folgende Aufgaben:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Mitwirkung beim Vollzug dieses Gesetzes und anderer einschlägiger Vorschriften nach Maßgabe der hierzu ergangenen und ergehenden Bestimmungen;"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "Herausgabe von Richtlinien zur Pflege der Denkmäler unter Beteiligung der kommunalen Spitzenverbände;"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "Erstellung und Fortführung der Inventare und der Denkmalliste;"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "Konservierung und Restaurierung von Denkmälern, soweit die Konservierung und die Restaurierung nicht von anderen dafür zuständigen staatlichen Stellen durchgeführt werden;"
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "fachliche Beratung und Erstattung von Gutachten in allen Angelegenheiten des Denkmalschutzes und der Denkmalpflege;"
+         ]
+        },
+        {
+         "dt": "6.",
+         "c": [
+          "Überwachung der Ausgrabungen sowie die Überwachung und Erfassung der anfallenden beweglichen Bodendenkmäler;"
+         ]
+        },
+        {
+         "dt": "7.",
+         "c": [
+          "Fürsorge für Heimatmuseen und ähnliche Sammlungen, soweit diese nicht vom Staat verwaltet werden."
+         ]
+        }
+       ]
+      },
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Das Staatsministerium kann dem Landesamt für Denkmalpflege weitere einschlägige Aufgaben zuweisen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Die bisherigen Aufgaben der Bayerischen Verwaltung der staatlichen Schlösser, Gärten und Seen bleiben unberührt."
+     ]
+    }
+   ],
+   "text": "(1) Das Landesamt für Denkmalpflege ist die staatliche Fachbehörde für alle Fragen des Denkmalschutzes und der Denkmalpflege. Es ist dem Staatsministerium unmittelbar nachgeordnet.\n(2) Dem Landesamt für Denkmalpflege obliegen die Denkmalpflege und die Mitwirkung beim Denkmalschutz. Die Denkmalpflege umfasst auch die Erforschung der Denkmäler, soweit solche Vorhaben mit den sonstigen Aufgaben des Landesamts für Denkmalpflege in unmittelbarem Zusammenhang stehen und mit diesen vereinbar sind. Insbesondere hat es folgende Aufgaben:\n1. Mitwirkung beim Vollzug dieses Gesetzes und anderer einschlägiger Vorschriften nach Maßgabe der hierzu ergangenen und ergehenden Bestimmungen;\n2. Herausgabe von Richtlinien zur Pflege der Denkmäler unter Beteiligung der kommunalen Spitzenverbände;\n3. Erstellung und Fortführung der Inventare und der Denkmalliste;\n4. Konservierung und Restaurierung von Denkmälern, soweit die Konservierung und die Restaurierung nicht von anderen dafür zuständigen staatlichen Stellen durchgeführt werden;\n5. fachliche Beratung und Erstattung von Gutachten in allen Angelegenheiten des Denkmalschutzes und der Denkmalpflege;\n6. Überwachung der Ausgrabungen sowie die Überwachung und Erfassung der anfallenden beweglichen Bodendenkmäler;\n7. Fürsorge für Heimatmuseen und ähnliche Sammlungen, soweit diese nicht vom Staat verwaltet werden.\nDas Staatsministerium kann dem Landesamt für Denkmalpflege weitere einschlägige Aufgaben zuweisen.\n(3) Die bisherigen Aufgaben der Bayerischen Verwaltung der staatlichen Schlösser, Gärten und Seen bleiben unberührt.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-11",
+   "verweise": []
+  },
+  {
+   "id": "12",
+   "bez": "Art. 12",
+   "titel": "Heimatpfleger",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die Heimatpfleger beraten und unterstützen die Denkmalschutzbehörden und das Landesamt für Denkmalpflege in den Fragen der Denkmalpflege und des Denkmalschutzes. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Ihnen ist durch die Denkmalschutzbehörden in den ihren Aufgabenbereich betreffenden Fällen rechtzeitig Gelegenheit zur Äußerung zu geben."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Denkmalschutzbehörden und das Landesamt für Denkmalpflege sollen sich in geeigneten Fällen der Unterstützung kommunaler Stellen sowie privater Initiativen bedienen."
+     ]
+    }
+   ],
+   "text": "(1) Die Heimatpfleger beraten und unterstützen die Denkmalschutzbehörden und das Landesamt für Denkmalpflege in den Fragen der Denkmalpflege und des Denkmalschutzes. Ihnen ist durch die Denkmalschutzbehörden in den ihren Aufgabenbereich betreffenden Fällen rechtzeitig Gelegenheit zur Äußerung zu geben.\n(2) Die Denkmalschutzbehörden und das Landesamt für Denkmalpflege sollen sich in geeigneten Fällen der Unterstützung kommunaler Stellen sowie privater Initiativen bedienen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-12",
+   "verweise": []
+  },
+  {
+   "id": "13",
+   "bez": "Art. 13",
+   "titel": "Landesdenkmalrat",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Landesdenkmalrat berät die Staatsregierung in allen wichtigen Fragen der Denkmalpflege. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Er wirkt an der Festlegung von Ensembles mit."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "In den Landesdenkmalrat werden folgende Mitglieder jeweils für die Dauer der Legislaturperiode entsandt:",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "sechs von den Fraktionen des Bayerischen Landtags gemäß ihren Besetzungsrechten nach dem Verfahren Sainte-Laguë/Schepers,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "je zwei von der Katholischen Kirche und der Evangelisch-Lutherischen Landeskirche,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "je eines",
+          {
+           "t": "dl",
+           "items": [
+            {
+             "dt": "a)",
+             "c": [
+              "von den israelitischen Kultusgemeinden in Bayern,"
+             ]
+            },
+            {
+             "dt": "b)",
+             "c": [
+              "vom Verein zur Erhaltung privater Baudenkmäler und sonstiger Kulturgüter in Bayern e.V.,"
+             ]
+            },
+            {
+             "dt": "c)",
+             "c": [
+              "von der Deutschen Burgenvereinigung, Landesgruppe Bayern,"
+             ]
+            },
+            {
+             "dt": "d)",
+             "c": [
+              "vom Landesverband der Bayerischen Haus- und Grundbesitzer e.V.,"
+             ]
+            },
+            {
+             "dt": "e)",
+             "c": [
+              "vom Familienbetriebe Land und Forst Bayern e.V.,"
+             ]
+            },
+            {
+             "dt": "f)",
+             "c": [
+              "von der Bayerischen Akademie der Schönen Künste,"
+             ]
+            },
+            {
+             "dt": "g)",
+             "c": [
+              "von der Bayerischen Architektenkammer,"
+             ]
+            },
+            {
+             "dt": "h)",
+             "c": [
+              "von der Deutschen Akademie für Städtebau und Landesplanung, Landesgruppe Bayern,"
+             ]
+            },
+            {
+             "dt": "i)",
+             "c": [
+              "vom Bayerischen Landesverein für Heimatpflege,"
+             ]
+            },
+            {
+             "dt": "j)",
+             "c": [
+              "vom Bayerischen Bauernverband,"
+             ]
+            },
+            {
+             "dt": "k)",
+             "c": [
+              "von der Arbeitsgemeinschaft der Bayerischen Handwerkskammern,"
+             ]
+            },
+            {
+             "dt": "l)",
+             "c": [
+              "vom Bayerischen Gemeindetag,"
+             ]
+            },
+            {
+             "dt": "m)",
+             "c": [
+              "vom Bayerischen Städtetag,"
+             ]
+            },
+            {
+             "dt": "n)",
+             "c": [
+              "vom Bayerischen Landkreistag,"
+             ]
+            },
+            {
+             "dt": "o)",
+             "c": [
+              "vom Bayerischen Bezirketag,"
+             ]
+            },
+            {
+             "dt": "p)",
+             "c": [
+              "von der Bayerischen Ingenieurekammer-Bau,"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "bis zu sechs vom Staatsministerium."
+         ]
+        }
+       ]
+      },
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Es wird entsprechend Satz 1 jeweils ein Stellvertreter bestimmt. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die Mitglieder und ihre Stellvertreter werden vom Landtag bestellt, in den Fällen des Satzes 1 Nr. 2 bis 4 auf Vorschlag der jeweiligen entsendenden Stelle."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die Mitglieder sind ehrenamtlich tätig. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Sie erhalten Reisekosten nach den Vorschriften des Bayerischen Reisekostengesetzes wie ein Ehrenbeamter."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Landesdenkmalrat wählt aus seiner Mitte mit einfacher Mehrheit der anwesenden Mitglieder ein vorsitzendes Mitglied und einen Stellvertreter. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Der Landesdenkmalrat gibt sich im Übrigen eine Geschäftsordnung. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Das Staatsministerium führt seine Geschäfte."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Ohne Stimmrecht nehmen an den Beratungen des Landesdenkmalrats bei Bedarf Sachverständige nach Einladung des Landesdenkmalrats teil."
+     ]
+    }
+   ],
+   "text": "(1) Der Landesdenkmalrat berät die Staatsregierung in allen wichtigen Fragen der Denkmalpflege. Er wirkt an der Festlegung von Ensembles mit.\n(2) In den Landesdenkmalrat werden folgende Mitglieder jeweils für die Dauer der Legislaturperiode entsandt:\n1. sechs von den Fraktionen des Bayerischen Landtags gemäß ihren Besetzungsrechten nach dem Verfahren Sainte-Laguë/Schepers,\n2. je zwei von der Katholischen Kirche und der Evangelisch-Lutherischen Landeskirche,\n3. je eines\na) von den israelitischen Kultusgemeinden in Bayern,\nb) vom Verein zur Erhaltung privater Baudenkmäler und sonstiger Kulturgüter in Bayern e.V.,\nc) von der Deutschen Burgenvereinigung, Landesgruppe Bayern,\nd) vom Landesverband der Bayerischen Haus- und Grundbesitzer e.V.,\ne) vom Familienbetriebe Land und Forst Bayern e.V.,\nf) von der Bayerischen Akademie der Schönen Künste,\ng) von der Bayerischen Architektenkammer,\nh) von der Deutschen Akademie für Städtebau und Landesplanung, Landesgruppe Bayern,\ni) vom Bayerischen Landesverein für Heimatpflege,\nj) vom Bayerischen Bauernverband,\nk) von der Arbeitsgemeinschaft der Bayerischen Handwerkskammern,\nl) vom Bayerischen Gemeindetag,\nm) vom Bayerischen Städtetag,\nn) vom Bayerischen Landkreistag,\no) vom Bayerischen Bezirketag,\np) von der Bayerischen Ingenieurekammer-Bau,\n4. bis zu sechs vom Staatsministerium.\nEs wird entsprechend Satz 1 jeweils ein Stellvertreter bestimmt. Die Mitglieder und ihre Stellvertreter werden vom Landtag bestellt, in den Fällen des Satzes 1 Nr. 2 bis 4 auf Vorschlag der jeweiligen entsendenden Stelle.\n(3) Die Mitglieder sind ehrenamtlich tätig. Sie erhalten Reisekosten nach den Vorschriften des Bayerischen Reisekostengesetzes wie ein Ehrenbeamter.\n(4) Der Landesdenkmalrat wählt aus seiner Mitte mit einfacher Mehrheit der anwesenden Mitglieder ein vorsitzendes Mitglied und einen Stellvertreter. Der Landesdenkmalrat gibt sich im Übrigen eine Geschäftsordnung. Das Staatsministerium führt seine Geschäfte.\n(5) Ohne Stimmrecht nehmen an den Beratungen des Landesdenkmalrats bei Bedarf Sachverständige nach Einladung des Landesdenkmalrats teil.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-13",
+   "verweise": []
+  },
+  {
+   "id": "14",
+   "bez": "Art. 14",
+   "titel": "Erlaubnisverfahren und Wiederherstellung",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Antrag auf Erteilung einer Erlaubnis nach den Art. 6 und 7 und auf Verpflichtung des Eigentümers nach Art. 7 Abs. 6 ist in Textform bei der zuständigen Denkmalschutzbehörde einzureichen, die ihn unverzüglich der Gemeinde zur Stellungnahme übermittelt. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Art. 75 und 76 BayBO gelten in den Fällen der Art. 6, 7 und 8 Abs. 2 entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Die zuständige Denkmalschutzbehörde soll vor einer Entscheidung nach den Teilen 2 und 3 das Landesamt für Denkmalpflege hören. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Art. 65 Abs. 2 Satz 3 BayBO gilt entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) Für eine Erlaubnis nach den Teilen 2 und 3 gilt Art. 69 BayBO entsprechend."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Werden Handlungen nach Art. 6, 7 oder Art. 8 Abs. 2 ohne die erforderliche Erlaubnis, Baugenehmigung oder abgrabungsaufsichtliche Genehmigung durchgeführt, so kann die Untere Denkmalschutzbehörde verlangen, daß der ursprüngliche Zustand wieder hergestellt wird, soweit dies noch möglich ist, oder daß Bau- und Bodendenkmäler auf andere Weise wieder instandgesetzt werden."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(5) Wer widerrechtlich Bau- oder Bodendenkmäler vorsätzlich oder grob fahrlässig zerstört oder beschädigt, ist unabhängig von der Verhängung einer Geldbuße zur Wiedergutmachung des von ihm angerichteten Schadens bis zu dessen vollem Umfang verpflichtet."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(6) Die zuständige Behörde kann die Entscheidung über einen Antrag auf Erlaubnis, Baugenehmigung, baurechtliche Zustimmung oder abgrabungsaufsichtliche Genehmigung auf höchstens ein Jahr aussetzen, soweit dies zur Klärung der Belange des Denkmalschutzes, insbesondere für Untersuchungen des Baudenkmals und seiner Umgebung, erforderlich ist."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(7) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Erlaubnisse, Zustimmungen und sonstige Maßnahmen nach diesem Gesetz gelten auch für und gegen die Rechtsnachfolger, soweit in dem jeweiligen Bescheid nichts anderes bestimmt wird. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Satz 1 gilt auch für Personen, die ein Besitzrecht nach Erteilung einer Erlaubnis, einer Zustimmung oder nach Erlass einer sonstigen Maßnahme nach diesem Gesetz an dem Denkmal erlangt haben."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(8) Art. 4 Abs. 1 Satz 1 der Verordnung (EU) 2022/2577 findet aus Gründen des Schutzes kulturellen Erbes keine Anwendung."
+     ]
+    }
+   ],
+   "text": "(1) Der Antrag auf Erteilung einer Erlaubnis nach den Art. 6 und 7 und auf Verpflichtung des Eigentümers nach Art. 7 Abs. 6 ist in Textform bei der zuständigen Denkmalschutzbehörde einzureichen, die ihn unverzüglich der Gemeinde zur Stellungnahme übermittelt. Art. 75 und 76 BayBO gelten in den Fällen der Art. 6, 7 und 8 Abs. 2 entsprechend.\n(2) Die zuständige Denkmalschutzbehörde soll vor einer Entscheidung nach den Teilen 2 und 3 das Landesamt für Denkmalpflege hören. Art. 65 Abs. 2 Satz 3 BayBO gilt entsprechend.\n(3) Für eine Erlaubnis nach den Teilen 2 und 3 gilt Art. 69 BayBO entsprechend.\n(4) Werden Handlungen nach Art. 6, 7 oder Art. 8 Abs. 2 ohne die erforderliche Erlaubnis, Baugenehmigung oder abgrabungsaufsichtliche Genehmigung durchgeführt, so kann die Untere Denkmalschutzbehörde verlangen, daß der ursprüngliche Zustand wieder hergestellt wird, soweit dies noch möglich ist, oder daß Bau- und Bodendenkmäler auf andere Weise wieder instandgesetzt werden.\n(5) Wer widerrechtlich Bau- oder Bodendenkmäler vorsätzlich oder grob fahrlässig zerstört oder beschädigt, ist unabhängig von der Verhängung einer Geldbuße zur Wiedergutmachung des von ihm angerichteten Schadens bis zu dessen vollem Umfang verpflichtet.\n(6) Die zuständige Behörde kann die Entscheidung über einen Antrag auf Erlaubnis, Baugenehmigung, baurechtliche Zustimmung oder abgrabungsaufsichtliche Genehmigung auf höchstens ein Jahr aussetzen, soweit dies zur Klärung der Belange des Denkmalschutzes, insbesondere für Untersuchungen des Baudenkmals und seiner Umgebung, erforderlich ist.\n(7) Erlaubnisse, Zustimmungen und sonstige Maßnahmen nach diesem Gesetz gelten auch für und gegen die Rechtsnachfolger, soweit in dem jeweiligen Bescheid nichts anderes bestimmt wird. Satz 1 gilt auch für Personen, die ein Besitzrecht nach Erteilung einer Erlaubnis, einer Zustimmung oder nach Erlass einer sonstigen Maßnahme nach diesem Gesetz an dem Denkmal erlangt haben.\n(8) Art. 4 Abs. 1 Satz 1 der Verordnung (EU) 2022/2577 findet aus Gründen des Schutzes kulturellen Erbes keine Anwendung.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-14",
+   "verweise": [
+    "6",
+    "7",
+    "8"
+   ]
+  },
+  {
+   "id": "15",
+   "bez": "Art. 15",
+   "titel": "Betretungs- und Auskunftsrecht",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Die Denkmalschutzbehörden und das Landesamt für Denkmalpflege sind berechtigt, im Vollzug dieses Gesetzes Grundstücke auch gegen den Willen der Betroffenen zu betreten, soweit das zur Erhaltung eines Bau- oder Bodendenkmals dringend erforderlich erscheint."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Eigentümer und Besitzer von Bau- und Bodendenkmälern und sonstige Berechtigte sind verpflichtet, den Denkmalschutzbehörden und dem Landesamt für Denkmalpflege alle zum Vollzug dieses Gesetzes erforderlichen Auskünfte zu erteilen."
+     ]
+    }
+   ],
+   "text": "(1) Die Denkmalschutzbehörden und das Landesamt für Denkmalpflege sind berechtigt, im Vollzug dieses Gesetzes Grundstücke auch gegen den Willen der Betroffenen zu betreten, soweit das zur Erhaltung eines Bau- oder Bodendenkmals dringend erforderlich erscheint.\n(2) Eigentümer und Besitzer von Bau- und Bodendenkmälern und sonstige Berechtigte sind verpflichtet, den Denkmalschutzbehörden und dem Landesamt für Denkmalpflege alle zum Vollzug dieses Gesetzes erforderlichen Auskünfte zu erteilen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-15",
+   "verweise": []
+  },
+  {
+   "id": "16",
+   "bez": "Art. 16",
+   "titel": "Kostenfreiheit",
+   "gliederung": [
+    "Teil 4 – Verfahrensbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Für Amtshandlungen nach diesem Gesetz werden Kosten nicht erhoben. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Schließt die Erlaubnis gemäß Art. 6 Abs. 5 Satz 3 die Zustimmung im Einzelfall nach Art. 20 BayBO oder die Abweichung nach Art. 63 Abs. 1 Satz 1 BayBO ein, werden für die Zustimmung oder die Abweichung Kosten nach dem Kostengesetz erhoben."
+     ]
+    }
+   ],
+   "text": "Für Amtshandlungen nach diesem Gesetz werden Kosten nicht erhoben. Schließt die Erlaubnis gemäß Art. 6 Abs. 5 Satz 3 die Zustimmung im Einzelfall nach Art. 20 BayBO oder die Abweichung nach Art. 63 Abs. 1 Satz 1 BayBO ein, werden für die Zustimmung oder die Abweichung Kosten nach dem Kostengesetz erhoben.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-16",
+   "verweise": [
+    "6"
+   ]
+  },
+  {
+   "id": "17",
+   "bez": "Art. 17",
+   "titel": "Zulässigkeit der Enteignung",
+   "gliederung": [
+    "Teil 5 – Enteignung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Kann eine Gefahr für den Bestand oder die Gestalt eines Bau- oder Bodendenkmals auf andere Weise nicht nachhaltig abgewehrt werden, so ist die Enteignung zugunsten des Staates oder einer anderen juristischen Person des öffentlichen Rechts zulässig. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Zugunsten einer juristischen Person des Privatrechts ist die Enteignung dann zulässig, wenn die dauernde Erhaltung des Bau- oder Bodendenkmals zu den satzungsmäßigen Aufgaben der juristischen Person gehört und bei Berücksichtigung aller Umstände gesichert erscheint."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) bis (5)  (aufgehoben)"
+     ]
+    }
+   ],
+   "text": "Kann eine Gefahr für den Bestand oder die Gestalt eines Bau- oder Bodendenkmals auf andere Weise nicht nachhaltig abgewehrt werden, so ist die Enteignung zugunsten des Staates oder einer anderen juristischen Person des öffentlichen Rechts zulässig. Zugunsten einer juristischen Person des Privatrechts ist die Enteignung dann zulässig, wenn die dauernde Erhaltung des Bau- oder Bodendenkmals zu den satzungsmäßigen Aufgaben der juristischen Person gehört und bei Berücksichtigung aller Umstände gesichert erscheint.\n(3) bis (5)  (aufgehoben)",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-17",
+   "verweise": []
+  },
+  {
+   "id": "18",
+   "bez": "Art. 18",
+   "titel": "Entschädigungsfonds",
+   "gliederung": [
+    "Teil 5 – Enteignung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Für Entschädigungen bei Enteignung nach Art. 18, Ausgleich unzumutbarer Kostenbelastungen nach Art. 4 Abs. 3 sowie bei Instandsetzungsmaßnahmen nach Art. 4 Abs. 1 wird ein Entschädigungsfonds vorgehalten, der von der Obersten Denkmalschutzbehörde als staatliches Sondervermögen unterhalten wird. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Steuervorteile, die auf die Denkmaleigenschaft zurückzuführen sind, sind bei Zahlungen an den Betroffenen in angemessenem Umfang anzurechnen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Freistaat Bayern und die Gemeinden haben die Entschädigung grundsätzlich gemeinsam zu tragen. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die Ansprüche des Berechtigten sind gegen den Freistaat Bayern zu richten. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Der Entschädigungsfonds erstattet dem Freistaat Bayern auf Antrag der örtlich zuständigen Regierung die dem Betroffenen gewährten Entschädigungsleistungen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(3) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Freistaat Bayern und die Gemeinden tragen den Fonds durch Beiträge von je 16 Millionen Euro jährlich. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die staatlichen Beiträge sind in zwei gleichen Teilbeträgen im Januar und im Juli zahlbar. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die von den Gemeinden zu tragenden Einzelbeiträge errechnen sich nach dem Verhältnis der jeweiligen gemeindlichen Umlagegrundlagen für die Kreisumlage oder die Bezirksumlage. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Sie werden jährlich vom Landesamt für Statistik berechnet und sollen entsprechend bis 31. März des jeweiligen Beitragsjahres gegenüber den Gemeinden durch Beitragsbescheid festgesetzt werden. ",
+      {
+       "t": "sup",
+       "c": [
+        "5"
+       ]
+      },
+      "Die Beiträge werden mit der Auszahlung der Schlüsselzuweisungen für das dritte Vierteljahr fällig, staatlicherseits einbehalten und an den Fonds abgeführt. ",
+      {
+       "t": "sup",
+       "c": [
+        "6"
+       ]
+      },
+      "Soweit Gemeinden keine Schlüsselzuweisungen erhalten, zahlen sie die Beiträge bis zum 15. September an die Staatsoberkasse."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(4) Erfolgt eine Enteignung zugunsten einer juristischen Person des öffentlichen Rechts, die nicht Gebietskörperschaft ist, oder zugunsten einer juristischen Person des Privatrechts, so hat diese die Entschädigung zu tragen."
+     ]
+    }
+   ],
+   "text": "(1) Für Entschädigungen bei Enteignung nach Art. 18, Ausgleich unzumutbarer Kostenbelastungen nach Art. 4 Abs. 3 sowie bei Instandsetzungsmaßnahmen nach Art. 4 Abs. 1 wird ein Entschädigungsfonds vorgehalten, der von der Obersten Denkmalschutzbehörde als staatliches Sondervermögen unterhalten wird. Steuervorteile, die auf die Denkmaleigenschaft zurückzuführen sind, sind bei Zahlungen an den Betroffenen in angemessenem Umfang anzurechnen.\n(2) Der Freistaat Bayern und die Gemeinden haben die Entschädigung grundsätzlich gemeinsam zu tragen. Die Ansprüche des Berechtigten sind gegen den Freistaat Bayern zu richten. Der Entschädigungsfonds erstattet dem Freistaat Bayern auf Antrag der örtlich zuständigen Regierung die dem Betroffenen gewährten Entschädigungsleistungen.\n(3) Der Freistaat Bayern und die Gemeinden tragen den Fonds durch Beiträge von je 16 Millionen Euro jährlich. Die staatlichen Beiträge sind in zwei gleichen Teilbeträgen im Januar und im Juli zahlbar. Die von den Gemeinden zu tragenden Einzelbeiträge errechnen sich nach dem Verhältnis der jeweiligen gemeindlichen Umlagegrundlagen für die Kreisumlage oder die Bezirksumlage. Sie werden jährlich vom Landesamt für Statistik berechnet und sollen entsprechend bis 31. März des jeweiligen Beitragsjahres gegenüber den Gemeinden durch Beitragsbescheid festgesetzt werden. Die Beiträge werden mit der Auszahlung der Schlüsselzuweisungen für das dritte Vierteljahr fällig, staatlicherseits einbehalten und an den Fonds abgeführt. Soweit Gemeinden keine Schlüsselzuweisungen erhalten, zahlen sie die Beiträge bis zum 15. September an die Staatsoberkasse.\n(4) Erfolgt eine Enteignung zugunsten einer juristischen Person des öffentlichen Rechts, die nicht Gebietskörperschaft ist, oder zugunsten einer juristischen Person des Privatrechts, so hat diese die Entschädigung zu tragen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-18",
+   "verweise": [
+    "4"
+   ]
+  },
+  {
+   "id": "19",
+   "bez": "Art. 19",
+   "titel": "Leistungen",
+   "gliederung": [
+    "Teil 6 – Finanzierung"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Der Freistaat Bayern beteiligt sich unbeschadet bestehender Verpflichtungen in Höhe der jeweils im Staatshaushalt ausgewiesenen Mittel an den Kosten des Denkmalschutzes und der Denkmalpflege, insbesondere an den Kosten der Instandsetzung, Erhaltung, Sicherung und Freilegung von Denkmälern. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die Höhe der Beteiligung richtet sich nach der Bedeutung und der Dringlichkeit des Falls und nach der Leistungsfähigkeit des Eigentümers."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die kommunalen Gebietskörperschaften beteiligen sich im Rahmen ihrer Leistungsfähigkeit in angemessenem Umfang an den Kosten der in Abs. 1 genannten Maßnahmen."
+     ]
+    }
+   ],
+   "text": "(1) Der Freistaat Bayern beteiligt sich unbeschadet bestehender Verpflichtungen in Höhe der jeweils im Staatshaushalt ausgewiesenen Mittel an den Kosten des Denkmalschutzes und der Denkmalpflege, insbesondere an den Kosten der Instandsetzung, Erhaltung, Sicherung und Freilegung von Denkmälern. Die Höhe der Beteiligung richtet sich nach der Bedeutung und der Dringlichkeit des Falls und nach der Leistungsfähigkeit des Eigentümers.\n(2) Die kommunalen Gebietskörperschaften beteiligen sich im Rahmen ihrer Leistungsfähigkeit in angemessenem Umfang an den Kosten der in Abs. 1 genannten Maßnahmen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-19",
+   "verweise": []
+  },
+  {
+   "id": "20",
+   "bez": "Art. 20",
+   "titel": "Ordnungswidrigkeiten",
+   "gliederung": [
+    "Teil 7 – Ordnungswidrigkeiten"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Mit Geldbuße bis zu fünf Millionen Euro kann belegt werden, wer vorsätzlich oder fahrlässig",
+      {
+       "t": "dl",
+       "items": [
+        {
+         "dt": "1.",
+         "c": [
+          "Handlungen nach Art. 4 Abs. 4 vornimmt, obwohl ihm dies durch vollziehbare Anordnung untersagt wurde,"
+         ]
+        },
+        {
+         "dt": "2.",
+         "c": [
+          "ohne die nach Art. 6 Abs. 1 oder Art. 7 Abs. 5 Satz 1 erforderliche Erlaubnis oder die an ihre Stelle tretende baurechtliche oder abgrabungsaufsichtliche Genehmigung Maßnahmen an einem Denkmal durchführt,"
+         ]
+        },
+        {
+         "dt": "3.",
+         "c": [
+          "ohne die nach Art. 7 Abs. 1 erforderliche Erlaubnis nach Bodendenkmälern gräbt oder zu einem anderen Zweck Erdarbeiten auf einem Grundstück vornimmt,"
+         ]
+        },
+        {
+         "dt": "4.",
+         "c": [
+          "die gemäß Art. 8 Abs. 1 erforderliche Anzeige nicht unverzüglich erstattet,"
+         ]
+        },
+        {
+         "dt": "5.",
+         "c": [
+          "die aufgefundenen Gegenstände und den Fundort nicht gemäß Art. 8 Abs. 2 unverändert läßt,"
+         ]
+        },
+        {
+         "dt": "6.",
+         "c": [
+          "seiner Übergabepflicht gemäß Art. 9 Abs. 1 Satz 2 nicht unverzüglich nachkommt,"
+         ]
+        },
+        {
+         "dt": "7.",
+         "c": [
+          "entgegen Art. 7 Abs. 7 ohne Erlaubnis technische Ortungsgeräte einsetzt."
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Die Verfolgung der Ordnungswidrigkeiten verjährt in fünf Jahren."
+     ]
+    }
+   ],
+   "text": "(1) Mit Geldbuße bis zu fünf Millionen Euro kann belegt werden, wer vorsätzlich oder fahrlässig\n1. Handlungen nach Art. 4 Abs. 4 vornimmt, obwohl ihm dies durch vollziehbare Anordnung untersagt wurde,\n2. ohne die nach Art. 6 Abs. 1 oder Art. 7 Abs. 5 Satz 1 erforderliche Erlaubnis oder die an ihre Stelle tretende baurechtliche oder abgrabungsaufsichtliche Genehmigung Maßnahmen an einem Denkmal durchführt,\n3. ohne die nach Art. 7 Abs. 1 erforderliche Erlaubnis nach Bodendenkmälern gräbt oder zu einem anderen Zweck Erdarbeiten auf einem Grundstück vornimmt,\n4. die gemäß Art. 8 Abs. 1 erforderliche Anzeige nicht unverzüglich erstattet,\n5. die aufgefundenen Gegenstände und den Fundort nicht gemäß Art. 8 Abs. 2 unverändert läßt,\n6. seiner Übergabepflicht gemäß Art. 9 Abs. 1 Satz 2 nicht unverzüglich nachkommt,\n7. entgegen Art. 7 Abs. 7 ohne Erlaubnis technische Ortungsgeräte einsetzt.\n(2) Die Verfolgung der Ordnungswidrigkeiten verjährt in fünf Jahren.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-20",
+   "verweise": [
+    "4",
+    "6",
+    "7",
+    "8",
+    "9"
+   ]
+  },
+  {
+   "id": "21",
+   "bez": "Art. 21",
+   "titel": "Grundrechtseinschränkung",
+   "gliederung": [
+    "Teil 8 – Allgemeine Bestimmungen und Schlussbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Die Grundrechte der Unverletzlichkeit der Wohnung (Art. 13 des Grundgesetzes, Art. 106 Abs. 3 der Verfassung), der freien Entfaltung der Persönlichkeit (Art. 2 Abs. 1 des Grundgesetzes, Art. 101 der Verfassung) und des Eigentums (Art. 14 des Grundgesetzes, Art. 103 der Verfassung) werden durch dieses Gesetz eingeschränkt."
+     ]
+    }
+   ],
+   "text": "Die Grundrechte der Unverletzlichkeit der Wohnung (Art. 13 des Grundgesetzes, Art. 106 Abs. 3 der Verfassung), der freien Entfaltung der Persönlichkeit (Art. 2 Abs. 1 des Grundgesetzes, Art. 101 der Verfassung) und des Eigentums (Art. 14 des Grundgesetzes, Art. 103 der Verfassung) werden durch dieses Gesetz eingeschränkt.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-21",
+   "verweise": []
+  },
+  {
+   "id": "22",
+   "bez": "Art. 22",
+   "titel": "Erteilung von Bescheinigungen für steuerliche Zwecke",
+   "gliederung": [
+    "Teil 8 – Allgemeine Bestimmungen und Schlussbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "Bescheinigungen für die Erlangung von Steuervergünstigungen werden vorbehaltlich anderweitiger Bestimmungen vom Landesamt für Denkmalpflege erteilt."
+     ]
+    }
+   ],
+   "text": "Bescheinigungen für die Erlangung von Steuervergünstigungen werden vorbehaltlich anderweitiger Bestimmungen vom Landesamt für Denkmalpflege erteilt.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-22",
+   "verweise": []
+  },
+  {
+   "id": "23",
+   "bez": "Art. 23",
+   "titel": "Kirchliche Denkmäler",
+   "gliederung": [
+    "Teil 8 – Allgemeine Bestimmungen und Schlussbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Art. 10 §§ 3 und 4 des Konkordats mit dem Heiligen Stuhl vom 29. März 1924 und Art. 18 und 19 des Vertrags zwischen dem Freistaat Bayern und der Evangelisch-Lutherischen Kirche in Bayern rechts des Rheins vom 15. November 1924 bleiben unberührt."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Sollen Entscheidungen über Bau- oder Bodendenkmäler getroffen werden, die unmittelbar gottesdienstlichen Zwecken der Katholischen Kirche oder der Evangelisch-Lutherischen Kirche dienen, so haben die Denkmalschutzbehörden die von den zuständigen kirchlichen Oberbehörden festgestellten kirchlichen Belange zu berücksichtigen. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Die Kirchen sind am Verfahren zu beteiligen. ",
+      {
+       "t": "sup",
+       "c": [
+        "3"
+       ]
+      },
+      "Die zuständige kirchliche Oberbehörde entscheidet im Benehmen mit der Obersten Denkmalschutzbehörde, falls die Untere und Höhere Denkmalschutzbehörde die geltend gemachten kirchlichen Belange nicht anerkennen. ",
+      {
+       "t": "sup",
+       "c": [
+        "4"
+       ]
+      },
+      "Gegenüber anderen Religionsgemeinschaften, die Körperschaften des öffentlichen Rechts sind, gelten die Sätze 1 bis 3 sinngemäß."
+     ]
+    }
+   ],
+   "text": "(1) Art. 10 §§ 3 und 4 des Konkordats mit dem Heiligen Stuhl vom 29. März 1924 und Art. 18 und 19 des Vertrags zwischen dem Freistaat Bayern und der Evangelisch-Lutherischen Kirche in Bayern rechts des Rheins vom 15. November 1924 bleiben unberührt.\n(2) Sollen Entscheidungen über Bau- oder Bodendenkmäler getroffen werden, die unmittelbar gottesdienstlichen Zwecken der Katholischen Kirche oder der Evangelisch-Lutherischen Kirche dienen, so haben die Denkmalschutzbehörden die von den zuständigen kirchlichen Oberbehörden festgestellten kirchlichen Belange zu berücksichtigen. Die Kirchen sind am Verfahren zu beteiligen. Die zuständige kirchliche Oberbehörde entscheidet im Benehmen mit der Obersten Denkmalschutzbehörde, falls die Untere und Höhere Denkmalschutzbehörde die geltend gemachten kirchlichen Belange nicht anerkennen. Gegenüber anderen Religionsgemeinschaften, die Körperschaften des öffentlichen Rechts sind, gelten die Sätze 1 bis 3 sinngemäß.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-23",
+   "verweise": [
+    "10"
+   ]
+  },
+  {
+   "id": "24",
+   "bez": "Art. 24",
+   "titel": "Militärgelände, Verteidigungsgüter",
+   "gliederung": [
+    "Teil 8 – Allgemeine Bestimmungen und Schlussbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) ",
+      {
+       "t": "sup",
+       "c": [
+        "1"
+       ]
+      },
+      "Auf dauerhaft militärisch genutzten Grundstücken, die im Eigentum des Bundes stehen oder deren militärische Nutzung dinglich gesichert ist (Militärgelände), liegen die der Landes- und Bündnisverteidigung dienenden Vorhaben und eine den jeweils aktuellen militärischen Anforderungen entsprechende Nutzung vorhandener Baudenkmäler im überragenden öffentlichen Interesse. ",
+      {
+       "t": "sup",
+       "c": [
+        "2"
+       ]
+      },
+      "Abweichend von Art. 4 Abs. 2 und 3, Art. 5 und 6 ist das Landesamt für Denkmalpflege vor entsprechenden Maßnahmen zu beteiligen und seine Stellungnahme maßgeblich zu berücksichtigen."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Der Denkmalschutz muss im Interesse der Verteidigungsfähigkeit Deutschlands die Belange der Forschung, Erprobung und Herstellung von Verteidigungsgütern oder verteidigungsrelevanten Technologien der Luft- und Raumfahrt maßgeblich berücksichtigen und abwägen."
+     ]
+    }
+   ],
+   "text": "(1) Auf dauerhaft militärisch genutzten Grundstücken, die im Eigentum des Bundes stehen oder deren militärische Nutzung dinglich gesichert ist (Militärgelände), liegen die der Landes- und Bündnisverteidigung dienenden Vorhaben und eine den jeweils aktuellen militärischen Anforderungen entsprechende Nutzung vorhandener Baudenkmäler im überragenden öffentlichen Interesse. Abweichend von Art. 4 Abs. 2 und 3, Art. 5 und 6 ist das Landesamt für Denkmalpflege vor entsprechenden Maßnahmen zu beteiligen und seine Stellungnahme maßgeblich zu berücksichtigen.\n(2) Der Denkmalschutz muss im Interesse der Verteidigungsfähigkeit Deutschlands die Belange der Forschung, Erprobung und Herstellung von Verteidigungsgütern oder verteidigungsrelevanten Technologien der Luft- und Raumfahrt maßgeblich berücksichtigen und abwägen.",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-24",
+   "verweise": [
+    "4",
+    "5",
+    "6"
+   ]
+  },
+  {
+   "id": "25",
+   "bez": "Art. 25",
+   "titel": "Inkrafttreten, Außerkrafttreten",
+   "gliederung": [
+    "Teil 8 – Allgemeine Bestimmungen und Schlussbestimmungen"
+   ],
+   "weggefallen": false,
+   "inhalt": [
+    {
+     "t": "p",
+     "c": [
+      "(1) Dieses Gesetz tritt am 1. Oktober 1973 in Kraft."
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      "(2) Art. 6 Abs. 7 sowie Art. 7 Abs. 5 Satz 3 Nr. 1 und Satz 4 treten mit Ablauf des 31. Dezember 2035 außer Kraft."
+     ]
+    }
+   ],
+   "text": "(1) Dieses Gesetz tritt am 1. Oktober 1973 in Kraft.\n(2) Art. 6 Abs. 7 sowie Art. 7 Abs. 5 Satz 3 Nr. 1 und Satz 4 treten mit Ablauf des 31. Dezember 2035 außer Kraft.",
+   "fussnoten": "1) [Amtl. Anm.:] Betrifft die ursprüngliche Fassung vom 25. Juni 1973 (GVBl S. 328).",
+   "url": "https://www.gesetze-bayern.de/Content/Document/BayDSchG-25",
+   "verweise": [
+    "6",
+    "7"
+   ]
+  }
+ ]
+}

@@ -4,6 +4,7 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { type GeckoSignal, geckoSignal } from "@/lib/gecko";
 import { standDatum } from "@/lib/text";
+import { LAENDER, landNamens, STANDARD_LAND } from "@/lib/laender";
 import type { Antwort, GesetzInfo, OrtAnsicht } from "@/lib/typen";
 import { bewegungAus, DarstellungsMenue, SprachWahl, useEinstellungen, useT } from "./Einstellungen";
 import { GebietsLeiste, NormKarte, OrtKarte } from "./Karten";
@@ -26,8 +27,16 @@ type Anfrage = { text: string } | { adresse: { strasse: string; hausnummer: stri
 const STATISCH = process.env.NEXT_PUBLIC_STATISCH === "1";
 
 export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo[]; obsidianPfad: string | null }) {
-  const { e } = useEinstellungen();
+  const { e, setze } = useEinstellungen();
   const t = useT();
+  const sp = e.sprache === "en" ? "en" : "de";
+  const land = landNamens(e.land) ?? landNamens(STANDARD_LAND)!;
+  // Regelwerke im Bereich des gewählten Landes: Bundesrecht, Gesetze dieses Landes, Muster und VOB
+  const imLand = (g: GesetzInfo) => !g.land || g.land === land.name;
+  const imBereich = gesetze.filter(imLand);
+  const andereLaender = LAENDER.filter((l) => l.name !== land.name)
+    .map((l) => ({ l, liste: gesetze.filter((g) => g.land === l.name) }))
+    .filter((x) => x.liste.length);
   const [verlauf, setVerlauf] = useState<Eintrag[]>([]);
   const [eingabe, setEingabe] = useState("");
   const [laedt, setLaedt] = useState(false);
@@ -91,7 +100,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
     if (laedt) return;
     setVerlauf((v) => [...v, { id: zaehler.current++, rolle: "nutzer", text: anzeige, zeit: uhrzeit() }]);
     setLaedt(true);
-    const mitSprache = { ...anfrage, sprache: e.sprache };
+    const mitSprache = { ...anfrage, sprache: e.sprache, land: land.name };
     try {
       let antworten: Antwort[];
       if (STATISCH) {
@@ -103,6 +112,10 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
         antworten = ((await res.json()) as { antworten: Antwort[] }).antworten;
       }
       setVerlauf((v) => [...v, { id: zaehler.current++, rolle: "lotse", antworten, zeit: uhrzeit() }]);
+      // Ortsauskunft in einem anderen Land: dessen Gesetze sind ab jetzt gemeint (Bauordnung, Stichworte, Suche)
+      const ort = antworten.find((a) => a.art === "ort");
+      const ortLand = ort?.art === "ort" && ort.ort.standort.status === "ok" ? landNamens(ort.ort.standort.land) : undefined;
+      if (ortLand && ortLand.name !== land.name) setze({ land: ortLand.name });
     } catch {
       setVerlauf((v) => [
         ...v,
@@ -135,7 +148,7 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
           </a>
           <div className="kopf-meta">
             <span className="kopf-stand">
-              {gesetze.filter((g) => g.imKopf).map((g) => (
+              {gesetze.filter((g) => g.imKopf || g.id === land.bauordnung).map((g) => (
                 <span key={g.id}>
                   <b>{g.kurz}</b> {t("Stand", "as of")} {standDatum(g.stand) ?? "–"}
                 </span>
@@ -203,8 +216,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               </button>
               <p className="feld-hinweis">
                 {t(
-                  "Findet jede Adresse in Deutschland und nennt die zu beachtenden Paragraphen. Bebauungspläne: Stadt Oldenburg, Denkmale: Niedersachsen – anderswo sagt die Auskunft offen, wozu sie keine Aussage machen kann. Ohne Postleitzahl wird zuerst in Oldenburg gesucht.",
-                  "Finds any address in Germany and lists the relevant sections. Development plans: City of Oldenburg, monuments: Lower Saxony – elsewhere the check says openly what it cannot assess. Without a postcode, Oldenburg is searched first.",
+                  "Findet jede Adresse in Deutschland und nennt die zu beachtenden Paragraphen. Bebauungspläne und Denkmale kommen aus den amtlichen Diensten der Länder und Städte – wo keiner angebunden ist oder ein Dienst nicht alle Einträge enthält, sagt die Auskunft das offen. Ohne Postleitzahl wird zuerst in Oldenburg gesucht.",
+                  "Finds any address in Germany and lists the relevant sections. Development plans and monuments come from the official services of the states and cities – where none is connected or a service does not contain every entry, the check says so openly. Without a postcode, Oldenburg is searched first.",
                 )}
               </p>
             </form>
@@ -227,10 +240,19 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 <div className="feld">
                   <label htmlFor="gesetz">{t("Regelwerk", "Act")}</label>
                   <select id="gesetz" value={paraGesetz} onChange={(ev) => setParaGesetz(ev.target.value)}>
-                    {gesetze.map((g) => (
+                    {imBereich.map((g) => (
                       <option key={g.id} value={g.kurz}>
                         {g.kurz}
                       </option>
+                    ))}
+                    {andereLaender.map(({ l, liste }) => (
+                      <optgroup key={l.name} label={l.name}>
+                        {liste.map((g) => (
+                          <option key={g.id} value={g.kurz}>
+                            {g.kurz}
+                          </option>
+                        ))}
+                      </optgroup>
                     ))}
                   </select>
                 </div>
@@ -261,10 +283,28 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
             <h2 className="block-titel">
               <span className="kennung">C</span> {t("Bibliothek", "Library")}
             </h2>
+            <div className="land-wahl">
+              <label htmlFor="land">{t("Bundesland", "State")}</label>
+              <select id="land" value={land.name} onChange={(ev) => setze({ land: ev.target.value })}>
+                {LAENDER.map((l) => (
+                  <option key={l.name} value={l.name}>
+                    {l.name}
+                    {gesetze.some((g) => g.land === l.name) ? "" : t(" (noch ohne Landesrecht)", " (no state law yet)")}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {!gesetze.some((g) => g.land === land.name) && (
+              <p className="land-hinweis">
+                {t(
+                  `Für ${land.name} sind Bauordnung (${land.bauordnungKurz}) und Denkmalschutzgesetz (${land.denkmalKurz}) noch nicht in der Bibliothek. Bundesrecht, Musterbauordnung und VOB gelten trotzdem.`,
+                  `For ${land.name}, the building code (${land.bauordnungKurz}) and the monument protection act (${land.denkmalKurz}) are not in the library yet. Federal law, the model code and the VOB still apply.`,
+                )}
+              </p>
+            )}
             <ul className="bibliothek">
-              {gesetze.map((g, i) => {
-                const sp = e.sprache === "en" ? "en" : "de";
-                const neueGruppe = i === 0 || gesetze[i - 1].gruppe.de !== g.gruppe.de;
+              {imBereich.map((g, i) => {
+                const neueGruppe = i === 0 || imBereich[i - 1].gruppe.de !== g.gruppe.de;
                 return (
                   <Fragment key={g.id}>
                     {neueGruppe && <li className="bib-gruppe">{g.gruppe[sp]}</li>}
@@ -286,6 +326,36 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 );
               })}
             </ul>
+            {andereLaender.length > 0 && (
+              <details className="weitere-laender">
+                <summary>
+                  {t("Weitere Länder", "Other states")} ({andereLaender.length})
+                </summary>
+                <ul className="bibliothek">
+                  {andereLaender.map(({ l, liste }) => (
+                    <Fragment key={l.name}>
+                      <li className="bib-gruppe">{l.name}</li>
+                      {liste.map((g) => (
+                        <li key={g.id}>
+                          <span className="kuerzel">{g.kurz}</span>
+                          <span>
+                            <span className="titel" title={g.titel}>
+                              {g.kurztitel[sp]}
+                            </span>
+                            <span className="meta">
+                              {g.anzahl} §§ · {standDatum(g.stand) ?? "–"} ·{" "}
+                              <a href={g.quelleUrl} target="_blank" rel="noreferrer" title={g.quelleName}>
+                                {t("Quelle ↗", "source ↗")}
+                              </a>
+                            </span>
+                          </span>
+                        </li>
+                      ))}
+                    </Fragment>
+                  ))}
+                </ul>
+              </details>
+            )}
           </section>
 
           <section className="block block-hinweis">
@@ -293,8 +363,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               <p>
                 <strong>{t("Verlässlichkeit:", "Reliability:")}</strong>{" "}
                 {t(
-                  "Gesetze, Musterbauordnung und VOB werden unverändert im Wortlaut der Quelle angezeigt, die VOB/C nur als Verzeichnis. Ortsauskünfte stammen live aus OpenStreetMap, den Datendiensten der Stadt Oldenburg und dem Denkmalatlas Niedersachsen. Die Auskunft ersetzt keine Rechtsberatung.",
-                  "Acts, the model building code and the VOB are shown unchanged in their source wording (in German); the VOB/C as an index only. Location checks come live from OpenStreetMap, the data services of the City of Oldenburg and the Lower Saxony monument atlas. This is not legal advice.",
+                  "Gesetze, Musterbauordnung und VOB werden unverändert im Wortlaut der Quelle angezeigt, die VOB/C nur als Verzeichnis. Ortsauskünfte stammen live aus OpenStreetMap und den amtlichen Geodatendiensten der Länder und Städte (Quelle steht jeweils dabei). Die Auskunft ersetzt keine Rechtsberatung.",
+                  "Acts, the model building code and the VOB are shown unchanged in their source wording (in German); the VOB/C as an index only. Location checks come live from OpenStreetMap and the official geodata services of the states and cities (each source is named). This is not legal advice.",
                 )}
               </p>
               {STATISCH && (
@@ -323,8 +393,8 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                     </h1>
                     <p>
                       {t(
-                        "Baugesetzbuch, Niedersächsische Bauordnung, Denkmalschutzgesetz, Musterbauordnung und VOB im Wortlaut, mit Erläuterung und Zusammenhängen – oder eine Ortsauskunft für ein Grundstück in Deutschland.",
-                        "German building law, the Lower Saxony building code, monument protection law, the model building code and the VOB in their original wording, with explanations and related provisions – or a location check for a plot anywhere in Germany.",
+                        "Baugesetzbuch, Bauordnungen und Denkmalschutzgesetze der Länder, Musterbauordnung und VOB im Wortlaut, mit Erläuterung und Zusammenhängen – oder eine Ortsauskunft für ein Grundstück in Deutschland.",
+                        "German building law, state building codes and monument protection acts, the model building code and the VOB in their original wording, with explanations and related provisions – or a location check for a plot anywhere in Germany.",
                       )}
                     </p>
                   </div>

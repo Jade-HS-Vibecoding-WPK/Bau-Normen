@@ -1,0 +1,79 @@
+{
+ "gesetz": "saechsbo",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "abstandsflaechen": [
+   "6"
+  ],
+  "nicht-ueberbaute-flaechen": [
+   "8"
+  ],
+  "werbeanlagen": [
+   "10"
+  ],
+  "brandwaende": [
+   "30"
+  ],
+  "rettungswege": [
+   "33"
+  ],
+  "stellplaetze": [
+   "49"
+  ],
+  "barrierefrei": [
+   "50"
+  ],
+  "sonderbauten": [
+   "51"
+  ],
+  "bauherr": [
+   "53"
+  ],
+  "entwurfsverfasser": [
+   "54"
+  ],
+  "bauvorlageberechtigung": [
+   "65"
+  ],
+  "genehmigungspflicht": [
+   "59"
+  ],
+  "verfahrensfrei": [
+   "61"
+  ],
+  "genehmigungsfreistellung": [
+   "62"
+  ],
+  "vereinfachtes-verfahren": [
+   "63"
+  ],
+  "baugenehmigungsverfahren": [
+   "64"
+  ],
+  "abweichungen": [
+   "67"
+  ],
+  "bauantrag": [
+   "68"
+  ],
+  "baugenehmigung": [
+   "72"
+  ],
+  "vorbescheid": [
+   "75"
+  ],
+  "baulasten": [
+   "83"
+  ],
+  "oertliche-bauvorschriften": [
+   "89"
+  ]
+ },
+ "hinweise": [
+  "Werbeanlagen heißen in § 10 „Anlagen der Außenwerbung“ (Abs. 1: „Anlagen der Außenwerbung (Werbeanlagen)“).",
+  "Verfahrensfreie Bauvorhaben stehen als Liste in § 61 selbst, es gibt keinen Anhang.",
+  "Der Grundsatz der Genehmigungspflicht steht in § 59 („Grundsatz“), Abs. 1: Errichtung, Änderung und Nutzungsänderung bedürfen der Baugenehmigung, soweit in den §§ 60 bis 62, 76 und 77 nichts anderes bestimmt ist."
+ ]
+}

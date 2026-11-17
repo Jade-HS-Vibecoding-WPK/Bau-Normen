@@ -1,0 +1,82 @@
+{
+ "gesetz": "baybo",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "abstandsflaechen": [
+   "6"
+  ],
+  "nicht-ueberbaute-flaechen": [
+   "7"
+  ],
+  "werbeanlagen": [
+   "8"
+  ],
+  "brandwaende": [
+   "28"
+  ],
+  "rettungswege": [
+   "31"
+  ],
+  "stellplaetze": [
+   "47"
+  ],
+  "barrierefrei": [
+   "48"
+  ],
+  "sonderbauten": [
+   "54",
+   "2"
+  ],
+  "bauherr": [
+   "50"
+  ],
+  "entwurfsverfasser": [
+   "51"
+  ],
+  "bauvorlageberechtigung": [
+   "61",
+   "61a",
+   "61b"
+  ],
+  "genehmigungspflicht": [
+   "55"
+  ],
+  "verfahrensfrei": [
+   "57"
+  ],
+  "genehmigungsfreistellung": [
+   "58"
+  ],
+  "vereinfachtes-verfahren": [
+   "59"
+  ],
+  "baugenehmigungsverfahren": [
+   "60"
+  ],
+  "abweichungen": [
+   "63"
+  ],
+  "bauantrag": [
+   "64"
+  ],
+  "baugenehmigung": [
+   "68"
+  ],
+  "vorbescheid": [
+   "71"
+  ],
+  "oertliche-bauvorschriften": [
+   "81"
+  ]
+ },
+ "hinweise": [
+  "Bayern zählt in Artikeln (Art. 6 statt § 6).",
+  "Nicht überbaute Flächen stehen in Art. 7 („Begrünung“); Kinderspielplätze regelt die BayBO dort nicht – Gemeinden können eine Spielplatzpflicht durch örtliche Bauvorschrift nach Art. 81 vorsehen.",
+  "Einen eigenen Artikel zu Werbeanlagen gibt es nicht: Art. 8 Satz 3 („Die störende Häufung von Werbeanlagen ist unzulässig.“), Begriff in Art. 2 Abs. 1 Satz 2.",
+  "Sonderbauten: kein eigener Artikel; besondere Anforderungen und Erleichterungen in Art. 54 Abs. 3, Begriff in Art. 2 Abs. 4.",
+  "Verfahrensfreie Bauvorhaben stehen in Art. 57 selbst, kein Anhang.",
+  "Baulasten kennt die BayBO nicht (Thema fehlt)."
+ ]
+}

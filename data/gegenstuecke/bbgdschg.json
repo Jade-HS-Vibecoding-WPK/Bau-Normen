@@ -1,0 +1,45 @@
+{
+ "gesetz": "bbgdschg",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "eintragung": [
+   "3"
+  ],
+  "erhaltungspflicht": [
+   "7"
+  ],
+  "genehmigungspflicht": [
+   "9",
+   "19",
+   "20"
+  ],
+  "umgebungsschutz": [
+   "9",
+   "2"
+  ],
+  "erdarbeiten": [
+   "10",
+   "9"
+  ],
+  "bodenfunde": [
+   "11"
+  ],
+  "behoerden": [
+   "16",
+   "17"
+  ]
+ },
+ "schutzOhneEintragung": true,
+ "belege": {
+  "schutzOhneEintragung": {
+   "norm": "3",
+   "satz": "Der Schutz nach diesem Gesetz ist nicht von der Eintragung der Denkmale in die Denkmalliste abhängig."
+  }
+ },
+ "hinweise": [
+  "Umgebungsschutz: § 2 Abs. 3 (Begriff) und § 9 Abs. 1 Nr. 4 (Erlaubnis für Veränderungen der Umgebung).",
+  "Erdarbeiten: Nachforschungen in § 10; Veränderung der Bodennutzung in Grabungsschutzgebieten/auf Bodendenkmal-Grundstücken erlaubnispflichtig nach § 9 Abs. 1 Nr. 5."
+ ]
+}

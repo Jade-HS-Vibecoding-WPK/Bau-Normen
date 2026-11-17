@@ -1,0 +1,51 @@
+{
+ "gesetz": "dschg-nrw",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "eintragung": [
+   "23",
+   "5"
+  ],
+  "erhaltungspflicht": [
+   "7",
+   "12",
+   "14",
+   "19"
+  ],
+  "genehmigungspflicht": [
+   "9",
+   "13",
+   "15",
+   "20"
+  ],
+  "umgebungsschutz": [
+   "9",
+   "5"
+  ],
+  "erdarbeiten": [
+   "15"
+  ],
+  "bodenfunde": [
+   "16"
+  ],
+  "behoerden": [
+   "21",
+   "22"
+  ]
+ },
+ "schutzOhneEintragung": false,
+ "belege": {
+  "schutzOhneEintragung": {
+   "norm": "5",
+   "satz": "Baudenkmäler, Gartendenkmäler und bewegliche Denkmäler unterliegen mit der Eintragung in die Denkmalliste nach § 23 Absatz 1 oder § 4 Absatz 1, Denkmalbereiche mit ihrer Unterschutzstellung nach § 10 den Vorschriften dieses Gesetzes."
+  }
+ },
+ "hinweise": [
+  "Konstitutiv nur für Baudenkmäler, Gartendenkmäler und bewegliche Denkmäler (§ 5 Abs. 1); Denkmalbereiche durch Satzung (§ 10).",
+  "Bodendenkmäler sind ohne Eintragung geschützt: „Der Schutz von Bodendenkmälern ist nicht von der Eintragung in die Denkmalliste abhängig.“ (§ 5 Abs. 2).",
+  "Vorläufiger Schutz ab Mitteilung der Unterschutzstellungsabsicht (§ 4).",
+  "Umgebungsschutz: § 9 Abs. 2 (Erlaubnis für Anlagen in der engeren Umgebung) und § 5 Abs. 3."
+ ]
+}

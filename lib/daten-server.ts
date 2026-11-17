@@ -2,7 +2,7 @@
 // Nach einem neuen Import (geänderte Dateien) wird automatisch neu geladen.
 import fs from "node:fs";
 import path from "node:path";
-import { setzeDatenquelle, type Datenquelle } from "./gesetze";
+import { setzeDatenquelle, type Datenquelle, type Gegenstuecke } from "./gesetze";
 import type { Erlaeuterung, Gesetz } from "./typen";
 
 const DATEN = path.join(process.cwd(), "data");
@@ -14,6 +14,7 @@ let geprueftUm = 0;
 const PRUEFABSTAND_MS = 2000;
 const erlCache = new Map<string, { mtime: number; daten: Record<string, Erlaeuterung> }>();
 let stichworte: { mtime: number; daten: Record<string, string[] | string> } | null = null;
+let gegen: { schluessel: string; daten: Record<string, Gegenstuecke> } | null = null;
 
 const mtime = (datei: string) => (fs.existsSync(datei) ? fs.statSync(datei).mtimeMs : 0);
 
@@ -55,6 +56,18 @@ export const serverDaten: Datenquelle = {
     if (stichworte && stichworte.mtime === m) return stichworte.daten;
     stichworte = { mtime: m, daten: m ? JSON.parse(fs.readFileSync(datei, "utf8")) : {} };
     return stichworte.daten;
+  },
+  gegenstuecke() {
+    const dir = path.join(DATEN, "gegenstuecke");
+    const schluessel = datenSchluessel(dir);
+    if (gegen && gegen.schluessel === schluessel) return gegen.daten;
+    const daten: Record<string, Gegenstuecke> = {};
+    for (const d of fs.existsSync(dir) ? fs.readdirSync(dir).filter((x) => x.endsWith(".json")) : []) {
+      const g = JSON.parse(fs.readFileSync(path.join(dir, d), "utf8")) as Gegenstuecke;
+      daten[g.gesetz] = g;
+    }
+    gegen = { schluessel, daten };
+    return daten;
   },
 };
 

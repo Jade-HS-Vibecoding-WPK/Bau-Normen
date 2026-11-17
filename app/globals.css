@@ -318,7 +318,7 @@ button { font: inherit; }
 .befund { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
 .kachel { padding: 18px 20px; border-right: 1px dashed var(--line); min-width: 0; }
 .kachel:last-child { border-right: 0; }
-.kachel-kopf { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.kachel-kopf { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; margin-bottom: 10px; }
 .kachel-titel { display: flex; align-items: center; gap: 8px; font-family: var(--font-display), Georgia, serif; font-weight: 600; font-size: 17px; color: var(--g900); font-variation-settings: "SOFT" 100; }
 .status {
   font-family: var(--font-mono), monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
@@ -331,6 +331,8 @@ button { font: inherit; }
 .kachel-wert { margin: 0 0 6px; font-weight: 600; }
 .kachel-sub { margin: 0 0 4px; font-size: 13px; color: var(--ink-2); }
 .kachel-quelle { margin: 10px 0 0; font-size: 11.5px; color: var(--ink-3); }
+.kachel-abdeckung { margin: 4px 0 0; font-size: 11.5px; line-height: 1.45; color: var(--ink-3); }
+.kachel-abdeckung span { font-weight: 600; }
 .plan + .plan { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); }
 .dokumente { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .dokumente li { font-size: 13.5px; }
@@ -720,3 +722,12 @@ code { font-family: var(--font-mono), monospace; font-size: 0.92em; }
   :root:not([data-theme="hell"]) .sk-hier { fill: rgba(255, 122, 99, 0.14); }
   :root:not([data-theme="hell"]) .sk-bplan { fill: rgba(111, 213, 140, 0.08); }
 }
+
+/* ---------- Bibliothek: Bundesland wählen, weitere Länder aufklappbar ---------- */
+.land-wahl { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px; padding: 4px 16px 6px; }
+.land-wahl label { font-family: var(--font-mono), monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
+.land-wahl select { min-width: 0; font: inherit; font-size: 13.5px; padding: 7px 10px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--surface-2); color: var(--ink); }
+.land-hinweis { margin: 4px 16px 8px; padding: 8px 10px; font-size: 12px; line-height: 1.45; color: var(--ink-2); background: var(--ocker-bg); border: 1px solid var(--ocker-line); border-radius: 10px; }
+.weitere-laender { border-top: 1px dashed var(--line); margin: 2px 0 4px; }
+.weitere-laender summary { cursor: pointer; padding: 9px 16px; font-size: 12.5px; font-weight: 600; color: var(--g700); }
+.weitere-laender summary:hover { color: var(--g900); }

@@ -1,3 +1,5 @@
+import { LAENDER, landVonGesetz } from "./laender";
+
 // Angaben ZU den Regelwerken, die nicht aus der Quelle stammen, sondern von uns: Reihenfolge, Art,
 // ein kurzer Hinweis zur Verbindlichkeit und wie der Wortlaut zustande kommt. Der Text der Vorschriften selbst
 // steht ausschließlich in data/gesetze/*.json.
@@ -21,9 +23,11 @@ export interface RegelwerkMeta {
   nurVerzeichnis?: boolean;
   /** Im Kopf der Seite mit Stand anzeigen */
   imKopf?: boolean;
+  /** Landesgesetz: zu welchem Land es gehört (dann zeigt die App es im Zusammenhang dieses Landes) */
+  land?: string;
 }
 
-const GESETZE = { de: "Gesetze", en: "Acts" };
+const GESETZE = { de: "Bundesrecht", en: "Federal law" };
 const MUSTER = { de: "Muster – kein geltendes Recht", en: "Model code – not law in force" };
 const VOB = { de: "VOB – Vergabe- und Vertragsordnung", en: "VOB – award and contract rules" };
 
@@ -39,37 +43,20 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     wortlaut: AMTLICH,
     imKopf: true,
   },
-  ndschg: {
-    reihenfolge: 2,
-    art: "gesetz",
-    artText: { de: "Landesgesetz Niedersachsen", en: "Lower Saxony act" },
-    gruppe: GESETZE,
-    kurztitel: { de: "Denkmalschutzgesetz (Nds.)", en: "Monument Protection Act" },
-    wortlaut: AMTLICH,
-  },
-  nbauo: {
-    reihenfolge: 3,
-    art: "gesetz",
-    artText: { de: "Landesgesetz Niedersachsen", en: "Lower Saxony act" },
-    gruppe: GESETZE,
-    kurztitel: { de: "Bauordnung (Nds.)", en: "Building Code (Lower Saxony)" },
-    wortlaut: AMTLICH,
-    imKopf: true,
-  },
   mbo: {
-    reihenfolge: 4,
+    reihenfolge: 50,
     art: "muster",
     gruppe: MUSTER,
     kurztitel: { de: "Musterbauordnung", en: "Model Building Code" },
     artText: { de: "Muster, kein Gesetz", en: "Model code, not law" },
     hinweis: {
-      de: "Die Musterbauordnung ist eine Vorlage der Bauministerkonferenz und kein geltendes Recht. Verbindlich ist die Bauordnung des jeweiligen Landes – in Niedersachsen die Niedersächsische Bauordnung (NBauO). Deren Paragraphen können anders nummeriert sein und inhaltlich abweichen.",
-      en: "The Model Building Code is a template from the conference of German building ministers, not law in force. What applies is the building code of each state – in Lower Saxony the NBauO. Its sections may be numbered differently and may differ in content.",
+      de: "Die Musterbauordnung ist eine Vorlage der Bauministerkonferenz und kein geltendes Recht. Verbindlich ist die Bauordnung des jeweiligen Landes (z. B. NBauO, BayBO, BauO NRW). Deren Paragraphen können anders nummeriert sein und inhaltlich abweichen.",
+      en: "The Model Building Code is a template from the conference of German building ministers, not law in force. What applies is the building code of each state (e.g. NBauO, BayBO, BauO NRW). Its sections may be numbered differently and may differ in content.",
     },
     wortlaut: { de: "Wortlaut der Musterbauordnung (DIBt), unverändert übernommen", en: "German wording of the model code (DIBt), reproduced unchanged" },
   },
   voba: {
-    reihenfolge: 5,
+    reihenfolge: 51,
     art: "vergabe",
     gruppe: VOB,
     kurztitel: { de: "Teil A – Vergabe", en: "Part A – Award of contracts" },
@@ -84,7 +71,7 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     },
   },
   vobb: {
-    reihenfolge: 6,
+    reihenfolge: 52,
     art: "vertrag",
     gruppe: VOB,
     kurztitel: { de: "Teil B – Vertragsbedingungen", en: "Part B – Contract terms" },
@@ -99,7 +86,7 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     },
   },
   vobc: {
-    reihenfolge: 7,
+    reihenfolge: 53,
     art: "technik",
     gruppe: VOB,
     kurztitel: { de: "Teil C – ATV (DIN-Normen)", en: "Part C – ATV (DIN standards)" },
@@ -115,7 +102,23 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
 
 const UNBEKANNT: RegelwerkMeta = { reihenfolge: 99, art: "gesetz", artText: { de: "Gesetz", en: "Act" }, gruppe: GESETZE, kurztitel: { de: "", en: "" }, wortlaut: AMTLICH };
 
+// Landesgesetze (Bauordnungen und Denkmalschutzgesetze aller 16 Länder) – Angaben aus dem Länderverzeichnis
+for (const [i, l] of LAENDER.entries()) {
+  const gemeinsam = {
+    art: "gesetz" as const,
+    artText: { de: `Landesgesetz ${l.name}`, en: `State act – ${l.name}` },
+    gruppe: { de: `Landesrecht ${l.name}`, en: `State law – ${l.name}` },
+    wortlaut: AMTLICH,
+    land: l.name,
+  };
+  REGELWERKE[l.bauordnung] = { ...gemeinsam, reihenfolge: 10 + i * 2, kurztitel: { de: "Bauordnung", en: "Building code" } };
+  REGELWERKE[l.denkmalschutz] = { ...gemeinsam, reihenfolge: 11 + i * 2, kurztitel: { de: "Denkmalschutzgesetz", en: "Monument protection act" } };
+}
+
 export const regelwerk = (id: string): RegelwerkMeta => REGELWERKE[id] ?? UNBEKANNT;
+
+/** Gehört das Regelwerk zu einem Land (Landesrecht)? */
+export const landDesRegelwerks = (id: string): string | undefined => landVonGesetz(id)?.name;
 
 /** "3a-eu" -> "3a EU" (Paragraphen der VOB/A, Abschnitte 2 und 3) */
 export const nummerText = (nr: string) => nr.replace(/-(eu|vs)$/i, (_, s: string) => " " + s.toUpperCase());

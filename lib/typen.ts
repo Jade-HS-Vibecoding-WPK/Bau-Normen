@@ -13,15 +13,16 @@ export interface Norm {
   id: string;
   bez: string;
   titel: string;
-  gliederung: string[];
+  /** Gliederung, Adresse und Verweise fehlen im Katalog der Online-Version (werden je Gesetz nachgeladen) */
+  gliederung?: string[];
   weggefallen: boolean;
   /** Wortlaut als Strukturbaum. Fehlt in der Kurzfassung der Online-Version (wird bei Bedarf nachgeladen). */
   inhalt?: TextKnoten[];
   /** Reiner Text (für die Suche). Fehlt in der Kurzfassung der Online-Version. */
   text?: string;
   fussnoten?: string;
-  url: string;
-  verweise: string[];
+  url?: string;
+  verweise?: string[];
 }
 
 export interface Gesetz {
@@ -57,6 +58,8 @@ export interface GesetzInfo {
   nurVerzeichnis?: boolean;
   /** Stand im Seitenkopf zeigen */
   imKopf?: boolean;
+  /** Landesgesetz: zugehöriges Land */
+  land?: string;
 }
 
 /** Kurzer Verweis auf einen Paragraphen (für Chips/Links). */
@@ -76,7 +79,7 @@ export interface Erlaeuterung {
 
 export interface NormAnsicht {
   gesetz: GesetzInfo;
-  norm: Omit<Norm, "text" | "verweise" | "inhalt"> & { inhalt: TextKnoten[] };
+  norm: Omit<Norm, "text" | "verweise" | "inhalt" | "gliederung" | "url"> & { inhalt: TextKnoten[]; gliederung: string[]; url: string };
   erlaeuterung?: Erlaeuterung;
   verweistAuf: NormRef[];
   erwaehntIn: NormRef[];
@@ -106,12 +109,15 @@ export interface OrtAnsicht {
     | {
         status: "gefunden" | "keiner";
         plaene: {
+          /** kann leer sein, wenn der Dienst keine Plannummer führt */
           nummer: string;
           name: string;
           rechtsverbindlichSeit?: string;
           baunvo?: string;
           vorhabenbezogen: boolean;
           verfahren?: string;
+          /** Link zum Plan (Planzeichnung, Detailseite) – amtliche Adresse aus dem Dienst */
+          link?: string;
           dokumente?: { art: string; name: string; url: string; groesseMB: number }[];
           /** Planumring in Metern relativ zum Standort (x Osten, y Norden) */
           umriss: [number, number][][];
@@ -120,6 +126,9 @@ export interface OrtAnsicht {
         weitere: { art: "in-aufstellung" | "veraenderungssperre" | "unwirksam"; nummer: string; name: string; hinweis?: string }[] | null;
         dokumenteAbrufbar: boolean;
         quelle: string;
+        /** ein vollständiger Dienst hat geantwortet – nur dann heißt "keiner" wirklich "kein Plan" */
+        vollstaendig?: boolean;
+        abdeckung?: string;
       }
     | { status: "fehler"; hinweis: string; quelle: string; /** Für diesen Ort ist (noch) kein Dienst angebunden */ nichtAngebunden?: boolean };
   denkmal:
@@ -135,11 +144,14 @@ export interface OrtAnsicht {
           entfernungM: number;
           amStandort: boolean;
           link?: string;
-          /** Umriss in Metern relativ zum Standort (x Osten, y Norden) */
+          /** Umriss in Metern relativ zum Standort (x Osten, y Norden) – AUS DEM DIENST */
           umriss: [number, number][][];
         }[];
         radiusM: number;
         quelle: string;
+        /** ein vollständiger Dienst hat geantwortet – nur dann heißt "keiner" wirklich "kein Denkmal" */
+        vollstaendig?: boolean;
+        abdeckung?: string;
       }
     | { status: "fehler"; hinweis: string; quelle: string; /** Für diesen Ort ist (noch) kein Dienst angebunden */ nichtAngebunden?: boolean };
   nutzerNenntDenkmal: boolean;

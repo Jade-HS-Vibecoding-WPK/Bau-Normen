@@ -1,0 +1,79 @@
+{
+ "gesetz": "bremlbo",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "abstandsflaechen": [
+   "6"
+  ],
+  "nicht-ueberbaute-flaechen": [
+   "8"
+  ],
+  "werbeanlagen": [
+   "10"
+  ],
+  "brandwaende": [
+   "30"
+  ],
+  "rettungswege": [
+   "33"
+  ],
+  "stellplaetze": [
+   "49"
+  ],
+  "barrierefrei": [
+   "50"
+  ],
+  "sonderbauten": [
+   "51"
+  ],
+  "bauherr": [
+   "53"
+  ],
+  "entwurfsverfasser": [
+   "54"
+  ],
+  "bauvorlageberechtigung": [
+   "65"
+  ],
+  "genehmigungspflicht": [
+   "59"
+  ],
+  "verfahrensfrei": [
+   "61"
+  ],
+  "genehmigungsfreistellung": [
+   "62"
+  ],
+  "vereinfachtes-verfahren": [
+   "63"
+  ],
+  "baugenehmigungsverfahren": [
+   "64"
+  ],
+  "abweichungen": [
+   "67"
+  ],
+  "bauantrag": [
+   "68"
+  ],
+  "baugenehmigung": [
+   "72"
+  ],
+  "vorbescheid": [
+   "75"
+  ],
+  "baulasten": [
+   "82"
+  ],
+  "oertliche-bauvorschriften": [
+   "86"
+  ]
+ },
+ "hinweise": [
+  "Verfahrensfreie Bauvorhaben stehen in § 61 selbst (kein Anhang); § 61 regelt auch Beseitigung von Anlagen, Vorhaben des Bundes und die Nothilfevorschrift.",
+  "Stellplätze und Fahrradabstellplätze sind nach § 49 Abs. 1 nur notwendig, soweit eine örtliche Bauvorschrift nach § 86 Abs. 1 Nr. 4 dies bestimmt (Stellplatzortsgesetze der Stadtgemeinden).",
+  "Laut den Gültigkeitsangaben des Portals gilt die angezeigte Fassung seit 01.07.2024 (bis 31.12.2026); die Änderungen durch das Gesetz vom 01.09.2026 (u. a. §§ 3, 16c, 55, 62, 69 neu gefasst, § 51a neu) sind darin noch nicht enthalten. Achtung: § 1 Abs. 2 Satz 1 Nr. 8 zeigt im Portal bereits den Wortlaut von Artikel 2 des Gesetzes vom 29. Mai 2024, der laut dessen Artikel 5 Abs. 2 erst am 14. Januar 2027 in Kraft tritt (Abweichung vom Gesetzblatt, siehe Gegenprüfung)."
+ ]
+}

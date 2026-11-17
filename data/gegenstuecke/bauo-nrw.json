@@ -1,0 +1,78 @@
+{
+ "gesetz": "bauo-nrw",
+ "themen": {
+  "begriffe": [
+   "2"
+  ],
+  "abstandsflaechen": [
+   "6"
+  ],
+  "nicht-ueberbaute-flaechen": [
+   "8"
+  ],
+  "werbeanlagen": [
+   "10"
+  ],
+  "brandwaende": [
+   "30"
+  ],
+  "rettungswege": [
+   "33"
+  ],
+  "stellplaetze": [
+   "48"
+  ],
+  "barrierefrei": [
+   "49"
+  ],
+  "sonderbauten": [
+   "50"
+  ],
+  "bauherr": [
+   "53"
+  ],
+  "entwurfsverfasser": [
+   "54"
+  ],
+  "bauvorlageberechtigung": [
+   "67"
+  ],
+  "genehmigungspflicht": [
+   "60"
+  ],
+  "verfahrensfrei": [
+   "62"
+  ],
+  "genehmigungsfreistellung": [
+   "63"
+  ],
+  "vereinfachtes-verfahren": [
+   "64"
+  ],
+  "baugenehmigungsverfahren": [
+   "65"
+  ],
+  "abweichungen": [
+   "69"
+  ],
+  "bauantrag": [
+   "70"
+  ],
+  "baugenehmigung": [
+   "74"
+  ],
+  "vorbescheid": [
+   "77"
+  ],
+  "baulasten": [
+   "85"
+  ],
+  "oertliche-bauvorschriften": [
+   "89"
+  ]
+ },
+ "hinweise": [
+  "Verfahrensfreie Bauvorhaben stehen in § 62 selbst, kein Anhang.",
+  "Aufzählungen liefert das Portal als einzelne Absätze; Nummern und Buchstaben stehen im Wortlaut jeder Zeile."
+ ]
+}

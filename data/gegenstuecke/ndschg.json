@@ -1,0 +1,44 @@
+{
+ "gesetz": "ndschg",
+ "themen": {
+  "begriffe": [
+   "3"
+  ],
+  "eintragung": [
+   "4",
+   "5"
+  ],
+  "erhaltungspflicht": [
+   "6",
+   "7"
+  ],
+  "genehmigungspflicht": [
+   "10",
+   "24"
+  ],
+  "umgebungsschutz": [
+   "8"
+  ],
+  "erdarbeiten": [
+   "12",
+   "13"
+  ],
+  "bodenfunde": [
+   "14"
+  ],
+  "behoerden": [
+   "19",
+   "20"
+  ]
+ },
+ "schutzOhneEintragung": true,
+ "belege": {
+  "schutzOhneEintragung": {
+   "norm": "5",
+   "satz": "Die Anwendbarkeit der Schutzvorschriften dieses Gesetzes ist nicht davon abhängig, dass Kulturdenkmale in das Verzeichnis nach § 4 eingetragen sind."
+  }
+ },
+ "hinweise": [
+  "Bewegliche Denkmale: §§ 6, 10 und 11 nur bei Eintragung (§ 5 Abs. 1 Satz 2)."
+ ]
+}

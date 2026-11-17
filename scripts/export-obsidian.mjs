@@ -695,7 +695,9 @@ function selbsttest(paragraphNotizen) {
       const ohneHoch = (s) => s.replace(/[²³]/g, "");
       const mitSup = m[1].includes("<sup>");
       const vergleich = (s) => (mitSup ? ohneHoch(s).replace(/\s+/g, "") : normWs(s));
-      const ist = vergleich(markdownZuKlartext(m[1].replace(/<sup>[^<]*<\/sup>/g, "")));
+      // Weiche Trennzeichen (U+00AD, z. B. „Er­kenntnisse“ in § 83 BauO NRW) stehen in der Notiz wie in der Quelle,
+      // fehlen aber im Feld "text" (siehe alsText in scripts/lib/landesrecht-c-gemeinsam.mjs) – für den Vergleich weg damit.
+      const ist = vergleich(markdownZuKlartext(m[1].replace(/<sup>[^<]*<\/sup>/g, "")).replace(/­/g, ""));
       const soll = vergleich(n.text);
       if (ist !== soll) fehler.push(`${notiz.name}: Wortlaut weicht ab ${abweichung(ist, soll)}`);
       const h1 = notiz.inhalt.match(/\n# (.*)\n/);

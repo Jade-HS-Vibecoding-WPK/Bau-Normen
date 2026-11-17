@@ -61,6 +61,42 @@
 - [ ] Stichwortverzeichnis erweitern, mehr Testfälle
 - [ ] BauNVO importieren (wird in B-Plänen zitiert; Hinweis: ältere B-Pläne gelten mit älteren BauNVO-Fassungen)
 
+## Bundesweite Erweiterung – ÜBERGABE für den nächsten Chat (Stand 17.11.2026 abends)
+
+**Arbeitsstand (17.11.2026, spät):** Alles liegt im Arbeitsverzeichnis auf `main`, **nichts ist committet** (letzter Commit `8aeb05f`, online). Schritte 1–4 unten erledigt: TypeScript, `next build` und `build:pages` fehlerfrei, Testkatalog 80/80, Gegenstücke 0 Fehler, Obsidian 1344/1344. Offen ist nur noch die Freigabe für Commit/Push (und ggf. neue Bilder für die README).
+
+**Start-Text für den neuen Chat:**
+> Lies TODO.md, Abschnitt „Bundesweite Erweiterung – ÜBERGABE“, und mach dort weiter. Frag vor jedem Commit/Push.
+
+### Fertig (im Arbeitsverzeichnis)
+- **Länderverzeichnis** `lib/laender.ts` (16 Länder, Bauordnung/DSchG, Kürzel); Metadaten der Landesgesetze automatisch in `lib/regelwerke.ts`
+- **Land-Bezug:** Einstellung `land` (Standard Niedersachsen), Auswahl „Bundesland“ in der Bibliothek, Wechsel nach Ortsauskunft auf das Land der Adresse; Anfrage trägt `land`
+- **Lotse:** Kürzel/Titel aller Landesgesetze, „Bauordnung/LBO/DSchG“ = Gesetz des gewählten Landes, „Art.“ (Bayern); Rückfragen, Stichworte, Suche nur Bund + Land + MBO + VOB; fehlendes Landesgesetz wird offen gemeldet; Landesrecht vor MBO sortiert
+- **Landesgesetze importiert (10):** BayBO, BayDSchG, BauO NRW, DSchG NRW, SächsBO, SächsDSchG, BbgBO, BbgDSchG, BremLBO, BremDSchG – `scripts/import-landesrecht-c.mjs` (`--offline --pruefen`), Prüfprotokolle in `data/quellen/landesrecht/<id>/pruefung.txt` (git-ignoriert). Abweichungen Portal ↔ Gesetzblatt (Bremen 8, Brandenburg 1) als sichtbarer Hinweis an der Vorschrift.
+- **Gegenstücke** `data/gegenstuecke/*.json` für alle 12 Landesgesetze (Thema → Vorschriften, `schutzOhneEintragung` mit wörtlichem Beleg); Stichworte mit Platzhaltern `@bauordnung:<thema>` / `@denkmalschutz:<thema>`
+- **Datenlagerung Online-Version:** `katalog.json` + je Gesetz `details/`, `wortlaut/`, `suche/` (nur bei Bedarf geladen)
+- **Geodienste:** `lib/ort/dienste/` – 19 B-Plan- und 17 Denkmaldienste aller Länder (amtlich, getestet, CORS ok); nur Hamburg und Bremerhaven sind `vollstaendig`; Oldenburg jetzt bewusst `vollstaendig: false`
+- **Ortsauskunft:** fragt alle passenden Dienste parallel ab und fasst zusammen (`zusammenfassen` in `lib/ort/index.ts`); B-Plan-Texte allgemein; „kein Plan“ nur bei vollständigem Dienst, sonst „nicht verzeichnet – Dienst nicht vollständig“; Bauordnungsrecht nach dem Land der Adresse
+
+### Als Nächstes (in dieser Reihenfolge)
+1. [x] **Denkmal-Einordnung in `lib/ort/index.ts` verallgemeinern** – erledigt: Texte landesneutral, Paragraphen aus `data/gegenstuecke`, Satz zur Eintragung mit wörtlichem Beleg (true: NI, BY, SN, BB; false/konstitutiv: NRW, HB), ohne Gesetz (z. B. HH, TH) Text ohne Paragraphen; „Bei Erdarbeiten“ für jedes Land; Ausfall einzelner Dienste wird genannt. Neues Prüfprogramm `node scripts/gegenstuecke-pruefen.mjs`. Ursprüngliche Aufgabe: (Abschnitt „// --- Denkmalrecht ---“): Die Texte nennen noch NDSchG-Paragraphen und den Denkmalatlas Niedersachsen – für andere Länder FALSCH. Stattdessen: Gesetz über `landesgesetz(standort.land, "denkmalschutz")`, Vorschriften über `gegenstuecke(id).themen` (begriffe, genehmigungspflicht, erhaltungspflicht, umgebungsschutz, erdarbeiten, bodenfunde, behoerden), Aussage zum Schutz ohne Eintragung nur nach `schutzOhneEintragung` (true/false/null) mit Beleg; ohne importiertes Gesetz allgemeiner Text ohne Paragraphen. Denkmal-Ergebnis um `vollstaendig`/`abdeckung` ergänzen (wie B-Plan), Quelle = `dm.quelle`. Abschnitt „Bei Erdarbeiten“ ebenso (nicht mehr nur `inNds`).
+2. [x] **Oberfläche:** „nicht verzeichnet“ bei unvollständigem Dienst (Kachel und Gebietsleiste, B-Plan und Denkmal), Abdeckung klein unter der Quelle, Plan-Link („Plan öffnen“), leere Plannummer; Status-Etikett bricht um statt in die Nachbarkachel zu ragen; veraltete Texte „nur Oldenburg/Niedersachsen“ ersetzt (Karte, Gebietsleiste, Fußzeile mit Quellen und Lizenz, Lageskizze, Formularhinweise, Startseite). Nebenbei behoben: Gecko meldete außerhalb Oldenburgs fälschlich „Plan-Dokumente/Laufende Verfahren nicht abrufbar“.
+3. [x] Testkatalog 80/80 (15 neue Orts-Fälle, je Land eine Adresse), `npx next build` und `npm run build:pages` fehlerfrei, Online-Fassung im Browser geprüft (Köln: DSchG-NRW-Paragraphen, Chip öffnet § 5 DSchG NRW), Obsidian 1745 Notizen, Selbsttest 1344/1344 – dafür im Selbsttest weiche Trennzeichen (U+00AD, § 83 BauO NRW) wie im Suchtext ausgenommen.
+4. [x] README: Länder, Landesrecht, Dienste-Tabelle mit Lizenzen und Abdeckung, Qualitätssicherung, Befehle. **Nicht** gemacht: neue Bilder (die vorhandenen zeigen Oldenburg und stimmen weiterhin). → **Nutzerin fragen, ob committet/gepusht werden soll.**
+
+### Beobachtungen beim Testen (offen)
+- Adresserkennung: „Ich plane einen Anbau an der Beethovenstraße 20 …“ wird zu Straße „Anbau an der Beethovenstraße“ (Wörter vor „an der“ werden nur entfernt, wenn sie in `KEIN_STRASSENTEIL` stehen, `lib/verstehen.ts`). Mit „Ich habe ein Grundstück an der …“ klappt es.
+- Denkmal-Dienst Rostock (geo.sv.rostock.de) antwortete am 17.11. abends nicht (Zeitüberschreitung) – App sagt korrekt „keine Aussage“; im Testkatalog ist der Denkmalstatus für Rostock deshalb offen („*“).
+
+### Entscheidungen der Nutzerin (offen)
+- **juris-Portale (BW, BE, HH, HE, MV, RP, SL, ST, SH, TH):** robots.txt `Disallow: /` + TDM-Vorbehalt → nichts abgerufen. Wege: Erlaubnis/Export anfragen (juris service@juris.de bzw. Länder) oder Gesetze von Hand speichern und offline einlesen (rechtlich prüfen).
+- **Lizenzen der Geodienste:** Bayern CC BY-ND (Namensnennung zeigen), Sachsen-Denkmal teils CC BY-NC-ND (nicht kommerziell), Nürnberg nur „©“, München ohne Angabe, Schwerin „Zugriff beschränkt“ – vor kommerzieller Nutzung klären.
+- **gesetzblatt.bremen.de** verbietet Speicherung – die beiden PDFs wurden nur lokal zum Abgleich geladen (git-ignoriert).
+- **Stand-Datum** von BremLBO/BbgBO nennt Änderungen, die noch nicht gelten (Portalangabe).
+
+### Testadressen der Geodienste (alle am 17.11.2026 geprüft)
+Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münster (BW-Denkmal) · München Messestadt Riem / Frauenplatz 1 · Nürnberg Johannisstraße · Berlin Pariser Platz / Brandenburger Tor · Potsdam Alter Markt 1 · Bremen Konsul-Smidt-Str. 10 / Am Markt · Bremerhaven Hans-Scharoun-Platz 1 · Hamburg Rathausmarkt 1 · Frankfurt Messe / Dom · Rostock Am Schilde / Neuer Markt 1 · Schwerin Alexandrinenstr. 3 · Köln Roncalliplatz / Dom · Bonn Beethovenhalle · Dortmund U-Turm · Koblenz Löhrstraße · Mainzer Dom · Saarbrücken Ludwigskirche · Leipzig Messe-Allee 1 · Dresden Frauenkirche · Magdeburg Willy-Brandt-Platz / Dom · Kiel Holstein-Stadion / Schloss · Erfurt Landtag
+
 ## Tag 3 – 18.11. (final)
 - [ ] Robustheit: Zeitlimits, Ausfall einzelner Dienste, verständliche Fehlermeldungen
 - [ ] Mobilansicht und Barrierefreiheit prüfen
@@ -72,7 +108,7 @@
 - [ ] Weitere Landes-Denkmalschutzgesetze – jedes Land einzeln mit Treueprüfung
 - [x] NBauO (Niedersächsische Bauordnung)
 - [ ] B-Plan-Dienste weiterer Städte (z. B. über XPlanung/Geoportale der Länder) und Denkmal-Dienste weiterer Länder anbinden
-- [ ] Landesbauordnungen weiterer Länder (z. B. BauO NRW, BayBO) – Ortsauskunft verweist bisher nur auf die MBO
+- [x] Landesbauordnungen und Denkmalschutzgesetze von Bayern, NRW, Sachsen, Brandenburg, Bremen (die übrigen zehn Länder: siehe „Entscheidungen der Nutzerin“ oben)
 - [ ] Weitere frei verfügbare Regelwerke: BauNVO, PlanZV, GEG, HOAI, BGB-Bauvertragsrecht (§§ 650a ff.), NTVergG, DVO-NBauO
 - [ ] § 3a VOB/A: zusammengeführten Text fachlich gegenlesen lassen (die Bekanntmachung 2025 enthält nur Änderungsbefehle)
 - [ ] VOB/B: auf die Bundesanzeiger-Fassungen (2009/2012/2016) umstellen, sobald abrufbar (bisher konsolidierte Lesefassung der Fachinformation Bundesbau)

@@ -4,6 +4,7 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import type { Sprache } from "@/lib/sprache";
 import { EINSTELLUNGEN_SCHLUESSEL } from "@/lib/vorab";
+import { landNamens, STANDARD_LAND } from "@/lib/laender";
 
 export type Thema = "auto" | "hell" | "dunkel";
 export interface Einstellungen {
@@ -11,9 +12,11 @@ export interface Einstellungen {
   thema: Thema;
   gecko: boolean;
   bewegung: boolean;
+  /** Bundesland, dessen Gesetze gemeint sind (Bauordnung, Denkmalschutz) – nach einer Ortsauskunft das Land der Adresse */
+  land: string;
 }
 
-const STANDARD: Einstellungen = { sprache: "de", thema: "auto", gecko: true, bewegung: true };
+const STANDARD: Einstellungen = { sprache: "de", thema: "auto", gecko: true, bewegung: true, land: STANDARD_LAND };
 const SCHLUESSEL = EINSTELLUNGEN_SCHLUESSEL;
 
 const Kontext = createContext<{ e: Einstellungen; setze: (teil: Partial<Einstellungen>) => void }>({ e: STANDARD, setze: () => {} });
@@ -33,6 +36,7 @@ export function EinstellungenProvider({ children }: { children: React.ReactNode 
         thema: roh.thema === "hell" || roh.thema === "dunkel" ? roh.thema : "auto",
         gecko: typeof roh.gecko === "boolean" ? roh.gecko : alt !== "aus",
         bewegung: roh.bewegung !== false,
+        land: landNamens(roh.land)?.name ?? STANDARD_LAND,
       });
     } catch {
       /* kein Speicher verfügbar */
