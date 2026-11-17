@@ -64,7 +64,7 @@
 
 ## Bundesweite Erweiterung – ÜBERGABE für den nächsten Chat (Stand 17.11.2026 abends)
 
-**Arbeitsstand (17.11.2026, spät):** Alles liegt im Arbeitsverzeichnis auf `main`, **nichts ist committet** (letzter Commit `8aeb05f`, online). Schritte 1–4 unten erledigt: TypeScript, `next build` und `build:pages` fehlerfrei, Testkatalog 80/80, Gegenstücke 0 Fehler, Obsidian 1344/1344. Offen ist nur noch die Freigabe für Commit/Push (und ggf. neue Bilder für die README).
+**Arbeitsstand (17.11.2026, spät):** Schritte 1–4 unten erledigt und online (Commits `26e1574`, `9964c65`, `a11949f`). Das Repository heißt seit 17.11. abends **`Bau-Normen`** – die Online-Version liegt jetzt unter https://jade-hs-vibecoding-wpk.github.io/Bau-Normen/ (die alte Adresse …/Bau-Normen-KI/ liefert 404; GitHub leitet Pages-Adressen nicht um). Danach: Robustheit, Adresserkennung, Mobil/Barrierefreiheit, Demo-Ablauf – siehe „Tag 3“.
 
 **Start-Text für den neuen Chat:**
 > Lies TODO.md, Abschnitt „Bundesweite Erweiterung – ÜBERGABE“, und mach dort weiter. Frag vor jedem Commit/Push.
@@ -85,8 +85,8 @@
 3. [x] Testkatalog 80/80 (15 neue Orts-Fälle, je Land eine Adresse), `npx next build` und `npm run build:pages` fehlerfrei, Online-Fassung im Browser geprüft (Köln: DSchG-NRW-Paragraphen, Chip öffnet § 5 DSchG NRW), Obsidian 1745 Notizen, Selbsttest 1344/1344 – dafür im Selbsttest weiche Trennzeichen (U+00AD, § 83 BauO NRW) wie im Suchtext ausgenommen.
 4. [x] README: Länder, Landesrecht, Dienste-Tabelle mit Lizenzen und Abdeckung, Qualitätssicherung, Befehle. **Nicht** gemacht: neue Bilder (die vorhandenen zeigen Oldenburg und stimmen weiterhin). → **Nutzerin fragen, ob committet/gepusht werden soll.**
 
-### Beobachtungen beim Testen (offen)
-- Adresserkennung: „Ich plane einen Anbau an der Beethovenstraße 20 …“ wird zu Straße „Anbau an der Beethovenstraße“ (Wörter vor „an der“ werden nur entfernt, wenn sie in `KEIN_STRASSENTEIL` stehen, `lib/verstehen.ts`). Mit „Ich habe ein Grundstück an der …“ klappt es.
+### Beobachtungen beim Testen
+- [x] Adresserkennung: „Ich plane einen Anbau an der Beethovenstraße 20 …“ wurde zu Straße „Anbau an der Beethovenstraße“ – behoben (`lib/verstehen.ts`: ab dem letzten kleingeschriebenen Wort abschneiden, „am“ bleibt Teil des Namens; zwei neue Testfälle). Bekannt, unverändert: „Auf dem Wall 3“ wird zu „Wall“ (Füllwörter am Satzanfang).
 - Denkmal-Dienst Rostock (geo.sv.rostock.de) antwortete am 17.11. abends nicht (Zeitüberschreitung) – App sagt korrekt „keine Aussage“; im Testkatalog ist der Denkmalstatus für Rostock deshalb offen („*“).
 
 ### Entscheidungen der Nutzerin (offen)
@@ -99,10 +99,11 @@
 Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münster (BW-Denkmal) · München Messestadt Riem / Frauenplatz 1 · Nürnberg Johannisstraße · Berlin Pariser Platz / Brandenburger Tor · Potsdam Alter Markt 1 · Bremen Konsul-Smidt-Str. 10 / Am Markt · Bremerhaven Hans-Scharoun-Platz 1 · Hamburg Rathausmarkt 1 · Frankfurt Messe / Dom · Rostock Am Schilde / Neuer Markt 1 · Schwerin Alexandrinenstr. 3 · Köln Roncalliplatz / Dom · Bonn Beethovenhalle · Dortmund U-Turm · Koblenz Löhrstraße · Mainzer Dom · Saarbrücken Ludwigskirche · Leipzig Messe-Allee 1 · Dresden Frauenkirche · Magdeburg Willy-Brandt-Platz / Dom · Kiel Holstein-Stadion / Schloss · Erfurt Landtag
 
 ## Tag 3 – 18.11. (final)
-- [ ] Robustheit: Zeitlimits, Ausfall einzelner Dienste, verständliche Fehlermeldungen
-- [ ] Mobilansicht und Barrierefreiheit prüfen
+- [x] Robustheit: jeder Dienst höchstens 15 s (danach „nicht rechtzeitig geantwortet“, die übrigen Dienste zählen weiter), Oldenburger Plan-Dokumente ebenso; Adresssuche versucht es nach einem Aussetzer einmal neu (1,5 s Pause wegen der Nominatim-Regel); unerwartete Fehler im Server kommen als verständliche Meldung statt „Verbindung fehlgeschlagen“; nach 4 s Ladezeit Hinweis, dass mehrere Dienste abgefragt werden
+- [x] Mobilansicht und Barrierefreiheit geprüft (375 px: kein seitliches Scrollen, Karten und Ortsauskunft passen; Abdeckungs-Hinweis jetzt aufklappbar; alle Felder beschriftet, Bilder mit Alternativtext, Kontrast der kleinen Hinweistexte ≥ 4,5:1 in Hell und Dunkel; Ladeanzeige als `role="status"`). Offen, klein: Nach der ersten Antwort gibt es keine `h1` mehr (die Startüberschrift verschwindet).
 - [x] README mit Startanleitung
-- [ ] Demo-Ablauf für die Präsentation
+- [x] Demo-Ablauf für die Präsentation: `docs/demo-ablauf.md` (14 Schritte, live geprüft, mit Rückfallebene)
+- [x] Testkatalog 82/82, `next build` und `build:pages` fehlerfrei
 - [x] Online stellen (GitHub Pages) – einmalig „Settings → Pages → Source: GitHub Actions“ aktivieren
 
 ## Tag 4 – 19.11. (Puffer)

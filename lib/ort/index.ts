@@ -75,9 +75,17 @@ function zusammenfassen<T, D extends { quelle: string; vollstaendig: boolean; ab
   };
 }
 
-/** Ein Dienst, der wirft statt "fehler" zu melden, zählt als ausgefallen */
+/** Obergrenze je Dienst: Manche Dienste fragen mehrmals nacheinander ab – länger als das wartet die Auskunft nicht. */
+const FRIST_MS = 15000;
+const frist = <T,>(p: Promise<T>, ersatz: () => T): Promise<T> =>
+  Promise.race([p, new Promise<T>((ok) => setTimeout(() => ok(ersatz()), FRIST_MS))]);
+
+/** Ein Dienst, der wirft statt "fehler" zu melden oder die Frist überschreitet, zählt als ausgefallen */
 const sicher = <T,>(p: Promise<DienstErgebnis<T>>, sprache: Sprache): Promise<DienstErgebnis<T>> =>
-  p.catch(() => ({ status: "fehler" as const, hinweis: sprache === "en" ? "Service not reachable." : "Dienst nicht erreichbar." }));
+  frist(
+    p.catch(() => ({ status: "fehler" as const, hinweis: sprache === "en" ? "Service not reachable." : "Dienst nicht erreichbar." })),
+    () => ({ status: "fehler" as const, hinweis: sprache === "en" ? "Service did not respond in time." : "Dienst hat nicht rechtzeitig geantwortet." }),
+  );
 
 /** Ortsauskunft als Antwort – bei mehrdeutiger Adresse (Straße in mehreren Orten) als Rückfrage. */
 export async function ortsAntwort(e: AdressEingabe, frage: string, sprache: Sprache = "de"): Promise<Antwort> {
@@ -131,8 +139,9 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
   const [bpErg, dmErg, dokumente, weitere] = await Promise.all([
     Promise.all(bpDienste.map((d) => sicher(d.abfrage(standort.lat, standort.lon, sprache), sprache))),
     Promise.all(dmDienste.map((d) => sicher(d.abfrage(standort.lat, standort.lon, RADIUS_M, sprache), sprache))),
-    oldenburg ? planDokumente(standort.lat, standort.lon) : null,
-    oldenburg ? weiterePlaene(standort.lat, standort.lon, sprache) : null,
+    // null = nicht abrufbar (die Auskunft sagt das dann offen)
+    oldenburg ? frist(planDokumente(standort.lat, standort.lon).catch(() => null), () => null) : null,
+    oldenburg ? frist(weiterePlaene(standort.lat, standort.lon, sprache).catch(() => null), () => null) : null,
   ]);
   const bp = zusammenfassen(bpDienste, bpErg, (p) => `${p.nummer}|${p.name}`, sprache);
   const dm = zusammenfassen(dmDienste, dmErg, (d) => `${d.name}|${d.anschrift ?? ""}|${d.entfernungM}`, sprache);

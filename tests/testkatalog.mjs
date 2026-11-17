@@ -80,6 +80,9 @@ const FAELLE = [
   { frage: "Gartenstraße 5", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Ich habe ein Grundstück an der Gartenstraße 5, dort steht ein Denkmal", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Fantasiestraße 999", erwartet: [["ort", "standort-fehlt"]] },
+  // Adresse mitten im Satz: Satzteile vor dem Straßennamen gehören nicht zur Straße, "am" schon ("Am Markt")
+  { frage: "Ich plane einen Anbau an der Gartenstraße 5 in Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Lohnt sich ein Umbau im Haus am Markt 1, 28195 Bremen?", erwartet: [["ort", "gefunden/am-standort"]] },
   // Ortsauskunft Deutschland: Dienste je Land/Stadt (lib/ort/dienste); "keiner" bei unvollständigen Diensten = "nicht verzeichnet"
   { frage: "Gartenstraße 5, 26122 Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Bahnhofstraße 1, 30159 Hannover", erwartet: [["ort", "fehler/*"]] },

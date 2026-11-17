@@ -121,11 +121,22 @@ const KEIN_STRASSENTEIL = new Set([
 const ORTSNAME = "[A-ZÄÖÜ][\\wäöüß.()/-]*(?:\\s+(?:[A-ZÄÖÜ(][\\wäöüß.()/-]*|am|an|der|im|in|bei|ob|vor|a\\.|i\\.|v\\.|d\\.))*";
 const PLZ_ORT = new RegExp(`^\\s*,?\\s*(?:in\\s+)?(\\d{5})(?:\\s+(${ORTSNAME}))?|^\\s*(?:,|\\bin\\b)\\s*(${ORTSNAME})`);
 
+// Straßennamen, die selbst mit einem Vorwort beginnen ("Auf dem Wall", "An der Brücke", "Am Markt")
+const VORWORT_ANFANG = new Set(["an", "am", "auf", "im", "in", "hinter", "unter", "vor", "zum", "zur", "über", "bei", "beim"]);
+
 export function erkenneAdresse(t: string, nurMitEndung = false): { strasse: string; hausnummer: string; plz?: string; ort?: string } | null {
-  const m = t.match(MIT_ENDUNG) ?? (nurMitEndung ? null : t.match(MIT_VORWORT));
+  const mitEndung = t.match(MIT_ENDUNG);
+  const m = mitEndung ?? (nurMitEndung ? null : t.match(MIT_VORWORT));
   if (!m) return null;
   const woerter = m[1].trim().split(/\s+/);
   while (woerter.length > 1 && KEIN_STRASSENTEIL.has(woerter[0].toLowerCase())) woerter.shift();
+  // Satzteile vor dem Straßennamen ("Ich plane einen Anbau an der Beethovenstraße 20"): Kleingeschriebenes gehört in
+  // Straßennamen mit Endung (…straße, …weg) nur hinter ein Vorwort am Anfang ("Auf dem Wall"). Sonst ab dem letzten
+  // kleingeschriebenen Wort abschneiden; "am" bleibt dabei Teil des Namens ("Haus am Markt 1" → "Am Markt").
+  if (mitEndung && !VORWORT_ANFANG.has(woerter[0].toLowerCase())) {
+    const k = woerter.slice(0, -1).map((w) => /^[a-zäöüß]/.test(w)).lastIndexOf(true);
+    if (k >= 0) woerter.splice(0, woerter[k] === "am" ? k : k + 1);
+  }
   const strasse = woerter.join(" ").replace(/^./, (c) => c.toUpperCase());
   const rest = t.slice((m.index ?? 0) + m[0].length).match(PLZ_ORT);
   const plz = rest?.[1];

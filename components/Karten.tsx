@@ -251,14 +251,15 @@ function statusAnzeige(t: T, o: OrtAnsicht) {
   };
 }
 
-/** Hinweis zur Abdeckung der Dienste (klein unter der Quelle) */
+/** Hinweis zur Abdeckung der Dienste (klein unter der Quelle, aufklappbar – bei mehreren Diensten wird er lang) */
 function Abdeckung({ x }: { x: OrtAnsicht["bplan"] | OrtAnsicht["denkmal"] }) {
   const t = useT();
   if (x.status === "fehler" || !x.abdeckung) return null;
   return (
-    <p className="kachel-abdeckung" lang="de">
-      <span>{t("Abdeckung", "Coverage")}:</span> {x.abdeckung}
-    </p>
+    <details className="kachel-abdeckung">
+      <summary>{t("Abdeckung des Dienstes", "Service coverage")}</summary>
+      <span lang="de">{x.abdeckung}</span>
+    </details>
   );
 }
 

@@ -228,7 +228,8 @@ button { font: inherit; }
 .anfrage-label { display: block; font-family: var(--font-mono), monospace; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--g700); margin-bottom: 2px; }
 .antworten { display: flex; flex-direction: column; gap: 16px; }
 
-.laden { display: flex; align-items: center; gap: 12px; color: var(--ink-3); font-size: 13.5px; }
+.laden { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; color: var(--ink-3); font-size: 13.5px; }
+.laden-hinweis { flex-basis: 100%; font-size: 12.5px; }
 .laden-balken { width: 120px; height: 6px; background: var(--g100); position: relative; overflow: hidden; border-radius: var(--pille); }
 .laden-balken::after { content: ""; position: absolute; inset: 0; width: 40%; background: var(--g500); border-radius: var(--pille); animation: messen 1.1s ease-in-out infinite; }
 @keyframes messen { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
@@ -332,7 +333,9 @@ button { font: inherit; }
 .kachel-sub { margin: 0 0 4px; font-size: 13px; color: var(--ink-2); }
 .kachel-quelle { margin: 10px 0 0; font-size: 11.5px; color: var(--ink-3); }
 .kachel-abdeckung { margin: 4px 0 0; font-size: 11.5px; line-height: 1.45; color: var(--ink-3); }
-.kachel-abdeckung span { font-weight: 600; }
+.kachel-abdeckung summary { cursor: pointer; font-weight: 600; width: fit-content; }
+.kachel-abdeckung summary:focus-visible { outline: 2px solid var(--g500); outline-offset: 2px; border-radius: 4px; }
+.kachel-abdeckung[open] summary { margin-bottom: 2px; }
 .plan + .plan { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); }
 .dokumente { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .dokumente li { font-size: 13.5px; }

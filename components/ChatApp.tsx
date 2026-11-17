@@ -40,6 +40,14 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
   const [verlauf, setVerlauf] = useState<Eintrag[]>([]);
   const [eingabe, setEingabe] = useState("");
   const [laedt, setLaedt] = useState(false);
+  // dauert eine Anfrage länger (Ortsauskunft: mehrere Dienste), sagt die Seite nach ein paar Sekunden, warum
+  const [langsam, setLangsam] = useState(false);
+  useEffect(() => {
+    setLangsam(false);
+    if (!laedt) return;
+    const h = setTimeout(() => setLangsam(true), 4000);
+    return () => clearTimeout(h);
+  }, [laedt]);
   const [strasse, setStrasse] = useState("");
   const [hausnummer, setHausnummer] = useState("");
   const [plz, setPlz] = useState("");
@@ -119,7 +127,19 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
     } catch {
       setVerlauf((v) => [
         ...v,
-        { id: zaehler.current++, rolle: "lotse", zeit: uhrzeit(), antworten: [{ art: "fehler", text: t("Verbindung fehlgeschlagen. Bitte erneut versuchen.", "Connection failed. Please try again.") }] },
+        {
+          id: zaehler.current++,
+          rolle: "lotse",
+          zeit: uhrzeit(),
+          antworten: [
+            {
+              art: "fehler",
+              text: STATISCH
+                ? t("Die Anfrage konnte nicht bearbeitet werden. Bitte die Seite neu laden und erneut versuchen.", "The request could not be processed. Please reload the page and try again.")
+                : t("Keine Verbindung zur App (Server). Bitte erneut versuchen.", "No connection to the app (server). Please try again."),
+            },
+          ],
+        },
       ]);
     } finally {
       setLaedt(false);
@@ -453,8 +473,16 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
               ),
             )}
             {laedt && (
-              <div className="laden" ref={letzteRef}>
+              <div className="laden" ref={letzteRef} role="status" aria-live="polite">
                 <span className="laden-balken" /> {t("Wird abgefragt …", "Querying …")}
+                {langsam && (
+                  <span className="laden-hinweis">
+                    {t(
+                      "Die Ortsauskunft fragt mehrere amtliche Dienste ab – das dauert manchmal bis zu 20 Sekunden.",
+                      "The location check queries several official services – this sometimes takes up to 20 seconds.",
+                    )}
+                  </span>
+                )}
               </div>
             )}
           </div>

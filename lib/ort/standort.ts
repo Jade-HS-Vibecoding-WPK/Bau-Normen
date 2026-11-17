@@ -71,7 +71,15 @@ const ortsName = (a: NominatimTreffer["address"]) => (istOldenburg(a) ? "Oldenbu
 
 async function suche(params: Record<string, string>): Promise<NominatimTreffer[]> {
   const p = new URLSearchParams({ format: "jsonv2", addressdetails: "1", countrycodes: "de", ...params });
-  return holeJson<NominatimTreffer[]>(`https://nominatim.openstreetmap.org/search?${p}`);
+  const url = `https://nominatim.openstreetmap.org/search?${p}`;
+  try {
+    return await holeJson<NominatimTreffer[]>(url);
+  } catch {
+    // Einzelne Aussetzer (Zeitüberschreitung, kurz überlastet) kommen vor: einmal nach einer Pause neu versuchen –
+    // die Pause hält die Nutzungsregel von Nominatim ein (höchstens eine Anfrage pro Sekunde).
+    await new Promise((r) => setTimeout(r, 1500));
+    return holeJson<NominatimTreffer[]>(url);
+  }
 }
 
 function alsStandort(t: NominatimTreffer, e: AdressEingabe, genau: boolean): Standort {
