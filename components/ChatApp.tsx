@@ -314,14 +314,29 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 ))}
               </select>
             </div>
-            {!gesetze.some((g) => g.land === land.name) && (
-              <p className="land-hinweis">
-                {t(
-                  `Für ${land.name} sind Bauordnung (${land.bauordnungKurz}) und Denkmalschutzgesetz (${land.denkmalKurz}) noch nicht in der Bibliothek. Bundesrecht, Musterbauordnung und VOB gelten trotzdem.`,
-                  `For ${land.name}, the building code (${land.bauordnungKurz}) and the monument protection act (${land.denkmalKurz}) are not in the library yet. Federal law, the model code and the VOB still apply.`,
-                )}
-              </p>
-            )}
+            {(() => {
+              const hatBo = gesetze.some((g) => g.id === land.bauordnung);
+              const hatDs = gesetze.some((g) => g.id === land.denkmalschutz);
+              if (hatBo && hatDs) return null;
+              return (
+                <p className="land-hinweis">
+                  {!hatBo && !hatDs
+                    ? t(
+                        `Für ${land.name} sind Bauordnung (${land.bauordnungKurz}) und Denkmalschutzgesetz (${land.denkmalKurz}) noch nicht in der Bibliothek. Bundesrecht, Musterbauordnung und VOB gelten trotzdem.`,
+                        `For ${land.name}, the building code (${land.bauordnungKurz}) and the monument protection act (${land.denkmalKurz}) are not in the library yet. Federal law, the model code and the VOB still apply.`,
+                      )
+                    : !hatDs
+                      ? t(
+                          `Für ${land.name} ist das Denkmalschutzgesetz (${land.denkmalKurz}) noch nicht in der Bibliothek.`,
+                          `For ${land.name}, the monument protection act (${land.denkmalKurz}) is not in the library yet.`,
+                        )
+                      : t(
+                          `Für ${land.name} ist die Bauordnung (${land.bauordnungKurz}) noch nicht in der Bibliothek.`,
+                          `For ${land.name}, the building code (${land.bauordnungKurz}) is not in the library yet.`,
+                        )}
+                </p>
+              );
+            })()}
             <ul className="bibliothek">
               {imBereich.map((g, i) => {
                 const neueGruppe = i === 0 || imBereich[i - 1].gruppe.de !== g.gruppe.de;

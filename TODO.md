@@ -74,9 +74,10 @@
 - **Land-Bezug:** Einstellung `land` (Standard Niedersachsen), Auswahl „Bundesland“ in der Bibliothek, Wechsel nach Ortsauskunft auf das Land der Adresse; Anfrage trägt `land`
 - **Lotse:** Kürzel/Titel aller Landesgesetze, „Bauordnung/LBO/DSchG“ = Gesetz des gewählten Landes, „Art.“ (Bayern); Rückfragen, Stichworte, Suche nur Bund + Land + MBO + VOB; fehlendes Landesgesetz wird offen gemeldet; Landesrecht vor MBO sortiert
 - **Landesgesetze importiert (10):** BayBO, BayDSchG, BauO NRW, DSchG NRW, SächsBO, SächsDSchG, BbgBO, BbgDSchG, BremLBO, BremDSchG – `scripts/import-landesrecht-c.mjs` (`--offline --pruefen`), Prüfprotokolle in `data/quellen/landesrecht/<id>/pruefung.txt` (git-ignoriert). Abweichungen Portal ↔ Gesetzblatt (Bremen 8, Brandenburg 1) als sichtbarer Hinweis an der Vorschrift.
-- **Gegenstücke** `data/gegenstuecke/*.json` für alle 12 Landesgesetze (Thema → Vorschriften, `schutzOhneEintragung` mit wörtlichem Beleg); Stichworte mit Platzhaltern `@bauordnung:<thema>` / `@denkmalschutz:<thema>`
+- **Landesgesetze aus PDF-Einzeldokumenten (3, 18.11.):** LBO BW (Gesetzblatt 2026 Nr. 44, amtlich), HBO (Lesefassung des Wirtschaftsministeriums, Stand Oktober 2025) und HBauO (Gesamtsynopse, rechte Spalte, Stand 26.09.2026) – `scripts/import-landesrecht-d.mjs` (`--offline`, `--nur=<id>`), zwei Auslesungen (pypdf, pdftotext) mit Gegenprüfung; HBO und HBauO tragen in jeder Karte den Hinweis „nichtamtliche Lesefassung“. Übersprungen: HDSchG (Synopse mit Streichungen und Platzhalter), BauO Bln (Spalten kaum trennbar, „unverbindliche Arbeitshilfe“), ThürBO (Neuerlass 2024 nicht als Gesetzblatt gefunden; Änderung vom 06.07.2026). PDFs für HDSchG und BauO Bln liegen in `data/quellen/landesrecht/` (git-ignoriert).
+- **Gegenstücke** `data/gegenstuecke/*.json` für alle 15 Landesgesetze (Thema → Vorschriften, `schutzOhneEintragung` mit wörtlichem Beleg); Stichworte mit Platzhaltern `@bauordnung:<thema>` / `@denkmalschutz:<thema>`
 - **Datenlagerung Online-Version:** `katalog.json` + je Gesetz `details/`, `wortlaut/`, `suche/` (nur bei Bedarf geladen)
-- **Geodienste:** `lib/ort/dienste/` – 21 B-Plan- (in Niedersachsen seit 17.11. abends auch die Landkreise Leer und Aurich) und 17 Denkmaldienste aller Länder (amtlich, getestet, CORS ok); nur Hamburg und Bremerhaven sind `vollstaendig`; Oldenburg jetzt bewusst `vollstaendig: false`
+- **Geodienste:** `lib/ort/dienste/` – 44 B-Plan- und 23 Denkmaldienste (Stand 18.11.: dazu Kreis- und Stadtdienste in Niedersachsen, Hessen, Freiburg, Münster, Duisburg sowie Denkmale in MV, Thüringen und Frankfurt (Oder); Recherche in `docs/quellen-recherche.md`) (amtlich, getestet, CORS ok); nur Hamburg und Bremerhaven sind `vollstaendig`; Oldenburg jetzt bewusst `vollstaendig: false`
 - **Ortsauskunft:** fragt alle passenden Dienste parallel ab und fasst zusammen (`zusammenfassen` in `lib/ort/index.ts`); B-Plan-Texte allgemein; „kein Plan“ nur bei vollständigem Dienst, sonst „nicht verzeichnet – Dienst nicht vollständig“; Bauordnungsrecht nach dem Land der Adresse
 
 ### Als Nächstes (in dieser Reihenfolge)
@@ -91,7 +92,7 @@
 - Denkmal-Dienst Rostock (geo.sv.rostock.de) antwortete am 17.11. abends nicht (Zeitüberschreitung) – App sagt korrekt „keine Aussage“; im Testkatalog ist der Denkmalstatus für Rostock deshalb offen („*“).
 
 ### Entscheidungen der Nutzerin (offen)
-- **juris-Portale (BW, BE, HH, HE, MV, RP, SL, ST, SH, TH):** robots.txt `Disallow: /` + TDM-Vorbehalt → nichts abgerufen. Wege: Erlaubnis/Export anfragen (juris service@juris.de bzw. Länder) oder Gesetze von Hand speichern und offline einlesen (rechtlich prüfen).
+- **juris-Portale (BW, BE, HH, HE, MV, RP, SL, ST, SH, TH):** robots.txt `Disallow: /` + TDM-Vorbehalt → nichts abgerufen. Bauordnungen BW, HE, HH stattdessen aus frei veröffentlichten PDFs (s. o.); für die übrigen Gesetze ebenso nach Gesetzblatt-PDFs oder Lesefassungen der Ministerien suchen. Wege: Erlaubnis/Export anfragen (juris service@juris.de bzw. Länder) oder Gesetze von Hand speichern und offline einlesen (rechtlich prüfen).
 - **Lizenzen der Geodienste:** Bayern CC BY-ND (Namensnennung zeigen), Sachsen-Denkmal teils CC BY-NC-ND (nicht kommerziell), Nürnberg nur „©“, München ohne Angabe, Schwerin „Zugriff beschränkt“ – vor kommerzieller Nutzung klären.
 - **gesetzblatt.bremen.de** verbietet Speicherung – die beiden PDFs wurden nur lokal zum Abgleich geladen (git-ignoriert).
 - **Stand-Datum** von BremLBO/BbgBO nennt Änderungen, die noch nicht gelten (Portalangabe).
@@ -105,6 +106,7 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 - [x] README mit Startanleitung
 - [x] Demo-Ablauf für die Präsentation: `docs/demo-ablauf.md` (14 Schritte, live geprüft, mit Rückfallebene)
 - [x] Testkatalog 82/82, `next build` und `build:pages` fehlerfrei
+- [x] Nachmittags: Testkatalog 107/107 mit den neuen Diensten und LBO BW, HBO, HBauO (Hamburger B-Plan-Dienst einmal kurz ausgefallen, bei Wiederholung bestanden); Bibliothek nennt jetzt auch ein einzeln fehlendes Denkmalschutzgesetz (z. B. „Für Hessen ist das Denkmalschutzgesetz (HDSchG) noch nicht in der Bibliothek“)
 - [x] Online stellen (GitHub Pages) – einmalig „Settings → Pages → Source: GitHub Actions“ aktivieren
 
 ## Tag 4 – 19.11. (Puffer)
@@ -114,8 +116,10 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 - [x] Niedersachsen: Kreisdienste Landkreis Leer und Landkreis Aurich (alle Gemeinden, auch die Inseln Borkum, Juist, Norderney, Baltrum) – Dienste für einen ganzen Landkreis (`gebiet.kreis`), Veränderungssperren aus Diensten werden getrennt angezeigt
 - [ ] Niedersachsen: Landkreise Wittmund und Friesland (auch Langeoog, Spiekeroog, Wangerooge) haben keinen offenen Dienst – beim Landkreis anfragen
 - [ ] Satzungen nach §§ 34, 35 BauGB (Innen-/Außenbereichs-, Abrundungs-, Splittersiedlungssatzungen) und örtliche Bauvorschriften stehen in den Kreisdiensten Leer/Aurich mit drin – bisher bewusst nicht angezeigt (keine Bebauungspläne); als eigene Ebene ergänzen
-- [ ] Landkreis Osterholz hat eine öffentliche ArcGIS-Karte „Raumordnung & Bauleitplanung“ (dl-de/by-2.0) – prüfen und anbinden
-- [x] Landesbauordnungen und Denkmalschutzgesetze von Bayern, NRW, Sachsen, Brandenburg, Bremen (die übrigen zehn Länder: siehe „Entscheidungen der Nutzerin“ oben)
+- [x] Landkreis Osterholz hat eine öffentliche ArcGIS-Karte „Raumordnung & Bauleitplanung“ (dl-de/by-2.0) – angebunden (18.11.)
+- [x] Landesbauordnungen und Denkmalschutzgesetze von Bayern, NRW, Sachsen, Brandenburg, Bremen; Bauordnungen von Baden-Württemberg, Hessen, Hamburg (18.11.)
+- [ ] HDSchG, sobald eine saubere geltende Fassung veröffentlicht ist; BauO Bln aus der Synopse (Spaltengrenze je Seite bestimmen, Blöcke „Fassung, die am 20.01.2027 in Kraft tritt“ ausschneiden); ThürBO nach Gesetzblatt 2024 Nr. 9 suchen (samt Änderung vom 06.07.2026); DSchG BW, DSchG HH und die Gesetze von MV, RP, SL, ST, SH (siehe „Entscheidungen der Nutzerin“ oben)
+- [ ] LBO BW: Änderungen nach dem 16.03.2026 ohne juris nicht ausgeschlossen – vor einem Verkauf gegenprüfen
 - [ ] Weitere frei verfügbare Regelwerke: BauNVO, PlanZV, GEG, HOAI, BGB-Bauvertragsrecht (§§ 650a ff.), NTVergG, DVO-NBauO
 - [ ] § 3a VOB/A: zusammengeführten Text fachlich gegenlesen lassen (die Bekanntmachung 2025 enthält nur Änderungsbefehle)
 - [ ] VOB/B: auf die Bundesanzeiger-Fassungen (2009/2012/2016) umstellen, sobald abrufbar (bisher konsolidierte Lesefassung der Fachinformation Bundesbau)

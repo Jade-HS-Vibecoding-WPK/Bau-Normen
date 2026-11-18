@@ -115,6 +115,33 @@ for (const [i, l] of LAENDER.entries()) {
   REGELWERKE[l.denkmalschutz] = { ...gemeinsam, reihenfolge: 11 + i * 2, kurztitel: { de: "Denkmalschutzgesetz", en: "Monument protection act" } };
 }
 
+// Landesgesetze, deren Wortlaut aus einer nichtamtlichen Lesefassung bzw. Synopse eines Ministeriums stammt
+// (scripts/import-landesrecht-d.mjs) – die App sagt das in jeder Karte dazu.
+const NICHTAMTLICH: Record<string, { de: string; en: string; zusatz?: { de: string; en: string } }> = {
+  hbo: {
+    de: "Lesefassung des Hessischen Wirtschaftsministeriums (Stand Oktober 2025)",
+    en: "consolidated version published by the Hessian Ministry of Economics (as of October 2025)",
+  },
+  hbauo: {
+    de: "Lesefassung aus der Gesamtsynopse der Hamburger Behörde für Stadtentwicklung und Wohnen (Stand 26.09.2026)",
+    en: "consolidated version from the synopsis of Hamburg's Ministry of Urban Development and Housing (as of 26 Sep 2026)",
+    zusatz: {
+      de: " Die hochgestellten Satznummern hat die Behörde zur Orientierung ergänzt; sie gehören nicht zur amtlichen Fassung.",
+      en: " The superscript sentence numbers were added by the authority for orientation and are not part of the official text.",
+    },
+  },
+};
+for (const [id, q] of Object.entries(NICHTAMTLICH)) {
+  REGELWERKE[id] = {
+    ...REGELWERKE[id],
+    wortlaut: { de: `nichtamtliche ${q.de}, unverändert übernommen`, en: `unofficial ${q.en}, German wording reproduced unchanged` },
+    hinweis: {
+      de: "Nichtamtliche Lesefassung: Verbindlich ist allein der im Gesetz- und Verordnungsblatt des Landes verkündete Wortlaut." + (q.zusatz?.de ?? ""),
+      en: "Unofficial consolidated version: only the text promulgated in the state's official gazette is legally binding." + (q.zusatz?.en ?? ""),
+    },
+  };
+}
+
 export const regelwerk = (id: string): RegelwerkMeta => REGELWERKE[id] ?? UNBEKANNT;
 
 /** Gehört das Regelwerk zu einem Land (Landesrecht)? */

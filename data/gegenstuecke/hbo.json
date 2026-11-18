@@ -1,0 +1,34 @@
+{
+ "gesetz": "hbo",
+ "themen": {
+  "begriffe": ["2"],
+  "abstandsflaechen": ["6"],
+  "nicht-ueberbaute-flaechen": ["8"],
+  "werbeanlagen": ["10"],
+  "brandwaende": ["33"],
+  "rettungswege": ["36"],
+  "stellplaetze": ["52"],
+  "barrierefrei": ["54"],
+  "sonderbauten": ["53", "2"],
+  "bauherr": ["56"],
+  "entwurfsverfasser": ["57"],
+  "bauvorlageberechtigung": ["67"],
+  "genehmigungspflicht": ["62"],
+  "verfahrensfrei": ["63", "anlage"],
+  "genehmigungsfreistellung": ["64", "64a"],
+  "vereinfachtes-verfahren": ["65"],
+  "baugenehmigungsverfahren": ["66"],
+  "abweichungen": ["73"],
+  "bauantrag": ["69"],
+  "baugenehmigung": ["74", "75"],
+  "vorbescheid": ["76"],
+  "baulasten": ["85"],
+  "oertliche-bauvorschriften": ["91"]
+ },
+ "hinweise": [
+  "Baugenehmigungsfreie Vorhaben: § 63 verweist auf die Anlage (Abschnitte I bis V).",
+  "Sonderbauten: Katalog in § 2 Abs. 9, Anforderungen in § 53.",
+  "Genehmigungsfreistellung: § 64, befristet bis 31.12.2030 erweitert auf Wohngebäude im unbeplanten Innenbereich (§ 64a).",
+  "Wortlaut aus der nichtamtlichen Lesefassung des Wirtschaftsministeriums (Stand Oktober 2025)."
+ ]
+}

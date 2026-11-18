@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Next.js-16-1e3428?logo=nextdotjs&logoColor=white" alt="Next.js 16">
   <img src="https://img.shields.io/badge/zur%20Laufzeit-ohne%20KI-4d7858" alt="Läuft ohne KI">
   <img src="https://img.shields.io/badge/Wortlaut-297%2F297%20gepr%C3%BCft-6c9570" alt="Wortlaut 297/297 geprüft">
-  <img src="https://img.shields.io/badge/Testkatalog-80%2F80-a7bb57" alt="Testkatalog 80/80">
+  <img src="https://img.shields.io/badge/Testkatalog-107%2F107-a7bb57" alt="Testkatalog 107/107">
   <img src="https://img.shields.io/badge/Lizenz-MIT-345a43" alt="Lizenz MIT">
 </p>
 
@@ -21,9 +21,9 @@
 
 Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 
-- **Gesetze und Regelwerke im Wortlaut** – Baugesetzbuch (BauGB), Bauordnung und Denkmalschutzgesetz von sechs Ländern (Niedersachsen, Bayern, Nordrhein-Westfalen, Sachsen, Brandenburg, Bremen), Musterbauordnung (MBO), VOB Teil A und Teil B, Paragraph für Paragraph, unverändert aus den amtlichen Quellen; dazu das Verzeichnis der VOB Teil C (ATV)
+- **Gesetze und Regelwerke im Wortlaut** – Baugesetzbuch (BauGB), Bauordnung und Denkmalschutzgesetz von sechs Ländern (Niedersachsen, Bayern, Nordrhein-Westfalen, Sachsen, Brandenburg, Bremen), die Bauordnungen von Baden-Württemberg, Hessen und Hamburg, Musterbauordnung (MBO), VOB Teil A und Teil B, Paragraph für Paragraph, unverändert aus den amtlichen Quellen; dazu das Verzeichnis der VOB Teil C (ATV)
 - **verständlich erklärt** – zu jedem Paragraphen eine Erläuterung und die zusammenhängenden Vorschriften
-- **Ortsauskunft für Adressen in ganz Deutschland** – gilt ein Bebauungsplan, gibt es Kulturdenkmale, welche Paragraphen des Bundes und des Landes sind zu beachten: 21 Bebauungsplan- und 17 Denkmaldienste der Länder und Städte werden live abgefragt – wo kein Dienst angebunden ist oder ein Dienst nicht alle Einträge enthält, sagt die App das offen
+- **Ortsauskunft für Adressen in ganz Deutschland** – gilt ein Bebauungsplan, gibt es Kulturdenkmale, welche Paragraphen des Bundes und des Landes sind zu beachten: 44 Bebauungsplan- und 23 Denkmaldienste der Länder und Städte werden live abgefragt – wo kein Dienst angebunden ist oder ein Dienst nicht alle Einträge enthält, sagt die App das offen
 
 > **Prototyp**, Stand 17.11.2026. Die Auskünfte ersetzen keine Rechtsberatung und keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.
 
@@ -60,7 +60,7 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 |---|---|
 | **Paragraph abrufen** | „§ 34 BauGB“, „§§ 30, 34 und 35 BauGB“, „35 BauGB“, „Paragraph 13a“, „§ 6 MBO“, „§ 3a EU VOB/A“, „§ 13 VOB/B“, „DIN 18353“ – die Vorschrift erscheint im Wortlaut mit Stand, Quelle und Kopier-Knopf. Gibt es eine Nummer in mehreren Regelwerken („Paragraph 5“, „§ 4 VOB“), fragt die App nach. Gibt es sie nicht („§ 300 BauGB“), sagt sie das – statt zu raten. |
 | **Musterbauordnung und VOB** | Die **MBO** (Muster der Bauministerkonferenz, Stand 26./27.09.2024), die **VOB/A** (Abschnitt 1 sowie die Abschnitte 2 „EU“ und 3 „VS“ in der Ausgabe 2026) und die **VOB/B** (Ausgabe 2016) im Wortlaut. Von der **VOB/C** gibt es nur das Verzeichnis der 68 ATV mit Nummer und Titel – ihr Text ist als DIN-Norm geschützt. Weil keines davon ein Gesetz ist, sagt jede Karte oben, wie verbindlich es ist (z. B. „Muster, kein geltendes Recht – in Niedersachsen gilt die NBauO“). |
-| **Landesrecht** | Bauordnung und Denkmalschutzgesetz von **Niedersachsen** (NBauO, NDSchG), **Bayern** (BayBO, BayDSchG), **Nordrhein-Westfalen** (BauO NRW, DSchG NRW), **Sachsen** (SächsBO, SächsDSchG), **Brandenburg** (BbgBO, BbgDSchG) und **Bremen** (BremLBO, BremDSchG) im Wortlaut. In der Bibliothek wählt man das **Bundesland**; „§ 6 Bauordnung“ oder „§ 10 Denkmalschutzgesetz“ meint dann das Gesetz dieses Landes (Bayern zitiert mit „Art.“), Rückfragen und Stichworte beschränken sich auf Bund, Land, MBO und VOB. Nach einer Ortsauskunft wechselt die App auf das Land der Adresse. Fehlt das Gesetz eines Landes, sagt die App das, statt auf ein anderes Land auszuweichen. |
+| **Landesrecht** | Bauordnung und Denkmalschutzgesetz von **Niedersachsen** (NBauO, NDSchG), **Bayern** (BayBO, BayDSchG), **Nordrhein-Westfalen** (BauO NRW, DSchG NRW), **Sachsen** (SächsBO, SächsDSchG), **Brandenburg** (BbgBO, BbgDSchG) und **Bremen** (BremLBO, BremDSchG) im Wortlaut, dazu die Bauordnungen von **Baden-Württemberg** (LBO BW, aus dem Gesetzblatt), **Hessen** (HBO) und **Hamburg** (HBauO) – die beiden letzten aus nichtamtlichen Lesefassungen der Ministerien, worauf jede Karte hinweist. In der Bibliothek wählt man das **Bundesland**; „§ 6 Bauordnung“ oder „§ 10 Denkmalschutzgesetz“ meint dann das Gesetz dieses Landes (Bayern zitiert mit „Art.“), Rückfragen und Stichworte beschränken sich auf Bund, Land, MBO und VOB. Nach einer Ortsauskunft wechselt die App auf das Land der Adresse. Fehlt das Gesetz eines Landes, sagt die App das, statt auf ein anderes Land auszuweichen. |
 | **Erläuterung** | Unter dem Wortlaut steht eine leicht verständliche, aber detaillierte Erläuterung: Kurzfassung, jeder Absatz einzeln, Hinweis für die Praxis. Vorhanden für BauGB §§ 1–38 und das komplette NDSchG (88 Paragraphen, Status „Entwurf“). |
 | **Zusammenhang** | „Verweist auf“, „Wird erwähnt in“ und „Gleicher Abschnitt“ – automatisch aus den Verweisen im Gesetzestext ermittelt, jeweils anklickbar. |
 | **Stichwortsuche** | „Vorkaufsrecht“, „Innenbereich“, „Bauen neben einem Denkmal“, „Abstandsflächen“, „Abnahme“, „Estricharbeiten“ – ein von Hand gepflegtes Stichwortverzeichnis (rund 120 Begriffsgruppen) plus Volltextsuche. |
@@ -254,12 +254,12 @@ flowchart LR
 | `app/` | Seite (`page.tsx`), Grundgerüst und Schriften (`layout.tsx`), Gestaltung (`globals.css`) und die Schnittstelle `api/frage/route.ts` für die lokale Fassung |
 | `components/` | Oberfläche: `ChatApp.tsx` (Seite mit Formularen und Verlauf), `Karten.tsx` (Paragraph- und Ortsauskunft-Karte), `Normtext.tsx` (Wortlaut), `Lageskizze.tsx` (Karte und Fähnchen), `Obsidian.tsx` (Knopf und Links), `Gecko.tsx`, `Organisch.tsx` (Flächen, Höhenlinien, Linienzeichnung), `Einstellungen.tsx` (Sprache, Farbschema, Gecko, Animationen), `Symbole.tsx` |
 | `lib/` | Logik: `anfrage.ts` (eine Anfrage bearbeiten), `verstehen.ts` (Lotse), `gesetze.ts` (Bibliothek, Suche), `daten-server.ts` / `daten-browser.ts` (Datenquelle lokal bzw. online), `ort/` (Ortsauskunft: Standort, Einordnung, Geometrie, Plan-Dokumente Oldenburg; `ort/dienste/` die Geodienste je Land), `laender.ts` (16 Länder mit Bauordnung und Denkmalschutzgesetz), `gecko.ts` (Regeln für den Gecko), `regelwerke.ts` (Reihenfolge, Art und Verbindlichkeitshinweis je Regelwerk), `sprache.ts` (Deutsch/Englisch), `vorab.ts` (Einstellungen vor dem ersten Zeichnen), `typen.ts`, `text.ts` |
-| `data/gesetze/` | Gesetze und Regelwerke als JSON (`baugb`, `mbo`, `voba`, `vobb`, `vobc` und die Landesgesetze `nbauo`, `ndschg`, `baybo`, `baydschg`, `bauo-nrw`, `dschg-nrw`, `saechsbo`, `saechsdschg`, `bbgbo`, `bbgdschg`, `bremlbo`, `bremdschg`) – Paragraph für Paragraph mit Struktur, Wortlaut und erkannten Verweisen |
+| `data/gesetze/` | Gesetze und Regelwerke als JSON (`baugb`, `mbo`, `voba`, `vobb`, `vobc` und die Landesgesetze `nbauo`, `ndschg`, `baybo`, `baydschg`, `bauo-nrw`, `dschg-nrw`, `saechsbo`, `saechsdschg`, `bbgbo`, `bbgdschg`, `bremlbo`, `bremdschg`, `lbo-bw`, `hbo`, `hbauo`) – Paragraph für Paragraph mit Struktur, Wortlaut und erkannten Verweisen |
 | `data/gegenstuecke/` | Je Landesgesetz: welche Vorschrift welches Thema regelt, ob der Denkmalschutz von der Eintragung abhängt (mit wörtlichem Beleg); Regeln in `THEMEN.md` |
 | `data/erlaeuterungen/` | Erläuterungen je Gesetz, dazu `LEITFADEN.md` (Regeln zum Schreiben) und `PRUEFHINWEISE.md` (Stellen für die fachliche Prüfung) |
 | `data/stichworte.json` | Stichwortverzeichnis (Begriff → Paragraphen) |
 | `data/quellen/` | Rohdaten: BauGB-XML, der aus den PDFs gelesene Text von MBO und VOB samt Prüfprotokoll (die PDFs selbst lädt das Importskript); NI-VORIS-Rohdaten werden bewusst nicht versioniert |
-| `scripts/` | Import der Gesetze (Landesrecht: `import-landesrecht-c.mjs` mit einem Adapter je Landesportal in `scripts/lib/`), Prüfprogramme, Obsidian-Export, Bau und Vorschau der Online-Version (`pages-bauen.mjs`, `pages-vorschau.mjs`) |
+| `scripts/` | Import der Gesetze (Landesrecht: `import-landesrecht-c.mjs` mit einem Adapter je Landesportal in `scripts/lib/`; `import-landesrecht-d.mjs` für Gesetze aus PDF-Einzeldokumenten), Prüfprogramme, Obsidian-Export, Bau und Vorschau der Online-Version (`pages-bauen.mjs`, `pages-vorschau.mjs`) |
 | `tests/testkatalog.mjs` | Testfragen mit erwarteten Antworten |
 | `obsidian/` | Obsidian-Vault (Gesetze, Gliederung, Projektdateien) – wird lokal mit `npm run obsidian` erzeugt, nicht versioniert |
 | `.github/workflows/pages.yml` | Veröffentlicht die Online-Version bei jedem Push auf `main` |
@@ -278,6 +278,7 @@ flowchart LR
 | `npm run preview:pages` | Online-Version lokal ansehen (http://localhost:3100/Bau-Normen/) |
 | `npm run import:all` | Alle Regelwerke neu aus den Quellen laden (einzeln: `import:baugb`, `import:ndschg`, `import:nbauo`, `import:mbo`, `import:vob`, `vobc`). MBO und VOB werden aus PDFs gelesen – dafür sind `pdftotext` (Poppler) und Python mit `pypdf` nötig; mit `-- --offline` genügt der gespeicherte Text |
 | `node scripts/import-landesrecht-c.mjs` | Bauordnungen und Denkmalschutzgesetze von Bayern, NRW, Sachsen, Brandenburg und Bremen neu laden (`--offline` nutzt die gespeicherten Rohdaten, `--pruefen` macht die Gegenprüfung, `--nur=baybo,baydschg` einzelne Gesetze); BRAVORS verlangt 20 s Pause je Abruf |
+| `node scripts/import-landesrecht-d.mjs` | Bauordnungen von Baden-Württemberg, Hessen und Hamburg aus den PDFs (Gesetzblatt bzw. Lesefassung, beim Hamburger Synopsen-PDF nur die rechte Spalte) – zwei unabhängige Auslesungen (pypdf und pdftotext) samt Gegenprüfung und Protokoll; `--offline`, `--nur=hbo` |
 | `node scripts/wortlaut-pruefen.mjs` | Jeden BauGB-Paragraphen mit der amtlichen Einzelseite vergleichen (ca. 2 Minuten; einzelne: `… 34 35`) |
 | `node scripts/erlaeuterungen-pruefen.mjs` | Erläuterungen prüfen (Pflichtfelder, nur Paragraphen/Absätze, die es im Original gibt) |
 | `node scripts/gegenstuecke-pruefen.mjs` | Gegenstücke der Landesgesetze prüfen (jede Vorschrift existiert, jedes Zitat steht wörtlich im Gesetz) |
@@ -293,6 +294,7 @@ Wenn sich ein Gesetz ändert (das NDSchG etwa wird derzeit im Landtag novelliert
 ```bash
 npm run import:all                          # 1. neue Fassung laden (Bund, Niedersachsen, MBO, VOB)
 node scripts/import-landesrecht-c.mjs --pruefen   #  Landesrecht BY, NRW, SN, BB, HB samt Gegenprüfung
+node scripts/import-landesrecht-d.mjs       #    Bauordnungen BW, HE, HH aus PDF samt Gegenprüfung
 node scripts/gegenstuecke-pruefen.mjs       #    passen die Themen-Zuordnungen und Zitate noch?
 node scripts/wortlaut-pruefen.mjs           # 2. Wortlaut gegen die amtlichen Seiten prüfen
 node scripts/erlaeuterungen-pruefen.mjs     # 3. passen die Erläuterungen noch?
@@ -306,7 +308,7 @@ Geänderte Paragraphen sollten danach auch inhaltlich mit ihrer Erläuterung abg
 
 ## Qualitätssicherung
 
-| Prüfung | Ergebnis (17.11.2026) |
+| Prüfung | Ergebnis (17./18.11.2026) |
 |---|---|
 | Wortlaut BauGB gegen gesetze-im-internet.de | 297/297 Paragraphen identisch |
 | Wortlaut NDSchG gegen NI-VORIS (beim Import) | Stichproben Zeichen für Zeichen identisch |
@@ -314,10 +316,11 @@ Geänderte Paragraphen sollten danach auch inhaltlich mit ihrer Erläuterung abg
 | Wortlaut MBO gegen zweite PDF-Auslesung (pdftotext und pypdf, ohne Leerraum) | 83/83 Seiten und 97/97 Vorschriften identisch, 4 dokumentierte Reparaturen (Protokoll in `data/quellen/mbo/`) |
 | Wortlaut VOB/A und VOB/B gegen zweite PDF-Auslesung | 149/149 Seiten, VOB/A 152/153 und VOB/B 18/18 Vorschriften identisch; § 3a weicht genau um die 2025 bekannt gemachten Änderungen ab (Protokoll in `data/quellen/vob/`) |
 | Wortlaut Landesrecht gegen eine zweite, unabhängige Darstellung derselben amtlichen Quelle (ohne Leerraum) | BayBO 97/97 und BayDSchG 25/25 (XML-Download); BauO NRW 95/95, DSchG NRW 47/47, SächsBO 97/97, SächsDSchG 44/44 (PDF der Fassung); BbgBO 97/100 und BbgDSchG 27/28 (Gesetzblatt bzw. BRAVORS-Versionsseite, Rest teilgeprüft); BremLBO 86/92 und BremDSchG 23/25 gegen das Gesetzblatt – die 9 Abweichungen Portal ↔ Gesetzblatt bleiben im Wortlaut und stehen als Hinweis an der Vorschrift |
-| Gegenstücke der Landesgesetze | 12 Dateien, alle Vorschriften vorhanden, alle Belegsätze wörtlich im Gesetz, 0 Fehler |
+| Wortlaut LBO BW, HBO, HBauO gegen zweite PDF-Auslesung (pypdf und pdftotext, ohne Leerraum) | LBO BW 122/125 Seiten (Abweichungen nur im Inhaltsverzeichnis) und 99/99 Vorschriften identisch, ohne Reparatur; HBO 106/106 Seiten und 101/101 Stellen identisch (697 Trennstriche entfernt, 33 davon von Hand am PDF entschieden); HBauO 168/168 Seiten und 97/97 Vorschriften identisch (3 durchgestrichene Buchstaben entfallen, jeweils mit Hinweis). Zusätzlich jeder gespeicherte Absatz gegen den Rohtext gesucht: LBO BW 1025/1025 |
+| Gegenstücke der Landesgesetze | 15 Dateien, alle Vorschriften vorhanden, alle Belegsätze wörtlich im Gesetz, 0 Fehler |
 | Erläuterungen (automatische Prüfung) | 88 Erläuterungen, 0 Fehler, 0 Warnungen |
-| Obsidian-Export (Wortlaut-Selbsttest) | 1344/1344 Vorschriften identisch (dazu 68 VOB/C-Verzeichniseinträge ohne Wortlaut) |
-| Testkatalog | 80/80 Fragen – Paragraphen, NBauO, Landesrecht, MBO, VOB, DIN-Nummern, Rückfragen, Stichworte je Land, Ortsauskunft in allen 16 Ländern und Rückfrage bei mehrdeutiger Straße (live) |
+| Obsidian-Export (Wortlaut-Selbsttest) | 1637/1637 Vorschriften identisch (dazu 68 VOB/C-Verzeichniseinträge ohne Wortlaut) |
+| Testkatalog | 107/107 Fragen (der Hamburger B-Plan-Dienst fiel im Lauf einmal kurz aus, bei Wiederholung bestanden) – Paragraphen, NBauO, Landesrecht (auch LBO BW, HBO, HBauO), MBO, VOB, DIN-Nummern, Rückfragen, Stichworte je Land, Ortsauskunft in allen 16 Ländern und Rückfrage bei mehrdeutiger Straße (live) |
 | Online-Version (statischer Bau) | Paragraph, Rückfrage, Stichwort, Volltext und Ortsauskunft direkt im Browser geprüft, Daten werden in Stufen nachgeladen, keine Fehler |
 | Antwortzeiten (lokal) | Server 10–25 ms je Anfrage; im Browser keine Ruckler, der Gecko kostet im Leerlauf unter 2 % Rechenzeit |
 
@@ -394,18 +397,21 @@ Gezeichnet wird er als bewegliches Skelett (Kopf, Rumpf, Schwanzglieder, vier Be
 | SächsBO, SächsDSchG | [REVOSax](https://www.revosax.sachsen.de) – Sächsische Staatskanzlei |
 | BbgBO, BbgDSchG | [BRAVORS](https://bravors.brandenburg.de) – Landesregierung Brandenburg (das Portal nennt bei der BbgBO Änderungen, die erst 2027 in Kraft treten) |
 | BremLBO, BremDSchG | [Transparenzportal Bremen](https://www.transparenz.bremen.de) – Freie Hansestadt Bremen; Abgleich mit dem Bremischen Gesetzblatt |
+| LBO BW | Gesetzblatt für Baden-Württemberg 2026 Nr. 44 (Neufassung vom 16.03.2026, amtlich; PDF über den Landtag) |
+| HBO | Hessisches Wirtschaftsministerium – nichtamtliche Lesefassung „HBO 2018 mit Änderung vom Oktober 2025“ (Nachdruck mit Quellenangabe) |
+| HBauO | Behörde für Stadtentwicklung und Wohnen Hamburg – Gesamtsynopse, rechte Spalte „HBauO neu (ab 01.01.2026)“, Stand 26.09.2026 (nichtamtlich; Satznummern von der Behörde ergänzt) |
 | Musterbauordnung | Deutsches Institut für Bautechnik (DIBt) – [MBO, Fassung 2002, zuletzt geändert 26./27.09.2024](https://www.dibt.de/fileadmin/dibt-website/Dokumente/Rechtsgrundlagen/MBO.pdf) (PDF) |
 | VOB/A | Bundesanzeiger: Abschnitte 2 und 3 Ausgabe 2026 (BAnz AT 24.08.2026 B6); Abschnitt 1 Ausgabe 2019 (BAnz AT 19.02.2019 B2), in § 3a mit den Änderungen vom 11.03.2025 (BAnz AT 02.04.2025 B7) und 24.11.2025 (BAnz AT 16.12.2025 B7) – die Bekanntmachung von 2025 enthält nur Änderungsbefehle, die App sagt bei § 3a, dass der Text zusammengeführt ist |
 | VOB/B | Ausgabe 2016, konsolidierte Fassung der [Fachinformation Bundesbau](https://www.fib-bund.de/Inhalt/Vergabe/VOB/) |
 | VOB/C | nur Verzeichnis: Einführungserlass des BMWSB vom 20.09.2023 (Ergänzungsband 2023) und DIN Media |
-| Bebauungspläne und Kulturdenkmale | 38 amtliche Geodienste der Länder, Landkreise und Städte – siehe [Tabelle unten](#geodienste-der-länder-und-städte) |
+| Bebauungspläne und Kulturdenkmale | 67 amtliche Geodienste der Länder, Landkreise und Städte – siehe [Tabelle unten](#geodienste-der-länder-und-städte) |
 | Adresssuche | OpenStreetMap / Nominatim (ganz Deutschland, höchstens eine Anfrage pro Sekunde) |
 | Hintergrundkarte der Lageskizze | © [OpenStreetMap-Mitwirkende](https://www.openstreetmap.org/copyright) (ODbL), Kacheln von tile.openstreetmap.org |
 | Schriften | Fraunces, Figtree, DM Mono, Source Serif 4 – Google Fonts (SIL Open Font License), beim Bauen eingebunden |
 
 - Amtliche Gesetzestexte sind gemeinfrei (§ 5 UrhG).
 - NI-VORIS behält sich automatisiertes Text- und Data-Mining vor. Gespeichert und veröffentlicht wird deshalb nur der gemeinfreie Gesetzestext, nicht die Roh-HTML-Seiten des Anbieters. Für eine kommerzielle Nutzung ist das erneut zu prüfen. Dasselbe gilt für die Rohdaten der übrigen Landesportale (`data/quellen/landesrecht/`, nicht im Repository).
-- **Landesrecht der übrigen zehn Länder:** Die Rechtsportale von Baden-Württemberg, Berlin, Hamburg, Hessen, Mecklenburg-Vorpommern, Rheinland-Pfalz, Saarland, Sachsen-Anhalt, Schleswig-Holstein und Thüringen laufen bei juris und untersagen den automatisierten Abruf (robots.txt, Vorbehalt für Text- und Data-Mining). Ihre Gesetze sind deshalb nicht enthalten; die App sagt das und nennt für diese Länder keine Landesparagraphen.
+- **Landesrecht der übrigen Länder:** Die Rechtsportale von Baden-Württemberg, Berlin, Hamburg, Hessen, Mecklenburg-Vorpommern, Rheinland-Pfalz, Saarland, Sachsen-Anhalt, Schleswig-Holstein und Thüringen laufen bei juris und untersagen den automatisierten Abruf (robots.txt, Vorbehalt für Text- und Data-Mining). Für Baden-Württemberg, Hessen und Hamburg stammen die Bauordnungen deshalb aus frei veröffentlichten Einzeldokumenten (Gesetzblatt bzw. Lesefassungen der Ministerien). Es fehlen noch: die Denkmalschutzgesetze dieser drei Länder (die hessische Synopse enthält noch Streichungen und einen Platzhalter für das Änderungsgesetz) sowie Bauordnung und Denkmalschutzgesetz von Berlin (Synopse mit kaum trennbaren Spalten), Thüringen (Neufassung 2024 nicht frei als Gesetzblatt gefunden), Mecklenburg-Vorpommern, Rheinland-Pfalz, Saarland, Sachsen-Anhalt und Schleswig-Holstein. Die App sagt das und nennt für fehlende Gesetze keine Paragraphen.
 - gesetzblatt.bremen.de untersagt das Speichern der Gesetzblätter – sie wurden nur lokal zum Abgleich genutzt und sind nicht im Repository.
 - DIN-Normen sind – anders als Gesetze – urheberrechtlich geschützt (§ 5 Abs. 3 UrhG). Deshalb enthält die App von der VOB/C nur Nummer und Titel der ATV; für weitere Normen ist die Lizenzfrage zu klären (siehe `TODO.md`).
 - Die Musterbauordnung ist ein Muster der Bauministerkonferenz und kein geltendes Recht; die VOB ist kein Gesetz (VOB/A: Vergaberegeln, auf die das Haushalts- und Vergaberecht verweist; VOB/B und VOB/C: Vertragsbedingungen). Die App sagt das in jeder Karte.
@@ -414,34 +420,43 @@ Gezeichnet wird er als bewegliches Skelett (Kopf, Rumpf, Schwanzglieder, vier Be
 
 ### Geodienste der Länder und Städte
 
-Stand der Prüfung: 17.11.2026. Alle Dienste sind amtlich und erlauben den Abruf aus dem Browser. Jede Auskunft nennt die Quellen mit Lizenz. **Vollständig** heißt: Der Anbieter sagt ausdrücklich, dass der Dienst alle rechtsverbindlichen Pläne enthält – nur dann sagt die App „kein Plan“. Kein Denkmaldienst ist vollständig.
+Stand der Prüfung: 17./18.11.2026. Alle Dienste sind amtlich. Bis auf zwei (Landkreise Harburg und Fulda – ihre Server erlauben keine Abfrage aus fremden Webseiten, sie laufen nur in der lokalen Fassung) erlauben sie den Abruf aus dem Browser. Jede Auskunft nennt die Quellen mit Lizenz. **Vollständig** heißt: Der Anbieter sagt ausdrücklich, dass der Dienst alle rechtsverbindlichen Pläne enthält – nur dann sagt die App „kein Plan“. Kein Denkmaldienst ist vollständig.
 
 | Land | Bebauungspläne | Kulturdenkmale |
 |---|---|---|
-| Baden-Württemberg | Raumordnungskataster der Regierungspräsidien (dl-de/by-2.0; Regierungsbezirk Stuttgart fehlt) · Stadt Stuttgart (XPlanung) | Landesamt für Denkmalpflege (dl-de/by-2.0; laut Amt inoffizielle Fassung der Denkmalliste) |
+| Baden-Württemberg | Raumordnungskataster der Regierungspräsidien (dl-de/by-2.0; Regierungsbezirk Stuttgart fehlt) · Stadt Stuttgart (XPlanung) · Stadt Freiburg (dl-de/by-2.0) | Landesamt für Denkmalpflege (dl-de/by-2.0; laut Amt inoffizielle Fassung der Denkmalliste) |
 | Bayern | Bauleitpläne Bayern, LDBV / GDI-BY (CC BY-ND 4.0; nicht flächendeckend) · München (ohne Lizenzangabe) · Nürnberg (© Stadt Nürnberg) | Bayerisches Landesamt für Denkmalpflege (CC BY-ND 4.0; ohne Umrisse) |
 | Berlin | Senatsverwaltung, festgesetzte Pläne (dl-de/zero-2.0; ohne Baunutzungsplan 1958/60) | Landesdenkmalamt (dl-de/zero-2.0) |
-| Brandenburg | Gemeinsame Landesplanung Berlin-Brandenburg, PLIS (dl-de/by-2.0) | – (Veröffentlichung nur mit schriftlicher Zustimmung des Landesamts) |
+| Brandenburg | Gemeinsame Landesplanung Berlin-Brandenburg, PLIS (dl-de/by-2.0) | nur Frankfurt (Oder) (dl-de/by-2.0; Entfernung in Stufen bis ca. 50 m); Landesamt: Veröffentlichung nur mit schriftlicher Zustimmung |
 | Bremen | Stadt Bremen, XPlanung (CC BY) · Bremerhaven (CC BY) – **vollständig** | Landesamt für Denkmalpflege und Archäologie (CC BY; ohne Bodendenkmale) |
 | Hamburg | Behörde für Stadtentwicklung und Wohnen (dl-de/by-2.0) – **vollständig** | Denkmalschutzamt und Archäologisches Museum (dl-de/by-2.0) |
-| Hessen | nur Frankfurt am Main (dl-de/by-2.0); landesweit kein offener Dienst | Landesamt für Denkmalpflege, DenkXweb (dl-de/by-2.0; Bodendenkmäler nur als Umkreis) |
-| Mecklenburg-Vorpommern | Bau- und Planungsportal M-V (dl-de/by-2.0) | nur Rostock (CC0) und Schwerin (dl-de/by-2.0); landesweiter Dienst eingestellt |
-| Niedersachsen | Stadt Oldenburg (Open Data; dazu Plan-PDFs und Verfahren aus dem Kartenportal) · **Landkreis Leer** (Satzungs-PDF je Fassung) · **Landkreis Aurich** (auch Veränderungssperren) – jeweils alle Gemeinden einschließlich der Inseln, ohne Lizenzangabe; Landkreise Wittmund und Friesland: kein offener Dienst gefunden | Denkmalatlas Niedersachsen, NLD |
-| Nordrhein-Westfalen | Bauleitplanung NRW (dl-de/by-2.0; nur liefernde Gemeinden) | INSPIRE-Denkmäler NRW, Köln, Dortmund (alle dl-de/zero-2.0) |
+| Hessen | Frankfurt am Main (dl-de/by-2.0) · GDI-Südhessen-Plattform: Hochtaunuskreis, Wetteraukreis, Kreis Bergstraße, Kreis Groß-Gerau, Rheingau-Taunus-Kreis, Landkreis Limburg-Weilburg, Odenwaldkreis, Hanau, Rüsselsheim (dl-de/by-2.0) · Landkreis Fulda (CC0, nur lokal); landesweit kein offener Dienst | Landesamt für Denkmalpflege, DenkXweb (dl-de/by-2.0; Bodendenkmäler nur als Umkreis) |
+| Mecklenburg-Vorpommern | Bau- und Planungsportal M-V (dl-de/by-2.0) | Rostock (CC0), Schwerin (dl-de/by-2.0) · Landkreise Rostock, Vorpommern-Rügen (ohne Stralsund), Ludwigslust-Parchim (dl-de/by-2.0), Mecklenburgische Seenplatte ohne Neubrandenburg (CC BY 4.0); landesweiter Dienst eingestellt |
+| Niedersachsen | Stadt Oldenburg (dl-de/zero-2.0; dazu Plan-PDFs und Verfahren aus dem Kartenportal) · Landkreise Leer und Aurich (alle Gemeinden einschließlich der Inseln, Aurich auch Veränderungssperren; ohne Lizenzangabe) · Landkreise Osterholz, Diepholz, Stade (ohne Hansestädte Stade und Buxtehude) (dl-de/by-2.0) · Rotenburg (Wümme), Nienburg/Weser, Harburg (nur lokal) (dl-de/zero-2.0) · Hameln-Pyrmont ohne Stadt Hameln (CC BY-SA 4.0) · Städte Göttingen, Hildesheim (dl-de/by-2.0), Langenhagen (CC BY 4.0); Hannover, Braunschweig, Osnabrück, Wittmund, Friesland u. a.: kein nutzbarer Dienst | Denkmalatlas Niedersachsen, NLD |
+| Nordrhein-Westfalen | Bauleitplanung NRW (dl-de/by-2.0; nur liefernde Gemeinden) · Städte Münster (dl-de/by-2.0) und Duisburg (CC BY 3.0 DE) – doppelte Pläne aus Landes- und Stadtdienst werden zusammengeführt | INSPIRE-Denkmäler NRW, Köln, Dortmund (alle dl-de/zero-2.0) |
 | Rheinland-Pfalz | GDI-RP, Metadaten Bebauungspläne (dl-de/by-2.0; ohne Rechtsstand) | GDKE, Denkmalliste (dl-de/by-2.0) |
 | Saarland | – (Nutzungsbedingungen erlauben nur das Anschauen im GeoPortal) | GDI-SL / Landesdenkmalamt (CC BY 4.0) |
 | Sachsen | RAPIS, Landesdirektion Sachsen (dl-de/by-2.0) | Landesamt für Denkmalpflege, Denkmalkarte (ohne archäologische Denkmale) |
 | Sachsen-Anhalt | XPlanung-Plattform des Landes | Landesamt für Denkmalpflege und Archäologie, Denkmalinformationssystem |
 | Schleswig-Holstein | GDI-SH, XPlanung (dl-de/by-2.0; rund 700 Pläne) | GDI-SH, Daten des Landesamts (CC BY 4.0; nur ein kleiner Teil der Denkmalliste) |
-| Thüringen | GDI-Th, kommunale Geodaten (CC BY 4.0) | – (kein Dienst des Landesamts) |
+| Thüringen | GDI-Th, kommunale Geodaten (CC BY 4.0) | GDI-Th, aus ALKIS abgeleitete Denkmale (CC BY 4.0; nur Namen, oft leer; Entfernung in Stufen) – kein Dienst des Landesamts |
 
-Vor einer kommerziellen Nutzung zu klären: Bayern (CC BY-ND – Namensnennung, keine Bearbeitung), Denkmalkarte Sachsen (teils CC BY-NC-ND, nicht kommerziell), Nürnberg (nur „©“), München, Landkreis Leer und Landkreis Aurich (ohne Lizenzangabe), Schwerin („Zugriff beschränkt“). Einzelheiten und Begründungen stehen in den Dateien unter `lib/ort/dienste/`.
+Einzelheiten und Begründungen stehen in den Dateien unter `lib/ort/dienste/`, die vollständige Recherche in [docs/quellen-recherche.md](docs/quellen-recherche.md).
+
+### Kommerzielle Nutzung (Verkauf, Abo-Modell)
+
+Keine Rechtsberatung – vor einem Verkauf rechtlich prüfen lassen. Stand der Prüfung 18.11.2026:
+
+- **Geodienste mit offener Lizenz** (Datenlizenz Deutschland, CC BY, CC0): auch kommerziell nutzbar, Quellenvermerk nötig (steht in jeder Auskunft). Besonderheiten: CC BY-SA (Denkmalatlas Niedersachsen, Hameln-Pyrmont) – abgeleitete Daten unter gleicher Lizenz weitergeben; CC BY-ND (Bayern) – keine veränderten Fassungen der Daten weitergeben.
+- **Ohne Lizenzangabe – vor einem Verkauf schriftlich nachfragen:** München, Stuttgart, Nürnberg („© Stadt Nürnberg“), Landkreise Leer und Aurich, Sachsen-Anhalt (B-Pläne und Denkmale), Denkmalkarte Sachsen (laut Website teils CC BY-NC-ND, also nicht kommerziell).
+- **Gesetzestexte** sind gemeinfrei (§ 5 UrhG), aber Portale können Text- und Data-Mining vorbehalten: **NI-VORIS** (Quelle von NBauO und NDSchG) sendet `tdm-reservation: 1` und untersagt „Vervielfältigungen und Entnahmen der Inhalte … für kommerzielles Text und Data Mining“. Für ein Bezahlprodukt müssen NBauO und NDSchG deshalb aus einer anderen amtlichen Quelle (z. B. Gesetzblatt) neu importiert oder mit Erlaubnis genutzt werden. BAYERN.RECHT, RECHT.NRW.DE, REVOSax, BRAVORS, das Transparenzportal Bremen und gesetze-im-internet.de setzen keinen solchen Vorbehalt.
+- **Adresssuche und Kartenkacheln** (OpenStreetMap/Nominatim, tile.openstreetmap.org): Nutzungsrichtlinien gegen starke Nutzung – für ein Produkt eigener Dienst oder kommerzieller Anbieter. **GitHub Pages** ist laut GitHub nicht für kommerzielle Angebote (SaaS, Verkauf) gedacht – für ein Abo-Modell anderes Hosting nötig.
 
 ---
 
 ## Weiterführende Dokumente
 
-- [TODO.md](TODO.md) – Plan, erledigte Punkte, nächste Schritte (u. a. Erläuterungen für BauGB §§ 39–250, Landesrecht der übrigen zehn Länder, Normen)
+- [TODO.md](TODO.md) – Plan, erledigte Punkte, nächste Schritte (u. a. Erläuterungen für BauGB §§ 39–250, Landesrecht der übrigen Länder, Normen)
 - [data/gegenstuecke/THEMEN.md](data/gegenstuecke/THEMEN.md) – Themen und Regeln für die Zuordnung der Landesvorschriften
 - [data/erlaeuterungen/LEITFADEN.md](data/erlaeuterungen/LEITFADEN.md) – Regeln für das Schreiben von Erläuterungen
 - [data/erlaeuterungen/PRUEFHINWEISE.md](data/erlaeuterungen/PRUEFHINWEISE.md) – Stellen, die eine Fachperson prüfen sollte

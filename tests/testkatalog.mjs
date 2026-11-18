@@ -53,7 +53,14 @@ const FAELLE = [
   { frage: "§ 6 BauO NRW", erwartet: [["norm", "§ 6", "bauo-nrw"]] },
   { frage: "§ 10 SächsDSchG", erwartet: [["norm", "§ 10", "saechsdschg"]] },
   { frage: "§ 3 BremDSchG", erwartet: [["norm", "§ 3", "bremdschg"]] },
-  { frage: "§ 6 Bauordnung", land: "Hessen", erwartet: [["fehler"]] }, // HBO noch nicht in der Bibliothek – offen sagen
+  { frage: "§ 6 Bauordnung", land: "Hessen", erwartet: [["norm", "§ 6", "hbo"]] },
+  { frage: "§ 6 Bauordnung", land: "Rheinland-Pfalz", erwartet: [["fehler"]] }, // LBauO noch nicht in der Bibliothek – offen sagen
+  { frage: "§ 5 LBO BW", erwartet: [["norm", "§ 5", "lbo-bw"]] },
+  { frage: "§ 6 Bauordnung", land: "Baden-Württemberg", erwartet: [["norm", "§ 6", "lbo-bw"]] },
+  { frage: "§ 33 HBO", erwartet: [["norm", "§ 33", "hbo"]] }, // nichtamtliche Lesefassung, Hinweis zur Nummerierung in Abs. 2
+  { frage: "Abstandsflächen", land: "Hessen", erwartet: [["treffer", "§ 6"]] },
+  { frage: "§ 6 Bauordnung", land: "Hamburg", erwartet: [["norm", "§ 6", "hbauo"]] },
+  { frage: "Abstandsflächen", land: "Hamburg", erwartet: [["treffer", "§ 6"]] },
   { frage: "Abstandsflächen", land: "Nordrhein-Westfalen", erwartet: [["treffer", "§ 6"]] },
   { frage: "Baugenehmigung", land: "Brandenburg", erwartet: [["treffer", "§ 64"]] },
   { frage: "ATV DIN 18300", erwartet: [["norm", "DIN 18300", "vobc"]] },
@@ -107,11 +114,26 @@ const FAELLE = [
   { frage: "Domplatz 4, 39104 Magdeburg", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Ludwigsplatz 1, 66117 Saarbrücken", erwartet: [["ort", "fehler/umgebung"]] }, // Saarland: B-Pläne bewusst nicht angebunden
   { frage: "Dänische Straße 44, 24103 Kiel", erwartet: [["ort", "keiner/am-standort"]] },
-  { frage: "Jürgen-Fuchs-Straße 1, 99096 Erfurt", erwartet: [["ort", "gefunden/fehler"]] }, // Thüringen: Plan ohne Nummer, kein Denkmal-Dienst
+  { frage: "Jürgen-Fuchs-Straße 1, 99096 Erfurt", erwartet: [["ort", "gefunden/am-standort"]] }, // Thüringen: Plan ohne Nummer; Denkmale aus ALKIS (seit 18.11.)
+  // Denkmaldienste (18.11.): Landkreise in MV, Thüringen landesweit, Frankfurt (Oder)
+  { frage: "Am Wall 1, 18273 Güstrow", erwartet: [["ort", "*/am-standort"]] }, // LK Rostock
+  { frage: "Königsstraße 4, 18528 Bergen auf Rügen", erwartet: [["ort", "*/umgebung"]] }, // Vorpommern-Rügen
+  { frage: "Kanalstraße 11, 19288 Ludwigslust", erwartet: [["ort", "*/am-standort"]] }, // Ludwigslust-Parchim
+  { frage: "Töpferstraße 5, 17235 Neustrelitz", erwartet: [["ort", "*/am-standort"]] }, // Mecklenburgische Seenplatte
+  { frage: "Große Scharrnstraße 59, 15230 Frankfurt (Oder)", erwartet: [["ort", "*/am-standort"]] }, // Frankfurt (Oder)
   // Ostfriesische Inseln: Kreisdienste Landkreis Leer (Borkum) und Landkreis Aurich (Juist, Norderney, Baltrum)
   { frage: "Strandstraße 1, 26757 Borkum", erwartet: [["ort", "gefunden/*"]] }, // Nr. 37 „Zentrum“, 3. und 4. Änderung mit Satzungs-PDF
   { frage: "Strandstraße 1, 26571 Juist", erwartet: [["ort", "gefunden/*"]] },
   { frage: "Ellernstraße 14, 26548 Norderney", erwartet: [["ort", "keiner+vs/*"]] }, // kein Plan, aber Veränderungssperre 03A (getrennt angezeigt)
+  // weitere Kreis- und Stadtdienste (18.11.): offen lizenziert, nur rechtskräftige Bebauungspläne
+  { frage: "Am Osterholze 5, 27711 Osterholz-Scharmbeck", erwartet: [["ort", "gefunden/*"]] }, // LK Osterholz
+  { frage: "Auf der Loge 20, 27305 Bruchhausen-Vilsen", erwartet: [["ort", "gefunden/*"]] }, // LK Diepholz
+  { frage: "Weender Straße 50, 37073 Göttingen", erwartet: [["ort", "gefunden/*"]] }, // Stadt Göttingen
+  { frage: "Am Markt 14, 63450 Hanau", erwartet: [["ort", "gefunden/*"]] }, // GDI-Südhessen
+  { frage: "Leipziger Straße 123, 36037 Fulda", erwartet: [["ort", "gefunden/*"]] }, // LK Fulda (GeometryCollection, nur Server)
+  { frage: "Bertoldstraße 43, 79098 Freiburg im Breisgau", erwartet: [["ort", "gefunden/*"]] }, // Stadt Freiburg + Raumordnungskataster
+  { frage: "Aegidiistraße 67a, 48143 Münster", erwartet: [["ort", "gefunden/*"]] }, // Stadt Münster + Land NRW (doppelter Plan zusammengeführt)
+  { frage: "Sonnenwall 50, 47051 Duisburg", erwartet: [["ort", "gefunden/*"]] }, // Stadt Duisburg
 ];
 
 function kurzform(a) {

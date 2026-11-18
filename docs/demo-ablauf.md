@@ -37,15 +37,15 @@
 
 ## Zahlen für die Folien
 
-- 17 Regelwerke: BauGB, Bauordnung und Denkmalschutzgesetz von 6 Ländern, MBO, VOB/A, VOB/B, VOB/C-Verzeichnis
-- Wortlaut geprüft: BauGB 297/297 gegen die amtlichen Einzelseiten; Landesrecht gegen eine zweite amtliche Darstellung
-- Ortsauskunft für ganz Deutschland: 21 Bebauungsplan- und 17 Denkmaldienste der Länder, Landkreise und Städte
-- Testkatalog: 82 Fragen, alle bestanden (Paragraphen, Rückfragen, Stichworte, Landesrecht, Ortsauskunft in allen 16 Ländern)
+- 20 Regelwerke: BauGB, Bauordnung und Denkmalschutzgesetz von 6 Ländern, Bauordnungen von Baden-Württemberg, Hessen und Hamburg, MBO, VOB/A, VOB/B, VOB/C-Verzeichnis
+- Wortlaut geprüft: BauGB 297/297 gegen die amtlichen Einzelseiten; Landesrecht gegen eine zweite amtliche Darstellung bzw. eine zweite, unabhängige PDF-Auslesung
+- Ortsauskunft für ganz Deutschland: 44 Bebauungsplan- und 23 Denkmaldienste der Länder, Landkreise und Städte
+- Testkatalog: 107 Fragen, alle bestanden (Paragraphen, Rückfragen, Stichworte, Landesrecht, Ortsauskunft in allen 16 Ländern)
 
 ## Ausblick (letzte Folie)
 
 - **Grundstücksanalyse:** eigene Grundstücksgrenzen hochladen (GeoJSON, KML, Shapefile) → Auskunft für die Fläche statt für den Adresspunkt; eigene Funktion, getrennt vom Paragraphen-Abruf
-- **Übrige zehn Länder:** deren Rechtsportale (juris) verbieten den automatischen Abruf – Erlaubnis anfragen
+- **Übriges Landesrecht:** die Rechtsportale von zehn Ländern (juris) verbieten den automatischen Abruf – drei Bauordnungen kommen schon aus frei veröffentlichten PDFs, für den Rest weitere solche Quellen suchen oder Erlaubnis anfragen
 - **KI erst danach und nur als Wegweiser:** freie Fragen verstehen, verwandte Vorschriften vorschlagen – der Gesetzestext kommt weiter aus der Bibliothek
 
 ## Wenn etwas hakt

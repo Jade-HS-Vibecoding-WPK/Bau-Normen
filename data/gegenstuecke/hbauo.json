@@ -1,0 +1,34 @@
+{
+ "gesetz": "hbauo",
+ "themen": {
+  "begriffe": ["2"],
+  "abstandsflaechen": ["6"],
+  "nicht-ueberbaute-flaechen": ["8"],
+  "werbeanlagen": ["10"],
+  "brandwaende": ["30"],
+  "rettungswege": ["33"],
+  "stellplaetze": ["49"],
+  "barrierefrei": ["50"],
+  "sonderbauten": ["51", "2"],
+  "bauherr": ["53"],
+  "entwurfsverfasser": ["54"],
+  "bauvorlageberechtigung": ["65"],
+  "genehmigungspflicht": ["59"],
+  "verfahrensfrei": ["61", "anlage"],
+  "genehmigungsfreistellung": ["62"],
+  "vereinfachtes-verfahren": ["63"],
+  "baugenehmigungsverfahren": ["64", "64a"],
+  "abweichungen": ["67"],
+  "bauantrag": ["68"],
+  "baugenehmigung": ["72"],
+  "vorbescheid": ["75"],
+  "baulasten": ["83"]
+ },
+ "hinweise": [
+  "Verfahrensfreie Vorhaben: § 61 verweist auf die Anlage (in der Synopse direkt nach § 61 abgedruckt).",
+  "Stellplätze: § 49 „Grundstücksbezogene Mobilität“ (Mobilitätsnachweis).",
+  "Sonderbauten: Katalog in § 2 Abs. 4, Anforderungen in § 51.",
+  "Örtliche Bauvorschriften (MBO § 86): keine Vorschrift mit diesem Inhalt in der HBauO gefunden – nicht zugeordnet.",
+  "Wortlaut aus der rechten Spalte der Gesamtsynopse (nichtamtliche Lesefassung, Stand 26.09.2026)."
+ ]
+}

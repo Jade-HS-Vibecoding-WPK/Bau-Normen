@@ -1,0 +1,33 @@
+{
+ "gesetz": "lbo-bw",
+ "themen": {
+  "begriffe": ["2"],
+  "abstandsflaechen": ["5", "6"],
+  "nicht-ueberbaute-flaechen": ["9"],
+  "werbeanlagen": ["11"],
+  "brandwaende": ["27c"],
+  "rettungswege": ["15"],
+  "stellplaetze": ["37"],
+  "barrierefrei": ["39"],
+  "sonderbauten": ["38"],
+  "bauherr": ["42"],
+  "entwurfsverfasser": ["43"],
+  "bauvorlageberechtigung": ["63"],
+  "genehmigungspflicht": ["49"],
+  "verfahrensfrei": ["50", "anhang-1"],
+  "genehmigungsfreistellung": ["51"],
+  "vereinfachtes-verfahren": ["52"],
+  "abweichungen": ["56"],
+  "bauantrag": ["53"],
+  "baugenehmigung": ["58", "59"],
+  "vorbescheid": ["57"],
+  "baulasten": ["71", "72"],
+  "oertliche-bauvorschriften": ["74"]
+ },
+ "hinweise": [
+  "Verfahrensfreie Vorhaben: § 50 mit der Liste in Anhang 1.",
+  "Statt einer Genehmigungsfreistellung kennt die LBO BW das Kenntnisgabeverfahren (§ 51).",
+  "Werbeanlagen haben keinen eigenen Paragraphen: Anforderungen in § 11 Abs. 3 und 4 (Gestaltung), Begriff in § 2.",
+  "Rettungswege: § 15 Abs. 3 bis 5 (Brandschutz); ein eigener Paragraph zum (regulären) Baugenehmigungsverfahren fehlt – Verfahren in §§ 53 bis 58."
+ ]
+}
