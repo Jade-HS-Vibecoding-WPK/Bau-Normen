@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://jade-hs-vibecoding-wpk.github.io/Bau-Normen/"><b>▶ Online ausprobieren</b></a>
+  <a href="https://jade-hs-vibecoding-wpk.github.io/ParaGecko/"><b>▶ Online ausprobieren</b></a>
   &nbsp;·&nbsp; <a href="#schnellstart">Lokal starten</a>
   &nbsp;·&nbsp; <a href="#so-funktioniert-es">So funktioniert es</a>
   &nbsp;·&nbsp; <a href="TODO.md">Plan &amp; nächste Schritte</a>
@@ -73,7 +73,7 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche (bis 18.11.2026 unter
 | **Gecko** | Ein kleines Maskottchen, das auf der Seite unterwegs ist und bei Fehlern oder Hinweisen die Farbe wechselt. Über Text wird er durchsichtig; auf Wunsch sitzt er still und dient nur als Signal. |
 | **Hell & Dunkel** | Helles und dunkles Farbschema, oder automatisch wie im Betriebssystem eingestellt (Menü **Darstellung**). |
 | **Deutsch & Englisch** | Die gesamte Oberfläche, die Ortsauskunft und alle Hinweise gibt es auf Deutsch und Englisch (Umschalter **DE/EN**). Der Text der Vorschriften bleibt im deutschen Wortlaut. |
-| **Online-Version** | Die App läuft auch ohne Server direkt im Browser, veröffentlicht auf [GitHub Pages](https://jade-hs-vibecoding-wpk.github.io/Bau-Normen/). |
+| **Online-Version** | Die App läuft auch ohne Server direkt im Browser, veröffentlicht auf [GitHub Pages](https://jade-hs-vibecoding-wpk.github.io/ParaGecko/). |
 
 ---
 
@@ -154,13 +154,13 @@ Dann im Browser **http://localhost:3000** öffnen.
 
 Die Gesetze und Erläuterungen liegen bereits im Repository (`data/`). Ein Import ist für den Start nicht nötig. Für die Ortsauskunft braucht der Rechner eine Internetverbindung.
 
-Ohne Installation geht es auch: **[Online-Version auf GitHub Pages](https://jade-hs-vibecoding-wpk.github.io/Bau-Normen/)**.
+Ohne Installation geht es auch: **[Online-Version auf GitHub Pages](https://jade-hs-vibecoding-wpk.github.io/ParaGecko/)**.
 
 ---
 
 ## Online-Version (GitHub Pages)
 
-**Adresse:** https://jade-hs-vibecoding-wpk.github.io/Bau-Normen/
+**Adresse:** https://jade-hs-vibecoding-wpk.github.io/ParaGecko/
 
 GitHub Pages liefert nur fertige Dateien aus; einen Server gibt es dort nicht. Die App ist deshalb so gebaut, dass **derselbe Code** in zwei Betriebsarten läuft:
 
@@ -190,7 +190,7 @@ Auf dem Server werden Verweise, Abschnitte und Suchtexte einmal je Datenstand vo
 
 ```bash
 npm run build:pages      # baut die Online-Version nach out/
-npm run preview:pages    # zeigt sie unter http://localhost:3100/Bau-Normen/
+npm run preview:pages    # zeigt sie unter http://localhost:3100/ParaGecko/
 ```
 
 ---
@@ -277,7 +277,7 @@ flowchart LR
 | `npm run dev` | App lokal starten (http://localhost:3000) |
 | `npm run build` / `npm start` | Produktionsversion bauen bzw. starten |
 | `npm run build:pages` | Online-Version für GitHub Pages nach `out/` bauen |
-| `npm run preview:pages` | Online-Version lokal ansehen (http://localhost:3100/Bau-Normen/) |
+| `npm run preview:pages` | Online-Version lokal ansehen (http://localhost:3100/ParaGecko/) |
 | `npm run import:all` | Alle Regelwerke neu aus den Quellen laden (einzeln: `import:baugb`, `import:ndschg`, `import:nbauo`, `import:mbo`, `import:vob`, `vobc`). MBO und VOB werden aus PDFs gelesen. Dafür sind `pdftotext` (Poppler) und Python mit `pypdf` nötig; mit `-- --offline` genügt der gespeicherte Text |
 | `node scripts/import-landesrecht-c.mjs` | Bauordnungen und Denkmalschutzgesetze von Bayern, NRW, Sachsen, Brandenburg und Bremen neu laden (`--offline` nutzt die gespeicherten Rohdaten, `--pruefen` macht die Gegenprüfung, `--nur=baybo,baydschg` einzelne Gesetze); BRAVORS verlangt 20 s Pause je Abruf |
 | `node scripts/import-landesrecht-d.mjs` | Bauordnungen von Baden-Württemberg, Hessen und Hamburg aus den PDFs (Gesetzblatt bzw. Lesefassung, beim Hamburger Synopsen-PDF nur die rechte Spalte), mit zwei unabhängigen Auslesungen (pypdf und pdftotext) samt Gegenprüfung und Protokoll; `--offline`, `--nur=hbo` |

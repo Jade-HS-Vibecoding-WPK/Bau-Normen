@@ -163,7 +163,7 @@ export const zeile = (k) => normWs(textVon(k)).trim();
 // ---------- Abruf ----------
 
 export const PAUSE_MS = 1200;
-const UA = "bau-normen-ki/0.1 (Import-Skript, einzelner Abruf eines Gesetzes)";
+const UA = "paragecko/0.1 (Import-Skript, einzelner Abruf eines Gesetzes)";
 // Wartezeit je Host: mindestens 1,2 s; BRAVORS verlangt in robots.txt „Crawl-delay: 20“
 const WARTEN = { "bravors.brandenburg.de": 20000 };
 const letzterAbruf = new Map();

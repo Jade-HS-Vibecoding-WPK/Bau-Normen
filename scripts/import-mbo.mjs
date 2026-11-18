@@ -69,7 +69,7 @@ const QUELL_DIR = path.join(ROOT, "data", "quellen", "mbo");
 const ZIEL = path.join(ROOT, "data", "gesetze", "mbo.json");
 
 const PDF_URL = "https://www.dibt.de/fileadmin/dibt-website/Dokumente/Rechtsgrundlagen/MBO.pdf";
-const HEADERS = { "User-Agent": "bau-normen-ki/0.1 (Import-Skript, einzelner Abruf eines Gesetzes)" };
+const HEADERS = { "User-Agent": "paragecko/0.1 (Import-Skript, einzelner Abruf eines Gesetzes)" };
 
 const DATEI_PDF = path.join(QUELL_DIR, "mbo.pdf");
 const DATEI_TEXT = path.join(QUELL_DIR, "mbo.txt");

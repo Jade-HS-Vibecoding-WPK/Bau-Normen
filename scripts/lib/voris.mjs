@@ -23,7 +23,7 @@ import path from "node:path";
 
 export const BASIS = "https://voris.wolterskluwer-online.de";
 export const PAUSE_MS = 1200;
-const HEADERS = { "User-Agent": "bau-normen-ki/0.1 (Import-Skript, einzelner Abruf eines Gesetzes)" };
+const HEADERS = { "User-Agent": "paragecko/0.1 (Import-Skript, einzelner Abruf eines Gesetzes)" };
 
 export const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 

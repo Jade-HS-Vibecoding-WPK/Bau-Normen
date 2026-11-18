@@ -1,6 +1,6 @@
 # Demo-Ablauf ParaGecko (19.11.2026)
 
-**Dauer:** ca. 12 bis 15 Minuten · **Adresse:** https://jade-hs-vibecoding-wpk.github.io/Bau-Normen/
+**Dauer:** ca. 12 bis 15 Minuten · **Adresse:** https://jade-hs-vibecoding-wpk.github.io/ParaGecko/
 **Rückfallebene:** lokal `npm run dev` → http://localhost:3000 (gleicher Funktionsumfang, dazu der Obsidian-Knopf)
 
 > Alle Eingaben unten sind am 17.11.2026 abends live geprüft (Zeiten: lokaler Server, frisch gestartet, ohne

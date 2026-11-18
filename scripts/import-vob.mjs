@@ -48,7 +48,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const QUELL_DIR = path.join(ROOT, "data", "quellen", "vob");
 const ZIEL_DIR = path.join(ROOT, "data", "gesetze");
 const PROTOKOLL = path.join(QUELL_DIR, "import-protokoll.txt");
-const HEADERS = { "User-Agent": "bau-normen-ki/0.1 (Import-Skript, einzelner Abruf einer Bekanntmachung)" };
+const HEADERS = { "User-Agent": "paragecko/0.1 (Import-Skript, einzelner Abruf einer Bekanntmachung)" };
 const OFFLINE = process.argv.includes("--offline");
 
 const QUELLEN = {

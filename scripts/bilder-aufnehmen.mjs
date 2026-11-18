@@ -1,6 +1,6 @@
 // Nimmt die Bildschirmfotos für die README neu auf (docs/bilder/*.png).
 // Aufruf: zuerst die Online-Fassung bauen und lokal zeigen (npm run build:pages, dann npm run pages:vorschau o. Ä.),
-// danach:  node scripts/bilder-aufnehmen.mjs [http://localhost:3101/Bau-Normen/]
+// danach:  node scripts/bilder-aufnehmen.mjs [http://localhost:3100/ParaGecko/]
 // Steuert Microsoft Edge (oder Chrome) ohne Fenster über das DevTools-Protokoll; keine zusätzlichen Pakete nötig.
 // Die Ortsauskunft fragt echte Dienste ab: Fällt einer aus, sieht man das auch auf dem Foto.
 import { spawn } from "node:child_process";
@@ -8,7 +8,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-const URL_APP = process.argv[2] ?? "http://localhost:3101/Bau-Normen/";
+const URL_APP = process.argv[2] ?? "http://localhost:3100/ParaGecko/";
 const ZIEL = path.resolve("docs/bilder");
 const PORT = 9333;
 const BROWSER = [

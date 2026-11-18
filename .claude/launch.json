@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "bau-normen-ki",
+      "name": "paragecko",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "run",
