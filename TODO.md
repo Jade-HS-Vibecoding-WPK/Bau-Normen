@@ -76,7 +76,7 @@
 - **Landesgesetze importiert (10):** BayBO, BayDSchG, BauO NRW, DSchG NRW, SächsBO, SächsDSchG, BbgBO, BbgDSchG, BremLBO, BremDSchG – `scripts/import-landesrecht-c.mjs` (`--offline --pruefen`), Prüfprotokolle in `data/quellen/landesrecht/<id>/pruefung.txt` (git-ignoriert). Abweichungen Portal ↔ Gesetzblatt (Bremen 8, Brandenburg 1) als sichtbarer Hinweis an der Vorschrift.
 - **Gegenstücke** `data/gegenstuecke/*.json` für alle 12 Landesgesetze (Thema → Vorschriften, `schutzOhneEintragung` mit wörtlichem Beleg); Stichworte mit Platzhaltern `@bauordnung:<thema>` / `@denkmalschutz:<thema>`
 - **Datenlagerung Online-Version:** `katalog.json` + je Gesetz `details/`, `wortlaut/`, `suche/` (nur bei Bedarf geladen)
-- **Geodienste:** `lib/ort/dienste/` – 19 B-Plan- und 17 Denkmaldienste aller Länder (amtlich, getestet, CORS ok); nur Hamburg und Bremerhaven sind `vollstaendig`; Oldenburg jetzt bewusst `vollstaendig: false`
+- **Geodienste:** `lib/ort/dienste/` – 21 B-Plan- (in Niedersachsen seit 17.11. abends auch die Landkreise Leer und Aurich) und 17 Denkmaldienste aller Länder (amtlich, getestet, CORS ok); nur Hamburg und Bremerhaven sind `vollstaendig`; Oldenburg jetzt bewusst `vollstaendig: false`
 - **Ortsauskunft:** fragt alle passenden Dienste parallel ab und fasst zusammen (`zusammenfassen` in `lib/ort/index.ts`); B-Plan-Texte allgemein; „kein Plan“ nur bei vollständigem Dienst, sonst „nicht verzeichnet – Dienst nicht vollständig“; Bauordnungsrecht nach dem Land der Adresse
 
 ### Als Nächstes (in dieser Reihenfolge)
@@ -110,6 +110,10 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 - [ ] Weitere Landes-Denkmalschutzgesetze – jedes Land einzeln mit Treueprüfung
 - [x] NBauO (Niedersächsische Bauordnung)
 - [ ] B-Plan-Dienste weiterer Städte (z. B. über XPlanung/Geoportale der Länder) und Denkmal-Dienste weiterer Länder anbinden
+- [x] Niedersachsen: Kreisdienste Landkreis Leer und Landkreis Aurich (alle Gemeinden, auch die Inseln Borkum, Juist, Norderney, Baltrum) – Dienste für einen ganzen Landkreis (`gebiet.kreis`), Veränderungssperren aus Diensten werden getrennt angezeigt
+- [ ] Niedersachsen: Landkreise Wittmund und Friesland (auch Langeoog, Spiekeroog, Wangerooge) haben keinen offenen Dienst – beim Landkreis anfragen
+- [ ] Satzungen nach §§ 34, 35 BauGB (Innen-/Außenbereichs-, Abrundungs-, Splittersiedlungssatzungen) und örtliche Bauvorschriften stehen in den Kreisdiensten Leer/Aurich mit drin – bisher bewusst nicht angezeigt (keine Bebauungspläne); als eigene Ebene ergänzen
+- [ ] Landkreis Osterholz hat eine öffentliche ArcGIS-Karte „Raumordnung & Bauleitplanung“ (dl-de/by-2.0) – prüfen und anbinden
 - [x] Landesbauordnungen und Denkmalschutzgesetze von Bayern, NRW, Sachsen, Brandenburg, Bremen (die übrigen zehn Länder: siehe „Entscheidungen der Nutzerin“ oben)
 - [ ] Weitere frei verfügbare Regelwerke: BauNVO, PlanZV, GEG, HOAI, BGB-Bauvertragsrecht (§§ 650a ff.), NTVergG, DVO-NBauO
 - [ ] § 3a VOB/A: zusammengeführten Text fachlich gegenlesen lassen (die Bekanntmachung 2025 enthält nur Änderungsbefehle)

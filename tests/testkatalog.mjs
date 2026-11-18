@@ -5,7 +5,8 @@
 //   norm:    detail = "§ 34", gesetz = "baugb"
 //   treffer: detail = Paragraph, der unter den Treffern sein muss
 //   ort:     detail = "bplan-status/denkmal-status" (z. B. "gefunden/keiner"), "*" = egal,
-//            "gefunden+dok" = B-Plan gefunden UND Planzeichnung als PDF verlinkt
+//            "gefunden+dok" = B-Plan gefunden UND Planzeichnung als PDF verlinkt,
+//            "keiner+vs" = kein B-Plan, aber eine Veränderungssperre verzeichnet
 // Hinweis: Die Orts-Fälle fragen echte Dienste ab (Stadt Oldenburg, Denkmalatlas, OpenStreetMap).
 const BASIS = process.argv[2] ?? "http://localhost:3000";
 
@@ -104,6 +105,10 @@ const FAELLE = [
   { frage: "Ludwigsplatz 1, 66117 Saarbrücken", erwartet: [["ort", "fehler/umgebung"]] }, // Saarland: B-Pläne bewusst nicht angebunden
   { frage: "Dänische Straße 44, 24103 Kiel", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Jürgen-Fuchs-Straße 1, 99096 Erfurt", erwartet: [["ort", "gefunden/fehler"]] }, // Thüringen: Plan ohne Nummer, kein Denkmal-Dienst
+  // Ostfriesische Inseln: Kreisdienste Landkreis Leer (Borkum) und Landkreis Aurich (Juist, Norderney, Baltrum)
+  { frage: "Strandstraße 1, 26757 Borkum", erwartet: [["ort", "gefunden/*"]] }, // Nr. 37 „Zentrum“, 3. und 4. Änderung mit Satzungs-PDF
+  { frage: "Strandstraße 1, 26571 Juist", erwartet: [["ort", "gefunden/*"]] },
+  { frage: "Ellernstraße 14, 26548 Norderney", erwartet: [["ort", "keiner+vs/*"]] }, // kein Plan, aber Veränderungssperre 03A (getrennt angezeigt)
 ];
 
 function kurzform(a) {
@@ -123,7 +128,8 @@ function passt(a, [art, detail, gesetz]) {
     const [b, mitDok] = bRoh.split("+");
     if (a.ort.standort.status !== "ok") return false;
     if (b !== "*" && a.ort.bplan.status !== b) return false;
-    if (mitDok && !(a.ort.bplan.plaene ?? []).some((p) => (p.dokumente ?? []).some((x) => x.art === "Planzeichnung"))) return false;
+    if (mitDok === "dok" && !(a.ort.bplan.plaene ?? []).some((p) => (p.dokumente ?? []).some((x) => x.art === "Planzeichnung"))) return false;
+    if (mitDok === "vs" && !(a.ort.bplan.weitere ?? []).some((w) => w.art === "veraenderungssperre")) return false;
     if (d !== "*" && a.ort.denkmal.status !== d) return false;
   }
   return true;

@@ -39,7 +39,7 @@
 
 - 17 Regelwerke: BauGB, Bauordnung und Denkmalschutzgesetz von 6 Ländern, MBO, VOB/A, VOB/B, VOB/C-Verzeichnis
 - Wortlaut geprüft: BauGB 297/297 gegen die amtlichen Einzelseiten; Landesrecht gegen eine zweite amtliche Darstellung
-- Ortsauskunft für ganz Deutschland: 19 Bebauungsplan- und 17 Denkmaldienste der Länder und Städte
+- Ortsauskunft für ganz Deutschland: 21 Bebauungsplan- und 17 Denkmaldienste der Länder, Landkreise und Städte
 - Testkatalog: 82 Fragen, alle bestanden (Paragraphen, Rückfragen, Stichworte, Landesrecht, Ortsauskunft in allen 16 Ländern)
 
 ## Ausblick (letzte Folie)

@@ -4,11 +4,13 @@
 // Sonst heißt ein leeres Ergebnis nur "im Dienst nicht verzeichnet".
 import type { Sprache } from "../../sprache";
 
-/** Gebiet eines Dienstes: ein ganzes Land oder eine einzelne Gemeinde */
+/** Gebiet eines Dienstes: ein ganzes Land, ein Landkreis oder eine einzelne Gemeinde */
 export interface DienstGebiet {
   /** Bundesland, wie es lib/ort/standort.ts liefert, z. B. "Niedersachsen", "Bayern", "Berlin" */
   land: string;
-  /** nur diese Gemeinde/Stadt (Name wie in den Adressdaten, z. B. "Oldenburg (Oldb)"); fehlt = ganzes Land */
+  /** nur dieser Landkreis (Name wie in den Adressdaten, z. B. "Landkreis Leer") */
+  kreis?: string;
+  /** nur diese Gemeinde/Stadt (Name wie in den Adressdaten, z. B. "Oldenburg (Oldb)"); fehlen kreis und gemeinde = ganzes Land */
   gemeinde?: string;
 }
 
@@ -21,6 +23,9 @@ export interface PlanTreffer {
   verfahren?: string;
   /** Link zum Plan (Planzeichnung, Detailseite) – nur amtliche Adressen aus dem Dienst */
   link?: string;
+  /** Kein Plan, sondern eine Sicherung der Planung, die der Dienst mitführt (z. B. Veränderungssperre, § 14 BauGB) –
+   *  die Ortsauskunft zeigt sie getrennt von den Plänen an */
+  sicherung?: "veraenderungssperre";
   dokumente?: { art: string; name: string; url: string; groesseMB: number }[];
   /** Planumring in Metern relativ zum Standort (x Osten, y Norden) – leer, wenn der Dienst keine Geometrie liefert */
   umriss: [number, number][][];

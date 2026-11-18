@@ -101,6 +101,8 @@ export interface OrtAnsicht {
         ort: string;
         plz?: string;
         land: string;
+        /** Landkreis laut Adressdaten (fehlt bei kreisfreien Städten) */
+        kreis?: string;
         /** Stadt Oldenburg (Oldb): dort sind die B-Plan-Dienste angebunden */
         oldenburg: boolean;
       }

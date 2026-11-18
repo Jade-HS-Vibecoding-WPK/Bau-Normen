@@ -23,7 +23,7 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche:
 
 - **Gesetze und Regelwerke im Wortlaut** – Baugesetzbuch (BauGB), Bauordnung und Denkmalschutzgesetz von sechs Ländern (Niedersachsen, Bayern, Nordrhein-Westfalen, Sachsen, Brandenburg, Bremen), Musterbauordnung (MBO), VOB Teil A und Teil B, Paragraph für Paragraph, unverändert aus den amtlichen Quellen; dazu das Verzeichnis der VOB Teil C (ATV)
 - **verständlich erklärt** – zu jedem Paragraphen eine Erläuterung und die zusammenhängenden Vorschriften
-- **Ortsauskunft für Adressen in ganz Deutschland** – gilt ein Bebauungsplan, gibt es Kulturdenkmale, welche Paragraphen des Bundes und des Landes sind zu beachten: 19 Bebauungsplan- und 17 Denkmaldienste der Länder und Städte werden live abgefragt – wo kein Dienst angebunden ist oder ein Dienst nicht alle Einträge enthält, sagt die App das offen
+- **Ortsauskunft für Adressen in ganz Deutschland** – gilt ein Bebauungsplan, gibt es Kulturdenkmale, welche Paragraphen des Bundes und des Landes sind zu beachten: 21 Bebauungsplan- und 17 Denkmaldienste der Länder und Städte werden live abgefragt – wo kein Dienst angebunden ist oder ein Dienst nicht alle Einträge enthält, sagt die App das offen
 
 > **Prototyp**, Stand 17.11.2026. Die Auskünfte ersetzen keine Rechtsberatung und keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.
 
@@ -398,7 +398,7 @@ Gezeichnet wird er als bewegliches Skelett (Kopf, Rumpf, Schwanzglieder, vier Be
 | VOB/A | Bundesanzeiger: Abschnitte 2 und 3 Ausgabe 2026 (BAnz AT 24.08.2026 B6); Abschnitt 1 Ausgabe 2019 (BAnz AT 19.02.2019 B2), in § 3a mit den Änderungen vom 11.03.2025 (BAnz AT 02.04.2025 B7) und 24.11.2025 (BAnz AT 16.12.2025 B7) – die Bekanntmachung von 2025 enthält nur Änderungsbefehle, die App sagt bei § 3a, dass der Text zusammengeführt ist |
 | VOB/B | Ausgabe 2016, konsolidierte Fassung der [Fachinformation Bundesbau](https://www.fib-bund.de/Inhalt/Vergabe/VOB/) |
 | VOB/C | nur Verzeichnis: Einführungserlass des BMWSB vom 20.09.2023 (Ergänzungsband 2023) und DIN Media |
-| Bebauungspläne und Kulturdenkmale | 36 amtliche Geodienste der Länder und Städte – siehe [Tabelle unten](#geodienste-der-länder-und-städte) |
+| Bebauungspläne und Kulturdenkmale | 38 amtliche Geodienste der Länder, Landkreise und Städte – siehe [Tabelle unten](#geodienste-der-länder-und-städte) |
 | Adresssuche | OpenStreetMap / Nominatim (ganz Deutschland, höchstens eine Anfrage pro Sekunde) |
 | Hintergrundkarte der Lageskizze | © [OpenStreetMap-Mitwirkende](https://www.openstreetmap.org/copyright) (ODbL), Kacheln von tile.openstreetmap.org |
 | Schriften | Fraunces, Figtree, DM Mono, Source Serif 4 – Google Fonts (SIL Open Font License), beim Bauen eingebunden |
@@ -426,7 +426,7 @@ Stand der Prüfung: 17.11.2026. Alle Dienste sind amtlich und erlauben den Abruf
 | Hamburg | Behörde für Stadtentwicklung und Wohnen (dl-de/by-2.0) – **vollständig** | Denkmalschutzamt und Archäologisches Museum (dl-de/by-2.0) |
 | Hessen | nur Frankfurt am Main (dl-de/by-2.0); landesweit kein offener Dienst | Landesamt für Denkmalpflege, DenkXweb (dl-de/by-2.0; Bodendenkmäler nur als Umkreis) |
 | Mecklenburg-Vorpommern | Bau- und Planungsportal M-V (dl-de/by-2.0) | nur Rostock (CC0) und Schwerin (dl-de/by-2.0); landesweiter Dienst eingestellt |
-| Niedersachsen | nur Stadt Oldenburg (Open Data; dazu Plan-PDFs und Verfahren aus dem Kartenportal) | Denkmalatlas Niedersachsen, NLD |
+| Niedersachsen | Stadt Oldenburg (Open Data; dazu Plan-PDFs und Verfahren aus dem Kartenportal) · **Landkreis Leer** (Satzungs-PDF je Fassung) · **Landkreis Aurich** (auch Veränderungssperren) – jeweils alle Gemeinden einschließlich der Inseln, ohne Lizenzangabe; Landkreise Wittmund und Friesland: kein offener Dienst gefunden | Denkmalatlas Niedersachsen, NLD |
 | Nordrhein-Westfalen | Bauleitplanung NRW (dl-de/by-2.0; nur liefernde Gemeinden) | INSPIRE-Denkmäler NRW, Köln, Dortmund (alle dl-de/zero-2.0) |
 | Rheinland-Pfalz | GDI-RP, Metadaten Bebauungspläne (dl-de/by-2.0; ohne Rechtsstand) | GDKE, Denkmalliste (dl-de/by-2.0) |
 | Saarland | – (Nutzungsbedingungen erlauben nur das Anschauen im GeoPortal) | GDI-SL / Landesdenkmalamt (CC BY 4.0) |
@@ -435,7 +435,7 @@ Stand der Prüfung: 17.11.2026. Alle Dienste sind amtlich und erlauben den Abruf
 | Schleswig-Holstein | GDI-SH, XPlanung (dl-de/by-2.0; rund 700 Pläne) | GDI-SH, Daten des Landesamts (CC BY 4.0; nur ein kleiner Teil der Denkmalliste) |
 | Thüringen | GDI-Th, kommunale Geodaten (CC BY 4.0) | – (kein Dienst des Landesamts) |
 
-Vor einer kommerziellen Nutzung zu klären: Bayern (CC BY-ND – Namensnennung, keine Bearbeitung), Denkmalkarte Sachsen (teils CC BY-NC-ND, nicht kommerziell), Nürnberg (nur „©“), München (ohne Lizenzangabe), Schwerin („Zugriff beschränkt“). Einzelheiten und Begründungen stehen in den Dateien unter `lib/ort/dienste/`.
+Vor einer kommerziellen Nutzung zu klären: Bayern (CC BY-ND – Namensnennung, keine Bearbeitung), Denkmalkarte Sachsen (teils CC BY-NC-ND, nicht kommerziell), Nürnberg (nur „©“), München, Landkreis Leer und Landkreis Aurich (ohne Lizenzangabe), Schwerin („Zugriff beschränkt“). Einzelheiten und Begründungen stehen in den Dateien unter `lib/ort/dienste/`.
 
 ---
 

@@ -133,9 +133,9 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     };
   }
 
-  // Dienste für Land und Gemeinde (landesweite zuerst, dann städtische) – alle gleichzeitig abfragen
-  const bpDienste = diensteFuer(BPLAN_DIENSTE, standort.land, standort.ort);
-  const dmDienste = diensteFuer(DENKMAL_DIENSTE, standort.land, standort.ort);
+  // Dienste für Land, Landkreis und Gemeinde (landesweite zuerst) – alle gleichzeitig abfragen
+  const bpDienste = diensteFuer(BPLAN_DIENSTE, standort.land, standort.ort, standort.kreis);
+  const dmDienste = diensteFuer(DENKMAL_DIENSTE, standort.land, standort.ort, standort.kreis);
   const [bpErg, dmErg, dokumente, weitere] = await Promise.all([
     Promise.all(bpDienste.map((d) => sicher(d.abfrage(standort.lat, standort.lon, sprache), sprache))),
     Promise.all(dmDienste.map((d) => sicher(d.abfrage(standort.lat, standort.lon, RADIUS_M, sprache), sprache))),
@@ -144,6 +144,12 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     oldenburg ? frist(weiterePlaene(standort.lat, standort.lon, sprache).catch(() => null), () => null) : null,
   ]);
   const bp = zusammenfassen(bpDienste, bpErg, (p) => `${p.nummer}|${p.name}`, sprache);
+  // Veränderungssperren, die ein Dienst mitführt (z. B. Landkreis Aurich), sind keine Pläne: getrennt anzeigen – wie die
+  // laufenden Verfahren aus dem Oldenburger Kartenportal. null = nicht abrufbar (nur Oldenburg fragt sie eigens ab).
+  const sperren = bp?.status === "ok" ? bp.treffer.filter((p) => p.sicherung === "veraenderungssperre") : [];
+  if (bp?.status === "ok") bp.treffer = bp.treffer.filter((p) => !p.sicherung);
+  const ausDiensten = sperren.map((s) => ({ art: "veraenderungssperre" as const, nummer: s.nummer, name: s.name }));
+  const weitereAlle = oldenburg ? (weitere === null ? null : [...weitere, ...ausDiensten]) : ausDiensten.length ? ausDiensten : null;
   const dm = zusammenfassen(dmDienste, dmErg, (d) => `${d.name}|${d.anschrift ?? ""}|${d.entfernungM}`, sprache);
   for (const d of [...bpDienste, ...dmDienste])
     if (d.viewer && !links.some((l) => l.url === d.viewer)) links.push({ label: `${d.quelle} ↗`.replace(/ ↗$/, ""), url: d.viewer });
@@ -197,7 +203,7 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     });
   } else if (bp.treffer.length) {
     const mitDokumenten = bp.treffer.map((p) => ({ ...p, dokumente: dokumente?.get(p.nummer) ?? p.dokumente ?? [] }));
-    bplan = { status: "gefunden", plaene: mitDokumenten, weitere, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}) };
+    bplan = { status: "gefunden", plaene: mitDokumenten, weitere: weitereAlle, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}) };
     const vhb = bp.treffer.some((p) => p.vorhabenbezogen);
     const mehrere = bp.treffer.length > 1;
     const liste = bp.treffer.map((p) => (p.nummer ? `Nr. ${p.nummer} „${p.name}“` : `„${p.name}“`)).join(", ");
@@ -205,7 +211,7 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       thema: THEMA.planung,
       titel: mehrere ? t("Mehrere Bebauungspläne verzeichnet", "Several development plans listed") : t("Bebauungsplan verzeichnet", "Development plan listed"),
       text: t(
-        `Für den Standort ist ${mehrere ? "folgende Bebauungspläne" : "der Bebauungsplan"} ${liste} als rechtsverbindlich verzeichnet. ` +
+        `Für den Standort ${mehrere ? "sind folgende Bebauungspläne" : "ist der Bebauungsplan"} ${liste} als rechtsverbindlich verzeichnet. ` +
           "Ein Vorhaben ist dann nach § 30 BauGB zu beurteilen: Es darf den Festsetzungen nicht widersprechen, die Erschließung muss gesichert sein. " +
           (vhb ? "Bei einem vorhabenbezogenen Bebauungsplan gilt § 30 Abs. 2 in Verbindung mit § 12 BauGB. " : "") +
           "Abweichungen von Festsetzungen sind nur über Ausnahmen oder Befreiungen möglich (§ 31 BauGB)." +
@@ -220,7 +226,7 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       ton: "info",
     });
   } else {
-    bplan = { status: "keiner", plaene: [], weitere, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}) };
+    bplan = { status: "keiner", plaene: [], weitere: weitereAlle, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}) };
     einordnung.push(
       bp.vollstaendig
         ? {
@@ -251,10 +257,9 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     );
   }
 
-  // --- Laufende Planungen und Sicherungsinstrumente (Kartenportal der Stadt Oldenburg) ---
-  if (!oldenburg) {
-    // nicht angebunden – oben bereits gesagt
-  } else if (weitere === null) {
+  // --- Laufende Planungen und Sicherungsinstrumente (Kartenportal der Stadt Oldenburg; Veränderungssperren auch aus
+  // Kreisdiensten wie dem Landkreis Aurich) ---
+  if (oldenburg && weitere === null) {
     einordnung.push({
       thema: THEMA.planung,
       titel: t("Laufende Verfahren nicht abrufbar", "Ongoing procedures not retrievable"),
@@ -265,20 +270,24 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       paragraphen: [],
       ton: "achtung",
     });
-  } else {
+  } else if (weitereAlle) {
+    const weitere = weitereAlle;
     const liste = (art: string) =>
       weitere
         .filter((w) => w.art === art)
-        .map((w) => [w.nummer && `Nr. ${w.nummer}`, w.name && `„${w.name}“`, w.hinweis && `(${w.hinweis})`].filter(Boolean).join(" "))
+        .map((w) => [w.nummer && `Nr. ${w.nummer}`, w.name && `„${w.name}“`, "hinweis" in w && w.hinweis && `(${w.hinweis})`].filter(Boolean).join(" "))
         .join(", ");
+    // Woher die Angabe stammt: Oldenburger Kartenportal oder der Kreisdienst
+    const woDe = oldenburg ? "Im Kartenportal der Stadt" : `Im Dienst (${bp && bp.status === "ok" ? bp.quelle : ""})`;
+    const woEn = oldenburg ? "The city’s map portal lists" : `The service (${bp && bp.status === "ok" ? bp.quelle : ""}) lists`;
     if (weitere.some((w) => w.art === "veraenderungssperre")) {
       einordnung.push({
         thema: THEMA.planung,
         titel: t("Veränderungssperre verzeichnet", "Development freeze listed"),
         text: t(
-          `Im Kartenportal der Stadt ist für den Standort eine Veränderungssperre verzeichnet: ${liste("veraenderungssperre")}. ` +
+          `${woDe} ist für den Standort eine Veränderungssperre verzeichnet: ${liste("veraenderungssperre")}. ` +
             "Eine Veränderungssperre kann insbesondere bestimmen, dass Vorhaben im Sinne des § 29 BauGB nicht durchgeführt und bauliche Anlagen nicht beseitigt werden dürfen. Ausnahmen sind möglich, wenn überwiegende öffentliche Belange nicht entgegenstehen (§ 14 Abs. 2 BauGB).",
-          `The city’s map portal lists a development freeze for this location: ${liste("veraenderungssperre")}. ` +
+          `${woEn} a development freeze for this location: ${liste("veraenderungssperre")}. ` +
             "A development freeze can in particular stipulate that projects within the meaning of § 29 BauGB may not be carried out and structures may not be removed. Exceptions are possible if overriding public interests do not stand in the way (§ 14(2) BauGB).",
         ),
         paragraphen: refs("baugb", ["14", "16", "17"]),

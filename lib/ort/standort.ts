@@ -28,6 +28,8 @@ export interface Standort {
   plz?: string;
   /** Bundesland laut Adressdaten, z. B. "Niedersachsen" */
   land: string;
+  /** Landkreis laut Adressdaten, z. B. "Landkreis Leer" (fehlt bei kreisfreien Städten) – für Kreisdienste */
+  kreis?: string;
   /** Stadt Oldenburg (Oldb) – dort sind B-Plan-Dienste angebunden */
   oldenburg: boolean;
 }
@@ -50,6 +52,8 @@ interface NominatimTreffer {
     town?: string;
     village?: string;
     municipality?: string;
+    /** Landkreis, z. B. "Landkreis Leer" – fehlt bei kreisfreien Städten */
+    county?: string;
     state?: string;
     "ISO3166-2-lvl4"?: string;
   };
@@ -95,6 +99,7 @@ function alsStandort(t: NominatimTreffer, e: AdressEingabe, genau: boolean): Sta
     ort,
     ...(a.postcode ? { plz: a.postcode } : {}),
     land: landVon(a),
+    ...(a.county ? { kreis: a.county } : {}),
     oldenburg: istOldenburg(a),
   };
 }

@@ -1,15 +1,16 @@
 // Verzeichnis aller angebundenen B-Plan- und Denkmal-Dienste der Länder und Gemeinden (Stand der Prüfung: 17.11.2026).
 //
 // Auswahl für einen Standort: alle Dienste, deren gebiet.land dem Bundesland des Standorts entspricht und die entweder
-// kein gebiet.gemeinde haben (landesweit) oder deren gebiet.gemeinde dem Ort des Standorts entspricht (Namen wie in
-// lib/ort/standort.ts, z. B. "München", "Frankfurt am Main", "Oldenburg (Oldb)"). Landes- und Gemeindedienste können sich
-// ergänzen und überschneiden (z. B. Bayern landesweit + München). Ein leeres Ergebnis bedeutet nur bei
+// landesweit gelten, für den Landkreis des Standorts (gebiet.kreis, z. B. "Landkreis Leer") oder für seinen Ort
+// (gebiet.gemeinde; Namen wie in lib/ort/standort.ts, z. B. "München", "Frankfurt am Main", "Oldenburg (Oldb)").
+// Landes-, Kreis- und Gemeindedienste können sich ergänzen und überschneiden (z. B. Bayern landesweit + München). Ein leeres Ergebnis bedeutet nur bei
 // vollstaendig === true "kein Plan / kein Denkmal", sonst "im Dienst nicht verzeichnet".
 // browser === false hieße: nur serverseitig nutzbar (fehlende CORS-Kopfzeilen) – derzeit erlauben alle Dienste den Browser.
 //
 // Bewusst nicht angebunden (Begründung jeweils in der Länderdatei):
 //  - B-Pläne: Saarland (Nutzungsbedingungen erlauben nur das Anschauen im GeoPortal), Braunschweig (Nutzungsverbot auf
-//    anderen Internetseiten), Hannover, Hessen landesweit, Kiel/Lübeck, Mainz u. a. (kein offener Abfragedienst)
+//    anderen Internetseiten), Hannover, Hessen landesweit, Kiel/Lübeck, Mainz u. a. (kein offener Abfragedienst),
+//    Landkreise Wittmund (Langeoog, Spiekeroog) und Friesland (Wangerooge): kein erreichbarer Dienst
 //  - Denkmale: Brandenburg (BLDAM: Veröffentlichung nur mit schriftlicher Zustimmung), Mecklenburg-Vorpommern landesweit
 //    (Dienst eingestellt), Thüringen (kein Dienst des Landesamts), archäologische Denkmale in Sachsen und
 //    Schleswig-Holstein, Bodendenkmale in Bremen (nur mit Anmeldung)
@@ -21,7 +22,7 @@ import { bremenBplan, bremenDenkmal, bremerhavenBplan } from "./bremen";
 import { hamburgBplan, hamburgDenkmal } from "./hamburg";
 import { frankfurtBplan, hessenDenkmal } from "./hessen";
 import { mvBplan, rostockDenkmal, schwerinDenkmal } from "./mecklenburg-vorpommern";
-import { niedersachsenDenkmal, oldenburgBplan } from "./niedersachsen";
+import { aurichBplan, leerBplan, niedersachsenDenkmal, oldenburgBplan } from "./niedersachsen";
 import { dortmundDenkmal, koelnDenkmal, nrwBplan, nrwDenkmal } from "./nordrhein-westfalen";
 import { rlpBplan, rlpDenkmal } from "./rheinland-pfalz";
 import { saarlandDenkmal } from "./saarland";
@@ -47,6 +48,8 @@ export const BPLAN_DIENSTE: BplanDienst[] = [
   frankfurtBplan,
   mvBplan,
   oldenburgBplan,
+  leerBplan,
+  aurichBplan,
   nrwBplan,
   rlpBplan,
   sachsenBplan,
@@ -77,12 +80,15 @@ export const DENKMAL_DIENSTE: DenkmalDienst[] = [
 
 const gleich = (a: string, b: string) => a.localeCompare(b, "de", { sensitivity: "base" }) === 0;
 
-/** Gilt ein Dienstgebiet für den Standort (Bundesland und – bei Gemeindediensten – Ort)? */
-export function gebietPasst(g: DienstGebiet, land: string, ort?: string): boolean {
-  return gleich(g.land, land) && (!g.gemeinde || (!!ort && gleich(g.gemeinde, ort)));
+/** Gilt ein Dienstgebiet für den Standort (Bundesland und – bei Kreis- bzw. Gemeindediensten – Landkreis bzw. Ort)? */
+export function gebietPasst(g: DienstGebiet, land: string, ort?: string, kreis?: string): boolean {
+  return (
+    gleich(g.land, land) && (!g.kreis || (!!kreis && gleich(g.kreis, kreis))) && (!g.gemeinde || (!!ort && gleich(g.gemeinde, ort)))
+  );
 }
 
-/** Für einen Standort zuständige Dienste (landesweite zuerst, dann Gemeindedienste) */
-export function diensteFuer<T extends { gebiet: DienstGebiet }>(dienste: T[], land: string, ort?: string): T[] {
-  return dienste.filter((d) => gebietPasst(d.gebiet, land, ort)).sort((a, b) => Number(!!a.gebiet.gemeinde) - Number(!!b.gebiet.gemeinde));
+/** Für einen Standort zuständige Dienste (landesweite zuerst, dann Kreis-, dann Gemeindedienste) */
+export function diensteFuer<T extends { gebiet: DienstGebiet }>(dienste: T[], land: string, ort?: string, kreis?: string): T[] {
+  const stufe = (g: DienstGebiet) => (g.gemeinde ? 2 : g.kreis ? 1 : 0);
+  return dienste.filter((d) => gebietPasst(d.gebiet, land, ort, kreis)).sort((a, b) => stufe(a.gebiet) - stufe(b.gebiet));
 }
