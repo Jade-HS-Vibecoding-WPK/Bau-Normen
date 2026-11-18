@@ -112,6 +112,9 @@ export function erkenneNummern(t: string): string[] {
 const ENDUNG = "(?:straße|strasse|str\\.|weg|platz|allee|ring|damm|gasse|deich|wall|chaussee|stieg|pfad|kamp|markt|ufer|graben|redder|twiete|brücke|esch|hof)";
 const MIT_ENDUNG = new RegExp(`((?:[A-Za-zÄÖÜäöüß][\\wÄÖÜäöüß.-]*\\s+){0,3}[A-Za-zÄÖÜäöüß-]*${ENDUNG})\\s*(\\d{1,4})\\s?([a-zA-Z])?(?![\\wäöüß])`, "i");
 const MIT_VORWORT = /\b((?:Am|An der|An den|Zum|Zur|Auf dem|Auf der|Hinter dem|Im|In der|Unter den|Alter|Alte|Neue|Neuer)\s+[A-ZÄÖÜ][\wäöüß-]+)\s+(\d{1,3})\s?([a-zA-Z])?(?![\wäöüß])/;
+// Straßen ohne typische Endung ("Zeil 1", "Tal 1", "Lung Wai 1"): nur, wenn direkt nach der Hausnummer eine Postleitzahl
+// folgt – das Muster "Name Nummer, PLZ Ort" ist eindeutig genug, ein Paragraph oder Stichwort sieht so nicht aus.
+const MIT_PLZ = /((?:[A-Za-zÄÖÜäöüß][\wÄÖÜäöüß.'’-]*\s+){0,3}[A-ZÄÖÜ][\wÄÖÜäöüß.'’-]*)\s+(\d{1,4})\s?([a-zA-Z])?(?=\s*,?\s*\d{5}(?!\d))/;
 const KEIN_STRASSENTEIL = new Set([
   "ich", "wir", "mein", "meine", "unser", "unsere", "das", "die", "der", "dem", "den", "ein", "eine", "einem", "einen", "an", "in", "im", "auf", "bei", "für",
   "grundstück", "baugrundstück", "flurstück", "haus", "gebäude", "objekt", "adresse", "ortsauskunft", "prüfe", "prüfen", "bitte", "habe", "hab", "liegt", "steht",
@@ -125,7 +128,9 @@ const PLZ_ORT = new RegExp(`^\\s*,?\\s*(?:in\\s+)?(\\d{5})(?:\\s+(${ORTSNAME}))?
 const VORWORT_ANFANG = new Set(["an", "am", "auf", "im", "in", "hinter", "unter", "vor", "zum", "zur", "über", "bei", "beim"]);
 
 export function erkenneAdresse(t: string, nurMitEndung = false): { strasse: string; hausnummer: string; plz?: string; ort?: string } | null {
-  const mitEndung = t.match(MIT_ENDUNG);
+  // Reihenfolge: typische Straßenendung, dann "Name Nummer, PLZ" (auch im ersten Durchgang – die PLZ macht es eindeutig),
+  // zuletzt Vorwort-Straßen ohne Endung ("Am Stadtmuseum 4")
+  const mitEndung = t.match(MIT_ENDUNG) ?? t.match(MIT_PLZ);
   const m = mitEndung ?? (nurMitEndung ? null : t.match(MIT_VORWORT));
   if (!m) return null;
   const woerter = m[1].trim().split(/\s+/);

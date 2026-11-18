@@ -87,6 +87,7 @@
 
 ### Beobachtungen beim Testen
 - [x] Adresserkennung: „Ich plane einen Anbau an der Beethovenstraße 20 …“ wurde zu Straße „Anbau an der Beethovenstraße“ – behoben (`lib/verstehen.ts`: ab dem letzten kleingeschriebenen Wort abschneiden, „am“ bleibt Teil des Namens; zwei neue Testfälle). Bekannt, unverändert: „Auf dem Wall 3“ wird zu „Wall“ (Füllwörter am Satzanfang).
+- [x] Straßen ohne typische Endung („Zeil 1“, „Tal 1“, „Lung Wai 1“) werden im Eingabefeld erkannt, wenn eine Postleitzahl folgt („Zeil 1, 60313 Frankfurt“); ohne Postleitzahl weiterhin nur über das Formular „Ortsauskunft“.
 - Denkmal-Dienst Rostock (geo.sv.rostock.de) antwortete am 17.11. abends nicht (Zeitüberschreitung) – App sagt korrekt „keine Aussage“; im Testkatalog ist der Denkmalstatus für Rostock deshalb offen („*“).
 
 ### Entscheidungen der Nutzerin (offen)

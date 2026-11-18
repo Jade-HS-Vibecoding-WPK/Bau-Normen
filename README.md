@@ -202,7 +202,7 @@ Die Seite hat links drei feste Formulare und rechts den Auskunftsbereich mit Ein
 | **A · Ortsauskunft Deutschland** | Straße und Hausnummer eintragen, dazu Postleitzahl und/oder Ort (ohne beides wird zuerst in Oldenburg gesucht) → „Standort prüfen“ |
 | **B · Paragraph abrufen** | Regelwerk wählen, Nummer eintragen (z. B. `34`, `13a`, bei der VOB/A auch `3a EU`; bei der VOB/C die DIN-Nummer, z. B. `18353`) → „Wortlaut anzeigen“ |
 | **C · Bibliothek** | Welche Regelwerke in welchem Stand enthalten sind – gruppiert nach Gesetzen, Muster und VOB –, mit Link zur Quelle |
-| **Eingabefeld unten** | Freie Eingabe: Paragraph, Stichwort oder Adresse, z. B. „Ich brauche § 35 BauGB“, „section 35 BauGB“, „§ 13 VOB/B“, „DIN 18353“, „Vorkaufsrecht“, „Gartenstraße 5“ |
+| **Eingabefeld unten** | Freie Eingabe: Paragraph, Stichwort oder Adresse, z. B. „Ich brauche § 35 BauGB“, „section 35 BauGB“, „§ 13 VOB/B“, „DIN 18353“, „Vorkaufsrecht“, „Gartenstraße 5“. Adressen erkennt die App an der Straßenendung (…straße, …weg, …platz) oder an einer Postleitzahl hinter der Hausnummer („Zeil 1, 60313 Frankfurt“), auch mitten im Satz |
 | **Gebietsleiste** | Erscheint nach einer Ortsauskunft fest über dem Verlauf: Adresse, B-Plan, Denkmalschutz; „Details“ und „Karte“ springen zur Auskunft, „×“ blendet sie aus |
 | **DE / EN** | Sprache der Oberfläche und der Antworten (neue Anfragen werden in der gewählten Sprache beantwortet) |
 | **Darstellung** | Farbschema Hell / Dunkel / Auto · Gecko „Läuft“ oder „Sitzt still“ · Animationen an/aus – wird im Browser gemerkt |
