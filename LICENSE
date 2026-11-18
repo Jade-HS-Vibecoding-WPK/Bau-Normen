@@ -1,21 +1,40 @@
-MIT License
+ParaGecko
 
 Copyright (c) 2026 Vibecoding KI-Werkstatt · Jade Hochschule
+Alle Rechte vorbehalten.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ParaGecko ist ein Forschungsprojekt im WPK „Vibecoding KI-Werkstatt“ der Jade
+Hochschule. Quelltext und Online-Version werden nur für diesen Kurs
+veröffentlicht. Es handelt sich nicht um Open-Source-Software.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Erlaubt ist, die Online-Version für private, nicht gewerbliche Zwecke zu
+   nutzen und den Quelltext auf GitHub anzusehen.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. Ohne vorherige schriftliche Zustimmung der Rechteinhaber ist insbesondere
+   nicht erlaubt:
+   a) die Nutzung durch Unternehmen oder für berufliche oder gewerbliche Zwecke,
+   b) den Quelltext, die Erläuterungen, die Zuordnungen der Landesvorschriften,
+      das Verzeichnis der Geodienste, die Gestaltung oder Teile davon zu
+      vervielfältigen, zu bearbeiten oder weiterzuentwickeln,
+   c) die Anwendung oder Teile davon weiterzugeben, zu verkaufen, zu vermieten
+      oder als Dienst anzubieten.
+
+3. Nicht erfasst sind Inhalte Dritter: Amtliche Gesetzestexte sind gemeinfrei
+   (§ 5 UrhG). Geodaten, Kartenkacheln, Schriften und verwendete
+   Programmbibliotheken stehen unter den Lizenzen ihrer jeweiligen Anbieter
+   (siehe README, Abschnitt „Datenquellen und Rechtliches“).
+
+4. Die Anwendung wird ohne Gewähr bereitgestellt. Sie ersetzt keine
+   Rechtsberatung und keine Auskunft der Bauaufsicht oder der
+   Denkmalschutzbehörde.
+
+----------------------------------------------------------------------------
+
+English summary (the German text above prevails):
+All rights reserved. ParaGecko is a research project of a course at Jade
+Hochschule and is not open source. You may use the online version for private,
+non-commercial purposes and view the source code on GitHub. Use by companies or
+for professional or commercial purposes, as well as copying, modifying,
+redistributing, selling or offering the application as a service, requires
+prior written permission of the rights holders. Third-party content (statutes,
+geodata, map tiles, fonts, libraries) remains under its own terms.

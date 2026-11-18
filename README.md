@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/zur%20Laufzeit-ohne%20KI-4d7858" alt="Läuft ohne KI">
   <img src="https://img.shields.io/badge/Wortlaut-297%2F297%20gepr%C3%BCft-6c9570" alt="Wortlaut 297/297 geprüft">
   <img src="https://img.shields.io/badge/Testkatalog-113%2F113-a7bb57" alt="Testkatalog 113/113">
-  <img src="https://img.shields.io/badge/Lizenz-MIT-345a43" alt="Lizenz MIT">
+  <img src="https://img.shields.io/badge/Nutzung-nur%20privat%2C%20nicht%20gewerblich-345a43" alt="Nutzung nur privat, nicht gewerblich">
 </p>
 
 # ParaGecko
@@ -27,7 +27,7 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche (bis 18.11.2026 unter
 - **verständlich erklärt:** zu jedem Paragraphen eine Erläuterung und die zusammenhängenden Vorschriften
 - **Ortsauskunft für Adressen in ganz Deutschland:** Gilt ein Bebauungsplan, gibt es Kulturdenkmale, welche Paragraphen des Bundes und des Landes sind zu beachten? Dafür werden 44 Bebauungsplan- und 23 Denkmaldienste der Länder und Städte live abgefragt. Wo kein Dienst angebunden ist oder ein Dienst nicht alle Einträge enthält, sagt die App das offen
 
-> Forschungsprojekt, Stand 18.11.2026. Die Auskünfte ersetzen keine Rechtsberatung und keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.
+> Forschungsprojekt, Stand 18.11.2026. **Nutzung nur privat und nicht gewerblich**, kein Open-Source-Projekt (siehe [Nutzung und Lizenz](#nutzung-und-lizenz)). Die Auskünfte ersetzen keine Rechtsberatung und keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.
 
 <p align="center">
   <img src="docs/bilder/startseite.png" alt="Startseite: links die Formulare Ortsauskunft, Paragraph abrufen und Bibliothek, rechts der Auskunftsbereich mit Beispielen" width="100%">
@@ -52,7 +52,8 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche (bis 18.11.2026 unter
 13. [Obsidian-Ansicht](#obsidian-ansicht)
 14. [Der Gecko](#der-gecko)
 15. [Datenquellen und Rechtliches](#datenquellen-und-rechtliches)
-16. [Weiterführende Dokumente](#weiterführende-dokumente)
+16. [Nutzung und Lizenz](#nutzung-und-lizenz)
+17. [Weiterführende Dokumente](#weiterführende-dokumente)
 
 ---
 
@@ -447,14 +448,30 @@ Stand der Prüfung: 17./18.11.2026. Alle Dienste sind amtlich. Bis auf zwei (Lan
 
 Einzelheiten und Begründungen stehen in den Dateien unter `lib/ort/dienste/`, die vollständige Recherche in [docs/quellen-recherche.md](docs/quellen-recherche.md).
 
-### Kommerzielle Nutzung (Verkauf, Abo-Modell)
+### Datenquellen in einer späteren eigenen Produktfassung
 
-Keine Rechtsberatung. Vor einem Verkauf rechtlich prüfen lassen. Stand der Prüfung 18.11.2026:
+Notizen der Rechteinhaber für eine mögliche spätere Produktfassung; das ist keine Erlaubnis für Dritte (siehe [Nutzung und Lizenz](#nutzung-und-lizenz)). Keine Rechtsberatung, vor einem Verkauf rechtlich prüfen lassen. Stand der Prüfung 18.11.2026:
 
 - **Geodienste mit offener Lizenz** (Datenlizenz Deutschland, CC BY, CC0): auch kommerziell nutzbar, Quellenvermerk nötig (steht in jeder Auskunft). Besonderheiten: Bei CC BY-SA (Denkmalatlas Niedersachsen, Hameln-Pyrmont) abgeleitete Daten unter gleicher Lizenz weitergeben; bei CC BY-ND (Bayern) keine veränderten Fassungen der Daten weitergeben.
 - **Ohne Lizenzangabe (vor einem Verkauf schriftlich nachfragen):** München, Stuttgart, Nürnberg („© Stadt Nürnberg“), Landkreise Leer und Aurich, Sachsen-Anhalt (B-Pläne und Denkmale), Denkmalkarte Sachsen (laut Website teils CC BY-NC-ND, also nicht kommerziell).
 - **Gesetzestexte** sind gemeinfrei (§ 5 UrhG), aber Portale können Text- und Data-Mining vorbehalten: **NI-VORIS** (Quelle von NBauO und NDSchG) sendet `tdm-reservation: 1` und untersagt „Vervielfältigungen und Entnahmen der Inhalte … für kommerzielles Text und Data Mining“. Für ein Bezahlprodukt müssen NBauO und NDSchG deshalb aus einer anderen amtlichen Quelle (z. B. Gesetzblatt) neu importiert oder mit Erlaubnis genutzt werden. BAYERN.RECHT, RECHT.NRW.DE, REVOSax, BRAVORS, das Transparenzportal Bremen und gesetze-im-internet.de setzen keinen solchen Vorbehalt.
 - **Adresssuche und Kartenkacheln** (OpenStreetMap/Nominatim, tile.openstreetmap.org): Nutzungsrichtlinien gegen starke Nutzung; für ein Produkt eigener Dienst oder kommerzieller Anbieter. **GitHub Pages** ist laut GitHub nicht für kommerzielle Angebote (SaaS, Verkauf) gedacht; für ein Abo-Modell ist anderes Hosting nötig.
+
+---
+
+## Nutzung und Lizenz
+
+ParaGecko ist ein Forschungsprojekt im WPK „Vibecoding KI-Werkstatt“ der Jade Hochschule und bleibt nur für diesen Kurs online. Es ist **kein Open-Source-Projekt**; alle Rechte bleiben vorbehalten. Maßgeblich ist die Datei [LICENSE](LICENSE).
+
+**Erlaubt** ist, die Online-Version für private, nicht gewerbliche Zwecke zu nutzen und den Quelltext hier auf GitHub anzusehen.
+
+**Nicht erlaubt** ist ohne vorherige schriftliche Zustimmung der Rechteinhaber:
+
+- die Nutzung durch Unternehmen oder für berufliche oder gewerbliche Zwecke,
+- den Quelltext, die Erläuterungen, die Zuordnungen der Landesvorschriften, das Verzeichnis der Geodienste, die Gestaltung oder Teile davon zu kopieren, zu bearbeiten oder weiterzuentwickeln,
+- die Anwendung oder Teile davon weiterzugeben, zu verkaufen, zu vermieten oder als Dienst anzubieten.
+
+**Nicht betroffen** sind Inhalte Dritter: Amtliche Gesetzestexte sind gemeinfrei (§ 5 UrhG). Geodaten, Kartenkacheln, Schriften und Programmbibliotheken stehen unter den Lizenzen ihrer Anbieter (siehe [Datenquellen und Rechtliches](#datenquellen-und-rechtliches)).
 
 ---
 
