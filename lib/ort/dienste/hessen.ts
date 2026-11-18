@@ -17,7 +17,7 @@ const FFM_WFS = "https://planas.frankfurt.de/wfs/bebauungsplaene_geltungsbereich
 
 export const frankfurtBplan: BplanDienst = {
   id: "he-frankfurt-bplan",
-  quelle: "Stadt Frankfurt am Main, Stadtplanungsamt – Geltungsbereiche der Bebauungspläne (WFS, dl-de/by-2.0)",
+  quelle: "Stadt Frankfurt am Main, Stadtplanungsamt: Geltungsbereiche der Bebauungspläne (WFS, dl-de/by-2.0)",
   viewer: "https://planas.frankfurt.de/",
   gebiet: { land: "Hessen", gemeinde: "Frankfurt am Main" },
   // Metadaten: "Aktuelle Geltungsbereiche der rechtsverbindlichen und im Verfahren befindlichen Bebauungspläne der Stadt
@@ -73,7 +73,7 @@ function namensTeile(siteName: string): [string, string | undefined] {
 
 export const hessenDenkmal: DenkmalDienst = {
   id: "he-denkmal",
-  quelle: "Landesamt für Denkmalpflege Hessen – DenkXweb Kulturdenkmäler (WFS, dl-de/by-2.0)",
+  quelle: "Landesamt für Denkmalpflege Hessen: DenkXweb Kulturdenkmäler (WFS, dl-de/by-2.0)",
   viewer: "https://denkxweb.denkmalpflege-hessen.de/",
   gebiet: { land: "Hessen" },
   // Dienstbeschreibung: "Die Themen 'Baudenkmal' und 'Flächendenkmal' decken nicht die gesamte Landesfläche ab"
@@ -184,7 +184,7 @@ const suedhessenBplan: ZuPlan = (x, sprache) => {
 function suedhessen(id: string, name: string, gebiet: { kreis?: string; gemeinde?: string }, orgId: string): BplanDienst {
   return geojsonBplan({
     id: `he-${id}-bplan`,
-    quelle: `${name} – Bauleitplanung (GDI-Südhessen, dl-de/by-2.0)`,
+    quelle: `${name}: Bauleitplanung (GDI-Südhessen, dl-de/by-2.0)`,
     viewer: "https://www.geoportal.hessen.de/",
     gebiet: { land: "Hessen", ...gebiet },
     vollstaendig: false,
@@ -216,7 +216,7 @@ export const ruesselsheimBplan = suedhessen("ruesselsheim", "Stadt Rüsselsheim 
  *  der gemeldeten Treffer (numberMatched 5, numberReturned 0). Der Quell-WFS sendet keine CORS-Kopfzeilen → nur Server. */
 export const fuldaBplan = geojsonBplan({
   id: "he-fulda-bplan",
-  quelle: "Landkreis Fulda – Bebauungspläne der Kommunen (WFS, CC0)",
+  quelle: "Landkreis Fulda: Bebauungspläne der Kommunen (WFS, CC0)",
   viewer: "https://www.geoportal.hessen.de/",
   gebiet: { land: "Hessen", kreis: "Landkreis Fulda" },
   vollstaendig: false,

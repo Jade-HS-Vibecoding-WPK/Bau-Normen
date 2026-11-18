@@ -24,7 +24,7 @@ const AROK_ART: Record<string, [string, string]> = {
 
 export const bwArokBplan: BplanDienst = {
   id: "bw-bplan",
-  quelle: "Regierungspräsidien Baden-Württemberg – Raumordnungskataster, Bebauungspläne (© Daten aus dem Geoportal Raumordnung Baden-Württemberg, dl-de/by-2.0)",
+  quelle: "Regierungspräsidien Baden-Württemberg: Raumordnungskataster, Bebauungspläne (© Daten aus dem Geoportal Raumordnung Baden-Württemberg, dl-de/by-2.0)",
   viewer: "https://www.geoportal-raumordnung-bw.de/client/",
   gebiet: { land: "Baden-Württemberg" },
   // RP: "Der Aufbau des AROK wird allerdings noch einige Zeit in Anspruch nehmen"; es werden "nicht die kompletten"
@@ -52,7 +52,7 @@ export const bwArokBplan: BplanDienst = {
         const art = AROK_ART[String(x.art ?? "")];
         treffer.push({
           nummer: nummer || "?",
-          name: [wert(x.bezeich), wert(x.ars_t)].filter(Boolean).join(" – "),
+          name: [wert(x.bezeich), wert(x.ars_t)].filter(Boolean).join(", "),
           rechtsverbindlichSeit: datumText(x.inkraft, sprache),
           baunvo: wert(x.fassung_t),
           vorhabenbezogen: String(x.art ?? "") === "50",
@@ -84,7 +84,7 @@ function stuttgartLink(text: unknown): string | undefined {
 
 export const stuttgartBplan: BplanDienst = {
   id: "bw-stuttgart-bplan",
-  quelle: "Landeshauptstadt Stuttgart – Bebauungspläne im XPlanung-Format (WFS über Komm.ONE)",
+  quelle: "Landeshauptstadt Stuttgart: Bebauungspläne im XPlanung-Format (WFS über Komm.ONE)",
   viewer: "https://gis6.stuttgart.de/maps/index.html?embed=0&path=/Bebauungsplan",
   gebiet: { land: "Baden-Württemberg", gemeinde: "Stuttgart" },
   // Metadaten (968866ab-a4b2-48c0-9ab6-740c000598e1): "WFS-Dienst mit allen in XPlanung 5.0 vorhandenen Bebauungsplänen der
@@ -92,8 +92,8 @@ export const stuttgartBplan: BplanDienst = {
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Alle bereits ins XPlanung-Format überführten Bebauungspläne der Stadt Stuttgart – ob das alle Pläne sind, sagt der Dienst nicht. Stellplatzsatzungen (örtliche Bauvorschriften) werden nicht als Bebauungsplan gezählt.",
-    en: "All development plans of the City of Stuttgart already converted to XPlanung – the service does not say whether these are all plans. Parking statutes (local building regulations) are not counted as development plans.",
+    de: "Alle bereits ins XPlanung-Format überführten Bebauungspläne der Stadt Stuttgart. Ob das alle Pläne sind, sagt der Dienst nicht. Stellplatzsatzungen (örtliche Bauvorschriften) werden nicht als Bebauungsplan gezählt.",
+    en: "All development plans of the City of Stuttgart already converted to XPlanung. The service does not say whether these are all plans. Parking statutes (local building regulations) are not counted as development plans.",
   },
   async abfrage(lat, lon, sprache) {
     const p: Punkt = [lon, lat];
@@ -139,7 +139,7 @@ const LAD_EBENEN: { dienst: string; typ: string; de: string; en: string; gruppe:
 
 export const bwDenkmal: DenkmalDienst = {
   id: "bw-denkmal",
-  quelle: "Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart – Kulturdenkmale (www.denkmalpflege-bw.de, dl-de/by-2.0)",
+  quelle: "Landesamt für Denkmalpflege im Regierungspräsidium Stuttgart: Kulturdenkmale (www.denkmalpflege-bw.de, dl-de/by-2.0)",
   viewer: "https://www.geoportal-bw.de/",
   gebiet: { land: "Baden-Württemberg" },
   // Metadaten: "Die hier bereitgestellten Daten vermitteln eine inoffizielle Version der Liste … Sie sind daher für
@@ -189,7 +189,7 @@ export const bwDenkmal: DenkmalDienst = {
 // (GDI-DE e1ce9975-…). Access-Control-Allow-Origin: *. Nur status_enm "in Kraft" zählt.
 export const freiburgBplan = geojsonBplan({
   id: "bw-freiburg-bplan",
-  quelle: "Stadt Freiburg im Breisgau – Geltungsbereiche der rechtskräftigen Bebauungspläne (WFS, dl-de/by-2.0, Datengrundlage: Stadt Freiburg)",
+  quelle: "Stadt Freiburg im Breisgau: Geltungsbereiche der rechtskräftigen Bebauungspläne (WFS, dl-de/by-2.0, Datengrundlage: Stadt Freiburg)",
   viewer: "https://geoportal.freiburg.de/freigis/",
   gebiet: { land: "Baden-Württemberg", gemeinde: "Freiburg im Breisgau" },
   vollstaendig: false,

@@ -5,7 +5,7 @@ import { gebiet, type Sprache, zweisprachig } from "../sprache";
 import { inMeter } from "./geo";
 
 const DIENST = "https://services5.arcgis.com/kqBnwL0FsBhsJf2P/arcgis/rest/services/Umringe_Bplan/FeatureServer/0/query";
-export const BPLAN_QUELLE = "Stadt Oldenburg – Umringe rechtsverbindlicher Bebauungspläne (Open Data)";
+export const BPLAN_QUELLE = "Stadt Oldenburg: Umringe rechtsverbindlicher Bebauungspläne (Open Data)";
 export const BPLAN_VIEWER = "https://gis4ol.oldenburg.de/BauenWohnen/";
 
 export interface BPlan {

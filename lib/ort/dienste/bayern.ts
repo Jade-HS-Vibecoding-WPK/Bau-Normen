@@ -47,7 +47,7 @@ const BY_PLANART: Record<string, [string, string]> = {
 
 export const bayernBplan: BplanDienst = {
   id: "by-bplan",
-  quelle: "Bauleitpläne Bayern – LDBV / Geschäftsstelle GDI-BY (CC BY-ND 4.0)",
+  quelle: "Bauleitpläne Bayern: LDBV / Geschäftsstelle GDI-BY (CC BY-ND 4.0)",
   viewer: "https://portal.diplanung.de/",
   gebiet: { land: "Bayern" },
   // Datensatz-Metadaten (26d2b2b8-3944-4a49-aec2-59f827d9aa9e): "Die Daten liegen nicht flächendeckend vor."
@@ -75,7 +75,7 @@ export const bayernBplan: BplanDienst = {
         if (/^[45789]000$/.test(art)) continue; // Satzungen
         treffer.push({
           nummer: wert(x.nummer) ?? wert(x.planid) ?? "?",
-          name: [wert(x.planname), wert(x.stadt)].filter(Boolean).join(" – "),
+          name: [wert(x.planname), wert(x.stadt)].filter(Boolean).join(", "),
           rechtsverbindlichSeit: datumText(x.inkrafttre, sprache),
           vorhabenbezogen: art === "3000",
           verfahren: BY_PLANART[art] ? t(...BY_PLANART[art]) : undefined,
@@ -97,7 +97,7 @@ const M_WMS = "https://geoportal.muenchen.de/geoserver/plan/wms";
 
 export const muenchenBplan: BplanDienst = {
   id: "by-muenchen-bplan",
-  quelle: "Landeshauptstadt München – rechtsverbindliche Bebauungspläne (Geoportal München)",
+  quelle: "Landeshauptstadt München: rechtsverbindliche Bebauungspläne (Geoportal München)",
   viewer: "https://geoportal.muenchen.de/portal/opendata/",
   gebiet: { land: "Bayern", gemeinde: "München" },
   // Hinweis im Dienst: "Eine Gewähr für die Richtigkeit, Vollzähligkeit … wird nicht übernommen."
@@ -161,7 +161,7 @@ async function nuernbergEbene(ebene: number, lat: number, lon: number): Promise<
 
 export const nuernbergBplan: BplanDienst = {
   id: "by-nuernberg-bplan",
-  quelle: "Stadt Nürnberg, Stadtplanungsamt – Bebauungsplan-Informationssystem BISS (© Stadt Nürnberg)",
+  quelle: "Stadt Nürnberg, Stadtplanungsamt: Bebauungsplan-Informationssystem BISS (© Stadt Nürnberg)",
   viewer: "https://geoportal.nuernberg.de/masterportal/bebauungsplaene/",
   gebiet: { land: "Bayern", gemeinde: "Nürnberg" },
   // Hinweis im Dienst: "Für die Richtigkeit, Aktualität und Vollständigkeit der Daten wird keine Gewähr übernommen."
@@ -254,7 +254,7 @@ function blfdObjekte(xml: string, sprache: Sprache): BlfdObjekt[] {
 
 export const bayernDenkmal: DenkmalDienst = {
   id: "by-denkmal",
-  quelle: "Bayerisches Landesamt für Denkmalpflege – Denkmal-Daten (© BLfD, CC BY-ND 4.0)",
+  quelle: "Bayerisches Landesamt für Denkmalpflege: Denkmal-Daten (© BLfD, CC BY-ND 4.0)",
   viewer: "https://geoportal.bayern.de/denkmalatlas/",
   gebiet: { land: "Bayern" },
   // Metadaten: Kartierungen der Bau- und Bodendenkmäler sowie Ensembles, die nach Art. 2 BayDSchG in die Denkmalliste

@@ -1,5 +1,5 @@
 /* =====================================================================
-   Bau-Normen-KI – Gestaltung „Gelände & Linie“
+   ParaGecko: Gestaltung „Gelände & Linie“
    Leitidee: Organic Shapes & Line Art, hell und pastellig. Weiche Flächen in
    Minze, Salbei, Aqua und Flieder wie Grünflächen im Lageplan, feine
    Höhenlinien wie auf einer Geländekarte, Tannengrün nur für Text und Knöpfe.
@@ -108,6 +108,7 @@ button { font: inherit; }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .marke { display: flex; align-items: center; gap: 12px; color: var(--g900); text-decoration: none; }
+.marke .logo { flex: none; display: block; } /* Logo mittig neben Wortmarke und Claim */
 .marke:hover { color: var(--g900); }
 .wortmarke { font-family: var(--font-display), Georgia, serif; font-weight: 600; font-size: 24px; letter-spacing: -0.01em; line-height: 1; font-variation-settings: "SOFT" 100; }
 .claim { display: block; font-size: 12.5px; color: var(--g600); margin-top: 4px; letter-spacing: 0.01em; }
@@ -115,10 +116,6 @@ button { font: inherit; }
 .kopf-meta span { font-family: var(--font-mono), monospace; font-size: 12px; color: var(--g700); white-space: nowrap; }
 .kopf-meta b { color: var(--g900); font-weight: 500; }
 .kopf-stand { display: inline-flex; gap: 6px 16px; flex-wrap: wrap; }
-.tag-prototyp {
-  font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-  background: var(--hell-halb); color: var(--g700) !important; padding: 3px 10px; border-radius: var(--pille);
-}
 
 /* ---------- Seitenraster ---------- */
 .seite {
@@ -248,6 +245,7 @@ button { font: inherit; }
 .sf-para {
   font-family: var(--font-display), Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; color: var(--g900); font-variation-settings: "SOFT" 100;
   min-width: 84px; height: 72px; padding: 0 16px; display: flex; align-items: center; justify-content: center; white-space: nowrap;
+  flex: none; /* nicht schrumpfen: lange Nummern wie „DIN 18353“ ragten sonst in den Titel */
   background: var(--minze); border-radius: var(--blob);
 }
 .sf-symbol { color: var(--g800); width: 72px; height: 66px; display: flex; align-items: center; justify-content: center; background: var(--aqua); border-radius: var(--blob-2); flex: none; }
@@ -367,6 +365,7 @@ button { font: inherit; }
 .meldung p { margin: 0 0 8px; }
 .meldung p:last-child { margin-bottom: 0; }
 .meldung-fehler { background: var(--signal-bg); border-color: var(--fehler-rand); box-shadow: inset 4px 0 0 var(--signal); }
+.meldung-hinweis { background: var(--ocker-bg); border-color: var(--ocker-line); box-shadow: inset 4px 0 0 var(--ocker); }
 .optionen { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .trefferliste { list-style: none; margin: 10px 0 0; padding: 0; border-top: 1px dashed var(--line); }
 .trefferliste li { border-bottom: 1px dashed var(--line); }
@@ -386,7 +385,7 @@ button { font: inherit; }
   .leer h1 { font-size: 29px; }
   .beispiele { grid-template-columns: 1fr; }
   .kopf-innen { padding: 12px 16px 8px; }
-  .kopf-stand, .tag-prototyp { display: none !important; }
+  .kopf-stand { display: none !important; }
   .kopf-innen { flex-wrap: wrap; gap: 10px; }
   .befund { grid-template-columns: 1fr; }
   .kachel { border-right: 0; border-bottom: 1px dashed var(--line); }
@@ -396,7 +395,7 @@ button { font: inherit; }
   .treffer-tag { display: none; }
   .anfrage-box { max-width: 92%; }
   .sf-haupt { gap: 14px; padding: 16px; }
-  .sf-para { font-size: 24px; min-width: 70px; height: 60px; }
+  .sf-para { font-size: 24px; min-width: 70px; height: 60px; padding: 0 12px; }
 }
 
 /* ---------- Obsidian-Knopf & Dialog ---------- */
@@ -708,9 +707,12 @@ code { font-family: var(--font-mono), monospace; font-size: 0.92em; }
 .bibliothek li:not(.bib-gruppe) { padding-top: 7px; padding-bottom: 7px; }
 .bibliothek li.bib-gruppe { display: block; padding: 10px 16px 3px; border-top: 0; font-family: var(--font-mono), monospace; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
 .bibliothek li.bib-gruppe + li { border-top: 0; }
-.bibliothek .titel { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.bibliothek .meta { margin-top: 1px; white-space: nowrap; }
-.bibliothek li:not(.bib-gruppe) { grid-template-columns: 54px minmax(0, 1fr); gap: 8px; }
+/* Titel brechen um statt abgeschnitten zu werden; die Kürzelspalte ist so breit wie das längste Kürzel (--kuerzel-breite) */
+.bibliothek .titel { overflow-wrap: anywhere; }
+.bibliothek .meta { margin-top: 1px; }
+.bibliothek .meta > span, .bibliothek .meta > a { white-space: nowrap; }
+.bibliothek li:not(.bib-gruppe) { grid-template-columns: var(--kuerzel-breite, 6ch) minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.bibliothek .kuerzel { white-space: nowrap; }
 .bibliothek li > span { min-width: 0; }
 /* Hinweis zur Verbindlichkeit in jeder Karte eines Regelwerks, das kein Gesetz ist */
 .regelwerk-hinweis { margin: 0; padding: 10px 22px 11px; font-size: 13px; line-height: 1.5; color: var(--ink-2); background: var(--ocker-bg); border-bottom: 1px solid var(--ocker-line); }
@@ -731,6 +733,25 @@ code { font-family: var(--font-mono), monospace; font-size: 0.92em; }
 .land-wahl label { font-family: var(--font-mono), monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
 .land-wahl select { min-width: 0; font: inherit; font-size: 13.5px; padding: 7px 10px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--surface-2); color: var(--ink); }
 .land-hinweis { margin: 4px 16px 8px; padding: 8px 10px; font-size: 12px; line-height: 1.45; color: var(--ink-2); background: var(--ocker-bg); border: 1px solid var(--ocker-line); border-radius: 10px; }
-.weitere-laender { border-top: 1px dashed var(--line); margin: 2px 0 4px; }
-.weitere-laender summary { cursor: pointer; padding: 9px 16px; font-size: 12.5px; font-weight: 600; color: var(--g700); }
-.weitere-laender summary:hover { color: var(--g900); }
+/* Bibliothek eingeklappt: Bundesland bleibt sichtbar, die Liste klappt auf */
+.bib-klappe { border-top: 1px dashed var(--line); margin: 6px 0 0; }
+.bib-klappe summary {
+  cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px;
+  padding: 11px 16px 12px; font-size: 13px; font-weight: 600; color: var(--g700);
+}
+.bib-klappe summary::-webkit-details-marker { display: none; }
+.bib-klappe summary::before {
+  content: ""; flex: none; width: 7px; height: 7px; margin: 0 2px 0 1px;
+  border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(-45deg); transition: transform .15s ease;
+}
+.bib-klappe[open] summary::before { transform: rotate(45deg); }
+.bib-klappe summary:hover { color: var(--g900); }
+.bib-klappe summary:focus-visible { outline: 2px solid var(--g500); outline-offset: -2px; border-radius: 8px; }
+.bib-anzahl {
+  margin-left: auto; font-family: var(--font-mono), monospace; font-size: 11px; font-weight: 500; color: var(--ink-3);
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--pille); padding: 1px 8px;
+}
+.bib-klappe .land-hinweis { margin-top: 0; }
+@media (prefers-reduced-motion: reduce) { .bib-klappe summary::before { transition: none; } }
+.plz-ort-hinweis { margin: 6px 0 12px !important; }
+.kachel-ausfall { margin: 6px 0 0; padding: 6px 8px; font-size: 12px; line-height: 1.4; color: var(--ink-2); background: var(--signal-bg); border: 1px solid var(--fehler-rand); border-radius: 8px; }

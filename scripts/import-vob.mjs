@@ -1237,7 +1237,7 @@ function aendere3a(norm, aprRoh, dezRoh) {
   // Offen sagen, dass dieser Text zusammengeführt ist: Die Bekanntmachung druckt den neuen § 3a nicht vollständig ab.
   norm.fussnoten =
     "Hinweis der App: Die Bekanntmachung vom 24.11.2025 (BAnz AT 16.12.2025 B7) enthält für § 3a nur Änderungsbefehle, keinen vollständigen neuen Wortlaut. " +
-    "Dieser Text ist der Wortlaut von 2019 (BAnz AT 19.02.2019 B2), in den die Änderungen vom 11.03.2025 (BAnz AT 02.04.2025 B7) und vom 24.11.2025 eingearbeitet sind – in Kraft seit 01.01.2026.";
+    "Dieser Text ist der Wortlaut von 2019 (BAnz AT 19.02.2019 B2), in den die Änderungen vom 11.03.2025 (BAnz AT 02.04.2025 B7) und vom 24.11.2025 eingearbeitet sind. In Kraft seit 01.01.2026.";
   norm.text = alsText(norm.inhalt);
 }
 

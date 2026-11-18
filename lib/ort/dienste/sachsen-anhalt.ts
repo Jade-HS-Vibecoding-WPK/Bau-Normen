@@ -11,7 +11,7 @@ import { XPLANSYN, xplanAbfrage } from "./xplanung";
 
 export const sachsenAnhaltBplan: BplanDienst = {
   id: "st-bplan",
-  quelle: "Land Sachsen-Anhalt, LVermGeo / Ministerium für Infrastruktur und Digitales – XPlanung-Plattform (Bauleitplanung)",
+  quelle: "Land Sachsen-Anhalt, LVermGeo / Ministerium für Infrastruktur und Digitales: XPlanung-Plattform (Bauleitplanung)",
   viewer: "https://xplan.geodatenportal.sachsen-anhalt.de/",
   gebiet: { land: "Sachsen-Anhalt" },
   // Ministerium: Im laufenden Projekt wird "ein Großteil der Bauleitplanung im Land" XPlanung-konform digitalisiert,
@@ -19,8 +19,8 @@ export const sachsenAnhaltBplan: BplanDienst = {
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Pläne, die im Landesprojekt bisher ins XPlanung-Format überführt wurden (Projekt läuft bis Ende 2026) – nicht vollständig.",
-    en: "Plans converted to XPlanung format in the state project so far (project runs until end of 2026) – not complete.",
+    de: "Pläne, die im Landesprojekt bisher ins XPlanung-Format überführt wurden (Projekt läuft bis Ende 2026), nicht vollständig.",
+    en: "Plans converted to XPlanung format in the state project so far (project runs until end of 2026), not complete.",
   },
   abfrage: (lat, lon, sprache) =>
     xplanAbfrage(
@@ -43,7 +43,7 @@ const GRUPPE = /denkmalbereich|flächendenkmal/i;
 
 export const sachsenAnhaltDenkmal: DenkmalDienst = {
   id: "st-denkmal",
-  quelle: "Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt – Denkmalinformationssystem",
+  quelle: "Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt: Denkmalinformationssystem",
   viewer: "https://lda.sachsen-anhalt.de/denkmalinformationssystem/",
   gebiet: { land: "Sachsen-Anhalt" },
   // LDA: "Zum derzeitigen Stand wird keine Vollständigkeit erreicht. Flächen ohne Kartierungen sind daher nicht per se

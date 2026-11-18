@@ -24,7 +24,7 @@ export const sachsenBplan: BplanDienst = {
   // Quellenvermerk laut Nutzungshinweisen: "RAPIS Sachsen [Monat/Jahr]"
   get quelle() {
     const d = new Date();
-    return `RAPIS Sachsen ${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()} – Bebauungspläne im Freistaat Sachsen (Landesdirektion Sachsen, dl-de/by-2.0)`;
+    return `RAPIS Sachsen ${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}: Bebauungspläne im Freistaat Sachsen (Landesdirektion Sachsen, dl-de/by-2.0)`;
   },
   viewer: "https://rapis.sachsen.de/",
   gebiet: { land: "Sachsen" },
@@ -33,8 +33,8 @@ export const sachsenBplan: BplanDienst = {
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Pläne nach Kenntnisstand der Landesdirektion (Raumordnungskataster) – ohne Gewähr für Vollständigkeit; keine Planunterlagen.",
-    en: "Plans as known to the state directorate (regional planning register) – no guarantee of completeness; no plan documents.",
+    de: "Pläne nach Kenntnisstand der Landesdirektion (Raumordnungskataster), ohne Gewähr für Vollständigkeit, keine Planunterlagen.",
+    en: "Plans as known to the state directorate (regional planning register), no guarantee of completeness, no plan documents.",
   },
   async abfrage(lat, lon, sprache) {
     const t = zweisprachig(sprache);
@@ -98,7 +98,7 @@ const KLASSEN: Record<string, { de: string; en: string; gruppe: boolean }> = {
 
 export const sachsenDenkmal: DenkmalDienst = {
   id: "sn-denkmal",
-  quelle: "Landesamt für Denkmalpflege Sachsen – Denkmalkarte Sachsen (Kulturdenkmale)",
+  quelle: "Landesamt für Denkmalpflege Sachsen: Denkmalkarte Sachsen (Kulturdenkmale)",
   viewer: "https://denkmalliste.denkmalpflege.sachsen.de/default.aspx?User=Gast",
   gebiet: { land: "Sachsen" },
   // LfD: "nachrichtliches Verzeichnis", "Die Kulturdenkmalliste ist niemals abgeschlossen", "Auch Objekte, die nicht

@@ -47,8 +47,8 @@ export function ObsidianKnopf({ vaultPfad }: { vaultPfad: string | null }) {
         <div className="dialog-inhalt">
           <p>
             {t(
-              "Alle Paragraphen von BauGB, NDSchG, Musterbauordnung und VOB als vernetzte Notizen – mit Gliederung, Verweisen und den Dateien der App. In der Graph-Ansicht (Strg + G) sehen Sie die Zusammenhänge auf einen Blick.",
-              "All sections of the BauGB, NDSchG, model building code and VOB as linked notes – with structure, cross-references and the app’s files. The graph view (Ctrl + G) shows how everything connects.",
+              "Alle Paragraphen von BauGB, NDSchG, Musterbauordnung und VOB als vernetzte Notizen, mit Gliederung, Verweisen und den Dateien der App. In der Graph-Ansicht (Strg + G) sehen Sie die Zusammenhänge auf einen Blick.",
+              "All sections of the BauGB, NDSchG, model building code and VOB as linked notes, with structure, cross-references and the app’s files. The graph view (Ctrl + G) shows how everything connects.",
             )}
           </p>
           {!vaultPfad ? (

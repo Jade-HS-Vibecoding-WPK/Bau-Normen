@@ -18,7 +18,7 @@ const BPLAN_ARTEN = new Set(["1000", "10000", "10001", "10002", "3000", "3100"])
 
 export const thueringenBplan: BplanDienst = {
   id: "th-bplan",
-  quelle: "GDI-Th / TLBG – Bebauungspläne und Satzungen Thüringen (WFS kommunale Geodaten, © GDI-Th, CC BY 4.0)",
+  quelle: "GDI-Th / TLBG: Bebauungspläne und Satzungen Thüringen (WFS kommunale Geodaten, © GDI-Th, CC BY 4.0)",
   viewer: "https://www.geoportal-th.de/",
   gebiet: { land: "Thüringen" },
   // Metadaten (ed1c7274-3fac-4226-b8d1-214796cfff8d): "Zusammenfassung der in der GDI-Th veröffentlichten Geltungsbereiche
@@ -26,8 +26,8 @@ export const thueringenBplan: BplanDienst = {
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Nur Pläne, die die Gemeinden in der Geodateninfrastruktur Thüringen veröffentlicht haben (Sekundärdatenbestand) – nicht vollständig.",
-    en: "Only plans the municipalities have published in the Thuringian spatial data infrastructure (secondary data) – not complete.",
+    de: "Nur Pläne, die die Gemeinden in der Geodateninfrastruktur Thüringen veröffentlicht haben (Sekundärdatenbestand), nicht vollständig.",
+    en: "Only plans the municipalities have published in the Thuringian spatial data infrastructure (secondary data), not complete.",
   },
   async abfrage(lat, lon, sprache) {
     const t = zweisprachig(sprache);
@@ -45,7 +45,7 @@ export const thueringenBplan: BplanDienst = {
         treffer.push({
           // Der Dienst führt keine Plannummer, nur die Bezeichnung
           nummer: "",
-          name: [wert(x.Name), wert(x.Gemeinde)].filter(Boolean).join(" – "),
+          name: [wert(x.Name), wert(x.Gemeinde)].filter(Boolean).join(", "),
           rechtsverbindlichSeit: datumText(x.Datum_Rechtskraft, sprache),
           vorhabenbezogen: ["3000", "3100"].includes(wert(x.Planart) ?? ""),
           verfahren: [art, x.Rechtsstand === "4500" ? t("teilweise außer Kraft", "partly no longer in force") : undefined].filter(Boolean).join(" · ") || undefined,
@@ -68,15 +68,15 @@ const PS_TOLERANZ_PX = 6.5;
 
 export const thueringenDenkmal: DenkmalDienst = {
   id: "th-denkmal",
-  quelle: "GDI-Th / TLBG – INSPIRE Schutzgebiete aus ALKIS, Unterthema Denkmale (© GDI-Th, CC BY 4.0)",
+  quelle: "GDI-Th / TLBG: INSPIRE Schutzgebiete aus ALKIS, Unterthema Denkmale (© GDI-Th, CC BY 4.0)",
   viewer: "https://www.geoportal-th.de/",
   gebiet: { land: "Thüringen" },
   // Kein Dienst des Denkmalamts, sondern aus dem Liegenschaftskataster abgeleitet – Vollständigkeit nicht belegt.
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Ersatzweise aus dem Liegenschaftskataster (ALKIS) abgeleitete Denkmalflächen der Vermessungsverwaltung – kein Dienst des Landesamts für Denkmalpflege, nicht vollständig, nur Bezeichnungen (oft leer), keine Denkmalart und Anschrift. Der Dienst liefert keine Umrisse: Entfernungen nur grob in Stufen (am Standort, bis etwa 10, 25 bzw. 50 m).",
-    en: "As a substitute, monument areas derived from the real estate cadastre (ALKIS) by the surveying administration – not a service of the state heritage office, not complete, names only (often empty), no monument type or address. The service gives no outlines: distances only roughly in steps (at the location, up to about 10, 25 or 50 m).",
+    de: "Ersatzweise aus dem Liegenschaftskataster (ALKIS) abgeleitete Denkmalflächen der Vermessungsverwaltung: kein Dienst des Landesamts für Denkmalpflege, nicht vollständig, nur Bezeichnungen (oft leer), keine Denkmalart und Anschrift. Der Dienst liefert keine Umrisse: Entfernungen nur grob in Stufen (am Standort, bis etwa 10, 25 bzw. 50 m).",
+    en: "As a substitute, monument areas derived from the real estate cadastre (ALKIS) by the surveying administration: not a service of the state heritage office, not complete, names only (often empty), no monument type or address. The service gives no outlines: distances only roughly in steps (at the location, up to about 10, 25 or 50 m).",
   },
   async abfrage(lat, lon, radiusM, sprache) {
     const t = zweisprachig(sprache);

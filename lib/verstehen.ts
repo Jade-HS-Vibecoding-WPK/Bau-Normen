@@ -155,14 +155,14 @@ async function normAntwort(gesetzId: string, nr: string, sprache: Sprache): Prom
   if (ansicht) return { art: "norm", ansicht };
   const tx = zweisprachig(sprache);
   const paragraphen = g.normen.filter((n) => n.bez.startsWith("§"));
-  const bereich = paragraphen.length ? `${paragraphen[0].bez} – ${paragraphen.at(-1)!.bez}` : "?";
+  const bereich = (bis: string) => (paragraphen.length ? `${paragraphen[0].bez} ${bis} ${paragraphen.at(-1)!.bez}` : "?");
   // VOB/A: "§ 3a" gibt es auch als "§ 3a EU" / "§ 3a VS" -> anbieten
   const varianten = g.normen.filter((n) => n.id === `${nr}-eu` || n.id === `${nr}-vs`);
   return {
     art: "fehler",
     text: tx(
-      `${g.kurz}: Einen § ${nummerText(nr)} gibt es dort nicht (vorhanden: ${bereich}). Es wird kein Text angezeigt, statt zu raten.`,
-      `${g.kurz}: there is no § ${nummerText(nr)} (available: ${bereich}). No text is shown rather than guessing.`,
+      `${g.kurz}: Einen § ${nummerText(nr)} gibt es dort nicht (vorhanden: ${bereich("bis")}). Es wird kein Text angezeigt, statt zu raten.`,
+      `${g.kurz}: there is no § ${nummerText(nr)} (available: ${bereich("to")}). No text is shown rather than guessing.`,
     ),
     ...(varianten.length ? { vorschlaege: varianten.map((n) => ({ label: `${n.bez} ${g.kurz}`, anfrage: `${n.bez} ${g.kurz}` })) } : {}),
   };
@@ -193,8 +193,8 @@ async function paragraphAntwort(t: string, nummern: string[], sprache: Sprache, 
       {
         art: "fehler",
         text: tx(
-          "Die VOB/C hat keine Paragraphen, sondern ATV-Normen – z. B. „DIN 18300“ (Erdarbeiten) oder „DIN 18353“ (Estricharbeiten).",
-          "The VOB/C has no sections but ATV standards – e.g. “DIN 18300” (earthworks) or “DIN 18353” (screed work).",
+          "Die VOB/C hat keine Paragraphen, sondern ATV-Normen, z. B. „DIN 18300“ (Erdarbeiten) oder „DIN 18353“ (Estricharbeiten).",
+          "The VOB/C has no sections but ATV standards, e.g. “DIN 18300” (earthworks) or “DIN 18353” (screed work).",
         ),
         vorschlaege: [
           { label: "DIN 18299", anfrage: "DIN 18299" },
@@ -213,10 +213,10 @@ async function paragraphAntwort(t: string, nummern: string[], sprache: Sprache, 
       {
         art: "fehler",
         text: tx(
-          `Für ${fehltLand.name} ist ${name} noch nicht in der Bibliothek. Landesgesetze gibt es bisher für: ${mitDaten.join(", ") || "–"}.` +
-            (bo ? " Die Musterbauordnung (MBO) zeigt den gemeinsamen Aufbau – ihre Paragraphen stimmen aber nicht mit der Landesbauordnung überein." : ""),
-          `For ${fehltLand.name}, ${name} is not in the library yet. State law is available so far for: ${mitDaten.join(", ") || "–"}.` +
-            (bo ? " The model building code (MBO) shows the common structure – its sections do not match the state code, though." : ""),
+          `Für ${fehltLand.name} ist ${name} noch nicht in der Bibliothek. Landesgesetze gibt es bisher für: ${mitDaten.join(", ") || "noch keines"}.` +
+            (bo ? " Die Musterbauordnung (MBO) zeigt den gemeinsamen Aufbau, ihre Paragraphen stimmen aber nicht mit der Landesbauordnung überein." : ""),
+          `For ${fehltLand.name}, ${name} is not in the library yet. State law is available so far for: ${mitDaten.join(", ") || "none yet"}.` +
+            (bo ? " The model building code (MBO) shows the common structure, but its sections do not match the state code." : ""),
         ),
         ...(bo && gesetze.has("mbo") ? { vorschlaege: [{ label: `§ ${nummerText(nummern[0])} MBO`, anfrage: `§ ${nummern[0]} MBO` }] } : {}),
       },
@@ -240,7 +240,7 @@ async function paragraphAntwort(t: string, nummern: string[], sprache: Sprache, 
       frage: tx(`§ ${nummerText(nr)} gibt es in mehreren Regelwerken. Welches ist gemeint?`, `§ ${nummerText(nr)} exists in several acts. Which one do you mean?`),
       optionen: kandidaten.map((g) => {
         const n = g.normen.find((x) => x.id === nr)!;
-        return { label: `${n.bez} ${g.kurz} – ${n.titel}`, anfrage: `${n.bez} ${g.kurz}` };
+        return { label: `${n.bez} ${g.kurz}: ${n.titel}`, anfrage: `${n.bez} ${g.kurz}` };
       }),
     },
   ];
@@ -254,6 +254,17 @@ export async function beantworte(eingabe: string, sprache: Sprache = "de", land:
   // 1) Adresse mit typischer Straßenendung ("…straße 5", "…weg 12") -> Ortsauskunft
   const adresse = erkenneAdresse(t, true);
   if (adresse) return [await ortsAntwort(adresse, t, sprache)];
+
+  // 1b) Anhang/Anlage eines Gesetzes ("Anhang NBauO", "Anlage HBO", "Anhang 1 LBO BW"): so verweisen auch die
+  // Paragraphen-Chips der Ortsauskunft und die Trefferlisten darauf. Nur kurze Eingaben, damit "bauliche Anlage" ein
+  // Stichwort bleibt.
+  const anlage = t.match(/^(anhang|anlage)(?:\s+(\d{1,2}))?\s+(\S+(?:\s+\S+)?)$/i);
+  if (anlage) {
+    const gesetzId = erkenneGesetz(anlage[3], land);
+    const g = gesetzId ? alleGesetze().get(gesetzId) : undefined;
+    const normId = `${anlage[1].toLowerCase()}${anlage[2] ? `-${anlage[2]}` : ""}`;
+    if (g && g.normen.some((n) => n.id === normId)) return [await normAntwort(gesetzId!, normId, sprache)];
+  }
 
   // 2) ATV der VOB/C ("DIN 18353")
   const din = erkenneDin(t);

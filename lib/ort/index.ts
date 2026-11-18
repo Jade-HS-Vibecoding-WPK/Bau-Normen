@@ -82,13 +82,13 @@ const frist = <T,>(p: Promise<T>, ersatz: () => T): Promise<T> =>
 
 /**
  * Derselbe Plan aus einem Landes- und einem Kreis- bzw. Gemeindedienst: Die Dienste schreiben Nummer und Namen verschieden
- * ("_190__" / "190", "549-Altstadt – Duisburg" / "Altstadt", "Eisenbahnstraße - Süd – Freiburg im Breisgau" /
+ * ("_190__" / "190", "549-Altstadt, Duisburg" / "Altstadt", "Eisenbahnstraße - Süd, Freiburg im Breisgau" /
  * "Bebauungsplan "Eisenbahnstraße-Süd""). Die Dienste sind von allgemein nach genau sortiert – der genauere gewinnt.
  * Verglichen wird nur zwischen verschiedenen Diensten (innerhalb eines Dienstes teilen Änderungen dieselbe Nummer).
  */
 function ohneDoppelte(ergebnisse: DienstErgebnis<PlanTreffer>[], ort: string): DienstErgebnis<PlanTreffer>[] {
   const nr = (s: string) => s.toLowerCase().replace(/[^0-9a-zäöü]/g, "").replace(/^0+/, "");
-  const ortszusatz = ort ? new RegExp(`\\s*[–-]\\s*${ort.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`, "i") : null;
+  const ortszusatz = ort ? new RegExp(`\\s*[–,-]\\s*${ort.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`, "i") : null;
   const nm = (s: string) =>
     (ortszusatz ? s.replace(ortszusatz, "") : s)
       .toLowerCase()
@@ -151,13 +151,13 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
   };
 
   if (standort.status !== "ok") {
-    const hinweis = t("Nicht abgefragt – Standort unbekannt.", "Not queried – location unknown.");
+    const hinweis = t("Nicht abgefragt, Standort unbekannt.", "Not queried, location unknown.");
     return {
       eingabe,
       abgefragtAm,
       standort,
-      bplan: { status: "fehler", hinweis, quelle: "–" },
-      denkmal: { status: "fehler", hinweis, quelle: "–" },
+      bplan: { status: "fehler", hinweis, quelle: "" },
+      denkmal: { status: "fehler", hinweis, quelle: "" },
       nutzerNenntDenkmal,
       einordnung,
       links,
@@ -197,8 +197,8 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       thema: THEMA.standort,
       titel: t("Hausnummer nicht eindeutig gefunden", "House number not clearly found"),
       text: t(
-        `Die Hausnummer „${hausnummer}“ ist im Adressdatenbestand nicht verzeichnet. Die Abfrage nutzt deshalb einen Punkt auf der Straße. Ergebnisse können für Ihr Grundstück abweichen – bitte im Kartenportal der Stadt prüfen.`,
-        `House number “${hausnummer}” is not listed in the address data. The query therefore uses a point on the street. Results may differ for your plot – please check in the city’s map portal.`,
+        `Die Hausnummer „${hausnummer}“ ist im Adressdatenbestand nicht verzeichnet. Die Abfrage nutzt deshalb einen Punkt auf der Straße. Ergebnisse können für Ihr Grundstück abweichen. Bitte im Kartenportal der Stadt prüfen.`,
+        `House number “${hausnummer}” is not listed in the address data. The query therefore uses a point on the street. Results may differ for your plot. Please check in the city’s map portal.`,
       ),
       paragraphen: [],
       ton: "achtung",
@@ -237,7 +237,7 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     });
   } else if (bp.treffer.length) {
     const mitDokumenten = bp.treffer.map((p) => ({ ...p, dokumente: dokumente?.get(p.nummer) ?? p.dokumente ?? [] }));
-    bplan = { status: "gefunden", plaene: mitDokumenten, weitere: weitereAlle, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}) };
+    bplan = { status: "gefunden", plaene: mitDokumenten, weitere: weitereAlle, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}), ...(bp.ausgefallen.length ? { ausgefallen: bp.ausgefallen } : {}) };
     const vhb = bp.treffer.some((p) => p.vorhabenbezogen);
     const mehrere = bp.treffer.length > 1;
     const liste = bp.treffer.map((p) => (p.nummer ? `Nr. ${p.nummer} „${p.name}“` : `„${p.name}“`)).join(", ");
@@ -260,7 +260,7 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       ton: "info",
     });
   } else {
-    bplan = { status: "keiner", plaene: [], weitere: weitereAlle, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}) };
+    bplan = { status: "keiner", plaene: [], weitere: weitereAlle, dokumenteAbrufbar: !oldenburg || dokumente !== null, quelle: bp.quelle, vollstaendig: bp.vollstaendig, ...(bp.abdeckung.length ? { abdeckung: bp.abdeckung.join(" ") } : {}), ...(bp.ausgefallen.length ? { ausgefallen: bp.ausgefallen } : {}) };
     einordnung.push(
       bp.vollstaendig
         ? {
@@ -268,21 +268,21 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
             titel: t("Kein rechtsverbindlicher Bebauungsplan", "No legally binding development plan"),
             text: t(
               `Der Dienst (${bp.quelle}) enthält alle rechtsverbindlichen Bebauungspläne des Gebiets; für den Standort ist keiner verzeichnet. Die Zulässigkeit eines Vorhabens richtet sich dann nach § 34 BauGB (innerhalb eines im Zusammenhang bebauten Ortsteils) oder nach § 35 BauGB (Außenbereich). ` +
-                "Welche Vorschrift gilt, hängt von der tatsächlichen Bebauung ab – verbindlich klärt das die Bauaufsicht, z. B. über eine Bauvoranfrage.",
+                "Welche Vorschrift gilt, hängt von der tatsächlichen Bebauung ab. Verbindlich klärt das die Bauaufsicht, z. B. über eine Bauvoranfrage.",
               `The service (${bp.quelle}) contains all legally binding development plans of the area; none is listed for this location. A project is then assessed under § 34 BauGB (within a built-up area) or § 35 BauGB (outer area). ` +
-                "Which provision applies depends on the actual surrounding development – the building authority clarifies this bindingly, e.g. via a preliminary building enquiry.",
+                "Which provision applies depends on the actual surrounding development. The building authority clarifies this bindingly, e.g. via a preliminary building enquiry.",
             ),
             paragraphen: refs("baugb", ["34", "35"]),
             ton: "info",
           }
         : {
             thema: THEMA.planung,
-            titel: t("Kein Bebauungsplan verzeichnet – Dienst nicht vollständig", "No development plan listed – service not complete"),
+            titel: t("Kein Bebauungsplan verzeichnet, Dienst nicht vollständig", "No development plan listed, service not complete"),
             text:
               t(
-                `In den angebundenen Diensten (${bp.quelle}) ist für den Standort kein rechtsverbindlicher Bebauungsplan verzeichnet. Diese Dienste enthalten nicht nachweislich alle Pläne – ob doch einer gilt, klärt die Gemeinde (Stadtplanungsamt). ` +
+                `In den angebundenen Diensten (${bp.quelle}) ist für den Standort kein rechtsverbindlicher Bebauungsplan verzeichnet. Diese Dienste enthalten nicht nachweislich alle Pläne. Ob doch einer gilt, klärt die Gemeinde (Stadtplanungsamt). ` +
                   "Gilt kein Plan, richtet sich die Zulässigkeit nach § 34 BauGB (im Zusammenhang bebauter Ortsteil) oder § 35 BauGB (Außenbereich).",
-                `The connected services (${bp.quelle}) list no legally binding development plan for this location. These services are not proven to contain every plan – the municipality (planning office) can tell whether one applies after all. ` +
+                `The connected services (${bp.quelle}) list no legally binding development plan for this location. These services are not proven to contain every plan. The municipality (planning office) can tell whether one applies after all. ` +
                   "If no plan applies, a project is assessed under § 34 BauGB (built-up area) or § 35 BauGB (outer area).",
               ) + ausfall(bp),
             paragraphen: refs("baugb", ["30", "34", "35"]),
@@ -388,12 +388,12 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
         )
       : dsg?.schutzOhneEintragung === false
         ? t(
-            `Nach dem ${dschg.kurz} entsteht der Schutz grundsätzlich erst mit der Eintragung bzw. Unterschutzstellung${belegText}. Für einzelne Denkmalarten können Ausnahmen gelten – siehe die Vorschriften zur Eintragung.`,
-            `Under the ${dschg.kurz}, protection generally only arises upon entry in the list or formal designation${belegText}. Exceptions may apply to certain kinds of monuments – see the provisions on entry.`,
+            `Nach dem ${dschg.kurz} entsteht der Schutz grundsätzlich erst mit der Eintragung bzw. Unterschutzstellung${belegText}. Für einzelne Denkmalarten können Ausnahmen gelten, siehe die Vorschriften zur Eintragung.`,
+            `Under the ${dschg.kurz}, protection generally only arises upon entry in the list or formal designation${belegText}. Exceptions may apply to certain kinds of monuments, see the provisions on entry.`,
           )
         : t(
-            `Ob ein Denkmal nach dem ${dschg.kurz} auch ohne Eintragung geschützt ist, ist hier nicht hinterlegt – bitte bei der Denkmalschutzbehörde klären.`,
-            `Whether a monument is protected under the ${dschg.kurz} without being listed is not recorded here – please ask the monument protection authority.`,
+            `Ob ein Denkmal nach dem ${dschg.kurz} auch ohne Eintragung geschützt ist, ist hier nicht hinterlegt. Bitte bei der Denkmalschutzbehörde klären.`,
+            `Whether a monument is protected under the ${dschg.kurz} without being listed is not recorded here. Please ask the monument protection authority.`,
           );
 
   let denkmal: OrtAnsicht["denkmal"];
@@ -438,11 +438,12 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       quelle: dm.quelle,
       vollstaendig: dm.vollstaendig,
       ...(dm.abdeckung.length ? { abdeckung: dm.abdeckung.join(" ") } : {}),
+      ...(dm.ausgefallen.length ? { ausgefallen: dm.ausgefallen } : {}),
     };
     const behoerde =
       t(
-        `Zuständig ist die Denkmalschutzbehörde${oldenburg ? " – in Oldenburg die Stadt als untere Denkmalschutzbehörde" : ""}`,
-        `The competent body is the monument protection authority${oldenburg ? " – in Oldenburg the city itself as the local authority" : ""}`,
+        `Zuständig ist die Denkmalschutzbehörde${oldenburg ? ", in Oldenburg die Stadt als untere Denkmalschutzbehörde" : ""}`,
+        `The competent body is the monument protection authority${oldenburg ? ", in Oldenburg the city itself as the local authority" : ""}`,
       ) + `${ks("behoerden")}.`;
 
     if (einzelAmStandort.length) {
@@ -484,10 +485,10 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
         text:
           t(
             `Der Standort liegt in: ${namen}. ` +
-              `Eine Gruppe baulicher Anlagen (Ensemble, Denkmalbereich, Sachgesamtheit) kann als Ganzes geschützt sein – auch wenn nicht jedes einzelne Gebäude für sich ein Denkmal ist${ks("begriffe")}. ` +
+              `Eine Gruppe baulicher Anlagen (Ensemble, Denkmalbereich, Sachgesamtheit) kann als Ganzes geschützt sein, auch wenn nicht jedes einzelne Gebäude für sich ein Denkmal ist${ks("begriffe")}. ` +
               `Maßnahmen, die die Gruppe oder ihr Erscheinungsbild verändern, können genehmigungspflichtig sein${ks("genehmigungspflicht")}.`,
             `The location lies within: ${namen}. ` +
-              `A group of structures (ensemble, monument area) can be protected as a whole – even if not every individual building is a monument in its own right${ks("begriffe")}. ` +
+              `A group of structures (ensemble, monument area) can be protected as a whole, even if not every individual building is a monument in its own right${ks("begriffe")}. ` +
               `Measures that alter the ensemble or its appearance may require a permit${ks("genehmigungspflicht")}.`,
           ) + (dschg ? "" : fehltGesetz),
         paragraphen: ds("begriffe", "genehmigungspflicht"),
@@ -526,9 +527,9 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
         titel: t("Ihre Angabe: Denkmal auf dem Grundstück", "Your note: monument on the plot"),
         text:
           t(
-            `Am Standort selbst ist im Denkmal-Dienst kein Denkmal verzeichnet${dm.vollstaendig ? "" : " – der Dienst enthält aber nicht nachweislich alle Denkmale"}. ${eintragungSatz} ` +
+            `Am Standort selbst ist im Denkmal-Dienst kein Denkmal verzeichnet${dm.vollstaendig ? "" : "; der Dienst enthält aber nicht nachweislich alle Denkmale"}. ${eintragungSatz} ` +
               `Klären Sie den Status vor der Planung mit der Denkmalschutzbehörde${oldenburg ? " der Stadt Oldenburg" : ""}.`,
-            `The monument service records no monument at the location itself${dm.vollstaendig ? "" : " – but the service is not proven to contain every monument"}. ${eintragungSatz} ` +
+            `The monument service records no monument at the location itself${dm.vollstaendig ? "" : "; but the service is not proven to contain every monument"}. ${eintragungSatz} ` +
               `Please clarify the status with the ${oldenburg ? "City of Oldenburg’s " : ""}monument protection authority before planning.`,
           ) + ausfall(dm),
         paragraphen: ds("begriffe", "eintragung", "genehmigungspflicht"),
@@ -551,8 +552,8 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
           : {
               thema: THEMA.denkmal,
               titel: t(
-                `Kein Kulturdenkmal im Umkreis von ${RADIUS_M} m verzeichnet – Dienst nicht vollständig`,
-                `No cultural monument recorded within ${RADIUS_M} m – service not complete`,
+                `Kein Kulturdenkmal im Umkreis von ${RADIUS_M} m verzeichnet, Dienst nicht vollständig`,
+                `No cultural monument recorded within ${RADIUS_M} m, service not complete`,
               ),
               text:
                 t(
@@ -599,8 +600,8 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       thema: THEMA.ordnung,
       titel: t(`Bauordnungsrecht: Landesbauordnung ${landText}`, `Building regulations: building code of ${landText}`),
       text: t(
-        `Genehmigungspflicht, Abstandsflächen und Bauausführung regelt die Bauordnung des Landes ${landText}. Sie ist noch nicht in der Bibliothek. Die Musterbauordnung zeigt den gemeinsamen Aufbau der Landesbauordnungen – Nummerierung und Inhalte weichen aber ab, verbindlich ist allein die Landesbauordnung.`,
-        `Permit requirements, distance areas and construction are governed by the building code of ${landText}. It is not in the library yet. The model building code shows the common structure of the state building codes – numbering and content differ, however; only the state building code is binding.`,
+        `Genehmigungspflicht, Abstandsflächen und Bauausführung regelt die Bauordnung des Landes ${landText}. Sie ist noch nicht in der Bibliothek. Die Musterbauordnung zeigt den gemeinsamen Aufbau der Landesbauordnungen. Nummerierung und Inhalte weichen aber ab, verbindlich ist allein die Landesbauordnung.`,
+        `Permit requirements, distance areas and construction are governed by the building code of ${landText}. It is not in the library yet. The model building code shows the common structure of the state building codes. Numbering and content differ, however; only the state building code is binding.`,
       ),
       paragraphen: refs("mbo", ["59", "61", "6"]),
       ton: "neutral",

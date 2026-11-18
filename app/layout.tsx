@@ -11,8 +11,8 @@ const mono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--
 const serif = Source_Serif_4({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "Bau-Normen-KI – Baurecht im Wortlaut",
-  description: "BauGB, Niedersächsische Bauordnung, Denkmalschutzgesetz, Musterbauordnung und VOB im Wortlaut – mit Ortsauskunft für Adressen in Deutschland.",
+  title: "ParaGecko · Findet die Paragraphen zu jedem Grundstück",
+  description: "BauGB, Bauordnungen und Denkmalschutzgesetze der Länder, Musterbauordnung und VOB im Wortlaut, dazu eine Ortsauskunft für Adressen in Deutschland.",
   // helles und dunkles Farbschema
   other: { "color-scheme": "light dark" },
 };

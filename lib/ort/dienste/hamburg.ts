@@ -9,7 +9,7 @@ import {
 import type { BplanDienst, DenkmalDienst, PlanTreffer } from "./typen";
 
 const BPLAN_API = "https://api.hamburg.de/datasets/v1/bplaene/collections/hh_hh_festgestellt/items";
-const BPLAN_QUELLE = "Freie und Hansestadt Hamburg, Behörde für Stadtentwicklung und Wohnen – Bebauungspläne (dl-de/by-2.0)";
+const BPLAN_QUELLE = "Freie und Hansestadt Hamburg, Behörde für Stadtentwicklung und Wohnen: Bebauungspläne (dl-de/by-2.0)";
 
 /** Planart aus dem Namen (Hamburger Benennung): BS = Baustufenplan, TB = Teilbebauungsplan, D = Durchführungsplan */
 function planart(name: string, en: boolean): string {
@@ -29,8 +29,8 @@ export const hamburgBplan: BplanDienst = {
   vollstaendig: true,
   browser: true,
   abdeckung: {
-    de: "Alle festgestellten Bebauungspläne Hamburgs (auch Baustufen-, Teilbebauungs- und Durchführungspläne). Ältere Pläne können durch neuere ganz oder teilweise ersetzt sein – der Dienst sagt das nicht.",
-    en: "All adopted development plans of Hamburg (including older zoning, partial and implementation plans). Older plans may be wholly or partly replaced by newer ones – the service does not say so.",
+    de: "Alle festgestellten Bebauungspläne Hamburgs (auch Baustufen-, Teilbebauungs- und Durchführungspläne). Ältere Pläne können durch neuere ganz oder teilweise ersetzt sein; der Dienst sagt das nicht.",
+    en: "All adopted development plans of Hamburg (including older zoning, partial and implementation plans). Older plans may be wholly or partly replaced by newer ones; the service does not say so.",
   },
   async abfrage(lat, lon, sprache) {
     const p: Punkt = [lon, lat];
@@ -79,7 +79,7 @@ const ARTEN: Record<string, { de: string; en: string; gruppe: boolean }> = {
 
 export const hamburgDenkmal: DenkmalDienst = {
   id: "hh-denkmal",
-  quelle: "Freie und Hansestadt Hamburg, Denkmalschutzamt – Denkmalkartierung; Bodendenkmale: Archäologisches Museum Hamburg (dl-de/by-2.0)",
+  quelle: "Freie und Hansestadt Hamburg, Denkmalschutzamt: Denkmalkartierung; Bodendenkmale: Archäologisches Museum Hamburg (dl-de/by-2.0)",
   viewer: "https://geoportal-hamburg.de/geo-online/",
   gebiet: { land: "Hamburg" },
   // Metadaten: "Erfasst werden aktuelle Denkmäler" – keine Aussage zur Vollständigkeit; Bodendenkmale laut Dienst nur
@@ -122,10 +122,10 @@ export const hamburgDenkmal: DenkmalDienst = {
         const x = f.properties ?? {};
         const element = wert(x.element_typ);
         roh.push({
-          name: [wert(x.fundplatzbezeichnung), element].filter(Boolean).join(" – ") || t("Bodendenkmal", "Archaeological monument"),
+          name: [wert(x.fundplatzbezeichnung), element].filter(Boolean).join(", ") || t("Bodendenkmal", "Archaeological monument"),
           ausweisung: t("Bodendenkmal", "Archaeological monument"),
           objekttyp: element,
-          beschreibung: [wert(x.epoche_beginn), wert(x.epoche_ende)].filter(Boolean).join(" – ") || undefined,
+          beschreibung: [wert(x.epoche_beginn), wert(x.epoche_ende)].filter(Boolean).join(" bis ") || undefined,
           gruppe: false,
           geometrie: umrechnen(f.geometry, LON_LAT),
           schluessel: x.elemente_id !== undefined ? `boden:${x.elemente_id}` : undefined,

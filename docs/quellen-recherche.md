@@ -1,6 +1,6 @@
 # Quellen-Recherche: fehlendes Landesrecht, Bebauungspläne, Denkmale (18.11.2026)
 
-Ergebnis einer Recherche mit Stichproben-Gegenprüfung (Erreichbarkeit, CORS, Lizenztext). **Keine Rechtsberatung** – vor
+Ergebnis einer Recherche mit Stichproben-Gegenprüfung (Erreichbarkeit, CORS, Lizenztext). **Keine Rechtsberatung.** Vor
 einer kommerziellen Nutzung rechtlich prüfen lassen und bei „unklar“ schriftlich beim Anbieter nachfragen.
 
 Einordnung: **Produkt** = offene Lizenz bzw. amtliches Werk, auch kommerziell nutzbar (Namensnennung beachten) ·
@@ -16,11 +16,11 @@ Einordnung: **Produkt** = offene Lizenz bzw. amtliches Werk, auch kommerziell nu
   („Jegliche Nutzung für kommerzielle Zwecke bedarf der vorherigen Zustimmung“). Ob § 5 auch das Datenbankrecht verdrängt,
   ist höchstrichterlich offen.
 - **§ 60d UrhG** (Text- und Data-Mining für wissenschaftliche Forschung) gilt trotz Vorbehalt, aber nur nicht-kommerziell und
-  nur für einen abgegrenzten Personenkreis – **eine öffentliche Website oder ein öffentliches Repository deckt er nicht**.
+  nur für einen abgegrenzten Personenkreis; **eine öffentliche Website oder ein öffentliches Repository deckt er nicht**.
 - **Geodaten:** dl-de/by-2.0, dl-de/zero-2.0, CC BY 4.0, CC0 → Produkt (mit Quellenvermerk). CC BY-SA → Weitergabe
   abgeleiteter Daten unter gleicher Lizenz. CC BY-ND → keine veränderten Fassungen weitergeben. NC → nicht kommerziell.
   Keine Lizenzangabe → kein Nutzungsrecht eingeräumt, nachfragen.
-- NRW: Denkmallisten-Verordnung (GV. NRW. 2015 S. 430, § 5 Abs. 1) – Nutzung nur mit Zustimmung der Behörde; eine offene
+- NRW: Denkmallisten-Verordnung (GV. NRW. 2015 S. 430, § 5 Abs. 1) erlaubt die Nutzung nur mit Zustimmung der Behörde; eine offene
   Lizenz der Stadt gilt als diese Zustimmung.
 
 ## Landesrecht der 10 juris-Länder
@@ -50,10 +50,10 @@ Staatskanzlei, amtsblatt@staatskanzlei.saarland.de). NeuRIS (Bund) enthält derz
 **Übersprungen:**
 
 - **HDSchG:** Die rechte Spalte der Synopse enthält noch Streichungen, Einfügungen und den Platzhalter „Änderungsgesetz … vom (….)“.
-- **BauO Bln:** Die Spalten liegen nur 1–4 pt auseinander. Zudem wären zwei Blöcke mit der Fassung ab 20.01.2027 auszuschneiden, und die Synopse nennt sich „unverbindliche Arbeitshilfe“.
+- **BauO Bln:** Die Spalten liegen nur 1 bis 4 pt auseinander. Zudem wären zwei Blöcke mit der Fassung ab 20.01.2027 auszuschneiden, und die Synopse nennt sich „unverbindliche Arbeitshilfe“.
 - **ThürBO:** Das GVBl-Heft 2024 wurde in ParlDok nicht gefunden. Laut umwelt-online kam eine Änderung vom 06.07.2026 hinzu.
 
-## Bebauungspläne – neue Dienste (Stichproben geprüft: HTTP 200, CORS, Treffer)
+## Bebauungspläne: neue Dienste (Stichproben geprüft: HTTP 200, CORS, Treffer)
 
 | Gebiet | Dienst | Pläne | Lizenz | Einordnung |
 |---|---|---|---|---|
@@ -70,26 +70,26 @@ Staatskanzlei, amtsblatt@staatskanzlei.saarland.de). NeuRIS (Bund) enthält derz
 | NI Stadt Osnabrück | https://geo.osnabrueck.de/arcgis/rest/services/Bebauungsplaene/MapServer/0 | 503 | dl-de/by-2.0, Metadaten zugleich „Lesen für Infozwecke“ | Produkt, Widerspruch klären |
 | NI Stadt Hameln | https://inspire.hameln.de/map/lu_bebauungsplan | 545 | „keine Bedingungen“ / „conditions unknown“ | unklar |
 | NI LK Cuxhaven | https://cuxland-gis.landkreis-cuxhaven.de/wms/extern/bebauungsplaene (kein CORS) | ~2.620 | „copyright“, keine Lizenz | unklar |
-| HE Südhessen-Plattform (Hochtaunus, Wetterau, Bergstraße, Groß-Gerau, Rheingau-Taunus, Limburg-Weilburg, Odenwald, Hanau, Rüsselsheim u. a.) | https://www.gdi-inspireumsetzer.de/ows/services/<org-id>_wfs, Typ ft1:Planung | je 87–1.607 | dl-de/by-2.0 | Produkt |
+| HE Südhessen-Plattform (Hochtaunus, Wetterau, Bergstraße, Groß-Gerau, Rheingau-Taunus, Limburg-Weilburg, Odenwald, Hanau, Rüsselsheim u. a.) | https://www.gdi-inspireumsetzer.de/ows/services/<org-id>_wfs, Typ ft1:Planung | je 87 bis 1.607 | dl-de/by-2.0 | Produkt |
 | HE LK Fulda | https://www.geoportal.hessen.de/spatial-objects/932/collections/BPLKFD:BP_LKFD/items | 2.872 | CC0 | Produkt |
-| HE Regionalverband FrankfurtRheinMain (13 Kommunen) | WMS mapservice.region-frankfurt.de | – | „nur für nicht kommerzielle Zwecke“ | Forschung |
+| HE Regionalverband FrankfurtRheinMain (13 Kommunen) | WMS mapservice.region-frankfurt.de | keine Angabe | „nur für nicht kommerzielle Zwecke“ | Forschung |
 | BW Stadt Freiburg | https://geoportal.freiburg.de/wfs/stpla_bplan/wfs_mapfile/geltungsbereiche | 667 | dl-de/by-2.0 | Produkt |
 | NRW Stadt Münster | https://geo.stadt-muenster.de/mapserv/bplan_serv (ms:bplan2, BBOX in EPSG:25832) | 686 | dl-de/by-2.0 (Open.NRW) | Produkt |
 | NRW Stadt Duisburg | https://geoportal.duisburg.de/arcgisserver/rest/services/OpenData/OpenData/MapServer/146 | 667 | CC BY 3.0 DE | Produkt |
 | SH Kreis Nordfriesland | https://gis.nordfriesland.de/arcgis/rest/services/WMS_NF/Bauleitplanung_NF/MapServer/2 | 3.211 | „© Kreis Nordfriesland“ | unklar |
-| SL INSPIRE je Gemeinde (ohne Saarbrücken) | geoportal.saarland.de/spatial-objects/… | – | „unterliegen dem Urheberrecht“ | Erlaubnis |
+| SL INSPIRE je Gemeinde (ohne Saarbrücken) | geoportal.saarland.de/spatial-objects/… | keine Angabe | „unterliegen dem Urheberrecht“ | Erlaubnis |
 
 Nichts Offenes gefunden: Hannover, Wolfsburg, Wiesbaden, Kassel, Darmstadt, Offenbach, Bonn (Dienst nicht erreichbar),
 Düsseldorf, Mainz, Ludwigshafen, Kaiserslautern, Saarbrücken, Kiel, Lübeck sowie viele NI-Landkreise (u. a. Emsland,
 Lüneburg, Verden, Wesermarsch, LK Oldenburg). Hinweis zum Einbau: Viele Dienste enthalten auch Pläne in Aufstellung,
-Satzungen oder F-Pläne – nach Status/Art filtern; keiner erklärt sich ausdrücklich für vollständig.
+Satzungen oder F-Pläne, deshalb nach Status/Art filtern; keiner erklärt sich ausdrücklich für vollständig.
 
-## Denkmale – neue Dienste (Stichproben geprüft)
+## Denkmale: neue Dienste (Stichproben geprüft)
 
 | Gebiet | Dienst | Lizenz | Einordnung |
 |---|---|---|---|
 | MV LK Ludwigslust-Parchim | https://geoportal.kreis-lup.de/ows/masterportal/denkmalpflege-lup (WFS) | dl-de/by-2.0 | Produkt |
-| MV Mecklenburgische Seenplatte (ohne Neubrandenburg) | https://geoport-lk-mse.de/webservices/wfs/mp_baudenkmale (BBOX nur EPSG:25833; enthält Kontaktdaten der Sachbearbeitung – nicht anzeigen) | CC BY 4.0 | Produkt |
+| MV Mecklenburgische Seenplatte (ohne Neubrandenburg) | https://geoport-lk-mse.de/webservices/wfs/mp_baudenkmale (BBOX nur EPSG:25833; enthält Kontaktdaten der Sachbearbeitung, diese nicht anzeigen) | CC BY 4.0 | Produkt |
 | MV Vorpommern-Rügen (ohne Stralsund, ohne Adressen) | https://geodienste.lk-vr.de/ows/denkmale/baudenkmale (BBOX nur EPSG:25833) | dl-de/by-2.0 (Metadaten) | Produkt |
 | MV LK Rostock | https://geoportal.lkros.de/dienste/baudenkmale | dl-de/by-2.0, aber Zusatz „dienen ausschließlich Informationszwecken“ | Produkt, Zusatz klären |
 | TH landesweit (aus ALKIS abgeleitet, Namen oft leer) | https://www.geoproxy.geoportal-th.de/geoproxy/services/INSPIREps (PS.ProtectedSite) | CC BY 4.0 | Produkt (fachlich dünn) |
@@ -99,7 +99,7 @@ Satzungen oder F-Pläne – nach Status/Art filtern; keiner erklärt sich ausdr�
 | BB BLDAM Baudenkmale | https://gis-bldam-brandenburg.de/ows/baudenkmale | Namensnennung, Nutzungshinweise wie oben | Erlaubnis |
 | BB Denkmalliste (PDF, mit Adressen) | bldam-brandenburg.de, 18 Teillisten Stand 1.1.2026 | Impressum: „nur für den privaten Gebrauch“; Liste auch nachrichtlich im Amtsblatt | unklar |
 | TH Erfurt Denkmalliste (PDF) | erfurt.de | keine Angabe | unklar |
-| SH archäologische Interessengebiete, HB Bodendenkmäler, SN archäologische Denkmale | – | schriftliche Einwilligung / Rücksprache / „restricted“ | Erlaubnis |
+| SH archäologische Interessengebiete, HB Bodendenkmäler, SN archäologische Denkmale | keine Angabe | schriftliche Einwilligung / Rücksprache / „restricted“ | Erlaubnis |
 
 Nichts gefunden: Landesamt Thüringen (TLDA), Weimar, Gera, Jena (nur Gedenkstätten); MV: Nordwestmecklenburg,
 Vorpommern-Greifswald, Stralsund, Wismar, Neubrandenburg; Potsdam, Cottbus. Hessen (DenkXweb) weiterhin nicht
@@ -111,4 +111,4 @@ Keine Lizenzangabe: München, Stuttgart („otherRestrictions“), Nürnberg (�
 Sachsen-Anhalt (XPlanung-Plattform, LDA-Denkmale), Sachsen LfD-Denkmalkarte. Alle übrigen angebundenen Dienste sind offen
 lizenziert (u. a. Oldenburg dl-de/zero, Denkmalatlas Niedersachsen CC BY-SA 4.0, Schwerin dl-de/by-2.0).
 Für ein Produkt außerdem: Adresssuche (Nominatim) und Kartenkacheln von OpenStreetMap haben Nutzungsrichtlinien gegen
-starke Nutzung – eigener Dienst oder Anbieter nötig.
+starke Nutzung; eigener Dienst oder Anbieter nötig.

@@ -28,10 +28,10 @@ export interface RegelwerkMeta {
 }
 
 const GESETZE = { de: "Bundesrecht", en: "Federal law" };
-const MUSTER = { de: "Muster – kein geltendes Recht", en: "Model code – not law in force" };
-const VOB = { de: "VOB – Vergabe- und Vertragsordnung", en: "VOB – award and contract rules" };
+const MUSTER = { de: "Muster, kein geltendes Recht", en: "Model code, not law in force" };
+const VOB = { de: "VOB (Vergabe- und Vertragsordnung)", en: "VOB (award and contract rules)" };
 
-const AMTLICH = { de: "amtlicher Wortlaut, unverändert übernommen", en: "official German wording, reproduced unchanged – only the German text is legally binding" };
+const AMTLICH = { de: "amtlicher Wortlaut, unverändert übernommen", en: "official German wording, reproduced unchanged; only the German text is legally binding" };
 
 export const REGELWERKE: Record<string, RegelwerkMeta> = {
   baugb: {
@@ -59,11 +59,11 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     reihenfolge: 51,
     art: "vergabe",
     gruppe: VOB,
-    kurztitel: { de: "Teil A – Vergabe", en: "Part A – Award of contracts" },
+    kurztitel: { de: "Teil A: Vergabe", en: "Part A: Award of contracts" },
     artText: { de: "Vergaberegeln", en: "Award rules" },
     hinweis: {
-      de: "Die VOB/A ist kein Gesetz. Öffentliche Auftraggeber wenden sie an, weil Haushalts- und Vergaberecht darauf verweisen: Abschnitt 1 unterhalb der EU-Schwellenwerte, Abschnitt 2 (EU) ab den Schwellenwerten über § 2 VgV, Abschnitt 3 (VS) für Verteidigung und Sicherheit über die VSVgV. Länder und Kommunen können eigene Wertgrenzen festlegen – in Niedersachsen gilt zusätzlich das NTVergG.",
-      en: "The VOB/A is not an act of parliament. Public clients apply it because budget and procurement law refer to it: Section 1 below the EU thresholds, Section 2 (EU) above them via § 2 VgV, Section 3 (VS) for defence and security via the VSVgV. States and municipalities may set their own value limits – Lower Saxony also has the NTVergG.",
+      de: "Die VOB/A ist kein Gesetz. Öffentliche Auftraggeber wenden sie an, weil Haushalts- und Vergaberecht darauf verweisen: Abschnitt 1 unterhalb der EU-Schwellenwerte, Abschnitt 2 (EU) ab den Schwellenwerten über § 2 VgV, Abschnitt 3 (VS) für Verteidigung und Sicherheit über die VSVgV. Länder und Kommunen können eigene Wertgrenzen festlegen. In Niedersachsen gilt zusätzlich das NTVergG.",
+      en: "The VOB/A is not an act of parliament. Public clients apply it because budget and procurement law refer to it: Section 1 below the EU thresholds, Section 2 (EU) above them via § 2 VgV, Section 3 (VS) for defence and security via the VSVgV. States and municipalities may set their own value limits. Lower Saxony also has the NTVergG.",
     },
     wortlaut: {
       de: "Wortlaut nach den Bekanntmachungen im Bundesanzeiger, unverändert übernommen (§ 3a: Änderungen von 2025 eingearbeitet)",
@@ -74,7 +74,7 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     reihenfolge: 52,
     art: "vertrag",
     gruppe: VOB,
-    kurztitel: { de: "Teil B – Vertragsbedingungen", en: "Part B – Contract terms" },
+    kurztitel: { de: "Teil B: Vertragsbedingungen", en: "Part B: Contract terms" },
     artText: { de: "Vertragsbedingungen", en: "Contract terms" },
     hinweis: {
       de: "Die VOB/B ist kein Gesetz, sondern Allgemeine Geschäftsbedingungen für Bauverträge. Sie gilt nur, wenn sie wirksam in den Vertrag einbezogen ist; daneben gilt das Bauvertragsrecht des BGB (§§ 650a ff. BGB).",
@@ -89,13 +89,13 @@ export const REGELWERKE: Record<string, RegelwerkMeta> = {
     reihenfolge: 53,
     art: "technik",
     gruppe: VOB,
-    kurztitel: { de: "Teil C – ATV (DIN-Normen)", en: "Part C – ATV (DIN standards)" },
+    kurztitel: { de: "Teil C: ATV (DIN-Normen)", en: "Part C: ATV (DIN standards)" },
     artText: { de: "Technische Vertragsbedingungen", en: "Technical contract terms" },
     hinweis: {
-      de: "Die VOB/C besteht aus den Allgemeinen Technischen Vertragsbedingungen (ATV). Sie erscheinen als DIN-Normen und sind urheberrechtlich geschützt – die App zeigt deshalb nur Nummer und Titel, den Wortlaut gibt es bei DIN Media. Ist die VOB/B vereinbart, gehört die VOB/C zum Vertrag (§ 1 Abs. 1 Satz 2 VOB/B).",
-      en: "The VOB/C consists of the general technical contract terms (ATV). They are published as DIN standards and protected by copyright – so the app only lists number and title; the wording is available from DIN Media. Where the VOB/B is agreed, the VOB/C is part of the contract (§ 1(1) sentence 2 VOB/B).",
+      de: "Die VOB/C besteht aus den Allgemeinen Technischen Vertragsbedingungen (ATV). Sie erscheinen als DIN-Normen und sind urheberrechtlich geschützt. Die App zeigt deshalb nur Nummer und Titel, den Wortlaut gibt es bei DIN Media. Ist die VOB/B vereinbart, gehört die VOB/C zum Vertrag (§ 1 Abs. 1 Satz 2 VOB/B).",
+      en: "The VOB/C consists of the general technical contract terms (ATV). They are published as DIN standards and protected by copyright, so the app only lists number and title; the wording is available from DIN Media. Where the VOB/B is agreed, the VOB/C is part of the contract (§ 1(1) sentence 2 VOB/B).",
     },
-    wortlaut: { de: "nur Verzeichnis – kein Wortlaut", en: "index only – no wording" },
+    wortlaut: { de: "nur Verzeichnis, kein Wortlaut", en: "index only, no wording" },
     nurVerzeichnis: true,
   },
 };
@@ -106,8 +106,8 @@ const UNBEKANNT: RegelwerkMeta = { reihenfolge: 99, art: "gesetz", artText: { de
 for (const [i, l] of LAENDER.entries()) {
   const gemeinsam = {
     art: "gesetz" as const,
-    artText: { de: `Landesgesetz ${l.name}`, en: `State act – ${l.name}` },
-    gruppe: { de: `Landesrecht ${l.name}`, en: `State law – ${l.name}` },
+    artText: { de: `Landesgesetz ${l.name}`, en: `State act, ${l.name}` },
+    gruppe: { de: `Landesrecht ${l.name}`, en: `State law: ${l.name}` },
     wortlaut: AMTLICH,
     land: l.name,
   };

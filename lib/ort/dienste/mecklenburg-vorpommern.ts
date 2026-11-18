@@ -17,15 +17,15 @@ const IN_KRAFT = new Set(["4000", "4500"]);
 
 export const mvBplan: BplanDienst = {
   id: "mv-bplan",
-  quelle: "Land Mecklenburg-Vorpommern, Ministerium für Inneres und Bau – Bauleitpläne in MV (dl-de/by-2.0)",
+  quelle: "Land Mecklenburg-Vorpommern, Ministerium für Inneres und Bau: Bauleitpläne in MV (dl-de/by-2.0)",
   viewer: "https://www.bauportal-mv.de/",
   gebiet: { land: "Mecklenburg-Vorpommern" },
   // Metadaten (b541de72-470c-45a8-95a4-b6c506e8271f): "Die Daten erheben keinen Anspruch auf Vollständigkeit und Aktualität."
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Landesweite Sammlung aus dem Bau- und Planungsportal M-V – laut Land ohne Anspruch auf Vollständigkeit und Aktualität.",
-    en: "State-wide collection from the building and planning portal M-V – according to the state without claim to completeness or currency.",
+    de: "Landesweite Sammlung aus dem Bau- und Planungsportal M-V, laut Land ohne Anspruch auf Vollständigkeit und Aktualität.",
+    en: "State-wide collection from the building and planning portal M-V, according to the state without claim to completeness or currency.",
   },
   async abfrage(lat, lon, sprache) {
     const t = zweisprachig(sprache);
@@ -71,7 +71,7 @@ const HRO_WFS = "https://geo.sv.rostock.de/geodienste/baudenkmale_denkmalbereich
 
 export const rostockDenkmal: DenkmalDienst = {
   id: "mv-rostock-denkmal",
-  quelle: "Hanse- und Universitätsstadt Rostock – Baudenkmale und Denkmalbereiche (Open Data, CC0)",
+  quelle: "Hanse- und Universitätsstadt Rostock: Baudenkmale und Denkmalbereiche (Open Data, CC0)",
   viewer: "https://www.opendata-hro.de/dataset/baudenkmale_denkmalbereiche",
   gebiet: { land: "Mecklenburg-Vorpommern", gemeinde: "Rostock" },
   // Metadaten (f6fe6624-e5a0-4934-b06a-48466999fd47) ohne Aussage zur Vollständigkeit; Bodendenkmale nicht enthalten.
@@ -128,7 +128,7 @@ const SN_WFS = "https://geoportal.kreis-lup.de/ows/masterportal/denkmalschutz-sn
 
 export const schwerinDenkmal: DenkmalDienst = {
   id: "mv-schwerin-denkmal",
-  quelle: "Landeshauptstadt Schwerin – Denkmalschutz (Geoportal Landkreis Ludwigslust-Parchim, dl-de/by-2.0)",
+  quelle: "Landeshauptstadt Schwerin: Denkmalschutz (Geoportal Landkreis Ludwigslust-Parchim, dl-de/by-2.0)",
   gebiet: { land: "Mecklenburg-Vorpommern", gemeinde: "Schwerin" },
   // Metadaten (f60b25dd-e0e8-4040-88a6-0f455b4d7f9e) ohne Aussage zur Vollständigkeit; Baudenkmale nur als Punkte.
   vollstaendig: false,
@@ -177,7 +177,7 @@ const LROS_WFS = "https://geoportal.lkros.de/dienste/baudenkmale";
 
 export const landkreisRostockDenkmal: DenkmalDienst = {
   id: "mv-lkros-denkmal",
-  quelle: "Landkreis Rostock – Baudenkmale und Denkmalensembles (© Landkreis Rostock, dl-de/by-2.0)",
+  quelle: "Landkreis Rostock: Baudenkmale und Denkmalensembles (© Landkreis Rostock, dl-de/by-2.0)",
   viewer: "https://geoportal.lkros.de/",
   gebiet: { land: "Mecklenburg-Vorpommern", kreis: "Landkreis Rostock" },
   // Capabilities ohne Aussage zur Vollständigkeit; Bodendenkmale nicht enthalten.
@@ -239,15 +239,15 @@ const VR_OWS = "https://geodienste.lk-vr.de/ows/denkmale";
 
 export const vorpommernRuegenDenkmal: DenkmalDienst = {
   id: "mv-vr-denkmal",
-  quelle: "Landkreis Vorpommern-Rügen – Baudenkmale und Denkmalbereiche (dl-de/by-2.0)",
+  quelle: "Landkreis Vorpommern-Rügen: Baudenkmale und Denkmalbereiche (dl-de/by-2.0)",
   viewer: "https://geoport.lk-vr.de/geoport/",
   gebiet: { land: "Mecklenburg-Vorpommern", kreis: "Vorpommern-Rügen" },
   // Metadaten ohne Aussage zur Vollständigkeit; Stralsund fehlt, Bodendenkmale nicht enthalten.
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Baudenkmale (Gebäudeflächen, nur Bezeichnung ohne Anschrift) und Denkmalbereiche des Landkreises Vorpommern-Rügen – ohne die Hansestadt Stralsund; keine Aussage zur Vollständigkeit, keine Bodendenkmale.",
-    en: "Listed buildings (building footprints, name only without address) and conservation areas of the district of Vorpommern-Rügen – without the Hanseatic City of Stralsund; no statement on completeness, no archaeological monuments.",
+    de: "Baudenkmale (Gebäudeflächen, nur Bezeichnung ohne Anschrift) und Denkmalbereiche des Landkreises Vorpommern-Rügen ohne die Hansestadt Stralsund; keine Aussage zur Vollständigkeit, keine Bodendenkmale.",
+    en: "Listed buildings (building footprints, name only without address) and conservation areas of the district of Vorpommern-Rügen, excluding the Hanseatic City of Stralsund; no statement on completeness, no archaeological monuments.",
   },
   async abfrage(lat, lon, radiusM, sprache) {
     const t = zweisprachig(sprache);
@@ -294,7 +294,7 @@ const LUP_WFS = "https://geoportal.kreis-lup.de/ows/masterportal/denkmalpflege-l
 
 export const ludwigslustParchimDenkmal: DenkmalDienst = {
   id: "mv-lup-denkmal",
-  quelle: "Landkreis Ludwigslust-Parchim – Denkmalpflege, Baudenkmale (Quellenvermerk: Landkreis Ludwigslust-Parchim, dl-de/by-2.0)",
+  quelle: "Landkreis Ludwigslust-Parchim: Denkmalpflege, Baudenkmale (Quellenvermerk: Landkreis Ludwigslust-Parchim, dl-de/by-2.0)",
   viewer: "https://geoportal.kreis-lup.de/",
   gebiet: { land: "Mecklenburg-Vorpommern", kreis: "Ludwigslust-Parchim" },
   // Metadaten ohne Aussage zur Vollständigkeit; keine Bodendenkmale, keine Denkmalbereiche.
@@ -337,14 +337,14 @@ const MSE_FELDER = "msGeometry,schluessel,typ,ort,strasse,obj,bemerk,internet";
 
 export const seenplatteDenkmal: DenkmalDienst = {
   id: "mv-mse-denkmal",
-  quelle: "Landkreis Mecklenburgische Seenplatte – Baudenkmale (CC BY 4.0)",
+  quelle: "Landkreis Mecklenburgische Seenplatte: Baudenkmale (CC BY 4.0)",
   viewer: "https://geoport-lk-mse.de/geoportal/",
   gebiet: { land: "Mecklenburg-Vorpommern", kreis: "Mecklenburgische Seenplatte" },
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Einzeldenkmale und Denkmalbereiche des Landkreises Mecklenburgische Seenplatte – ohne die Stadt Neubrandenburg (eigene Denkmalliste der Stadt); laut Landkreis ohne Gewähr für Vollständigkeit und Aktualität, keine Bodendenkmale.",
-    en: "Individual monuments and conservation areas of the district of Mecklenburgische Seenplatte – without the city of Neubrandenburg (separate list of the city); according to the district no guarantee of completeness or currency, no archaeological monuments.",
+    de: "Einzeldenkmale und Denkmalbereiche des Landkreises Mecklenburgische Seenplatte ohne die Stadt Neubrandenburg (eigene Denkmalliste der Stadt); laut Landkreis ohne Gewähr für Vollständigkeit und Aktualität, keine Bodendenkmale.",
+    en: "Individual monuments and conservation areas of the district of Mecklenburgische Seenplatte, excluding the city of Neubrandenburg (separate list of the city); according to the district no guarantee of completeness or currency, no archaeological monuments.",
   },
   async abfrage(lat, lon, radiusM, sprache) {
     const t = zweisprachig(sprache);

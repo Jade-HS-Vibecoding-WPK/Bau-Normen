@@ -2,10 +2,9 @@
 // Dienst: Nominatim / OpenStreetMap. Wir prüfen, ob Postleitzahl, Ort und Hausnummer wirklich passen,
 // und sagen es offen, wenn nur die Straße gefunden wurde.
 //
-// Suche:
-//  - mit Postleitzahl und/oder Ort: genau dort
-//  - ohne beides: zuerst in Oldenburg (Oldb), wo alle Datendienste angebunden sind, dann in ganz Deutschland.
-//    Passt die Straße in mehreren Orten, fragt die App nach, statt einen Ort zu raten.
+// Suche nur mit Postleitzahl und/oder Ort, genau dort. Fehlt beides, sucht die App nicht auf gut Glück, sondern bittet
+// darum, den Ort oder die Postleitzahl zu ergänzen. Passt ein Ortsname ohne Postleitzahl auf mehrere Orte (z. B. zwei
+// Städte gleichen Namens), fragt sie nach, statt einen Ort zu raten.
 import { fehlerText, holeJson } from "./abruf";
 import { type Sprache, zweisprachig } from "../sprache";
 
@@ -36,7 +35,7 @@ export interface Standort {
 
 export type StandortErgebnis =
   | Standort
-  | { status: "nicht-gefunden" | "fehler"; hinweis: string }
+  | { status: "nicht-gefunden" | "fehler" | "ort-fehlt"; hinweis: string }
   | { status: "mehrdeutig"; hinweis: string; kandidaten: { label: string; anfrage: string }[] };
 
 interface NominatimTreffer {
@@ -72,6 +71,15 @@ const vereinfacht = (s?: string) => (s ?? "").toLowerCase().replace(/\s+/g, "");
 const ortVon = (a: NominatimTreffer["address"]) => a.city ?? a.town ?? a.village ?? a.municipality ?? "";
 const istOldenburg = (a: NominatimTreffer["address"]) => ortVon(a) === "Oldenburg" && landVon(a) === "Niedersachsen";
 const ortsName = (a: NominatimTreffer["address"]) => (istOldenburg(a) ? "Oldenburg (Oldb)" : ortVon(a));
+const ortNorm = (s: string) => s.toLowerCase().replace(/ß/g, "ss").replace(/[^a-zäöü0-9]+/g, " ").trim();
+/** Passt der Gemeindename des Treffers zum eingegebenen Ort? ("Oldenburg" ~ "Oldenburg (Oldb)", "Neustadt" ~ "Neustadt an der Weinstraße") */
+function ortPasst(a: NominatimTreffer["address"], eingabe: string): boolean {
+  const e = ortNorm(eingabe);
+  return [a.city, a.town, a.village, a.municipality]
+    .filter((x): x is string => !!x)
+    .map(ortNorm)
+    .some((n) => n === e || n.startsWith(`${e} `) || e.startsWith(`${n} `));
+}
 
 async function suche(params: Record<string, string>): Promise<NominatimTreffer[]> {
   const p = new URLSearchParams({ format: "jsonv2", addressdetails: "1", countrycodes: "de", ...params });
@@ -111,15 +119,28 @@ export async function findeStandort(e: AdressEingabe, sprache: Sprache = "de"): 
   const ortEingabe = e.ort?.trim();
   const gesucht = [`${e.strasse} ${e.hausnummer}`, [plz, ortEingabe].filter(Boolean).join(" ")].filter(Boolean).join(", ");
 
+  if (!plz && !ortEingabe) {
+    const s = `${e.strasse} ${e.hausnummer}`;
+    return {
+      status: "ort-fehlt",
+      hinweis: t(
+        `Ohne Ort lässt sich „${s}“ nicht eindeutig finden. Schreiben Sie den Ort oder die Postleitzahl dazu, etwa „${s}, Musterstadt“ oder „${s}, 12345 Musterstadt“.`,
+        `Without a town, “${s}” cannot be found reliably. Please add the town or the postcode, for example “${s}, Sampletown” or “${s}, 12345 Sampletown”.`,
+      ),
+    };
+  }
+
   let treffer: NominatimTreffer[];
   try {
-    if (plz || ortEingabe) {
-      treffer = await suche({ street: strasse, limit: "10", ...(plz ? { postalcode: plz } : {}), ...(ortEingabe ? { city: ortEingabe } : {}) });
-      // Nominatim liefert manchmal Nachbarorte – mit Postleitzahl nur Treffer genau in dieser PLZ
-      if (plz) treffer = treffer.filter((x) => x.address.postcode === plz);
-    } else {
-      treffer = (await suche({ street: strasse, city: "Oldenburg", state: "Niedersachsen", limit: "5" })).filter((x) => istOldenburg(x.address));
-      if (!treffer.length) treffer = await suche({ street: strasse, limit: "20" });
+    treffer = await suche({ street: strasse, limit: "10", ...(plz ? { postalcode: plz } : {}), ...(ortEingabe ? { city: ortEingabe } : {}) });
+    // Nominatim liefert manchmal Nachbarorte: mit Postleitzahl nur Treffer genau in dieser PLZ
+    if (plz) treffer = treffer.filter((x) => x.address.postcode === plz);
+    // Mit Ortsname auch Treffer aus Stadtteilen oder Nachbargemeinden ("Neustadt" → Dresden-Neustadt, "Oldenburg" →
+    // Lindern (Oldenburg)). Bevorzugt werden Treffer, deren Gemeindename zum eingegebenen Ort passt; passt keiner
+    // (z. B. Stadtteil "Altona" eingegeben), bleiben alle.
+    if (ortEingabe) {
+      const passend = treffer.filter((x) => ortPasst(x.address, ortEingabe));
+      if (passend.length) treffer = passend;
     }
   } catch (err) {
     return { status: "fehler", hinweis: t(`Adresssuche nicht möglich: ${fehlerText(err, "de")}.`, `Address search not possible: ${fehlerText(err, "en")}.`) };
@@ -130,19 +151,20 @@ export async function findeStandort(e: AdressEingabe, sprache: Sprache = "de"): 
     return {
       status: "nicht-gefunden",
       hinweis: t(
-        `„${gesucht}“ wurde nicht gefunden. Bitte Straßennamen, Hausnummer${plz || ortEingabe ? " und Postleitzahl bzw. Ort" : ""} prüfen${plz || ortEingabe ? "" : " – mit Postleitzahl wird die Suche eindeutig"}.`,
-        `“${gesucht}” was not found. Please check the street name, house number${plz || ortEingabe ? " and postcode or town" : ""}${plz || ortEingabe ? "" : " – adding a postcode makes the search unambiguous"}.`,
+        `„${gesucht}“ wurde nicht gefunden. Bitte Straßennamen, Hausnummer und ${plz ? "Postleitzahl" : "Ort"} prüfen.`,
+        `“${gesucht}” was not found. Please check the street name, house number and ${plz ? "postcode" : "town"}.`,
       ),
     };
   }
 
-  // Ohne PLZ/Ort deutschlandweit gefunden: liegt die Straße in mehreren Orten, nachfragen
+  // Nur Ort angegeben, und der Name passt auf mehrere Orte (gleichnamige Städte, Kreis oder Land verschieden): nachfragen.
+  // Mehrere Postleitzahlen in derselben Stadt sind dagegen kein Grund für eine Rückfrage.
   const orte = new Map<string, NominatimTreffer>();
   for (const x of treffer) {
-    const k = `${x.address.postcode ?? ""}|${ortsName(x.address)}`;
+    const k = `${ortsName(x.address)}|${x.address.county ?? ""}|${landVon(x.address)}`;
     if (!orte.has(k)) orte.set(k, x);
   }
-  if (!plz && !ortEingabe && !treffer.every((x) => istOldenburg(x.address)) && orte.size > 1) {
+  if (!plz && orte.size > 1) {
     const kandidaten = [...orte.values()].slice(0, 8).map((x) => {
       const label = `${x.address.road ?? x.address.pedestrian} ${e.hausnummer}, ${x.address.postcode ?? ""} ${ortsName(x.address)}`.replace(/\s{2,}/g, " ");
       return { label: `${label} (${landVon(x.address) || "?"})`, anfrage: label };
@@ -150,8 +172,8 @@ export async function findeStandort(e: AdressEingabe, sprache: Sprache = "de"): 
     return {
       status: "mehrdeutig",
       hinweis: t(
-        `„${e.strasse} ${e.hausnummer}“ gibt es in mehreren Orten. Welche Adresse ist gemeint? (Tipp: mit Postleitzahl, z. B. „${kandidaten[0].anfrage}“)`,
-        `“${e.strasse} ${e.hausnummer}” exists in several places. Which address do you mean? (Tip: add the postcode, e.g. “${kandidaten[0].anfrage}”)`,
+        `„${e.strasse} ${e.hausnummer}, ${ortEingabe}“ passt auf mehrere Orte. Welche Adresse ist gemeint? (Tipp: mit Postleitzahl, etwa „${kandidaten[0].anfrage}“)`,
+        `“${e.strasse} ${e.hausnummer}, ${ortEingabe}” matches several places. Which address do you mean? (Tip: add the postcode, for example “${kandidaten[0].anfrage}”)`,
       ),
       kandidaten,
     };

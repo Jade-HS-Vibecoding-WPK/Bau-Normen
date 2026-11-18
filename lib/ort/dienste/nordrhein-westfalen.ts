@@ -18,7 +18,7 @@ const KEIN_BPLAN = new Set(["1100", "4000", "40000", "40001", "40002", "5000", "
 
 export const nrwBplan: BplanDienst = {
   id: "nw-bplan",
-  quelle: "Land NRW (IT.NRW / MHKBD) – Bauleitplanung in NRW, OGC API (dl-de/by-2.0)",
+  quelle: "Land NRW (IT.NRW / MHKBD): Bauleitplanung in NRW, OGC API (dl-de/by-2.0)",
   viewer: "https://www.bauleitplanung.nrw.de/",
   gebiet: { land: "Nordrhein-Westfalen" },
   // Metadaten: "Der Datenbestand befindet sich im Aufbau und ist … unvollständig, da eine Bereitstellung der kommunalen
@@ -45,7 +45,7 @@ export const nrwBplan: BplanDienst = {
         const art = wert(x["planart.title"]);
         treffer.push({
           nummer: wert(x.nr) ?? String(f.id ?? "?"),
-          name: [wert(x.officialTitle), wert(x.kommune)].filter(Boolean).join(" – "),
+          name: [wert(x.officialTitle), wert(x.kommune)].filter(Boolean).join(", "),
           rechtsverbindlichSeit: datumText(x.validFrom, sprache),
           vorhabenbezogen: ["3000", "3100"].includes(String(x["planart.code"] ?? "")),
           verfahren:
@@ -72,15 +72,15 @@ const NRW_AUSGENOMMEN = /^DE_0?5(315|913)000/;
 
 export const nrwDenkmal: DenkmalDienst = {
   id: "nw-denkmal",
-  quelle: "Land NRW (IT.NRW / MHKBD) – INSPIRE Denkmäler nach dem DSchG NRW (dl-de/zero-2.0)",
+  quelle: "Land NRW (IT.NRW / MHKBD): INSPIRE Denkmäler nach dem DSchG NRW (dl-de/zero-2.0)",
   gebiet: { land: "Nordrhein-Westfalen" },
   // Capabilities: "befindet sich zur Zeit noch im Aufbau und kann daher u.U. … unvollständig sein". Im Test ohne Daten:
   // Köln, Düsseldorf, Münster, Duisburg, Paderborn; Dortmund unbrauchbar (wird hier ausgefiltert).
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Landesweite Sammlung der kommunalen Denkmallisten im Aufbau – für viele Städte (z. B. Düsseldorf, Münster, Duisburg) noch ohne Daten.",
-    en: "State-wide collection of the municipal lists of monuments, still being built up – no data yet for many cities (e.g. Düsseldorf, Münster, Duisburg).",
+    de: "Landesweite Sammlung der kommunalen Denkmallisten im Aufbau; für viele Städte (z. B. Düsseldorf, Münster, Duisburg) noch ohne Daten.",
+    en: "State-wide collection of the municipal lists of monuments, still being built up; no data yet for many cities (e.g. Düsseldorf, Münster, Duisburg).",
   },
   async abfrage(lat, lon, radiusM, sprache) {
     const t = zweisprachig(sprache);
@@ -129,7 +129,7 @@ const KOELN_EBENEN: Record<string, [string, string]> = {
 
 export const koelnDenkmal: DenkmalDienst = {
   id: "nw-koeln-denkmal",
-  quelle: "Stadt Köln, Stadtkonservator*in – Denkmalliste Stadt Köln (WFS, dl-de/zero-2.0)",
+  quelle: "Stadt Köln, Stadtkonservator*in: Denkmalliste Stadt Köln (WFS, dl-de/zero-2.0)",
   viewer: "https://www.stadt-koeln.de/leben-in-koeln/planen-bauen/denkmalschutz/",
   gebiet: { land: "Nordrhein-Westfalen", gemeinde: "Köln" },
   // Open-Data-Beschreibung: "umfasst derzeit etwa 10.000 Positionen" – keine Aussage zur Vollständigkeit; nur Baudenkmäler.
@@ -182,7 +182,7 @@ interface OdsAntwort {
 
 export const dortmundDenkmal: DenkmalDienst = {
   id: "nw-dortmund-denkmal",
-  quelle: "Stadt Dortmund – Denkmale (Open Data, dl-de/zero-2.0)",
+  quelle: "Stadt Dortmund: Denkmale (Open Data, dl-de/zero-2.0)",
   viewer: "https://open-data.dortmund.de/explore/dataset/fb61-denkmale/",
   gebiet: { land: "Nordrhein-Westfalen", gemeinde: "Dortmund" },
   // Datensatzbeschreibung ohne Aussage zur Vollständigkeit; Denkmale als Adresspunkte.
@@ -229,7 +229,7 @@ export const dortmundDenkmal: DenkmalDienst = {
  *  "Bebauungspläne im Stadtgebiet Münster (rechtskräftig)": dl-de/by-2.0. BBOX nur in EPSG:25832 auswertbar. CORS "*". */
 export const muensterBplan = geojsonBplan({
   id: "nw-muenster-bplan",
-  quelle: "Stadt Münster – Bebauungspläne im Stadtgebiet (rechtskräftig) (WFS, dl-de/by-2.0)",
+  quelle: "Stadt Münster: Bebauungspläne im Stadtgebiet (rechtskräftig) (WFS, dl-de/by-2.0)",
   viewer: "https://geo.stadt-muenster.de/",
   gebiet: { land: "Nordrhein-Westfalen", gemeinde: "Münster" },
   vollstaendig: false,
@@ -261,7 +261,7 @@ export const muensterBplan = geojsonBplan({
 const DUISBURG_PLAN = /^(Bebauungsplan|Qualifizierter Bebauungsplan|Einfacher Bebauungsplan|Vorhaben- und Erschließungsplan|Vorhabenbezogener Bebauungsplan)/;
 export const duisburgBplan = arcgisBplan({
   id: "nw-duisburg-bplan",
-  quelle: "Stadt Duisburg – Bebauungspläne (Open Data, ArcGIS, CC BY 3.0 DE)",
+  quelle: "Stadt Duisburg: Bebauungspläne (Open Data, ArcGIS, CC BY 3.0 DE)",
   viewer: "https://geoportal.duisburg.de/",
   gebiet: { land: "Nordrhein-Westfalen", gemeinde: "Duisburg" },
   vollstaendig: false,

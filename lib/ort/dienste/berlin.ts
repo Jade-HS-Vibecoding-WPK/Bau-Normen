@@ -20,7 +20,7 @@ function filter(lat: number, lon: number, abstandM?: number): string {
 
 export const berlinBplan: BplanDienst = {
   id: "be-bplan",
-  quelle: "Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen Berlin – Bebauungsplanverfahren (festgesetzte Pläne, dl-de/zero-2.0)",
+  quelle: "Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen Berlin: Bebauungsplanverfahren (festgesetzte Pläne, dl-de/zero-2.0)",
   viewer: "https://gdi.berlin.de/viewer/main/",
   gebiet: { land: "Berlin" },
   // Abstract: "den Gesamtbestand aller Bebauungsplanverfahren in Berlin". Nicht enthalten ist aber der Baunutzungsplan
@@ -77,7 +77,7 @@ const ART_EN: Record<string, string> = {
 
 export const berlinDenkmal: DenkmalDienst = {
   id: "be-denkmal",
-  quelle: "Landesdenkmalamt Berlin – Denkmale (GDI Berlin, dl-de/zero-2.0)",
+  quelle: "Landesdenkmalamt Berlin: Denkmale (GDI Berlin, dl-de/zero-2.0)",
   viewer: "https://denkmaldatenbank.berlin.de/",
   gebiet: { land: "Berlin" },
   // Abstract: die "in der Denkmalliste Berlin aufgeführten Denkmalpositionen", nachrichtlicher Charakter; laut
@@ -85,8 +85,8 @@ export const berlinDenkmal: DenkmalDienst = {
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Kartierung der Denkmalliste Berlin (nachrichtlich); Ensemble-Bestandteile noch nicht vollständig erfasst. Der Dienst nennt nur Art und Nummer – Name und Beschreibung stehen in der Denkmaldatenbank (Link).",
-    en: "Mapping of the Berlin list of monuments (for information only); ensemble parts not yet fully mapped. The service only gives type and number – name and description are in the monument database (link).",
+    de: "Kartierung der Denkmalliste Berlin (nachrichtlich); Ensemble-Bestandteile noch nicht vollständig erfasst. Der Dienst nennt nur Art und Nummer; Name und Beschreibung stehen in der Denkmaldatenbank (Link).",
+    en: "Mapping of the Berlin list of monuments (for information only); ensemble parts not yet fully mapped. The service only gives type and number; name and description are in the monument database (link).",
   },
   async abfrage(lat, lon, radiusM, sprache) {
     const t = zweisprachig(sprache);

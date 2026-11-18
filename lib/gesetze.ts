@@ -107,6 +107,9 @@ function abgeleitet(g: Gesetz): Abgeleitet {
   return a;
 }
 
+/** Angaben zur Quelle und Titel ohne Gedankenstrich anzeigen ("Stelle – Portal" → "Stelle: Portal"); der Gesetzestext bleibt unberührt */
+const ohneStrich = (s: string) => s.replace(" – ", ": ").replace(/ – /g, ", ");
+
 function berechneInfo(g: Gesetz): GesetzInfo {
   const m = regelwerk(g.id);
   return {
@@ -121,10 +124,10 @@ function berechneInfo(g: Gesetz): GesetzInfo {
     ...(m.land ? { land: m.land } : {}),
     id: g.id,
     kurz: g.kurz,
-    titel: g.titel,
+    titel: ohneStrich(g.titel),
     ebene: g.ebene,
     stand: g.stand,
-    quelleName: g.quelle.name,
+    quelleName: ohneStrich(g.quelle.name),
     quelleUrl: g.quelle.url,
     anzahl: g.normen.filter((n) => !n.weggefallen).length,
   };

@@ -61,6 +61,11 @@ const FAELLE = [
   { frage: "Abstandsflächen", land: "Hessen", erwartet: [["treffer", "§ 6"]] },
   { frage: "§ 6 Bauordnung", land: "Hamburg", erwartet: [["norm", "§ 6", "hbauo"]] },
   { frage: "Abstandsflächen", land: "Hamburg", erwartet: [["treffer", "§ 6"]] },
+  // Anhang/Anlage (so verlinken auch die Chips der Ortsauskunft); "bauliche Anlage" bleibt ein Stichwort
+  { frage: "Anlage HBO", erwartet: [["norm", "Anlage", "hbo"]] },
+  { frage: "Anhang NBauO", erwartet: [["norm", "Anhang", "nbauo"]] },
+  { frage: "Anhang 1 LBO BW", erwartet: [["norm", "Anhang 1", "lbo-bw"]] },
+  { frage: "bauliche Anlage", erwartet: [["treffer"]] },
   { frage: "Abstandsflächen", land: "Nordrhein-Westfalen", erwartet: [["treffer", "§ 6"]] },
   { frage: "Baugenehmigung", land: "Brandenburg", erwartet: [["treffer", "§ 64"]] },
   { frage: "ATV DIN 18300", erwartet: [["norm", "DIN 18300", "vobc"]] },
@@ -84,10 +89,12 @@ const FAELLE = [
   { frage: "xyzqv", erwartet: [["fehler"]] },
 
   // Ortsauskunft (live)
-  { frage: "Kärntner Straße 10", erwartet: [["ort", "gefunden+dok/*"]] }, // B-Plan 117 II mit Planzeichnung als PDF
-  { frage: "Gartenstraße 5", erwartet: [["ort", "keiner/am-standort"]] },
-  { frage: "Ich habe ein Grundstück an der Gartenstraße 5, dort steht ein Denkmal", erwartet: [["ort", "keiner/am-standort"]] },
-  { frage: "Fantasiestraße 999", erwartet: [["ort", "standort-fehlt"]] },
+  { frage: "Kärntner Straße 10, Oldenburg", erwartet: [["ort", "gefunden+dok/*"]] }, // B-Plan 117 II mit Planzeichnung als PDF
+  { frage: "Gartenstraße 5", erwartet: [["ort", "standort-fehlt"]] }, // ohne Ort und PLZ: Bitte um Ergänzung, keine Suche auf gut Glück
+  { frage: "Gartenstraße 5, Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Ich habe ein Grundstück an der Gartenstraße 5 in Oldenburg, dort steht ein Denkmal", erwartet: [["ort", "keiner/am-standort"]] },
+  { frage: "Fantasiestraße 999, 26122 Oldenburg", erwartet: [["ort", "standort-fehlt"]] },
+  { frage: "Bahnhofstraße 1, Oldenburg", erwartet: [["ort", "*/*"]] }, // nur die Stadt Oldenburg, nicht Lindern (Oldenburg) oder Lohne
   // Adresse mitten im Satz: Satzteile vor dem Straßennamen gehören nicht zur Straße, "am" schon ("Am Markt")
   { frage: "Ich plane einen Anbau an der Gartenstraße 5 in Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Lohnt sich ein Umbau im Haus am Markt 1, 28195 Bremen?", erwartet: [["ort", "gefunden/am-standort"]] },
@@ -98,7 +105,7 @@ const FAELLE = [
   { frage: "Gartenstraße 5, 26122 Oldenburg", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Bahnhofstraße 1, 30159 Hannover", erwartet: [["ort", "fehler/*"]] },
   { frage: "Marienplatz 1, 80331 München", erwartet: [["ort", "keiner/am-standort"]] }, // Stadt München + BLfD; B-Plan-Dienst unvollständig -> "nicht verzeichnet"
-  { frage: "Königsallee 1", erwartet: [["auswahl"]] }, // gibt es in vielen Orten -> Rückfrage mit Postleitzahl
+  { frage: "Hauptstraße 1, Neustadt", erwartet: [["auswahl"]] }, // mehrere Orte namens Neustadt -> Rückfrage mit Postleitzahl
   // je Land eine Adresse (Dienste am 17.11.2026 geprüft); "*" wo ein Dienst zeitweise ausfällt oder sich der Bestand ändern kann
   { frage: "Schlossplatz 4, 70173 Stuttgart", erwartet: [["ort", "gefunden/am-standort"]] }, // BW: Raumordnungskataster + Stuttgart, LAD
   { frage: "Pariser Platz 1, 10117 Berlin", erwartet: [["ort", "gefunden/am-standort"]] },
@@ -108,7 +115,7 @@ const FAELLE = [
   { frage: "Rathausmarkt 1, 20095 Hamburg", erwartet: [["ort", "gefunden/am-standort"]] }, // B-Plan-Dienst vollständig, DSchG HH fehlt
   { frage: "Domplatz 1, 60311 Frankfurt am Main", erwartet: [["ort", "gefunden/am-standort"]] },
   { frage: "Neuer Markt 1, 18055 Rostock", erwartet: [["ort", "keiner/*"]] }, // Denkmal-Dienst Rostock fiel am 17.11. zeitweise aus
-  { frage: "Roncalliplatz 2, 50667 Köln", erwartet: [["ort", "gefunden/umgebung"]] }, // NRW: konstitutives System (§ 5 DSchG NRW)
+  { frage: "Roncalliplatz 2, 50667 Köln", erwartet: [["ort", "gefunden/*"]] }, // NRW: konstitutives System (§ 5 DSchG NRW); Denkmalstatus offen: Kölner Dienst seit 18.11. mit Zertifikatsfehler
   { frage: "Markt 10, 55116 Mainz", erwartet: [["ort", "keiner/am-standort"]] },
   { frage: "Neumarkt 1, 01067 Dresden", erwartet: [["ort", "keiner/umgebung"]] },
   { frage: "Domplatz 4, 39104 Magdeburg", erwartet: [["ort", "keiner/am-standort"]] },

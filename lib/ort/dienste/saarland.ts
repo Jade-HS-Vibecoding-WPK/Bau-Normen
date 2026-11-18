@@ -24,7 +24,7 @@ function bezeichnung(text: string, adresse?: string): string | undefined {
 
 export const saarlandDenkmal: DenkmalDienst = {
   id: "sl-denkmal",
-  quelle: "GDI-SL / Landesdenkmalamt Saarland – Denkmalschutz (© GDI-SL, CC BY 4.0)",
+  quelle: "GDI-SL / Landesdenkmalamt Saarland: Denkmalschutz (© GDI-SL, CC BY 4.0)",
   viewer: "https://geoportal.saarland.de/",
   gebiet: { land: "Saarland" },
   // Registry-Metadaten ohne Aussage zur Vollständigkeit; verweist auf die Denkmalliste vom 01.07.2022.

@@ -22,15 +22,15 @@ function nummerUndName(bez: string): [string, string] {
 
 export const brandenburgBplan: BplanDienst = {
   id: "bb-bplan",
-  quelle: "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg / LBV – rechtswirksame Bebauungspläne (PLIS, dl-de/by-2.0)",
+  quelle: "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg / LBV: rechtswirksame Bebauungspläne (PLIS, dl-de/by-2.0)",
   gebiet: { land: "Brandenburg" },
   // Metadaten (00e2a688-dadc-4043-acc9-502be162170f): Daten werden im Rahmen von Beteiligungen der Raumordnungsbehörde bzw.
   // durch zusätzliche Recherchen erfasst; "Weitere Auskünfte zu den Inhalten können nur die jeweiligen Kommunen erteilen."
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Landesweite Sammlung der Landesplanung (Erfassung über Beteiligungsverfahren) – nicht als vollständig ausgewiesen; ohne Planunterlagen. Verbindlich ist die Auskunft der Gemeinde.",
-    en: "State-wide collection by the regional planning authority (gathered through consultation procedures) – not declared complete; no plan documents. The municipality’s information is binding.",
+    de: "Landesweite Sammlung der Landesplanung (Erfassung über Beteiligungsverfahren), nicht als vollständig ausgewiesen, ohne Planunterlagen. Verbindlich ist die Auskunft der Gemeinde.",
+    en: "State-wide collection by the regional planning authority (gathered through consultation procedures), not declared complete, no plan documents. The municipality’s information is binding.",
   },
   async abfrage(lat, lon, sprache) {
     const p: Punkt = [lon, lat];
@@ -48,7 +48,7 @@ export const brandenburgBplan: BplanDienst = {
         const gemeinde = wert(x.gemname);
         treffer.push({
           nummer,
-          name: gemeinde && !name.includes(gemeinde) ? `${name}${name ? " – " : ""}${gemeinde}` : name,
+          name: gemeinde && !name.includes(gemeinde) ? `${name}${name ? ", " : ""}${gemeinde}` : name,
           // bp_dat_bek: Datum der Bekanntmachung
           rechtsverbindlichSeit: datumText(x.bp_dat_bek, sprache),
           vorhabenbezogen: /vorhabenbezogen/i.test(art ?? ""),
@@ -82,15 +82,15 @@ const ohneTrennung = (s: string | undefined) => s?.replace(/­/g, "");
 
 export const frankfurtOderDenkmal: DenkmalDienst = {
   id: "bb-frankfurt-oder-denkmal",
-  quelle: "Stadt Frankfurt (Oder) – Denkmäler (© GeoDaten-KVA / Stadt Frankfurt (Oder), dl-de/by-2.0)",
+  quelle: "Stadt Frankfurt (Oder): Denkmäler (© GeoDaten-KVA / Stadt Frankfurt (Oder), dl-de/by-2.0)",
   viewer: "https://geoportal.frankfurt-oder.de/Geoportal/",
   gebiet: { land: "Brandenburg", gemeinde: "Frankfurt (Oder)" },
   // Capabilities ohne Aussage zur Vollständigkeit; maßgeblich ist die Denkmalliste des Landes (BLDAM).
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Denkmale der Stadt Frankfurt (Oder) (Kataster- und Vermessungsamt); keine Aussage zur Vollständigkeit – maßgeblich ist die Denkmalliste des Landes. Der Dienst liefert keine Umrisse: Entfernungen nur grob in Stufen (am Standort, bis etwa 10, 25 bzw. 50 m).",
-    en: "Monuments of the City of Frankfurt (Oder) (land surveying office); no statement on completeness – the state list of monuments is authoritative. The service gives no outlines: distances only roughly in steps (at the location, up to about 10, 25 or 50 m).",
+    de: "Denkmale der Stadt Frankfurt (Oder) (Kataster- und Vermessungsamt); keine Aussage zur Vollständigkeit, maßgeblich ist die Denkmalliste des Landes. Der Dienst liefert keine Umrisse: Entfernungen nur grob in Stufen (am Standort, bis etwa 10, 25 bzw. 50 m).",
+    en: "Monuments of the City of Frankfurt (Oder) (land surveying office); no statement on completeness, the state list of monuments is authoritative. The service gives no outlines: distances only roughly in steps (at the location, up to about 10, 25 or 50 m).",
   },
   async abfrage(lat, lon, radiusM, sprache) {
     const t = zweisprachig(sprache);

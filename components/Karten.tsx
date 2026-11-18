@@ -75,7 +75,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
   const abschnitt = norm.gliederung.at(-1)?.split(" – ")[1];
 
   async function kopieren() {
-    const text = `${norm.bez} ${gesetz.kurz} – ${norm.titel}\n\n${alsText(norm.inhalt)}\n\nQuelle: ${gesetz.quelleName}, ${norm.url}\nStand: ${gesetz.stand}`;
+    const text = `${norm.bez} ${gesetz.kurz}: ${norm.titel}\n\n${alsText(norm.inhalt)}\n\nQuelle: ${gesetz.quelleName}, ${norm.url}\nStand: ${gesetz.stand}`;
     try {
       await navigator.clipboard.writeText(text);
       setKopiert(true);
@@ -100,7 +100,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
         <dl className="sf-felder">
           <div title={norm.gliederung.join(" › ")}>
             <dt>{t("Abschnitt", "Part")}</dt>
-            <dd lang="de">{abschnitt ?? "–"}</dd>
+            <dd lang="de">{abschnitt ?? t("ohne Abschnitt", "none")}</dd>
           </div>
           <div title={gesetz.stand}>
             <dt>{t("Stand", "Version")}</dt>
@@ -158,7 +158,7 @@ export function NormKarte({ a, frage, obsidianPfad, kartenId }: { a: NormAnsicht
         <TeilKopf
           nr="02"
           titel={t("Erläuterung", "Explanation")}
-          zusatz={t("Orientierung, keine Rechtsberatung – maßgeblich ist der Originaltext", "guidance only, not legal advice – the original text prevails")}
+          zusatz={t("Orientierung, keine Rechtsberatung. Maßgeblich ist der Originaltext.", "Guidance only, not legal advice. The original text prevails.")}
           warn
         />
         {e.sprache === "en" && erlaeuterung && <p className="nur-deutsch">Explanations are currently available in German only.</p>}
@@ -254,12 +254,23 @@ function statusAnzeige(t: T, o: OrtAnsicht) {
 /** Hinweis zur Abdeckung der Dienste (klein unter der Quelle, aufklappbar – bei mehreren Diensten wird er lang) */
 function Abdeckung({ x }: { x: OrtAnsicht["bplan"] | OrtAnsicht["denkmal"] }) {
   const t = useT();
-  if (x.status === "fehler" || !x.abdeckung) return null;
+  if (x.status === "fehler") return null;
   return (
-    <details className="kachel-abdeckung">
-      <summary>{t("Abdeckung des Dienstes", "Service coverage")}</summary>
-      <span lang="de">{x.abdeckung}</span>
-    </details>
+    <>
+      {/* Teilausfall: ein Dienst hat nicht geantwortet, das Ergebnis ist deshalb unvollständig */}
+      {!!x.ausgefallen?.length && (
+        <p className="kachel-ausfall" role="note">
+          {t("Nicht erreichbar, deshalb fehlen dessen Einträge: ", "Not reachable, so its entries are missing: ")}
+          <span lang="de">{x.ausgefallen.join(", ")}</span>
+        </p>
+      )}
+      {x.abdeckung && (
+        <details className="kachel-abdeckung">
+          <summary>{t("Abdeckung des Dienstes", "Service coverage")}</summary>
+          <span lang="de">{x.abdeckung}</span>
+        </details>
+      )}
+    </>
   );
 }
 
@@ -271,15 +282,17 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
   const [alleDenkmale, setAlleDenkmale] = useState(false);
 
   if (o.standort.status !== "ok") {
+    // fehlender Ort ist kein Fehler, sondern eine Bitte um Ergänzung (Hinweis statt Fehlermeldung)
+    const nurOrtFehlt = o.standort.status === "ort-fehlt";
     return (
-      <div className="meldung meldung-fehler">
+      <div className={nurOrtFehlt ? "meldung meldung-hinweis" : "meldung meldung-fehler"}>
         <p>
-          <strong>{t("Ortsauskunft nicht möglich.", "Location check not possible.")}</strong> {o.standort.hinweis}
+          <strong>{nurOrtFehlt ? t("Bitte Ort ergänzen.", "Please add the town.") : t("Ortsauskunft nicht möglich.", "Location check not possible.")}</strong> {o.standort.hinweis}
         </p>
         <p>
           {t(
-            "Die Ortsauskunft findet Adressen in ganz Deutschland – mit Postleitzahl wird die Suche eindeutig. Bebauungspläne und Denkmale kommen aus den amtlichen Diensten der Länder und Städte, soweit sie offen abrufbar sind.",
-            "The location check finds addresses anywhere in Germany – adding a postcode makes the search unambiguous. Development plans and monuments come from the official services of the states and cities, where openly accessible.",
+            "Die Ortsauskunft findet Adressen in ganz Deutschland. Sie braucht dafür Straße, Hausnummer und den Ort oder die Postleitzahl. Bebauungspläne und Denkmale kommen aus den amtlichen Diensten der Länder und Städte, soweit sie offen abrufbar sind.",
+            "The location check finds addresses anywhere in Germany. It needs the street, the house number and the town or postcode. Development plans and monuments come from the official services of the states and cities, where openly accessible.",
           )}
         </p>
       </div>
@@ -345,7 +358,7 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
           {o.bplan.status === "keiner" && (
             <p className="kachel-wert">
               {nurNichtVerzeichnet(o.bplan)
-                ? t("Kein Bebauungsplan verzeichnet – der Dienst enthält nicht nachweislich alle Pläne", "No development plan listed – the service is not proven to contain every plan")
+                ? t("Kein Bebauungsplan verzeichnet. Der Dienst enthält nicht nachweislich alle Pläne.", "No development plan listed. The service is not proven to contain every plan.")
                 : t("Kein rechtsverbindlicher Bebauungsplan", "No legally binding development plan")}
             </p>
           )}
@@ -353,7 +366,7 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             o.bplan.plaene.map((p, i) => (
               <div key={`${p.nummer}|${p.name}|${i}`} className="plan">
                 <p className="kachel-wert">
-                  {p.nummer ? `Nr. ${p.nummer} – ` : ""}
+                  {p.nummer ? `Nr. ${p.nummer}: ` : ""}
                   <span lang="de">{p.name}</span>
                 </p>
                 <p className="kachel-sub">
@@ -391,8 +404,8 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
                 ) : (
                   <p className="kachel-sub">
                     {o.bplan.status === "gefunden" && !o.bplan.dokumenteAbrufbar
-                      ? t("Plan-Dokumente derzeit nicht abrufbar – bitte im Kartenportal öffnen.", "Plan documents currently not retrievable – please open them in the map portal.")
-                      : t("Plan-Dokumente sind nicht im Dienst enthalten – erhältlich bei der Gemeinde (Geoportal oder Stadtplanungsamt).", "Plan documents are not included in the service – available from the municipality (geoportal or planning office).")}
+                      ? t("Plan-Dokumente derzeit nicht abrufbar. Bitte im Kartenportal öffnen.", "Plan documents currently not retrievable. Please open them in the map portal.")
+                      : t("Plan-Dokumente sind nicht im Dienst enthalten. Erhältlich sind sie bei der Gemeinde (Geoportal oder Stadtplanungsamt).", "Plan documents are not included in the service. They are available from the municipality (geoportal or planning office).")}
                   </p>
                 )}
               </div>
@@ -408,7 +421,7 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
                         ? t("Veränderungssperre", "development freeze")
                         : t("unwirksam (OVG)", "invalid (court)")}
                   </span>{" "}
-                  {[w.nummer && `Nr. ${w.nummer}`, w.name, w.hinweis && `(${w.hinweis})`].filter(Boolean).join(" – ")}
+                  {[w.nummer && `Nr. ${w.nummer}`, w.name, w.hinweis && `(${w.hinweis})`].filter(Boolean).join(", ")}
                 </li>
               ))}
             </ul>
@@ -429,8 +442,8 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
             <p className="kachel-wert">
               {nurNichtVerzeichnet(o.denkmal)
                 ? t(
-                    `Im Umkreis von ${o.denkmal.radiusM} m kein Kulturdenkmal verzeichnet – der Dienst enthält nicht nachweislich alle Denkmale`,
-                    `No cultural monument listed within ${o.denkmal.radiusM} m – the service is not proven to contain every monument`,
+                    `Im Umkreis von ${o.denkmal.radiusM} m kein Kulturdenkmal verzeichnet. Der Dienst enthält nicht nachweislich alle Denkmale.`,
+                    `No cultural monument listed within ${o.denkmal.radiusM} m. The service is not proven to contain every monument.`,
                   )
                 : t(`Kein Kulturdenkmal im Umkreis von ${o.denkmal.radiusM} m verzeichnet`, `No cultural monument recorded within ${o.denkmal.radiusM} m`)}
             </p>
@@ -543,13 +556,13 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
 
   const bText =
     o.bplan.status === "gefunden" && plan
-      ? `${plan.nummer ? `Nr. ${plan.nummer} – ` : ""}${plan.name}${o.bplan.plaene.length > 1 ? ` (+${o.bplan.plaene.length - 1})` : ""}`
+      ? `${plan.nummer ? `Nr. ${plan.nummer}: ` : ""}${plan.name}${o.bplan.plaene.length > 1 ? ` (+${o.bplan.plaene.length - 1})` : ""}`
       : nurNichtVerzeichnet(o.bplan)
-        ? t("kein Plan verzeichnet, Dienst unvollständig – § 30/34/35 BauGB", "no plan listed, service incomplete – § 30/34/35 BauGB")
+        ? t("kein Plan verzeichnet, Dienst unvollständig (§ 30/34/35 BauGB)", "no plan listed, service incomplete (§ 30/34/35 BauGB)")
         : o.bplan.status === "keiner"
-          ? t("kein rechtsverbindlicher Plan – § 34/35 BauGB", "no binding plan – § 34/35 BauGB")
+          ? t("kein rechtsverbindlicher Plan (§ 34/35 BauGB)", "no binding plan (§ 34/35 BauGB)")
           : o.bplan.status === "fehler" && o.bplan.nichtAngebunden
-          ? t("für diesen Ort nicht angebunden – § 30/34/35 BauGB", "not connected for this place – § 30/34/35 BauGB")
+          ? t("für diesen Ort nicht angebunden (§ 30/34/35 BauGB)", "not connected for this place (§ 30/34/35 BauGB)")
           : t("Dienst nicht erreichbar", "service unreachable");
   const dText =
     o.denkmal.status === "fehler"
@@ -561,6 +574,11 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
         : nurNichtVerzeichnet(o.denkmal)
           ? t(`im Umkreis von ${o.denkmal.radiusM} m nicht verzeichnet, Dienst unvollständig`, `none listed within ${o.denkmal.radiusM} m, service incomplete`)
           : t(`keins im Umkreis von ${o.denkmal.radiusM} m`, `none within ${o.denkmal.radiusM} m`);
+  // Teilausfall in der Leiste kurz nennen (die Kachel nennt den Dienst beim Namen)
+  const teilausfall = (x: OrtAnsicht["bplan"] | OrtAnsicht["denkmal"]) =>
+    x.status !== "fehler" && x.ausgefallen?.length ? t(`; ${x.ausgefallen.length === 1 ? "ein Dienst" : `${x.ausgefallen.length} Dienste`} nicht erreichbar`, `; ${x.ausgefallen.length === 1 ? "one service" : `${x.ausgefallen.length} services`} unreachable`) : "";
+  const bZeile = bText + teilausfall(o.bplan);
+  const dZeile = dText + teilausfall(o.denkmal);
 
   return (
     <section className="gebiet" aria-label={t("Hauptinformationen zum Gebiet", "Key facts about the area")}>
@@ -578,7 +596,7 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
           <SymbolPlan /> {t("B-Plan", "Dev. plan")} <span className={`status ${bKlasse}`}>{bLabel}</span>
         </span>
         <span className="gebiet-wert" lang="de">
-          {bText}
+          {bZeile}
           {planLink && (
             <>
               {" · "}
@@ -594,7 +612,7 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
           <SymbolDenkmal /> {t("Denkmal", "Monument")} <span className={`status ${dKlasse}`}>{dLabel}</span>
         </span>
         <span className="gebiet-wert" lang="de">
-          {dText}
+          {dZeile}
         </span>
       </div>
       <div className="gebiet-aktionen">

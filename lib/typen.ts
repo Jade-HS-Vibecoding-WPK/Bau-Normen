@@ -106,7 +106,7 @@ export interface OrtAnsicht {
         /** Stadt Oldenburg (Oldb): dort sind die B-Plan-Dienste angebunden */
         oldenburg: boolean;
       }
-    | { status: "nicht-gefunden" | "fehler"; hinweis: string };
+    | { status: "nicht-gefunden" | "fehler" | "ort-fehlt"; hinweis: string };
   bplan:
     | {
         status: "gefunden" | "keiner";
@@ -131,6 +131,8 @@ export interface OrtAnsicht {
         /** ein vollständiger Dienst hat geantwortet – nur dann heißt "keiner" wirklich "kein Plan" */
         vollstaendig?: boolean;
         abdeckung?: string;
+        /** Dienste, die nicht geantwortet haben, obwohl andere geantwortet haben (Teilausfall) */
+        ausgefallen?: string[];
       }
     | { status: "fehler"; hinweis: string; quelle: string; /** Für diesen Ort ist (noch) kein Dienst angebunden */ nichtAngebunden?: boolean };
   denkmal:
@@ -154,6 +156,8 @@ export interface OrtAnsicht {
         /** ein vollständiger Dienst hat geantwortet – nur dann heißt "keiner" wirklich "kein Denkmal" */
         vollstaendig?: boolean;
         abdeckung?: string;
+        /** Dienste, die nicht geantwortet haben, obwohl andere geantwortet haben (Teilausfall) */
+        ausgefallen?: string[];
       }
     | { status: "fehler"; hinweis: string; quelle: string; /** Für diesen Ort ist (noch) kein Dienst angebunden */ nichtAngebunden?: boolean };
   nutzerNenntDenkmal: boolean;

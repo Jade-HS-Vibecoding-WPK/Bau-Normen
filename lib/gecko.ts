@@ -50,26 +50,28 @@ export function geckoProbleme(antworten: Antwort[], sprache: Sprache = "de"): Ge
         liste.push({ stufe: "fehler", text: a.text });
         break;
       case "auswahl":
-        liste.push({ stufe: "warnung", text: t("Paragraphennummer nicht eindeutig – bitte das Gesetz auswählen.", "Section number is ambiguous – please choose the act.") });
+        liste.push({ stufe: "warnung", text: t("Paragraphennummer nicht eindeutig. Bitte das Gesetz auswählen.", "Section number is ambiguous. Please choose the act.") });
         break;
       case "treffer":
-        if (!a.treffer.some((t) => t.ausVerzeichnis)) liste.push({ stufe: "warnung", text: t("Kein Stichwort aus dem Verzeichnis erkannt – die Treffer stammen aus der Volltextsuche.", "No index term recognised – the results come from the full-text search.") });
+        if (!a.treffer.some((t) => t.ausVerzeichnis)) liste.push({ stufe: "warnung", text: t("Kein Stichwort aus dem Verzeichnis erkannt. Die Treffer stammen aus der Volltextsuche.", "No index term recognised. The results come from the full-text search.") });
         break;
       case "ort": {
         const o = a.ort;
         if (o.standort.status !== "ok") {
-          liste.push({ stufe: "fehler", text: o.standort.hinweis });
+          liste.push({ stufe: o.standort.status === "ort-fehlt" ? "warnung" : "fehler", text: o.standort.hinweis });
           break;
         }
-        if (!o.standort.hausnummerGefunden) liste.push({ stufe: "warnung", text: t("Hausnummer nicht gefunden – die Abfrage nutzt einen Punkt auf der Straße.", "House number not found – the query uses a point on the street.") });
+        if (!o.standort.hausnummerGefunden) liste.push({ stufe: "warnung", text: t("Hausnummer nicht gefunden. Die Abfrage nutzt einen Punkt auf der Straße.", "House number not found. The query uses a point on the street.") });
         // "nicht angebunden" ist kein Fehler, sondern ein Hinweis (orange); ein ausgefallener Dienst ist ein Fehler (rot)
         if (o.bplan.status === "fehler") liste.push({ stufe: o.bplan.nichtAngebunden ? "warnung" : "fehler", text: o.bplan.hinweis });
+        else if (o.bplan.ausgefallen?.length) liste.push({ stufe: "fehler", text: t(`Nicht erreichbar: ${o.bplan.ausgefallen.join(", ")}.`, `Not reachable: ${o.bplan.ausgefallen.join(", ")}.`) });
         else {
           if (!o.bplan.dokumenteAbrufbar) liste.push({ stufe: "warnung", text: t("Plan-Dokumente (PDF) konnten nicht abgerufen werden.", "Plan documents (PDF) could not be retrieved.") });
           // laufende Verfahren werden nur für die Stadt Oldenburg abgefragt – anderswo ist null kein Ausfall
           if (o.standort.oldenburg && o.bplan.weitere === null) liste.push({ stufe: "warnung", text: t("Laufende Verfahren (Aufstellung, Veränderungssperre) nicht abrufbar.", "Ongoing procedures (plans in preparation, development freezes) not retrievable.") });
         }
         if (o.denkmal.status === "fehler") liste.push({ stufe: o.denkmal.nichtAngebunden ? "warnung" : "fehler", text: o.denkmal.hinweis });
+        else if (o.denkmal.ausgefallen?.length) liste.push({ stufe: "fehler", text: t(`Nicht erreichbar: ${o.denkmal.ausgefallen.join(", ")}.`, `Not reachable: ${o.denkmal.ausgefallen.join(", ")}.`) });
         break;
       }
     }

@@ -125,7 +125,7 @@ export const GESETZE = [
     auffaelligkeiten: bindestrichLuecken,
     // Von Hand am PDF geprüfte Besonderheiten der Lesefassung. Der Wortlaut bleibt unverändert; die App sagt es dazu.
     hinweise: {
-      33: `Hinweis der App: In dieser Lesefassung steht in Absatz 2 zu Beginn von Seite 34 die Nummer „2.“ vor „wände an oder mit einem Abstand …“ – mitten im Wort „Abschlusswände“ der Nummer 1 (Seitenwechsel). Die folgenden Punkte tragen deshalb die Nummern 3. bis 5.; nach dem Aufbau (vgl. „Abs. 2 Nr. 1 bis 3“ in Absatz 3 und § 30 Abs. 2 MBO) dürften es die Nummern 2 bis 4 sein. Angezeigt wird unverändert die Lesefassung; maßgeblich ist der im GVBl. verkündete Wortlaut.`,
+      33: `Hinweis der App: In dieser Lesefassung steht in Absatz 2 zu Beginn von Seite 34 die Nummer „2.“ vor „wände an oder mit einem Abstand …“, also mitten im Wort „Abschlusswände“ der Nummer 1 (Seitenwechsel). Die folgenden Punkte tragen deshalb die Nummern 3. bis 5.; nach dem Aufbau (vgl. „Abs. 2 Nr. 1 bis 3“ in Absatz 3 und § 30 Abs. 2 MBO) dürften es die Nummern 2 bis 4 sein. Angezeigt wird unverändert die Lesefassung; maßgeblich ist der im GVBl. verkündete Wortlaut.`,
       15: "Hinweis der App: Im Inhaltsverzeichnis der Lesefassung lautet die Überschrift „Wärmeschutz, Schall-, Erschütterungsschutz“; angezeigt wird die Überschrift im Text.",
       46: "Hinweis der App: Im Inhaltsverzeichnis der Lesefassung lautet die Überschrift „Sanitäre Anlagen, Gästetoilettenanlagen in Gaststätten“; angezeigt wird die Überschrift im Text.",
       47: "Hinweis der App: Im Inhaltsverzeichnis der Lesefassung lautet die Überschrift „Kleinkläranlagen, Gruben“; angezeigt wird die Überschrift im Text.",

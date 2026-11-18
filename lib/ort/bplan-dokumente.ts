@@ -6,7 +6,7 @@ import { holeJson } from "./abruf";
 import { gebiet, type Sprache, zweisprachig } from "../sprache";
 
 const DIENST = "https://gis4ol.oldenburg.de/portal/sharing/servers/b0a09ae4c16f48e09d380fb5208427b3/rest/services/FD400/FD400_Bebauungsplanauskunft/MapServer";
-export const KARTENPORTAL_QUELLE = "Stadt Oldenburg – Bebauungsplanauskunft (Kartenportal Bauen & Wohnen)";
+export const KARTENPORTAL_QUELLE = "Stadt Oldenburg: Bebauungsplanauskunft (Kartenportal Bauen & Wohnen)";
 
 const LAYER = { rechtsverbindlich: 12, inAufstellung: 7, veraenderungssperre: [10, 11], unwirksam: 15 } as const;
 

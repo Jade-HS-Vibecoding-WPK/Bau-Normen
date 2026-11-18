@@ -541,11 +541,12 @@ function erzeugeGesetzesNotizen(gesetze, namen) {
       if (erl) {
         const geprueft = erl.status === "geprueft";
         const z = [
-          `> [!${geprueft ? "note" : "warning"}] Erläuterung – ${geprueft ? "geprüft" : "Entwurf"}, keine Rechtsberatung`,
+          `> [!${geprueft ? "note" : "warning"}] Erläuterung (${geprueft ? "geprüft" : "Entwurf"}), keine Rechtsberatung`,
           `> *${geprueft ? "Geprüfte" : "Ungeprüfter Entwurf einer"} Erläuterung in einfacher Sprache. Sie ist nicht Teil des Gesetzes und keine Rechtsberatung. Verbindlich ist allein der Originaltext bzw. die amtliche Quelle.*`,
         ];
         if (erl.kurz) z.push(">", `> **Kurz:** ${mdText(leer(erl.kurz))}`);
-        for (const p of erl.punkte ?? []) z.push(">", `> **${mdText(leer(p.titel))}:** ${mdText(leer(p.text))}`);
+        // Titel enthalten selbst einen Doppelpunkt ("Abs. 1: Stichwort"): Titel fett in eine eigene Zeile, Text darunter
+        for (const p of erl.punkte ?? []) z.push(">", `> **${mdText(leer(p.titel))}**<br>${mdText(leer(p.text))}`);
         if (erl.praxis) z.push(">", `> **Praxis:** ${mdText(leer(erl.praxis))}`);
         teile.push("## Erläuterung", z.join("\n"));
       }
@@ -1307,7 +1308,7 @@ function architekturNotiz(infos, gesetze, namen) {
   const anzahlZeilen = [...infos.values()].reduce((s, i) => s + i.zeilen, 0);
   const teile = [
     frontmatter({ dateien: infos.size, zeilen: anzahlZeilen, tags: ["projekt", "uebersicht"] }),
-    "# Architektur der Bau-Normen-KI",
+    "# Architektur von ParaGecko",
     "> [!info] Automatisch erzeugt\n> Diagramme und Dateilisten entstehen bei jedem Lauf von \x60npm run obsidian\x60 aus den Importen im Quellcode. Nach Codeänderungen einfach neu ausführen.",
     "## Kurz erklärt",
     "Die App beantwortet Fragen zum Bau- und Denkmalrecht. Den Gesetzestext erfindet sie nie selbst: Er kommt immer wortwörtlich aus den amtlichen Quellen. So greifen die Teile ineinander:",
@@ -1374,7 +1375,7 @@ function graphJson(gruppen) {
 
 function startNotiz(gesetze, gruppen, zahlen) {
   const teile = [
-    "# Bau-Normen-KI in Obsidian",
+    "# ParaGecko in Obsidian",
     "Dieser Ordner ist ein **Obsidian-Vault**. Er zeigt die Gesetze Paragraph für Paragraph mit ihrer Gliederung und ihren Verweisen – und daneben die Dateien der App mit ihren Abhängigkeiten.",
     "## So öffnen Sie den Vault",
     [

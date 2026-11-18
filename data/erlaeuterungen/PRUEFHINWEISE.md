@@ -10,7 +10,7 @@ Alle Erläuterungen sind **Entwürfe** (`"status": "entwurf"`). Sie wurden Satz 
 | 6 Abs. 1 | „höhere Verwaltungsbehörde“ | allgemein umschrieben (landesrechtlich bestimmt) |
 | 6 Abs. 4 | „in der Regel jedoch nur bis zu drei Monaten“ | Wortlaut ohne Deutung übernommen (mehrdeutig) |
 | 7 Satz 6 | Kostenersatz | aus § 37 Abs. 3 abgeleitet („entsprechend anzuwenden“) |
-| 9 Abs. 2d | befristete Regelung | gilt nur für bis 31.12.2024 eingeleitete Verfahren, Satzungsbeschluss bis 31.12.2026 – **nach dem Jahreswechsel prüfen** |
+| 9 Abs. 2d | befristete Regelung | gilt nur für bis 31.12.2024 eingeleitete Verfahren, Satzungsbeschluss bis 31.12.2026; **nach dem Jahreswechsel prüfen** |
 | 9a, 34 | „Baunutzungsverordnung“ | als die auf § 9a beruhende Verordnung benannt (allgemein bekannt, steht nicht im Text) |
 | 13a Abs. 1 | „zulässige Grundfläche“ | Begriff aus § 19 Abs. 2 BauNVO erklärt |
 | 16 Abs. 2 | verkürzte Bekanntmachung | als Alternative zur vollständigen gelesen |
@@ -37,6 +37,6 @@ Alle Erläuterungen sind **Entwürfe** (`"status": "entwurf"`). Sie wurden Satz 
 | 16 Abs. 2 | Kettenverweis über § 13 Abs. 2 | nur inhaltlich beschrieben |
 | 19 Abs. 4 Satz 2 | wer unterrichtet | passiv formuliert (Bezug unklar) |
 | 22 Abs. 3 | Verordnung | neutral als „nähere Vorschriften“ |
-| 31 Abs. 2–4 | Verweise auf das NEG | Inhalt nicht erklärt; „vorzeitige Besitzeinweisung“ aus Fachwissen |
+| 31 Abs. 2 bis 4 | Verweise auf das NEG | Inhalt nicht erklärt; „vorzeitige Besitzeinweisung“ aus Fachwissen |
 | 35 Abs. 4 | „vier Werktage“ | aus § 14 Abs. 2 ergänzt |
 | div. | Fachbegriffe | „Zubehör“, „dinglich Berechtigte“, „Erbbauberechtigter“, „Nießbraucher“, „unverzüglich“, „aufschiebende Wirkung“, „Verwaltungsakt“, „Benehmen/Einvernehmen“, „übertragener Wirkungskreis“, „Fachaufsicht“, „pflichtgemäßes Ermessen“, „Einziehung“, „Schatzregal“ |

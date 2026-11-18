@@ -9,7 +9,7 @@ import { XPLANSYN, xplanAbfrage } from "./xplanung";
 
 export const bremenBplan: BplanDienst = {
   id: "hb-bremen-bplan",
-  quelle: "Freie Hansestadt Bremen, Senatorin für Bau, Mobilität und Stadtentwicklung – Rechtskräftige Bebauungspläne (XPlanung, CC BY)",
+  quelle: "Freie Hansestadt Bremen, Senatorin für Bau, Mobilität und Stadtentwicklung: Rechtskräftige Bebauungspläne (XPlanung, CC BY)",
   viewer: "https://www.bauleitplan.bremen.de/",
   gebiet: { land: "Bremen", gemeinde: "Bremen" },
   // WMS-Beschreibung: "Der Datensatz umfasst die Umrisse alle rechtsgültigen Bebauungspläne der Stadtgemeinde Bremen",
@@ -42,7 +42,7 @@ const BHV_WMS = "https://geodienste.bremen.de/wms_bebauungsplaene_bhv";
 
 export const bremerhavenBplan: BplanDienst = {
   id: "hb-bremerhaven-bplan",
-  quelle: "Magistrat der Stadt Bremerhaven – Bebauungspläne (WMS GeoInformation Bremen, CC BY)",
+  quelle: "Magistrat der Stadt Bremerhaven: Bebauungspläne (WMS GeoInformation Bremen, CC BY)",
   viewer: "https://geoportal.bremen.de/geoportal/",
   gebiet: { land: "Bremen", gemeinde: "Bremerhaven" },
   // Metadaten (metaver.de 04e56cb2-96c7-495f-ba9b-eb67c72d98cf) und WMS-Beschreibung:
@@ -81,7 +81,7 @@ const DENKMAL_WFS = "https://geodienste.bremen.de/wfs_kulturdenkmale";
 
 export const bremenDenkmal: DenkmalDienst = {
   id: "hb-denkmal",
-  quelle: "Landesamt für Denkmalpflege und Archäologie Bremen – Kulturdenkmale Land Bremen (WFS, CC BY)",
+  quelle: "Landesamt für Denkmalpflege und Archäologie Bremen: Kulturdenkmale Land Bremen (WFS, CC BY)",
   viewer: "https://geoportal.bremen.de/denkmalinfosystem/",
   gebiet: { land: "Bremen" },
   // Metadaten ohne Aussage zur Vollständigkeit; Bodendenkmale sind nicht frei abrufbar.

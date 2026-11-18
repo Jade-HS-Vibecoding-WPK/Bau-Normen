@@ -30,7 +30,7 @@ const LEER_VORHABEN: Record<string, { de: string; en: string }> = {
 
 export const leerBplan: BplanDienst = {
   id: "ni-leer-bplan",
-  quelle: "Landkreis Leer – Bauleitplanung, Geltungsbereiche der Bebauungspläne (ArcGIS, ohne Lizenzangabe)",
+  quelle: "Landkreis Leer: Bauleitplanung, Geltungsbereiche der Bebauungspläne (ArcGIS, ohne Lizenzangabe)",
   viewer: "https://lkleer.maps.arcgis.com/apps/mapviewer/index.html?webmap=e4311f176259429d970921af4cf49ab2",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Leer" },
   // 2.414 Einträge aller 19 Gemeinden des Kreises (auch Stadt Borkum: 82), jede Fassung (Urschrift, Änderungen) mit
@@ -56,7 +56,7 @@ export const leerBplan: BplanDienst = {
           return {
             nummer: m ? m[1].trim() : "",
             // Änderungen sind eigene Satzungen: die Fassung gehört zum Namen, damit jede einzeln erscheint
-            name: [m ? m[2].trim() : roh, fassung && fassung !== "Urschrift" ? fassung : ""].filter(Boolean).join(" – "),
+            name: [m ? m[2].trim() : roh, fassung && fassung !== "Urschrift" ? fassung : ""].filter(Boolean).join(", "),
             vorhabenbezogen: art in LEER_VORHABEN,
             verfahren: LEER_VORHABEN[art]?.[sprache],
             link: webLink(x.URKUNDE),
@@ -80,7 +80,7 @@ const AURICH_PLAN = new Set(["Bebauungsplan", "vorhabenbezogener Bebauungsplan",
 
 export const aurichBplan: BplanDienst = {
   id: "ni-aurich-bplan",
-  quelle: "Landkreis Aurich – Bauleitplanung, Bebauungspläne (ArcGIS, ohne Lizenzangabe)",
+  quelle: "Landkreis Aurich: Bauleitplanung, Bebauungspläne (ArcGIS, ohne Lizenzangabe)",
   viewer: "https://gis.landkreis-aurich.de/portal/apps/instant/sidebar/index.html?appid=00403100c7f84a0eacd86771280976d2",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Aurich" },
   // 1.669 Einträge der 15 Gemeinden des Kreises (Norderney 52, Juist 18, Baltrum 16), Status "genehmigt"; ohne Plannamen,
@@ -180,14 +180,14 @@ const zahl = (x: unknown) => Number(wert(x));
 /** Fassung an den Namen hängen, außer bei der Ursprungsfassung (Änderungen sind eigene Satzungen) */
 const mitFassung = (name: string, fassung: unknown) => {
   const f = wert(fassung);
-  return f && !/^(urschrift|ursprungsplan|urplan|original)$/i.test(f) ? `${name} – ${f}` : name;
+  return f && !/^(urschrift|ursprungsplan|urplan|original)$/i.test(f) ? `${name}, ${f}` : name;
 };
 const vorhabenText = (ja: boolean, sprache: "de" | "en") => (ja ? LEER_VORHABEN.VB[sprache] : undefined);
 
 /** Landkreis Osterholz – Planmanager (dl-de/by-2.0, GDI-DE eb15f842-…) */
 export const osterholzBplan = arcgisBplan({
   id: "ni-osterholz-bplan",
-  quelle: "Landkreis Osterholz – Geltungsbereiche der Bebauungspläne (ArcGIS, dl-de/by-2.0)",
+  quelle: "Landkreis Osterholz: Geltungsbereiche der Bebauungspläne (ArcGIS, dl-de/by-2.0)",
   viewer: "https://experience.arcgis.com/experience/9dc95fc7755647028454e5f45b38adfb",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Osterholz" },
   vollstaendig: false,
@@ -216,7 +216,7 @@ export const osterholzBplan = arcgisBplan({
 /** Landkreis Rotenburg (Wümme) – liefert keine Geometrie, nur die Treffer am Punkt (dl-de/zero-2.0, GDI-DE 0b49ff48-…) */
 export const rotenburgBplan = arcgisBplan({
   id: "ni-rotenburg-bplan",
-  quelle: "Landkreis Rotenburg (Wümme) – Geltungsbereiche der Bebauungspläne (ArcGIS, dl-de/zero-2.0)",
+  quelle: "Landkreis Rotenburg (Wümme): Geltungsbereiche der Bebauungspläne (ArcGIS, dl-de/zero-2.0)",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Rotenburg (Wümme)" },
   vollstaendig: false,
   browser: true,
@@ -232,7 +232,7 @@ export const rotenburgBplan = arcgisBplan({
     const aenderung = wert(x.AENDERUNG);
     return {
       nummer: wert(x.NUMMER) ?? "",
-      name: `${wert(x.NAME) ?? ""}${aenderung && aenderung !== "0" ? ` – ${aenderung}. Änderung` : ""}`,
+      name: `${wert(x.NAME) ?? ""}${aenderung && aenderung !== "0" ? `, ${aenderung}. Änderung` : ""}`,
       rechtsverbindlichSeit: datumText(x.RECHTSDATUM, sprache),
       vorhabenbezogen: XPLAN_VORHABEN.has(art),
       verfahren: vorhabenText(XPLAN_VORHABEN.has(art), sprache),
@@ -244,7 +244,7 @@ export const rotenburgBplan = arcgisBplan({
 /** Landkreis Stade – ohne Hansestadt Stade und Buxtehude (dl-de/by-2.0, ArcGIS-Item aa56a135…) */
 export const stadeBplan = arcgisBplan({
   id: "ni-stade-bplan",
-  quelle: "Landkreis Stade – Bebauungspläne (ArcGIS Online, dl-de/by-2.0)",
+  quelle: "Landkreis Stade: Bebauungspläne (ArcGIS Online, dl-de/by-2.0)",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Stade" },
   vollstaendig: false,
   browser: true,
@@ -259,7 +259,7 @@ export const stadeBplan = arcgisBplan({
     const kat = wert(x.AGO_Kategorie) ?? "";
     const typ = wert(x.TYP) ?? "";
     const aenderung = typ.match(/(\d+)\.\s*Änderung/i);
-    const name = `${wert(x.LANGNAME) ?? ""}${aenderung ? ` – ${aenderung[1]}. Änderung` : ""}`;
+    const name = `${wert(x.LANGNAME) ?? ""}${aenderung ? `, ${aenderung[1]}. Änderung` : ""}`;
     if (kat === "Veränderungssperre") return { nummer: wert(x.Plannummer) ?? "", name, vorhabenbezogen: false, sicherung: "veraenderungssperre" };
     if (kat !== "Bebauungsplan" && kat !== "Vorhaben- und Erschließungsplan") return null;
     const vorhaben = /vorhaben/i.test(`${kat} ${typ}`);
@@ -276,7 +276,7 @@ export const stadeBplan = arcgisBplan({
 /** Landkreis Nienburg/Weser – XPlanung-Felder (dl-de/zero-2.0, GDI-DE b196a83b-…) */
 export const nienburgBplan = arcgisBplan({
   id: "ni-nienburg-bplan",
-  quelle: "Landkreis Nienburg/Weser – Bebauungspläne (XPlanung, ArcGIS, dl-de/zero-2.0)",
+  quelle: "Landkreis Nienburg/Weser: Bebauungspläne (XPlanung, ArcGIS, dl-de/zero-2.0)",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Nienburg/Weser" },
   vollstaendig: false,
   browser: true,
@@ -303,7 +303,7 @@ export const nienburgBplan = arcgisBplan({
 /** Landkreis Diepholz – Planauskunft aller Kommunen (dl-de/by-2.0, GDI-DE 166b16f9-…) */
 export const diepholzBplan = arcgisBplan({
   id: "ni-diepholz-bplan",
-  quelle: "Landkreis Diepholz – Planauskunft, rechtskräftige Bebauungspläne (ArcGIS, dl-de/by-2.0)",
+  quelle: "Landkreis Diepholz: Planauskunft, rechtskräftige Bebauungspläne (ArcGIS, dl-de/by-2.0)",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Diepholz" },
   vollstaendig: false,
   browser: true,
@@ -330,7 +330,7 @@ export const diepholzBplan = arcgisBplan({
  *  Browser ignorieren sie (dl-de/zero-2.0, GDI-DE 163c95e8-…) */
 export const harburgBplan = arcgisBplan({
   id: "ni-harburg-bplan",
-  quelle: "Landkreis Harburg – Bebauungspläne (ArcGIS, dl-de/zero-2.0)",
+  quelle: "Landkreis Harburg: Bebauungspläne (ArcGIS, dl-de/zero-2.0)",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Harburg" },
   vollstaendig: false,
   browser: false,
@@ -357,7 +357,7 @@ export const harburgBplan = arcgisBplan({
 /** Landkreis Hameln-Pyrmont – 7 Gemeinden ohne Stadt Hameln (CC BY-SA 4.0, GDI-DE 2db8a6e9-…) */
 export const hamelnPyrmontBplan = arcgisBplan({
   id: "ni-hameln-pyrmont-bplan",
-  quelle: "Landkreis Hameln-Pyrmont – Planauskunft, Bebauungspläne (ArcGIS, CC BY-SA 4.0)",
+  quelle: "Landkreis Hameln-Pyrmont: Planauskunft, Bebauungspläne (ArcGIS, CC BY-SA 4.0)",
   gebiet: { land: "Niedersachsen", kreis: "Landkreis Hameln-Pyrmont" },
   vollstaendig: false,
   browser: true,
@@ -384,7 +384,7 @@ export const hamelnPyrmontBplan = arcgisBplan({
 /** Stadt Göttingen – INSPIRE-Bebauungspläne (dl-de/by-2.0, GDI-DE d22ef753-…) */
 export const goettingenBplan = arcgisBplan({
   id: "ni-goettingen-bplan",
-  quelle: "Stadt Göttingen – Bebauungspläne (INSPIRE, ArcGIS, dl-de/by-2.0)",
+  quelle: "Stadt Göttingen: Bebauungspläne (INSPIRE, ArcGIS, dl-de/by-2.0)",
   viewer: "https://geoportal.goettingen.de/",
   gebiet: { land: "Niedersachsen", gemeinde: "Göttingen" },
   vollstaendig: false,
@@ -428,7 +428,7 @@ const inspireUrl = (dienst: string) => (p: Punkt) =>
 /** Stadt Hildesheim – INSPIRE-WFS aus XPlanung (dl-de/by-2.0, Rechteinhaber Stadt Hildesheim) */
 export const hildesheimBplan = geojsonBplan({
   id: "ni-hildesheim-bplan",
-  quelle: "Stadt Hildesheim – Bebauungspläne (INSPIRE-WFS, dl-de/by-2.0)",
+  quelle: "Stadt Hildesheim: Bebauungspläne (INSPIRE-WFS, dl-de/by-2.0)",
   gebiet: { land: "Niedersachsen", gemeinde: "Hildesheim" },
   vollstaendig: false,
   browser: true,
@@ -444,7 +444,7 @@ export const hildesheimBplan = geojsonBplan({
 /** Stadt Langenhagen (Region Hannover) – INSPIRE-WFS über KDO govconnect (CC BY 4.0) */
 export const langenhagenBplan = geojsonBplan({
   id: "ni-langenhagen-bplan",
-  quelle: "Stadt Langenhagen – Bebauungspläne (INSPIRE-WFS, CC BY 4.0, geodaten.langenhagen.de)",
+  quelle: "Stadt Langenhagen: Bebauungspläne (INSPIRE-WFS, CC BY 4.0, geodaten.langenhagen.de)",
   gebiet: { land: "Niedersachsen", gemeinde: "Langenhagen" },
   vollstaendig: false,
   browser: true,

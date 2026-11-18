@@ -13,7 +13,7 @@ const BPLAN_WFS = "https://www.geoportal.rlp.de/cgi-bin/mapserv?map=/data/mapben
 
 export const rlpBplan: BplanDienst = {
   id: "rp-bplan",
-  quelle: "Zentrale Stelle GDI-RP (LVermGeo RLP) – Metadaten Bebauungspläne RP (Geoportal.rlp, dl-de/by-2.0)",
+  quelle: "Zentrale Stelle GDI-RP (LVermGeo RLP): Metadaten Bebauungspläne RP (Geoportal.rlp, dl-de/by-2.0)",
   viewer: "https://www.geoportal.rlp.de/",
   gebiet: { land: "Rheinland-Pfalz" },
   // Metadaten ohne Beschreibung und ohne Aussage zu Vollständigkeit oder Rechtsstand. Im Test keine Pläne in Mainz,
@@ -44,7 +44,7 @@ export const rlpBplan: BplanDienst = {
         const traeger = wert(x.responsible_party_name);
         treffer.push({
           nummer: kennung ?? "",
-          name: [wert(x.title), traeger && !/\d{5}/.test(traeger) ? traeger : undefined].filter(Boolean).join(" – "),
+          name: [wert(x.title), traeger && !/\d{5}/.test(traeger) ? traeger : undefined].filter(Boolean).join(", "),
           vorhabenbezogen: /vorhabenbezogen/i.test(`${x.title ?? ""} ${x.abstract ?? ""}`),
           verfahren: t("Rechtsstand und Datum im Dienst nicht angegeben", "legal status and date not given by the service"),
           umriss: umrissVon(p, g, 300),
@@ -73,7 +73,7 @@ const EBENEN: Record<string, { de: string; en: string; gruppe: boolean }> = {
 
 export const rlpDenkmal: DenkmalDienst = {
   id: "rp-denkmal",
-  quelle: "Generaldirektion Kulturelles Erbe Rheinland-Pfalz – Denkmalliste (Quellenvermerk: GDKE RLP, dl-de/by-2.0)",
+  quelle: "Generaldirektion Kulturelles Erbe Rheinland-Pfalz: Denkmalliste (Quellenvermerk: GDKE RLP, dl-de/by-2.0)",
   viewer: "https://www.geoportal.rlp.de/",
   gebiet: { land: "Rheinland-Pfalz" },
   // Dienst ohne Aussage zur Vollständigkeit; die Verzeichnisse der GDKE: "Das Verzeichnis erhebt keinen Anspruch auf

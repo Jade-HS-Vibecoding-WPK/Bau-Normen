@@ -208,7 +208,7 @@ export default function Lageskizze({ o, id }: { o: OrtAnsicht; id: string }) {
     denkmale.forEach((d) => {
       let p = ankerpunkt(d.umriss as P[][]);
       while (liste.some((f) => Math.hypot(f.p[0] - p[0], f.p[1] - p[1]) < 4)) p = [p[0] + 4.5, p[1] + 1.5];
-      liste.push({ p, farbe: d.amStandort ? FARBE.hier : d.gruppe ? FARBE.gruppe : FARBE.einzel, titel: `${d.name} – ${d.ausweisung}${d.amStandort ? "" : ` (${d.entfernungM} m)`}` });
+      liste.push({ p, farbe: d.amStandort ? FARBE.hier : d.gruppe ? FARBE.gruppe : FARBE.einzel, titel: `${d.name}, ${d.ausweisung}${d.amStandort ? "" : ` (${d.entfernungM} m)`}` });
     });
     return liste;
   }, [denkmale]);

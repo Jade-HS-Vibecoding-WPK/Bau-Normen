@@ -12,15 +12,15 @@ import { xplanAbfrage } from "./xplanung";
 
 export const shBplan: BplanDienst = {
   id: "sh-bplan",
-  quelle: "GDI-SH / LVermGeo SH – Planungsdaten Schleswig-Holstein (XPlanung, dl-de/by-2.0)",
+  quelle: "GDI-SH / LVermGeo SH: Planungsdaten Schleswig-Holstein (XPlanung, dl-de/by-2.0)",
   gebiet: { land: "Schleswig-Holstein" },
   // Metadaten (dab5de7e-1c79-4744-a1c4-65f179e40eb4) ohne Aussage zur Vollständigkeit; enthält nur die bisher im
   // XPlanung-Format gemeldeten Pläne (rund 700 im ganzen Land, in Kiel nur drei).
   vollstaendig: false,
   browser: true,
   abdeckung: {
-    de: "Nur die bisher im XPlanung-Format gemeldeten Pläne (rund 700 im ganzen Land) – die meisten Bebauungspläne fehlen noch.",
-    en: "Only plans reported in XPlanung format so far (about 700 in the whole state) – most development plans are still missing.",
+    de: "Nur die bisher im XPlanung-Format gemeldeten Pläne (rund 700 im ganzen Land); die meisten Bebauungspläne fehlen noch.",
+    en: "Only plans reported in XPlanung format so far (about 700 in the whole state); most development plans are still missing.",
   },
   // Die Dokument-Verweise des Dienstes sind relative Pfade ohne funktionierende Basisadresse – sie werden nicht übernommen.
   abfrage: (lat, lon, sprache) => xplanAbfrage({ wfs: "https://service.gdi-sh.de/WFS_SH_PLANUNG", name: "Planungsdaten SH" }, lat, lon, sprache),
@@ -35,7 +35,7 @@ const ARTEN: Record<string, { de: string; en: string; gruppe: boolean }> = {
 
 export const shDenkmal: DenkmalDienst = {
   id: "sh-denkmal",
-  quelle: "GDI-SH / LVermGeo SH – INSPIRE Schutzgebiete, Daten des Landesamts für Denkmalpflege (CC BY 4.0)",
+  quelle: "GDI-SH / LVermGeo SH: INSPIRE Schutzgebiete, Daten des Landesamts für Denkmalpflege (CC BY 4.0)",
   viewer: "https://www.schleswig-holstein.de/denkmalkarte",
   gebiet: { land: "Schleswig-Holstein" },
   // Datensatz-Metadaten: "Der Datensatz ist nicht abschließend"; im Abgleich enthält der Dienst nur einen kleinen Teil der
