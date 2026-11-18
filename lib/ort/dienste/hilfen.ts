@@ -537,3 +537,43 @@ export function denkmaleImUmkreis(p: Punkt, radiusM: number, roh: DenkmalRoh[]):
   });
   return [...beste.values()].sort((x, y) => x.entfernungM - y.entfernungM || Number(x.gruppe) - Number(y.gruppe) || x.name.localeCompare(y.name, "de"));
 }
+
+// ---------------------------------------------------------------------------------------------
+// WMS GetFeatureInfo ohne Geometrie: Entfernung in groben Stufen
+
+/** WMS-1.3.0-GetFeatureInfo in EPSG:4326 (Achsen Breite, Länge): Bild 101 × 101 Pixel um den Punkt, Abfrage in der Mitte */
+export function wmsInfoUrl(basis: string, ebenen: string, p: Punkt, halbeKanteM: number, format: string, anzahl = 50): string {
+  const [a, b, c, d] = rechteck(p, halbeKanteM);
+  return (
+    `${basis}?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=${ebenen}&QUERY_LAYERS=${ebenen}&STYLES=&CRS=EPSG:4326` +
+    `&BBOX=${[b, a, d, c].map(f6).join(",")}&WIDTH=101&HEIGHT=101&I=50&J=50&INFO_FORMAT=${encodeURIComponent(format)}&FEATURE_COUNT=${anzahl}`
+  );
+}
+
+/**
+ * Für WMS-Dienste, deren GetFeatureInfo weder Umriss noch Begrenzungsrechteck liefert: Entfernung in groben Stufen.
+ * Der Server meldet alle Objekte bis etwa `toleranzPx` Pixel um die Bildmitte (je Dienst ausgemessen). Eine Abfrage mit
+ * kleinem Ausschnitt (± 5 m, Toleranz unter 1 m) findet die Objekte am Standort (0 m); für jede weitere Stufe wird die
+ * Pixelgröße so gewählt, dass die Toleranz etwa der Stufe entspricht. Ergebnis: je Objekt die kleinste Stufe, in der es
+ * vorkommt – eine obere Schranke, nur ungefähr. `toleranzPx` eher knapp ansetzen: lieber ein Objekt in 55 m Entfernung
+ * mitnehmen als eines in 45 m übersehen.
+ */
+export async function wmsStufen<T>(
+  abfrage: (halbeKanteM: number) => Promise<T[]>,
+  schluessel: (x: T) => string,
+  radiusM: number,
+  toleranzPx: number,
+  stufen: number[] = [10, 25],
+): Promise<{ objekt: T; entfernungM: number }[]> {
+  const ziele = [0, ...stufen.filter((s) => s > 0 && s < radiusM), radiusM];
+  // ± 5 m: bei noch kleineren Ausschnitten antwortet der Thüringer Dienst unzuverlässig (geprüft 18.11.2026)
+  const antworten = await Promise.all(ziele.map((s) => abfrage(s === 0 ? 5 : (s / toleranzPx) * 50.5)));
+  const beste = new Map<string, { objekt: T; entfernungM: number }>();
+  ziele.forEach((s, i) => {
+    for (const objekt of antworten[i]) {
+      const k = schluessel(objekt);
+      if (!beste.has(k)) beste.set(k, { objekt, entfernungM: s });
+    }
+  });
+  return [...beste.values()];
+}

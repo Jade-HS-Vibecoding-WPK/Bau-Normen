@@ -9,6 +9,7 @@ import {
   bboxBreiteLaenge, bboxUtm, datumText, denkmaleImUmkreis, fehlerErgebnis, gekuerzt, geoJsonObjekte, gmlObjekte, liegtIn, LON_LAT, umrechnen,
   umrissVon, unlesbar, UTM, wert, webLink, type DenkmalRoh, type Punkt,
 } from "./hilfen";
+import { arcgisBplan, geojsonBplan } from "./plandienste";
 import type { BplanDienst, DenkmalDienst, PlanTreffer } from "./typen";
 
 const BPLAN_API = "https://ogc-api.nrw.de/inspire-lu-bplan/v1/collections/spatialplan/items";
@@ -221,3 +222,67 @@ export const dortmundDenkmal: DenkmalDienst = {
     }
   },
 };
+
+// --- B-Pläne: Städte, die im Landesdienst fehlen oder dort lückenhaft sind (Prüfung 18.11.2026) ---
+
+/** Stadt Münster – WFS (ms:bplan2 = rechtskräftig; ms:bplan1 = im Verfahren, nicht genutzt). Lizenz laut Open.NRW-Datensatz
+ *  "Bebauungspläne im Stadtgebiet Münster (rechtskräftig)": dl-de/by-2.0. BBOX nur in EPSG:25832 auswertbar. CORS "*". */
+export const muensterBplan = geojsonBplan({
+  id: "nw-muenster-bplan",
+  quelle: "Stadt Münster – Bebauungspläne im Stadtgebiet (rechtskräftig) (WFS, dl-de/by-2.0)",
+  viewer: "https://geo.stadt-muenster.de/",
+  gebiet: { land: "Nordrhein-Westfalen", gemeinde: "Münster" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Rechtskräftige Bebauungspläne der Stadt Münster mit Link zum Plan; eine ausdrückliche Aussage zur Vollständigkeit fehlt.",
+    en: "Legally binding development plans of the City of Münster with a link to the plan; there is no explicit statement on completeness.",
+  },
+  url: (p) =>
+    `https://geo.stadt-muenster.de/mapserv/bplan_serv?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms:bplan2&COUNT=50&OUTPUTFORMAT=GEOJSON&SRSNAME=EPSG:4326&BBOX=${bboxUtm(p, 2, 32)},urn:ogc:def:crs:EPSG::25832`,
+  fehlerName: "Bebauungspläne Münster",
+  zuPlan: (x, sprache) => {
+    if (!["4000", "4500"].includes(wert(x.rechtsstand) ?? "")) return null;
+    const typ = wert(x.plantyp) ?? "";
+    const vorhaben = /vorhaben/i.test(typ);
+    return {
+      nummer: wert(x.plannr) ?? "",
+      name: wert(x.name) ?? "",
+      rechtsverbindlichSeit: datumText(x.datum, sprache),
+      vorhabenbezogen: vorhaben,
+      verfahren: typ && typ !== "Bebauungsplan" ? typ : undefined,
+      link: webLink(x.scanurl),
+    };
+  },
+});
+
+/** Stadt Duisburg – Open Data (ArcGIS, Ebene "Uebersicht_BPLAN"); Lizenz laut Open.NRW "Bebauungspläne & FNP-Änderungen in
+ *  Duisburg": CC BY 3.0 DE. Nur STATUS "rechtskräftiges Verfahren" und Planarten, die Bebauungspläne sind. CORS spiegelt. */
+const DUISBURG_PLAN = /^(Bebauungsplan|Qualifizierter Bebauungsplan|Einfacher Bebauungsplan|Vorhaben- und Erschließungsplan|Vorhabenbezogener Bebauungsplan)/;
+export const duisburgBplan = arcgisBplan({
+  id: "nw-duisburg-bplan",
+  quelle: "Stadt Duisburg – Bebauungspläne (Open Data, ArcGIS, CC BY 3.0 DE)",
+  viewer: "https://geoportal.duisburg.de/",
+  gebiet: { land: "Nordrhein-Westfalen", gemeinde: "Duisburg" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Umringe der rechtskräftigen Bebauungspläne der Stadt Duisburg mit Link zur Detailseite; eine ausdrückliche Aussage zur Vollständigkeit fehlt.",
+    en: "Outlines of the legally binding development plans of the City of Duisburg with a link to the detail page; there is no explicit statement on completeness.",
+  },
+  ebene: "https://geoportal.duisburg.de/arcgisserver/rest/services/OpenData/OpenData/MapServer/146",
+  fehlerName: "Bebauungspläne Duisburg",
+  zuPlan: (x) => {
+    const art = wert(x.BPL_ART_TXT) ?? "";
+    if (wert(x.STATUS) !== "rechtskräftiges Verfahren" || !DUISBURG_PLAN.test(art)) return null;
+    const nummer = wert(x.BPL_NR) ?? "";
+    return {
+      nummer,
+      // BPL_NAME beginnt mit der Nummer: "549 - Altstadt"
+      name: (wert(x.BPL_NAME) ?? "").replace(new RegExp(`^${nummer.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*-\\s*`), ""),
+      vorhabenbezogen: /vorhaben/i.test(art),
+      verfahren: art !== "Bebauungsplan" ? art : undefined,
+      link: webLink(x.LINK),
+    };
+  },
+});

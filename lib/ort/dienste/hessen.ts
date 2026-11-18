@@ -10,6 +10,7 @@ import {
   abstand, bboxBreiteLaenge, bboxLaengeBreite, datumText, denkmaleImUmkreis, fehlerErgebnis, gekuerzt, geoJsonObjekte, htmlZuText, liegtIn, LON_LAT,
   umrechnen, umrissVon, wert, webLink, type DenkmalRoh, type Punkt,
 } from "./hilfen";
+import { geojsonBplan, type ZuPlan } from "./plandienste";
 import type { BplanDienst, DenkmalDienst, PlanTreffer } from "./typen";
 
 const FFM_WFS = "https://planas.frankfurt.de/wfs/bebauungsplaene_geltungsbereiche";
@@ -156,3 +157,88 @@ export const hessenDenkmal: DenkmalDienst = {
     }
   },
 };
+
+// ---------------------------------------------------------------------------------------------
+// Weitere B-Plan-Dienste (Recherche und Prüfung 18.11.2026)
+
+/** GDI-Südhessen-Plattform (gdi-inspireumsetzer.de): je Kreis bzw. Stadt ein WFS im selben Schema "ft1:Planung".
+ *  WMS-Fees aller Dienste: "Die Nutzung der Daten erfolgt unter den Bedingungen der Datenlizenz Deutschland -
+ *  Namensnennung - Version 2.0 … Lizenzgeber ist die zuständige datenhaltende Stelle"; "Es besteht kein Anspruch auf
+ *  Vollständigkeit." Der Dienst enthält auch Satzungen (TYP "Weitere Satzung") – nur TYP "Bebauungsplan" mit
+ *  Rechtskraftdatum zählt. */
+const suedhessenBplan: ZuPlan = (x, sprache) => {
+  const art = wert(x.ART) ?? "";
+  if (wert(x.TYP) !== "Bebauungsplan" || !wert(x.RECHTSKR)) return null;
+  if (!/^(Bebauungsplan|Vorhaben- und Erschließungsplan)$|vorhabenbezogen/i.test(art)) return null;
+  const vorhaben = /vorhaben/i.test(art);
+  return {
+    nummer: wert(x.NAME_A) ?? "",
+    name: wert(x.NAME) ?? "",
+    rechtsverbindlichSeit: datumText(x.RECHTSKR, sprache),
+    vorhabenbezogen: vorhaben,
+    verfahren: vorhaben ? art : undefined,
+    link: webLink(x.PLAN_GES),
+  };
+};
+
+function suedhessen(id: string, name: string, gebiet: { kreis?: string; gemeinde?: string }, orgId: string): BplanDienst {
+  return geojsonBplan({
+    id: `he-${id}-bplan`,
+    quelle: `${name} – Bauleitplanung (GDI-Südhessen, dl-de/by-2.0)`,
+    viewer: "https://www.geoportal.hessen.de/",
+    gebiet: { land: "Hessen", ...gebiet },
+    vollstaendig: false,
+    browser: true, // die Plattform spiegelt die anfragende Herkunft (geprüft 18.11.2026)
+    abdeckung: {
+      de: `Rechtskräftige Bebauungspläne (${name}) aus der GDI-Südhessen-Plattform, mit Plan als PDF; laut Anbieter kein Anspruch auf Vollständigkeit.`,
+      en: `Legally binding development plans (${name}) from the GDI South Hesse platform, with plan as PDF; according to the provider, no claim to completeness.`,
+    },
+    url: (p) =>
+      `https://www.gdi-inspireumsetzer.de/ows/services/${orgId}_wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ft1:Planung&COUNT=50&OUTPUTFORMAT=${encodeURIComponent("application/geo+json")}&SRSNAME=EPSG:4326&BBOX=${bboxBreiteLaenge(p, 2)}`,
+    fehlerName: `Bauleitplanung ${name}`,
+    zuPlan: suedhessenBplan,
+  });
+}
+
+export const hochtaunusBplan = suedhessen("hochtaunus", "Hochtaunuskreis", { kreis: "Hochtaunuskreis" }, "org.11.b749c494-5ea4-4edb-9551-3f34fe245119");
+export const wetterauBplan = suedhessen("wetterau", "Wetteraukreis", { kreis: "Wetteraukreis" }, "org.60.0056de89-e0b1-4d18-9c7d-22709e87f279");
+export const bergstrasseBplan = suedhessen("bergstrasse", "Kreis Bergstraße", { kreis: "Kreis Bergstraße" }, "org.20.aab6a228-f01d-475b-b58d-a091bb6c3265");
+export const grossGerauBplan = suedhessen("gross-gerau", "Kreis Groß-Gerau", { kreis: "Kreis Groß-Gerau" }, "org.4.15109c6b-ec98-4ab8-818a-418aa659eebc");
+export const rheingauTaunusBplan = suedhessen("rheingau-taunus", "Rheingau-Taunus-Kreis", { kreis: "Rheingau-Taunus-Kreis" }, "org.45.bd7db733-0b0c-4eea-8e18-f68bc6e2ec43");
+export const limburgWeilburgBplan = suedhessen("limburg-weilburg", "Landkreis Limburg-Weilburg", { kreis: "Landkreis Limburg-Weilburg" }, "org.48.9eb0070a-2cbc-4fc5-a162-9b435248face");
+export const odenwaldBplan = suedhessen("odenwald", "Odenwaldkreis", { kreis: "Odenwaldkreis" }, "org.5.6996260f-4741-4b30-be09-cf8e11d0f8f9");
+export const hanauBplan = suedhessen("hanau", "Stadt Hanau", { gemeinde: "Hanau" }, "org.59.5e174c7e-0b46-44d5-b47e-f7ff16e325fb");
+export const ruesselsheimBplan = suedhessen("ruesselsheim", "Stadt Rüsselsheim am Main", { gemeinde: "Rüsselsheim am Main" }, "org.31.d0dea01a-0f0a-47de-8c76-633e568564fc");
+
+/** Landkreis Fulda (CC0, ISO-Metadaten 5bab97ab-… im Geoportal Hessen): "Geltungsbereiche aller rechtskräftigen
+ *  Bebauungspläne und Satzungen der Kommunen im Landkreis Fulda" – Satzungen und Einträge ohne Planart werden
+ *  herausgefiltert. Abgefragt wird der Quell-WFS: Der OGC-API-Proxy des Geoportals lieferte am 18.11.2026 nur einen Teil
+ *  der gemeldeten Treffer (numberMatched 5, numberReturned 0). Der Quell-WFS sendet keine CORS-Kopfzeilen → nur Server. */
+export const fuldaBplan = geojsonBplan({
+  id: "he-fulda-bplan",
+  quelle: "Landkreis Fulda – Bebauungspläne der Kommunen (WFS, CC0)",
+  viewer: "https://www.geoportal.hessen.de/",
+  gebiet: { land: "Hessen", kreis: "Landkreis Fulda" },
+  vollstaendig: false,
+  browser: false,
+  abdeckung: {
+    de: "Rechtskräftige Bebauungspläne der Kommunen im Landkreis Fulda (einschließlich Stadt Fulda) mit Plan als PDF; eine ausdrückliche Aussage zur Vollständigkeit fehlt. In der Online-Version nicht abrufbar (technische Sperre des Dienstes).",
+    en: "Legally binding development plans of the municipalities in the district of Fulda (including the town of Fulda) with plan as PDF; there is no explicit statement on completeness. Not available in the online version (technical restriction of the service).",
+  },
+  url: (p) =>
+    `https://gmsck09.kc-systemhaus.de/geoserver/BPLKFD/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BPLKFD:BP_LKFD&COUNT=50&OUTPUTFORMAT=application/json&SRSNAME=EPSG:4326&BBOX=${bboxBreiteLaenge(p, 2)}`,
+  fehlerName: "Bebauungspläne Landkreis Fulda",
+  zuPlan: (x, sprache) => {
+    const art = wert(x.PLAN_ART) ?? "";
+    if (!/bebauungsplan/i.test(art)) return null;
+    const vorhaben = /vorhaben/i.test(art);
+    return {
+      nummer: "",
+      name: (wert(x.PLAN_NAME) ?? "").replace(/_/g, " "),
+      rechtsverbindlichSeit: datumText(x.DAT_RECHT, sprache),
+      vorhabenbezogen: vorhaben,
+      verfahren: art !== "Bebauungsplan" ? art : undefined,
+      link: webLink(x.LINK_SONST),
+    };
+  },
+});

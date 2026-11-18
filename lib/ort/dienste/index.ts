@@ -1,35 +1,47 @@
-// Verzeichnis aller angebundenen B-Plan- und Denkmal-Dienste der Länder und Gemeinden (Stand der Prüfung: 17.11.2026).
+// Verzeichnis aller angebundenen B-Plan- und Denkmal-Dienste der Länder, Landkreise und Gemeinden (Stand der Prüfung: 17./18.11.2026;
+// Recherche mit Lizenzen in docs/quellen-recherche.md).
 //
 // Auswahl für einen Standort: alle Dienste, deren gebiet.land dem Bundesland des Standorts entspricht und die entweder
 // landesweit gelten, für den Landkreis des Standorts (gebiet.kreis, z. B. "Landkreis Leer") oder für seinen Ort
 // (gebiet.gemeinde; Namen wie in lib/ort/standort.ts, z. B. "München", "Frankfurt am Main", "Oldenburg (Oldb)").
 // Landes-, Kreis- und Gemeindedienste können sich ergänzen und überschneiden (z. B. Bayern landesweit + München). Ein leeres Ergebnis bedeutet nur bei
 // vollstaendig === true "kein Plan / kein Denkmal", sonst "im Dienst nicht verzeichnet".
-// browser === false hieße: nur serverseitig nutzbar (fehlende CORS-Kopfzeilen) – derzeit erlauben alle Dienste den Browser.
+// browser === false: nur serverseitig nutzbar (fehlende oder fehlerhafte CORS-Kopfzeilen) – die Online-Version überspringt
+// diese Dienste (lib/ort/index.ts); betrifft die Landkreise Harburg und Fulda.
 //
 // Bewusst nicht angebunden (Begründung jeweils in der Länderdatei):
 //  - B-Pläne: Saarland (Nutzungsbedingungen erlauben nur das Anschauen im GeoPortal), Braunschweig (Nutzungsverbot auf
 //    anderen Internetseiten), Hannover, Hessen landesweit, Kiel/Lübeck, Mainz u. a. (kein offener Abfragedienst),
-//    Landkreise Wittmund (Langeoog, Spiekeroog) und Friesland (Wangerooge): kein erreichbarer Dienst
-//  - Denkmale: Brandenburg (BLDAM: Veröffentlichung nur mit schriftlicher Zustimmung), Mecklenburg-Vorpommern landesweit
-//    (Dienst eingestellt), Thüringen (kein Dienst des Landesamts), archäologische Denkmale in Sachsen und
-//    Schleswig-Holstein, Bodendenkmale in Bremen (nur mit Anmeldung)
-import { bwArokBplan, bwDenkmal, stuttgartBplan } from "./baden-wuerttemberg";
+//    Landkreise Wittmund (Langeoog, Spiekeroog) und Friesland (Wangerooge): kein erreichbarer Dienst; Osnabrück, Stadt
+//    Hameln, LK Cuxhaven, Kreis Nordfriesland (keine bzw. widersprüchliche Lizenz)
+//  - Denkmale: Brandenburger Landesamt BLDAM (Veröffentlichung nur mit schriftlicher Zustimmung; angebunden ist nur
+//    Frankfurt (Oder)), Mecklenburg-Vorpommern landesweit (Dienst eingestellt; angebunden sind Rostock, Schwerin und vier
+//    Landkreise), Thüringer Landesamt (kein Dienst; angebunden sind die aus ALKIS abgeleiteten Denkmale der GDI-Th),
+//    archäologische Denkmale in Sachsen und Schleswig-Holstein, Bodendenkmale in Bremen (nur mit Anmeldung)
+import { bwArokBplan, bwDenkmal, freiburgBplan, stuttgartBplan } from "./baden-wuerttemberg";
 import { bayernBplan, bayernDenkmal, muenchenBplan, nuernbergBplan } from "./bayern";
 import { berlinBplan, berlinDenkmal } from "./berlin";
-import { brandenburgBplan } from "./brandenburg";
+import { brandenburgBplan, frankfurtOderDenkmal } from "./brandenburg";
 import { bremenBplan, bremenDenkmal, bremerhavenBplan } from "./bremen";
 import { hamburgBplan, hamburgDenkmal } from "./hamburg";
-import { frankfurtBplan, hessenDenkmal } from "./hessen";
-import { mvBplan, rostockDenkmal, schwerinDenkmal } from "./mecklenburg-vorpommern";
-import { aurichBplan, leerBplan, niedersachsenDenkmal, oldenburgBplan } from "./niedersachsen";
-import { dortmundDenkmal, koelnDenkmal, nrwBplan, nrwDenkmal } from "./nordrhein-westfalen";
+import {
+  bergstrasseBplan, frankfurtBplan, fuldaBplan, grossGerauBplan, hanauBplan, hessenDenkmal, hochtaunusBplan, limburgWeilburgBplan, odenwaldBplan,
+  rheingauTaunusBplan, ruesselsheimBplan, wetterauBplan,
+} from "./hessen";
+import {
+  landkreisRostockDenkmal, ludwigslustParchimDenkmal, mvBplan, rostockDenkmal, schwerinDenkmal, seenplatteDenkmal, vorpommernRuegenDenkmal,
+} from "./mecklenburg-vorpommern";
+import {
+  aurichBplan, diepholzBplan, goettingenBplan, hamelnPyrmontBplan, harburgBplan, hildesheimBplan, langenhagenBplan, leerBplan, niedersachsenDenkmal,
+  nienburgBplan, oldenburgBplan, osterholzBplan, rotenburgBplan, stadeBplan,
+} from "./niedersachsen";
+import { dortmundDenkmal, duisburgBplan, koelnDenkmal, muensterBplan, nrwBplan, nrwDenkmal } from "./nordrhein-westfalen";
 import { rlpBplan, rlpDenkmal } from "./rheinland-pfalz";
 import { saarlandDenkmal } from "./saarland";
 import { sachsenBplan, sachsenDenkmal } from "./sachsen";
 import { sachsenAnhaltBplan, sachsenAnhaltDenkmal } from "./sachsen-anhalt";
 import { shBplan, shDenkmal } from "./schleswig-holstein";
-import { thueringenBplan } from "./thueringen";
+import { thueringenBplan, thueringenDenkmal } from "./thueringen";
 import type { BplanDienst, DenkmalDienst, DienstGebiet } from "./typen";
 
 export type { BplanDienst, DenkmalDienst, DenkmalTreffer, DienstErgebnis, DienstGebiet, PlanTreffer } from "./typen";
@@ -37,6 +49,7 @@ export type { BplanDienst, DenkmalDienst, DenkmalTreffer, DienstErgebnis, Dienst
 export const BPLAN_DIENSTE: BplanDienst[] = [
   bwArokBplan,
   stuttgartBplan,
+  freiburgBplan,
   bayernBplan,
   muenchenBplan,
   nuernbergBplan,
@@ -46,11 +59,33 @@ export const BPLAN_DIENSTE: BplanDienst[] = [
   bremerhavenBplan,
   hamburgBplan,
   frankfurtBplan,
+  hochtaunusBplan,
+  wetterauBplan,
+  bergstrasseBplan,
+  grossGerauBplan,
+  rheingauTaunusBplan,
+  limburgWeilburgBplan,
+  odenwaldBplan,
+  hanauBplan,
+  ruesselsheimBplan,
+  fuldaBplan,
   mvBplan,
   oldenburgBplan,
   leerBplan,
   aurichBplan,
+  osterholzBplan,
+  rotenburgBplan,
+  stadeBplan,
+  nienburgBplan,
+  diepholzBplan,
+  harburgBplan,
+  hamelnPyrmontBplan,
+  goettingenBplan,
+  hildesheimBplan,
+  langenhagenBplan,
   nrwBplan,
+  muensterBplan,
+  duisburgBplan,
   rlpBplan,
   sachsenBplan,
   sachsenAnhaltBplan,
@@ -62,11 +97,16 @@ export const DENKMAL_DIENSTE: DenkmalDienst[] = [
   bwDenkmal,
   bayernDenkmal,
   berlinDenkmal,
+  frankfurtOderDenkmal,
   bremenDenkmal,
   hamburgDenkmal,
   hessenDenkmal,
   rostockDenkmal,
   schwerinDenkmal,
+  landkreisRostockDenkmal,
+  vorpommernRuegenDenkmal,
+  ludwigslustParchimDenkmal,
+  seenplatteDenkmal,
   niedersachsenDenkmal,
   nrwDenkmal,
   koelnDenkmal,
@@ -76,6 +116,7 @@ export const DENKMAL_DIENSTE: DenkmalDienst[] = [
   sachsenDenkmal,
   sachsenAnhaltDenkmal,
   shDenkmal,
+  thueringenDenkmal,
 ];
 
 const gleich = (a: string, b: string) => a.localeCompare(b, "de", { sensitivity: "base" }) === 0;

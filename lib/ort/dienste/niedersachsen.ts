@@ -10,34 +10,11 @@
 //  - Langeoog, Spiekeroog (Landkreis Wittmund): die frühere ArcGIS-Online-App "Bauleitplanung öffentlich" ist nicht mehr
 //    erreichbar ("Subscription is canceled"), kein anderer offener Dienst gefunden – nur PDFs auf den Gemeindeseiten
 //  - Wangerooge (Landkreis Friesland): Datensatz "Bebauungspläne im Landkreis Friesland" nur als Metadaten (NUMIS), ohne Dienst
-import { holeJson } from "../abruf";
 import { BPLAN_QUELLE, BPLAN_VIEWER, bplaeneAmPunkt } from "../bplan";
 import { DENKMAL_QUELLE, DENKMAL_VIEWER, denkmaleImUmkreis } from "../denkmal";
-import { esriGeometrie, fehlerErgebnis, unlesbar, umrissVon, wert, webLink, type Punkt } from "./hilfen";
+import { bboxBreiteLaenge, datumText, esriGeometrie, fehlerErgebnis, umrissVon, wert, webLink, type Punkt } from "./hilfen";
+import { arcgisBplan, esriAmPunkt, geojsonBplan, type ZuPlan } from "./plandienste";
 import type { BplanDienst, DenkmalDienst, PlanTreffer } from "./typen";
-
-interface EsriAntwort {
-  features?: { attributes: Record<string, unknown>; geometry?: unknown }[];
-  error?: { message?: string };
-}
-
-/** Objekte einer ArcGIS-MapServer-Ebene, die den Punkt enthalten (Geometrie in WGS84) */
-async function esriAmPunkt(ebeneUrl: string, lat: number, lon: number): Promise<NonNullable<EsriAntwort["features"]>> {
-  const params = new URLSearchParams({
-    geometry: `${lon},${lat}`,
-    geometryType: "esriGeometryPoint",
-    inSR: "4326",
-    spatialRel: "esriSpatialRelIntersects",
-    outFields: "*",
-    returnGeometry: "true",
-    outSR: "4326",
-    maxAllowableOffset: "0.000005",
-    f: "json",
-  });
-  const a = await holeJson<EsriAntwort>(`${ebeneUrl}/query?${params}`);
-  if (a.error || !Array.isArray(a.features)) throw unlesbar(a.error?.message ?? "keine Objektliste");
-  return a.features;
-}
 
 // --- Landkreis Leer (mit Borkum) ---
 
@@ -184,3 +161,298 @@ export const niedersachsenDenkmal: DenkmalDienst = {
     return r.status === "ok" ? { status: "ok", treffer: r.denkmale } : r;
   },
 };
+
+// ---------------------------------------------------------------------------------------------
+// Weitere Landkreise und Städte (Recherche und Prüfung 18.11.2026; Lizenzen aus den Metadaten im GDI-DE-Katalog bzw. im
+// Dienst, CORS mit fremder Herkunft geprüft). Nur rechtskräftige Bebauungspläne zählen; Satzungen nach §§ 34, 35 BauGB,
+// örtliche Bauvorschriften und Pläne in Aufstellung werden herausgefiltert. Kein Dienst erklärt sich für vollständig.
+// Bewusst NICHT angebunden: Stadt Osnabrück (kein Rechtsstand im Dienst, überwiegend "digital Arbeitsplan", Metadaten
+// widersprüchlich: dl-de/by-2.0 und zugleich "Lesen für Infozwecke"), Stadt Hameln und LK Cuxhaven (keine Lizenz).
+
+/** XPlanung-Planart: Bebauungspläne (1000 BPlan, 10000 einfach, 10001 qualifiziert, 10002 Wohnraumversorgung) und
+ *  vorhabenbezogene (3000, 3100 Vorhaben- und Erschließungsplan); Satzungen (4000 ff., 5000), örtliche Bauvorschriften
+ *  (7000) und Sonstiges zählen nicht */
+const XPLAN_BPLAN = new Set([1000, 10000, 10001, 10002, 3000, 3100]);
+const XPLAN_VORHABEN = new Set([3000, 3100]);
+/** XPlanung-Rechtsstand: 4000 in Kraft, 4500 teilweise untergegangen */
+const XPLAN_IN_KRAFT = new Set([4000, 4500]);
+const zahl = (x: unknown) => Number(wert(x));
+/** Fassung an den Namen hängen, außer bei der Ursprungsfassung (Änderungen sind eigene Satzungen) */
+const mitFassung = (name: string, fassung: unknown) => {
+  const f = wert(fassung);
+  return f && !/^(urschrift|ursprungsplan|urplan|original)$/i.test(f) ? `${name} – ${f}` : name;
+};
+const vorhabenText = (ja: boolean, sprache: "de" | "en") => (ja ? LEER_VORHABEN.VB[sprache] : undefined);
+
+/** Landkreis Osterholz – Planmanager (dl-de/by-2.0, GDI-DE eb15f842-…) */
+export const osterholzBplan = arcgisBplan({
+  id: "ni-osterholz-bplan",
+  quelle: "Landkreis Osterholz – Geltungsbereiche der Bebauungspläne (ArcGIS, dl-de/by-2.0)",
+  viewer: "https://experience.arcgis.com/experience/9dc95fc7755647028454e5f45b38adfb",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Osterholz" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Bebauungspläne aller Gemeinden des Landkreises Osterholz mit Satzung als PDF; laut Landkreis ohne Gewähr für Vollständigkeit.",
+    en: "Development plans of all municipalities in the district of Osterholz with the statute as PDF; no guarantee of completeness according to the district.",
+  },
+  ebene: "https://gis.landkreis-osterholz.de/arcgis/rest/services/www/BPlanWWW/MapServer/0",
+  fehlerName: "Bebauungspläne Landkreis Osterholz",
+  // STAND: "Rechtskräftig" / "In Aufstellung befindlich"; PLANART: B, VB
+  zuPlan: (x, sprache) =>
+    wert(x.STAND) === "Rechtskräftig" && ["B", "VB"].includes(wert(x.PLANART) ?? "")
+      ? {
+          nummer: "",
+          name: wert(x.PLANNAME) ?? "",
+          rechtsverbindlichSeit: datumText(x.INKRAFT, sprache),
+          baunvo: wert(x.BAUNVONUM),
+          vorhabenbezogen: wert(x.PLANART) === "VB",
+          verfahren: vorhabenText(wert(x.PLANART) === "VB", sprache),
+          link: webLink(x.URKUNDE),
+        }
+      : null,
+});
+
+/** Landkreis Rotenburg (Wümme) – liefert keine Geometrie, nur die Treffer am Punkt (dl-de/zero-2.0, GDI-DE 0b49ff48-…) */
+export const rotenburgBplan = arcgisBplan({
+  id: "ni-rotenburg-bplan",
+  quelle: "Landkreis Rotenburg (Wümme) – Geltungsbereiche der Bebauungspläne (ArcGIS, dl-de/zero-2.0)",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Rotenburg (Wümme)" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Gültige und rechtskräftige Bebauungspläne der Gemeinden des Landkreises Rotenburg (Wümme), mit Satzung als PDF; der Dienst liefert keine Umrisse für die Lageskizze.",
+    en: "Valid, legally binding development plans of the municipalities in the district of Rotenburg (Wümme), with the statute as PDF; the service provides no outlines for the site map.",
+  },
+  ebene: "https://gis.lk-row.de/server/rest/services/Geoportal_BPlaene_LKROW_WFS/MapServer/8",
+  fehlerName: "Bebauungspläne Landkreis Rotenburg (Wümme)",
+  zuPlan: (x, sprache) => {
+    const art = zahl(x.PLANART);
+    if (!XPLAN_BPLAN.has(art)) return null;
+    const aenderung = wert(x.AENDERUNG);
+    return {
+      nummer: wert(x.NUMMER) ?? "",
+      name: `${wert(x.NAME) ?? ""}${aenderung && aenderung !== "0" ? ` – ${aenderung}. Änderung` : ""}`,
+      rechtsverbindlichSeit: datumText(x.RECHTSDATUM, sprache),
+      vorhabenbezogen: XPLAN_VORHABEN.has(art),
+      verfahren: vorhabenText(XPLAN_VORHABEN.has(art), sprache),
+      link: webLink(x.RECHTSURL_I),
+    };
+  },
+});
+
+/** Landkreis Stade – ohne Hansestadt Stade und Buxtehude (dl-de/by-2.0, ArcGIS-Item aa56a135…) */
+export const stadeBplan = arcgisBplan({
+  id: "ni-stade-bplan",
+  quelle: "Landkreis Stade – Bebauungspläne (ArcGIS Online, dl-de/by-2.0)",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Stade" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Bebauungspläne der Gemeinden des Landkreises Stade mit Planzeichnung als PDF; laut Landkreis fehlen die Pläne der Hansestädte Stade und Buxtehude ganz oder teilweise.",
+    en: "Development plans of the municipalities in the district of Stade with plan drawing as PDF; according to the district, plans of the Hanseatic towns of Stade and Buxtehude are missing entirely or in part.",
+  },
+  ebene: "https://services1.arcgis.com/gj4UKoDigJC9AuBF/arcgis/rest/services/Bebauungsplaene/FeatureServer/0",
+  fehlerName: "Bebauungspläne Landkreis Stade",
+  // AGO_Kategorie: Bebauungsplan, Satzung, Vorhaben- und Erschließungsplan, Aufbauplan, Veränderungssperre
+  zuPlan: (x, sprache) => {
+    const kat = wert(x.AGO_Kategorie) ?? "";
+    const typ = wert(x.TYP) ?? "";
+    const aenderung = typ.match(/(\d+)\.\s*Änderung/i);
+    const name = `${wert(x.LANGNAME) ?? ""}${aenderung ? ` – ${aenderung[1]}. Änderung` : ""}`;
+    if (kat === "Veränderungssperre") return { nummer: wert(x.Plannummer) ?? "", name, vorhabenbezogen: false, sicherung: "veraenderungssperre" };
+    if (kat !== "Bebauungsplan" && kat !== "Vorhaben- und Erschließungsplan") return null;
+    const vorhaben = /vorhaben/i.test(`${kat} ${typ}`);
+    return {
+      nummer: wert(x.Plannummer) ?? "",
+      name,
+      vorhabenbezogen: vorhaben,
+      verfahren: vorhaben ? (kat === "Vorhaben- und Erschließungsplan" ? LEER_VORHABEN["V+E"] : LEER_VORHABEN.VB)[sprache] : undefined,
+      link: webLink(x.PDF_PlanZ),
+    };
+  },
+});
+
+/** Landkreis Nienburg/Weser – XPlanung-Felder (dl-de/zero-2.0, GDI-DE b196a83b-…) */
+export const nienburgBplan = arcgisBplan({
+  id: "ni-nienburg-bplan",
+  quelle: "Landkreis Nienburg/Weser – Bebauungspläne (XPlanung, ArcGIS, dl-de/zero-2.0)",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Nienburg/Weser" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Bebauungspläne der Gemeinden des Landkreises Nienburg/Weser im XPlanung-Format (Rechtsstand „in Kraft“), mit Plan als Datei; keine Aussage zur Vollständigkeit.",
+    en: "Development plans of the municipalities in the district of Nienburg/Weser in XPlanung format (legal status “in force”), with the plan as a file; no statement on completeness.",
+  },
+  ebene: "https://geoportal.lk-ni.de/server/rest/services/opengov/BPlaene_sonstigePlaene/MapServer/68",
+  fehlerName: "Bebauungspläne Landkreis Nienburg/Weser",
+  zuPlan: (x, sprache) => {
+    const art = zahl(x.planArt);
+    if (!XPLAN_BPLAN.has(art) || !XPLAN_IN_KRAFT.has(zahl(x.rechtsstand))) return null;
+    return {
+      nummer: wert(x.nummer) ?? "",
+      name: wert(x.name) ?? "",
+      rechtsverbindlichSeit: datumText(x.inkrafttretensDatum, sprache),
+      vorhabenbezogen: XPLAN_VORHABEN.has(art),
+      verfahren: vorhabenText(XPLAN_VORHABEN.has(art), sprache),
+      link: webLink(x.refRechtsplan),
+    };
+  },
+});
+
+/** Landkreis Diepholz – Planauskunft aller Kommunen (dl-de/by-2.0, GDI-DE 166b16f9-…) */
+export const diepholzBplan = arcgisBplan({
+  id: "ni-diepholz-bplan",
+  quelle: "Landkreis Diepholz – Planauskunft, rechtskräftige Bebauungspläne (ArcGIS, dl-de/by-2.0)",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Diepholz" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Geltungsbereiche der rechtskräftigen Bebauungspläne aller Kommunen im Landkreis Diepholz; Satzungs-PDF nur teilweise.",
+    en: "Areas of the legally binding development plans of all municipalities in the district of Diepholz; statute PDFs only in part.",
+  },
+  ebene: "https://geo.diepholz.de/arcgis/rest/services/Download/Planauskunft_Download_AGO/MapServer/1",
+  fehlerName: "Planauskunft Landkreis Diepholz",
+  zuPlan: (x, sprache) =>
+    wert(x.STAND) === "rechtskräftig" && wert(x.PLANART) === "B"
+      ? {
+          nummer: "",
+          name: mitFassung(wert(x.PLANNAME) ?? "", x.FASSUNG),
+          rechtsverbindlichSeit: datumText(x.INKRAFT, sprache),
+          baunvo: wert(x.BAUNVONUM),
+          vorhabenbezogen: false,
+          link: webLink(x.URKUNDE),
+        }
+      : null,
+});
+
+/** Landkreis Harburg – nur über den Server nutzbar: Die CORS-Kopfzeile ist falsch geschrieben ("Access-Control-AllowOrigin"),
+ *  Browser ignorieren sie (dl-de/zero-2.0, GDI-DE 163c95e8-…) */
+export const harburgBplan = arcgisBplan({
+  id: "ni-harburg-bplan",
+  quelle: "Landkreis Harburg – Bebauungspläne (ArcGIS, dl-de/zero-2.0)",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Harburg" },
+  vollstaendig: false,
+  browser: false,
+  abdeckung: {
+    de: "Bebauungspläne der Gemeinden des Landkreises Harburg mit Planzeichnung als PDF; laut Landkreis ohne Gewähr für Vollständigkeit. In der Online-Version nicht abrufbar (technische Sperre des Dienstes).",
+    en: "Development plans of the municipalities in the district of Harburg with plan drawing as PDF; no guarantee of completeness according to the district. Not available in the online version (technical restriction of the service).",
+  },
+  ebene: "https://gis.itk-harburg.de/arcgis/rest/services/WMS/LKHarburg_Bebauungsplan/MapServer/0",
+  fehlerName: "Bebauungspläne Landkreis Harburg",
+  zuPlan: (x, sprache) => {
+    const art = zahl(x.PLANART);
+    if (!XPLAN_BPLAN.has(art)) return null;
+    return {
+      nummer: "",
+      name: wert(x.NAME) ?? "",
+      rechtsverbindlichSeit: datumText(x.RECHTSKRAFT, sprache),
+      vorhabenbezogen: XPLAN_VORHABEN.has(art),
+      verfahren: vorhabenText(XPLAN_VORHABEN.has(art), sprache),
+      link: webLink(x.PLANZEICHNUNG),
+    };
+  },
+});
+
+/** Landkreis Hameln-Pyrmont – 7 Gemeinden ohne Stadt Hameln (CC BY-SA 4.0, GDI-DE 2db8a6e9-…) */
+export const hamelnPyrmontBplan = arcgisBplan({
+  id: "ni-hameln-pyrmont-bplan",
+  quelle: "Landkreis Hameln-Pyrmont – Planauskunft, Bebauungspläne (ArcGIS, CC BY-SA 4.0)",
+  gebiet: { land: "Niedersachsen", kreis: "Landkreis Hameln-Pyrmont" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Bebauungspläne der Gemeinden des Landkreises Hameln-Pyrmont ohne die Stadt Hameln; keine Aussage zur Vollständigkeit.",
+    en: "Development plans of the municipalities in the district of Hameln-Pyrmont excluding the town of Hameln; no statement on completeness.",
+  },
+  ebene: "https://gis.hameln-pyrmont.de/arcgis/rest/services/public/Planauskunft2021/MapServer/2",
+  fehlerName: "Planauskunft Landkreis Hameln-Pyrmont",
+  // BPRECHTSSTAND: XPlanung-Rechtsstand; PLANART wie im Landkreis Leer (B, BI, BQ, BE, VB, V+E)
+  zuPlan: (x, sprache) => {
+    const art = wert(x.PLANART) ?? "";
+    if (!LEER_PLAN.has(art) || !XPLAN_IN_KRAFT.has(zahl(x.BPRECHTSSTAND))) return null;
+    return {
+      nummer: "",
+      name: mitFassung(wert(x.PLANNAME) ?? "", x.FASSUNG),
+      rechtsverbindlichSeit: datumText(x.INKRAFT, sprache),
+      vorhabenbezogen: art in LEER_VORHABEN,
+      verfahren: LEER_VORHABEN[art]?.[sprache],
+    };
+  },
+});
+
+/** Stadt Göttingen – INSPIRE-Bebauungspläne (dl-de/by-2.0, GDI-DE d22ef753-…) */
+export const goettingenBplan = arcgisBplan({
+  id: "ni-goettingen-bplan",
+  quelle: "Stadt Göttingen – Bebauungspläne (INSPIRE, ArcGIS, dl-de/by-2.0)",
+  viewer: "https://geoportal.goettingen.de/",
+  gebiet: { land: "Niedersachsen", gemeinde: "Göttingen" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Umringe der gültigen und rechtskräftigen Bebauungspläne der Stadt Göttingen mit Plan als PDF; eine ausdrückliche Aussage zur Vollständigkeit fehlt.",
+    en: "Outlines of the valid, legally binding development plans of the City of Göttingen with plan as PDF; there is no explicit statement on completeness.",
+  },
+  ebene: "https://geoportal.goettingen.de/arcgis/rest/services/Inspire/Inspire_Internet/MapServer/0",
+  fehlerName: "Bebauungspläne Stadt Göttingen",
+  zuPlan: (x, sprache) =>
+    wert(x.STAND) === "rechtskräftig" && ["B", "VB"].includes(wert(x.PLANART) ?? "")
+      ? {
+          nummer: wert(x.PLAN_NR) ?? "",
+          name: wert(x.officialTitle) ?? wert(x.Bezeichnung) ?? "",
+          rechtsverbindlichSeit: datumText(x.validFrom, sprache),
+          baunvo: wert(x.BAUNVONUM),
+          vorhabenbezogen: wert(x.PLANART) === "VB",
+          verfahren: vorhabenText(wert(x.PLANART) === "VB", sprache),
+          link: webLink(x.planDocument),
+        }
+      : null,
+});
+
+/** INSPIRE "SpatialPlan" (WFS, GeoJSON): rechtskräftig = processStepGeneral legalForce; Bebauungspläne = Plantyp 6_… */
+const inspireBplan: ZuPlan = (x, sprache) => {
+  const schritt = JSON.stringify(x.processStepGeneral ?? "");
+  const typ = JSON.stringify(x.planTypeName ?? "");
+  if (!/legalForce/.test(schritt) || !/PlanTypeNameValue\/6_/.test(typ)) return null;
+  return {
+    nummer: "",
+    name: wert(x.officialTitle) ?? wert(x.alternativeTitle) ?? "",
+    rechtsverbindlichSeit: datumText(x.validFrom, sprache),
+    vorhabenbezogen: /vorhabenbezogen/i.test(typ),
+    verfahren: vorhabenText(/vorhabenbezogen/i.test(typ), sprache),
+  };
+};
+const inspireUrl = (dienst: string) => (p: Punkt) =>
+  `${dienst}?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=plu:SpatialPlan&COUNT=50&OUTPUTFORMAT=${encodeURIComponent("application/geo+json")}&SRSNAME=EPSG:4326&BBOX=${bboxBreiteLaenge(p, 2)}`;
+
+/** Stadt Hildesheim – INSPIRE-WFS aus XPlanung (dl-de/by-2.0, Rechteinhaber Stadt Hildesheim) */
+export const hildesheimBplan = geojsonBplan({
+  id: "ni-hildesheim-bplan",
+  quelle: "Stadt Hildesheim – Bebauungspläne (INSPIRE-WFS, dl-de/by-2.0)",
+  gebiet: { land: "Niedersachsen", gemeinde: "Hildesheim" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Alle in das INSPIRE-Schema überführten Bebauungspläne der Stadt Hildesheim (aus XPlanung); keine Aussage zur Vollständigkeit.",
+    en: "All development plans of the City of Hildesheim transferred to the INSPIRE schema (from XPlanung); no statement on completeness.",
+  },
+  url: inspireUrl("https://services.gdi.stadt-hildesheim.de/ows/services/org.2.75925358-79cc-4fa7-81de-bc9f0adcda9f_wfs"),
+  fehlerName: "Bebauungspläne Stadt Hildesheim",
+  zuPlan: inspireBplan,
+});
+
+/** Stadt Langenhagen (Region Hannover) – INSPIRE-WFS über KDO govconnect (CC BY 4.0) */
+export const langenhagenBplan = geojsonBplan({
+  id: "ni-langenhagen-bplan",
+  quelle: "Stadt Langenhagen – Bebauungspläne (INSPIRE-WFS, CC BY 4.0, geodaten.langenhagen.de)",
+  gebiet: { land: "Niedersachsen", gemeinde: "Langenhagen" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Bebauungspläne der Stadt Langenhagen im INSPIRE-Schema; keine Aussage zur Vollständigkeit.",
+    en: "Development plans of the City of Langenhagen in the INSPIRE schema; no statement on completeness.",
+  },
+  url: inspireUrl("https://inspire.govconnect.de/ows/services/org.52.b60f142d-fffa-4f86-9270-9e83e35ee1f5_wfs"),
+  fehlerName: "Bebauungspläne Stadt Langenhagen",
+  zuPlan: inspireBplan,
+});

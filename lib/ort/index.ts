@@ -12,7 +12,7 @@ import { gebiet, type Sprache, zweisprachig } from "../sprache";
 import type { Antwort, NormRef, OrtAnsicht } from "../typen";
 import { BPLAN_QUELLE, BPLAN_VIEWER } from "./bplan";
 import { planDokumente, weiterePlaene } from "./bplan-dokumente";
-import { BPLAN_DIENSTE, DENKMAL_DIENSTE, diensteFuer, type DienstErgebnis } from "./dienste";
+import { BPLAN_DIENSTE, DENKMAL_DIENSTE, diensteFuer, type DienstErgebnis, type PlanTreffer } from "./dienste";
 import { type AdressEingabe, findeStandort } from "./standort";
 
 const RADIUS_M = 50;
@@ -80,6 +80,37 @@ const FRIST_MS = 15000;
 const frist = <T,>(p: Promise<T>, ersatz: () => T): Promise<T> =>
   Promise.race([p, new Promise<T>((ok) => setTimeout(() => ok(ersatz()), FRIST_MS))]);
 
+/**
+ * Derselbe Plan aus einem Landes- und einem Kreis- bzw. Gemeindedienst: Die Dienste schreiben Nummer und Namen verschieden
+ * ("_190__" / "190", "549-Altstadt – Duisburg" / "Altstadt", "Eisenbahnstraße - Süd – Freiburg im Breisgau" /
+ * "Bebauungsplan "Eisenbahnstraße-Süd""). Die Dienste sind von allgemein nach genau sortiert – der genauere gewinnt.
+ * Verglichen wird nur zwischen verschiedenen Diensten (innerhalb eines Dienstes teilen Änderungen dieselbe Nummer).
+ */
+function ohneDoppelte(ergebnisse: DienstErgebnis<PlanTreffer>[], ort: string): DienstErgebnis<PlanTreffer>[] {
+  const nr = (s: string) => s.toLowerCase().replace(/[^0-9a-zäöü]/g, "").replace(/^0+/, "");
+  const ortszusatz = ort ? new RegExp(`\\s*[–-]\\s*${ort.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`, "i") : null;
+  const nm = (s: string) =>
+    (ortszusatz ? s.replace(ortszusatz, "") : s)
+      .toLowerCase()
+      .replace(/ß/g, "ss")
+      .replace(/^\s*\d+[a-z]?\s*[-–:]\s*/, "")
+      .replace(/bebauungsplan(es)?/g, "")
+      .replace(/[^0-9a-zäöü]/g, "");
+  const gesehen: { nr: string; nm: string }[] = [];
+  const aus = [...ergebnisse];
+  for (let i = aus.length - 1; i >= 0; i--) {
+    const e = aus[i];
+    if (e.status !== "ok") continue;
+    const eigene = e.treffer.map((p) => ({ nr: nr(p.nummer), nm: nm(p.name) }));
+    aus[i] = {
+      ...e,
+      treffer: e.treffer.filter((_, k) => !gesehen.some((g) => (eigene[k].nr && g.nr === eigene[k].nr) || (eigene[k].nm.length > 3 && g.nm === eigene[k].nm))),
+    };
+    gesehen.push(...eigene);
+  }
+  return aus;
+}
+
 /** Ein Dienst, der wirft statt "fehler" zu melden oder die Frist überschreitet, zählt als ausgefallen */
 const sicher = <T,>(p: Promise<DienstErgebnis<T>>, sprache: Sprache): Promise<DienstErgebnis<T>> =>
   frist(
@@ -133,9 +164,12 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     };
   }
 
-  // Dienste für Land, Landkreis und Gemeinde (landesweite zuerst) – alle gleichzeitig abfragen
-  const bpDienste = diensteFuer(BPLAN_DIENSTE, standort.land, standort.ort, standort.kreis);
-  const dmDienste = diensteFuer(DENKMAL_DIENSTE, standort.land, standort.ort, standort.kreis);
+  // Dienste für Land, Landkreis und Gemeinde (landesweite zuerst) – alle gleichzeitig abfragen. Im Browser (Online-Version)
+  // nur Dienste, die Abfragen aus fremden Webseiten erlauben (browser: true); die übrigen nutzt nur die lokale Fassung.
+  const imBrowser = typeof window !== "undefined";
+  const nutzbar = <T extends { browser: boolean }>(d: T) => !imBrowser || d.browser;
+  const bpDienste = diensteFuer(BPLAN_DIENSTE, standort.land, standort.ort, standort.kreis).filter(nutzbar);
+  const dmDienste = diensteFuer(DENKMAL_DIENSTE, standort.land, standort.ort, standort.kreis).filter(nutzbar);
   const [bpErg, dmErg, dokumente, weitere] = await Promise.all([
     Promise.all(bpDienste.map((d) => sicher(d.abfrage(standort.lat, standort.lon, sprache), sprache))),
     Promise.all(dmDienste.map((d) => sicher(d.abfrage(standort.lat, standort.lon, RADIUS_M, sprache), sprache))),
@@ -143,7 +177,7 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
     oldenburg ? frist(planDokumente(standort.lat, standort.lon).catch(() => null), () => null) : null,
     oldenburg ? frist(weiterePlaene(standort.lat, standort.lon, sprache).catch(() => null), () => null) : null,
   ]);
-  const bp = zusammenfassen(bpDienste, bpErg, (p) => `${p.nummer}|${p.name}`, sprache);
+  const bp = zusammenfassen(bpDienste, ohneDoppelte(bpErg, standort.ort), (p) => `${p.nummer}|${p.name}`, sprache);
   // Veränderungssperren, die ein Dienst mitführt (z. B. Landkreis Aurich), sind keine Pläne: getrennt anzeigen – wie die
   // laufenden Verfahren aus dem Oldenburger Kartenportal. null = nicht abrufbar (nur Oldenburg fragt sie eigens ab).
   const sperren = bp?.status === "ok" ? bp.treffer.filter((p) => p.sicherung === "veraenderungssperre") : [];

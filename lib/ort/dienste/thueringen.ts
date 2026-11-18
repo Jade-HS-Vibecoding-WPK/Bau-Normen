@@ -1,12 +1,16 @@
 // Thüringen: Bebauungspläne aus dem "WFS für kommunale Geodaten" der GDI-Th (TLBG), Ebene "Bebauungspläne und Satzungen
 // Thüringen" (CC BY 4.0, Access-Control-Allow-Origin: *, geprüft 17.11.2026).
-// Denkmale: Das Thüringische Landesamt für Denkmalpflege und Archäologie bietet keinen Geodatendienst an; es gibt nur
-// einen aus dem Liegenschaftskataster (ALKIS) abgeleiteten INSPIRE-WMS der Vermessungsverwaltung mit bloßen Namen und
-// ohne verlässlichen Umkreis – kein Dienst des Denkmalamts, daher nicht angebunden.
+// Denkmale: Das Thüringische Landesamt für Denkmalpflege und Archäologie bietet keinen Geodatendienst an. Ersatzweise
+// angebunden ist der INSPIRE-Darstellungsdienst "Schutzgebiete" der Vermessungsverwaltung (TLBG), Unterthema Denkmale,
+// vierteljährlich aus dem Liegenschaftskataster (ALKIS) abgeleitet (Metadaten 605d5273-0c78-45b2-a472-68b422d142b4;
+// CC BY 4.0, Namensnennung "© GDI-Th"; Access-Control-Allow-Origin: *, geprüft 18.11.2026). Fachlich dünn: nur eine
+// Bezeichnung (oft leer), keine Denkmalart, keine Anschrift; GetFeatureInfo liefert weder Umriss noch Begrenzungsrechteck.
 import { holeText } from "../abruf";
 import { zweisprachig } from "../../sprache";
-import { bboxUtm, datumText, fehlerErgebnis, gmlObjekte, LAT_LON, liegtIn, umrissVon, wert, webLink, type Punkt } from "./hilfen";
-import type { BplanDienst, PlanTreffer } from "./typen";
+import {
+  bboxUtm, datumText, fehlerErgebnis, gmlObjekte, LAT_LON, liegtIn, LON_LAT, umrissVon, wert, webLink, wmsInfoUrl, wmsStufen, type Punkt,
+} from "./hilfen";
+import type { BplanDienst, DenkmalDienst, DenkmalTreffer, PlanTreffer } from "./typen";
 
 const WFS = "https://www.geoproxy.geoportal-th.de/geoproxy/services/kommunal/komm_wfs";
 /** XPlanung-Planarten, die Bebauungspläne sind (ohne Klarstellungs-/Innenbereichssatzungen, örtliche Bauvorschriften, Sonstiges) */
@@ -52,6 +56,53 @@ export const thueringenBplan: BplanDienst = {
       return { status: "ok", treffer };
     } catch (e) {
       return fehlerErgebnis("bplan", "Bebauungspläne Thüringen", e, sprache);
+    }
+  },
+};
+
+// --- Denkmale (aus ALKIS abgeleitet) ---
+
+const PS_WMS = "https://www.geoproxy.geoportal-th.de/geoproxy/services/INSPIREps";
+/** Treffer-Toleranz des Dienstes in Pixeln – ausgemessen am Erfurter Dom etwa 7 (18.11.2026), knapp angesetzt */
+const PS_TOLERANZ_PX = 6.5;
+
+export const thueringenDenkmal: DenkmalDienst = {
+  id: "th-denkmal",
+  quelle: "GDI-Th / TLBG – INSPIRE Schutzgebiete aus ALKIS, Unterthema Denkmale (© GDI-Th, CC BY 4.0)",
+  viewer: "https://www.geoportal-th.de/",
+  gebiet: { land: "Thüringen" },
+  // Kein Dienst des Denkmalamts, sondern aus dem Liegenschaftskataster abgeleitet – Vollständigkeit nicht belegt.
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Ersatzweise aus dem Liegenschaftskataster (ALKIS) abgeleitete Denkmalflächen der Vermessungsverwaltung – kein Dienst des Landesamts für Denkmalpflege, nicht vollständig, nur Bezeichnungen (oft leer), keine Denkmalart und Anschrift. Der Dienst liefert keine Umrisse: Entfernungen nur grob in Stufen (am Standort, bis etwa 10, 25 bzw. 50 m).",
+    en: "As a substitute, monument areas derived from the real estate cadastre (ALKIS) by the surveying administration – not a service of the state heritage office, not complete, names only (often empty), no monument type or address. The service gives no outlines: distances only roughly in steps (at the location, up to about 10, 25 or 50 m).",
+  },
+  async abfrage(lat, lon, radiusM, sprache) {
+    const t = zweisprachig(sprache);
+    const p: Punkt = [lon, lat];
+    try {
+      const funde = await wmsStufen(
+        async (halbeKanteM) =>
+          gmlObjekte(await holeText(wmsInfoUrl(PS_WMS, "PS.ProtectedSite", p, halbeKanteM, "application/vnd.ogc.gml", 100)), LON_LAT)
+            // nur Kulturdenkmale (INSPIRE-Klassen "cultural", "archaeological"), keine Naturschutzgebiete
+            .filter((o) => !wert(o.werte.siteProtectionClassification) || /cultural|archaeolog/i.test(o.werte.siteProtectionClassification)),
+        (o) => wert(o.werte.localId) ?? o.id ?? JSON.stringify(o.werte),
+        radiusM,
+        PS_TOLERANZ_PX,
+      );
+      const treffer: DenkmalTreffer[] = funde.map(({ objekt: o, entfernungM }) => ({
+        name: wert(o.werte.siteName) ?? t("Kulturdenkmal (ohne Bezeichnung im Dienst)", "Cultural monument (no name in the service)"),
+        ausweisung: /archaeolog/i.test(o.werte.siteProtectionClassification ?? "") ? t("Bodendenkmal", "Archaeological monument") : t("Kulturdenkmal", "Cultural monument"),
+        gruppe: false,
+        entfernungM,
+        // keine Geometrie im Dienst – keine Lageskizze
+        umriss: [],
+      }));
+      treffer.sort((x, y) => x.entfernungM - y.entfernungM || x.name.localeCompare(y.name, "de"));
+      return { status: "ok", treffer };
+    } catch (e) {
+      return fehlerErgebnis("denkmal", "Schutzgebiete Thüringen (ALKIS)", e, sprache);
     }
   },
 };

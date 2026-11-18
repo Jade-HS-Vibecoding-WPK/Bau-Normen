@@ -10,6 +10,7 @@ import {
   bboxBreiteLaenge, datumText, denkmaleImUmkreis, fehlerErgebnis, gekuerzt, geoJsonObjekte, liegtIn, LON_LAT, umrechnen, umrissVon, UTM, wert,
   webLink, type DenkmalRoh, type Punkt,
 } from "./hilfen";
+import { geojsonBplan } from "./plandienste";
 import type { BplanDienst, DenkmalDienst, PlanTreffer } from "./typen";
 
 // --- B-Pläne: Raumordnungskataster ---
@@ -181,3 +182,34 @@ export const bwDenkmal: DenkmalDienst = {
     }
   },
 };
+
+// --- B-Pläne: Stadt Freiburg im Breisgau (Prüfung 18.11.2026) ---
+// WFS "Geltungsbereiche der rechtskräftigen Bebauungspläne", Fees: "Dieser Datensatz/Dienst kann gemäß der 'Datenlizenz
+// Deutschland - Namensnennung - Version 2.0' … genutzt werden. 'Datengrundlage: Stadt Freiburg, www.freiburg.de'"
+// (GDI-DE e1ce9975-…). Access-Control-Allow-Origin: *. Nur status_enm "in Kraft" zählt.
+export const freiburgBplan = geojsonBplan({
+  id: "bw-freiburg-bplan",
+  quelle: "Stadt Freiburg im Breisgau – Geltungsbereiche der rechtskräftigen Bebauungspläne (WFS, dl-de/by-2.0, Datengrundlage: Stadt Freiburg)",
+  viewer: "https://geoportal.freiburg.de/freigis/",
+  gebiet: { land: "Baden-Württemberg", gemeinde: "Freiburg im Breisgau" },
+  vollstaendig: false,
+  browser: true,
+  abdeckung: {
+    de: "Geltungsbereiche der rechtskräftigen Bebauungspläne der Stadt Freiburg mit Link zur Planansicht; eine ausdrückliche Aussage zur Vollständigkeit fehlt.",
+    en: "Areas of the legally binding development plans of the City of Freiburg with a link to the plan view; there is no explicit statement on completeness.",
+  },
+  url: (p) =>
+    `https://geoportal.freiburg.de/wfs/stpla_bplan/wfs_mapfile/geltungsbereiche?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms:geltungsbereiche&COUNT=50&OUTPUTFORMAT=${encodeURIComponent("application/json; subtype=geojson; charset=utf-8")}&SRSNAME=EPSG:4326&BBOX=${bboxBreiteLaenge(p, 2)}`,
+  fehlerName: "Bebauungspläne Freiburg",
+  zuPlan: (x, sprache) => {
+    if (wert(x.status_enm) !== "in Kraft") return null;
+    const vorhaben = wert(x.is_vorhabenbplan) === "true";
+    return {
+      nummer: wert(x.nummer) ?? wert(x.plannr) ?? "",
+      name: wert(x.planbez) ?? "",
+      vorhabenbezogen: vorhaben,
+      verfahren: vorhaben ? (sprache === "en" ? "project-related development plan" : "vorhabenbezogener Bebauungsplan") : undefined,
+      link: webLink(x.plan_laden),
+    };
+  },
+});
