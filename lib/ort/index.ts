@@ -398,9 +398,12 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
 
   let denkmal: OrtAnsicht["denkmal"];
   if (dm === null) {
+    // Gibt es im Land Dienste, nur nicht für diesen Ort (z. B. Brandenburg: nur Frankfurt (Oder)), den Ort nennen
+    const imLandAngebunden = DENKMAL_DIENSTE.some((d) => d.gebiet.land === standort.land);
+    const dmWo = imLandAngebunden && standort.ort ? `${standort.ort} (${landText})` : landText;
     denkmal = {
       status: "fehler",
-      hinweis: t(`Für ${landText} ist noch kein Denkmal-Dienst angebunden.`, `No monument service is connected for ${landText} yet.`),
+      hinweis: t(`Für ${dmWo} ist noch kein Denkmal-Dienst angebunden.`, `No monument service is connected for ${dmWo} yet.`),
       quelle: t("nicht angebunden", "not connected"),
       nichtAngebunden: true,
     };
@@ -409,8 +412,8 @@ async function ortsauskunft(e: AdressEingabe, standort: Exclude<Awaited<ReturnTy
       titel: t("Denkmalschutz: keine Aussage möglich", "Monument protection: no statement possible"),
       text:
         t(
-          `Für ${landText} ist kein amtlicher Denkmal-Dienst angebunden. Ob am Standort oder in der Umgebung ein Kulturdenkmal besteht, klären Sie mit der zuständigen Denkmalschutzbehörde oder dem Landesamt für Denkmalpflege. `,
-          `No official monument service is connected for ${landText}. Please check with the competent monument protection authority or the state heritage office whether there is a cultural monument at or near this location. `,
+          `Für ${dmWo} ist kein amtlicher Denkmal-Dienst angebunden. Ob am Standort oder in der Umgebung ein Kulturdenkmal besteht, klären Sie mit der zuständigen Denkmalschutzbehörde oder dem Landesamt für Denkmalpflege. `,
+          `No official monument service is connected for ${dmWo}. Please check with the competent monument protection authority or the state heritage office whether there is a cultural monument at or near this location. `,
         ) + eintragungSatz,
       paragraphen: ds("begriffe", "eintragung"),
       ton: "achtung",

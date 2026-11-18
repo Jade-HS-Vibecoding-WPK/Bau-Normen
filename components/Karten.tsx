@@ -567,7 +567,7 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
   const dText =
     o.denkmal.status === "fehler"
       ? o.denkmal.nichtAngebunden
-        ? t("für dieses Land kein Denkmal-Dienst angebunden", "no monument service connected for this state")
+        ? t("für diesen Ort kein Denkmal-Dienst angebunden", "no monument service connected for this place")
         : t("Dienst nicht erreichbar", "service unreachable")
       : naechstes
         ? `${naechstes.amStandort ? t("hier", "here") : `${naechstes.entfernungM} m`}: ${naechstes.name}${denkmale.length > 1 ? ` (+${denkmale.length - 1})` : ""}`

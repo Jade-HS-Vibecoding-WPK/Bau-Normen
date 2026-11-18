@@ -388,6 +388,17 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                   )}
                 </p>
               )}
+              {/* Nutzungsbedingungen (wie LICENSE und README): auch wer nur die Website besucht, soll sie sehen */}
+              <p className="nutzungs-hinweis">
+                <strong>{t("Nutzung:", "Use:")}</strong>{" "}
+                {t(
+                  "Forschungsprojekt im WPK „Vibecoding KI-Werkstatt“ der Jade Hochschule. Nur zur privaten, nicht gewerblichen Nutzung. Nutzung durch Unternehmen, Weitergabe und Weiterentwicklung nur mit schriftlicher Zustimmung.",
+                  "Research project in the “Vibecoding KI-Werkstatt” course at Jade Hochschule. For private, non-commercial use only. Use by companies, redistribution and further development only with written permission.",
+                )}{" "}
+                <a href="https://github.com/Jade-HS-Vibecoding-WPK/ParaGecko/blob/main/LICENSE" target="_blank" rel="noreferrer">
+                  {t("Lizenz ↗", "Licence ↗")}
+                </a>
+              </p>
             </div>
           </section>
         </aside>

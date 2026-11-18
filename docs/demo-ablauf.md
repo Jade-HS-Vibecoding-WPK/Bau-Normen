@@ -3,7 +3,7 @@
 **Dauer:** ca. 12 bis 15 Minuten · **Adresse:** https://jade-hs-vibecoding-wpk.github.io/ParaGecko/
 **Rückfallebene:** lokal `npm run dev` → http://localhost:3000 (gleicher Funktionsumfang, dazu der Obsidian-Knopf)
 
-> Alle Eingaben unten sind am 17.11.2026 abends live geprüft (Zeiten: lokaler Server, frisch gestartet, ohne
+> Alle Eingaben unten sind am 17.11.2026 abends live geprüft, am 18.11.2026 abends erneut auf der neuen Adresse (Zeiten: lokaler Server, frisch gestartet, ohne
 > Zwischenspeicher; sind Dienste langsam, kann eine Ortsauskunft bis zu ~15 Sekunden dauern). Die Ortsauskunft
 > fragt echte Dienste ab. Fällt einer aus, sagt die App „keine Aussage möglich“. Das ist kein Fehler, sondern genau
 > das Verhalten, das wir zeigen wollen (Punkt 4 der Grundsätze).
@@ -12,7 +12,8 @@
 
 - [ ] Online-Version öffnen, einmal „§ 34 BauGB“ abrufen (lädt die Daten vor)
 - [ ] Darstellung: Hell, Gecko „Läuft“, Sprache DE
-- [ ] Bibliothek: Bundesland **Niedersachsen**
+- [ ] Bibliothek: Bundesland **Niedersachsen** (die Auswahl bleibt im Browser gespeichert und wechselt nach jeder Ortsauskunft auf deren Land)
+- [ ] Live-Adresse: https://jade-hs-vibecoding-wpk.github.io/ParaGecko/ (die alte Adresse …/Bau-Normen/ gibt es nicht mehr)
 - [ ] Zweiten Tab mit der lokalen Fassung bereithalten (falls das WLAN hakt)
 - [ ] Browser-Zoom so, dass Formulare links und Antwortbereich rechts nebeneinander stehen
 
@@ -28,8 +29,8 @@
 | 6 | `Kärntner Straße 10, Oldenburg` | Bebauungsplan gefunden, Planzeichnung und Begründung als PDF | 0,5 s |
 | 7 | Bibliothek: Bundesland **Bayern**, dann `§ 6 Bauordnung` | „Bauordnung“ meint jetzt die BayBO, und Bayern zitiert mit **Art.** | sofort |
 | 8 | `Frauenplatz 1, 80331 München` | Frauenkirche am Standort, Ensemble, Bodendenkmäler; Paragraphen aus BayDSchG und BayBO; Quellen mit Lizenz in der Fußzeile | 0,4 s |
-| 9 | `Roncalliplatz 2, 50667 Köln, dort steht ein Denkmal` | NRW: B-Plan mit „Plan öffnen“, Denkmale in der Umgebung (am 18.11. war der Kölner Denkmaldienst wegen eines Zertifikatsfehlers auf dem städtischen Server nicht erreichbar; die Kachel sagt dann „nicht erreichbar“, der Rest der Auskunft funktioniert). Unter „Ihre Angabe“ das **andere Landesrecht**: In NRW entsteht der Denkmalschutz grundsätzlich erst mit der Eintragung, wörtlich zitiert aus § 5 DSchG NRW (in Niedersachsen genau umgekehrt, § 5 NDSchG) | 0,5 s |
-| 10 | `Alter Markt 1, 14467 Potsdam` | **Ehrlichkeit:** Brandenburg veröffentlicht seine Denkmaldaten nicht frei → „keine Aussage möglich“, trotzdem die Paragraphen des BbgDSchG | 0,3 s |
+| 9 | `Markt 1, 52062 Aachen, dort steht ein Denkmal` | NRW: B-Plan „Sanierungsgebiet I“ mit „Plan öffnen“, Denkmale in der Umgebung (12 und 17 m). Unter „Ihre Angabe“ das **andere Landesrecht**: In NRW entsteht der Denkmalschutz grundsätzlich erst mit der Eintragung, wörtlich zitiert aus § 5 DSchG NRW (in Niedersachsen genau umgekehrt, § 5 NDSchG). Ursprünglich Köln (`Roncalliplatz 2, 50667 Köln, …`); der Kölner Denkmaldienst hat seit 18.11. einen Zertifikatsfehler, die Kachel zeigt dort „nicht erreichbar“ | 0,6 s |
+| 10 | `Alter Markt 1, 14467 Potsdam` | **Ehrlichkeit:** Das Landesamt in Brandenburg veröffentlicht seine Denkmaldaten nicht frei (angebunden ist nur Frankfurt (Oder)) → „keine Aussage möglich“ für Potsdam, trotzdem die Paragraphen des BbgDSchG | 0,9 s |
 | 11 | `Ich plane einen Anbau an der Gartenstraße 5 in Oldenburg` | Adresse mitten im Satz wird erkannt. Ohne „in Oldenburg“ bittet die App freundlich um den Ort, statt irgendwo zu suchen | 0,1 s |
 | 12 | `§ 13 VOB/B`, dann `DIN 18353` | VOB/B im Wortlaut mit Hinweis „Vertragsbedingungen, kein Gesetz“; VOB/C nur Verzeichnis (DIN-Normen geschützt) | sofort |
 | 13 | Oben **EN**, dann **Darstellung → Dunkel** | Oberfläche und Ortsauskunft auf Englisch, Gesetzestext bleibt deutsch; Dunkelmodus | sofort |
