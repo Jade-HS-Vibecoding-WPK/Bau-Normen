@@ -98,7 +98,7 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche (bis 18.11.2026 unter
     </td>
     <td width="50%" valign="top">
       <img src="docs/bilder/lageskizze.png" alt="Lageskizze auf OpenStreetMap: Der Gecko steckt Fähnchen an den Denkmalen" width="100%">
-      <p align="center"><b>Lageskizze</b><br><sub>auf OpenStreetMap; der Gecko läuft hin und steckt die Fähnchen</sub></p>
+      <p align="center"><b>Lageskizze</b><br><sub>auf OpenStreetMap; der Gecko rennt hin und steckt die Fähnchen</sub></p>
     </td>
   </tr>
 </table>
@@ -125,6 +125,8 @@ Ein Nachschlage- und Auskunftswerkzeug für die Baubranche (bis 18.11.2026 unter
     </td>
   </tr>
 </table>
+
+<sub>Kartenausschnitte in den Bildern: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> (ODbL); Quellen und Lizenzen der Geodienste stehen in jeder Auskunft und im Abschnitt <a href="#datenquellen-und-rechtliches">Datenquellen und Rechtliches</a>.</sub>
 
 ---
 
@@ -411,11 +413,14 @@ Gezeichnet wird er als bewegliches Skelett (Kopf, Rumpf, Schwanzglieder, vier Be
 | VOB/B | Ausgabe 2016, konsolidierte Fassung der [Fachinformation Bundesbau](https://www.fib-bund.de/Inhalt/Vergabe/VOB/) |
 | VOB/C | nur Verzeichnis: Einführungserlass des BMWSB vom 20.09.2023 (Ergänzungsband 2023) und DIN Media |
 | Bebauungspläne und Kulturdenkmale | 67 amtliche Geodienste der Länder, Landkreise und Städte (siehe [Tabelle unten](#geodienste-der-länder-und-städte)) |
-| Adresssuche | OpenStreetMap / Nominatim (ganz Deutschland, höchstens eine Anfrage pro Sekunde) |
+| Adresssuche | Nominatim, Daten © [OpenStreetMap-Mitwirkende](https://www.openstreetmap.org/copyright) ([ODbL](https://opendatacommons.org/licenses/odbl/)); ganz Deutschland, höchstens eine Anfrage pro Sekunde |
 | Hintergrundkarte der Lageskizze | © [OpenStreetMap-Mitwirkende](https://www.openstreetmap.org/copyright) (ODbL), Kacheln von tile.openstreetmap.org |
-| Schriften | Fraunces, Figtree, DM Mono, Source Serif 4 von Google Fonts (SIL Open Font License), beim Bauen eingebunden |
+| Schriften | Fraunces, Figtree, DM Mono, Source Serif 4 von Google Fonts ([SIL Open Font License 1.1](https://openfontlicense.org)), beim Bauen eingebunden und mit der Seite ausgeliefert; Lizenztexte in [public/lizenzen-dritter.txt](public/lizenzen-dritter.txt) |
+| Programmbibliotheken | Next.js, React, React DOM, scheduler, styled-jsx (MIT), @swc/helpers (Apache 2.0) und weitere; vollständige Liste mit allen Lizenztexten in [public/lizenzen-dritter.txt](public/lizenzen-dritter.txt) (wird bei `npm run build:pages` neu erzeugt, in der App verlinkt als „Lizenzen Dritter“) |
 
 - Amtliche Gesetzestexte sind gemeinfrei (§ 5 UrhG).
+- Musterbauordnung, VOB/A, VOB/B und die Lesefassungen der Ministerien (HBO, HBauO) sind nach unserer Einschätzung amtliche Werke, die im amtlichen Interesse zur allgemeinen Kenntnisnahme veröffentlicht wurden (§ 5 Abs. 2 UrhG). Sie werden deshalb unverändert und mit Quelle und Stand wiedergegeben (Änderungsverbot und Quellenangabe, §§ 62, 63 UrhG); hochgestellte Satznummern sind nur Darstellung. Für eine Produktfassung prüfen lassen.
+- **Lizenzhinweise in der App:** Jede Ortsauskunft nennt Quelle und Lizenz der Dienste, die geantwortet haben; die Lizenzkürzel (Datenlizenz Deutschland, CC, ODbL) sind mit dem Lizenztext verlinkt, wie es diese Lizenzen verlangen. Die Geodaten werden für die Auskunft ausgewertet (Umrisse gezeichnet, Entfernungen berechnet), aber nicht als Datensatz weitergegeben. Die Lageskizze trägt den Vermerk „© OpenStreetMap-Mitwirkende“ mit Link.
 - NI-VORIS behält sich automatisiertes Text- und Data-Mining vor. Gespeichert und veröffentlicht wird deshalb nur der gemeinfreie Gesetzestext, nicht die Roh-HTML-Seiten des Anbieters. Für eine kommerzielle Nutzung ist das erneut zu prüfen. Dasselbe gilt für die Rohdaten der übrigen Landesportale (`data/quellen/landesrecht/`, nicht im Repository).
 - **Landesrecht der übrigen Länder:** Die Rechtsportale von Baden-Württemberg, Berlin, Hamburg, Hessen, Mecklenburg-Vorpommern, Rheinland-Pfalz, Saarland, Sachsen-Anhalt, Schleswig-Holstein und Thüringen laufen bei juris und untersagen den automatisierten Abruf (robots.txt, Vorbehalt für Text- und Data-Mining). Für Baden-Württemberg, Hessen und Hamburg stammen die Bauordnungen deshalb aus frei veröffentlichten Einzeldokumenten (Gesetzblatt bzw. Lesefassungen der Ministerien). Es fehlen noch: die Denkmalschutzgesetze dieser drei Länder (die hessische Synopse enthält noch Streichungen und einen Platzhalter für das Änderungsgesetz) sowie Bauordnung und Denkmalschutzgesetz von Berlin (Synopse mit kaum trennbaren Spalten), Thüringen (Neufassung 2024 nicht frei als Gesetzblatt gefunden), Mecklenburg-Vorpommern, Rheinland-Pfalz, Saarland, Sachsen-Anhalt und Schleswig-Holstein. Die App sagt das und nennt für fehlende Gesetze keine Paragraphen.
 - gesetzblatt.bremen.de untersagt das Speichern der Gesetzblätter. Sie wurden nur lokal zum Abgleich genutzt und sind nicht im Repository.
@@ -430,7 +435,7 @@ Stand der Prüfung: 17./18.11.2026. Alle Dienste sind amtlich. Bis auf zwei (Lan
 
 | Land | Bebauungspläne | Kulturdenkmale |
 |---|---|---|
-| Baden-Württemberg | Raumordnungskataster der Regierungspräsidien (dl-de/by-2.0; Regierungsbezirk Stuttgart fehlt) · Stadt Stuttgart (XPlanung) · Stadt Freiburg (dl-de/by-2.0) | Landesamt für Denkmalpflege (dl-de/by-2.0; laut Amt inoffizielle Fassung der Denkmalliste) |
+| Baden-Württemberg | Raumordnungskataster der Regierungspräsidien (dl-de/by-2.0; Regierungsbezirk Stuttgart fehlt) · Stadt Stuttgart (XPlanung, ohne Lizenzangabe) · Stadt Freiburg (dl-de/by-2.0) | Landesamt für Denkmalpflege (dl-de/by-2.0; laut Amt inoffizielle Fassung der Denkmalliste) |
 | Bayern | Bauleitpläne Bayern, LDBV / GDI-BY (CC BY-ND 4.0; nicht flächendeckend) · München (ohne Lizenzangabe) · Nürnberg (© Stadt Nürnberg) | Bayerisches Landesamt für Denkmalpflege (CC BY-ND 4.0; ohne Umrisse) |
 | Berlin | Senatsverwaltung, festgesetzte Pläne (dl-de/zero-2.0; ohne Baunutzungsplan 1958/60) | Landesdenkmalamt (dl-de/zero-2.0) |
 | Brandenburg | Gemeinsame Landesplanung Berlin-Brandenburg, PLIS (dl-de/by-2.0) | nur Frankfurt (Oder) (dl-de/by-2.0; Entfernung in Stufen bis ca. 50 m); Landesamt: Veröffentlichung nur mit schriftlicher Zustimmung |
@@ -438,12 +443,12 @@ Stand der Prüfung: 17./18.11.2026. Alle Dienste sind amtlich. Bis auf zwei (Lan
 | Hamburg | Behörde für Stadtentwicklung und Wohnen (dl-de/by-2.0, **vollständig**) | Denkmalschutzamt und Archäologisches Museum (dl-de/by-2.0) |
 | Hessen | Frankfurt am Main (dl-de/by-2.0) · GDI-Südhessen-Plattform: Hochtaunuskreis, Wetteraukreis, Kreis Bergstraße, Kreis Groß-Gerau, Rheingau-Taunus-Kreis, Landkreis Limburg-Weilburg, Odenwaldkreis, Hanau, Rüsselsheim (dl-de/by-2.0) · Landkreis Fulda (CC0, nur lokal); landesweit kein offener Dienst | Landesamt für Denkmalpflege, DenkXweb (dl-de/by-2.0; Bodendenkmäler nur als Umkreis) |
 | Mecklenburg-Vorpommern | Bau- und Planungsportal M-V (dl-de/by-2.0) | Rostock (CC0), Schwerin (dl-de/by-2.0) · Landkreise Rostock, Vorpommern-Rügen (ohne Stralsund), Ludwigslust-Parchim (dl-de/by-2.0), Mecklenburgische Seenplatte ohne Neubrandenburg (CC BY 4.0); landesweiter Dienst eingestellt |
-| Niedersachsen | Stadt Oldenburg (dl-de/zero-2.0; dazu Plan-PDFs und Verfahren aus dem Kartenportal) · Landkreise Leer und Aurich (alle Gemeinden einschließlich der Inseln, Aurich auch Veränderungssperren; ohne Lizenzangabe) · Landkreise Osterholz, Diepholz, Stade (ohne Hansestädte Stade und Buxtehude) (dl-de/by-2.0) · Rotenburg (Wümme), Nienburg/Weser, Harburg (nur lokal) (dl-de/zero-2.0) · Hameln-Pyrmont ohne Stadt Hameln (CC BY-SA 4.0) · Städte Göttingen, Hildesheim (dl-de/by-2.0), Langenhagen (CC BY 4.0); Hannover, Braunschweig, Osnabrück, Wittmund, Friesland u. a.: kein nutzbarer Dienst | Denkmalatlas Niedersachsen, NLD |
+| Niedersachsen | Stadt Oldenburg (dl-de/zero-2.0; dazu Plan-PDFs und Verfahren aus dem Kartenportal) · Landkreise Leer und Aurich (alle Gemeinden einschließlich der Inseln, Aurich auch Veränderungssperren; ohne Lizenzangabe) · Landkreise Osterholz, Diepholz, Stade (ohne Hansestädte Stade und Buxtehude) (dl-de/by-2.0) · Rotenburg (Wümme), Nienburg/Weser, Harburg (nur lokal) (dl-de/zero-2.0) · Hameln-Pyrmont ohne Stadt Hameln (CC BY-SA 4.0) · Städte Göttingen, Hildesheim (dl-de/by-2.0), Langenhagen (CC BY 4.0); Hannover, Braunschweig, Osnabrück, Wittmund, Friesland u. a.: kein nutzbarer Dienst | Denkmalatlas Niedersachsen, NLD (CC BY-SA 4.0) |
 | Nordrhein-Westfalen | Bauleitplanung NRW (dl-de/by-2.0; nur liefernde Gemeinden) · Städte Münster (dl-de/by-2.0) und Duisburg (CC BY 3.0 DE); doppelte Pläne aus Landes- und Stadtdienst werden zusammengeführt | INSPIRE-Denkmäler NRW, Köln, Dortmund (alle dl-de/zero-2.0) |
 | Rheinland-Pfalz | GDI-RP, Metadaten Bebauungspläne (dl-de/by-2.0; ohne Rechtsstand) | GDKE, Denkmalliste (dl-de/by-2.0) |
 | Saarland | kein Dienst angebunden (Nutzungsbedingungen erlauben nur das Anschauen im GeoPortal) | GDI-SL / Landesdenkmalamt (CC BY 4.0) |
-| Sachsen | RAPIS, Landesdirektion Sachsen (dl-de/by-2.0) | Landesamt für Denkmalpflege, Denkmalkarte (ohne archäologische Denkmale) |
-| Sachsen-Anhalt | XPlanung-Plattform des Landes | Landesamt für Denkmalpflege und Archäologie, Denkmalinformationssystem |
+| Sachsen | RAPIS, Landesdirektion Sachsen (dl-de/by-2.0) | Landesamt für Denkmalpflege, Denkmalkarte (ohne archäologische Denkmale; ohne Lizenzangabe im Dienst) |
+| Sachsen-Anhalt | XPlanung-Plattform des Landes (ohne Lizenzangabe) | Landesamt für Denkmalpflege und Archäologie, Denkmalinformationssystem (ohne Lizenzangabe) |
 | Schleswig-Holstein | GDI-SH, XPlanung (dl-de/by-2.0; rund 700 Pläne) | GDI-SH, Daten des Landesamts (CC BY 4.0; nur ein kleiner Teil der Denkmalliste) |
 | Thüringen | GDI-Th, kommunale Geodaten (CC BY 4.0) | GDI-Th, aus ALKIS abgeleitete Denkmale (CC BY 4.0; nur Namen, oft leer; Entfernung in Stufen; kein Dienst des Landesamts) |
 
@@ -472,7 +477,7 @@ ParaGecko ist ein Forschungsprojekt im WPK „Vibecoding KI-Werkstatt“ der Jad
 - den Quelltext, die Erläuterungen, die Zuordnungen der Landesvorschriften, das Verzeichnis der Geodienste, die Gestaltung oder Teile davon zu kopieren, zu bearbeiten oder weiterzuentwickeln,
 - die Anwendung oder Teile davon weiterzugeben, zu verkaufen, zu vermieten oder als Dienst anzubieten.
 
-**Nicht betroffen** sind Inhalte Dritter: Amtliche Gesetzestexte sind gemeinfrei (§ 5 UrhG). Geodaten, Kartenkacheln, Schriften und Programmbibliotheken stehen unter den Lizenzen ihrer Anbieter (siehe [Datenquellen und Rechtliches](#datenquellen-und-rechtliches)).
+**Nicht betroffen** sind Inhalte Dritter: Amtliche Gesetzestexte sind gemeinfrei (§ 5 UrhG). Geodaten, Kartenkacheln, Schriften und Programmbibliotheken stehen unter den Lizenzen ihrer Anbieter (siehe [Datenquellen und Rechtliches](#datenquellen-und-rechtliches); Lizenztexte der Bibliotheken und Schriften in [public/lizenzen-dritter.txt](public/lizenzen-dritter.txt)).
 
 ---
 

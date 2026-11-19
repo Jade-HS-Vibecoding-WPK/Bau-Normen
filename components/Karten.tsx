@@ -1,7 +1,7 @@
 "use client";
 // Antwort-Karten: Paragraph (NormKarte), Ortsauskunft (OrtKarte) und die angeheftete Gebietsleiste (GebietsLeiste).
 // Oberflächentexte zweisprachig; Gesetzestext und Erläuterungen bleiben im deutschen Original.
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { alsText, standDatum } from "@/lib/text";
 import type { NormAnsicht, NormRef, OrtAnsicht } from "@/lib/typen";
 import { bewegungAus, useEinstellungen, useT } from "./Einstellungen";
@@ -20,6 +20,39 @@ const host = (url: string) => {
     return url;
   }
 };
+
+/**
+ * Lizenzkürzel in Quellenangaben werden zu Links auf den Lizenztext: Datenlizenz Deutschland, CC BY und ODbL verlangen
+ * neben dem Namen der Quelle einen Verweis auf die Lizenz. Längere Kürzel stehen vorn (CC BY-SA 4.0 vor CC BY).
+ */
+const LIZENZ_LINKS: [string, string][] = [
+  ["dl-de/by-2.0", "https://www.govdata.de/dl-de/by-2-0"],
+  ["dl-de/zero-2.0", "https://www.govdata.de/dl-de/zero-2-0"],
+  ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/deed.de"],
+  ["CC BY-ND 4.0", "https://creativecommons.org/licenses/by-nd/4.0/deed.de"],
+  ["CC BY 4.0", "https://creativecommons.org/licenses/by/4.0/deed.de"],
+  ["CC BY 3.0 DE", "https://creativecommons.org/licenses/by/3.0/de/"],
+  ["CC BY", "https://creativecommons.org/licenses/?lang=de"],
+  ["CC0", "https://creativecommons.org/publicdomain/zero/1.0/deed.de"],
+  ["ODbL", "https://www.openstreetmap.org/copyright"],
+];
+const LIZENZ_MUSTER = new RegExp(LIZENZ_LINKS.map(([k]) => k.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&")).join("|"), "g");
+function MitLizenzLinks({ text }: { text: string }) {
+  const teile: ReactNode[] = [];
+  let rest = 0;
+  for (const m of text.matchAll(LIZENZ_MUSTER)) {
+    const url = LIZENZ_LINKS.find(([k]) => k === m[0])?.[1];
+    teile.push(text.slice(rest, m.index));
+    teile.push(
+      <a key={m.index} href={url} target="_blank" rel="noreferrer">
+        {m[0]}
+      </a>,
+    );
+    rest = m.index + m[0].length;
+  }
+  teile.push(text.slice(rest));
+  return <>{teile}</>;
+}
 
 /** Dokumentarten der Stadt Oldenburg (Datenbezeichnung) auf Englisch */
 const DOKUMENT_EN: Record<string, string> = {
@@ -426,7 +459,9 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
               ))}
             </ul>
           )}
-          <p className="kachel-quelle">{o.bplan.quelle}</p>
+          <p className="kachel-quelle">
+            <MitLizenzLinks text={o.bplan.quelle} />
+          </p>
           <Abdeckung x={o.bplan} />
         </div>
 
@@ -477,7 +512,9 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
               +{denkmale.length - 4} {t("weitere", "more")}
             </button>
           )}
-          <p className="kachel-quelle">{o.denkmal.quelle}</p>
+          <p className="kachel-quelle">
+            <MitLizenzLinks text={o.denkmal.quelle} />
+          </p>
           <Abdeckung x={o.denkmal} />
         </div>
       </div>
@@ -516,9 +553,11 @@ export function OrtKarte({ o, frage, kartenId }: { o: OrtAnsicht; frage: Frage; 
         </div>
       </section>
       <div className="fusszeile">
+        {t("Automatische Auswertung von Datendiensten (", "Automatic evaluation of data services (")}
+        <MitLizenzLinks text={quellen} />
         {t(
-          `Automatische Auswertung von Datendiensten (${quellen}). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.`,
-          `Automatic evaluation of data services (${quellen}). Does not replace information from the building authority or the monument protection authority.`,
+          "). Ersetzt keine Auskunft der Bauaufsicht oder der Denkmalschutzbehörde.",
+          "). Does not replace information from the building authority or the monument protection authority.",
         )}
       </div>
     </article>

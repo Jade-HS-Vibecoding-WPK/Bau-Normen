@@ -84,7 +84,7 @@ function stuttgartLink(text: unknown): string | undefined {
 
 export const stuttgartBplan: BplanDienst = {
   id: "bw-stuttgart-bplan",
-  quelle: "Landeshauptstadt Stuttgart: Bebauungspläne im XPlanung-Format (WFS über Komm.ONE)",
+  quelle: "Landeshauptstadt Stuttgart: Bebauungspläne im XPlanung-Format (WFS über Komm.ONE, ohne Lizenzangabe)",
   viewer: "https://gis6.stuttgart.de/maps/index.html?embed=0&path=/Bebauungsplan",
   gebiet: { land: "Baden-Württemberg", gemeinde: "Stuttgart" },
   // Metadaten (968866ab-a4b2-48c0-9ab6-740c000598e1): "WFS-Dienst mit allen in XPlanung 5.0 vorhandenen Bebauungsplänen der

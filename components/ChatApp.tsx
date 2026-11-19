@@ -398,6 +398,10 @@ export default function ChatApp({ gesetze, obsidianPfad }: { gesetze: GesetzInfo
                 <a href="https://github.com/Jade-HS-Vibecoding-WPK/ParaGecko/blob/main/LICENSE" target="_blank" rel="noreferrer">
                   {t("Lizenz ↗", "Licence ↗")}
                 </a>
+                {" · "}
+                <a href={`${process.env.NEXT_PUBLIC_BASIS ?? ""}/lizenzen-dritter.txt`} target="_blank" rel="noreferrer">
+                  {t("Lizenzen Dritter ↗", "Third-party licences ↗")}
+                </a>
               </p>
             </div>
           </section>

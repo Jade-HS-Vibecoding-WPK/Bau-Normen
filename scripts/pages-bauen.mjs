@@ -71,6 +71,10 @@ console.log(
   `Daten vorbereitet: katalog.json ${kb(katalogJson.length)} (${katalog.gesetze.length} Regelwerke) · je Gesetz: details ${kb(groesseDetails)}, suche ${kb(groesseSuche)} · ${dateien} Wortlaut-Dateien (${kb(groesseWortlaut)})`,
 );
 
+// Lizenztexte der mitgelieferten Bibliotheken und Schriften (public/lizenzen-dritter.txt) aktuell halten
+const lizenzen = spawnSync(process.execPath, ["scripts/lizenzen-dritter.mjs"], { stdio: "inherit" });
+if (lizenzen.status !== 0) process.exit(lizenzen.status ?? 1);
+
 const env = { ...process.env, NEXT_PUBLIC_STATISCH: "1", NEXT_PUBLIC_BASIS: process.env.NEXT_PUBLIC_BASIS ?? "/ParaGecko" };
 console.log(`Baue statische Fassung für ${env.NEXT_PUBLIC_BASIS || "/"} …`);
 const r = spawnSync(process.execPath, ["node_modules/next/dist/bin/next", "build"], { stdio: "inherit", env });

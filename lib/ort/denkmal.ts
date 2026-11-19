@@ -5,7 +5,7 @@ import { type Sprache, zweisprachig } from "../sprache";
 import { abstandMeter, aussenRinge, bbox, inMeter, punktInGeometrie, type Punkt } from "./geo";
 
 const DIENST = "https://geodatendienste.denkmalatlas.niedersachsen.de/xtraserver-webapi/denkmale/v1/collections/protectedsite/items";
-export const DENKMAL_QUELLE = "Denkmalatlas Niedersachsen: Niedersächsisches Landesamt für Denkmalpflege";
+export const DENKMAL_QUELLE = "Denkmalatlas Niedersachsen: Niedersächsisches Landesamt für Denkmalpflege (CC BY-SA 4.0)";
 export const DENKMAL_VIEWER = "https://denkmalatlas.niedersachsen.de/viewer/";
 
 export interface Denkmal {

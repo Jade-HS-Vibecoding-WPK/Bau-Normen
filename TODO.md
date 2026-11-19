@@ -122,6 +122,7 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 - [x] Gecko rennt beim Fähnchenstecken (340 statt 80 px/s, kürzere Pause je Fahne): Aachen mit 15 Fahnen in 6,8 statt 24 s, sonst geht er gemächlich wie bisher
 - [x] Sicherheitsprüfung vor dem letzten Push: keine API-Keys, Passwörter oder Tokens in den Dateien und im ganzen Git-Verlauf; `.gitignore` schließt jetzt alle `.env*`, Zertifikate, `.npmrc` und `.claude/settings.local.json` aus
 - [x] ToDo für ein späteres Produkt: [TODO-PRODUKT.md](TODO-PRODUKT.md) (darin auch die Umstellung auf ein Pixeldesign)
+- [x] Lizenzprüfung: Lizenztexte aller mitgelieferten Bibliotheken (19, u. a. Next.js, React) und Schriften (4, SIL OFL) in `public/lizenzen-dritter.txt`, erzeugt von `scripts/lizenzen-dritter.mjs` bei jedem `build:pages`, in der App als „Lizenzen Dritter“ verlinkt; Adresssuche jetzt mit „© OpenStreetMap-Mitwirkende (ODbL)“; Lizenzangaben für Oldenburg (dl-de/zero-2.0) und Denkmalatlas Niedersachsen (CC BY-SA 4.0) ergänzt, Dienste ohne Lizenz als solche gekennzeichnet; Lizenzkürzel in jeder Ortsauskunft mit dem Lizenztext verlinkt; README und LICENSE verweisen darauf
 - [ ] Weitere Landes-Denkmalschutzgesetze – jedes Land einzeln mit Treueprüfung
 - [x] NBauO (Niedersächsische Bauordnung)
 - [ ] B-Plan-Dienste weiterer Städte (z. B. über XPlanung/Geoportale der Länder) und Denkmal-Dienste weiterer Länder anbinden

@@ -97,7 +97,7 @@ const M_WMS = "https://geoportal.muenchen.de/geoserver/plan/wms";
 
 export const muenchenBplan: BplanDienst = {
   id: "by-muenchen-bplan",
-  quelle: "Landeshauptstadt München: rechtsverbindliche Bebauungspläne (Geoportal München)",
+  quelle: "Landeshauptstadt München: rechtsverbindliche Bebauungspläne (Geoportal München, ohne Lizenzangabe)",
   viewer: "https://geoportal.muenchen.de/portal/opendata/",
   gebiet: { land: "Bayern", gemeinde: "München" },
   // Hinweis im Dienst: "Eine Gewähr für die Richtigkeit, Vollzähligkeit … wird nicht übernommen."

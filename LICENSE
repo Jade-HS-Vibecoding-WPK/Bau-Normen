@@ -22,7 +22,9 @@ veröffentlicht. Es handelt sich nicht um Open-Source-Software.
 3. Nicht erfasst sind Inhalte Dritter: Amtliche Gesetzestexte sind gemeinfrei
    (§ 5 UrhG). Geodaten, Kartenkacheln, Schriften und verwendete
    Programmbibliotheken stehen unter den Lizenzen ihrer jeweiligen Anbieter
-   (siehe README, Abschnitt „Datenquellen und Rechtliches“).
+   (siehe README, Abschnitt „Datenquellen und Rechtliches“, und die Datei
+   public/lizenzen-dritter.txt mit den Lizenztexten der Bibliotheken und
+   Schriften).
 
 4. Die Anwendung wird ohne Gewähr bereitgestellt. Sie ersetzt keine
    Rechtsberatung und keine Auskunft der Bauaufsicht oder der

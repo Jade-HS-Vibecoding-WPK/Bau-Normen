@@ -98,7 +98,7 @@ const KLASSEN: Record<string, { de: string; en: string; gruppe: boolean }> = {
 
 export const sachsenDenkmal: DenkmalDienst = {
   id: "sn-denkmal",
-  quelle: "Landesamt für Denkmalpflege Sachsen: Denkmalkarte Sachsen (Kulturdenkmale)",
+  quelle: "Landesamt für Denkmalpflege Sachsen: Denkmalkarte Sachsen (Kulturdenkmale, ohne Lizenzangabe im Dienst)",
   viewer: "https://denkmalliste.denkmalpflege.sachsen.de/default.aspx?User=Gast",
   gebiet: { land: "Sachsen" },
   // LfD: "nachrichtliches Verzeichnis", "Die Kulturdenkmalliste ist niemals abgeschlossen", "Auch Objekte, die nicht

@@ -66,7 +66,7 @@ const LAENDER: Record<string, string> = {
 };
 const landVon = (a: NominatimTreffer["address"]) => LAENDER[a["ISO3166-2-lvl4"] ?? ""] ?? a.state ?? "";
 
-const QUELLE = "OpenStreetMap / Nominatim";
+const QUELLE = "Adresssuche Nominatim, © OpenStreetMap-Mitwirkende (ODbL)";
 const vereinfacht = (s?: string) => (s ?? "").toLowerCase().replace(/\s+/g, "");
 const ortVon = (a: NominatimTreffer["address"]) => a.city ?? a.town ?? a.village ?? a.municipality ?? "";
 const istOldenburg = (a: NominatimTreffer["address"]) => ortVon(a) === "Oldenburg" && landVon(a) === "Niedersachsen";
