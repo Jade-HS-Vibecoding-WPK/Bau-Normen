@@ -119,6 +119,9 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 - [x] Online stellen (GitHub Pages) – einmalig „Settings → Pages → Source: GitHub Actions“ aktivieren
 
 ## Tag 4 – 19.11. (Puffer)
+- [x] Gecko rennt beim Fähnchenstecken (340 statt 80 px/s, kürzere Pause je Fahne): Aachen mit 15 Fahnen in 6,8 statt 24 s, sonst geht er gemächlich wie bisher
+- [x] Sicherheitsprüfung vor dem letzten Push: keine API-Keys, Passwörter oder Tokens in den Dateien und im ganzen Git-Verlauf; `.gitignore` schließt jetzt alle `.env*`, Zertifikate, `.npmrc` und `.claude/settings.local.json` aus
+- [x] ToDo für ein späteres Produkt: [TODO-PRODUKT.md](TODO-PRODUKT.md) (darin auch die Umstellung auf ein Pixeldesign)
 - [ ] Weitere Landes-Denkmalschutzgesetze – jedes Land einzeln mit Treueprüfung
 - [x] NBauO (Niedersächsische Bauordnung)
 - [ ] B-Plan-Dienste weiterer Städte (z. B. über XPlanung/Geoportale der Länder) und Denkmal-Dienste weiterer Länder anbinden
@@ -136,6 +139,8 @@ Karlsruhe Am Storrenacker (BW-B-Plan) · Stuttgart Schlossplatz · Ulmer Münste
 ---
 
 ## Nach den 4 Tagen
+
+**Weg zum Produkt** (Gestaltung im Pixelstil, Recht und Lizenzen, Inhalte, Betrieb, Funktionen für zahlende Kundschaft): eigene Liste in [TODO-PRODUKT.md](TODO-PRODUKT.md).
 
 **Grundstücksanalyse mit eigenen Grundstücksgrenzen (nach der Demo – Wunsch aus dem Kreis der Testenden, 17.11.)**
 

@@ -7,9 +7,15 @@ public/daten/
 *.tsbuildinfo
 next-env.d.ts
 
-# Geheimnisse – API-Keys gehören NIE ins Repo
-.env
-.env*.local
+# Geheimnisse: API-Keys, Passwörter und Zertifikate gehören NIE ins Repo
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.claude/settings.local.json
 
 # Rohdownloads (die entpackten Quell-XML-Dateien werden versioniert)
 data/quellen/**/*.zip

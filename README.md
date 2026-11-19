@@ -268,6 +268,7 @@ flowchart LR
 | `.github/workflows/pages.yml` | Veröffentlicht die Online-Version bei jedem Push auf `main` |
 | `docs/bilder/` | Bilder für diese README (Screenshots, Banner, Gestaltung; Banner und Gestaltung mit HTML-Quelle) |
 | `TODO.md` | Plan, erledigte Punkte, nächste Schritte |
+| `TODO-PRODUKT.md` | ToDo für eine spätere Produktfassung (u. a. Pixeldesign, Lizenzen, Betrieb) |
 
 ---
 
@@ -450,7 +451,7 @@ Einzelheiten und Begründungen stehen in den Dateien unter `lib/ort/dienste/`, d
 
 ### Datenquellen in einer späteren eigenen Produktfassung
 
-Notizen der Rechteinhaber für eine mögliche spätere Produktfassung; das ist keine Erlaubnis für Dritte (siehe [Nutzung und Lizenz](#nutzung-und-lizenz)). Keine Rechtsberatung, vor einem Verkauf rechtlich prüfen lassen. Stand der Prüfung 18.11.2026:
+Notizen der Rechteinhaber für eine mögliche spätere Produktfassung; das ist keine Erlaubnis für Dritte (siehe [Nutzung und Lizenz](#nutzung-und-lizenz)). Keine Rechtsberatung, vor einem Verkauf rechtlich prüfen lassen. Die ganze Liste für den Weg zum Produkt steht in [TODO-PRODUKT.md](TODO-PRODUKT.md). Stand der Prüfung 18.11.2026:
 
 - **Geodienste mit offener Lizenz** (Datenlizenz Deutschland, CC BY, CC0): auch kommerziell nutzbar, Quellenvermerk nötig (steht in jeder Auskunft). Besonderheiten: Bei CC BY-SA (Denkmalatlas Niedersachsen, Hameln-Pyrmont) abgeleitete Daten unter gleicher Lizenz weitergeben; bei CC BY-ND (Bayern) keine veränderten Fassungen der Daten weitergeben.
 - **Ohne Lizenzangabe (vor einem Verkauf schriftlich nachfragen):** München, Stuttgart, Nürnberg („© Stadt Nürnberg“), Landkreise Leer und Aurich, Sachsen-Anhalt (B-Pläne und Denkmale), Denkmalkarte Sachsen (laut Website teils CC BY-NC-ND, also nicht kommerziell).
@@ -478,6 +479,7 @@ ParaGecko ist ein Forschungsprojekt im WPK „Vibecoding KI-Werkstatt“ der Jad
 ## Weiterführende Dokumente
 
 - [TODO.md](TODO.md): Plan, erledigte Punkte, nächste Schritte (u. a. Erläuterungen für BauGB ab § 39, VOB/A und die übrigen Landesgesetze, Landesrecht der übrigen Länder, Normen)
+- [TODO-PRODUKT.md](TODO-PRODUKT.md): was für eine spätere Produktfassung zu tun ist (Pixeldesign, Recht und Lizenzen, Inhalte, Betrieb, Funktionen)
 - [data/gegenstuecke/THEMEN.md](data/gegenstuecke/THEMEN.md): Themen und Regeln für die Zuordnung der Landesvorschriften
 - [data/erlaeuterungen/LEITFADEN.md](data/erlaeuterungen/LEITFADEN.md): Regeln für das Schreiben von Erläuterungen
 - [data/erlaeuterungen/PRUEFHINWEISE.md](data/erlaeuterungen/PRUEFHINWEISE.md): Stellen, die eine Fachperson prüfen sollte
