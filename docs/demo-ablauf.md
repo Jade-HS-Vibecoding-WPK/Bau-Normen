@@ -39,6 +39,7 @@
 ## Zahlen für die Folien
 
 - 20 Regelwerke: BauGB, Bauordnung und Denkmalschutzgesetz von 6 Ländern, Bauordnungen von Baden-Württemberg, Hessen und Hamburg, MBO, VOB/A, VOB/B, VOB/C-Verzeichnis
+- Erläuterungen in einfacher Sprache für 301 Vorschriften: BauGB §§ 1 bis 38, NBauO, NDSchG, Musterbauordnung und VOB/B (Status „Entwurf“, automatisch geprüft)
 - Wortlaut geprüft: BauGB 297/297 gegen die amtlichen Einzelseiten; Landesrecht gegen eine zweite amtliche Darstellung bzw. eine zweite, unabhängige PDF-Auslesung
 - Ortsauskunft für ganz Deutschland: 44 Bebauungsplan- und 23 Denkmaldienste der Länder, Landkreise und Städte
 - Testkatalog: 113 Fragen, alle bestanden (Paragraphen, Rückfragen, Stichworte, Landesrecht, Ortsauskunft in allen 16 Ländern)
