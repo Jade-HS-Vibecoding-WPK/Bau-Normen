@@ -602,12 +602,12 @@ export function GebietsLeiste({ o, kartenId, onSchliessen }: { o: OrtAnsicht; ka
           ? t("kein rechtsverbindlicher Plan (§ 34/35 BauGB)", "no binding plan (§ 34/35 BauGB)")
           : o.bplan.status === "fehler" && o.bplan.nichtAngebunden
           ? t("für diesen Ort nicht angebunden (§ 30/34/35 BauGB)", "not connected for this place (§ 30/34/35 BauGB)")
-          : t("Dienst nicht erreichbar", "service unreachable");
+          : t("Dienst gerade nicht verfügbar", "service currently unavailable");
   const dText =
     o.denkmal.status === "fehler"
       ? o.denkmal.nichtAngebunden
         ? t("für diesen Ort kein Denkmal-Dienst angebunden", "no monument service connected for this place")
-        : t("Dienst nicht erreichbar", "service unreachable")
+        : t("Dienst gerade nicht verfügbar", "service currently unavailable")
       : naechstes
         ? `${naechstes.amStandort ? t("hier", "here") : `${naechstes.entfernungM} m`}: ${naechstes.name}${denkmale.length > 1 ? ` (+${denkmale.length - 1})` : ""}`
         : nurNichtVerzeichnet(o.denkmal)

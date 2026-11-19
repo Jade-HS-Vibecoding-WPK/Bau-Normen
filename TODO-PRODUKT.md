@@ -37,6 +37,17 @@ Stand 19.11.2026. Ausgangspunkt ist die Fassung aus dem WPK „Vibecoding KI-Wer
 
 ## 4. Technik und Betrieb
 
+- [ ] **Daten selbst vorhalten, statt sie nur live abzurufen.** Anlass: Am 19.11.2026 abends war der Denkmalatlas Niedersachsen wegen Wartungsarbeiten abgeschaltet, alle Denkmal-Abfragen in Niedersachsen liefen ins Leere. Die Gesetzestexte liegen schon im Projekt (`data/gesetze/`); live abgerufen werden Geodaten (Bebauungspläne, Denkmale), Adresssuche und Kartenkacheln.
+  - **Ziel:** Kopie der Geodaten auf dem eigenen Server, regelmäßig abgeglichen (z. B. nachts), mit „Stand vom …“ in jeder Auskunft. Am besten beides: zuerst live fragen, bei Ausfall die gespeicherte Kopie mit Hinweis auf ihren Stand zeigen. Maßgeblich bleibt der aktuelle Stand beim Amt, das muss die App sagen.
+  - **Darf man das? Für die meisten Dienste ja** (Stand der Lizenzprüfung 18./19.11.2026, keine Rechtsberatung):
+    - Datenlizenz Deutschland (dl-de/by-2.0, dl-de/zero-2.0), CC BY (3.0 DE, 4.0) und CC0: Speichern, Umwandeln und Weitergeben ist erlaubt, auch kommerziell. Bedingung bei „by“: Quelle, Lizenz mit Link und Verweis auf den Datensatz nennen, Änderungen kennzeichnen. Das sind die meisten angebundenen Dienste.
+    - CC BY-SA 4.0 (Denkmalatlas Niedersachsen, Landkreis Hameln-Pyrmont): erlaubt, aber eine bearbeitete Kopie (umgewandelt, gefiltert) muss wieder unter CC BY-SA 4.0 stehen. Der eigene Programmcode ist davon nicht betroffen.
+    - CC BY-ND 4.0 (Bauleitpläne Bayern, Bayerisches Landesamt für Denkmalpflege): unveränderte Kopie erlaubt, reine Formatumwandlung auch; Zuschneiden oder Zusammenführen kann als Bearbeitung gelten. Vorher beim Anbieter nachfragen oder weiter live abfragen.
+    - **Ohne Lizenzangabe, also nicht ohne schriftliche Zustimmung:** München, Stuttgart, Nürnberg („© Stadt Nürnberg“), Landkreise Leer und Aurich, Sachsen-Anhalt (B-Pläne und Denkmale), Denkmalkarte Sachsen (laut Website teils CC BY-NC-ND). Bis zur Zustimmung nur live abfragen.
+    - Nicht angebunden und ebenfalls nur mit Zustimmung: Landesamt Brandenburg, GeoPortal Saarland.
+  - **Wie:** möglichst über die offiziellen Download-Angebote (Open-Data-Portale, INSPIRE-Downloaddienste, ATOM-Feeds) statt die Abfragedienste massenhaft abzufragen; Nutzungsbedingungen der Dienste prüfen. Personenbezogene Felder nicht übernehmen (z. B. Kontaktdaten der Sachbearbeitung im Dienst der Mecklenburgischen Seenplatte).
+  - **Adresssuche und Karte:** Nominatim und tile.openstreetmap.org verbieten Massenabrufe. Stattdessen eigene Adresssuche und eigene Kacheln aus einem OpenStreetMap-Auszug (ODbL: Namensnennung, eine veröffentlichte bearbeitete Datenbank wieder unter ODbL) oder ein Vertragsanbieter.
+  - **Umfang:** Speicherbedarf und Abgleich je Dienst schätzen; für ganz Deutschland eher Datenbank mit räumlichem Index (z. B. PostGIS) als statische Dateien.
 - [ ] Eigenes Hosting mit Vertrag (GitHub Pages ist laut GitHub nicht für kommerzielle Angebote gedacht), Server in der EU
 - [ ] Eigene Adresssuche und eigener Kartendienst oder ein kommerzieller Anbieter statt Nominatim und tile.openstreetmap.org
 - [ ] Geodienste überwachen und zwischenspeichern; Ausfälle früh erkennen (wie der Zertifikatsfehler in Köln am 18.11.), Statusseite

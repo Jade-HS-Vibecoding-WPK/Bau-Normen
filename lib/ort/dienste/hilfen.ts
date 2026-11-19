@@ -4,7 +4,7 @@
 //  - Geometrie: Abstand, Lage im Umring, Umriss in Metern für die Lageskizze
 //  - einheitliche Fehlermeldungen, Datumsangaben, Umkreis-Filter für Denkmale
 // Läuft im Browser (statische Online-Version) und auf dem Server gleichermaßen – deshalb kein DOMParser.
-import { DienstFehler, fehlerText } from "../abruf";
+import { DienstFehler, fehlerText, meldetFehler } from "../abruf";
 import { distanzMeter, inMeter, punktInGeometrie, type Punkt } from "../geo";
 import { gebiet, type Sprache, zweisprachig } from "../../sprache";
 import type { DenkmalTreffer, DienstErgebnis } from "./typen";
@@ -478,10 +478,7 @@ function sammle(el: XmlElement, achse: Achse, aus: GmlObjekt[]) {
 export function gmlObjekte(xml: string, achse: Achse): GmlObjekt[] {
   const wurzel = xmlKinder(xml)[0];
   if (!wurzel) throw unlesbar(xml.trim() ? "kein XML" : "leer");
-  if (/exception/i.test(wurzel.lokal)) {
-    const text = xmlText(wurzel.inhalt).slice(0, 160);
-    throw new DienstFehler(`Dienst meldet einen Fehler${text ? `: ${text}` : ""}`, `service reports an error${text ? `: ${text}` : ""}`);
-  }
+  if (/exception/i.test(wurzel.lokal)) throw meldetFehler(xmlText(wurzel.inhalt));
   if (!/featurecollection|msgmloutput|featureinfo|getfeatureinforesponse/i.test(wurzel.lokal)) throw unlesbar(`unerwartetes Element ${wurzel.name}`);
   const aus: GmlObjekt[] = [];
   sammle(wurzel, achse, aus);

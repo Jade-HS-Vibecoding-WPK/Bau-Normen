@@ -61,6 +61,6 @@ export async function denkmaleImUmkreis(
       .map(({ _drin, ...rest }) => rest);
     return { status: "ok", denkmale };
   } catch (e) {
-    return { status: "fehler", hinweis: t(`Denkmal-Dienst nicht erreichbar: ${fehlerText(e, "de")}.`, `Monument service unreachable: ${fehlerText(e, "en")}.`) };
+    return { status: "fehler", hinweis: t(`Denkmal-Dienst: ${fehlerText(e, "de")}.`, `Monument service: ${fehlerText(e, "en")}.`) };
   }
 }

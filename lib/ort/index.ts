@@ -114,8 +114,8 @@ function ohneDoppelte(ergebnisse: DienstErgebnis<PlanTreffer>[], ort: string): D
 /** Ein Dienst, der wirft statt "fehler" zu melden oder die Frist überschreitet, zählt als ausgefallen */
 const sicher = <T,>(p: Promise<DienstErgebnis<T>>, sprache: Sprache): Promise<DienstErgebnis<T>> =>
   frist(
-    p.catch(() => ({ status: "fehler" as const, hinweis: sprache === "en" ? "Service not reachable." : "Dienst nicht erreichbar." })),
-    () => ({ status: "fehler" as const, hinweis: sprache === "en" ? "Service did not respond in time." : "Dienst hat nicht rechtzeitig geantwortet." }),
+    p.catch(() => ({ status: "fehler" as const, hinweis: sprache === "en" ? "Service not reachable. Please try again later." : "Dienst nicht erreichbar. Bitte später erneut versuchen." })),
+    () => ({ status: "fehler" as const, hinweis: sprache === "en" ? "The service did not respond in time (usually overload or an outage at the provider). Please try again later." : "Der Dienst hat nicht rechtzeitig geantwortet (meist Überlastung oder Störung beim Anbieter). Bitte später erneut versuchen." }),
   );
 
 /** Ortsauskunft als Antwort – bei mehrdeutiger Adresse (Straße in mehreren Orten) als Rückfrage. */

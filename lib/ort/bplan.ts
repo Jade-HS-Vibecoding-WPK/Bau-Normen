@@ -65,6 +65,6 @@ export async function bplaeneAmPunkt(lat: number, lon: number, sprache: Sprache 
     }));
     return { status: "ok", plaene };
   } catch (e) {
-    return { status: "fehler", hinweis: t(`B-Plan-Dienst nicht erreichbar: ${fehlerText(e, "de")}.`, `Development plan service unreachable: ${fehlerText(e, "en")}.`) };
+    return { status: "fehler", hinweis: t(`B-Plan-Dienst: ${fehlerText(e, "de")}.`, `Development plan service: ${fehlerText(e, "en")}.`) };
   }
 }
