@@ -11,8 +11,9 @@
 //  - setzt sich an neue Antworten; muss er umkehren, wendet er auf der Stelle (nie rückwärts)
 //  - beim Darüberfahren rollt er sich ein (Körper als C, Schwanz drumherum, Beine angezogen)
 //  - bei Fehlern rot, bei Hinweisen orange; beim Darüberfahren zeigt er die Meldungen
-//  - Zusatzauftrag: kommt eine Lageskizze ins Bild, läuft er hin und steckt die Fähnchen
-//    (Ereignis "gecko-fahnen"); danach setzt er sich an die Skizze und macht weiter wie oben
+//  - Zusatzauftrag: kommt eine Lageskizze ins Bild, rennt er hin und steckt die Fähnchen
+//    (Ereignis "gecko-fahnen"); wie ein echter Gecko flitzt er dabei von Punkt zu Punkt und
+//    erstarrt nur kurz. Danach setzt er sich an die Skizze und macht gemächlich weiter wie oben
 //  - über Text wird er durchsichtiger, damit nichts verdeckt wird
 //  - "Gecko aus" (fest): sitzt still am Stammplatz und dient nur noch als Signal für Fehler und Hinweise
 // Alles folgt festen Regeln – keine KI.
@@ -52,6 +53,10 @@ const S = SEG.reduce<number[]>((acc, l, i) => [...acc, acc[i] + l], [0]); // Bog
 const N = HALB.length;
 const MITTE = 4; // Körpermitte (Bezugspunkt für Plätze)
 const SCHRITT = 18; // zurückgelegte Strecke je Beinpaar-Schritt
+// Gemächlicher Gang zwischen den Kästen und schnelles Rennen beim Fähnchenstecken
+const GANG = { tempo: 80, schritt: SCHRITT, wenden: 160, lenken: 120 };
+const RENNEN = { tempo: 340, schritt: 30, wenden: 720, lenken: 480 };
+const FAHNE_PAUSE = 160; // ms: kurz erstarren, wenn ein Fähnchen steckt
 // Rumpfbiegung im Takt (Gewicht je Segment; vor der Mitte negativ gezählt, dahinter positiv)
 const BIEG_VORN = [-0.2, 0.3, 1.0, 0.85]; // Segmente 0..3
 const BIEG_HINTEN = [0.85, 1.0, 0.6]; // Segmente 4..6
@@ -211,7 +216,6 @@ export default function Gecko({ signal, fest = false, ruhig: ruhigEinstellung = 
     let reiseWinkel = w; // Laufrichtung der aktuellen Strecke (so steht er am Ziel)
     let bis = performance.now() + zufall(6000, 12000);
     let sitzDauer = 10000; // wie lange er am nächsten Rand bleibt (zählt ab dem Ankommen)
-    const tempo = 80;
     let e = 0; // 0 = normal, 1 = eingerollt
     let kopfDreh = 0;
     let kopfDrehZiel = 0;
@@ -260,7 +264,7 @@ export default function Gecko({ signal, fest = false, ruhig: ruhigEinstellung = 
     };
     const naechsteFahne = () => {
       while (auftrag && auftrag.k < auftrag.punkte.length) {
-        if (geheZu({ anker: auftrag.punkte[auftrag.k], el: null }, 450)) {
+        if (geheZu({ anker: auftrag.punkte[auftrag.k], el: null }, FAHNE_PAUSE)) {
           kopfZumZiel = true;
           return;
         }
@@ -401,16 +405,18 @@ export default function Gecko({ signal, fest = false, ruhig: ruhigEinstellung = 
           } else {
             const soll = winkelVon(d);
             const abw = diff(w, soll);
+            // beim Fähnchenstecken rennt er, sonst geht er gemächlich
+            const g = auftrag && kopfZumZiel ? RENNEN : GANG;
             // erst auf der Stelle zum Ziel drehen, dann geradeaus laufen – so landet die Körpermitte genau auf der Kante
             if (Math.abs(abw) > 20) {
-              const dreh = Math.sign(abw) * Math.min(Math.abs(abw), 160 * dt);
+              const dreh = Math.sign(abw) * Math.min(Math.abs(abw), g.wenden * dt);
               rotiere(dreh);
-              phi += (Math.abs(dreh) / 30) * Math.PI; // Beine trippeln beim Wenden mit
+              phi += (Math.abs(dreh) / (g === RENNEN ? 60 : 30)) * Math.PI; // Beine trippeln beim Wenden mit
             } else {
-              w = drehe(w, soll, 120 * dt);
-              const schritt = Math.min(abst, tempo * dt);
+              w = drehe(w, soll, g.lenken * dt);
+              const schritt = Math.min(abst, g.tempo * dt);
               kopf = plus(kopf, mal(richtung(w), schritt));
-              phi += (schritt / SCHRITT) * Math.PI;
+              phi += (schritt / g.schritt) * Math.PI;
             }
             geht = true;
           }

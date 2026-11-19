@@ -377,7 +377,7 @@ Ein kleines, bewusst zurückhaltendes Maskottchen:
 
 - läuft quer über den Bildschirm von Kasten zu Kasten und bleibt am **rechten Rand** der Kästen stehen
 - setzt sich an neue Antworten; im Stehen ist er ruhig, rollt die Schwanzspitze ein und schaut sich ab und zu um
-- **Fähnchen:** Kommt bei einer Ortsauskunft die Lageskizze ins Bild, läuft er auf die Karte und steckt an Standort und Denkmalen nacheinander die Fähnchen. Danach setzt er sich an den Rand der Skizze. Ist er ausgeblendet, erscheinen die Fähnchen von selbst.
+- **Fähnchen:** Kommt bei einer Ortsauskunft die Lageskizze ins Bild, rennt er auf die Karte und steckt an Standort und Denkmalen flink nacheinander die Fähnchen (bei 15 Fahnen in rund 7 Sekunden). Danach setzt er sich an den Rand der Skizze. Ist er ausgeblendet, erscheinen die Fähnchen von selbst.
 - **Maus darüber:** er rollt sich ein
 - **Farbe:** grün = alles in Ordnung · **orange** = Hinweis (z. B. Hausnummer nicht gefunden, kein Stichwort erkannt) · **rot** = Fehler (z. B. Paragraph existiert nicht, Dienst nicht erreichbar); beim Darüberfahren zeigt er die Meldungen
 - **über Text** wird er durchsichtig, damit er nichts verdeckt; auf der Karte bleibt er deutlich sichtbar
